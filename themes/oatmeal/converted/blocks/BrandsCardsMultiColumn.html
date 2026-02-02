@@ -1,0 +1,32 @@
+<section class="py-16 bg-background">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16">
+    {{#if headline}}
+      <div class="flex max-w-2xl flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          {{#if eyebrow}}
+            <span class="body-sm font-semibold text-muted">{{eyebrow}}</span>
+          {{/if}}
+          <h2 class="heading-lg text-foreground text-pretty">{{headline}}</h2>
+        </div>
+        {{#if subheadline}}
+          <div class="body-md text-muted text-pretty">{{{subheadline}}}</div>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {{#each brands}}
+        <div class="flex flex-col justify-between gap-6 rounded-xl bg-foreground/5 p-6">
+          <div class="flex flex-col items-start gap-2">
+            {{#if logo}}
+              <div class="flex h-8 shrink-0">
+                <img src="{{logo}}" alt="{{name}}" class="h-full w-auto" />
+              </div>
+            {{/if}}
+            <p class="body-sm text-muted">{{text}}</p>
+          </div>
+          <p class="text-xs text-muted/80">{{footnote}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

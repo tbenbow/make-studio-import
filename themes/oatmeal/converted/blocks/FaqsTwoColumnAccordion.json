@@ -1,0 +1,30 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline"
+    },
+    {
+      "type": "repeater",
+      "name": "FAQs",
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Question"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Answer"
+          }
+        ]
+      }
+    }
+  ]
+}

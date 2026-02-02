@@ -1,0 +1,28 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "text",
+      "name": "Quote"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "config": {
+        "maxWidth": 3000,
+        "maxHeight": 3000,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Name"
+    },
+    {
+      "type": "text",
+      "name": "Byline"
+    }
+  ]
+}

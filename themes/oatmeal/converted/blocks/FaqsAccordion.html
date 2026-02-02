@@ -1,0 +1,30 @@
+<section class="py-16 bg-background">
+  <div class="mx-auto flex max-w-3xl flex-col gap-6 px-6 lg:max-w-5xl lg:px-10">
+    <div class="flex flex-col gap-6">
+      <h2 class="heading-lg text-foreground text-pretty">{{headline}}</h2>
+      {{#if subheadline}}
+        <div class="body-md text-muted text-pretty flex flex-col gap-4">{{{subheadline}}}</div>
+      {{/if}}
+    </div>
+    <div class="divide-y divide-foreground/10 border-y border-foreground/10">
+      {{#each faqs}}
+        <details class="group">
+          <summary class="flex w-full cursor-pointer items-start justify-between gap-6 py-4 text-left body-md text-foreground list-none [&::-webkit-details-marker]:hidden">
+            {{question}}
+            <span class="h-7 flex items-center">
+              <svg class="size-4 group-open:hidden" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+              <svg class="size-4 hidden group-open:block" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+              </svg>
+            </span>
+          </summary>
+          <div class="-mt-2 flex flex-col gap-2 pr-12 pb-4 body-sm text-muted">
+            {{{answer}}}
+          </div>
+        </details>
+      {{/each}}
+    </div>
+  </div>
+</section>

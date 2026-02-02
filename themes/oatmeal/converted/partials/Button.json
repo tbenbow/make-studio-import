@@ -1,0 +1,14 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "URL"
+    }
+  ]
+}

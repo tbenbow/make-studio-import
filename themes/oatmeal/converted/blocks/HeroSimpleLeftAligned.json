@@ -1,0 +1,45 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "name": "Headline"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

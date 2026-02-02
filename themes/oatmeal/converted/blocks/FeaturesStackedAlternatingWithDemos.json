@@ -1,0 +1,52 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "name": "Headline"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline"
+    },
+    {
+      "type": "repeater",
+      "name": "Features",
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 3000,
+              "maxHeight": 3000,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Headline"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link Label"
+          },
+          {
+            "type": "text",
+            "name": "Link URL"
+          }
+        ]
+      }
+    }
+  ]
+}

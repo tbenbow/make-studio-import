@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.log
+
+# Keep source files but they can be large
+# themes/*/source/node_modules/

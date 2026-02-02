@@ -1,0 +1,55 @@
+---
+description: Converting themes to Make Studio format
+globs:
+  - "themes/*/source/**"
+  - "themes/*/converted/**"
+  - "themes/**/THEME_GUIDE.md"
+---
+
+# Theme Conversion Rules
+
+When converting React/Next.js themes to Make Studio format:
+
+## Required Reading
+
+1. **Always read first:** `guides/BASE_GUIDE.md` - Universal conversion rules
+2. **Check for patterns:** Scan `themes/*/THEME_GUIDE.md` for similar patterns from completed themes
+3. **Document learnings:** Update the current theme's `THEME_GUIDE.md` as you discover theme-specific patterns
+
+## Workflow
+
+1. Analyze source files in `themes/<name>/source/`
+2. Identify blocks (sections) vs partials (elements)
+3. Convert to `themes/<name>/converted/blocks/` and `converted/partials/`
+4. Create both `.html` (template) and `.json` (fields) for each component
+5. Run validation: `npm run validate -- --theme=<name>`
+6. Import to staging: `npm run import -- --theme=<name> --site=<siteId>`
+
+## Output Format
+
+All CLI commands output JSON. Parse the response to determine success/failure.
+
+```bash
+npm run validate -- --theme=oatmeal
+# { "valid": true, "components": { "blocks": 25, "partials": 3 }, ... }
+
+npm run import -- --theme=oatmeal --site=abc123
+# { "success": true, "created": { "blocks": [...] }, "updated": {...}, ... }
+```
+
+## Learning from Past Themes
+
+Before converting a new theme, examine completed themes for:
+- Color mappings (e.g., `zinc` → theme colors)
+- Typography patterns
+- Icon library mappings
+- Component structure patterns (accordions, modals, tabs)
+
+Reference working examples from `themes/*/converted/` when unsure.
+
+## File Conventions
+
+- Component names: PascalCase (`HeroSimpleCentered`)
+- Template files: `.html` extension
+- Field definitions: `.json` extension with matching name
+- All JSON must include `"makeStudioFields": true`

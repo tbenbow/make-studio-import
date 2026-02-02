@@ -1,0 +1,22 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "repeater",
+      "name": "Stats",
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Stat"
+          },
+          {
+            "type": "text",
+            "name": "Text"
+          }
+        ]
+      }
+    }
+  ]
+}

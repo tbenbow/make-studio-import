@@ -1,0 +1,24 @@
+<section class="py-16 bg-background">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10">
+    <div class="flex flex-col gap-6">
+      <div class="flex max-w-4xl flex-col gap-2">
+        {{#if eyebrow}}
+          <span class="body-sm font-semibold text-muted">{{eyebrow}}</span>
+        {{/if}}
+        <h2 class="heading-lg text-foreground text-pretty">{{headline}}</h2>
+      </div>
+      {{#if subheadline}}
+        <div class="body-md text-muted max-w-3xl text-pretty flex flex-col gap-4">
+          {{{subheadline}}}
+        </div>
+      {{/if}}
+    </div>
+    {{#if buttons.length}}
+      <div class="flex flex-wrap gap-4">
+        {{#each buttons}}
+          {{> Button}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>
