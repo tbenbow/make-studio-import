@@ -237,16 +237,68 @@ Use placeholder images from Unsplash:
 | Standard body text | `body-md` |
 | Small text, labels | `body-sm` |
 
-### Colors (Map to These)
+### System Colors (10 Colors)
 
-| Usage | Theme Class |
-|-------|-------------|
-| Primary text | `text-foreground` |
-| Secondary/muted text | `text-muted` |
-| Primary backgrounds | `bg-primary` |
-| Light backgrounds | `bg-background` |
-| Primary buttons | `bg-primary text-primary-foreground` |
-| Hover states | Use `/90` opacity, e.g., `hover:bg-primary/90` |
+Make Studio uses a semantic 10-color system. Map theme colors to these:
+
+#### Brand Colors (3)
+| Class | Usage |
+|-------|-------|
+| `bg-brand` / `text-brand` | Primary brand color (buttons, CTAs, links) |
+| `bg-brand-hover` / `text-brand-hover` | Hover state for brand elements |
+| `text-on-brand` | Text on brand backgrounds (usually white) |
+
+#### Base/Surface Colors (3)
+| Class | Usage |
+|-------|-------|
+| `bg-base` | Main page background |
+| `bg-base-muted` | Slightly muted background (subtle sections) |
+| `bg-base-panel` | Panel/card backgrounds |
+
+#### Foreground/Text Colors (3)
+| Class | Usage |
+|-------|-------|
+| `text-fg` | Primary text (headlines, body) |
+| `text-fg-muted` | Secondary/muted text (descriptions, captions) |
+| `text-fg-subtle` | Tertiary text (placeholders, hints) |
+
+#### UI Colors (1)
+| Class | Usage |
+|-------|-------|
+| `border-border` | All borders and dividers |
+
+### Common Color Mappings
+
+| Original (Tailwind) | Make Studio |
+|---------------------|-------------|
+| `bg-gray-950`, `bg-slate-900` | `bg-brand` (for buttons) |
+| `bg-white`, `bg-gray-50` | `bg-base` |
+| `bg-gray-100`, `bg-slate-100` | `bg-base-panel` |
+| `text-gray-900`, `text-slate-900` | `text-fg` |
+| `text-gray-600`, `text-slate-600` | `text-fg-muted` |
+| `text-gray-400`, `text-slate-400` | `text-fg-subtle` |
+| `border-gray-200` | `border-border` |
+| `hover:bg-gray-800` | `hover:bg-brand-hover` |
+| Text on dark buttons | `text-on-brand` |
+
+### Button Example
+```html
+<!-- Primary button -->
+<a href="{{url}}" class="bg-brand text-on-brand hover:bg-brand-hover px-4 py-2 rounded">
+  {{label}}
+</a>
+
+<!-- Secondary/ghost button -->
+<a href="{{url}}" class="bg-base-panel text-fg hover:bg-base-muted px-4 py-2 rounded">
+  {{label}}
+</a>
+```
+
+### Opacity Variants
+All system colors support opacity modifiers:
+- `bg-brand/90` - 90% opacity
+- `text-fg-muted/80` - 80% opacity
+- `border-border/50` - 50% opacity
 
 ### Container Pattern
 
