@@ -5,23 +5,41 @@
 - **Source:** Oatmeal Next.js UI Kit (Tailwind UI style)
 - **Built with:** Next.js, Tailwind CSS, Heroicons
 - **Staging Site ID:** `[paste site ID after creating staging site]`
-- **Status:** ✅ Complete (26 blocks, 3 partials)
+- **Status:** ⚠️ Needs re-conversion (26 blocks, 3 partials use old color system)
 
-## Color Mapping (mist → theme)
+## Color Mapping (mist → 10-color system)
 
+### Text Colors
 | Original Class | Theme Class | Usage |
 |----------------|-------------|-------|
-| `text-mist-950` | `text-foreground` | Primary dark text |
-| `text-mist-900` | `text-foreground` | Primary dark text |
-| `text-mist-700` | `text-muted` | Secondary/muted text |
-| `text-mist-600` | `text-muted` | Secondary/muted text |
-| `text-mist-400` | `text-muted` | Secondary/muted text (dark mode) |
-| `bg-mist-950` | `bg-primary` | Primary button backgrounds |
-| `bg-mist-100` | `bg-background` | Light backgrounds |
-| `bg-mist-50` | `bg-background` | Light backgrounds |
-| `hover:bg-mist-800` | `hover:bg-primary/90` | Button hover states |
-| `bg-mist-950/10` | `bg-muted/10` | Soft button backgrounds |
-| `dark:*` variants | Remove | Use theme dark mode classes instead |
+| `text-mist-950` | `text-fg` | Primary text |
+| `text-mist-900` | `text-fg` | Primary text |
+| `text-mist-700` | `text-fg-muted` | Secondary/muted text |
+| `text-mist-600` | `text-fg-muted` | Secondary/muted text |
+| `text-mist-400` | `text-fg-subtle` | Subtle/hint text |
+| `text-white` (on dark bg) | `text-on-brand` | Text on brand buttons |
+
+### Background Colors
+| Original Class | Theme Class | Usage |
+|----------------|-------------|-------|
+| `bg-mist-950` | `bg-brand` | Primary button backgrounds |
+| `bg-mist-100` | `bg-base-panel` | Card/panel backgrounds |
+| `bg-mist-50` | `bg-base-muted` | Subtle section backgrounds |
+| `bg-white` | `bg-base` | Main page background |
+| `hover:bg-mist-800` | `hover:bg-brand-hover` | Button hover states |
+| `bg-mist-950/10` | `bg-base-panel` | Soft backgrounds |
+
+### Border Colors
+| Original Class | Theme Class | Usage |
+|----------------|-------------|-------|
+| `border-mist-200` | `border-border` | Standard borders |
+| `border-mist-100` | `border-border` | Light borders |
+| `divide-mist-200` | `divide-border` | Dividers |
+
+### Remove
+| Original Class | Action |
+|----------------|--------|
+| `dark:*` variants | Remove entirely - theme handles dark mode |
 
 ## Typography Mapping
 
@@ -98,10 +116,10 @@ Converted (inline the container styles):
 
 **HTML Template** (`blocks/ComponentName.html`):
 ```handlebars
-<section class="py-16 bg-background">
+<section class="py-16 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
-    <h1 class="heading-xl text-foreground">{{headline}}</h1>
-    <div class="body-lg text-muted">{{{content}}}</div>
+    <h1 class="heading-xl text-fg">{{headline}}</h1>
+    <div class="body-lg text-fg-muted">{{{content}}}</div>
     {{> Button label=button_label url=button_url}}
   </div>
 </section>
@@ -191,15 +209,17 @@ Reference a partial with `{{> PartialName}}`:
 
 1. **Identify the component type**: Element → Partial, Section → Block
 2. **Extract the JSX structure**: Copy the render output
-3. **Convert classes**: Replace mist colors with theme classes
-4. **Convert typography**: Replace text-* with heading-* or body-*
-5. **Remove dark mode variants**: Theme handles this automatically
-6. **Convert React to Handlebars**:
+3. **Convert text colors**: `text-mist-*` → `text-fg`, `text-fg-muted`, `text-fg-subtle`
+4. **Convert backgrounds**: `bg-mist-*` → `bg-base`, `bg-base-panel`, `bg-brand`
+5. **Convert borders**: `border-mist-*` → `border-border`
+6. **Convert typography**: Replace text-* sizes with heading-* or body-*
+7. **Remove dark mode variants**: Theme handles this automatically
+8. **Convert React to Handlebars**:
    - `{children}` → `{{field_name}}` or `{{{field_name}}}`
    - `{condition && <jsx>}` → `{{#if condition}}...{{/if}}`
    - `{items.map(...)}` → `{{#each items}}...{{/each}}`
-7. **Define fields**: Create the .json file with field definitions
-8. **Test**: Preview the component with sample data
+9. **Define fields**: Create the .json file with field definitions and defaults
+10. **Test**: Preview the component with sample data
 
 ## Common Gotchas
 
