@@ -4,15 +4,21 @@
   "fields": [
     {
       "type": "text",
-      "name": "Headline"
+      "name": "Headline",
+      "default": "Ready to get started?"
     },
     {
       "type": "wysiwyg",
-      "name": "Subheadline"
+      "name": "Subheadline",
+      "default": "<p>Start your free trial today. No credit card required.</p>"
     },
     {
       "type": "items",
       "name": "Buttons",
+      "default": [
+        { "label": "Start Free Trial", "link": "#", "style": "primary" },
+        { "label": "Contact Sales", "link": "#", "style": "secondary" }
+      ],
       "config": {
         "fields": [
           {

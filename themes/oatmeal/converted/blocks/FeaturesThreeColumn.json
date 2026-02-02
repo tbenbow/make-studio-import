@@ -4,19 +4,36 @@
   "fields": [
     {
       "type": "text",
-      "name": "Eyebrow"
+      "name": "Eyebrow",
+      "default": "Features"
     },
     {
       "type": "text",
-      "name": "Headline"
+      "name": "Headline",
+      "default": "Everything you need to succeed"
     },
     {
       "type": "wysiwyg",
-      "name": "Subheadline"
+      "name": "Subheadline",
+      "default": "<p>Our platform provides all the tools you need to build, launch, and scale your business.</p>"
     },
     {
       "type": "repeater",
       "name": "Features",
+      "default": [
+        {
+          "headline": "Lightning Fast",
+          "description": "<p>Built for speed from the ground up. Your users will notice the difference.</p>"
+        },
+        {
+          "headline": "Easy to Use",
+          "description": "<p>Intuitive interface that anyone can learn in minutes, not hours.</p>"
+        },
+        {
+          "headline": "Secure by Default",
+          "description": "<p>Enterprise-grade security without the enterprise complexity.</p>"
+        }
+      ],
       "config": {
         "fields": [
           {

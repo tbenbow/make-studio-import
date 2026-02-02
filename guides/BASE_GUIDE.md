@@ -47,19 +47,23 @@ themes/<theme-name>/
   "fields": [
     {
       "type": "text",
-      "name": "Headline"
+      "name": "Headline",
+      "default": "Your headline goes here"
     },
     {
       "type": "wysiwyg",
-      "name": "Content"
+      "name": "Content",
+      "default": "<p>Your content goes here.</p>"
     },
     {
       "type": "text",
-      "name": "Button Label"
+      "name": "Button Label",
+      "default": "Get Started"
     },
     {
       "type": "text",
-      "name": "Button URL"
+      "name": "Button URL",
+      "default": "#"
     }
   ]
 }
@@ -149,6 +153,63 @@ themes/<theme-name>/
   }
 }
 ```
+
+## Default Values (Important!)
+
+**Always include default values** so blocks aren't empty when imported. Empty blocks make it impossible to see styling.
+
+### Simple Fields
+```json
+{
+  "type": "text",
+  "name": "Headline",
+  "default": "Your headline goes here"
+}
+```
+
+### WYSIWYG/HTML Fields
+```json
+{
+  "type": "wysiwyg",
+  "name": "Content",
+  "default": "<p>Your content goes here with <strong>formatting</strong>.</p>"
+}
+```
+
+### Items/Repeater Fields
+```json
+{
+  "type": "items",
+  "name": "Features",
+  "default": [
+    { "headline": "Feature One", "description": "<p>Description of feature one.</p>" },
+    { "headline": "Feature Two", "description": "<p>Description of feature two.</p>" },
+    { "headline": "Feature Three", "description": "<p>Description of feature three.</p>" }
+  ],
+  "config": {
+    "fields": [
+      { "type": "text", "name": "Headline" },
+      { "type": "wysiwyg", "name": "Description" }
+    ]
+  }
+}
+```
+
+### Image Fields
+Use placeholder images from Unsplash:
+```json
+{
+  "type": "image",
+  "name": "Avatar",
+  "default": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+}
+```
+
+### Where to Get Default Content
+
+1. **From the source theme** - Look at example pages in the Next.js project
+2. **Generic placeholders** - Use realistic but generic content
+3. **Appropriate length** - Match the expected content length (short for labels, longer for descriptions)
 
 ## JSX to Handlebars Conversion
 

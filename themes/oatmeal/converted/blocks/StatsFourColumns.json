@@ -5,6 +5,12 @@
     {
       "type": "repeater",
       "name": "Stats",
+      "default": [
+        { "stat": "10K+", "text": "Active Users" },
+        { "stat": "99.9%", "text": "Uptime" },
+        { "stat": "24/7", "text": "Support" },
+        { "stat": "50+", "text": "Integrations" }
+      ],
       "config": {
         "fields": [
           {

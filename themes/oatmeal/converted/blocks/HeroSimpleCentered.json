@@ -4,19 +4,26 @@
   "fields": [
     {
       "type": "text",
-      "name": "Eyebrow"
+      "name": "Eyebrow",
+      "default": "Introducing"
     },
     {
       "type": "text",
-      "name": "Headline"
+      "name": "Headline",
+      "default": "Your customer success is our mission."
     },
     {
       "type": "wysiwyg",
-      "name": "Subheadline"
+      "name": "Subheadline",
+      "default": "<p>Simplify your shared inbox, collaborate effortlessly, and give every customer a reply that feels personal.</p>"
     },
     {
       "type": "items",
       "name": "Buttons",
+      "default": [
+        { "label": "Get Started", "link": "#", "style": "primary" },
+        { "label": "Learn More", "link": "#", "style": "secondary" }
+      ],
       "config": {
         "fields": [
           {

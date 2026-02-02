@@ -1,18 +1,11 @@
-# Oatmeal to Make Studio Conversion Guide
+# Oatmeal Theme Conversion Guide
 
-This guide documents how to convert Oatmeal Next.js components into Make Studio blocks and partials.
+## Theme Overview
 
-## Output Structure
-
-```
-html-components/
-├── partials/    # Element components (Button, Badge, etc.)
-│   ├── Component.html
-│   └── Component.json
-└── blocks/      # Section components (Hero, Features, etc.)
-    ├── Component.html
-    └── Component.json
-```
+- **Source:** Oatmeal Next.js UI Kit (Tailwind UI style)
+- **Built with:** Next.js, Tailwind CSS, Heroicons
+- **Staging Site ID:** `[paste site ID after creating staging site]`
+- **Status:** ✅ Complete (26 blocks, 3 partials)
 
 ## Color Mapping (mist → theme)
 

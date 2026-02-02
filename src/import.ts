@@ -20,6 +20,34 @@ const TYPE_MAP: Record<string, string> = {
   date: 'date'
 }
 
+function getDefaultValue(field: SourceField, dbType: string): unknown {
+  // Use explicit default if provided
+  if (field.default !== undefined) {
+    // For items/repeater fields, transform nested field defaults
+    if (dbType === 'items' && Array.isArray(field.default)) {
+      return field.default.map((item: Record<string, unknown>) => {
+        const transformedItem: Record<string, unknown> = { id: randomUUID() }
+        // Map each key in the item to kebab-case as expected by templates
+        for (const [key, value] of Object.entries(item)) {
+          transformedItem[key] = value
+        }
+        return transformedItem
+      })
+    }
+    return field.default
+  }
+  
+  // Fallback defaults by type
+  switch (dbType) {
+    case 'items':
+      return []
+    case 'number':
+      return 0
+    default:
+      return ''
+  }
+}
+
 function transformField(field: SourceField): DbField {
   const dbType = TYPE_MAP[field.type] || 'text'
 
@@ -27,7 +55,7 @@ function transformField(field: SourceField): DbField {
     id: randomUUID(),
     type: dbType,
     name: field.name,
-    value: dbType === 'items' ? [] : '',
+    value: getDefaultValue(field, dbType),
     config: {}
   }
 

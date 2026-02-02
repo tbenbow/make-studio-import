@@ -1,6 +1,7 @@
 export interface SourceField {
   type: string
   name: string
+  default?: unknown  // Default value for the field
   config?: {
     fields?: SourceField[]
     [key: string]: unknown
