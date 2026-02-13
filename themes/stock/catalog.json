@@ -1,0 +1,1568 @@
+{
+  "theme": "stock",
+  "generatedAt": "2026-02-05T12:47:36.422Z",
+  "blocks": [
+    {
+      "name": "Content",
+      "description": "",
+      "category": "content",
+      "fields": [
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Terms of Service"
+        },
+        {
+          "name": "eyebrow",
+          "type": "text",
+          "default": "Category"
+        },
+        {
+          "name": "Subheadline",
+          "type": "textarea",
+          "default": "Last updated: January 2025"
+        },
+        {
+          "name": "Content",
+          "type": "wysiwyg",
+          "default": "<h2>Agreement to Terms</h2><p>By accessing or using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p><h2>Use License</h2><p>Permission is granted to temporarily use our services for personal, non-commercial purposes only.</p><h2>Disclaimer</h2><p>Our services are provided \"as is\" without any warranties, expressed or implied.</p><h2>Contact</h2><p>For questions about these Terms, please contact us at legal@example.com.</p>"
+        },
+        {
+          "name": "align",
+          "type": "select",
+          "default": "items-center",
+          "options": [
+            {
+              "key": "Left",
+              "value": ""
+            },
+            {
+              "key": "Center",
+              "value": "items-center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Split",
+      "description": "",
+      "category": "content",
+      "fields": [
+        {
+          "name": "Logo Alt",
+          "type": "text",
+          "default": "Your Company"
+        },
+        {
+          "name": "Promo Text",
+          "type": "textarea",
+          "default": "Anim aute id magna aliqua ad ad non deserunt sunt."
+        },
+        {
+          "name": "Promo Link Label",
+          "type": "text",
+          "default": "Read more"
+        },
+        {
+          "name": "Promo Link URL",
+          "type": "text",
+          "default": "#"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Data to enrich your business"
+        },
+        {
+          "name": "Subheadline",
+          "type": "textarea",
+          "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat."
+        },
+        {
+          "name": "Primary Button Label",
+          "type": "text",
+          "default": "Get started"
+        },
+        {
+          "name": "Primary Button URL",
+          "type": "text",
+          "default": "#"
+        },
+        {
+          "name": "Secondary Button Label",
+          "type": "text",
+          "default": "Learn more"
+        },
+        {
+          "name": "Secondary Button URL",
+          "type": "text",
+          "default": "#"
+        },
+        {
+          "name": "Image",
+          "type": "image",
+          "default": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
+        }
+      ]
+    },
+    {
+      "name": "CTA",
+      "description": "Simple",
+      "category": "cta",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Get started"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Ready to make customer support feel simple again?"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Join hundreds of teams using Oatmeal to deliver faster, friendlier email support.</p>"
+        },
+        {
+          "name": "Buttons",
+          "type": "items",
+          "default": [
+            {
+              "label": "Start free trial",
+              "link": "#",
+              "style": "primary"
+            },
+            {
+              "label": "Book a demo",
+              "link": "#",
+              "style": "ghost"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Label",
+              "type": "text"
+            },
+            {
+              "name": "Link",
+              "type": "text"
+            },
+            {
+              "name": "Style",
+              "type": "select",
+              "options": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Align",
+          "type": "select",
+          "default": "",
+          "options": [
+            {
+              "key": "Left",
+              "value": ""
+            },
+            {
+              "key": "Center",
+              "value": "justify-center items-center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CTA Highlight",
+      "description": "Demo on brand background",
+      "category": "cta",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Introducing"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Build better products faster"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>A powerful platform that helps teams ship quality software with confidence.</p>"
+        },
+        {
+          "name": "Button Label",
+          "type": "text",
+          "default": "Get started"
+        },
+        {
+          "name": "Button Link",
+          "type": "text",
+          "default": "#"
+        },
+        {
+          "name": "Secondary Button Label",
+          "type": "text",
+          "default": "Learn more"
+        },
+        {
+          "name": "Secondary Button Link",
+          "type": "text",
+          "default": "#"
+        },
+        {
+          "name": "Demo Image",
+          "type": "image",
+          "default": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop"
+        },
+        {
+          "name": "Footer",
+          "type": "wysiwyg",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "name": "FAQ",
+      "description": "Accordion",
+      "category": "faq",
+      "fields": [
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Frequently Asked Questions"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Find answers to common questions about our product and services.</p>"
+        },
+        {
+          "name": "Questions",
+          "type": "items",
+          "default": [
+            {
+              "question": "Do I need a credit card to start the free trial?",
+              "answer": "<p>No, you can start your 14-day free trial without entering any payment information. We'll only ask for payment details when you decide to upgrade.</p>"
+            },
+            {
+              "question": "Can my whole team use the same inbox?",
+              "answer": "<p>Yes! Oatmeal is built for team collaboration. You can invite unlimited team members on any plan, and everyone can access the shared inbox.</p>"
+            },
+            {
+              "question": "What integrations do you support?",
+              "answer": "<p>We integrate with Slack, Zapier, Gmail, Outlook, and many more. Check our integrations page for the full list.</p>"
+            },
+            {
+              "question": "Can I cancel my subscription at any time?",
+              "answer": "<p>Absolutely. You can cancel your subscription at any time from your account settings. No questions asked.</p>"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Question",
+              "type": "text"
+            },
+            {
+              "name": "Answer",
+              "type": "wysiwyg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FAQ Two Column",
+      "description": "Two column accordion",
+      "category": "faq",
+      "fields": [
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Frequently Asked Questions"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Everything you need to know about our product and how it works.</p>"
+        },
+        {
+          "name": "Questions",
+          "type": "items",
+          "default": [
+            {
+              "question": "How does the free trial work?",
+              "answer": "<p>Start your 14-day free trial with full access to all features. No credit card required.</p>"
+            },
+            {
+              "question": "Can I change my plan later?",
+              "answer": "<p>Yes, you can upgrade or downgrade your plan at any time from your account settings.</p>"
+            },
+            {
+              "question": "What payment methods do you accept?",
+              "answer": "<p>We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>"
+            },
+            {
+              "question": "Is there a setup fee?",
+              "answer": "<p>No, there are no setup fees or hidden costs. You only pay for your subscription.</p>"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Question",
+              "type": "text"
+            },
+            {
+              "name": "Answer",
+              "type": "wysiwyg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Features Alternating",
+      "description": "Stacked alternating layout",
+      "category": "features",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "How it works"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "How it works"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>A simple three-step process to get you up and running in minutes.</p>"
+        },
+        {
+          "name": "Features",
+          "type": "items",
+          "default": [
+            {
+              "title": "Connect your data",
+              "description": "Easily integrate with your existing tools and data sources.",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            },
+            {
+              "title": "Analyze insights",
+              "description": "Get powerful analytics and actionable insights from your data.",
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            },
+            {
+              "title": "Take action",
+              "description": "Make data-driven decisions and automate your workflows.",
+              "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Title",
+              "type": "text"
+            },
+            {
+              "name": "Description",
+              "type": "textarea"
+            },
+            {
+              "name": "Image",
+              "type": "image"
+            },
+            {
+              "name": "Button Label",
+              "type": "text"
+            },
+            {
+              "name": "Button Link",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Features Demo",
+      "description": "Large demo with features",
+      "category": "features",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Platform"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Built for developers"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Everything you need to build, deploy, and scale your applications.</p>"
+        },
+        {
+          "name": "Demo Image",
+          "type": "image",
+          "default": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop"
+        },
+        {
+          "name": "Features",
+          "type": "items",
+          "default": [
+            {
+              "icon": "code",
+              "title": "Clean API",
+              "description": "Simple, intuitive APIs that are a joy to work with."
+            },
+            {
+              "icon": "lightning",
+              "title": "Fast Performance",
+              "description": "Optimized for speed with minimal overhead."
+            },
+            {
+              "icon": "shield-check",
+              "title": "Secure by Default",
+              "description": "Enterprise-grade security built into every layer."
+            },
+            {
+              "icon": "puzzle-piece",
+              "title": "Extensible",
+              "description": "Easy to extend and customize to your needs."
+            },
+            {
+              "icon": "book-open",
+              "title": "Great Docs",
+              "description": "Comprehensive documentation and examples."
+            },
+            {
+              "icon": "chat-circle",
+              "title": "Active Community",
+              "description": "Join thousands of developers building together."
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Icon",
+              "type": "text"
+            },
+            {
+              "name": "Title",
+              "type": "text"
+            },
+            {
+              "name": "Description",
+              "type": "textarea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Features Double",
+      "description": "Two column with images",
+      "category": "features",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Features"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Powerful features"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Built to help your team collaborate and ship faster.</p>"
+        },
+        {
+          "name": "Features",
+          "type": "items",
+          "default": [
+            {
+              "title": "Real-time collaboration",
+              "description": "Work together with your team in real-time. See changes as they happen and never lose sync.",
+              "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            },
+            {
+              "title": "Advanced analytics",
+              "description": "Get deep insights into your data with powerful analytics and customizable dashboards.",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Title",
+              "type": "text"
+            },
+            {
+              "name": "Description",
+              "type": "textarea"
+            },
+            {
+              "name": "Image",
+              "type": "image"
+            },
+            {
+              "name": "Button Label",
+              "type": "text"
+            },
+            {
+              "name": "Button Link",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Features Grid",
+      "description": "Three column grid",
+      "category": "features",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Features"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Everything you need to deliver great support."
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Work smarter, reply faster, and keep every customer conversation right where it belongs.</p>"
+        },
+        {
+          "name": "Features",
+          "type": "items",
+          "default": [
+            {
+              "icon": "envelope",
+              "headline": "Shared Inbox",
+              "description": "<p>Keep every customer conversation in one clean, collaborative inbox.</p>"
+            },
+            {
+              "icon": "robot",
+              "headline": "AI Assistant",
+              "description": "<p>Get valuable context without having to read through long email threads.</p>"
+            },
+            {
+              "icon": "lightning",
+              "headline": "Quick Replies",
+              "description": "<p>Respond faster with templates and snippets for common questions.</p>"
+            },
+            {
+              "icon": "users",
+              "headline": "Team Collaboration",
+              "description": "<p>Assign conversations, leave internal notes, and work together seamlessly.</p>"
+            },
+            {
+              "icon": "chart-bar",
+              "headline": "Analytics",
+              "description": "<p>Track response times, resolution rates, and team performance.</p>"
+            },
+            {
+              "icon": "plug",
+              "headline": "Integrations",
+              "description": "<p>Connect with the tools you already use — Slack, Zapier, and more.</p>"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Icon",
+              "type": "text"
+            },
+            {
+              "name": "Headline",
+              "type": "text"
+            },
+            {
+              "name": "Description",
+              "type": "wysiwyg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Features Triple",
+      "description": "Three column with images",
+      "category": "features",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Features"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Everything you need"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Powerful tools to help you work smarter, not harder.</p>"
+        },
+        {
+          "name": "Features",
+          "type": "items",
+          "default": [
+            {
+              "title": "Analytics",
+              "description": "Track performance with real-time analytics and insights.",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+            },
+            {
+              "title": "Automation",
+              "description": "Automate repetitive tasks and save valuable time.",
+              "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
+            },
+            {
+              "title": "Integration",
+              "description": "Connect with your favorite tools and services.",
+              "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Title",
+              "type": "text"
+            },
+            {
+              "name": "Description",
+              "type": "textarea"
+            },
+            {
+              "name": "Image",
+              "type": "image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "description": "Links and social icons",
+      "category": "footer",
+      "fields": [
+        {
+          "name": "Links",
+          "type": "items",
+          "default": [
+            {
+              "label": "Home",
+              "url": "/"
+            },
+            {
+              "label": "Features",
+              "url": "#features"
+            },
+            {
+              "label": "Pricing",
+              "url": "#pricing"
+            },
+            {
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "label": "Contact",
+              "url": "/contact"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Label",
+              "type": "text"
+            },
+            {
+              "name": "URL",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "Social Links",
+          "type": "items",
+          "default": [
+            {
+              "name": "Twitter",
+              "icon": "x-logo",
+              "url": "https://twitter.com"
+            },
+            {
+              "name": "GitHub",
+              "icon": "github-logo",
+              "url": "https://github.com"
+            },
+            {
+              "name": "LinkedIn",
+              "icon": "linkedin-logo",
+              "url": "https://linkedin.com"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Name",
+              "type": "text"
+            },
+            {
+              "name": "Icon",
+              "type": "text"
+            },
+            {
+              "name": "URL",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "Fineprint",
+          "type": "wysiwyg",
+          "default": "<p>© 2025 Oatmeal Inc. All rights reserved.</p>"
+        }
+      ]
+    },
+    {
+      "name": "FooterCategories",
+      "description": "Link categories grid",
+      "category": "footer",
+      "fields": [
+        {
+          "name": "Categories",
+          "type": "items",
+          "default": [
+            {
+              "title": "Product",
+              "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>\n<a href=\"#\">Changelog</a>"
+            },
+            {
+              "title": "Company",
+              "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Press</a>\n<a href=\"#\">Blog</a>"
+            },
+            {
+              "title": "Resources",
+              "links": "<a href=\"#\">Documentation</a>\n<a href=\"#\">Help Center</a>\n<a href=\"#\">API Reference</a>\n<a href=\"#\">Status</a>"
+            },
+            {
+              "title": "Legal",
+              "links": "<a href=\"#\">Privacy</a>\n<a href=\"#\">Terms</a>\n<a href=\"#\">Security</a>"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Title",
+              "type": "text"
+            },
+            {
+              "name": "Links",
+              "type": "wysiwyg"
+            }
+          ]
+        },
+        {
+          "name": "Copyright",
+          "type": "wysiwyg",
+          "default": "<p>&copy; 2025 Company Inc. All rights reserved.</p>"
+        }
+      ]
+    },
+    {
+      "name": "FooterNewsletter",
+      "description": "Newsletter + categories",
+      "category": "footer",
+      "fields": [
+        {
+          "name": "Newsletter Headline",
+          "type": "text",
+          "default": "Stay in the loop"
+        },
+        {
+          "name": "Newsletter Text",
+          "type": "wysiwyg",
+          "default": "<p>Get the latest updates delivered to your inbox.</p>"
+        },
+        {
+          "name": "Categories",
+          "type": "items",
+          "default": [
+            {
+              "title": "Product",
+              "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>"
+            },
+            {
+              "title": "Company",
+              "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Blog</a>"
+            },
+            {
+              "title": "Resources",
+              "links": "<a href=\"#\">Docs</a>\n<a href=\"#\">Help</a>\n<a href=\"#\">API</a>"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Title",
+              "type": "text"
+            },
+            {
+              "name": "Links",
+              "type": "wysiwyg"
+            }
+          ]
+        },
+        {
+          "name": "Copyright",
+          "type": "wysiwyg",
+          "default": "<p>&copy; 2025 Company Inc.</p>"
+        },
+        {
+          "name": "Social Links",
+          "type": "items",
+          "default": [
+            {
+              "icon": "x-logo",
+              "url": "#",
+              "label": "X"
+            },
+            {
+              "icon": "linkedin-logo",
+              "url": "#",
+              "label": "LinkedIn"
+            },
+            {
+              "icon": "github-logo",
+              "url": "#",
+              "label": "GitHub"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Icon",
+              "type": "text"
+            },
+            {
+              "name": "Url",
+              "type": "text"
+            },
+            {
+              "name": "Label",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Form",
+      "description": "",
+      "category": "forms",
+      "fields": [
+        {
+          "name": "headline",
+          "type": "text",
+          "default": "Contact sales"
+        },
+        {
+          "name": "subheadline",
+          "type": "text",
+          "default": "We desperately want to hear from you."
+        },
+        {
+          "name": "Fields",
+          "type": "items",
+          "default": "[{\"id\":\"c1f551d2-248d-4164-a174-2ef4bd9d4af3\",\"label\":\"Name\",\"name\":\"name\"},{\"id\":\"ad02e7a5-b888-4a1b-b72d-33ffc3a61549\",\"label\":\"Email\",\"name\":\"email\",\"type\":\"email\"},{\"id\":\"5346bea7-3adf-46c9-95da-d2b713a5de12\",\"label\":\"Message\",\"name\":\"message\",\"type\":\"textarea\"}]",
+          "itemFields": [
+            {
+              "name": "Label",
+              "type": "text"
+            },
+            {
+              "name": "name",
+              "type": "text"
+            },
+            {
+              "name": "Type",
+              "type": "select",
+              "options": [
+                {
+                  "key": "Text",
+                  "value": "text"
+                },
+                {
+                  "key": "Email",
+                  "value": "email"
+                },
+                {
+                  "key": "Textarea",
+                  "value": "textarea"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hero",
+      "description": "Text w/ optional photo",
+      "category": "hero",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Welcome"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Ship faster with confidence."
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Build, test, and deploy with tools designed to help your team move quickly without breaking things.</p>"
+        },
+        {
+          "name": "Photo",
+          "type": "image",
+          "default": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop"
+        },
+        {
+          "name": "Buttons",
+          "type": "items",
+          "default": [
+            {
+              "label": "Get started",
+              "link": "#",
+              "style": "primary"
+            },
+            {
+              "label": "See pricing",
+              "link": "#",
+              "style": "ghost"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Label",
+              "type": "text"
+            },
+            {
+              "name": "Link",
+              "type": "text"
+            },
+            {
+              "name": "Style",
+              "type": "select",
+              "options": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "align",
+          "type": "select",
+          "default": "items-center text-center",
+          "options": [
+            {
+              "key": "Left",
+              "value": ""
+            },
+            {
+              "key": "Center",
+              "value": "items-center text-center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo Cloud",
+      "description": "Brand cards grid",
+      "category": "logos",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Trusted by"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Trusted by industry leaders"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Join thousands of companies already using our platform.</p>"
+        },
+        {
+          "name": "Brands",
+          "type": "items",
+          "default": [
+            {
+              "name": "Acme Corp",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=ACME",
+              "text": "Reduced support tickets by 40% in the first month.",
+              "footnote": "Enterprise customer since 2022"
+            },
+            {
+              "name": "TechStart",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=TechStart",
+              "text": "Our go-to solution for customer communication.",
+              "footnote": "Growth plan customer"
+            },
+            {
+              "name": "GlobalCo",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=GlobalCo",
+              "text": "Seamless integration with our existing tools.",
+              "footnote": "Enterprise customer since 2021"
+            },
+            {
+              "name": "Startup Inc",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=Startup",
+              "text": "Perfect for our fast-moving team.",
+              "footnote": "Starter plan customer"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Name",
+              "type": "text"
+            },
+            {
+              "name": "Logo",
+              "type": "image"
+            },
+            {
+              "name": "Text",
+              "type": "text"
+            },
+            {
+              "name": "Footnote",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Navbar",
+      "description": "Logo left, links centered",
+      "category": "navigation",
+      "fields": [
+        {
+          "name": "Logo",
+          "type": "image",
+          "default": ""
+        },
+        {
+          "name": "Logo Text",
+          "type": "text",
+          "default": "Company"
+        },
+        {
+          "name": "Logo Link",
+          "type": "text",
+          "default": "/"
+        },
+        {
+          "name": "Links",
+          "type": "items",
+          "default": [
+            {
+              "label": "Features",
+              "url": "#features"
+            },
+            {
+              "label": "Pricing",
+              "url": "#pricing"
+            },
+            {
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "label": "Blog",
+              "url": "/blog"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Label",
+              "type": "text"
+            },
+            {
+              "name": "Url",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "Button Label",
+          "type": "text",
+          "default": "Get started"
+        },
+        {
+          "name": "Button Link",
+          "type": "text",
+          "default": "#"
+        }
+      ]
+    },
+    {
+      "name": "Pricing",
+      "description": "Multi-tier",
+      "category": "pricing",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Pricing"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Pricing to fit your needs."
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Simple, transparent pricing that grows with you. No hidden fees.</p>"
+        },
+        {
+          "name": "Plans",
+          "type": "items",
+          "default": [
+            {
+              "name": "Starter",
+              "price": "$12",
+              "period": "/month",
+              "description": "<p>Perfect for small teams getting started.</p>",
+              "features": "<ul><li>Up to 5 team members</li><li>Basic analytics</li><li>Email support</li><li>1GB storage</li></ul>",
+              "badge": "",
+              "highlighted": "false",
+              "button-label": "Start free trial",
+              "button-link": "#"
+            },
+            {
+              "name": "Growth",
+              "price": "$49",
+              "period": "/month",
+              "description": "<p>For growing teams that need more power.</p>",
+              "features": "<ul><li>Unlimited team members</li><li>Advanced analytics</li><li>Priority support</li><li>10GB storage</li><li>API access</li></ul>",
+              "badge": "Most popular",
+              "highlighted": "true",
+              "button-label": "Start free trial",
+              "button-link": "#"
+            },
+            {
+              "name": "Enterprise",
+              "price": "$199",
+              "period": "/month",
+              "description": "<p>For large organizations with custom needs.</p>",
+              "features": "<ul><li>Everything in Growth</li><li>SSO &amp; SAML</li><li>Dedicated support</li><li>Unlimited storage</li><li>Custom integrations</li></ul>",
+              "badge": "",
+              "highlighted": "false",
+              "button-label": "Contact sales",
+              "button-link": "#"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Name",
+              "type": "text"
+            },
+            {
+              "name": "Price",
+              "type": "text"
+            },
+            {
+              "name": "Period",
+              "type": "text"
+            },
+            {
+              "name": "Description",
+              "type": "wysiwyg"
+            },
+            {
+              "name": "Features",
+              "type": "wysiwyg"
+            },
+            {
+              "name": "Badge",
+              "type": "text"
+            },
+            {
+              "name": "Highlighted",
+              "type": "select",
+              "options": [
+                {
+                  "key": "No",
+                  "value": "false"
+                },
+                {
+                  "key": "Yes",
+                  "value": "true"
+                }
+              ]
+            },
+            {
+              "name": "Button Label",
+              "type": "text"
+            },
+            {
+              "name": "Button Link",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pricing Large",
+      "description": "Single large box",
+      "category": "pricing",
+      "fields": [
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Everything you need"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Get access to all features with one simple plan. No hidden fees, no complicated tiers.</p>"
+        },
+        {
+          "name": "Price",
+          "type": "text",
+          "default": "$49"
+        },
+        {
+          "name": "Period",
+          "type": "text",
+          "default": "/mo"
+        },
+        {
+          "name": "Features",
+          "type": "items",
+          "default": [
+            {
+              "text": "Unlimited projects"
+            },
+            {
+              "text": "Advanced analytics"
+            },
+            {
+              "text": "24/7 support"
+            },
+            {
+              "text": "Custom integrations"
+            },
+            {
+              "text": "API access"
+            },
+            {
+              "text": "Team collaboration"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Text",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "name": "Button Label",
+          "type": "text",
+          "default": "Get started"
+        },
+        {
+          "name": "Button Link",
+          "type": "text",
+          "default": "#"
+        }
+      ]
+    },
+    {
+      "name": "Stats",
+      "description": "Four columns",
+      "category": "stats",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "By the numbers"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Trusted by teams everywhere."
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Join thousands of companies delivering better customer support with Oatmeal.</p>"
+        },
+        {
+          "name": "Stats",
+          "type": "items",
+          "default": [
+            {
+              "stat": "2M+",
+              "text": "Emails processed every week across thousands of teams."
+            },
+            {
+              "stat": "99.98%",
+              "text": "Uptime — because your customers never stop."
+            },
+            {
+              "stat": "50%",
+              "text": "Reduction in average response time."
+            },
+            {
+              "stat": "10k+",
+              "text": "Teams using Oatmeal worldwide."
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Stat",
+              "type": "text"
+            },
+            {
+              "name": "Text",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Team",
+      "description": "Three column grid",
+      "category": "team",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Our team"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "Meet the people behind the product."
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>We're a small team of passionate people building tools to help you succeed.</p>"
+        },
+        {
+          "name": "Members",
+          "type": "items",
+          "default": "[{\"id\":\"904e83af-a16f-40f1-80c7-8922b56862a3\",\"name\":\"Lisa Wang\",\"role\":\"Product Manager\",\"photo\":\"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"76be1b01-e26a-438c-8599-4d02ff629810\",\"name\":\"Emily Johnson\",\"role\":\"Head of Design\",\"photo\":\"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"8e726354-f697-4fb5-8bf4-b5ea71b54422\",\"name\":\"James Wilson\",\"role\":\"Customer Success\",\"photo\":\"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"59c53d6a-34ca-4fec-bd59-1eb245b5a8fa\",\"name\":\"Sarah Chen\",\"role\":\"CEO & Co-founder\",\"photo\":\"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"5b172321-1f5b-4e6e-ac4b-eebabbe41ff6\",\"name\":\"Michael Torres\",\"role\":\"CTO & Co-founder\",\"photo\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"5e08c5ac-2b1d-4002-b2b4-6ce59af07a42\",\"name\":\"David Kim\",\"role\":\"Lead Engineer\",\"photo\":\"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=533&fit=crop&crop=face\"}]",
+          "itemFields": [
+            {
+              "name": "Name",
+              "type": "text"
+            },
+            {
+              "name": "Role",
+              "type": "text"
+            },
+            {
+              "name": "Photo",
+              "type": "image"
+            }
+          ]
+        },
+        {
+          "name": "Columns",
+          "type": "select",
+          "default": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3",
+          "options": [
+            {
+              "key": "Three",
+              "value": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+            },
+            {
+              "key": "Four",
+              "value": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Testimonial",
+      "description": "Large quote",
+      "category": "testimonials",
+      "fields": [
+        {
+          "name": "Quote",
+          "type": "wysiwyg",
+          "default": "<p>Oatmeal has completely transformed our customer support operations. The team collaboration features are incredible.</p>"
+        },
+        {
+          "name": "Image",
+          "type": "image",
+          "default": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "default": "Jordan Rogers"
+        },
+        {
+          "name": "Byline",
+          "type": "text",
+          "default": "Founder at Anomaly"
+        }
+      ]
+    },
+    {
+      "name": "Testimonial Large",
+      "description": "Two column with large photo",
+      "category": "testimonials",
+      "fields": [
+        {
+          "name": "Quote",
+          "type": "wysiwyg",
+          "default": "<p>This platform has transformed how our team handles customer support. We've cut response times in half while actually improving customer satisfaction scores.</p>"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "default": "Sarah Chen"
+        },
+        {
+          "name": "Byline",
+          "type": "text",
+          "default": "VP of Customer Success, TechCorp"
+        },
+        {
+          "name": "Photo",
+          "type": "image",
+          "default": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face"
+        }
+      ]
+    },
+    {
+      "name": "Testimonials Grid",
+      "description": "Three column grid",
+      "category": "testimonials",
+      "fields": [
+        {
+          "name": "Eyebrow",
+          "type": "text",
+          "default": "Testimonials"
+        },
+        {
+          "name": "Headline",
+          "type": "text",
+          "default": "What our customers are saying"
+        },
+        {
+          "name": "Subheadline",
+          "type": "wysiwyg",
+          "default": "<p>Don't just take our word for it. Here's what our customers have to say.</p>"
+        },
+        {
+          "name": "Testimonials",
+          "type": "items",
+          "default": [
+            {
+              "quote": "<p>This product has completely transformed how we work. The team collaboration features are incredible.</p>",
+              "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+              "name": "Sarah Chen",
+              "byline": "CEO at TechCorp"
+            },
+            {
+              "quote": "<p>We've seen a 50% improvement in our response times since switching. Highly recommended.</p>",
+              "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+              "name": "Michael Torres",
+              "byline": "Head of Support at Acme"
+            },
+            {
+              "quote": "<p>The best investment we've made this year. Our customers are happier than ever.</p>",
+              "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+              "name": "Emily Johnson",
+              "byline": "Founder at StartupXYZ"
+            }
+          ],
+          "itemFields": [
+            {
+              "name": "Name",
+              "type": "text"
+            },
+            {
+              "name": "Quote",
+              "type": "wysiwyg"
+            },
+            {
+              "name": "Photo",
+              "type": "image"
+            },
+            {
+              "name": "Byline",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

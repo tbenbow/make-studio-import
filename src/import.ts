@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { randomUUID } from 'crypto'
-import mongoose from 'mongoose'
+import { connect, disconnect } from './db.js'
 import type { SourceField, DbField, Manifest, ImportResult } from './types.js'
 
 // Field type mapping
@@ -76,18 +76,26 @@ function readComponent(dir: string, name: string) {
   const template = fs.existsSync(htmlPath) ? fs.readFileSync(htmlPath, 'utf-8') : ''
 
   let fields: DbField[] = []
+  let description: string | undefined
+  let thumbnailType: string | undefined
   if (fs.existsSync(jsonPath)) {
     try {
       const json = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'))
       if (json.fields && Array.isArray(json.fields)) {
         fields = json.fields.map(transformField)
       }
+      if (json.description && typeof json.description === 'string') {
+        description = json.description.slice(0, 30) // Max 30 chars
+      }
+      if (json.thumbnailType && typeof json.thumbnailType === 'string') {
+        thumbnailType = json.thumbnailType
+      }
     } catch {
       // Skip invalid JSON
     }
   }
 
-  return { template, fields }
+  return { template, fields, description, thumbnailType }
 }
 
 function getComponentNames(dir: string): string[] {
@@ -117,7 +125,8 @@ function saveManifest(themePath: string, manifest: Manifest) {
 export async function importTheme(
   themePath: string,
   siteId: string,
-  mongoUri: string
+  mongoUri: string,
+  options: { replace?: boolean } = {}
 ): Promise<ImportResult> {
   const result: ImportResult = {
     success: true,
@@ -127,39 +136,33 @@ export async function importTheme(
     errors: []
   }
 
-  // Connect to MongoDB
-  await mongoose.connect(mongoUri)
-
-  // Define schemas
-  const partialSchema = new mongoose.Schema({
-    name: String,
-    site_id: String,
-    template: String
-  }, { timestamps: true })
-
-  const blockSchema = new mongoose.Schema({
-    name: String,
-    site_id: String,
-    template: String,
-    fields: [mongoose.Schema.Types.Mixed]
-  }, { timestamps: true })
-
-  const siteSchema = new mongoose.Schema({
-    partials: [{ _id: mongoose.Schema.Types.Mixed, name: String }],
-    blocks: [{ _id: mongoose.Schema.Types.Mixed, name: String }]
-  })
-
-  const Partial = mongoose.models.Partial || mongoose.model('Partial', partialSchema)
-  const Block = mongoose.models.Block || mongoose.model('Block', blockSchema)
-  const Site = mongoose.models.Site || mongoose.model('Site', siteSchema)
+  const { Site, Block, Partial } = await connect(mongoUri)
 
   // Verify site exists
   const site = await Site.findById(siteId)
   if (!site) {
-    await mongoose.disconnect()
+    await disconnect()
     result.success = false
     result.errors.push({ component: '', type: 'site', error: `Site ${siteId} not found` })
     return result
+  }
+
+  // Replace mode: wipe existing blocks and partials
+  if (options.replace) {
+    await Block.deleteMany({ site_id: siteId })
+    await Partial.deleteMany({ site_id: siteId })
+    await Site.findByIdAndUpdate(siteId, { blocks: [], partials: [] })
+  }
+
+  // Import theme.json if present
+  const themeJsonPath = path.join(themePath, 'theme.json')
+  if (fs.existsSync(themeJsonPath)) {
+    try {
+      const themeData = JSON.parse(fs.readFileSync(themeJsonPath, 'utf-8'))
+      await Site.findByIdAndUpdate(siteId, { theme: themeData })
+    } catch (error) {
+      result.errors.push({ component: 'theme.json', type: 'theme', error: String(error) })
+    }
   }
 
   const blocksDir = path.join(themePath, 'converted', 'blocks')
@@ -214,12 +217,18 @@ export async function importTheme(
   for (const name of blockNames) {
     try {
       const existing = await Block.findOne({ name, site_id: siteId })
-      const { template, fields } = readComponent(blocksDir, name)
+      const { template, fields, description, thumbnailType } = readComponent(blocksDir, name)
 
       if (existing) {
         // Update existing
         existing.template = template
         existing.fields = fields
+        if (description !== undefined) {
+          existing.description = description
+        }
+        if (thumbnailType !== undefined) {
+          existing.thumbnailType = thumbnailType
+        }
         await existing.save()
         result.updated.blocks.push(name)
         manifest.components.blocks[name] = {
@@ -229,7 +238,7 @@ export async function importTheme(
         }
       } else {
         // Create new
-        const block = new Block({ name, site_id: siteId, template, fields })
+        const block = new Block({ name, site_id: siteId, template, fields, description, thumbnailType })
         await block.save()
 
         await Site.findByIdAndUpdate(siteId, {
@@ -253,6 +262,6 @@ export async function importTheme(
   manifest.lastImport = new Date().toISOString()
   saveManifest(themePath, manifest)
 
-  await mongoose.disconnect()
+  await disconnect()
   return result
 }

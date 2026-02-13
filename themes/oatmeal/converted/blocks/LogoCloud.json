@@ -1,0 +1,60 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Brand cards grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Trusted by"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Trusted by industry leaders"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Join thousands of companies already using our platform.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Brands",
+      "default": [
+        {
+          "name": "Acme Corp",
+          "logo": "https://placehold.co/120x32/1a1a1a/white?text=ACME",
+          "text": "Reduced support tickets by 40% in the first month.",
+          "footnote": "Enterprise customer since 2022"
+        },
+        {
+          "name": "TechStart",
+          "logo": "https://placehold.co/120x32/1a1a1a/white?text=TechStart",
+          "text": "Our go-to solution for customer communication.",
+          "footnote": "Growth plan customer"
+        },
+        {
+          "name": "GlobalCo",
+          "logo": "https://placehold.co/120x32/1a1a1a/white?text=GlobalCo",
+          "text": "Seamless integration with our existing tools.",
+          "footnote": "Enterprise customer since 2021"
+        },
+        {
+          "name": "Startup Inc",
+          "logo": "https://placehold.co/120x32/1a1a1a/white?text=Startup",
+          "text": "Perfect for our fast-moving team.",
+          "footnote": "Starter plan customer"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "image", "name": "Logo", "config": { "maxWidth": 200, "maxHeight": 50 } },
+          { "type": "text", "name": "Text" },
+          { "type": "text", "name": "Footnote" }
+        ]
+      }
+    }
+  ]
+}

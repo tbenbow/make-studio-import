@@ -1,0 +1,71 @@
+{
+  "name": "Home",
+  "settings": {
+    "title": "Home - Test Site",
+    "description": "Welcome to our test site"
+  },
+  "blocks": [
+    {
+      "block": "Navbar",
+      "content": {
+        "Logo Text": "TestCo",
+        "Logo Link": "/",
+        "Links": [
+          { "label": "Features", "url": "#features" },
+          { "label": "Pricing", "url": "#pricing" },
+          { "label": "About", "url": "/about" }
+        ],
+        "Button Label": "Get Started",
+        "Button Link": "/signup"
+      }
+    },
+    {
+      "block": "Hero",
+      "content": {
+        "Eyebrow": "Welcome to TestCo",
+        "Headline": "Build amazing products faster",
+        "Subheadline": "<p>Our platform helps teams ship quality software with confidence. Start your free trial today.</p>",
+        "Buttons": [
+          { "label": "Start free trial", "link": "/signup", "style": "primary" },
+          { "label": "Watch demo", "link": "#demo", "style": "ghost" }
+        ]
+      }
+    },
+    {
+      "block": "Features Grid",
+      "content": {
+        "Eyebrow": "Features",
+        "Headline": "Everything you need to succeed",
+        "Subheadline": "<p>Powerful tools designed to help your team work smarter.</p>",
+        "Features": [
+          {
+            "icon": "rocket",
+            "headline": "Fast Deployment",
+            "description": "<p>Deploy your applications in seconds with our streamlined pipeline.</p>"
+          },
+          {
+            "icon": "shield-check",
+            "headline": "Enterprise Security",
+            "description": "<p>Bank-grade security with SOC 2 compliance built in.</p>"
+          },
+          {
+            "icon": "chart-bar",
+            "headline": "Real-time Analytics",
+            "description": "<p>Monitor performance and get insights as they happen.</p>"
+          }
+        ]
+      }
+    },
+    {
+      "block": "CTA",
+      "content": {
+        "Eyebrow": "Get started today",
+        "Headline": "Ready to transform your workflow?",
+        "Subheadline": "<p>Join thousands of teams already using TestCo to build better products.</p>",
+        "Buttons": [
+          { "label": "Start free trial", "link": "/signup", "style": "primary" }
+        ]
+      }
+    }
+  ]
+}

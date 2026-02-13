@@ -1,0 +1,48 @@
+<footer class="pt-16 bg-base">
+  <div class="bg-base-muted py-16">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16">
+      <div class="grid grid-cols-1 gap-x-6 gap-y-16 body-sm lg:grid-cols-2">
+        <form class="flex max-w-sm flex-col gap-2">
+          {{#if newsletter_headline}}
+            <p class="font-semibold text-fg">{{newsletter_headline}}</p>
+          {{/if}}
+          {{#if newsletter_text}}
+            <div class="text-fg-muted">{{{newsletter_text}}}</div>
+          {{/if}}
+          <div class="flex items-center border-b border-border py-2 focus-within:border-fg">
+            <input type="email" placeholder="Email" aria-label="Email" class="flex-1 bg-transparent text-fg focus:outline-none" />
+            <button type="submit" aria-label="Subscribe" class="inline-flex size-7 items-center justify-center rounded-full hover:bg-base-panel transition">
+              {{icon "arrow-right" size="20"}}
+            </button>
+          </div>
+        </form>
+        {{#if (length categories)}}
+          <nav class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+            {{#each categories}}
+              <div>
+                <h3 class="font-semibold text-fg">{{title}}</h3>
+                <ul role="list" class="mt-2 flex flex-col gap-2 text-fg-muted [&_a]:hover:text-fg [&_a]:transition">
+                  {{{links}}}
+                </ul>
+              </div>
+            {{/each}}
+          </nav>
+        {{/if}}
+      </div>
+      <div class="flex items-center justify-between gap-10 body-sm">
+        {{#if copyright}}
+          <div class="text-fg-subtle">{{{copyright}}}</div>
+        {{/if}}
+        {{#if (length social_links)}}
+          <div class="flex items-center gap-4 sm:gap-10">
+            {{#each social_links}}
+              <a href="{{url}}" target="_blank" aria-label="{{label}}" class="text-fg hover:text-fg-muted transition">
+                {{icon icon size="24"}}
+              </a>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</footer>

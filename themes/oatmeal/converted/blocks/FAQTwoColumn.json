@@ -1,0 +1,33 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Two column accordion",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Everything you need to know about our product and how it works.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Questions",
+      "default": [
+        { "question": "How does the free trial work?", "answer": "<p>Start your 14-day free trial with full access to all features. No credit card required.</p>" },
+        { "question": "Can I change my plan later?", "answer": "<p>Yes, you can upgrade or downgrade your plan at any time from your account settings.</p>" },
+        { "question": "What payment methods do you accept?", "answer": "<p>We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>" },
+        { "question": "Is there a setup fee?", "answer": "<p>No, there are no setup fees or hidden costs. You only pay for your subscription.</p>" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Question" },
+          { "type": "wysiwyg", "name": "Answer" }
+        ]
+      }
+    }
+  ]
+}

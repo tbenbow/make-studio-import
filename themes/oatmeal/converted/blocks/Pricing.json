@@ -1,0 +1,83 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Multi-tier",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Pricing"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Pricing to fit your needs."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Simple, transparent pricing that grows with you. No hidden fees.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Plans",
+      "default": [
+        {
+          "name": "Starter",
+          "price": "$12",
+          "period": "/month",
+          "description": "<p>Perfect for small teams getting started.</p>",
+          "features": "<ul><li>Up to 5 team members</li><li>Basic analytics</li><li>Email support</li><li>1GB storage</li></ul>",
+          "badge": "",
+          "highlighted": "false",
+          "button-label": "Start free trial",
+          "button-link": "#"
+        },
+        {
+          "name": "Growth",
+          "price": "$49",
+          "period": "/month",
+          "description": "<p>For growing teams that need more power.</p>",
+          "features": "<ul><li>Unlimited team members</li><li>Advanced analytics</li><li>Priority support</li><li>10GB storage</li><li>API access</li></ul>",
+          "badge": "Most popular",
+          "highlighted": "true",
+          "button-label": "Start free trial",
+          "button-link": "#"
+        },
+        {
+          "name": "Enterprise",
+          "price": "$199",
+          "period": "/month",
+          "description": "<p>For large organizations with custom needs.</p>",
+          "features": "<ul><li>Everything in Growth</li><li>SSO &amp; SAML</li><li>Dedicated support</li><li>Unlimited storage</li><li>Custom integrations</li></ul>",
+          "badge": "",
+          "highlighted": "false",
+          "button-label": "Contact sales",
+          "button-link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Price" },
+          { "type": "text", "name": "Period" },
+          { "type": "wysiwyg", "name": "Description" },
+          { "type": "wysiwyg", "name": "Features" },
+          { "type": "text", "name": "Badge" },
+          {
+            "type": "select",
+            "name": "Highlighted",
+            "config": {
+              "selectOptions": [
+                { "key": "No", "value": "false" },
+                { "key": "Yes", "value": "true" }
+              ]
+            }
+          },
+          { "type": "text", "name": "Button Label" },
+          { "type": "text", "name": "Button Link" }
+        ]
+      }
+    }
+  ]
+}

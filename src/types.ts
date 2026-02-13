@@ -45,3 +45,74 @@ export interface ValidationResult {
   errors: { file: string; message: string }[]
   warnings: { file: string; message: string }[]
 }
+
+// Site configuration (sites/<name>/site.json)
+export interface SiteConfig {
+  siteId: string
+  theme: string
+  name: string
+}
+
+// Catalog types
+export interface CatalogFieldOption {
+  key: string
+  value: string
+}
+
+export interface CatalogField {
+  name: string
+  type: string
+  default?: unknown
+  options?: CatalogFieldOption[]  // For select fields
+  itemFields?: CatalogField[]      // For items fields
+}
+
+export interface CatalogBlock {
+  name: string
+  description: string
+  category: string
+  fields: CatalogField[]
+}
+
+export interface BlockCatalog {
+  theme: string
+  generatedAt: string
+  blocks: CatalogBlock[]
+}
+
+// Page interchange types
+export interface PageBlockContent {
+  [fieldName: string]: unknown
+}
+
+export interface PageBlock {
+  block: string
+  content: PageBlockContent
+}
+
+export interface PageSettings {
+  title: string
+  description?: string
+}
+
+export interface PageInterchange {
+  name: string
+  settings: PageSettings
+  blocks: PageBlock[]
+}
+
+// Import result types
+export interface ImportPageResult {
+  success: boolean
+  pageId?: string
+  pageName: string
+  blocksImported: number
+  errors: string[]
+}
+
+// Page validation types
+export interface PageValidationResult {
+  valid: boolean
+  errors: { block: string; field: string; message: string }[]
+  warnings: { block: string; field: string; message: string }[]
+}

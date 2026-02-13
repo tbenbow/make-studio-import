@@ -1,0 +1,56 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Two column with photo",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Welcome"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Build something amazing with your team."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Collaborate seamlessly, ship faster, and create products your customers will love.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Photo",
+      "default": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
+      "config": {
+        "maxWidth": 1200,
+        "maxHeight": 900
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Get started", "link": "#", "style": "primary" },
+        { "label": "Learn more", "link": "#", "style": "ghost" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

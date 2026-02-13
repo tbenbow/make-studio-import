@@ -1,0 +1,47 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Simple centered",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Introducing Oatmeal"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Customer support that feels like a conversation."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Simplify your shared inbox, collaborate effortlessly, and give every customer a reply that feels personal.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Start free trial", "link": "#", "style": "primary" },
+        { "label": "Learn more", "link": "#", "style": "ghost" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

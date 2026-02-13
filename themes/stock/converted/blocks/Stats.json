@@ -1,0 +1,57 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Four columns",
+  "thumbnailType": "features-intro-horz-3",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "By the numbers"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Trusted by teams everywhere."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Join thousands of companies delivering better customer support with Oatmeal.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "stat": "2M+",
+          "text": "Emails processed every week across thousands of teams."
+        },
+        {
+          "stat": "99.98%",
+          "text": "Uptime — because your customers never stop."
+        },
+        {
+          "stat": "50%",
+          "text": "Reduction in average response time."
+        },
+        {
+          "stat": "10k+",
+          "text": "Teams using Oatmeal worldwide."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Stat"
+          },
+          {
+            "type": "text",
+            "name": "Text"
+          }
+        ]
+      }
+    }
+  ]
+}

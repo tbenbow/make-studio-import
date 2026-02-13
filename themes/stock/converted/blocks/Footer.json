@@ -1,0 +1,87 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Links and social icons",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Features",
+          "url": "#features"
+        },
+        {
+          "label": "Pricing",
+          "url": "#pricing"
+        },
+        {
+          "label": "About",
+          "url": "/about"
+        },
+        {
+          "label": "Contact",
+          "url": "/contact"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        {
+          "name": "Twitter",
+          "icon": "x-logo",
+          "url": "https://twitter.com"
+        },
+        {
+          "name": "GitHub",
+          "icon": "github-logo",
+          "url": "https://github.com"
+        },
+        {
+          "name": "LinkedIn",
+          "icon": "linkedin-logo",
+          "url": "https://linkedin.com"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>© 2025 Oatmeal Inc. All rights reserved.</p>"
+    }
+  ]
+}

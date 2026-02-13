@@ -1,0 +1,37 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16">
+    {{#if headline}}
+      <div class="flex max-w-2xl flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          {{#if eyebrow}}
+            <p class="body-sm font-semibold text-fg-muted">{{eyebrow}}</p>
+          {{/if}}
+          <h2 class="heading-lg text-fg text-pretty">{{headline}}</h2>
+        </div>
+        {{#if subheadline}}
+          <div class="body-md text-fg-muted text-pretty">{{{subheadline}}}</div>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      {{#if (length stats)}}
+        <div class="col-span-2 grid grid-cols-2 gap-x-2 gap-y-10 sm:grid-cols-4">
+          {{#each stats}}
+            <div class="border-l border-border pl-6">
+              <div class="heading-sm text-fg">{{value}}</div>
+              <p class="mt-2 body-sm text-fg-muted">{{label}}</p>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+    <div class="pointer-events-none relative h-48 sm:h-64 lg:h-36">
+      <div class="absolute bottom-0 left-1/2 w-full max-w-7xl -translate-x-1/2">
+        <svg class="h-24 sm:h-32 w-full fill-base-muted stroke-border" viewBox="0 0 1200 400" preserveAspectRatio="none">
+          <path d="M 0 400 L 0 383 C 396 362.79, 804 264.32, 1200 60 L 1200 60 L 1200 400 Z" stroke="none" />
+          <path d="M 0 383 C 396 362.79, 804 264.32, 1200 60" fill="none" stroke-width="1" vector-effect="non-scaling-stroke" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>

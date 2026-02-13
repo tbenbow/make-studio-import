@@ -1,0 +1,53 @@
+{
+  "name": "About",
+  "settings": {
+    "title": "About - Jeff Lin",
+    "description": "Learn more about Jeff Lin, a designer and developer focused on creating thoughtful digital experiences."
+  },
+  "blocks": [
+    {
+      "block": "Hero",
+      "content": {
+        "Eyebrow": "About Me",
+        "Headline": "Designer, developer, and lifelong learner.",
+        "Subheadline": "<p>I create digital experiences that are thoughtful, functional, and built to last. With over a decade of experience, I've helped startups and established companies alike bring their ideas to life.</p>",
+        "Buttons": [
+          { "label": "View my work", "link": "/work", "style": "primary" },
+          { "label": "Get in touch", "link": "/contact", "style": "ghost" }
+        ]
+      }
+    },
+    {
+      "block": "Content",
+      "content": {
+        "Headline": "My Story",
+        "Subheadline": "<p>How I got here</p>",
+        "Content": "<h2>The Beginning</h2><p>I started my journey in design and development over ten years ago, driven by a curiosity about how things work and a desire to create. What began as tinkering with websites in my spare time evolved into a passion for crafting digital experiences.</p><h2>Philosophy</h2><p>I believe great design is invisible. It should feel natural, intuitive, and effortless. Every project I take on is guided by this principle — removing friction, not adding complexity.</p><h2>Today</h2><p>Now I work with a select group of clients who value quality over quantity. Whether it's a complete brand overhaul or a focused product sprint, I bring the same level of care and attention to every engagement.</p>"
+      }
+    },
+    {
+      "block": "Stats",
+      "content": {
+        "Eyebrow": "By the numbers",
+        "Headline": "A track record of results.",
+        "Subheadline": "<p>Some highlights from my work over the years.</p>",
+        "Stats": [
+          { "stat": "10+", "text": "Years of experience in design and development." },
+          { "stat": "50+", "text": "Projects shipped for clients worldwide." },
+          { "stat": "3", "text": "Startups co-founded and launched." },
+          { "stat": "100%", "text": "Client satisfaction on completed projects." }
+        ]
+      }
+    },
+    {
+      "block": "CTA",
+      "content": {
+        "Headline": "Let's work together.",
+        "Subheadline": "<p>Have a project in mind? I'd love to hear about it.</p>",
+        "Buttons": [
+          { "label": "Start a conversation", "link": "/contact", "style": "primary" }
+        ]
+      }
+    }
+  ]
+}

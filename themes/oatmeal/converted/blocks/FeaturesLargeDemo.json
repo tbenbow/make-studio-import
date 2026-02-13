@@ -1,0 +1,74 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Large demo with features",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Platform"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Built for developers"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Everything you need to build, deploy, and scale your applications.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Demo Image",
+      "default": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop",
+      "config": {
+        "maxWidth": 1200,
+        "maxHeight": 800
+      }
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "code",
+          "title": "Clean API",
+          "description": "Simple, intuitive APIs that are a joy to work with."
+        },
+        {
+          "icon": "lightning",
+          "title": "Fast Performance",
+          "description": "Optimized for speed with minimal overhead."
+        },
+        {
+          "icon": "shield-check",
+          "title": "Secure by Default",
+          "description": "Enterprise-grade security built into every layer."
+        },
+        {
+          "icon": "puzzle-piece",
+          "title": "Extensible",
+          "description": "Easy to extend and customize to your needs."
+        },
+        {
+          "icon": "book-open",
+          "title": "Great Docs",
+          "description": "Comprehensive documentation and examples."
+        },
+        {
+          "icon": "chat-circle",
+          "title": "Active Community",
+          "description": "Join thousands of developers building together."
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon" },
+          { "type": "text", "name": "Title" },
+          { "type": "textarea", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

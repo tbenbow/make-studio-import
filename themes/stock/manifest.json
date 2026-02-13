@@ -1,0 +1,280 @@
+{
+  "siteId": "69865a04b6ff1329e6878d76",
+  "lastImport": "2026-02-06T21:16:41.372Z",
+  "components": {
+    "blocks": {
+      "CTA Highlight": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a49",
+        "updatedAt": "2026-02-06T21:16:41.303Z"
+      },
+      "CTA": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a4d",
+        "updatedAt": "2026-02-06T21:16:41.310Z"
+      },
+      "CTACentered": {
+        "status": "created",
+        "id": "6983cf59772de4e042fb5fdb",
+        "updatedAt": "2026-02-04T22:59:37.981Z"
+      },
+      "CallToAction": {
+        "status": "created",
+        "id": "6983cf59772de4e042fb5fdf",
+        "updatedAt": "2026-02-04T22:59:37.984Z"
+      },
+      "Content": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a51",
+        "updatedAt": "2026-02-06T21:16:41.312Z"
+      },
+      "ContentLeftAligned": {
+        "status": "created",
+        "id": "6983cf59772de4e042fb5fe7",
+        "updatedAt": "2026-02-04T22:59:37.991Z"
+      },
+      "FAQ Two Column": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a55",
+        "updatedAt": "2026-02-06T21:16:41.315Z"
+      },
+      "FAQ": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a59",
+        "updatedAt": "2026-02-06T21:16:41.318Z"
+      },
+      "FAQTwoColumn": {
+        "status": "created",
+        "id": "6983cf59772de4e042fb5ff3",
+        "updatedAt": "2026-02-04T22:59:38.001Z"
+      },
+      "Features Alternating": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a5d",
+        "updatedAt": "2026-02-06T21:16:41.321Z"
+      },
+      "Features Demo": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a61",
+        "updatedAt": "2026-02-06T21:16:41.324Z"
+      },
+      "Features Double": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a65",
+        "updatedAt": "2026-02-06T21:16:41.327Z"
+      },
+      "Features Grid": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a69",
+        "updatedAt": "2026-02-06T21:16:41.329Z"
+      },
+      "Features Triple": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a6d",
+        "updatedAt": "2026-02-06T21:16:41.332Z"
+      },
+      "Features": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb600b",
+        "updatedAt": "2026-02-04T22:59:38.021Z"
+      },
+      "FeaturesAlternating": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb600f",
+        "updatedAt": "2026-02-04T22:59:38.026Z"
+      },
+      "FeaturesLargeDemo": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6013",
+        "updatedAt": "2026-02-04T22:59:38.029Z"
+      },
+      "FeaturesThreeDemo": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6017",
+        "updatedAt": "2026-02-04T22:59:38.032Z"
+      },
+      "FeaturesTwoDemo": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb601b",
+        "updatedAt": "2026-02-04T22:59:38.036Z"
+      },
+      "Footer": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a71",
+        "updatedAt": "2026-02-06T21:16:41.337Z"
+      },
+      "FooterCategories": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a75",
+        "updatedAt": "2026-02-06T21:16:41.342Z"
+      },
+      "FooterNewsletter": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a79",
+        "updatedAt": "2026-02-06T21:16:41.344Z"
+      },
+      "Form": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a7d",
+        "updatedAt": "2026-02-06T21:16:41.346Z"
+      },
+      "Hero": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a81",
+        "updatedAt": "2026-02-06T21:16:41.348Z"
+      },
+      "HeroCenteredPhoto": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6033",
+        "updatedAt": "2026-02-04T22:59:38.052Z"
+      },
+      "HeroDemoBackground": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6037",
+        "updatedAt": "2026-02-04T22:59:38.056Z"
+      },
+      "HeroLeftAligned": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb603b",
+        "updatedAt": "2026-02-04T22:59:38.058Z"
+      },
+      "HeroLeftAlignedPhoto": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb603f",
+        "updatedAt": "2026-02-04T22:59:38.061Z"
+      },
+      "HeroLeftDemo": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6043",
+        "updatedAt": "2026-02-04T22:59:38.064Z"
+      },
+      "HeroWithDemo": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6047",
+        "updatedAt": "2026-02-04T22:59:38.066Z"
+      },
+      "HeroWithPhoto": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb604b",
+        "updatedAt": "2026-02-04T22:59:38.072Z"
+      },
+      "Logo Cloud": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a85",
+        "updatedAt": "2026-02-06T21:16:41.350Z"
+      },
+      "LogoCloud": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6053",
+        "updatedAt": "2026-02-04T22:59:38.081Z"
+      },
+      "Navbar": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a89",
+        "updatedAt": "2026-02-06T21:16:41.353Z"
+      },
+      "NavbarCentered": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb605b",
+        "updatedAt": "2026-02-04T22:59:38.087Z"
+      },
+      "NavbarLeft": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb605f",
+        "updatedAt": "2026-02-04T22:59:38.091Z"
+      },
+      "PlanComparison": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6063",
+        "updatedAt": "2026-02-04T22:59:38.095Z"
+      },
+      "Pricing Large": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a8d",
+        "updatedAt": "2026-02-06T21:16:41.355Z"
+      },
+      "Pricing": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a91",
+        "updatedAt": "2026-02-06T21:16:41.357Z"
+      },
+      "PricingHero": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb606f",
+        "updatedAt": "2026-02-04T22:59:38.103Z"
+      },
+      "PricingSingleTier": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6073",
+        "updatedAt": "2026-02-04T22:59:38.105Z"
+      },
+      "Split": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a95",
+        "updatedAt": "2026-02-06T21:16:41.360Z"
+      },
+      "Stats": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a99",
+        "updatedAt": "2026-02-06T21:16:41.362Z"
+      },
+      "StatsGraph": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb607f",
+        "updatedAt": "2026-02-04T22:59:38.114Z"
+      },
+      "StatsWithDescription": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6083",
+        "updatedAt": "2026-02-04T22:59:38.117Z"
+      },
+      "Team 4": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6087",
+        "updatedAt": "2026-02-04T22:59:38.120Z"
+      },
+      "Team": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a9d",
+        "updatedAt": "2026-02-06T21:16:41.364Z"
+      },
+      "Testimonial Large": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1aa1",
+        "updatedAt": "2026-02-06T21:16:41.367Z"
+      },
+      "Testimonial": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1aa5",
+        "updatedAt": "2026-02-06T21:16:41.369Z"
+      },
+      "TestimonialWithPhoto": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb6097",
+        "updatedAt": "2026-02-04T22:59:38.131Z"
+      },
+      "Testimonials Grid": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1aa9",
+        "updatedAt": "2026-02-06T21:16:41.372Z"
+      },
+      "TestimonialsGrid": {
+        "status": "created",
+        "id": "6983cf5a772de4e042fb609f",
+        "updatedAt": "2026-02-04T22:59:38.139Z"
+      }
+    },
+    "partials": {
+      "Button": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a41",
+        "updatedAt": "2026-02-06T21:16:41.286Z"
+      },
+      "Field": {
+        "status": "created",
+        "id": "69865a39f4ee755d79eb1a45",
+        "updatedAt": "2026-02-06T21:16:41.297Z"
+      }
+    }
+  }
+}

@@ -69,6 +69,29 @@ Returns JSON with import results:
 npm run status -- --theme=<theme-name>
 ```
 
+### Clone a Site
+
+Creates a new site with all blocks, partials, pages, and theme settings copied from an existing site:
+
+```bash
+npm run clone-site -- --from=<sourceSiteId> --name="New Site Name"
+```
+
+Returns:
+```json
+{
+  "success": true,
+  "newSiteId": "65abc123...",
+  "copied": {
+    "blocks": 25,
+    "partials": 3,
+    "pages": 5,
+    "theme": true
+  },
+  "errors": []
+}
+```
+
 ## Adding a New Theme
 
 1. Create theme folder structure:
@@ -88,9 +111,10 @@ npm run status -- --theme=<theme-name>
    npm run import -- --theme=<name> --site=<siteId>
    ```
 
-## Conversion Guide
+## Guides
 
-See `guides/BASE_GUIDE.md` for universal conversion rules.
+- `guides/BASE_GUIDE.md` — Universal block conversion rules
+- `guides/PAGE_GENERATION.md` — Generate and import pages from JSON
 
 Each theme should also have its own `THEME_GUIDE.md` documenting:
 - Theme-specific color mappings
@@ -103,23 +127,33 @@ Each theme should also have its own `THEME_GUIDE.md` documenting:
 ```
 make-studio-importer/
 ├── guides/
-│   └── BASE_GUIDE.md          # Universal conversion rules
+│   ├── BASE_GUIDE.md          # Universal conversion rules
+│   └── PAGE_GENERATION.md     # Page generation guide
 │
 ├── themes/
 │   ├── .template/             # Copy for new themes
-│   ├── oatmeal/               # Example completed theme
-│   │   ├── THEME_GUIDE.md     # Theme-specific notes
-│   │   ├── source/            # Original files
-│   │   ├── converted/
-│   │   │   ├── blocks/
-│   │   │   └── partials/
-│   │   └── manifest.json      # Import tracking
+│   ├── stock/                 # Stock block library
+│   │   ├── catalog.json       # Generated block catalog
+│   │   └── converted/blocks/  # Block HTML + JSON
 │   └── <your-theme>/
+│       ├── THEME_GUIDE.md     # Theme-specific notes
+│       ├── source/            # Original files
+│       ├── converted/
+│       │   ├── blocks/
+│       │   └── partials/
+│       └── manifest.json      # Import tracking
+│
+├── sites/                     # Site-specific content
+│   └── <site-name>/
+│       ├── site.json          # { siteId, theme, name }
+│       ├── content/           # Reference docs for AI
+│       └── pages/             # Page interchange JSON
 │
 └── src/
     ├── index.ts               # CLI entry point
-    ├── validate.ts            # Validation logic
-    └── import.ts              # Import logic
+    ├── catalog.ts             # Catalog generation
+    ├── validate-page.ts       # Page validation
+    └── import-page.ts         # Page import
 ```
 
 ## For AI Assistants

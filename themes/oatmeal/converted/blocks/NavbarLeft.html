@@ -1,0 +1,34 @@
+<header class="sticky top-0 z-10 bg-base">
+  <nav>
+    <div class="mx-auto flex h-20 max-w-7xl items-center gap-4 px-6 lg:px-10">
+      <div class="flex flex-1 items-center gap-12">
+        <a href="{{default logo_link '/'}}" class="inline-flex items-center gap-2">
+          {{#if logo}}
+            <img src="{{logo}}" alt="{{logo_text}}" class="h-8 w-auto" />
+          {{else}}
+            <span class="text-lg font-semibold text-fg">{{default logo_text "Company"}}</span>
+          {{/if}}
+        </a>
+        {{#if (length links)}}
+          <div class="hidden lg:flex gap-8">
+            {{#each links}}
+              <a href="{{url}}" class="body-sm font-medium text-fg hover:text-fg-muted transition {{#if (isActive url)}}text-brand{{/if}}">
+                {{label}}
+              </a>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      <div class="flex items-center justify-end gap-4">
+        {{#if button_label}}
+          <a href="{{default button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-hover transition">
+            {{button_label}}
+          </a>
+        {{/if}}
+        <button type="button" aria-label="Toggle menu" class="inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden">
+          {{icon "list" size="24"}}
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

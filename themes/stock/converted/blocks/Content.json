@@ -1,0 +1,44 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "thumbnailType": "content",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Terms of Service"
+    },
+    {
+      "type": "text",
+      "name": "eyebrow",
+      "default": "Category"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Last updated: January 2025"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Content",
+      "default": "<h2>Agreement to Terms</h2><p>By accessing or using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p><h2>Use License</h2><p>Permission is granted to temporarily use our services for personal, non-commercial purposes only.</p><h2>Disclaimer</h2><p>Our services are provided \"as is\" without any warranties, expressed or implied.</p><h2>Contact</h2><p>For questions about these Terms, please contact us at legal@example.com.</p>"
+    },
+    {
+      "type": "select",
+      "name": "align",
+      "default": "items-center",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": ""
+          },
+          {
+            "key": "Center",
+            "value": "items-center"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Two column with images",
+  "thumbnailType": "cards-img-2",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Powerful features"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Built to help your team collaborate and ship faster.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Real-time collaboration",
+          "description": "Work together with your team in real-time. See changes as they happen and never lose sync.",
+          "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+          "button_label": "Learn more",
+          "button_link": "#"
+        },
+        {
+          "title": "Advanced analytics",
+          "description": "Get deep insights into your data with powerful analytics and customizable dashboards.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+          "button_label": "Learn more",
+          "button_link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 800,
+              "maxHeight": 600
+            }
+          },
+          {
+            "type": "text",
+            "name": "Button Label"
+          },
+          {
+            "type": "text",
+            "name": "Button Link"
+          }
+        ]
+      }
+    }
+  ]
+}

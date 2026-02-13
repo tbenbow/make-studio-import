@@ -1,0 +1,70 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Single large box",
+  "thumbnailType": "price-large",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Everything you need"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Get access to all features with one simple plan. No hidden fees, no complicated tiers.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Price",
+      "default": "$49"
+    },
+    {
+      "type": "text",
+      "name": "Period",
+      "default": "/mo"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "text": "Unlimited projects"
+        },
+        {
+          "text": "Advanced analytics"
+        },
+        {
+          "text": "24/7 support"
+        },
+        {
+          "text": "Custom integrations"
+        },
+        {
+          "text": "API access"
+        },
+        {
+          "text": "Team collaboration"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Text"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Button Link",
+      "default": "#"
+    }
+  ]
+}

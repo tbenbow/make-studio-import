@@ -1,0 +1,41 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three column",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Everything you need to deliver great support."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Work smarter, reply faster, and keep every customer conversation right where it belongs.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        { "icon": "envelope", "headline": "Shared Inbox", "description": "<p>Keep every customer conversation in one clean, collaborative inbox.</p>" },
+        { "icon": "robot", "headline": "AI Assistant", "description": "<p>Get valuable context without having to read through long email threads.</p>" },
+        { "icon": "lightning", "headline": "Quick Replies", "description": "<p>Respond faster with templates and snippets for common questions.</p>" },
+        { "icon": "users", "headline": "Team Collaboration", "description": "<p>Assign conversations, leave internal notes, and work together seamlessly.</p>" },
+        { "icon": "chart-bar", "headline": "Analytics", "description": "<p>Track response times, resolution rates, and team performance.</p>" },
+        { "icon": "plug", "headline": "Integrations", "description": "<p>Connect with the tools you already use — Slack, Zapier, and more.</p>" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon" },
+          { "type": "text", "name": "Headline" },
+          { "type": "wysiwyg", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

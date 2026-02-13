@@ -1,0 +1,16 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16 {{align}}">
+    <div class="flex max-w-2xl flex-col gap-6 {{align}}">
+      <div class="body-md text-fg-muted text-balance">{{eyebrow}}</div>
+      <h1 class="heading-xl text-fg text-balance">{{headline}}</h1>
+      {{#if subheadline}}
+        <div class="body-lg text-fg-muted max-w-xl">{{subheadline}}</div>
+      {{/if}}
+    </div>
+    {{#if content}}
+      <div class="max-w-2xl">
+        {{{prose content}}}
+      </div>
+    {{/if}}
+  </div>
+</section>

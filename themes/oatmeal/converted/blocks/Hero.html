@@ -1,0 +1,18 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col items-center gap-6">
+    {{#if eyebrow}}
+      <p class="body-sm font-semibold text-fg-muted">{{eyebrow}}</p>
+    {{/if}}
+    <h1 class="heading-xl text-fg max-w-5xl text-center text-balance">{{headline}}</h1>
+    <div class="body-lg text-fg-muted max-w-xl text-center">
+      {{{subheadline}}}
+    </div>
+    {{#if (length buttons)}}
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-2">
+        {{#each buttons}}
+          {{> Button}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

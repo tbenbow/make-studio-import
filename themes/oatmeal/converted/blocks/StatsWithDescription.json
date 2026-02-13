@@ -1,0 +1,32 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three column with description",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Built for scale"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Our platform processes millions of requests daily, helping teams around the world deliver exceptional customer experiences.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        { "stat": "99.9%", "text": "Uptime SLA for enterprise customers" },
+        { "stat": "150ms", "text": "Average response time globally" },
+        { "stat": "50M+", "text": "Messages processed monthly" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Stat" },
+          { "type": "text", "name": "Text" }
+        ]
+      }
+    }
+  ]
+}

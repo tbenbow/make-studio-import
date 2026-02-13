@@ -1,0 +1,62 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Newsletter + categories",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Newsletter Headline",
+      "default": "Stay in the loop"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Newsletter Text",
+      "default": "<p>Get the latest updates delivered to your inbox.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Categories",
+      "default": [
+        {
+          "title": "Product",
+          "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>"
+        },
+        {
+          "title": "Company",
+          "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Blog</a>"
+        },
+        {
+          "title": "Resources",
+          "links": "<a href=\"#\">Docs</a>\n<a href=\"#\">Help</a>\n<a href=\"#\">API</a>"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "wysiwyg", "name": "Links" }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Copyright",
+      "default": "<p>&copy; 2025 Company Inc.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        { "icon": "x-logo", "url": "#", "label": "X" },
+        { "icon": "linkedin-logo", "url": "#", "label": "LinkedIn" },
+        { "icon": "github-logo", "url": "#", "label": "GitHub" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon" },
+          { "type": "text", "name": "Url" },
+          { "type": "text", "name": "Label" }
+        ]
+      }
+    }
+  ]
+}

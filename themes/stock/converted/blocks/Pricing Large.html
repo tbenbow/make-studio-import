@@ -1,0 +1,41 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 gap-x-2 rounded-xl bg-base-muted p-2 lg:grid-cols-2">
+      <div class="flex flex-col items-start justify-between gap-10 p-6 sm:p-10">
+        <div class="flex flex-col gap-6">
+          {{#if headline}}
+            <h2 class="heading-lg text-fg">{{headline}}</h2>
+          {{/if}}
+          {{#if subheadline}}
+            <div class="body-md text-fg-muted text-pretty">{{{subheadline}}}</div>
+          {{/if}}
+        </div>
+        {{#if button-label}}
+          <a href="{{default button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-hover transition">
+            {{button-label}}
+          </a>
+        {{/if}}
+      </div>
+      <div class="rounded-lg bg-base p-6 sm:p-10">
+        <div class="flex items-baseline gap-2">
+          <p class="text-6xl sm:text-7xl font-light tracking-tight text-fg">{{price}}</p>
+          {{#if period}}
+            <span class="body-lg text-fg-muted">{{period}}</span>
+          {{/if}}
+        </div>
+        {{#if (length features)}}
+          <ul class="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1">
+            {{#each features}}
+              <li class="flex gap-3 body-sm">
+                <span class="flex w-5 h-5 shrink-0 items-center justify-center rounded-sm bg-border">
+                  {{icon "check" size="16" class="text-fg"}}
+                </span>
+                <p class="text-fg-muted">{{text}}</p>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

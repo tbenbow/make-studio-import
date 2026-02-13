@@ -1,0 +1,50 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three column with demos",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Everything you need"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Powerful tools to help you work smarter, not harder.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Analytics",
+          "description": "Track performance with real-time analytics and insights.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+        },
+        {
+          "title": "Automation",
+          "description": "Automate repetitive tasks and save valuable time.",
+          "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
+        },
+        {
+          "title": "Integration",
+          "description": "Connect with your favorite tools and services.",
+          "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "textarea", "name": "Description" },
+          { "type": "image", "name": "Image", "config": { "maxWidth": 600, "maxHeight": 400 } }
+        ]
+      }
+    }
+  ]
+}

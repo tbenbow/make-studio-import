@@ -1,0 +1,41 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Feature comparison table",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Plans",
+      "default": [
+        { "name": "Starter" },
+        { "name": "Pro" },
+        { "name": "Enterprise" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Feature Groups",
+      "default": [
+        {
+          "title": "Core Features",
+          "features": "<tr><td>Projects</td><td>5</td><td>Unlimited</td><td>Unlimited</td></tr><tr><td>Storage</td><td>10 GB</td><td>100 GB</td><td>Unlimited</td></tr><tr><td>Team members</td><td>1</td><td>10</td><td>Unlimited</td></tr>"
+        },
+        {
+          "title": "Support",
+          "features": "<tr><td>Email support</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Priority support</td><td>—</td><td>✓</td><td>✓</td></tr><tr><td>Dedicated account manager</td><td>—</td><td>—</td><td>✓</td></tr>"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "wysiwyg", "name": "Features" }
+        ]
+      }
+    }
+  ]
+}

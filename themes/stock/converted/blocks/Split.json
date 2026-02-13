@@ -1,0 +1,62 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "thumbnailType": "split",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Logo Alt",
+      "default": "Your Company"
+    },
+    {
+      "type": "textarea",
+      "name": "Promo Text",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt."
+    },
+    {
+      "type": "text",
+      "name": "Promo Link Label",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "name": "Promo Link URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Data to enrich your business"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat."
+    },
+    {
+      "type": "text",
+      "name": "Primary Button Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Primary Button URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Secondary Button Label",
+      "default": "Learn more"
+    },
+    {
+      "type": "text",
+      "name": "Secondary Button URL",
+      "default": "#"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Stacked alternating layout",
+  "thumbnailType": "cards-alternating",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "How it works"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "How it works"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>A simple three-step process to get you up and running in minutes.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Connect your data",
+          "description": "Easily integrate with your existing tools and data sources.",
+          "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+          "button_label": "Learn more",
+          "button_link": "#"
+        },
+        {
+          "title": "Analyze insights",
+          "description": "Get powerful analytics and actionable insights from your data.",
+          "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+          "button_label": "Learn more",
+          "button_link": "#"
+        },
+        {
+          "title": "Take action",
+          "description": "Make data-driven decisions and automate your workflows.",
+          "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
+          "button_label": "Learn more",
+          "button_link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 800,
+              "maxHeight": 600
+            }
+          },
+          {
+            "type": "text",
+            "name": "Button Label"
+          },
+          {
+            "type": "text",
+            "name": "Button Link"
+          }
+        ]
+      }
+    }
+  ]
+}

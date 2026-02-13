@@ -57,19 +57,24 @@
 
 ## Icon Mapping
 
-Use the `{{icon}}` Handlebars helper:
+Use the `{{icon}}` Handlebars helper with **kebab-case** names:
 
 ```handlebars
-{{icon "phosphor-icon-name" size="24"}}
+{{icon "arrow-right" size="24"}}
+{{icon "check" size="16" color="text-brand"}}
 ```
 
 | Oatmeal Icon | Phosphor Name |
 |--------------|---------------|
-| ChevronRightIcon | `caretRight` |
-| ArrowRightIcon | `arrowRight` |
-| ArrowLeftIcon | `arrowLeft` |
+| ChevronRightIcon | `caret-right` |
+| ChevronLeftIcon | `caret-left` |
+| ArrowRightIcon | `arrow-right` |
+| ArrowLeftIcon | `arrow-left` |
 | CheckIcon | `check` |
+| CheckCircleIcon | `check-circle` |
 | XMarkIcon | `x` |
+
+See BASE_GUIDE.md for full Heroicons → Phosphor mapping table.
 
 ## Container Pattern
 
@@ -136,7 +141,7 @@ Converted (inline the container styles):
       "name": "Headline"
     },
     {
-      "type": "richText",
+      "type": "wysiwyg",
       "name": "Content"
     },
     {
@@ -156,12 +161,14 @@ Converted (inline the container styles):
 | Type | Use Case |
 |------|----------|
 | `text` | Single-line text (headlines, labels, URLs) - no config needed |
-| `richText` | Multi-line content with formatting (use `{{{field}}}` for unescaped output) |
+| `wysiwyg` | Rich text with formatting (use `{{{field}}}` for unescaped output) |
+| `textarea` | Multi-line plain text |
 | `image` | Image uploads - requires config |
-| `link` | URL with optional label |
 | `select` | Dropdown choices |
-| `toggle` | Boolean on/off |
-| `repeater` | Lists of items - requires config with nested fields |
+| `number` | Numeric values |
+| `items` | Repeatable groups - requires config with nested fields |
+| `group` | Nested field container |
+| `date` | Date/time values |
 
 ### Image Field Config
 ```json
@@ -177,15 +184,15 @@ Converted (inline the container styles):
 }
 ```
 
-### Repeater Field Config
+### Items (Repeater) Field Config
 ```json
 {
-  "type": "repeater",
+  "type": "items",
   "name": "Items",
   "config": {
     "fields": [
       { "type": "text", "name": "Title" },
-      { "type": "text", "name": "Description" }
+      { "type": "wysiwyg", "name": "Description" }
     ]
   }
 }

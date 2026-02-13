@@ -1,0 +1,205 @@
+{
+  "siteId": "69822c78a813cbed8bdfd06b",
+  "lastImport": "2026-02-03T17:16:00.569Z",
+  "components": {
+    "blocks": {
+      "CallToAction": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5435",
+        "updatedAt": "2026-02-03T17:16:00.443Z"
+      },
+      "Hero": {
+        "status": "updated",
+        "id": "69822c78a813cbed8bdfd06e",
+        "updatedAt": "2026-02-03T17:16:00.487Z"
+      },
+      "Features": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5449",
+        "updatedAt": "2026-02-03T17:16:00.461Z"
+      },
+      "Stats": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54a7",
+        "updatedAt": "2026-02-03T17:16:00.541Z"
+      },
+      "Testimonial": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54bb",
+        "updatedAt": "2026-02-03T17:16:00.565Z"
+      },
+      "FAQ": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5441",
+        "updatedAt": "2026-02-03T17:16:00.454Z"
+      },
+      "Footer": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a545d",
+        "updatedAt": "2026-02-03T17:16:00.479Z"
+      },
+      "HeroWithPhoto": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5483",
+        "updatedAt": "2026-02-03T17:16:00.513Z"
+      },
+      "Pricing": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a549b",
+        "updatedAt": "2026-02-03T17:16:00.535Z"
+      },
+      "Team": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54b3",
+        "updatedAt": "2026-02-03T17:16:00.548Z"
+      },
+      "CTACentered": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5431",
+        "updatedAt": "2026-02-03T17:16:00.439Z"
+      },
+      "Content": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5439",
+        "updatedAt": "2026-02-03T17:16:00.447Z"
+      },
+      "LogoCloud": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5487",
+        "updatedAt": "2026-02-03T17:16:00.517Z"
+      },
+      "TestimonialsGrid": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54c3",
+        "updatedAt": "2026-02-03T17:16:00.569Z"
+      },
+      "ContentLeftAligned": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a543d",
+        "updatedAt": "2026-02-03T17:16:00.450Z"
+      },
+      "FAQTwoColumn": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5445",
+        "updatedAt": "2026-02-03T17:16:00.458Z"
+      },
+      "FeaturesAlternating": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a544d",
+        "updatedAt": "2026-02-03T17:16:00.465Z"
+      },
+      "FeaturesLargeDemo": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5451",
+        "updatedAt": "2026-02-03T17:16:00.471Z"
+      },
+      "FeaturesThreeDemo": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5455",
+        "updatedAt": "2026-02-03T17:16:00.474Z"
+      },
+      "FeaturesTwoDemo": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5459",
+        "updatedAt": "2026-02-03T17:16:00.476Z"
+      },
+      "FooterCategories": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5461",
+        "updatedAt": "2026-02-03T17:16:00.481Z"
+      },
+      "FooterNewsletter": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5465",
+        "updatedAt": "2026-02-03T17:16:00.484Z"
+      },
+      "HeroCenteredPhoto": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a546b",
+        "updatedAt": "2026-02-03T17:16:00.496Z"
+      },
+      "HeroDemoBackground": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a546f",
+        "updatedAt": "2026-02-03T17:16:00.499Z"
+      },
+      "HeroLeftAligned": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5473",
+        "updatedAt": "2026-02-03T17:16:00.502Z"
+      },
+      "HeroLeftAlignedPhoto": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5477",
+        "updatedAt": "2026-02-03T17:16:00.504Z"
+      },
+      "HeroLeftDemo": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a547b",
+        "updatedAt": "2026-02-03T17:16:00.507Z"
+      },
+      "HeroWithDemo": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a547f",
+        "updatedAt": "2026-02-03T17:16:00.510Z"
+      },
+      "Navbar": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a548b",
+        "updatedAt": "2026-02-03T17:16:00.521Z"
+      },
+      "NavbarCentered": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a548f",
+        "updatedAt": "2026-02-03T17:16:00.523Z"
+      },
+      "NavbarLeft": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5493",
+        "updatedAt": "2026-02-03T17:16:00.526Z"
+      },
+      "PlanComparison": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a5497",
+        "updatedAt": "2026-02-03T17:16:00.529Z"
+      },
+      "PricingHero": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a549f",
+        "updatedAt": "2026-02-03T17:16:00.537Z"
+      },
+      "PricingSingleTier": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54a3",
+        "updatedAt": "2026-02-03T17:16:00.539Z"
+      },
+      "StatsGraph": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54ab",
+        "updatedAt": "2026-02-03T17:16:00.543Z"
+      },
+      "StatsWithDescription": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54af",
+        "updatedAt": "2026-02-03T17:16:00.546Z"
+      },
+      "TeamFourColumn": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54b7",
+        "updatedAt": "2026-02-03T17:16:00.562Z"
+      },
+      "TestimonialWithPhoto": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a54bf",
+        "updatedAt": "2026-02-03T17:16:00.567Z"
+      }
+    },
+    "partials": {
+      "Button": {
+        "status": "created",
+        "id": "69822d50fbdb59e1b58a542d",
+        "updatedAt": "2026-02-03T17:16:00.428Z"
+      }
+    }
+  }
+}

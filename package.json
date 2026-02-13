@@ -6,14 +6,24 @@
   "scripts": {
     "validate": "tsx src/index.ts validate",
     "import": "tsx src/index.ts import",
-    "status": "tsx src/index.ts status"
+    "export": "tsx src/index.ts export",
+    "copy-theme": "tsx src/index.ts copy-theme",
+    "update-block": "tsx src/index.ts update-block",
+    "status": "tsx src/index.ts status",
+    "generate-catalog": "tsx src/index.ts generate-catalog",
+    "validate-page": "tsx src/index.ts validate-page",
+    "import-page": "tsx src/index.ts import-page",
+    "clone-site": "tsx src/index.ts clone-site",
+    "push-site": "tsx src/index.ts push-site"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
-    "mongoose": "^8.0.0"
+    "mongoose": "^8.0.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.0",
     "tsx": "^4.6.0",
     "typescript": "^5.3.0"
   }

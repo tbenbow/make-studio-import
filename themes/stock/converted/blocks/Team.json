@@ -1,0 +1,65 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three column grid",
+  "thumbnailType": "cards-img-tall-3",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our team"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Meet the people behind the product."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>We're a small team of passionate people building tools to help you succeed.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": "[{\"id\":\"904e83af-a16f-40f1-80c7-8922b56862a3\",\"name\":\"Lisa Wang\",\"role\":\"Product Manager\",\"photo\":\"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"76be1b01-e26a-438c-8599-4d02ff629810\",\"name\":\"Emily Johnson\",\"role\":\"Head of Design\",\"photo\":\"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"8e726354-f697-4fb5-8bf4-b5ea71b54422\",\"name\":\"James Wilson\",\"role\":\"Customer Success\",\"photo\":\"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"59c53d6a-34ca-4fec-bd59-1eb245b5a8fa\",\"name\":\"Sarah Chen\",\"role\":\"CEO & Co-founder\",\"photo\":\"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"5b172321-1f5b-4e6e-ac4b-eebabbe41ff6\",\"name\":\"Michael Torres\",\"role\":\"CTO & Co-founder\",\"photo\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"5e08c5ac-2b1d-4002-b2b4-6ce59af07a42\",\"name\":\"David Kim\",\"role\":\"Lead Engineer\",\"photo\":\"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=533&fit=crop&crop=face\"}]",
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          },
+          {
+            "type": "image",
+            "name": "Photo",
+            "config": {
+              "maxWidth": 400,
+              "maxHeight": 533
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Three",
+            "value": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+          },
+          {
+            "key": "Four",
+            "value": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          }
+        ]
+      }
+    }
+  ]
+}

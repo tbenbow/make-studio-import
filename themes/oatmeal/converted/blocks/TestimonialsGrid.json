@@ -1,0 +1,54 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three column grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Testimonials"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "What our customers are saying"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Don't just take our word for it. Here's what our customers have to say.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        {
+          "quote": "<p>This product has completely transformed how we work. The team collaboration features are incredible.</p>",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+          "name": "Sarah Chen",
+          "byline": "CEO at TechCorp"
+        },
+        {
+          "quote": "<p>We've seen a 50% improvement in our response times since switching. Highly recommended.</p>",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+          "name": "Michael Torres",
+          "byline": "Head of Support at Acme"
+        },
+        {
+          "quote": "<p>The best investment we've made this year. Our customers are happier than ever.</p>",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+          "name": "Emily Johnson",
+          "byline": "Founder at StartupXYZ"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "wysiwyg", "name": "Quote" },
+          { "type": "image", "name": "Photo", "config": { "maxWidth": 150, "maxHeight": 150 } },
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Byline" }
+        ]
+      }
+    }
+  ]
+}

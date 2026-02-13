@@ -1,0 +1,21 @@
+<footer class="pt-16 bg-base">
+  <div class="bg-base-muted py-16">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16">
+      {{#if (length categories)}}
+        <nav class="grid grid-cols-2 gap-6 body-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          {{#each categories}}
+            <div>
+              <h3 class="font-semibold text-fg">{{title}}</h3>
+              <ul role="list" class="mt-2 flex flex-col gap-2 text-fg-muted [&_a]:hover:text-fg [&_a]:transition">
+                {{{links}}}
+              </ul>
+            </div>
+          {{/each}}
+        </nav>
+      {{/if}}
+      {{#if copyright}}
+        <div class="body-sm text-fg-subtle">{{{copyright}}}</div>
+      {{/if}}
+    </div>
+  </div>
+</footer>

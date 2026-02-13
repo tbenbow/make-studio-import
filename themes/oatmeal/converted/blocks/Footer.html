@@ -1,0 +1,29 @@
+<footer class="pt-16">
+  <div class="bg-base-panel py-16 text-fg">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 text-center body-sm">
+      <div class="flex flex-col gap-6">
+        {{#if (length links)}}
+          <nav>
+            <ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+              {{#each links}}
+                <li class="text-fg-muted hover:text-fg transition">
+                  <a href="{{url}}">{{label}}</a>
+                </li>
+              {{/each}}
+            </ul>
+          </nav>
+        {{/if}}
+        {{#if (length social-links)}}
+          <div class="flex items-center justify-center gap-6">
+            {{#each social-links}}
+              <a href="{{url}}" target="_blank" rel="noopener" aria-label="{{name}}" class="text-fg hover:text-brand transition">
+                {{icon icon size="24"}}
+              </a>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      <div class="text-fg-subtle">{{{fineprint}}}</div>
+    </div>
+  </div>
+</footer>

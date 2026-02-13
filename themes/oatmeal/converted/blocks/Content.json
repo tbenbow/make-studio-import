@@ -1,0 +1,22 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Centered document",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Privacy Policy"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Last updated: January 2025</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Content",
+      "default": "<h2>Introduction</h2><p>This Privacy Policy describes how we collect, use, and share information about you when you use our services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you create an account, make a purchase, or contact us for support.</p><h2>How We Use Your Information</h2><p>We use the information we collect to provide, maintain, and improve our services, and to communicate with you.</p><h2>Contact Us</h2><p>If you have any questions about this Privacy Policy, please contact us at privacy@example.com.</p>"
+    }
+  ]
+}

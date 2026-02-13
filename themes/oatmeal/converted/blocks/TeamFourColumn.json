@@ -1,0 +1,43 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Four column grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our team"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Meet our leadership team"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Meet the people behind the product who make it all possible.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        { "name": "Sarah Chen", "role": "CEO", "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Michael Torres", "role": "CTO", "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Emily Johnson", "role": "COO", "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=533&fit=crop&crop=face" },
+        { "name": "David Kim", "role": "CFO", "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Lisa Wang", "role": "VP Engineering", "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=533&fit=crop&crop=face" },
+        { "name": "James Wilson", "role": "VP Sales", "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Anna Lee", "role": "VP Marketing", "photo": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Robert Brown", "role": "VP Product", "photo": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=533&fit=crop&crop=face" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Role" },
+          { "type": "image", "name": "Photo", "config": { "maxWidth": 400, "maxHeight": 533 } }
+        ]
+      }
+    }
+  ]
+}

@@ -44,6 +44,7 @@ themes/<theme-name>/
 {
   "makeStudioFields": true,
   "version": 1,
+  "description": "Simple centered",
   "fields": [
     {
       "type": "text",
@@ -67,6 +68,9 @@ themes/<theme-name>/
     }
   ]
 }
+```
+
+**Note:** The `description` field (max 30 chars) labels the block variation. For example, a block named "Hero" might have description "Simple centered" or "With photo left".
 ```
 
 ### Partial (Element Component)
@@ -327,22 +331,237 @@ Replace framework Container components with inline classes:
 {{/each}}
 ```
 
-## Icons
+## Handlebars Helpers Reference
 
-Use the `{{icon}}` helper with Phosphor icon names:
+Make Studio provides custom Handlebars helpers beyond the standard `{{#if}}`, `{{#each}}`, `{{#unless}}`, and `{{else}}`.
+
+### Comparison Helpers
+
+#### `eq` - Equality (subexpression)
 ```handlebars
-{{icon "arrowRight" size="24"}}
-{{icon "check" size="16" class="text-primary"}}
+{{#if (eq style "primary")}}
+  <button class="bg-brand">Primary</button>
+{{/if}}
+
+{{#if (eq status "active")}}Active{{else}}Inactive{{/if}}
 ```
 
-Common mappings:
-| Framework Icon | Phosphor Name |
-|----------------|---------------|
-| ChevronRight | `caretRight` |
-| ArrowRight | `arrowRight` |
-| Check | `check` |
-| X | `x` |
-| Menu | `list` |
+#### `isEqual` - Equality (block helper)
+```handlebars
+{{#isEqual style "primary"}}
+  <button class="bg-brand">Primary</button>
+{{else}}
+  <button class="bg-base-panel">Secondary</button>
+{{/isEqual}}
+```
+
+#### `switch` / `case` / `otherwise` - Multi-branch conditionals
+```handlebars
+{{#switch style}}
+  {{#case "primary"}}
+    <button class="bg-brand text-on-brand">{{label}}</button>
+  {{/case}}
+  {{#case "secondary"}}
+    <button class="bg-base-panel text-fg">{{label}}</button>
+  {{/case}}
+  {{#case "ghost" "link"}}
+    <button class="text-brand underline">{{label}}</button>
+  {{/case}}
+  {{#otherwise}}
+    <button class="bg-base-muted text-fg">{{label}}</button>
+  {{/otherwise}}
+{{/switch}}
+```
+
+### Array & String Helpers
+
+| Helper | Usage | Returns |
+|--------|-------|---------|
+| `first` | `{{first items}}` | First element |
+| `last` | `{{last items}}` | Last element |
+| `length` | `{{length items}}` | Count (works with arrays and strings) |
+| `truncate` | `{{truncate text 150}}` | Truncated string with "..." |
+| `default` | `{{default name "Guest"}}` | Value or fallback if null/undefined |
+
+```handlebars
+{{#if (length features)}}
+  <p>{{length features}} features available</p>
+{{/if}}
+
+<p>{{truncate description 100}}</p>
+
+<p>By {{default author "Anonymous"}}</p>
+```
+
+### Date Formatting
+
+```handlebars
+{{formatDate date}}           <!-- "Jan 15, 2025" (default: short) -->
+{{formatDate date "short"}}   <!-- "Jan 15, 2025" -->
+{{formatDate date "long"}}    <!-- "January 15, 2025" -->
+{{formatDate date "full"}}    <!-- "Wednesday, January 15, 2025" -->
+{{formatDate date "month"}}   <!-- "January 2025" -->
+{{formatDate date "time"}}    <!-- "2:30 PM" -->
+{{formatDate date "datetime"}} <!-- "Jan 15, 2025, 2:30 PM" -->
+```
+
+### Icons (Phosphor)
+
+Use the `{{icon}}` helper with **kebab-case** Phosphor icon names:
+
+```handlebars
+{{icon "arrow-right"}}
+{{icon "check" size="32"}}
+{{icon "star" size="20" color="text-brand"}}
+{{icon "heart" size="24" color="text-brand" class="ml-2"}}
+```
+
+**Parameters:**
+- `iconName` (required): Phosphor icon name in kebab-case
+- `size`: Icon size in pixels (default: "24")
+- `color`: CSS color class
+- `class`: Additional CSS classes
+
+**Common Icon Mappings (Heroicons → Phosphor):**
+
+| Heroicons | Phosphor |
+|-----------|----------|
+| `ChevronRightIcon` | `caret-right` |
+| `ChevronLeftIcon` | `caret-left` |
+| `ChevronDownIcon` | `caret-down` |
+| `ChevronUpIcon` | `caret-up` |
+| `ArrowRightIcon` | `arrow-right` |
+| `ArrowLeftIcon` | `arrow-left` |
+| `ArrowUpIcon` | `arrow-up` |
+| `ArrowDownIcon` | `arrow-down` |
+| `CheckIcon` | `check` |
+| `CheckCircleIcon` | `check-circle` |
+| `XMarkIcon` | `x` |
+| `XCircleIcon` | `x-circle` |
+| `PlusIcon` | `plus` |
+| `MinusIcon` | `minus` |
+| `Bars3Icon` / `MenuIcon` | `list` |
+| `MagnifyingGlassIcon` | `magnifying-glass` |
+| `UserIcon` | `user` |
+| `EnvelopeIcon` | `envelope` |
+| `PhoneIcon` | `phone` |
+| `MapPinIcon` | `map-pin` |
+| `CalendarIcon` | `calendar` |
+| `ClockIcon` | `clock` |
+| `StarIcon` | `star` |
+| `HeartIcon` | `heart` |
+| `ShareIcon` | `share` |
+| `LinkIcon` | `link` |
+| `PencilIcon` | `pencil` |
+| `TrashIcon` | `trash` |
+| `EyeIcon` | `eye` |
+| `EyeSlashIcon` | `eye-slash` |
+| `LockClosedIcon` | `lock` |
+| `LockOpenIcon` | `lock-open` |
+| `CogIcon` / `Cog6ToothIcon` | `gear` |
+| `BellIcon` | `bell` |
+| `InformationCircleIcon` | `info` |
+| `ExclamationTriangleIcon` | `warning` |
+| `ExclamationCircleIcon` | `warning-circle` |
+| `QuestionMarkCircleIcon` | `question` |
+| `PlayIcon` | `play` |
+| `PauseIcon` | `pause` |
+| `SpeakerWaveIcon` | `speaker-high` |
+| `SpeakerXMarkIcon` | `speaker-x` |
+| `DocumentIcon` | `file` |
+| `FolderIcon` | `folder` |
+| `PhotoIcon` | `image` |
+| `VideoCameraIcon` | `video-camera` |
+| `MusicalNoteIcon` | `music-note` |
+| `GlobeAltIcon` | `globe` |
+| `BuildingOfficeIcon` | `buildings` |
+| `HomeIcon` | `house` |
+| `ShoppingCartIcon` | `shopping-cart` |
+| `CreditCardIcon` | `credit-card` |
+| `CurrencyDollarIcon` | `currency-dollar` |
+| `ChartBarIcon` | `chart-bar` |
+| `PresentationChartLineIcon` | `chart-line` |
+| `SparklesIcon` | `sparkle` |
+| `BoltIcon` | `lightning` |
+| `FireIcon` | `fire` |
+| `RocketLaunchIcon` | `rocket` |
+| `ChatBubbleLeftIcon` | `chat` |
+| `ChatBubbleLeftRightIcon` | `chats` |
+
+Full icon library: [phosphoricons.com](https://phosphoricons.com) (6000+ icons)
+
+### Content Display
+
+#### `prose` - Wrap rich text content
+```handlebars
+{{{prose content}}}
+{{{prose content class="mt-4 prose-lg"}}}
+```
+
+Applies `.prose` styling class for consistent rich text formatting.
+
+### Navigation
+
+#### `isActive` - Highlight current page
+```handlebars
+<nav>
+  <a href="/" class="{{#isActive "/" exact=true}}text-brand{{/isActive}}">Home</a>
+  <a href="/blog" class="{{#isActive "/blog"}}text-brand{{/isActive}}">Blog</a>
+  <a href="/about" class="{{#isActive "/about"}}text-brand{{/isActive}}">About</a>
+</nav>
+```
+
+- Without `exact=true`: `/blog` matches `/blog`, `/blog/post/123`, etc.
+- With `exact=true`: `/blog` only matches `/blog`
+
+### Posts & Dynamic Content
+
+For sites with blog/posts:
+
+```handlebars
+<!-- Get posts by type -->
+{{#each (posts "blog")}}
+  <article>
+    <h3>{{title}}</h3>
+    <p>{{formatDate date}}</p>
+  </article>
+{{/each}}
+
+<!-- With options -->
+{{#each (posts "blog" limit=5 sort="date:desc" category="tutorials")}}
+  <article>{{title}}</article>
+{{/each}}
+
+<!-- Exclude current post (for "related posts") -->
+{{#each (posts "blog" category=post.category exclude=post.id limit=3)}}
+  <p>Related: {{title}}</p>
+{{/each}}
+
+<!-- Get unique field values (for filters) -->
+{{#each (postFieldValues "blog" "category")}}
+  <button data-filter="{{this}}">{{this}}</button>
+{{/each}}
+```
+
+### Pagination
+
+```handlebars
+<nav class="pagination">
+  {{#if (hasPrevPage)}}
+    <a href="{{paginationPrevUrl}}">Previous</a>
+  {{/if}}
+
+  {{#each (paginationPages)}}
+    <a href="{{url}}" class="{{#if isCurrent}}active{{/if}}">{{number}}</a>
+  {{/each}}
+
+  {{#if (hasNextPage)}}
+    <a href="{{paginationNextUrl}}">Next</a>
+  {{/if}}
+</nav>
+
+<p>Page {{paginationCurrentPage}} of {{paginationTotalPages}}</p>
+```
 
 ## Conversion Checklist
 

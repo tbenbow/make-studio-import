@@ -1,0 +1,42 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Simple centered",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Ready to get started?"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Join thousands of teams already using our platform to deliver better results.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Start free trial", "link": "#", "style": "primary" },
+        { "label": "Contact sales", "link": "#", "style": "ghost" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

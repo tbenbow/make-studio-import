@@ -1,0 +1,53 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16">
+    <div class="flex flex-col items-center gap-6">
+      {{#if eyebrow}}
+        <p class="body-sm font-semibold text-fg-muted">{{eyebrow}}</p>
+      {{/if}}
+      {{#if headline}}
+        <h2 class="heading-lg text-fg text-center">{{headline}}</h2>
+      {{/if}}
+      {{#if subheadline}}
+        <div class="body-lg text-fg-muted max-w-xl text-center">{{{subheadline}}}</div>
+      {{/if}}
+    </div>
+    {{#if (length plans)}}
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {{#each plans}}
+          <div class="flex flex-col justify-between gap-6 rounded-xl bg-base-muted p-6 sm:items-start">
+            <div class="self-stretch">
+              <div class="flex items-center justify-between">
+                {{#if badge}}
+                  <span class="order-last inline-flex rounded-full bg-brand/10 px-2 text-xs font-medium text-fg">{{badge}}</span>
+                {{/if}}
+                <h3 class="heading-sm text-fg">{{name}}</h3>
+              </div>
+              <p class="mt-1 inline-flex gap-1 body-md">
+                <span class="text-fg">{{price}}</span>
+                {{#if period}}
+                  <span class="text-fg-subtle">{{period}}</span>
+                {{/if}}
+              </p>
+              {{#if description}}
+                <p class="mt-4 body-sm text-fg-muted">{{description}}</p>
+              {{/if}}
+              {{#if features}}
+                <ul class="mt-4 space-y-2 body-sm text-fg-muted [&_li]:flex [&_li]:gap-4 [&_li]:before:content-['✓'] [&_li]:before:text-fg">
+                  {{{features}}}
+                </ul>
+              {{/if}}
+            </div>
+            {{#if button_label}}
+              <a href="{{default button_link '#'}}" class="inline-flex w-full shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-hover transition">
+                {{button_label}}
+              </a>
+            {{/if}}
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+    {{#if footer}}
+      <div class="text-center">{{{footer}}}</div>
+    {{/if}}
+  </div>
+</section>

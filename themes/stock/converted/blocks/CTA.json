@@ -1,0 +1,88 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Simple",
+  "thumbnailType": "hero-left",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Ready to make customer support feel simple again?"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Join hundreds of teams using Oatmeal to deliver faster, friendlier email support.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Start free trial",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Book a demo",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": ""
+          },
+          {
+            "key": "Center",
+            "value": "justify-center items-center"
+          }
+        ]
+      }
+    }
+  ]
+}

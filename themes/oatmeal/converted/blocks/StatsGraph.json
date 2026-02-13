@@ -1,0 +1,38 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Stats with chart graphic",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our growth"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Growing every day"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>We're proud of what we've built and the impact we've had.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        { "value": "10M+", "label": "Active users" },
+        { "value": "99.9%", "label": "Uptime SLA" },
+        { "value": "500K+", "label": "API requests/day" },
+        { "value": "150+", "label": "Countries served" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Value" },
+          { "type": "text", "name": "Label" }
+        ]
+      }
+    }
+  ]
+}

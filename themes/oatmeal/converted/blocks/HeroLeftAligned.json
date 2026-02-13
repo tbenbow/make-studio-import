@@ -1,0 +1,47 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Simple left-aligned",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Welcome"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Build something people love."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Create products that solve real problems and delight your customers at every step.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Get started", "link": "#", "style": "primary" },
+        { "label": "Learn more", "link": "#", "style": "ghost" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

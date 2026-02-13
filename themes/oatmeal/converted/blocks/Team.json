@@ -1,0 +1,41 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three column grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our team"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Meet the people behind the product."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>We're a small team of passionate people building tools to help you succeed.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        { "name": "Sarah Chen", "role": "CEO & Co-founder", "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Michael Torres", "role": "CTO & Co-founder", "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Emily Johnson", "role": "Head of Design", "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=533&fit=crop&crop=face" },
+        { "name": "David Kim", "role": "Lead Engineer", "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=533&fit=crop&crop=face" },
+        { "name": "Lisa Wang", "role": "Product Manager", "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=533&fit=crop&crop=face" },
+        { "name": "James Wilson", "role": "Customer Success", "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop&crop=face" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Role" },
+          { "type": "image", "name": "Photo", "config": { "maxWidth": 400, "maxHeight": 533 } }
+        ]
+      }
+    }
+  ]
+}

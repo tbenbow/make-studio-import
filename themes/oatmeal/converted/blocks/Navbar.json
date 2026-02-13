@@ -1,0 +1,52 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Logo left, links centered",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo",
+      "default": "",
+      "config": {
+        "maxWidth": 200,
+        "maxHeight": 60
+      }
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "Company"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "label": "Features", "url": "#features" },
+        { "label": "Pricing", "url": "#pricing" },
+        { "label": "About", "url": "/about" },
+        { "label": "Blog", "url": "/blog" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Url" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Button Link",
+      "default": "#"
+    }
+  ]
+}

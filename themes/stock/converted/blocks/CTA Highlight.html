@@ -1,0 +1,44 @@
+<section class="flex flex-col gap-16 px-2 pb-16 bg-base">
+  <div class="rounded-lg bg-brand py-16">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+      <div class="flex gap-x-10 gap-y-16 max-lg:flex-col sm:gap-y-24">
+        <div class="flex shrink-0 flex-col items-start gap-6 pt-16 sm:pt-32 lg:basis-xl lg:py-24">
+          {{#if eyebrow}}
+            <p class="body-sm font-semibold text-on-brand/70">{{eyebrow}}</p>
+          {{/if}}
+          {{#if headline}}
+            <h1 class="heading-xl text-on-brand max-w-5xl text-balance">{{headline}}</h1>
+          {{/if}}
+          {{#if subheadline}}
+            <div class="body-lg text-on-brand/70 max-w-3xl">{{{subheadline}}}</div>
+          {{/if}}
+          <div class="flex flex-wrap items-center gap-4">
+            {{#if button_label}}
+              <a href="{{default button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-on-brand text-brand px-4 py-2 body-sm font-medium hover:bg-on-brand/90 transition">
+                {{button_label}}
+              </a>
+            {{/if}}
+            {{#if secondary_button_label}}
+              <a href="{{default secondary_button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-on-brand px-4 py-2 body-sm font-medium hover:bg-on-brand/10 transition">
+                {{secondary_button_label}}
+                {{icon "arrow-right" size="16"}}
+              </a>
+            {{/if}}
+          </div>
+        </div>
+        {{#if demo_image}}
+          <div class="lg:pt-24 flex-1">
+            <div class="relative h-72 sm:h-92 md:h-125 lg:h-full">
+              <div class="absolute inset-y-0 left-0 flex w-screen overflow-hidden rounded-t-lg lg:rounded-tl-lg">
+                <img src="{{demo_image}}" alt="" class="h-full w-auto max-w-none object-cover">
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  {{#if footer}}
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">{{{footer}}}</div>
+  {{/if}}
+</section>

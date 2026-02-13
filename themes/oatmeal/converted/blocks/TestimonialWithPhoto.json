@@ -1,0 +1,31 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Two column with large photo",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Quote",
+      "default": "<p>This platform has transformed how our team handles customer support. We've cut response times in half while actually improving customer satisfaction scores.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Sarah Chen"
+    },
+    {
+      "type": "text",
+      "name": "Byline",
+      "default": "VP of Customer Success, TechCorp"
+    },
+    {
+      "type": "image",
+      "name": "Photo",
+      "default": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face",
+      "config": {
+        "maxWidth": 800,
+        "maxHeight": 1000
+      }
+    }
+  ]
+}

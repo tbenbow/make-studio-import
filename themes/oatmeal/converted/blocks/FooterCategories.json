@@ -1,0 +1,40 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Link categories grid",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Categories",
+      "default": [
+        {
+          "title": "Product",
+          "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>\n<a href=\"#\">Changelog</a>"
+        },
+        {
+          "title": "Company",
+          "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Press</a>\n<a href=\"#\">Blog</a>"
+        },
+        {
+          "title": "Resources",
+          "links": "<a href=\"#\">Documentation</a>\n<a href=\"#\">Help Center</a>\n<a href=\"#\">API Reference</a>\n<a href=\"#\">Status</a>"
+        },
+        {
+          "title": "Legal",
+          "links": "<a href=\"#\">Privacy</a>\n<a href=\"#\">Terms</a>\n<a href=\"#\">Security</a>"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "wysiwyg", "name": "Links" }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Copyright",
+      "default": "<p>&copy; 2025 Company Inc. All rights reserved.</p>"
+    }
+  ]
+}

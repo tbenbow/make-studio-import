@@ -1,0 +1,75 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Hero multi-tier pricing",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Pricing"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Simple, transparent pricing"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Choose the plan that works for you. All plans include a 14-day free trial.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Plans",
+      "default": [
+        {
+          "name": "Starter",
+          "price": "$19",
+          "period": "/month",
+          "description": "Perfect for individuals and small projects.",
+          "badge": "",
+          "features": "<li>5 projects</li><li>Basic analytics</li><li>Email support</li>",
+          "button_label": "Get started",
+          "button_link": "#"
+        },
+        {
+          "name": "Pro",
+          "price": "$49",
+          "period": "/month",
+          "description": "For growing teams that need more power.",
+          "badge": "Popular",
+          "features": "<li>Unlimited projects</li><li>Advanced analytics</li><li>Priority support</li><li>API access</li>",
+          "button_label": "Get started",
+          "button_link": "#"
+        },
+        {
+          "name": "Enterprise",
+          "price": "$99",
+          "period": "/month",
+          "description": "For large organizations with custom needs.",
+          "badge": "",
+          "features": "<li>Everything in Pro</li><li>Dedicated support</li><li>Custom integrations</li><li>SLA guarantee</li>",
+          "button_label": "Contact sales",
+          "button_link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Price" },
+          { "type": "text", "name": "Period" },
+          { "type": "text", "name": "Description" },
+          { "type": "text", "name": "Badge" },
+          { "type": "wysiwyg", "name": "Features" },
+          { "type": "text", "name": "Button Label" },
+          { "type": "text", "name": "Button Link" }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Footer",
+      "default": ""
+    }
+  ]
+}

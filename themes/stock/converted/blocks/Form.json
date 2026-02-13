@@ -1,0 +1,54 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "thumbnailType": "form",
+  "fields": [
+    {
+      "type": "text",
+      "name": "headline",
+      "default": "Contact sales"
+    },
+    {
+      "type": "text",
+      "name": "subheadline",
+      "default": "We desperately want to hear from you."
+    },
+    {
+      "type": "items",
+      "name": "Fields",
+      "default": "[{\"id\":\"c1f551d2-248d-4164-a174-2ef4bd9d4af3\",\"label\":\"Name\",\"name\":\"name\"},{\"id\":\"ad02e7a5-b888-4a1b-b72d-33ffc3a61549\",\"label\":\"Email\",\"name\":\"email\",\"type\":\"email\"},{\"id\":\"5346bea7-3adf-46c9-95da-d2b713a5de12\",\"label\":\"Message\",\"name\":\"message\",\"type\":\"textarea\"}]",
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "name"
+          },
+          {
+            "type": "select",
+            "name": "Type",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Text",
+                  "value": "text"
+                },
+                {
+                  "key": "Email",
+                  "value": "email"
+                },
+                {
+                  "key": "Textarea",
+                  "value": "textarea"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

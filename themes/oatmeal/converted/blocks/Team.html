@@ -1,0 +1,34 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16">
+    {{#if headline}}
+      <div class="flex max-w-2xl flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          {{#if eyebrow}}
+            <p class="body-sm font-semibold text-fg-muted">{{eyebrow}}</p>
+          {{/if}}
+          <h2 class="heading-lg text-fg text-pretty">{{headline}}</h2>
+        </div>
+        {{#if subheadline}}
+          <div class="body-md text-fg-muted text-pretty">{{{subheadline}}}</div>
+        {{/if}}
+      </div>
+    {{/if}}
+    {{#if (length members)}}
+      <ul role="list" class="grid grid-cols-2 gap-x-2 gap-y-10 md:grid-cols-3">
+        {{#each members}}
+          <li class="flex flex-col gap-4 body-sm">
+            {{#if photo}}
+              <div class="aspect-[3/4] w-full overflow-hidden rounded-sm outline -outline-offset-1 outline-border">
+                <img src="{{photo}}" alt="{{name}}" class="size-full object-cover" />
+              </div>
+            {{/if}}
+            <div>
+              <p class="font-semibold text-fg">{{name}}</p>
+              <p class="text-fg-muted">{{role}}</p>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</section>

@@ -1,0 +1,52 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Accordion",
+  "thumbnailType": "faq",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Find answers to common questions about our product and services.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Questions",
+      "default": [
+        {
+          "question": "Do I need a credit card to start the free trial?",
+          "answer": "<p>No, you can start your 14-day free trial without entering any payment information. We'll only ask for payment details when you decide to upgrade.</p>"
+        },
+        {
+          "question": "Can my whole team use the same inbox?",
+          "answer": "<p>Yes! Oatmeal is built for team collaboration. You can invite unlimited team members on any plan, and everyone can access the shared inbox.</p>"
+        },
+        {
+          "question": "What integrations do you support?",
+          "answer": "<p>We integrate with Slack, Zapier, Gmail, Outlook, and many more. Check our integrations page for the full list.</p>"
+        },
+        {
+          "question": "Can I cancel my subscription at any time?",
+          "answer": "<p>Absolutely. You can cancel your subscription at any time from your account settings. No questions asked.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Question"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Answer"
+          }
+        ]
+      }
+    }
+  ]
+}
