@@ -260,12 +260,15 @@ export async function pushSite(
     const newSiteDoc: any = {
       ...sourceSite,
       _id: newSiteId,
-      users: options.owner ? [{ clerkId: options.owner, role: 'owner' }] : [],
-      staticSite: undefined,
-      customDomain: undefined,
+      ownerId: options.owner || sourceSite.ownerId,
+      users: options.owner ? [{ userId: options.owner, authLevel: 0 }] : [],
+      customDomain: null,
+      staticSite: {
+        enabled: false, r2Path: null, domain: null, customDomain: null,
+        lastDeployed: null, deploymentStatus: 'not_deployed', previewDomain: null,
+        lastPreviewed: null, lastDeploySnapshot: null,
+      },
     }
-    delete newSiteDoc.staticSite
-    delete newSiteDoc.customDomain
 
     // Remap abbreviated arrays on the site document
     if (newSiteDoc.blocks) {
@@ -306,6 +309,14 @@ export async function pushSite(
     }
 
     await target.db.collection('sites').insertOne(newSiteDoc)
+
+    // Add site to owner's user record (the users collection controls site visibility)
+    if (options.owner) {
+      await target.db.collection('users').updateOne(
+        { clerkId: options.owner },
+        { $push: { sites: { authLevel: 0, id: newSiteIdStr } } as any }
+      )
+    }
 
     result.success = true
   } finally {
