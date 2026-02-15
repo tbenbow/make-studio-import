@@ -1,0 +1,32 @@
+<section class="bg-base sm:px-8 mt-24 md:mt-28">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="flex flex-col gap-16">
+          {{#each (posts post-type limit=4 sort="date:desc")}}
+          <article class="group relative flex flex-col items-start">
+            <h2 class="body-md font-semibold tracking-tight text-fg">
+              <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-panel opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>
+              <a href="{{url}}">
+                <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                <span class="relative z-10">{{title}}</span>
+              </a>
+            </h2>
+            <p class="relative z-10 order-first mb-3 flex items-center body-sm text-fg-alt pl-3.5">
+              <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                <span class="h-4 w-0.5 rounded-full bg-border"></span>
+              </span>
+              {{formatDate date}}
+            </p>
+            <p class="relative z-10 mt-2 body-sm text-fg-muted">{{description}}</p>
+            <div aria-hidden="true" class="relative z-10 mt-4 flex items-center body-sm font-medium text-brand">
+              Read article
+              {{icon "caret-right" size="16" class="ml-1 stroke-current"}}
+            </div>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

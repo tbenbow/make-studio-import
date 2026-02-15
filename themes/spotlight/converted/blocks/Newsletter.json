@@ -1,0 +1,27 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Email signup card",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Stay up to date"
+    },
+    {
+      "type": "text",
+      "name": "Description",
+      "default": "Get notified when I publish something new, and unsubscribe at any time."
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Join"
+    },
+    {
+      "type": "text",
+      "name": "Form Action",
+      "default": "/thank-you"
+    }
+  ]
+}

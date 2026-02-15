@@ -1,0 +1,11 @@
+<section class="bg-base mt-16 sm:mt-20">
+  <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+    {{#each photos}}
+    <div class="relative w-44 flex-none overflow-hidden rounded-xl bg-panel sm:w-72 sm:rounded-2xl {{#if (eq @index 1)}}-rotate-2{{else if (eq @index 4)}}-rotate-2{{else}}rotate-2{{/if}}">
+      <div class="aspect-[9/10]">
+        <img src="{{this}}" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>

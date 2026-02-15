@@ -1,0 +1,25 @@
+<section class="bg-base sm:px-8 mt-9">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="max-w-2xl">
+          <h1 class="heading-xl text-fg">
+            {{headline}}
+          </h1>
+          <p class="mt-6 body-md text-fg-muted">
+            {{subheadline}}
+          </p>
+          {{#if (length social-links)}}
+          <div class="mt-6 flex gap-6">
+            {{#each social-links}}
+            <a href="{{url}}" class="group -m-1 p-1" aria-label="{{label}}">
+              {{icon icon size="24" class="fill-fg-alt transition group-hover:fill-fg-muted"}}
+            </a>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

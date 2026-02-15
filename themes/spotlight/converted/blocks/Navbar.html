@@ -1,0 +1,27 @@
+<header class="bg-base z-50 sm:px-8">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="relative flex items-center gap-4 py-6">
+          <div class="flex flex-1">
+            <a href="/" class="h-10 w-10 rounded-full bg-base/90 p-0.5 shadow-lg ring-1 shadow-fg/5 ring-fg/5 backdrop-blur-sm">
+              <img src="{{avatar}}" alt="" class="h-9 w-9 rounded-full bg-panel object-cover" />
+            </a>
+          </div>
+          <div class="flex flex-1 justify-end md:justify-center">
+            <nav>
+              <ul class="flex rounded-full bg-base/90 px-3 body-sm font-medium text-fg shadow-lg ring-1 shadow-fg/5 ring-fg/5 backdrop-blur-sm">
+                {{#each links}}
+                <li>
+                  <a href="{{url}}" class="relative block px-3 py-2 transition {{#isActive url}}text-brand{{else}}hover:text-brand{{/isActive}}">{{label}}</a>
+                </li>
+                {{/each}}
+              </ul>
+            </nav>
+          </div>
+          <div class="flex justify-end md:flex-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

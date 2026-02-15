@@ -1,0 +1,12 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Recent posts compact",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Post Type",
+      "default": "blog"
+    }
+  ]
+}

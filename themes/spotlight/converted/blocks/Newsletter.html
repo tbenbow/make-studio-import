@@ -1,0 +1,23 @@
+<section class="bg-base sm:px-8">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="rounded-2xl border border-border p-6">
+          <h2 class="flex body-sm font-semibold text-fg">
+            {{icon "envelope" size="24" class="flex-none"}}
+            <span class="ml-3">{{heading}}</span>
+          </h2>
+          <p class="mt-2 body-sm text-fg-muted">
+            {{description}}
+          </p>
+          <form action="{{default form-action "/thank-you"}}" class="mt-6 flex items-center">
+            <span class="flex min-w-0 flex-auto p-px">
+              <input type="email" placeholder="Email address" aria-label="Email address" required class="w-full appearance-none rounded-md bg-base px-3 py-2 shadow-md shadow-fg/5 outline outline-fg/10 placeholder:text-fg-alt focus:ring-4 focus:ring-brand/10 focus:outline-brand body-sm" />
+            </span>
+            {{> Button label=button-label style="primary" class="ml-4 flex-none"}}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

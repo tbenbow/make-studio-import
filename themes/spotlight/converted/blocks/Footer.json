@@ -1,0 +1,28 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Simple centered",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "label": "About", "url": "/about" },
+        { "label": "Projects", "url": "/projects" },
+        { "label": "Speaking", "url": "/speaking" },
+        { "label": "Uses", "url": "/uses" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "URL" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "&copy; 2025 Spencer Sharp. All rights reserved."
+    }
+  ]
+}

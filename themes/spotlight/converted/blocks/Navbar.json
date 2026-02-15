@@ -1,0 +1,35 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "With avatar pill",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Avatar",
+      "default": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "config": {
+        "maxWidth": 300,
+        "maxHeight": 300,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "label": "About", "url": "/about" },
+        { "label": "Articles", "url": "/articles" },
+        { "label": "Projects", "url": "/projects" },
+        { "label": "Speaking", "url": "/speaking" },
+        { "label": "Uses", "url": "/uses" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "URL" }
+        ]
+      }
+    }
+  ]
+}

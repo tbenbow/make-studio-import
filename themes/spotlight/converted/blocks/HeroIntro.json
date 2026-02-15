@@ -1,0 +1,34 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Left-aligned with socials",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Software designer, founder, and amateur astronaut."
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "I'm Spencer, a software designer and entrepreneur based in New York City. I'm the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        { "label": "Follow on X", "url": "#", "icon": "x-logo" },
+        { "label": "Follow on Instagram", "url": "#", "icon": "instagram-logo" },
+        { "label": "Follow on GitHub", "url": "#", "icon": "github-logo" },
+        { "label": "Follow on LinkedIn", "url": "#", "icon": "linkedin-logo" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "URL" },
+          { "type": "text", "name": "Icon" }
+        ]
+      }
+    }
+  ]
+}

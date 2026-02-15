@@ -1,0 +1,37 @@
+<section class="bg-base sm:px-8 mt-16 sm:mt-32">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <header class="max-w-2xl">
+          <h1 class="heading-xl text-fg">{{headline}}</h1>
+          <p class="mt-6 body-md text-fg-muted">{{subheadline}}</p>
+        </header>
+        <div class="mt-16 sm:mt-20">
+          <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+            {{#each projects}}
+            <li class="group relative flex flex-col items-start">
+              <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-base shadow-md ring-1 shadow-fg/5 ring-fg/5">
+                {{#if logo}}
+                <img src="{{logo}}" alt="" class="h-8 w-8" />
+                {{/if}}
+              </div>
+              <h2 class="mt-6 body-md font-semibold text-fg">
+                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-panel opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>
+                <a href="{{url}}">
+                  <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                  <span class="relative z-10">{{name}}</span>
+                </a>
+              </h2>
+              <p class="relative z-10 mt-2 body-sm text-fg-muted">{{description}}</p>
+              <p class="relative z-10 mt-6 flex body-sm font-medium text-fg-alt transition group-hover:text-brand">
+                {{icon "link" size="24" class="flex-none"}}
+                <span class="ml-2">{{link-label}}</span>
+              </p>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

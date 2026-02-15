@@ -1,0 +1,40 @@
+<section class="bg-base sm:px-8">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="rounded-2xl border border-border p-6">
+          <h2 class="flex body-sm font-semibold text-fg">
+            {{icon "briefcase" size="24" class="flex-none"}}
+            <span class="ml-3">{{heading}}</span>
+          </h2>
+          <ol class="mt-6 space-y-4">
+            {{#each roles}}
+            <li class="flex gap-4">
+              <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-base shadow-md ring-1 shadow-fg/5 ring-fg/5">
+                {{#if logo}}
+                <img src="{{logo}}" alt="" class="h-7 w-7" />
+                {{/if}}
+              </div>
+              <dl class="flex flex-auto flex-wrap gap-x-2">
+                <dt class="sr-only">Company</dt>
+                <dd class="w-full flex-none body-sm font-medium text-fg">{{company}}</dd>
+                <dt class="sr-only">Role</dt>
+                <dd class="body-sm text-fg-alt">{{title}}</dd>
+                <dt class="sr-only">Date</dt>
+                <dd class="ml-auto body-sm text-fg-alt">
+                  {{start}} — {{default end "Present"}}
+                </dd>
+              </dl>
+            </li>
+            {{/each}}
+          </ol>
+          {{#if button-label}}
+          <div class="mt-6">
+            {{> Button label=button-label url=button-url style="secondary"}}
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

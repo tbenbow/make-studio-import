@@ -570,30 +570,37 @@ For sites with blog/posts:
 3. [ ] Convert JSX structure to Handlebars
 4. [ ] Replace framework classes with theme classes
 5. [ ] Remove all `dark:*` variants (theme handles dark mode)
-6. [ ] Inline Container component styles
-7. [ ] Convert icons to Phosphor
-8. [ ] Use `{{{triple-braces}}}` for HTML/rich text
-9. [ ] Create .json with field definitions
-10. [ ] Test with sample data
+6. [ ] Add `bg-base` to every block's root element (see below)
+7. [ ] Inline Container component styles
+8. [ ] Convert icons to Phosphor
+9. [ ] Use `{{{triple-braces}}}` for HTML/rich text
+10. [ ] Create .json with field definitions
+11. [ ] Test with sample data
 
 ## Common Gotchas
 
-1. **Escaped vs Unescaped Output**
+1. **Always set `bg-base` on block root elements**
+   - Every block's root element (`<section>`, `<header>`, `<footer>`) **must** include `bg-base`
+   - Source themes often rely on a body-level background (e.g. `<body class="bg-zinc-50">`) and leave sections transparent
+   - In Make Studio, blocks are self-contained — without an explicit background, text colored with `text-fg` can become invisible if the block is placed on a differently-themed page or the site switches to dark mode
+   - Example: `<section class="bg-base py-16">` not `<section class="py-16">`
+
+3. **Escaped vs Unescaped Output**
    - `{{field}}` = escaped (safe for text)
    - `{{{field}}}` = unescaped (required for WYSIWYG/HTML)
 
-2. **Field Name Conventions**
+4. **Field Name Conventions**
    - JSON: Title Case `"Button Label"`
    - Template: kebab-case `{{button-label}}`
 
-3. **Dark Mode**
+5. **Dark Mode**
    - Remove ALL `dark:*` classes
    - Theme handles dark mode via CSS variables
 
-4. **clsx/cn Utilities**
+6. **clsx/cn Utilities**
    - These create conditional classes
    - Pick the default variant, or convert to `{{#if}}`
 
-5. **Next.js Image Component**
+7. **Next.js Image Component**
    - Replace with standard `<img>` tag
    - Use the image field URL directly

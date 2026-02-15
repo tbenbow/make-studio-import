@@ -1,0 +1,20 @@
+<footer class="bg-base mt-32 sm:px-8">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="border-t border-border pt-10 pb-16">
+      <div class="relative px-4 sm:px-8 lg:px-12">
+        <div class="mx-auto max-w-2xl lg:max-w-5xl">
+          <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 body-sm font-medium text-fg">
+              {{#each links}}
+              <a href="{{url}}" class="transition hover:text-brand">{{label}}</a>
+              {{/each}}
+            </div>
+            <p class="body-sm text-fg-alt">
+              {{default copyright "&copy; 2025 Spencer Sharp. All rights reserved."}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

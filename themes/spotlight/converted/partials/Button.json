@@ -1,0 +1,27 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Click me"
+    },
+    {
+      "type": "text",
+      "name": "URL",
+      "default": "#"
+    },
+    {
+      "type": "select",
+      "name": "Style",
+      "default": "primary",
+      "config": {
+        "selectOptions": [
+          { "key": "Primary", "value": "primary" },
+          { "key": "Secondary", "value": "secondary" }
+        ]
+      }
+    }
+  ]
+}

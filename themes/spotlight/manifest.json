@@ -1,0 +1,80 @@
+{
+  "siteId": "699224a89d1e8d8808ac5904",
+  "lastImport": "2026-02-15T20:30:39.144Z",
+  "components": {
+    "blocks": {
+      "AboutWithPhoto": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb01",
+        "updatedAt": "2026-02-15T20:30:39.104Z"
+      },
+      "ArticlesList": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb05",
+        "updatedAt": "2026-02-15T20:30:39.108Z"
+      },
+      "ArticlesRecent": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb09",
+        "updatedAt": "2026-02-15T20:30:39.111Z"
+      },
+      "Footer": {
+        "status": "updated",
+        "id": "699224a89d1e8d8808ac5910",
+        "updatedAt": "2026-02-15T20:30:39.114Z"
+      },
+      "HeroIntro": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb0f",
+        "updatedAt": "2026-02-15T20:30:39.118Z"
+      },
+      "Navbar": {
+        "status": "updated",
+        "id": "699224a89d1e8d8808ac5916",
+        "updatedAt": "2026-02-15T20:30:39.122Z"
+      },
+      "Newsletter": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb15",
+        "updatedAt": "2026-02-15T20:30:39.124Z"
+      },
+      "PhotoStrip": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb19",
+        "updatedAt": "2026-02-15T20:30:39.130Z"
+      },
+      "ProjectsGrid": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb1d",
+        "updatedAt": "2026-02-15T20:30:39.134Z"
+      },
+      "Resume": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb21",
+        "updatedAt": "2026-02-15T20:30:39.137Z"
+      },
+      "SpeakingSections": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb25",
+        "updatedAt": "2026-02-15T20:30:39.140Z"
+      },
+      "ThankYou": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb29",
+        "updatedAt": "2026-02-15T20:30:39.142Z"
+      },
+      "ToolsSections": {
+        "status": "updated",
+        "id": "699226076d19f296abd3cb2d",
+        "updatedAt": "2026-02-15T20:30:39.144Z"
+      }
+    },
+    "partials": {
+      "Button": {
+        "status": "updated",
+        "id": "699224a89d1e8d8808ac5924",
+        "updatedAt": "2026-02-15T20:30:39.098Z"
+      }
+    }
+  }
+}

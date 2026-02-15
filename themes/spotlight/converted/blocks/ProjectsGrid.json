@@ -1,0 +1,46 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three-column cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Things I've made trying to put my dent in the universe."
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+    },
+    {
+      "type": "items",
+      "name": "Projects",
+      "default": [
+        { "name": "Planetaria", "description": "Creating technology to empower civilians to explore space on their own terms.", "url": "http://planetaria.tech", "link-label": "planetaria.tech", "logo": "" },
+        { "name": "Animaginary", "description": "High performance web animation library, hand-written in optimized WASM.", "url": "#", "link-label": "github.com", "logo": "" },
+        { "name": "HelioStream", "description": "Real-time video streaming library, optimized for interstellar transmission.", "url": "#", "link-label": "github.com", "logo": "" },
+        { "name": "cosmOS", "description": "The operating system that powers our Planetaria space shuttles.", "url": "#", "link-label": "github.com", "logo": "" },
+        { "name": "OpenShuttle", "description": "The schematics for the first rocket I designed that successfully made it to orbit.", "url": "#", "link-label": "github.com", "logo": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Description" },
+          { "type": "text", "name": "URL" },
+          { "type": "text", "name": "Link Label" },
+          {
+            "type": "image",
+            "name": "Logo",
+            "config": {
+              "maxWidth": 300,
+              "maxHeight": 300,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

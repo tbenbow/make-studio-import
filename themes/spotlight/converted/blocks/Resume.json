@@ -1,0 +1,50 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Work history card",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Work"
+    },
+    {
+      "type": "items",
+      "name": "Roles",
+      "default": [
+        { "company": "Planetaria", "title": "CEO", "start": "2019", "end": "Present", "logo": "" },
+        { "company": "Airbnb", "title": "Product Designer", "start": "2014", "end": "2019", "logo": "" },
+        { "company": "Facebook", "title": "iOS Software Engineer", "start": "2011", "end": "2014", "logo": "" },
+        { "company": "Starbucks", "title": "Shift Supervisor", "start": "2008", "end": "2011", "logo": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Company" },
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Start" },
+          { "type": "text", "name": "End" },
+          {
+            "type": "image",
+            "name": "Logo",
+            "config": {
+              "maxWidth": 300,
+              "maxHeight": 300,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Download CV"
+    },
+    {
+      "type": "text",
+      "name": "Button URL",
+      "default": "#"
+    }
+  ]
+}

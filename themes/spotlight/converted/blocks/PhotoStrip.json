@@ -1,0 +1,32 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Tilted photo gallery",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Photos",
+      "default": [
+        { "photo": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=667&fit=crop" },
+        { "photo": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=667&fit=crop" },
+        { "photo": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600&h=667&fit=crop" },
+        { "photo": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=667&fit=crop" },
+        { "photo": "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=600&h=667&fit=crop" }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Photo",
+            "config": {
+              "maxWidth": 3000,
+              "maxHeight": 3000,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<section class="bg-base sm:px-8 mt-16 sm:mt-32">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+          <div class="lg:pl-20">
+            <div class="max-w-xs px-2.5 lg:max-w-none">
+              <img src="{{portrait}}" alt="" class="aspect-square rotate-3 rounded-2xl bg-panel object-cover" />
+            </div>
+          </div>
+          <div class="lg:order-first lg:row-span-2">
+            <h1 class="heading-xl text-fg">
+              {{headline}}
+            </h1>
+            <div class="mt-6 space-y-7 body-md text-fg-muted">
+              {{{bio}}}
+            </div>
+          </div>
+          <div class="lg:pl-20">
+            <ul role="list">
+              {{#each social-links}}
+              <li class="{{#if @index}}mt-4{{/if}} flex">
+                <a href="{{url}}" class="group flex body-sm font-medium text-fg transition hover:text-brand">
+                  {{icon icon size="24" class="flex-none fill-fg-alt transition group-hover:fill-brand"}}
+                  <span class="ml-4">{{label}}</span>
+                </a>
+              </li>
+              {{/each}}
+              {{#if email}}
+              <li class="mt-8 flex border-t border-border pt-8">
+                <a href="mailto:{{email}}" class="group flex body-sm font-medium text-fg transition hover:text-brand">
+                  {{icon "envelope" size="24" class="flex-none fill-fg-alt transition group-hover:fill-brand"}}
+                  <span class="ml-4">{{email}}</span>
+                </a>
+              </li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

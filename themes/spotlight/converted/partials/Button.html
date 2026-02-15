@@ -1,0 +1,9 @@
+{{#if url}}
+<a href="{{url}}" class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 body-sm font-semibold outline-offset-2 transition {{#if (eq style "secondary")}}bg-panel text-fg hover:bg-base-muted{{else}}bg-brand text-on-brand hover:bg-base-alt{{/if}}">
+  {{label}}
+</a>
+{{else}}
+<button type="{{default type "button"}}" class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 body-sm font-semibold outline-offset-2 transition {{#if (eq style "secondary")}}bg-panel text-fg hover:bg-base-muted{{else}}bg-brand text-on-brand hover:bg-base-alt{{/if}}">
+  {{label}}
+</button>
+{{/if}}

@@ -1,0 +1,45 @@
+<section class="bg-base sm:px-8 mt-16 sm:mt-32">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <header class="max-w-2xl">
+          <h1 class="heading-xl text-fg">{{headline}}</h1>
+          <p class="mt-6 body-md text-fg-muted">{{subheadline}}</p>
+        </header>
+        <div class="mt-16 sm:mt-20">
+          <div class="md:border-l md:border-border md:pl-6">
+            <div class="flex max-w-3xl flex-col space-y-16">
+              {{#each (posts post-type limit=20 sort="date:desc")}}
+              <article class="md:grid md:grid-cols-4 md:items-baseline">
+                <div class="group relative flex flex-col items-start md:col-span-3">
+                  <h2 class="body-md font-semibold tracking-tight text-fg">
+                    <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-panel opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"></div>
+                    <a href="{{url}}">
+                      <span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                      <span class="relative z-10">{{title}}</span>
+                    </a>
+                  </h2>
+                  <p class="relative z-10 order-first mb-3 flex items-center body-sm text-fg-alt pl-3.5 md:hidden">
+                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                      <span class="h-4 w-0.5 rounded-full bg-border"></span>
+                    </span>
+                    {{formatDate date}}
+                  </p>
+                  <p class="relative z-10 mt-2 body-sm text-fg-muted">{{description}}</p>
+                  <div aria-hidden="true" class="relative z-10 mt-4 flex items-center body-sm font-medium text-brand">
+                    Read article
+                    {{icon "caret-right" size="16" class="ml-1 stroke-current"}}
+                  </div>
+                </div>
+                <p class="mt-1 body-sm text-fg-alt max-md:hidden">
+                  {{formatDate date}}
+                </p>
+              </article>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
