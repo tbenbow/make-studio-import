@@ -16,18 +16,18 @@
 | `text-mist-900` | `text-fg` | Primary text |
 | `text-mist-700` | `text-fg-muted` | Secondary/muted text |
 | `text-mist-600` | `text-fg-muted` | Secondary/muted text |
-| `text-mist-400` | `text-fg-subtle` | Subtle/hint text |
+| `text-mist-400` | `text-fg-alt` | Alternative/hint text |
 | `text-white` (on dark bg) | `text-on-brand` | Text on brand buttons |
 
 ### Background Colors
 | Original Class | Theme Class | Usage |
 |----------------|-------------|-------|
 | `bg-mist-950` | `bg-brand` | Primary button backgrounds |
-| `bg-mist-100` | `bg-base-panel` | Card/panel backgrounds |
+| `bg-mist-100` | `bg-panel` | Card/panel backgrounds |
 | `bg-mist-50` | `bg-base-muted` | Subtle section backgrounds |
 | `bg-white` | `bg-base` | Main page background |
-| `hover:bg-mist-800` | `hover:bg-brand-hover` | Button hover states |
-| `bg-mist-950/10` | `bg-base-panel` | Soft backgrounds |
+| `hover:bg-mist-800` | `hover:bg-base-alt` | Button hover states |
+| `bg-mist-950/10` | `bg-panel` | Soft backgrounds |
 
 ### Border Colors
 | Original Class | Theme Class | Usage |
@@ -216,8 +216,8 @@ Reference a partial with `{{> PartialName}}`:
 
 1. **Identify the component type**: Element → Partial, Section → Block
 2. **Extract the JSX structure**: Copy the render output
-3. **Convert text colors**: `text-mist-*` → `text-fg`, `text-fg-muted`, `text-fg-subtle`
-4. **Convert backgrounds**: `bg-mist-*` → `bg-base`, `bg-base-panel`, `bg-brand`
+3. **Convert text colors**: `text-mist-*` → `text-fg`, `text-fg-muted`, `text-fg-alt`
+4. **Convert backgrounds**: `bg-mist-*` → `bg-base`, `bg-panel`, `bg-brand`
 5. **Convert borders**: `border-mist-*` → `border-border`
 6. **Convert typography**: Replace text-* sizes with heading-* or body-*
 7. **Remove dark mode variants**: Theme handles this automatically

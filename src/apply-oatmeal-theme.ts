@@ -72,14 +72,14 @@ const theme = {
   ],
   systemColors: {
     'brand': mist[950],        // mist-950: primary buttons, dark accents
-    'brand-hover': mist[800],  // mist-800: button hover
     'on-brand': '#ffffff',     // white text on brand
     'base': '#ffffff',         // white: main page background
     'base-muted': mist[50],    // mist-50: subtle section backgrounds
-    'base-panel': mist[100],   // mist-100: card/panel backgrounds
+    'base-alt': mist[800],     // mist-800: alternative base surface
+    'panel': mist[100],        // mist-100: card/panel backgrounds
     'fg': mist[950],           // mist-950: primary text
     'fg-muted': mist[600],     // mist-600: secondary/muted text
-    'fg-subtle': mist[400],    // mist-400: subtle/hint text
+    'fg-alt': mist[400],       // mist-400: alternative/hint text
     'border': mist[200],       // mist-200: standard borders
   },
   customColors: [],

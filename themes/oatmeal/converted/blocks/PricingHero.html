@@ -25,7 +25,7 @@
               <p class="mt-1 inline-flex gap-1 body-md">
                 <span class="text-fg">{{price}}</span>
                 {{#if period}}
-                  <span class="text-fg-subtle">{{period}}</span>
+                  <span class="text-fg-alt">{{period}}</span>
                 {{/if}}
               </p>
               {{#if description}}
@@ -38,7 +38,7 @@
               {{/if}}
             </div>
             {{#if button_label}}
-              <a href="{{default button_link '#'}}" class="inline-flex w-full shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-hover transition">
+              <a href="{{default button_link '#'}}" class="inline-flex w-full shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition">
                 {{button_label}}
               </a>
             {{/if}}

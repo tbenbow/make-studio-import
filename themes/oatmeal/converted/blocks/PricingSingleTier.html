@@ -11,12 +11,12 @@
           {{/if}}
         </div>
         {{#if button_label}}
-          <a href="{{default button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-hover transition">
+          <a href="{{default button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition">
             {{button_label}}
           </a>
         {{/if}}
       </div>
-      <div class="rounded-lg bg-base-panel p-6 sm:p-10">
+      <div class="rounded-lg bg-panel p-6 sm:p-10">
         <div class="flex items-baseline gap-2">
           <p class="text-6xl sm:text-7xl font-light tracking-tight text-fg">{{price}}</p>
           {{#if period}}

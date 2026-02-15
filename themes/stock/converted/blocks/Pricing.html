@@ -16,7 +16,7 @@
     {{#if (length plans)}}
       <div class="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {{#each plans}}
-          <div class="flex flex-col justify-between gap-6 rounded-xl bg-base-panel p-6 sm:items-start">
+          <div class="flex flex-col justify-between gap-6 rounded-xl bg-panel p-6 sm:items-start">
             <div class="self-stretch">
               <div class="flex items-center justify-between">
                 {{#if badge}}
@@ -29,7 +29,7 @@
               <p class="mt-1 inline-flex gap-1 body-md">
                 <span class="text-fg">{{price}}</span>
                 {{#if period}}
-                  <span class="text-fg-subtle">{{period}}</span>
+                  <span class="text-fg-alt">{{period}}</span>
                 {{/if}}
               </p>
               {{#if description}}
@@ -43,7 +43,7 @@
             </div>
             {{#if button-label}}
               {{#isEqual highlighted "true"}}
-                <a href="{{default button-link '#'}}" class="w-full inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-hover transition">
+                <a href="{{default button-link '#'}}" class="w-full inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition">
                   {{button-label}}
                 </a>
               {{else}}

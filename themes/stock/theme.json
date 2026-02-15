@@ -33,14 +33,14 @@
   ],
   "systemColors": {
     "brand": "#ff00f7",
-    "brand-hover": "#ff007b",
     "on-brand": "#ffffff",
     "base": "#aaff00",
     "base-muted": "#181816",
-    "base-panel": "#1dbf9e",
+    "base-alt": "#ff007b",
+    "panel": "#1dbf9e",
     "fg": "#ff0000",
     "fg-muted": "#a5a596",
-    "fg-subtle": "#7c7c67",
+    "fg-alt": "#7c7c67",
     "border": "#464644"
   },
   "customColors": [],

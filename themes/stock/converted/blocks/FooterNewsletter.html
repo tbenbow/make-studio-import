@@ -11,7 +11,7 @@
           {{/if}}
           <div class="flex items-center border-b border-border py-2 focus-within:border-fg">
             <input type="email" placeholder="Email" aria-label="Email" class="flex-1 bg-transparent text-fg focus:outline-none">
-            <button type="submit" aria-label="Subscribe" class="inline-flex size-7 items-center justify-center rounded-full hover:bg-base-panel transition">
+            <button type="submit" aria-label="Subscribe" class="inline-flex size-7 items-center justify-center rounded-full hover:bg-panel transition">
               {{icon "arrow-right" size="20"}}
             </button>
           </div>
@@ -31,7 +31,7 @@
       </div>
       <div class="flex items-center justify-between gap-10 body-sm">
         {{#if copyright}}
-          <div class="text-fg-subtle">{{{copyright}}}</div>
+          <div class="text-fg-alt">{{{copyright}}}</div>
         {{/if}}
         {{#if (length social-links)}}
           <div class="flex items-center gap-4 sm:gap-10">

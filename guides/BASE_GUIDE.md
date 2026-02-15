@@ -245,28 +245,28 @@ Use placeholder images from Unsplash:
 
 Make Studio uses a semantic 10-color system. Map theme colors to these:
 
-#### Brand Colors (3)
+#### Brand (2)
 | Class | Usage |
 |-------|-------|
 | `bg-brand` / `text-brand` | Primary brand color (buttons, CTAs, links) |
-| `bg-brand-hover` / `text-brand-hover` | Hover state for brand elements |
 | `text-on-brand` | Text on brand backgrounds (usually white) |
 
-#### Base/Surface Colors (3)
+#### Surfaces (4)
 | Class | Usage |
 |-------|-------|
 | `bg-base` | Main page background |
 | `bg-base-muted` | Slightly muted background (subtle sections) |
-| `bg-base-panel` | Panel/card backgrounds |
+| `bg-base-alt` | Alternative base surface (hover states, visual variety) |
+| `bg-panel` | Panel/card backgrounds |
 
-#### Foreground/Text Colors (3)
+#### Foreground (3)
 | Class | Usage |
 |-------|-------|
 | `text-fg` | Primary text (headlines, body) |
 | `text-fg-muted` | Secondary/muted text (descriptions, captions) |
-| `text-fg-subtle` | Tertiary text (placeholders, hints) |
+| `text-fg-alt` | Tertiary text (placeholders, hints) |
 
-#### UI Colors (1)
+#### UI (1)
 | Class | Usage |
 |-------|-------|
 | `border-border` | All borders and dividers |
@@ -277,23 +277,23 @@ Make Studio uses a semantic 10-color system. Map theme colors to these:
 |---------------------|-------------|
 | `bg-gray-950`, `bg-slate-900` | `bg-brand` (for buttons) |
 | `bg-white`, `bg-gray-50` | `bg-base` |
-| `bg-gray-100`, `bg-slate-100` | `bg-base-panel` |
+| `bg-gray-100`, `bg-slate-100` | `bg-panel` |
 | `text-gray-900`, `text-slate-900` | `text-fg` |
 | `text-gray-600`, `text-slate-600` | `text-fg-muted` |
-| `text-gray-400`, `text-slate-400` | `text-fg-subtle` |
+| `text-gray-400`, `text-slate-400` | `text-fg-alt` |
 | `border-gray-200` | `border-border` |
-| `hover:bg-gray-800` | `hover:bg-brand-hover` |
+| `hover:bg-gray-800` | `hover:bg-base-alt` |
 | Text on dark buttons | `text-on-brand` |
 
 ### Button Example
 ```html
 <!-- Primary button -->
-<a href="{{url}}" class="bg-brand text-on-brand hover:bg-brand-hover px-4 py-2 rounded">
+<a href="{{url}}" class="bg-brand text-on-brand hover:bg-base-alt px-4 py-2 rounded">
   {{label}}
 </a>
 
 <!-- Secondary/ghost button -->
-<a href="{{url}}" class="bg-base-panel text-fg hover:bg-base-muted px-4 py-2 rounded">
+<a href="{{url}}" class="bg-panel text-fg hover:bg-base-muted px-4 py-2 rounded">
   {{label}}
 </a>
 ```
@@ -351,7 +351,7 @@ Make Studio provides custom Handlebars helpers beyond the standard `{{#if}}`, `{
 {{#isEqual style "primary"}}
   <button class="bg-brand">Primary</button>
 {{else}}
-  <button class="bg-base-panel">Secondary</button>
+  <button class="bg-panel">Secondary</button>
 {{/isEqual}}
 ```
 
@@ -362,7 +362,7 @@ Make Studio provides custom Handlebars helpers beyond the standard `{{#if}}`, `{
     <button class="bg-brand text-on-brand">{{label}}</button>
   {{/case}}
   {{#case "secondary"}}
-    <button class="bg-base-panel text-fg">{{label}}</button>
+    <button class="bg-panel text-fg">{{label}}</button>
   {{/case}}
   {{#case "ghost" "link"}}
     <button class="text-brand underline">{{label}}</button>
