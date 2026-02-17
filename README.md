@@ -92,6 +92,16 @@ Returns:
 }
 ```
 
+### Push Site to Production
+
+Copies a site (with all blocks, partials, folders, layouts, pages, and post types) from one database to another — typically from staging to production:
+
+```bash
+npm run push-site -- --from=<sourceSiteId> --target-uri=<productionMongoURI> --owner=<clerkUserId>
+```
+
+You can also set `TARGET_MONGODB_URI` in your `.env` instead of passing `--target-uri` each time. The `--owner` flag sets the Clerk user ID for the new site owner in the target database.
+
 ## Adding a New Theme
 
 1. Create theme folder structure:

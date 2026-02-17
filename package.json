@@ -4,7 +4,10 @@
   "description": "AI-powered theme conversion and import tool for Make Studio",
   "type": "module",
   "scripts": {
+    "sync": "tsx src/index.ts sync",
+    "rollback": "tsx src/index.ts rollback",
     "validate": "tsx src/index.ts validate",
+    "import-db": "tsx src/index.ts import-db",
     "import": "tsx src/index.ts import",
     "export": "tsx src/index.ts export",
     "copy-theme": "tsx src/index.ts copy-theme",

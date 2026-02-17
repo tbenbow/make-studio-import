@@ -2,6 +2,8 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { randomUUID } from 'crypto'
+import readline from 'readline'
 import dotenv from 'dotenv'
 import { validate } from './validate.js'
 import { importTheme } from './import.js'
@@ -13,6 +15,10 @@ import { validatePage } from './validate-page.js'
 import { importPage } from './import-page.js'
 import { cloneSite } from './clone-site.js'
 import { pushSite } from './push-site.js'
+import { MakeStudioClient } from './api.js'
+import { computeChangeset, type LocalBlock, type LocalPartial } from './diff.js'
+import { saveSnapshot, listSnapshots, loadSnapshot, rollbackFromSnapshot } from './snapshot.js'
+import type { SourceField } from './types.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.resolve(__dirname, '..')
@@ -43,6 +49,16 @@ function getThemesDir(): string {
   return path.join(ROOT_DIR, 'themes')
 }
 
+function confirm(message: string): Promise<boolean> {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+  return new Promise(resolve => {
+    rl.question(message, answer => {
+      rl.close()
+      resolve(answer.trim().toLowerCase() === 'y')
+    })
+  })
+}
+
 function output(data: unknown) {
   console.log(JSON.stringify(data, null, 2))
 }
@@ -56,6 +72,185 @@ function requireMongoUri(): string {
   return mongoUri
 }
 
+function requireApiConfig(): { baseUrl: string; token: string; siteId: string } {
+  const baseUrl = process.env.MAKE_STUDIO_URL
+  const token = process.env.MAKE_STUDIO_TOKEN
+  const siteId = process.env.MAKE_STUDIO_SITE
+  if (!baseUrl || !token) {
+    output({ error: 'MAKE_STUDIO_URL and MAKE_STUDIO_TOKEN environment variables are required' })
+    process.exit(1)
+  }
+  if (!siteId) {
+    output({ error: 'MAKE_STUDIO_SITE environment variable is required (or use --site)' })
+    process.exit(1)
+  }
+  return { baseUrl, token, siteId }
+}
+
+// ─── Field type mapping (shared with import.ts) ───
+
+const TYPE_MAP: Record<string, string> = {
+  text: 'text',
+  textarea: 'textarea',
+  wysiwyg: 'wysiwyg',
+  richText: 'wysiwyg',
+  image: 'image',
+  items: 'items',
+  repeater: 'items',
+  select: 'select',
+  toggle: 'select',
+  group: 'group',
+  number: 'number',
+  date: 'date'
+}
+
+function getDefaultValue(field: SourceField, dbType: string): unknown {
+  if (field.default !== undefined) {
+    if (dbType === 'items' && Array.isArray(field.default)) {
+      return (field.default as Record<string, unknown>[]).map((item) => {
+        const transformedItem: Record<string, unknown> = { id: randomUUID() }
+        for (const [key, value] of Object.entries(item)) {
+          transformedItem[key] = value
+        }
+        return transformedItem
+      })
+    }
+    return field.default
+  }
+  switch (dbType) {
+    case 'items': return []
+    case 'number': return 0
+    default: return ''
+  }
+}
+
+function transformField(field: SourceField): unknown {
+  const dbType = TYPE_MAP[field.type] || 'text'
+  const transformed: Record<string, unknown> = {
+    id: randomUUID(),
+    type: dbType,
+    name: field.name,
+    value: getDefaultValue(field, dbType),
+    config: {}
+  }
+  if (field.config) {
+    transformed.config = { ...field.config }
+    if (field.config.fields) {
+      (transformed.config as Record<string, unknown>).fields = field.config.fields.map(transformField)
+    }
+  }
+  return transformed
+}
+
+// ─── Local file reading ───
+
+function readLocalBlock(blocksDir: string, name: string): LocalBlock {
+  const htmlPath = path.join(blocksDir, `${name}.html`)
+  const jsonPath = path.join(blocksDir, `${name}.json`)
+
+  const template = fs.existsSync(htmlPath) ? fs.readFileSync(htmlPath, 'utf-8') : ''
+
+  let fields: unknown[] = []
+  let description: string | undefined
+  let thumbnailType: string | undefined
+
+  if (fs.existsSync(jsonPath)) {
+    try {
+      const json = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'))
+      if (json.fields && Array.isArray(json.fields)) {
+        fields = json.fields.map(transformField)
+      }
+      if (json.description && typeof json.description === 'string') {
+        description = json.description.slice(0, 30)
+      }
+      if (json.thumbnailType && typeof json.thumbnailType === 'string') {
+        thumbnailType = json.thumbnailType
+      }
+    } catch {}
+  }
+
+  return { name, template, fields, description, thumbnailType }
+}
+
+function readLocalPartial(partialsDir: string, name: string): LocalPartial {
+  const htmlPath = path.join(partialsDir, `${name}.html`)
+  const template = fs.existsSync(htmlPath) ? fs.readFileSync(htmlPath, 'utf-8') : ''
+  return { name, template }
+}
+
+function getComponentNames(dir: string): string[] {
+  if (!fs.existsSync(dir)) return []
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.html'))
+    .map(f => f.replace('.html', ''))
+}
+
+// ─── Display helpers ───
+
+function formatChangeset(changeset: ReturnType<typeof computeChangeset>) {
+  const lines: string[] = []
+
+  // Blocks
+  const blockCreates = changeset.blocks.filter(b => b.type === 'create')
+  const blockUpdates = changeset.blocks.filter(b => b.type === 'update')
+  const blockDeletes = changeset.blocks.filter(b => b.type === 'delete')
+
+  if (changeset.blocks.length > 0) {
+    lines.push('Blocks:')
+    for (const b of blockCreates) {
+      lines.push(`  + ${b.name}  (create)`)
+    }
+    for (const b of blockUpdates) {
+      lines.push(`  ~ ${b.name}  (update: ${b.changes?.join(', ')})`)
+    }
+    for (const b of blockDeletes) {
+      lines.push(`  - ${b.name}  (remote only — delete with --delete)`)
+    }
+    lines.push('')
+  }
+
+  // Partials
+  const partialCreates = changeset.partials.filter(p => p.type === 'create')
+  const partialUpdates = changeset.partials.filter(p => p.type === 'update')
+  const partialDeletes = changeset.partials.filter(p => p.type === 'delete')
+
+  if (changeset.partials.length > 0) {
+    lines.push('Partials:')
+    for (const p of partialCreates) {
+      lines.push(`  + ${p.name}  (create)`)
+    }
+    for (const p of partialUpdates) {
+      lines.push(`  ~ ${p.name}  (update: ${p.changes?.join(', ')})`)
+    }
+    for (const p of partialDeletes) {
+      lines.push(`  - ${p.name}  (remote only — delete with --delete)`)
+    }
+    lines.push('')
+  }
+
+  // Theme
+  if (changeset.themeChanges.length > 0) {
+    lines.push('Theme:')
+    for (const c of changeset.themeChanges.slice(0, 20)) {
+      const localStr = typeof c.local === 'string' ? c.local : JSON.stringify(c.local)
+      const remoteStr = typeof c.remote === 'string' ? c.remote : JSON.stringify(c.remote)
+      const truncLocal = localStr && localStr.length > 40 ? localStr.slice(0, 40) + '...' : localStr
+      const truncRemote = remoteStr && remoteStr.length > 40 ? remoteStr.slice(0, 40) + '...' : remoteStr
+      lines.push(`  ~ ${c.path}  (${truncRemote} → ${truncLocal})`)
+    }
+    if (changeset.themeChanges.length > 20) {
+      lines.push(`  ... and ${changeset.themeChanges.length - 20} more`)
+    }
+    lines.push('')
+  }
+
+  if (lines.length === 0) {
+    lines.push('No changes detected. Everything is in sync.')
+  }
+
+  return lines.join('\n')
+}
+
 async function main() {
   const [command, ...rest] = process.argv.slice(2)
   const args = parseArgs(rest)
@@ -63,8 +258,9 @@ async function main() {
   if (!command || command === 'help' || command === '--help') {
     output({
       commands: {
+        sync: 'Sync theme to Make Studio via API (dry run by default)',
         validate: 'Validate converted files',
-        import: 'Import to Make Studio database',
+        'import-db': 'Import to Make Studio database (legacy, direct MongoDB)',
         export: 'Export from Make Studio database',
         'copy-theme': 'Copy theme between sites',
         'update-block': 'Update a single block template',
@@ -73,26 +269,277 @@ async function main() {
         'validate-page': 'Validate page JSON against catalog',
         'import-page': 'Import page JSON to Make Studio',
         'clone-site': 'Clone a site with all blocks, partials, and pages',
-        'push-site': 'Push a site from one database to another'
+        'push-site': 'Push a site from one database to another',
+        rollback: 'Rollback to a previous snapshot'
       },
       options: {
-        '--theme': 'Theme name (required for validate/import/export/status/generate-catalog)',
-        '--site': 'Site ID or name (required for import/export/validate-page/import-page)',
+        '--theme': 'Theme name (required for sync/validate/import-db/export/status)',
+        '--site': 'Site ID (overrides MAKE_STUDIO_SITE env var)',
+        '--apply': 'Apply changes (sync only — default is dry run)',
+        '--delete': 'Delete remote-only blocks/partials (with --apply)',
         '--page': 'Page name (required for validate-page/import-page)',
-        '--replace': 'Replace existing blocks/partials on import',
+        '--replace': 'Replace existing blocks/partials on import-db',
         '--from': 'Source site ID (for copy-theme/clone-site)',
         '--to': 'Target site ID (for copy-theme)',
         '--name': 'New site name (for clone-site)',
         '--target-uri': 'Target MongoDB URI (for push-site)',
         '--owner': 'Clerk user ID for new site owner (for push-site)',
         '--id': 'Block ID (for update-block)',
-        '--template': 'Template file path (for update-block)'
+        '--template': 'Template file path (for update-block)',
+        '--snapshot': 'Snapshot filename (for rollback)'
       }
     })
     return
   }
 
   switch (command) {
+
+    // ═══════════════════════════════════════
+    // sync — API-based theme sync (primary)
+    // ═══════════════════════════════════════
+    case 'sync': {
+      const themeName = args.theme
+      if (!themeName) {
+        output({ error: '--theme is required' })
+        process.exit(1)
+      }
+      const themePath = getThemePath(themeName)
+      if (!fs.existsSync(themePath)) {
+        output({ error: `Theme '${themeName}' not found at ${themePath}` })
+        process.exit(1)
+      }
+
+      const apiConfig = requireApiConfig()
+      const siteId = args.site || apiConfig.siteId
+      const client = new MakeStudioClient(apiConfig.baseUrl, apiConfig.token)
+
+      const applyChanges = args.apply === 'true'
+      const deleteRemoteOnly = args.delete === 'true'
+
+      // 1. Fetch remote state
+      console.log(`Fetching remote state for site ${siteId}...`)
+      const [remoteSite, remoteBlocks, remotePartialsRes] = await Promise.all([
+        client.getSite(siteId),
+        client.getBlocks(siteId),
+        client.getPartials(siteId)
+      ])
+      const remotePartials = remotePartialsRes.partials
+
+      // 2. Read local theme files
+      const blocksDir = path.join(themePath, 'converted', 'blocks')
+      const partialsDir = path.join(themePath, 'converted', 'partials')
+      const themeJsonPath = path.join(themePath, 'theme.json')
+
+      const localBlockNames = getComponentNames(blocksDir)
+      const localPartialNames = getComponentNames(partialsDir)
+      const localBlocks = localBlockNames.map(name => readLocalBlock(blocksDir, name))
+      const localPartials = localPartialNames.map(name => readLocalPartial(partialsDir, name))
+
+      let localTheme: Record<string, unknown> | null = null
+      if (fs.existsSync(themeJsonPath)) {
+        localTheme = JSON.parse(fs.readFileSync(themeJsonPath, 'utf-8'))
+      }
+
+      // 3. Compute diff
+      const changeset = computeChangeset(
+        localBlocks, remoteBlocks,
+        localPartials, remotePartials,
+        localTheme, remoteSite.theme
+      )
+
+      // 4. Display
+      console.log('')
+      console.log(formatChangeset(changeset))
+
+      const creates = changeset.blocks.filter(b => b.type === 'create').length
+        + changeset.partials.filter(p => p.type === 'create').length
+      const updates = changeset.blocks.filter(b => b.type === 'update').length
+        + changeset.partials.filter(p => p.type === 'update').length
+      const deletes = changeset.blocks.filter(b => b.type === 'delete').length
+        + changeset.partials.filter(p => p.type === 'delete').length
+      const themeChanges = changeset.themeChanges.length
+
+      console.log(`Summary: ${creates} create, ${updates} update, ${deletes} remote-only, ${themeChanges} theme changes`)
+
+      if (!applyChanges) {
+        console.log('\nDry run — no changes applied. Use --apply to sync.')
+        process.exit(0)
+      }
+
+      // 5. Confirm before applying
+      const parts: string[] = []
+      if (creates > 0) parts.push(`${creates} create`)
+      if (updates > 0) parts.push(`${updates} update`)
+      if (themeChanges > 0) parts.push(`${themeChanges} theme changes`)
+      if (deleteRemoteOnly && deletes > 0) parts.push(`${deletes} DELETE`)
+
+      let prompt = `\nApply ${parts.join(', ')}?`
+      if (deleteRemoteOnly && deletes > 0) {
+        prompt += ` (${deletes} blocks/partials will be permanently deleted)`
+      }
+      prompt += ' [y/N] '
+
+      const confirmed = await confirm(prompt)
+      if (!confirmed) {
+        console.log('Aborted.')
+        process.exit(0)
+      }
+
+      // 6. Re-fetch fresh remote state right before applying
+      // This prevents overwriting changes made between diff and apply
+      console.log('\nRe-fetching fresh remote state before applying...')
+      const [freshSite, freshBlocks, freshPartialsRes] = await Promise.all([
+        client.getSite(siteId),
+        client.getBlocks(siteId),
+        client.getPartials(siteId)
+      ])
+      const freshPartials = freshPartialsRes.partials
+
+      // Save snapshot of the fresh state (what we're about to modify)
+      console.log('Saving snapshot of current remote state...')
+      const snapshotPath = saveSnapshot(themePath, {
+        siteId,
+        capturedAt: new Date().toISOString(),
+        theme: freshSite.theme,
+        blocks: freshBlocks,
+        partials: freshPartials
+      })
+      console.log(`Snapshot saved: ${snapshotPath}`)
+
+      // Re-compute diff against fresh state
+      const freshChangeset = computeChangeset(
+        localBlocks, freshBlocks,
+        localPartials, freshPartials,
+        localTheme, freshSite.theme
+      )
+
+      // 6. Apply changes — only send properties that actually differ
+      console.log('\nApplying changes...')
+
+      // Theme — merge only changed keys into the remote theme
+      if (localTheme && freshChangeset.themeChanges.length > 0) {
+        console.log(`  Updating theme (${freshChangeset.themeChanges.length} changed keys)...`)
+        const mergedTheme = { ...freshSite.theme }
+        for (const change of freshChangeset.themeChanges) {
+          // Set the changed value at the top-level key
+          const topKey = change.path.split('.')[0]
+          mergedTheme[topKey] = (localTheme as Record<string, unknown>)[topKey]
+        }
+        await client.updateSiteTheme(siteId, mergedTheme)
+        console.log('  Theme updated.')
+      }
+
+      // Block creates
+      for (const change of freshChangeset.blocks.filter(b => b.type === 'create')) {
+        const local = localBlocks.find(b => b.name === change.name)!
+        console.log(`  Creating block: ${change.name}`)
+        await client.createBlock({
+          name: local.name,
+          site_id: siteId,
+          template: local.template,
+          fields: local.fields,
+          category: 'section'
+        })
+      }
+
+      // Block updates — only send changed properties
+      for (const change of freshChangeset.blocks.filter(b => b.type === 'update')) {
+        const local = localBlocks.find(b => b.name === change.name)!
+        console.log(`  Updating block: ${change.name} (${change.changes?.join(', ')})`)
+        const patch: Record<string, unknown> = {}
+        if (change.changes?.includes('template')) patch.template = local.template
+        if (change.changes?.includes('fields')) patch.fields = local.fields
+        if (change.changes?.includes('description')) patch.description = local.description
+        if (change.changes?.includes('thumbnailType')) patch.thumbnailType = local.thumbnailType
+        await client.updateBlock(change.remoteId!, patch)
+      }
+
+      // Block deletes (opt-in)
+      if (deleteRemoteOnly) {
+        for (const change of freshChangeset.blocks.filter(b => b.type === 'delete')) {
+          console.log(`  Deleting block: ${change.name}`)
+          await client.deleteBlock(change.remoteId!)
+        }
+      }
+
+      // Partial creates
+      for (const change of freshChangeset.partials.filter(p => p.type === 'create')) {
+        const local = localPartials.find(p => p.name === change.name)!
+        console.log(`  Creating partial: ${change.name}`)
+        await client.createPartial({
+          name: local.name,
+          site_id: siteId,
+          template: local.template
+        })
+      }
+
+      // Partial updates
+      for (const change of freshChangeset.partials.filter(p => p.type === 'update')) {
+        const local = localPartials.find(p => p.name === change.name)!
+        console.log(`  Updating partial: ${change.name}`)
+        await client.updatePartial(change.remoteId!, {
+          template: local.template
+        })
+      }
+
+      // Partial deletes (opt-in)
+      if (deleteRemoteOnly) {
+        for (const change of freshChangeset.partials.filter(p => p.type === 'delete')) {
+          console.log(`  Deleting partial: ${change.name}`)
+          await client.deletePartial(change.remoteId!)
+        }
+      }
+
+      console.log('\nSync complete.')
+      process.exit(0)
+      break
+    }
+
+    // ═══════════════════════════════════════
+    // rollback — Restore from snapshot
+    // ═══════════════════════════════════════
+    case 'rollback': {
+      const themeName = args.theme
+      if (!themeName) {
+        output({ error: '--theme is required' })
+        process.exit(1)
+      }
+      const themePath = getThemePath(themeName)
+      if (!fs.existsSync(themePath)) {
+        output({ error: `Theme '${themeName}' not found at ${themePath}` })
+        process.exit(1)
+      }
+
+      const snapshotFile = args.snapshot
+      if (!snapshotFile) {
+        // List available snapshots
+        const snapshots = listSnapshots(themePath)
+        if (snapshots.length === 0) {
+          output({ error: 'No snapshots found' })
+          process.exit(1)
+        }
+        output({
+          message: 'Available snapshots (use --snapshot=<filename>):',
+          snapshots
+        })
+        process.exit(0)
+      }
+
+      const apiConfig = requireApiConfig()
+      const siteId = args.site || apiConfig.siteId
+      const client = new MakeStudioClient(apiConfig.baseUrl, apiConfig.token)
+
+      console.log(`Loading snapshot: ${snapshotFile}`)
+      const snapshot = loadSnapshot(themePath, snapshotFile)
+
+      console.log(`Rolling back site ${siteId} to snapshot from ${snapshot.capturedAt}...`)
+      const result = await rollbackFromSnapshot(client, siteId, snapshot)
+
+      console.log(`Rollback complete: ${result.blocks} blocks, ${result.partials} partials, theme: ${result.theme}`)
+      process.exit(0)
+      break
+    }
+
     case 'validate': {
       const themeName = args.theme
       if (!themeName) {
@@ -110,7 +557,8 @@ async function main() {
       break
     }
 
-    case 'import': {
+    case 'import':
+    case 'import-db': {
       const themeName = args.theme
       if (!themeName) {
         output({ error: '--theme is required' })
@@ -124,7 +572,7 @@ async function main() {
 
       const siteId = args.site
       if (!siteId) {
-        output({ error: '--site is required for import' })
+        output({ error: '--site is required for import-db' })
         process.exit(1)
       }
 
@@ -135,6 +583,10 @@ async function main() {
       if (!validation.valid) {
         output({ error: 'Validation failed', validation })
         process.exit(1)
+      }
+
+      if (command === 'import') {
+        console.log('Note: "import" is now "import-db". Use "sync" for API-based sync.')
       }
 
       const replace = args.replace === 'true'
