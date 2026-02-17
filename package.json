@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "sync": "tsx src/index.ts sync",
+    "pull": "tsx src/index.ts pull",
     "rollback": "tsx src/index.ts rollback",
     "validate": "tsx src/index.ts validate",
     "import-db": "tsx src/index.ts import-db",

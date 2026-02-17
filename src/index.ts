@@ -142,6 +142,44 @@ function transformField(field: SourceField): unknown {
   return transformed
 }
 
+// ─── Reverse field mapping (API → source format for pull) ───
+
+function reverseField(field: Record<string, unknown>): Record<string, unknown> {
+  const result: Record<string, unknown> = {
+    type: field.type as string,
+    name: field.name as string
+  }
+
+  const value = field.value
+  if (field.type === 'items' && Array.isArray(value)) {
+    // Convert items value — strip volatile ids from items
+    result.default = (value as Record<string, unknown>[]).map(item => {
+      const { id, _id, ...rest } = item
+      return rest
+    })
+    // Convert config.fields back to source format, preserve other config keys
+    const config = field.config as Record<string, unknown> | undefined
+    if (config?.fields && Array.isArray(config.fields)) {
+      const { fields: configFields, ...otherConfig } = config
+      result.config = {
+        ...otherConfig,
+        fields: (configFields as Record<string, unknown>[]).map(f => reverseField(f))
+      }
+    }
+  } else {
+    if (value !== undefined && value !== '') {
+      result.default = value
+    }
+    // Preserve non-empty config (selectOptions, image settings, etc.)
+    const config = field.config as Record<string, unknown> | undefined
+    if (config && Object.keys(config).length > 0) {
+      result.config = config
+    }
+  }
+
+  return result
+}
+
 // ─── Local file reading ───
 
 function readLocalBlock(blocksDir: string, name: string): LocalBlock {
@@ -259,6 +297,7 @@ async function main() {
     output({
       commands: {
         sync: 'Sync theme to Make Studio via API (dry run by default)',
+        pull: 'Pull remote state into local theme files',
         validate: 'Validate converted files',
         'import-db': 'Import to Make Studio database (legacy, direct MongoDB)',
         export: 'Export from Make Studio database',
@@ -273,10 +312,11 @@ async function main() {
         rollback: 'Rollback to a previous snapshot'
       },
       options: {
-        '--theme': 'Theme name (required for sync/validate/import-db/export/status)',
+        '--theme': 'Theme name (required for sync/pull/validate/import-db/export/status)',
         '--site': 'Site ID (overrides MAKE_STUDIO_SITE env var)',
         '--apply': 'Apply changes (sync only — default is dry run)',
         '--delete': 'Delete remote-only blocks/partials (with --apply)',
+        '--only': 'Comma-separated list of block/partial names to sync or pull (use "theme" for theme)',
         '--page': 'Page name (required for validate-page/import-page)',
         '--replace': 'Replace existing blocks/partials on import-db',
         '--from': 'Source site ID (for copy-theme/clone-site)',
@@ -315,6 +355,7 @@ async function main() {
 
       const applyChanges = args.apply === 'true'
       const deleteRemoteOnly = args.delete === 'true'
+      const onlyFilter = args.only ? args.only.split(',').map(s => s.trim()) : null
 
       // 1. Fetch remote state
       console.log(`Fetching remote state for site ${siteId}...`)
@@ -346,6 +387,15 @@ async function main() {
         localPartials, remotePartials,
         localTheme, remoteSite.theme
       )
+
+      // Filter to --only if specified
+      if (onlyFilter) {
+        changeset.blocks = changeset.blocks.filter(b => onlyFilter.includes(b.name))
+        changeset.partials = changeset.partials.filter(p => onlyFilter.includes(p.name))
+        if (!onlyFilter.includes('theme')) {
+          changeset.themeChanges = []
+        }
+      }
 
       // 4. Display
       console.log('')
@@ -412,6 +462,15 @@ async function main() {
         localPartials, freshPartials,
         localTheme, freshSite.theme
       )
+
+      // Re-apply --only filter
+      if (onlyFilter) {
+        freshChangeset.blocks = freshChangeset.blocks.filter(b => onlyFilter.includes(b.name))
+        freshChangeset.partials = freshChangeset.partials.filter(p => onlyFilter.includes(p.name))
+        if (!onlyFilter.includes('theme')) {
+          freshChangeset.themeChanges = []
+        }
+      }
 
       // 6. Apply changes — only send properties that actually differ
       console.log('\nApplying changes...')
@@ -536,6 +595,97 @@ async function main() {
       const result = await rollbackFromSnapshot(client, siteId, snapshot)
 
       console.log(`Rollback complete: ${result.blocks} blocks, ${result.partials} partials, theme: ${result.theme}`)
+      process.exit(0)
+      break
+    }
+
+    // ═══════════════════════════════════════
+    // pull — Fetch remote state into local files
+    // ═══════════════════════════════════════
+    case 'pull': {
+      const themeName = args.theme
+      if (!themeName) {
+        output({ error: '--theme is required' })
+        process.exit(1)
+      }
+      const themePath = getThemePath(themeName)
+      if (!fs.existsSync(themePath)) {
+        fs.mkdirSync(themePath, { recursive: true })
+      }
+
+      const apiConfig = requireApiConfig()
+      const siteId = args.site || apiConfig.siteId
+      const client = new MakeStudioClient(apiConfig.baseUrl, apiConfig.token)
+      const onlyPull = args.only ? args.only.split(',').map(s => s.trim()) : null
+
+      console.log(`Pulling remote state for site ${siteId}...`)
+      const [remoteSite, remoteBlocks, remotePartialsRes] = await Promise.all([
+        client.getSite(siteId),
+        client.getBlocks(siteId),
+        client.getPartials(siteId)
+      ])
+      const remotePartials = remotePartialsRes.partials
+
+      const blocksDir = path.join(themePath, 'converted', 'blocks')
+      const partialsDir = path.join(themePath, 'converted', 'partials')
+      fs.mkdirSync(blocksDir, { recursive: true })
+      fs.mkdirSync(partialsDir, { recursive: true })
+
+      let blockCount = 0
+      let partialCount = 0
+      let themeUpdated = false
+
+      // Pull blocks
+      for (const block of remoteBlocks) {
+        if (onlyPull && !onlyPull.includes(block.name)) continue
+
+        // Write template
+        fs.writeFileSync(
+          path.join(blocksDir, `${block.name}.html`),
+          block.template || ''
+        )
+
+        // Convert API fields back to source format
+        const sourceFields = (block.fields || []).map(f => reverseField(f))
+        const json: Record<string, unknown> = {
+          description: block.description || block.name
+        }
+        if (sourceFields.length > 0) {
+          json.fields = sourceFields
+        }
+        if (block.thumbnailType) {
+          json.thumbnailType = block.thumbnailType
+        }
+        fs.writeFileSync(
+          path.join(blocksDir, `${block.name}.json`),
+          JSON.stringify(json, null, 2) + '\n'
+        )
+
+        console.log(`  Block: ${block.name}`)
+        blockCount++
+      }
+
+      // Pull partials
+      for (const partial of remotePartials) {
+        if (onlyPull && !onlyPull.includes(partial.name)) continue
+
+        fs.writeFileSync(
+          path.join(partialsDir, `${partial.name}.html`),
+          partial.template || ''
+        )
+        console.log(`  Partial: ${partial.name}`)
+        partialCount++
+      }
+
+      // Pull theme
+      if (!onlyPull || onlyPull.includes('theme')) {
+        const themeJsonPath = path.join(themePath, 'theme.json')
+        fs.writeFileSync(themeJsonPath, JSON.stringify(remoteSite.theme, null, 2) + '\n')
+        console.log(`  Theme: theme.json`)
+        themeUpdated = true
+      }
+
+      console.log(`\nPulled ${blockCount} blocks, ${partialCount} partials${themeUpdated ? ', theme' : ''}.`)
       process.exit(0)
       break
     }
