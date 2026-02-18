@@ -1,0 +1,99 @@
+{
+  "description": "Grid of icon blob cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "3",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "2 Columns",
+            "value": "2"
+          },
+          {
+            "key": "3 Columns",
+            "value": "3"
+          },
+          {
+            "key": "4 Columns",
+            "value": "4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "icon": "tree",
+          "title": "Conservation",
+          "body": "<p>Protecting natural landscapes and habitats.</p>",
+          "url": "#"
+        },
+        {
+          "icon": "handshake",
+          "title": "Partnership",
+          "body": "<p>Working together with land trusts nationwide.</p>",
+          "url": "#"
+        },
+        {
+          "icon": "shield-check",
+          "title": "Accreditation",
+          "body": "<p>Ensuring the highest standards for land trusts.</p>",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

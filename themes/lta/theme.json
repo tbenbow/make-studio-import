@@ -1,0 +1,247 @@
+{
+  "fonts": [
+    {
+      "family": "lft-etica",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "lft-etica",
+      "weight": 600,
+      "style": "normal"
+    },
+    {
+      "family": "lft-etica",
+      "weight": 700,
+      "style": "normal"
+    },
+    {
+      "family": "lft-etica",
+      "weight": 800,
+      "style": "normal"
+    },
+    {
+      "family": "ff-meta-serif-web-pro",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "ff-meta-serif-web-pro",
+      "weight": 800,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "brand": "#58a66f",
+    "on-brand": "#ffffff",
+    "base": "#ffffff",
+    "base-muted": "#f5f5f5",
+    "base-alt": "#26484c",
+    "panel": "#e6e0d5",
+    "fg": "#1a1a1a",
+    "fg-muted": "#383838",
+    "fg-alt": "#767676",
+    "border": "#e4e4e4"
+  },
+  "customColors": [
+    {
+      "name": "green-dark",
+      "value": "#26484c"
+    },
+    {
+      "name": "orange",
+      "value": "#db8043"
+    },
+    {
+      "name": "yellow",
+      "value": "#d9a832"
+    },
+    {
+      "name": "blue",
+      "value": "#50abbd"
+    },
+    {
+      "name": "stone",
+      "value": "#e6e0d5"
+    },
+    {
+      "name": "ruby",
+      "value": "#cd172f"
+    }
+  ],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": [
+        "#d4edda",
+        "#8fcfa0",
+        "#58a66f",
+        "#3d7a4f",
+        "#26484c"
+      ]
+    },
+    "accent1": {
+      "label": "accent-1",
+      "colors": [
+        "#fde8d3",
+        "#f0b88a",
+        "#db8043",
+        "#ba6219",
+        "#895c3e"
+      ]
+    },
+    "accent2": {
+      "label": "accent-2",
+      "colors": [
+        "#d4f0f5",
+        "#8fd4e0",
+        "#50abbd",
+        "#3a8a9c",
+        "#26484c"
+      ]
+    },
+    "accent3": {
+      "label": "accent-3",
+      "colors": [
+        "#f5ecd0",
+        "#e8d07a",
+        "#d9a832",
+        "#b08a28",
+        "#786020"
+      ]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": [
+        "#f5f5f5",
+        "#e4e4e4",
+        "#767676",
+        "#383838",
+        "#1a1a1a"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "ff-meta-serif-web-pro",
+      "fontWeight": 800,
+      "fontSize": 48,
+      "lineHeight": 55,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 35,
+      "mobileLineHeight": 40
+    },
+    "heading-lg": {
+      "fontFamily": "ff-meta-serif-web-pro",
+      "fontWeight": 800,
+      "fontSize": 39,
+      "lineHeight": 45,
+      "letterSpacing": -0.3,
+      "mobileFontSize": 27,
+      "mobileLineHeight": 31
+    },
+    "heading-md": {
+      "fontFamily": "ff-meta-serif-web-pro",
+      "fontWeight": 800,
+      "fontSize": 32,
+      "lineHeight": 37,
+      "letterSpacing": -0.2,
+      "mobileFontSize": 24,
+      "mobileLineHeight": 28
+    },
+    "heading-sm": {
+      "fontFamily": "ff-meta-serif-web-pro",
+      "fontWeight": 800,
+      "fontSize": 27,
+      "lineHeight": 31,
+      "letterSpacing": 0,
+      "mobileFontSize": 22,
+      "mobileLineHeight": 25
+    },
+    "heading-xs": {
+      "fontFamily": "lft-etica",
+      "fontWeight": 700,
+      "fontSize": 18,
+      "lineHeight": 21,
+      "letterSpacing": 0,
+      "mobileFontSize": 18,
+      "mobileLineHeight": 21
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "lft-etica",
+      "fontWeight": 400,
+      "fontSize": 22,
+      "lineHeight": 33,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "lft-etica",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 27,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "lft-etica",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "h4": {
+        "typographyClass": "heading-sm",
+        "marginBottom": 0.75
+      },
+      "h5": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "h6": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ul": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ol": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "accent",
+      "hoverColor": "primary",
+      "underline": "always"
+    },
+    "customCSS": "blockquote {\n  border-left: 3px solid #58a66f;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n  font-style: italic;\n  color: #383838;\n}\n\npre {\n  background: #f5f5f5;\n  padding: 1rem;\n  border-radius: 6px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n  overflow-x: auto;\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n  border: 1px solid #e4e4e4;\n}\n\npre code {\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n}\n\ncode:not(pre code) {\n  background: #f5f5f5;\n  padding: 0.15em 0.4em;\n  border-radius: 3px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n}"
+  },
+  "customCSS": ".prose {\n  color: var(--color-fg-muted);\n}\n.prose h1,\n.prose h2,\n.prose h3,\n.prose h4 {\n  color: var(--color-base-alt);\n  font-family: 'ff-meta-serif-web-pro', serif;\n}\n.prose a {\n  color: var(--color-brand);\n  text-decoration: underline;\n  text-underline-offset: 2px;\n}\n.prose a:hover {\n  color: var(--color-base-alt);\n}\n\n/* Dark section descendant overrides */\n.lta-section-dark .heading-xl,\n.lta-section-dark .heading-lg,\n.lta-section-dark .heading-md,\n.lta-section-dark .heading-sm,\n.lta-section-dark .heading-xs,\n.lta-section-dark h1, .lta-section-dark h2,\n.lta-section-dark h3, .lta-section-dark h4 {\n  color: var(--color-panel);\n}\n.lta-section-dark a {\n  color: var(--color-orange);\n}\n\n/* Grunge texture overlay */\n.lta-grunge-bg {\n  position: relative;\n}\n.lta-grunge-bg::before {\n  content: '';\n  position: absolute;\n  inset: 0;\n  z-index: 0;\n  opacity: 0.12;\n  background-image: url('/assets/textures/grunge@2x.png');\n  background-size: 800px;\n  background-position: center;\n  background-repeat: repeat;\n}\n\n/* Topography texture header */\n.lta-topography-header {\n  position: relative;\n}\n.lta-topography-header::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 1.5rem;\n  background-image: url('/assets/textures/topography.png');\n  background-size: 400%;\n  background-repeat: repeat-x;\n  background-position: left top;\n}\n\n/* Expandable active state */\ndetails[open] {\n  border-color: var(--color-orange);\n}\ndetails[open] > summary {\n  background: linear-gradient(to bottom, var(--color-base-muted), transparent);\n}\ndetails[open] > summary .lta-expand-title {\n  color: var(--color-orange);\n}\n\n/* Stats color cycling */\n.lta-stat-item {\n  --lta-stat-color: var(--color-brand);\n}\n.lta-stat-item:nth-child(3n+2) {\n  --lta-stat-color: var(--color-blue);\n}\n.lta-stat-item:nth-child(3n) {\n  --lta-stat-color: var(--color-orange);\n}\n.lta-stat-item {\n  color: var(--lta-stat-color);\n}\n.lta-stat-label,\n.lta-stat-link {\n  color: inherit;\n}"
+}

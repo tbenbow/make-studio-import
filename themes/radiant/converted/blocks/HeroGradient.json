@@ -1,0 +1,37 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Hero with gradient background",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Close every deal."
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Radiant helps you sell more by revealing sensitive information about your customers."
+    },
+    {
+      "type": "text",
+      "name": "Primary Button Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Primary Button URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Secondary Button Label",
+      "default": "See pricing"
+    },
+    {
+      "type": "text",
+      "name": "Secondary Button URL",
+      "default": "/pricing"
+    }
+  ]
+}

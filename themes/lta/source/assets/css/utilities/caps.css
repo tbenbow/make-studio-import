@@ -1,0 +1,11 @@
+.caps {
+  @apply text-xs uppercase tracking-wide;
+}
+
+.caps-sm {
+  @apply text-2xs uppercase tracking-wide;
+}
+
+.caps-lg {
+  @apply text-sm uppercase tracking-wide;
+}

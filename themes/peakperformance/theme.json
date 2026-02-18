@@ -1,0 +1,140 @@
+{
+  "fonts": [
+    { "family": "Bebas Neue", "weight": 400, "style": "normal" },
+    { "family": "Inter", "weight": 400, "style": "normal" },
+    { "family": "Inter", "weight": 500, "style": "normal" },
+    { "family": "Inter", "weight": 600, "style": "normal" },
+    { "family": "Inter", "weight": 700, "style": "normal" }
+  ],
+  "systemColors": {
+    "brand": "#c8ff00",
+    "on-brand": "#0a0a0a",
+    "base": "#0a0a0a",
+    "base-muted": "#171717",
+    "base-alt": "#ffffff",
+    "panel": "#262626",
+    "fg": "#ffffff",
+    "fg-muted": "#a3a3a3",
+    "fg-alt": "#737373",
+    "border": "#525252"
+  },
+  "customColors": [],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": ["#eaff80", "#c8ff00", "#a0cc00", "#789900", "#506600"]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": ["#d4d4d4", "#a3a3a3", "#737373", "#525252", "#262626"]
+    },
+    "accent1": {
+      "label": "accent-1",
+      "colors": ["#c8ff00", "#a0cc00", "#789900", "#506600", "#283300"]
+    },
+    "accent2": {
+      "label": "accent-2",
+      "colors": ["#ffffff", "#d4d4d4", "#a3a3a3", "#737373", "#525252"]
+    },
+    "accent3": {
+      "label": "accent-3",
+      "colors": ["#171717", "#0a0a0a", "#000000", "#000000", "#000000"]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Bebas Neue",
+      "fontWeight": 400,
+      "fontSize": 96,
+      "lineHeight": 82,
+      "letterSpacing": -2,
+      "mobileFontSize": 48,
+      "mobileLineHeight": 41
+    },
+    "heading-lg": {
+      "fontFamily": "Bebas Neue",
+      "fontWeight": 400,
+      "fontSize": 72,
+      "lineHeight": 65,
+      "letterSpacing": -1.5,
+      "mobileFontSize": 48,
+      "mobileLineHeight": 43
+    },
+    "heading-md": {
+      "fontFamily": "Bebas Neue",
+      "fontWeight": 400,
+      "fontSize": 48,
+      "lineHeight": 44,
+      "letterSpacing": -1,
+      "mobileFontSize": 36,
+      "mobileLineHeight": 33
+    },
+    "heading-sm": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": 24,
+      "lineHeight": 30,
+      "letterSpacing": -0.3,
+      "mobileFontSize": 20,
+      "mobileLineHeight": 28
+    },
+    "heading-xs": {
+      "fontFamily": "Inter",
+      "fontWeight": 700,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "mobileFontSize": 14,
+      "mobileLineHeight": 20
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 29,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+      "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+      "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+      "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+      "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "accent",
+      "hoverColor": "primary",
+      "underline": "always"
+    },
+    "customCSS": "blockquote {\n  border-left: 3px solid #525252;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n  font-style: italic;\n  color: #a3a3a3;\n}\n\npre {\n  background: #171717;\n  padding: 1rem;\n  border-radius: 6px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n  overflow-x: auto;\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n  border: 1px solid #525252;\n}\n\ncode:not(pre code) {\n  background: #171717;\n  padding: 0.15em 0.4em;\n  border-radius: 3px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n}"
+  },
+  "customCSS": ".prose {\n  color: #a3a3a3;\n}\n.prose h1,\n.prose h2,\n.prose h3,\n.prose h4 {\n  color: #ffffff;\n}"
+}

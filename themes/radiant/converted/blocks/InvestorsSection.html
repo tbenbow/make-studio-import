@@ -1,0 +1,46 @@
+<section class="bg-base px-6 lg:px-8 mt-32">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    {{#if eyebrow}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{eyebrow}}</p>
+    {{/if}}
+    <h2 class="heading-xl text-fg mt-2">{{headline}}</h2>
+    {{#if description}}
+    <p class="mt-6 max-w-3xl text-2xl font-medium text-fg-alt">{{description}}</p>
+    {{/if}}
+    {{#if venture-firms}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase mt-24">Venture Capital</p>
+    <hr class="mt-6 border-t border-border" />
+    <ul class="mx-auto mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      {{#each venture-firms}}
+      <li>
+        {{#if logo}}
+        <img alt="{{name}}" src="{{logo}}" class="h-14" />
+        {{else}}
+        <h3 class="heading-md text-fg">{{name}}</h3>
+        {{/if}}
+        {{#if description}}
+        <p class="mt-6 max-w-lg body-sm text-fg-alt">{{description}}</p>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{#if individual-investors}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase mt-24">Individual investors</p>
+    <hr class="mt-6 border-t border-border" />
+    <ul class="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {{#each individual-investors}}
+      <li class="flex items-center gap-4">
+        {{#if image}}
+        <img alt="" src="{{image}}" class="size-12 rounded-full" />
+        {{/if}}
+        <div class="body-sm">
+          <h3 class="font-medium text-fg">{{name}}</h3>
+          <p class="text-fg-alt">{{company}}</p>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</section>

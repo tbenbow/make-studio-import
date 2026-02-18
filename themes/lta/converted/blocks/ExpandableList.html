@@ -1,0 +1,24 @@
+<section class="py-16 bg-base">
+  <div class="px-6 md:px-8 lg:px-12 xl:px-24">
+    {{#if title}}
+      <h2 class="heading-lg mb-8" style="color: #26484c;">{{title}}</h2>
+    {{/if}}
+    <ul class="list-none p-0">
+      {{#each items}}
+        <details class="border-t border-b border-border transition-colors duration-200 [&amp;:not(:last-child)]:border-b-0">
+          <summary class="flex items-center gap-3 p-4 cursor-pointer list-none [&amp;::-webkit-details-marker]:hidden">
+            <div class="flex-1">
+              <h6 class="heading-xs lta-expand-title transition-colors duration-200">{{this.title}}</h6>
+            </div>
+            <span class="text-fg-muted">
+              {{icon "plus" size="18"}}
+            </span>
+          </summary>
+          <div class="px-4 pb-6">
+            {{{prose this.content}}}
+          </div>
+        </details>
+      {{/each}}
+    </ul>
+  </div>
+</section>

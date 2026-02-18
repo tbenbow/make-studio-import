@@ -1,0 +1,33 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Row of partner/client logos",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Logos",
+      "default": [
+        { "alt": "SavvyCal", "image": "" },
+        { "alt": "Laravel", "image": "" },
+        { "alt": "Tuple", "image": "" },
+        { "alt": "Transistor", "image": "" },
+        { "alt": "Statamic", "image": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Alt" },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 600,
+              "maxHeight": 200,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

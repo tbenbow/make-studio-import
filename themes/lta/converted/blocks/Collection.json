@@ -1,0 +1,49 @@
+{
+  "description": "Link collection card",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Collection"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Resources"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Getting Started",
+          "url": "#"
+        },
+        {
+          "label": "Best Practices",
+          "url": "#"
+        },
+        {
+          "label": "Case Studies",
+          "url": "#"
+        },
+        {
+          "label": "Templates",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

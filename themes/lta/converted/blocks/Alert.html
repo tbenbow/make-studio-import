@@ -1,0 +1,20 @@
+<section class="py-4 bg-base">
+  <div class="px-6 md:px-8 lg:px-12 xl:px-24">
+    <div class="p-4 text-sm leading-normal rounded-md bg-base-alt text-on-brand flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-6">
+      <div class="flex-1 flex flex-col md:flex-row md:items-center md:gap-6">
+        <div class="relative flex items-center py-2 pl-12 md:pl-7 pr-6 uppercase tracking-wide flex-shrink-0 font-bold md:border-r md:border-white/30" style="color: #d9a832;">
+          <div class="absolute left-0 md:-left-7 top-1/2 -translate-y-1/2">
+            {{> IconBlob icon=icon size="sm" color="text-yellow" iconSize="16"}}
+          </div>
+          {{default type-label "Alert"}}
+        </div>
+        <p class="pr-6 py-2 text-white">{{body}}</p>
+      </div>
+      {{#if button-label}}
+        <div class="self-end lg:self-auto">
+          {{> Button label=button-label url=button-url icon="arrow-right" style="solid"}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

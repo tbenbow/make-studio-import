@@ -1,0 +1,59 @@
+{
+  "description": "Section heading with label",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Section Title"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Width",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Default",
+            "value": ""
+          },
+          {
+            "key": "Small",
+            "value": "small"
+          },
+          {
+            "key": "Large",
+            "value": "large"
+          }
+        ]
+      }
+    }
+  ]
+}

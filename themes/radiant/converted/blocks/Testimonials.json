@@ -1,0 +1,59 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Scrollable testimonial cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "What everyone is saying"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Trusted by professionals."
+    },
+    {
+      "type": "text",
+      "name": "CTA Text",
+      "default": "Join the best sellers in the business and start using Radiant to hit your targets today."
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "CTA URL",
+      "default": "#"
+    },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        { "name": "Tina Yards", "title": "VP of Sales, Protocol", "quote": "Thanks to Radiant, we're finding new leads that we never would have found with legal methods.", "image": "" },
+        { "name": "Conor Neville", "title": "Head of Customer Success, TaxPal", "quote": "Radiant made undercutting all of our competitors an absolute breeze.", "image": "" },
+        { "name": "Amy Chase", "title": "Head of GTM, Pocket", "quote": "We closed a deal in literally a few minutes because we knew their exact budget.", "image": "" },
+        { "name": "Veronica Winton", "title": "CSO, Planeteria", "quote": "We've managed to put two of our main competitors out of business in 6 months.", "image": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Quote" },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 800,
+              "maxHeight": 800,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

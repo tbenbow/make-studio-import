@@ -1,0 +1,12 @@
+<section class="py-16 bg-base">
+  <div class="px-6 md:px-8 lg:px-12 xl:px-24">
+    {{#if title}}
+      <div class="mb-12">
+        {{> Heading label=label title=title subtitle=subtitle description=description align=align}}
+      </div>
+    {{/if}}
+    <div class="grid grid-cols-1 gap-12 {{#switch columns}}{{#case "3"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case "4"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}">
+      {{{prose content}}}
+    </div>
+  </div>
+</section>

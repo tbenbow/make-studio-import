@@ -1,0 +1,108 @@
+{
+  "description": "Grid of image overlay cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "3",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "2 Columns",
+            "value": "2"
+          },
+          {
+            "key": "3 Columns",
+            "value": "3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "",
+          "label": "Topic",
+          "title": "Card Title",
+          "body": "<p>Brief description visible on hover.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "label": "Topic",
+          "title": "Another Card",
+          "body": "<p>Brief description visible on hover.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "label": "Topic",
+          "title": "Third Card",
+          "body": "<p>Brief description visible on hover.</p>",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 1200,
+              "maxHeight": 900,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

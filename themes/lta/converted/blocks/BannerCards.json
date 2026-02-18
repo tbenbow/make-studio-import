@@ -1,0 +1,78 @@
+{
+  "description": "Hero with overlapping cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Welcome to LTA"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body"
+    },
+    {
+      "type": "image",
+      "name": "BG Image",
+      "config": {
+        "maxWidth": 3000,
+        "maxHeight": 2000,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "default": [
+        {
+          "image": "",
+          "title": "Find a Land Trust",
+          "body": "<p>Locate a land trust near you.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "title": "Get Accredited",
+          "body": "<p>Learn about accreditation.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "title": "Support Conservation",
+          "body": "<p>Make a difference today.</p>",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 400,
+              "maxHeight": 400,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

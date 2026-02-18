@@ -1,0 +1,2939 @@
+{
+  "siteId": "6994e2c7072d25dd9abb7c00",
+  "capturedAt": "2026-02-17T21:51:17.207Z",
+  "theme": {
+    "fonts": [
+      {
+        "family": "Instrument Serif",
+        "weight": 400,
+        "style": "normal"
+      },
+      {
+        "family": "Inter",
+        "weight": 400,
+        "style": "normal"
+      },
+      {
+        "family": "Inter",
+        "weight": 500,
+        "style": "normal"
+      },
+      {
+        "family": "Inter",
+        "weight": 600,
+        "style": "normal"
+      }
+    ],
+    "systemColors": {
+      "brand": "#d8d8d0",
+      "on-brand": "#0b0c09",
+      "base": "#0b0c09",
+      "base-muted": "#181816",
+      "base-alt": "#ebebe6",
+      "panel": "#181816",
+      "border": "#464644",
+      "fg": "#ffffff",
+      "fg-muted": "#a5a597",
+      "fg-alt": "#7c7c67"
+    },
+    "customColors": [],
+    "palette": {
+      "primary": {
+        "label": "primary",
+        "colors": [
+          "rgb(224, 231, 255)",
+          "rgb(165, 180, 251)",
+          "rgb(100, 102, 241)",
+          "rgb(67, 56, 202)",
+          "rgb(48, 46, 129)"
+        ]
+      },
+      "accent1": {
+        "label": "accent-1",
+        "colors": [
+          "rgb(206, 250, 254)",
+          "rgb(103, 232, 249)",
+          "rgb(7, 182, 212)",
+          "rgb(13, 116, 144)",
+          "rgb(22, 78, 99)"
+        ]
+      },
+      "accent2": {
+        "label": "accent-2",
+        "colors": [
+          "rgb(209, 250, 229)",
+          "rgb(110, 231, 183)",
+          "rgb(18, 185, 129)",
+          "rgb(4, 120, 87)",
+          "rgb(18, 78, 74)"
+        ]
+      },
+      "accent3": {
+        "label": "accent-3",
+        "colors": [
+          "rgb(254, 243, 199)",
+          "rgb(251, 211, 76)",
+          "rgb(245, 158, 12)",
+          "rgb(180, 83, 10)",
+          "rgb(120, 53, 15)"
+        ]
+      },
+      "grays": {
+        "label": "gray",
+        "colors": [
+          "rgb(241, 245, 249)",
+          "rgb(203, 213, 225)",
+          "rgb(100, 116, 139)",
+          "rgb(51, 65, 85)",
+          "rgb(15, 23, 42)"
+        ]
+      }
+    },
+    "headingTypography": {
+      "heading-xl": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 80,
+        "lineHeight": 80,
+        "letterSpacing": -2,
+        "mobileLineHeight": 48,
+        "mobileFontSize": 48
+      },
+      "heading-lg": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 48,
+        "lineHeight": 56,
+        "letterSpacing": -1.2,
+        "mobileLineHeight": 40,
+        "mobileFontSize": 32
+      },
+      "heading-md": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 32,
+        "lineHeight": 40,
+        "letterSpacing": -0.8,
+        "mobileLineHeight": 36,
+        "mobileFontSize": 28
+      },
+      "heading-sm": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 24,
+        "lineHeight": 32,
+        "letterSpacing": -0.5,
+        "mobileLineHeight": 28,
+        "mobileFontSize": 20
+      },
+      "heading-xs": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 18,
+        "lineHeight": 28,
+        "letterSpacing": -0.3,
+        "mobileLineHeight": 24,
+        "mobileFontSize": 16
+      }
+    },
+    "bodyTypography": {
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 18,
+        "lineHeight": 32,
+        "letterSpacing": 0
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 28,
+        "letterSpacing": 0
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 14,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      }
+    },
+    "prose": {
+      "elements": {
+        "h1": {
+          "typographyClass": "heading-xl",
+          "marginBottom": 1.5
+        },
+        "h2": {
+          "typographyClass": "heading-lg",
+          "marginBottom": 1.25
+        },
+        "h3": {
+          "typographyClass": "heading-md",
+          "marginBottom": 1
+        },
+        "h4": {
+          "typographyClass": "heading-sm",
+          "marginBottom": 0.75
+        },
+        "h5": {
+          "typographyClass": "heading-xs",
+          "marginBottom": 0.5
+        },
+        "h6": {
+          "typographyClass": "heading-xs",
+          "marginBottom": 0.5
+        },
+        "p": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        },
+        "ul": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        },
+        "ol": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        }
+      },
+      "lists": {
+        "listStyleType": "disc",
+        "indent": 1.5,
+        "itemSpacing": 0.5,
+        "nestedIndent": 1.5
+      },
+      "links": {
+        "color": "accent",
+        "hoverColor": "primary",
+        "underline": "always"
+      },
+      "customCSS": "blockquote {\n  border-left: 3px solid currentColor;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n  font-style: italic;\n  opacity: 0.85;\n}\n\npre {\n  background: rgba(0, 0, 0, 0.3);\n  padding: 1rem;\n  border-radius: 4px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n  overflow-x: auto;\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n}\n\npre code {\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n}\n\ncode:not(pre code) {\n  background: rgba(0, 0, 0, 0.2);\n  padding: 0.15em 0.4em;\n  border-radius: 3px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n}"
+    },
+    "customCSS": ".prose {\n  color: var(--fg-muted);\n}\n.prose h1,\n.prose h2, \n.prose h3, \n.prose h4 {\n  color: var(--fg);\n}",
+    "buttons": {
+      "global": {
+        "fontFamily": "'Helvetica', sans-serif",
+        "fontWeight": 400,
+        "uppercase": false,
+        "sizes": {
+          "lg": {
+            "fontSize": 16,
+            "letterSpacing": 0,
+            "opticalYOffset": 1,
+            "paddingTop": 12,
+            "paddingBottom": 12,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "borderRadius": 4
+          },
+          "md": {
+            "fontSize": 14,
+            "letterSpacing": 0,
+            "opticalYOffset": 0,
+            "paddingTop": 10,
+            "paddingBottom": 10,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+            "borderRadius": 3
+          },
+          "sm": {
+            "fontSize": 12,
+            "letterSpacing": 0,
+            "opticalYOffset": 0,
+            "paddingTop": 10,
+            "paddingBottom": 10,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+            "borderRadius": 2
+          }
+        }
+      },
+      "variants": {
+        "primary": {
+          "backgroundColor": "system:brand",
+          "textColor": "system:on-brand",
+          "borderColor": "transparent",
+          "borderWidth": 1,
+          "hoverPreset": "scale"
+        },
+        "secondary": {
+          "backgroundColor": "system:base-muted",
+          "textColor": "system:fg",
+          "borderColor": "transparent",
+          "borderWidth": 1,
+          "hoverPreset": "darken"
+        },
+        "outline": {
+          "backgroundColor": "transparent",
+          "textColor": "system:brand",
+          "borderColor": "system:brand",
+          "borderWidth": 1,
+          "hoverPreset": "fill"
+        },
+        "ghost": {
+          "backgroundColor": "transparent",
+          "textColor": "system:fg",
+          "borderColor": "transparent",
+          "borderWidth": 1,
+          "hoverPreset": "darken"
+        }
+      }
+    }
+  },
+  "blocks": [
+    {
+      "_id": "6994e2c7072d25dd9abb7c02",
+      "name": "CTA Highlight",
+      "description": "Demo on brand background",
+      "thumbnailType": "cta-highlight",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"flex flex-col gap-16 px-2 pb-16 bg-base\">\n  <div class=\"rounded-lg bg-brand py-16\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10\">\n      <div class=\"flex gap-x-10 gap-y-16 max-lg:flex-col sm:gap-y-24\">\n        <div class=\"flex shrink-0 flex-col items-start gap-6 pt-16 sm:pt-32 lg:basis-xl lg:py-24\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-on-brand/70\">{{eyebrow}}</p>\n          {{/if}}\n          {{#if headline}}\n            <h1 class=\"heading-xl text-on-brand max-w-5xl text-balance\">{{headline}}</h1>\n          {{/if}}\n          {{#if subheadline}}\n            <div class=\"body-lg text-on-brand/70 max-w-3xl\">{{{subheadline}}}</div>\n          {{/if}}\n          <div class=\"flex flex-wrap items-center gap-4\">\n            {{#if button_label}}\n              <a href=\"{{default button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-on-brand text-brand px-4 py-2 body-sm font-medium hover:bg-on-brand/90 transition\">\n                {{button_label}}\n              </a>\n            {{/if}}\n            {{#if secondary_button_label}}\n              <a href=\"{{default secondary_button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-2 rounded-full text-on-brand px-4 py-2 body-sm font-medium hover:bg-on-brand/10 transition\">\n                {{secondary_button_label}}\n                {{icon \"arrow-right\" size=\"16\"}}\n              </a>\n            {{/if}}\n          </div>\n        </div>\n        {{#if demo_image}}\n          <div class=\"lg:pt-24 flex-1\">\n            <div class=\"relative h-72 sm:h-92 md:h-125 lg:h-full\">\n              <div class=\"absolute inset-y-0 left-0 flex w-screen overflow-hidden rounded-t-lg lg:rounded-tl-lg\">\n                <img src=\"{{demo_image}}\" alt=\"\" class=\"h-full w-auto max-w-none object-cover\">\n              </div>\n            </div>\n          </div>\n        {{/if}}\n      </div>\n    </div>\n  </div>\n  {{#if footer}}\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10\">{{{footer}}}</div>\n  {{/if}}\n</section>\n",
+      "fields": [
+        {
+          "id": "7016da5c-db22-45fb-a985-279f5f56b19c",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Introducing"
+        },
+        {
+          "id": "105ef43d-8b14-44e1-925b-79afd943a7f0",
+          "type": "text",
+          "name": "Headline",
+          "value": "Build better products faster"
+        },
+        {
+          "id": "fc12ad87-24cd-439b-af68-bd1dfe3d0d90",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>A powerful platform that helps teams ship quality software with confidence.</p>"
+        },
+        {
+          "id": "c441490a-0995-43bf-bd6a-a93fcee43936",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Get started"
+        },
+        {
+          "id": "d2472018-df9e-4220-af4f-be2f16c72476",
+          "type": "text",
+          "name": "Button Link",
+          "value": "#"
+        },
+        {
+          "id": "5d3385db-4ae1-4dca-b42a-12c9b4efb307",
+          "type": "text",
+          "name": "Secondary Button Label",
+          "value": "Learn more"
+        },
+        {
+          "id": "e8a15a15-ba2b-4642-b241-1f3df2590e60",
+          "type": "text",
+          "name": "Secondary Button Link",
+          "value": "#"
+        },
+        {
+          "id": "c1cec465-f18d-4cf2-bbaf-f40e0ce5243f",
+          "type": "image",
+          "name": "Demo Image",
+          "value": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop",
+          "config": {
+            "maxWidth": 1200,
+            "maxHeight": 800
+          }
+        },
+        {
+          "id": "9dd032e3-7fa3-4d83-b2f1-aeec5a1e3146",
+          "type": "wysiwyg",
+          "name": "Footer",
+          "value": ""
+        }
+      ],
+      "aiDescription": "Bold CTA on brand-colored background with a large demo image, two buttons, and footer text. Has image field — best when user has a product screenshot or app demo to show. Choose this over CTA Simple when you want a visually heavy, attention-grabbing closing section.",
+      "tags": [
+        "cta",
+        "closing",
+        "conversion",
+        "demo"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.208Z",
+      "updatedAt": "2026-02-17T21:51:03.208Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c03",
+      "name": "CTA",
+      "description": "Simple",
+      "thumbnailType": "hero-left",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10\">\n    <div class=\"flex flex-col {{align}} gap-6\">\n      <div class=\"flex max-w-4xl flex-col {{align}} gap-2\">\n        {{#if eyebrow}}\n          <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n        {{/if}}\n        <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n      </div>\n      {{#if subheadline}}\n        <div class=\"body-md text-fg-muted max-w-3xl text-pretty\">\n          {{{subheadline}}}\n        </div>\n      {{/if}}\n    </div>\n    {{#if (length buttons)}}\n      <div class=\"inline-flex flex-wrap {{align}} gap-4\">\n        {{#each buttons}}\n          {{> Button}}\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "8207066a-2c8b-4305-8641-a77be0667790",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Get started"
+        },
+        {
+          "id": "09321cfd-5a46-43f3-afd0-47d405b30cc0",
+          "type": "text",
+          "name": "Headline",
+          "value": "Ready to make customer support feel simple again?"
+        },
+        {
+          "id": "723aba90-2e23-443b-8c99-f8915d6773e9",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Join hundreds of teams using Oatmeal to deliver faster, friendlier email support.</p>"
+        },
+        {
+          "id": "c386e64b-e923-49fe-91c7-4b24a29b7fcc",
+          "type": "items",
+          "name": "Buttons",
+          "value": [
+            {
+              "id": "95e45431-ca05-402d-9678-636b074d5feb",
+              "label": "Start free trial",
+              "link": "#",
+              "style": "primary"
+            },
+            {
+              "id": "edbe541c-2841-46a5-a3fd-8b1c62806474",
+              "label": "Book a demo",
+              "link": "#",
+              "style": "ghost"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "d4609467-c96f-4248-9388-bf43038efc01",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "3b8307cf-28a1-408b-a880-0fa55aa74e5b",
+                "type": "text",
+                "name": "Link",
+                "value": ""
+              },
+              {
+                "id": "ae86cba2-9a32-4783-b665-f4c0bfcc4629",
+                "type": "select",
+                "name": "Style",
+                "value": "",
+                "config": {
+                  "selectOptions": [
+                    {
+                      "key": "Primary",
+                      "value": "primary"
+                    },
+                    {
+                      "key": "Secondary",
+                      "value": "secondary"
+                    },
+                    {
+                      "key": "Ghost",
+                      "value": "ghost"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "30813ea6-6b0e-4a6e-bf9b-38a897075a70",
+          "type": "select",
+          "name": "Align",
+          "value": "",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": ""
+              },
+              {
+                "key": "Center",
+                "value": "justify-center items-center"
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Minimal CTA section with headline, rich text subheadline, and repeatable button items. No images. Supports alignment options. Use as the final section on any page. Choose this over CTA Highlight when the page should end clean and simple without a visual.",
+      "tags": [
+        "cta",
+        "closing",
+        "conversion"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.208Z",
+      "updatedAt": "2026-02-17T21:51:03.208Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c04",
+      "name": "Content",
+      "thumbnailType": "content",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16 {{align}}\">\n    <div class=\"flex max-w-2xl flex-col gap-6 {{align}}\">\n      <div class=\"body-md text-fg-muted text-balance\">{{category}}</div>\n      <h1 class=\"heading-xl text-fg text-balance {{align}}\">{{headline}}</h1>\n      {{#if subheadline}}\n        <div class=\"body-lg text-fg-muted max-w-xl\">{{subheadline}}</div>\n      {{/if}}\n    </div>\n    {{#if content}}\n      <div class=\"max-w-2xl\">\n        {{{prose content}}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "bc0f2614-a216-4b5f-af51-6bd11c52c68d",
+          "type": "text",
+          "name": "Headline",
+          "value": "Terms of Service"
+        },
+        {
+          "id": "66bac145-5b23-44ff-9ffb-6344993cad46",
+          "type": "text",
+          "name": "Category",
+          "value": "Eyebrow Text"
+        },
+        {
+          "id": "08ddc99f-a202-492c-95d6-9d8165baced2",
+          "type": "textarea",
+          "name": "Subheadline",
+          "value": "Last updated: January 2025"
+        },
+        {
+          "id": "c0287695-e2ce-4db5-bf26-0a7e30f393fc",
+          "type": "wysiwyg",
+          "name": "Content",
+          "value": "<h2>Agreement to Terms</h2><p>By accessing or using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p><h2>Use License</h2><p>Permission is granted to temporarily use our services for personal, non-commercial purposes only.</p><h2>Disclaimer</h2><p>Our services are provided \"as is\" without any warranties, expressed or implied.</p><h2>Contact</h2><p>For questions about these Terms, please contact us at legal@example.com.</p>"
+        },
+        {
+          "id": "d191b7ef-c882-424f-9506-05f36be8b1cf",
+          "type": "select",
+          "name": "align",
+          "value": "items-center",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": ""
+              },
+              {
+                "key": "Center",
+                "value": "items-center"
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "General-purpose content section with headline, category tag, subheadline, and rich text body. Supports alignment. No images. Use for long-form text, about sections, policy pages, or any editorial content that does not fit a specialized block.",
+      "tags": [
+        "content",
+        "text",
+        "editorial"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.208Z",
+      "updatedAt": "2026-02-17T21:51:03.208Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c05",
+      "name": "FAQ Two Column",
+      "description": "Two column accordion",
+      "thumbnailType": "faq-2-col",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 grid grid-cols-1 gap-x-2 gap-y-8 lg:grid-cols-2\">\n    <div class=\"flex flex-col gap-6\">\n      {{#if headline}}\n        <h2 class=\"heading-lg text-fg\">{{headline}}</h2>\n      {{/if}}\n      {{#if subheadline}}\n        <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n      {{/if}}\n    </div>\n    {{#if (length questions)}}\n      <div class=\"divide-y divide-border border-y border-border\">\n        {{#each questions}}\n          <details class=\"group\">\n            <summary class=\"flex w-full cursor-pointer items-start justify-between gap-6 py-4 text-left body-md text-fg list-none [&amp;::-webkit-details-marker]:hidden\">\n              {{question}}\n              <span class=\"text-fg-muted\">\n                <span class=\"group-open:hidden\">{{icon \"plus\" size=\"20\"}}</span>\n                <span class=\"hidden group-open:inline\">{{icon \"minus\" size=\"20\"}}</span>\n              </span>\n            </summary>\n            <div class=\"-mt-2 pb-4 pr-12 body-sm text-fg-muted\">\n              {{{answer}}}\n            </div>\n          </details>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "f098b648-e2fb-4ff8-9a41-7faf4691e390",
+          "type": "text",
+          "name": "Headline",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "364dff36-6bb3-4742-83b4-2f16d9988d69",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Everything you need to know about our product and how it works.</p>"
+        },
+        {
+          "id": "5976e8e5-4918-4990-bb76-f9e3179a3a24",
+          "type": "items",
+          "name": "Questions",
+          "value": [
+            {
+              "id": "27565bdf-a861-4c69-998f-9b707bdc7747",
+              "question": "How does the free trial work?",
+              "answer": "<p>Start your 14-day free trial with full access to all features. No credit card required.</p>"
+            },
+            {
+              "id": "e98c43ae-8338-4d5c-b0c4-eff4ddee1ff0",
+              "question": "Can I change my plan later?",
+              "answer": "<p>Yes, you can upgrade or downgrade your plan at any time from your account settings.</p>"
+            },
+            {
+              "id": "71ef5159-c37e-47ba-91b5-e9507e2e1a6e",
+              "question": "What payment methods do you accept?",
+              "answer": "<p>We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>"
+            },
+            {
+              "id": "6c718e4d-dd61-470a-91a2-bce93ce32ebf",
+              "question": "Is there a setup fee?",
+              "answer": "<p>No, there are no setup fees or hidden costs. You only pay for your subscription.</p>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "eff2710e-edcd-4236-8ec9-e4d852bee023",
+                "type": "text",
+                "name": "Question",
+                "value": ""
+              },
+              {
+                "id": "43a49a40-e6ce-4ba0-831f-c5f3ff2b1822",
+                "type": "wysiwyg",
+                "name": "Answer",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Two-column accordion FAQ with headline and subheadline. Questions split across two columns for denser layout. Best for 6+ questions. Place near the bottom, before final CTA. Choose this over single-column FAQ when there are many questions to save vertical space.",
+      "tags": [
+        "faq",
+        "accordion",
+        "support",
+        "two-column"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.208Z",
+      "updatedAt": "2026-02-17T21:51:03.208Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c06",
+      "name": "FAQ",
+      "description": "Accordion",
+      "thumbnailType": "faq",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto flex max-w-3xl flex-col gap-6 px-6 lg:max-w-5xl lg:px-10\">\n    <div class=\"flex flex-col gap-6\">\n      {{#if headline}}\n        <h2 class=\"heading-lg text-fg\">{{headline}}</h2>\n      {{/if}}\n      {{#if subheadline}}\n        <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n      {{/if}}\n    </div>\n    {{#if (length questions)}}\n      <div class=\"divide-y divide-border border-y border-border\">\n        {{#each questions}}\n          <details class=\"group\">\n            <summary class=\"flex w-full cursor-pointer items-start justify-between gap-6 py-4 text-left body-md text-fg list-none [&amp;::-webkit-details-marker]:hidden\">\n              {{question}}\n              <span class=\"text-fg-muted\">\n                <span class=\"group-open:hidden\">{{icon \"plus\" size=\"20\"}}</span>\n                <span class=\"hidden group-open:inline\">{{icon \"minus\" size=\"20\"}}</span>\n              </span>\n            </summary>\n            <div class=\"-mt-2 pb-4 pr-12 body-sm text-fg-muted\">\n              {{{answer}}}\n            </div>\n          </details>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "1d8825b3-13b2-4f58-b5ff-62c41abaf59b",
+          "type": "text",
+          "name": "Headline",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "45e20240-6057-4bcd-bd75-0b3ea4a0a2f8",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Find answers to common questions about our product and services.</p>"
+        },
+        {
+          "id": "e968e5f8-3941-4233-9b5f-a0efc2d86f12",
+          "type": "items",
+          "name": "Questions",
+          "value": [
+            {
+              "id": "6692ec63-b42a-46cc-bf99-f4c4a05312f1",
+              "question": "Do I need a credit card to start the free trial?",
+              "answer": "<p>No, you can start your 14-day free trial without entering any payment information. We'll only ask for payment details when you decide to upgrade.</p>"
+            },
+            {
+              "id": "a2664edc-1829-4120-bde1-025d218d5cf3",
+              "question": "Can my whole team use the same inbox?",
+              "answer": "<p>Yes! Oatmeal is built for team collaboration. You can invite unlimited team members on any plan, and everyone can access the shared inbox.</p>"
+            },
+            {
+              "id": "6cbbf236-8ffc-48c5-8081-b76491264801",
+              "question": "What integrations do you support?",
+              "answer": "<p>We integrate with Slack, Zapier, Gmail, Outlook, and many more. Check our integrations page for the full list.</p>"
+            },
+            {
+              "id": "116e7eb8-4623-4484-af4e-378bd2a1e8c0",
+              "question": "Can I cancel my subscription at any time?",
+              "answer": "<p>Absolutely. You can cancel your subscription at any time from your account settings. No questions asked.</p>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "2f587f6a-8ecc-4f43-9e23-20f015992318",
+                "type": "text",
+                "name": "Question",
+                "value": ""
+              },
+              {
+                "id": "6da363b2-62de-4a82-88ed-fe24b03fe8f4",
+                "type": "wysiwyg",
+                "name": "Answer",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Single-column accordion FAQ with headline and subheadline. Questions expand/collapse on click. Best for 3-8 questions. Place near the bottom, before the final CTA. Choose this over FAQ Two Column when the page is narrow or question count is small (under 6).",
+      "tags": [
+        "faq",
+        "accordion",
+        "support"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.208Z",
+      "updatedAt": "2026-02-17T21:51:03.208Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c07",
+      "name": "Features Alternating",
+      "description": "Stacked alternating layout",
+      "thumbnailType": "cards-alternating",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length features)}}\n      <div class=\"flex flex-col gap-6\">\n        {{#each features}}\n          <div class=\"flex flex-col lg:flex-row even:lg:flex-row-reverse gap-2 rounded-lg bg-base-muted p-2\">\n            <div class=\"flex flex-col justify-between gap-6 p-6 sm:gap-10 sm:p-10 lg:p-6 lg:w-1/2\">\n              <div class=\"text-xl sm:text-2xl\">\n                <h3 class=\"text-fg\">{{title}}</h3>\n                {{#if description}}\n                  <p class=\"mt-2 text-fg-alt\">{{description}}</p>\n                {{/if}}\n              </div>\n              {{#if button_label}}\n                <a href=\"{{default button_link '#'}}\" class=\"inline-flex items-center gap-1 body-sm font-medium text-fg hover:text-fg-muted transition\">\n                  {{button_label}}\n                  {{icon \"arrow-right\" size=\"16\"}}\n                </a>\n              {{/if}}\n            </div>\n            {{#if image}}\n              <div class=\"relative overflow-hidden rounded-sm outline -outline-offset-1 outline-border lg:w-1/2\">\n                <img src=\"{{image}}\" alt=\"{{title}}\" class=\"w-full h-full object-cover\">\n              </div>\n            {{/if}}\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "18bc0314-b99f-49bd-ac18-c7efcab36638",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "How it works"
+        },
+        {
+          "id": "5a14edcc-700f-4195-908a-d76ebf88ee06",
+          "type": "text",
+          "name": "Headline",
+          "value": "How it works"
+        },
+        {
+          "id": "a357d1cb-dfc6-4b1e-980a-c2728ad0cf4d",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>A simple three-step process to get you up and running in minutes.</p>"
+        },
+        {
+          "id": "d560d359-685b-4821-972a-9ff406ef41b5",
+          "type": "items",
+          "name": "Features",
+          "value": [
+            {
+              "id": "fd26d581-a5ad-4b7c-83fe-e65122fe0442",
+              "title": "Connect your data",
+              "description": "Easily integrate with your existing tools and data sources.",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            },
+            {
+              "id": "c5400fad-2524-4e92-94d1-03c638d8f36a",
+              "title": "Analyze insights",
+              "description": "Get powerful analytics and actionable insights from your data.",
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            },
+            {
+              "id": "e38da10c-a94b-41da-a5c8-b787165cea20",
+              "title": "Take action",
+              "description": "Make data-driven decisions and automate your workflows.",
+              "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "641ebc45-a987-4079-be08-c0e319908f7a",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "fc5a1f2e-dc07-4603-99dc-f3ac546841dc",
+                "type": "textarea",
+                "name": "Description",
+                "value": ""
+              },
+              {
+                "id": "89d2011e-04a9-4d34-b026-cca15f3a6e94",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 800,
+                  "maxHeight": 600
+                }
+              },
+              {
+                "id": "c2fc87e8-d5e6-40d1-9345-632867f626ee",
+                "type": "text",
+                "name": "Button Label",
+                "value": ""
+              },
+              {
+                "id": "13e79ef8-26c1-46ad-8bc3-36f473afb1a0",
+                "type": "text",
+                "name": "Button Link",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Stacked rows that alternate text and image left-to-right. Each feature item has title, description, and image. Best for 2-4 features that each need detailed explanation. Choose this over Features Grid when features need more space and visual storytelling per item.",
+      "tags": [
+        "features",
+        "benefits",
+        "alternating"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.208Z",
+      "updatedAt": "2026-02-17T21:51:03.208Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c08",
+      "name": "Features Demo",
+      "description": "Large demo with features",
+      "thumbnailType": "hero-image",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    <div class=\"flex flex-col gap-14\">\n      {{#if demo-image}}\n        <div class=\"w-full overflow-hidden rounded-lg outline -outline-offset-1 outline-border\">\n          <img src=\"{{demo-image}}\" alt=\"\" class=\"w-full\">\n        </div>\n      {{/if}}\n      {{#if (length features)}}\n        <div class=\"grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3\">\n          {{#each features}}\n            <div class=\"flex flex-col gap-2 body-sm\">\n              <div class=\"flex items-center gap-3 text-fg\">\n                {{#if icon}}\n                  {{icon icon size=\"24\"}}\n                {{/if}}\n                <h3 class=\"font-semibold\">{{title}}</h3>\n              </div>\n              {{#if description}}\n                <p class=\"text-fg-muted\">{{description}}</p>\n              {{/if}}\n            </div>\n          {{/each}}\n        </div>\n      {{/if}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "5e735f2a-2a72-40ae-842e-bdcf8d1bad2d",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Platform"
+        },
+        {
+          "id": "c2d48455-cd3e-48d4-9d7c-9d5f3034dfe3",
+          "type": "text",
+          "name": "Headline",
+          "value": "Built for developers"
+        },
+        {
+          "id": "6befbbae-7ef6-4345-aee3-6ec6bd73ab2f",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Everything you need to build, deploy, and scale your applications.</p>"
+        },
+        {
+          "id": "20d47354-8f76-4975-8322-6130095be268",
+          "type": "image",
+          "name": "Demo Image",
+          "value": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop",
+          "config": {
+            "maxWidth": 1200,
+            "maxHeight": 800
+          }
+        },
+        {
+          "id": "eabb2917-ef5d-4df1-9fd7-fed94d5cf274",
+          "type": "items",
+          "name": "Features",
+          "value": [
+            {
+              "id": "73783d0b-23aa-4b24-8cfe-3cc1d0536ee8",
+              "icon": "code",
+              "title": "Clean API",
+              "description": "Simple, intuitive APIs that are a joy to work with."
+            },
+            {
+              "id": "61f143a0-50e5-41d3-b209-b7a210d440b1",
+              "icon": "lightning",
+              "title": "Fast Performance",
+              "description": "Optimized for speed with minimal overhead."
+            },
+            {
+              "id": "5d726a66-0733-4e63-abb9-f1e0037de94b",
+              "icon": "shield-check",
+              "title": "Secure by Default",
+              "description": "Enterprise-grade security built into every layer."
+            },
+            {
+              "id": "facddf33-2bd8-4f97-8dc1-4f4f3e0d5e4d",
+              "icon": "puzzle-piece",
+              "title": "Extensible",
+              "description": "Easy to extend and customize to your needs."
+            },
+            {
+              "id": "d6197934-0e61-479f-a9c5-b6fa7a92273d",
+              "icon": "book-open",
+              "title": "Great Docs",
+              "description": "Comprehensive documentation and examples."
+            },
+            {
+              "id": "769dd679-d7cd-4e20-b38a-42e475a27986",
+              "icon": "chat-circle",
+              "title": "Active Community",
+              "description": "Join thousands of developers building together."
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "8494db9b-65fe-47f7-a49f-9603c878d820",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "c34c2f41-ef34-457f-8b6d-ceaac91c965e",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "9f386105-da87-4ed2-89d7-f949a1af4ae5",
+                "type": "textarea",
+                "name": "Description",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "One large demo image with a list of supporting features beside it. Each feature has icon, title, and description. Best for product/app pages where one hero visual anchors the section. Choose this when the product screenshot is the star and features support it.",
+      "tags": [
+        "features",
+        "benefits",
+        "demo",
+        "product"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c09",
+      "name": "Features Double",
+      "description": "Two column with images",
+      "thumbnailType": "cards-img-2",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length features)}}\n      <div class=\"grid grid-cols-1 gap-2 lg:grid-cols-2\">\n        {{#each features}}\n          <div class=\"rounded-lg bg-base-muted p-2\">\n            {{#if image}}\n              <div class=\"relative overflow-hidden rounded-sm outline -outline-offset-1 outline-border\">\n                <img src=\"{{image}}\" alt=\"{{title}}\" class=\"w-full\">\n              </div>\n            {{/if}}\n            <div class=\"flex flex-col gap-4 p-6 sm:p-10 lg:p-6\">\n              <div>\n                <h3 class=\"body-md font-medium text-fg\">{{title}}</h3>\n                {{#if description}}\n                  <p class=\"mt-2 body-sm text-fg-muted\">{{description}}</p>\n                {{/if}}\n              </div>\n              {{#if button_label}}\n                <a href=\"{{default button_link '#'}}\" class=\"inline-flex items-center gap-1 body-sm font-medium text-fg hover:text-fg-muted transition\">\n                  {{button_label}}\n                  {{icon \"arrow-right\" size=\"16\"}}\n                </a>\n              {{/if}}\n            </div>\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "77cbc373-b754-4991-b372-734e6336f99a",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Features"
+        },
+        {
+          "id": "39767f67-9379-49c0-9d6d-7dfb73da4058",
+          "type": "text",
+          "name": "Headline",
+          "value": "Powerful features"
+        },
+        {
+          "id": "217a7511-d99d-4aa9-b4e9-e3b65a47d07e",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Built to help your team collaborate and ship faster.</p>"
+        },
+        {
+          "id": "f129e28f-90cd-4a3d-ba90-9c63c14bcd31",
+          "type": "items",
+          "name": "Features",
+          "value": [
+            {
+              "id": "3ff59113-00a1-49c5-a979-c5165669bab8",
+              "title": "Real-time collaboration",
+              "description": "Work together with your team in real-time. See changes as they happen and never lose sync.",
+              "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            },
+            {
+              "id": "bd36db63-ef58-49e5-90a0-5c09eaea9b10",
+              "title": "Advanced analytics",
+              "description": "Get deep insights into your data with powerful analytics and customizable dashboards.",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+              "button_label": "Learn more",
+              "button_link": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "d3ebd5bd-1d06-4abe-97c4-c0d38a1d09e5",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "9b873028-a540-4382-bdbc-8d6d16f63a2c",
+                "type": "textarea",
+                "name": "Description",
+                "value": ""
+              },
+              {
+                "id": "77275a2a-b574-48dd-8214-20241f59d123",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 800,
+                  "maxHeight": 600
+                }
+              },
+              {
+                "id": "93e9fe8b-2ce0-4117-b85a-9f6dba15a23b",
+                "type": "text",
+                "name": "Button Label",
+                "value": ""
+              },
+              {
+                "id": "e6963e9f-4da9-461b-b614-c36f089fe2ff",
+                "type": "text",
+                "name": "Button Link",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Two-column layout where each feature has its own image, title, and description. Best for exactly 2 or 4 features. Has image fields per item. Choose this over Features Grid when each feature needs a distinct supporting image rather than an icon.",
+      "tags": [
+        "features",
+        "benefits",
+        "two-column"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c0a",
+      "name": "Features Grid",
+      "description": "Three column grid",
+      "thumbnailType": "features-icon-grid-6",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length features)}}\n      <div class=\"grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3\">\n        {{#each features}}\n          <div class=\"flex flex-col gap-2 body-sm\">\n            <div class=\"flex items-start gap-3 text-fg\">\n              {{#if icon}}\n                <div class=\"flex size-5 h-7 items-center text-brand\">\n                  {{icon icon size=\"20\"}}\n                </div>\n              {{/if}}\n              <h3 class=\"font-semibold\">{{headline}}</h3>\n            </div>\n            <div class=\"flex flex-col gap-4 text-fg-muted\">{{{description}}}</div>\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "7e0f9108-cc9a-4069-a27f-756be9790239",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Features"
+        },
+        {
+          "id": "5dadda44-52bc-4d13-b0ae-96fc236a3bb2",
+          "type": "text",
+          "name": "Headline",
+          "value": "Everything you need to deliver great support."
+        },
+        {
+          "id": "be4989e2-1dc1-4220-941f-df1753df3ca4",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Work smarter, reply faster, and keep every customer conversation right where it belongs.</p>"
+        },
+        {
+          "id": "78e3df9f-3aa2-4378-9d6e-052f778e265f",
+          "type": "items",
+          "name": "Features",
+          "value": [
+            {
+              "id": "7a71d553-383a-424d-b716-485f0d3ac6ea",
+              "icon": "envelope",
+              "headline": "Shared Inbox",
+              "description": "<p>Keep every customer conversation in one clean, collaborative inbox.</p>"
+            },
+            {
+              "id": "53eb6570-c5cb-4e4f-9dcc-55798a2813d5",
+              "icon": "robot",
+              "headline": "AI Assistant",
+              "description": "<p>Get valuable context without having to read through long email threads.</p>"
+            },
+            {
+              "id": "1939ab11-8154-4c22-8d90-9f641c2981b4",
+              "icon": "lightning",
+              "headline": "Quick Replies",
+              "description": "<p>Respond faster with templates and snippets for common questions.</p>"
+            },
+            {
+              "id": "0af23a7c-54ba-4a6b-87ee-5ccd6da34cdd",
+              "icon": "users",
+              "headline": "Team Collaboration",
+              "description": "<p>Assign conversations, leave internal notes, and work together seamlessly.</p>"
+            },
+            {
+              "id": "05c8f024-a0da-47a8-a033-4e7b08e28b88",
+              "icon": "chart-bar",
+              "headline": "Analytics",
+              "description": "<p>Track response times, resolution rates, and team performance.</p>"
+            },
+            {
+              "id": "9f24203d-4076-4800-9179-d696791c5f4e",
+              "icon": "plug",
+              "headline": "Integrations",
+              "description": "<p>Connect with the tools you already use — Slack, Zapier, and more.</p>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "be9158fb-16b5-4698-8f83-40a4cb368531",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "ce98f1ae-981c-4564-8bad-92a90e93245c",
+                "type": "text",
+                "name": "Headline",
+                "value": ""
+              },
+              {
+                "id": "580211eb-1b94-4908-9362-ec7523fef403",
+                "type": "wysiwyg",
+                "name": "Description",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Three-column grid of features, each with icon, title, and short description. No images — text and icon only. Best for 3 or 6 concise benefits. Choose this when features are short and equal-weight, or when user has no photos. Most versatile features block.",
+      "tags": [
+        "features",
+        "benefits",
+        "grid"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c0b",
+      "name": "Features Triple",
+      "description": "Three column with images",
+      "thumbnailType": "cards-img-3",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length features)}}\n      <div class=\"grid grid-cols-1 gap-2 lg:grid-cols-3\">\n        {{#each features}}\n          <div class=\"rounded-lg bg-base-muted p-2\">\n            {{#if image}}\n              <div class=\"relative overflow-hidden rounded-sm outline -outline-offset-1 outline-border\">\n                <img src=\"{{image}}\" alt=\"{{title}}\" class=\"w-full\">\n              </div>\n            {{/if}}\n            <div class=\"p-6 sm:p-10 lg:p-6\">\n              <h3 class=\"body-md font-medium text-fg\">{{title}}</h3>\n              {{#if description}}\n                <p class=\"mt-2 body-sm text-fg-muted\">{{description}}</p>\n              {{/if}}\n            </div>\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "886c18a6-397b-4e10-8f67-e7ae9242b883",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Features"
+        },
+        {
+          "id": "c6ddb4c9-a51f-4d7c-8dd1-e5c743c62eed",
+          "type": "text",
+          "name": "Headline",
+          "value": "Everything you need"
+        },
+        {
+          "id": "3cc58b94-eaf5-417e-84ef-84465ec01eed",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Powerful tools to help you work smarter, not harder.</p>"
+        },
+        {
+          "id": "02a36aea-2895-4aa9-8429-8d6d608e3ff5",
+          "type": "items",
+          "name": "Features",
+          "value": [
+            {
+              "id": "2c7d8ca8-8e61-402d-b0a8-6504227bbe47",
+              "title": "Analytics",
+              "description": "Track performance with real-time analytics and insights.",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+            },
+            {
+              "id": "1700aa8a-5b76-4192-9583-fb91307a6782",
+              "title": "Automation",
+              "description": "Automate repetitive tasks and save valuable time.",
+              "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
+            },
+            {
+              "id": "a681350c-5303-49bd-b29e-19a34f806ef5",
+              "title": "Integration",
+              "description": "Connect with your favorite tools and services.",
+              "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "3a504ec2-c8b3-4b76-af88-a37d188a686b",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "edcbd27a-cd4d-4d7e-b99f-1d0038e6a338",
+                "type": "textarea",
+                "name": "Description",
+                "value": ""
+              },
+              {
+                "id": "1e85f3a8-82ad-4a87-95c9-7170d8226876",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 600,
+                  "maxHeight": 400
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Three-column layout where each feature has its own image, title, and description. Best for exactly 3 visual features. Has image field per item. Choose this over Features Grid when you have photos for each feature, and over Features Double when you have 3 items.",
+      "tags": [
+        "features",
+        "benefits",
+        "three-column"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c0c",
+      "name": "Footer",
+      "description": "Links and social icons",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "footer",
+      "template": "<footer class=\"pt-16\">\n  <div class=\"bg-panel py-16 text-fg\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 text-center body-sm\">\n      <div class=\"flex flex-col gap-6\">\n        {{#if (length links)}}\n          <nav>\n            <ul class=\"flex flex-wrap items-center justify-center gap-x-10 gap-y-2\">\n              {{#each links}}\n                <li class=\"text-fg-muted hover:text-fg transition\">\n                  <a href=\"{{url}}\">{{label}}</a>\n                </li>\n              {{/each}}\n            </ul>\n          </nav>\n        {{/if}}\n        {{#if (length social-links)}}\n          <div class=\"flex items-center justify-center gap-6\">\n            {{#each social-links}}\n              <a href=\"{{url}}\" rel=\"noopener\" aria-label=\"{{name}}\" class=\"text-fg hover:text-brand transition\">\n                {{icon icon size=\"24\"}}\n              </a>\n            {{/each}}\n          </div>\n        {{/if}}\n      </div>\n      <div class=\"text-fg-alt\">{{{fineprint}}}</div>\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "77f0c478-071f-4cf7-a7bd-7c222a919545",
+          "type": "items",
+          "name": "Links",
+          "value": [
+            {
+              "id": "638eed2c-932e-4dd6-865f-0d02415dce17",
+              "label": "Home",
+              "url": "/"
+            },
+            {
+              "id": "44828037-337d-4c94-891f-3adf75adb22f",
+              "label": "Features",
+              "url": "#features"
+            },
+            {
+              "id": "805875c2-2ace-446c-9d72-55c4274ba349",
+              "label": "Pricing",
+              "url": "#pricing"
+            },
+            {
+              "id": "44a9bec8-baf9-461b-a047-36b34998f405",
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "id": "1769fda2-91a4-4014-bf77-ed8d9b0fa337",
+              "label": "Contact",
+              "url": "/contact"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "522ec7b3-abaf-4de5-bd9f-2f63dc484eb0",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "fef479fc-451e-4233-894d-3ade4367c287",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "98c1626f-624d-4e7f-8c94-fb0c310f4319",
+          "type": "items",
+          "name": "Social Links",
+          "value": [
+            {
+              "id": "c3035093-8f1e-4b08-9a1c-f612de2ca2db",
+              "name": "Twitter",
+              "icon": "x-logo",
+              "url": "https://twitter.com"
+            },
+            {
+              "id": "bc409480-b423-4278-915b-f0d24fa49879",
+              "name": "GitHub",
+              "icon": "github-logo",
+              "url": "https://github.com"
+            },
+            {
+              "id": "f1e3dc23-8450-4547-9306-e0d1d2a1ed4b",
+              "name": "LinkedIn",
+              "icon": "linkedin-logo",
+              "url": "https://linkedin.com"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "523b461c-4d76-4c38-8383-b201f809e00d",
+                "type": "text",
+                "name": "Name",
+                "value": ""
+              },
+              {
+                "id": "e94d1bea-1560-43a6-93e9-f5727cfb070d",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "4c19a016-49ef-4dbb-8979-393fe9daa494",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "b71e0487-bd41-457f-9883-aebc28544003",
+          "type": "wysiwyg",
+          "name": "Fineprint",
+          "value": "<p>© 2025 Oatmeal Inc. All rights reserved.</p>"
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c0d",
+      "name": "FooterCategories",
+      "description": "Link categories grid",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "footer",
+      "template": "<footer class=\"pt-16 bg-base\">\n  <div class=\"bg-base-muted py-16\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16\">\n      {{#if (length categories)}}\n        <nav class=\"grid grid-cols-2 gap-6 body-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5\">\n          {{#each categories}}\n            <div>\n              <h3 class=\"font-semibold text-fg\">{{title}}</h3>\n              <ul role=\"list\" class=\"mt-2 flex flex-col gap-2 text-fg-muted [&amp;_a]:hover:text-fg [&amp;_a]:transition\">\n                {{{links}}}\n              </ul>\n            </div>\n          {{/each}}\n        </nav>\n      {{/if}}\n      {{#if copyright}}\n        <div class=\"body-sm text-fg-alt\">{{{copyright}}}</div>\n      {{/if}}\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "cc136066-5649-48cf-8f69-52ea8142e49f",
+          "type": "items",
+          "name": "Categories",
+          "value": [
+            {
+              "id": "f9994819-6e7e-4c8d-8c1c-e15941843592",
+              "title": "Product",
+              "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>\n<a href=\"#\">Changelog</a>"
+            },
+            {
+              "id": "1f7609e9-493f-405f-9658-3bfdeaf89a3c",
+              "title": "Company",
+              "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Press</a>\n<a href=\"#\">Blog</a>"
+            },
+            {
+              "id": "636b473d-80e0-425d-bde6-3ad7495996fc",
+              "title": "Resources",
+              "links": "<a href=\"#\">Documentation</a>\n<a href=\"#\">Help Center</a>\n<a href=\"#\">API Reference</a>\n<a href=\"#\">Status</a>"
+            },
+            {
+              "id": "74e8f0d8-25d8-4293-bef6-ff71b62892ae",
+              "title": "Legal",
+              "links": "<a href=\"#\">Privacy</a>\n<a href=\"#\">Terms</a>\n<a href=\"#\">Security</a>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "3ec80ef6-cfb0-48b4-9188-db42002fd9c6",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "da2c783b-1c63-48aa-af30-66feecfda8d1",
+                "type": "wysiwyg",
+                "name": "Links",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "ccf9c410-154d-4c69-a77e-119553dc68f0",
+          "type": "wysiwyg",
+          "name": "Copyright",
+          "value": "<p>&copy; 2025 Company Inc. All rights reserved.</p>"
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c0e",
+      "name": "FooterNewsletter",
+      "description": "Newsletter + categories",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "footer",
+      "template": "<footer class=\"pt-16 bg-base\">\n  <div class=\"bg-base-muted py-16\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16\">\n      <div class=\"grid grid-cols-1 gap-x-6 gap-y-16 body-sm lg:grid-cols-2\">\n        <form class=\"flex max-w-sm flex-col gap-2\">\n          {{#if newsletter-headline}}\n            <p class=\"font-semibold text-fg\">{{newsletter-headline}}</p>\n          {{/if}}\n          {{#if newsletter-text}}\n            <div class=\"text-fg-muted\">{{{newsletter-text}}}</div>\n          {{/if}}\n          <div class=\"flex items-center border-b border-border py-2 focus-within:border-fg\">\n            <input type=\"email\" placeholder=\"Email\" aria-label=\"Email\" class=\"flex-1 bg-transparent text-fg focus:outline-none\">\n            <button type=\"submit\" aria-label=\"Subscribe\" class=\"inline-flex size-7 items-center justify-center rounded-full hover:bg-panel transition\">\n              {{icon \"arrow-right\" size=\"20\"}}\n            </button>\n          </div>\n        </form>\n        {{#if (length categories)}}\n          <nav class=\"grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4\">\n            {{#each categories}}\n              <div>\n                <h3 class=\"font-semibold text-fg\">{{title}}</h3>\n                <ul role=\"list\" class=\"mt-2 flex flex-col gap-2 text-fg-muted [&amp;_a]:hover:text-fg [&amp;_a]:transition\">\n                  {{{links}}}\n                </ul>\n              </div>\n            {{/each}}\n          </nav>\n        {{/if}}\n      </div>\n      <div class=\"flex items-center justify-between gap-10 body-sm\">\n        {{#if copyright}}\n          <div class=\"text-fg-alt\">{{{copyright}}}</div>\n        {{/if}}\n        {{#if (length social-links)}}\n          <div class=\"flex items-center gap-4 sm:gap-10\">\n            {{#each social-links}}\n              <a href=\"{{url}}\" aria-label=\"{{label}}\" class=\"text-fg hover:text-fg-muted transition\">\n                {{icon icon size=\"24\"}}\n              </a>\n            {{/each}}\n          </div>\n        {{/if}}\n      </div>\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "71b34938-05cd-407e-b5a2-70a5ca4ba8e7",
+          "type": "text",
+          "name": "Newsletter Headline",
+          "value": "Stay in the loop"
+        },
+        {
+          "id": "f8d8af1f-8ee6-4186-b6c5-3084411bebe9",
+          "type": "wysiwyg",
+          "name": "Newsletter Text",
+          "value": "<p>Get the latest updates delivered to your inbox.</p>"
+        },
+        {
+          "id": "901641ac-3305-4d07-b192-3d934268d9ab",
+          "type": "items",
+          "name": "Categories",
+          "value": [
+            {
+              "id": "62f51ec4-f2c9-44bd-bc26-00de442192ac",
+              "title": "Product",
+              "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>"
+            },
+            {
+              "id": "3a5c9a1c-ae72-41c9-b138-715a05bd8110",
+              "title": "Company",
+              "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Blog</a>"
+            },
+            {
+              "id": "315b9eae-64ad-4f2a-82d2-ac6388309a46",
+              "title": "Resources",
+              "links": "<a href=\"#\">Docs</a>\n<a href=\"#\">Help</a>\n<a href=\"#\">API</a>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "9fb4a971-48a4-448d-bba4-5ffe8a804559",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "ff144eaa-8775-4a68-bac7-a3a990e47efc",
+                "type": "wysiwyg",
+                "name": "Links",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "d3890e9e-80d9-4e68-bbd5-ae2ab739e830",
+          "type": "wysiwyg",
+          "name": "Copyright",
+          "value": "<p>&copy; 2025 Company Inc.</p>"
+        },
+        {
+          "id": "a8946e81-22cf-44e3-991e-6f09bd9eee79",
+          "type": "items",
+          "name": "Social Links",
+          "value": [
+            {
+              "id": "2852dd61-e7fe-4b11-8976-82ff85f517cb",
+              "icon": "x-logo",
+              "url": "#",
+              "label": "X"
+            },
+            {
+              "id": "bafe14cc-0762-48f1-b6f2-8be0970ebefb",
+              "icon": "linkedin-logo",
+              "url": "#",
+              "label": "LinkedIn"
+            },
+            {
+              "id": "fa32c109-43e9-49d6-96b6-db564648bdc3",
+              "icon": "github-logo",
+              "url": "#",
+              "label": "GitHub"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "927e014c-f39f-418c-a8fa-36c446ab630f",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "b8249ef8-3770-4748-a64f-0118bb22a601",
+                "type": "text",
+                "name": "Url",
+                "value": ""
+              },
+              {
+                "id": "565c4fb7-fd35-4790-8b1a-cc0fc65a16e5",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c0f",
+      "name": "Form",
+      "thumbnailType": "form",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<div class=\"isolate bgbase px-6 py-24 sm:py-32 lg:px-8\">\n  <div class=\"mx-auto max-w-2xl text-center\">\n    <h2 class=\"heading-lg text-fg\">{{headline}}</h2>\n    <p class=\"mt-2 body-lg text-fg-muted\">{{subheadline}}</p>\n  </div>\n  <form action=\"#\" method=\"POST\" class=\"mx-auto mt-16 max-w-xl sm:mt-20\">\n    <div class=\"flex flex-col gap-6\">\n      {{#each fields}}\n        {{> Field}}\n      {{/each}}\n    </div>\n    <div class=\"mt-10\">\n      {{> Button label=\"Let's talk\" link=\"#\"}}\n    </div>\n  </form>\n</div>\n",
+      "fields": [
+        {
+          "id": "4a722848-2b4e-47ec-b41a-4b783f7a4861",
+          "type": "text",
+          "name": "headline",
+          "value": "Contact sales"
+        },
+        {
+          "id": "a5cff3f7-34ef-4e8c-b145-4f986ccdda82",
+          "type": "text",
+          "name": "subheadline",
+          "value": "We desperately want to hear from you."
+        },
+        {
+          "id": "9135d6cd-769e-4276-ae8e-2eed77e4d628",
+          "type": "items",
+          "name": "Fields",
+          "value": "[{\"id\":\"c1f551d2-248d-4164-a174-2ef4bd9d4af3\",\"label\":\"Name\",\"name\":\"name\"},{\"id\":\"ad02e7a5-b888-4a1b-b72d-33ffc3a61549\",\"label\":\"Email\",\"name\":\"email\",\"type\":\"email\"},{\"id\":\"5346bea7-3adf-46c9-95da-d2b713a5de12\",\"label\":\"Message\",\"name\":\"message\",\"type\":\"textarea\"}]",
+          "config": {
+            "fields": [
+              {
+                "id": "1f952a93-e737-4ced-937d-3ca49824f4cd",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "86894dc6-fab9-439b-9402-0fd644eb49f3",
+                "type": "text",
+                "name": "name",
+                "value": ""
+              },
+              {
+                "id": "ee74b04a-a494-4099-a368-3f51b43bfbae",
+                "type": "select",
+                "name": "Type",
+                "value": "",
+                "config": {
+                  "selectOptions": [
+                    {
+                      "key": "Text",
+                      "value": "text"
+                    },
+                    {
+                      "key": "Email",
+                      "value": "email"
+                    },
+                    {
+                      "key": "Textarea",
+                      "value": "textarea"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Contact form section with headline, subheadline, and repeatable form field items. Each field has label, type, and placeholder. Use for lead capture, contact inquiries, or newsletter signup. Place near the bottom. Pair with or use instead of a CTA section.",
+      "tags": [
+        "contact",
+        "form",
+        "lead-capture"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c10",
+      "name": "Hero",
+      "description": "Text w/ optional photo",
+      "thumbnailType": "hero",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16\">\n    <div class=\"flex flex-col {{align}} gap-16 sm:gap-32\">\n      <div class=\"flex flex-col {{align}} gap-6\">\n        {{#if eyebrow}}\n          <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n        {{/if}}\n        <h1 class=\"heading-xl text-fg max-w-5xl text-balance\">{{headline}}</h1>\n        <div class=\"body-lg text-fg-muted max-w-3xl\">\n          {{{subheadline}}}\n        </div>\n        {{#if (length buttons)}}\n          <div class=\"flex flex-wrap {{align}} gap-4 mt-2\">\n            {{#each buttons}}\n              {{> Button}}\n            {{/each}}\n          </div>\n        {{/if}}\n      </div>\n      {{#if photo}}\n        <div class=\"overflow-hidden rounded-xl outline -outline-offset-1 outline-border\">\n          <img src=\"{{photo}}\" alt=\"\" class=\"w-full h-auto\">\n        </div>\n      {{/if}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "6bbd759c-0b21-4f74-af7a-19eeefc53f08",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Welcome"
+        },
+        {
+          "id": "379a2613-60b0-4c88-884f-926f80b1a4a9",
+          "type": "text",
+          "name": "Headline",
+          "value": "Ship faster with confidence."
+        },
+        {
+          "id": "cef47c0b-037b-4504-a25f-694a47503f04",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Build, test, and deploy with tools designed to help your team move quickly without breaking things.</p>"
+        },
+        {
+          "id": "a31f5eec-cb9c-4d94-8886-eb9f3ac422a8",
+          "type": "image",
+          "name": "Photo",
+          "value": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop",
+          "config": {
+            "maxWidth": 1920,
+            "maxHeight": 1080
+          }
+        },
+        {
+          "id": "89484f92-5eb3-43a5-8781-9b75bc942085",
+          "type": "items",
+          "name": "Buttons",
+          "value": [
+            {
+              "id": "1c7a7e2b-b060-4e35-ac60-4e29ee4396b4",
+              "label": "Get started",
+              "link": "#",
+              "style": "primary"
+            },
+            {
+              "id": "b59d5edf-2ca0-4673-b101-fd3849b8e474",
+              "label": "See pricing",
+              "link": "#",
+              "style": "ghost"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "17f611d1-bac4-48dc-b703-56aeae98f129",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "08ea26c2-fd46-4d8b-a681-6fbdb7b42dbd",
+                "type": "text",
+                "name": "Link",
+                "value": ""
+              },
+              {
+                "id": "37bb6c8f-b3ca-47de-979e-5b74785f0398",
+                "type": "select",
+                "name": "Style",
+                "value": "",
+                "config": {
+                  "selectOptions": [
+                    {
+                      "key": "Primary",
+                      "value": "primary"
+                    },
+                    {
+                      "key": "Secondary",
+                      "value": "secondary"
+                    },
+                    {
+                      "key": "Ghost",
+                      "value": "ghost"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "b131293c-c15b-4dad-b16f-25964f1d6c3f",
+          "type": "select",
+          "name": "align",
+          "value": "items-center text-center",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": ""
+              },
+              {
+                "key": "Center",
+                "value": "items-center text-center"
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Full-width hero with headline, subheadline, CTA buttons, and optional photo. Has image field — use when user uploaded photos. Supports left/center/right alignment. Always place first on page. Choose this over Split when you want a classic stacked layout.",
+      "tags": [
+        "hero",
+        "above-fold",
+        "landing"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c11",
+      "name": "Logo Cloud",
+      "description": "Brand cards grid",
+      "thumbnailType": "testimonial-cards",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length brands)}}\n      <div class=\"grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4\">\n        {{#each brands}}\n          <div class=\"flex flex-col justify-between gap-6 rounded-xl bg-panel p-6\">\n            <div class=\"flex flex-col items-start gap-2\">\n              {{#if logo}}\n                <div class=\"flex h-8 shrink-0\">\n                  <img src=\"{{logo}}\" alt=\"{{name}}\" class=\"h-full w-auto\">\n                </div>\n              {{/if}}\n              {{#if text}}\n                <p class=\"body-sm text-fg-muted\">{{text}}</p>\n              {{/if}}\n            </div>\n            {{#if footnote}}\n              <p class=\"text-xs text-fg-muted\">{{footnote}}</p>\n            {{/if}}\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "be45f31b-892e-4aa2-b644-6fd01433c652",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Trusted by"
+        },
+        {
+          "id": "cc87fe57-cda8-4275-9401-2a7ce4b0b64e",
+          "type": "text",
+          "name": "Headline",
+          "value": "Trusted by industry leaders"
+        },
+        {
+          "id": "28a05627-aa2d-4033-a4eb-cd1ab8a9fd93",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Join thousands of companies already using our platform.</p>"
+        },
+        {
+          "id": "5a417864-cda1-4c77-b55a-8fd0bb9a2522",
+          "type": "items",
+          "name": "Brands",
+          "value": [
+            {
+              "id": "149461c7-45c2-4771-9346-b91df460374d",
+              "name": "Acme Corp",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=ACME",
+              "text": "Reduced support tickets by 40% in the first month.",
+              "footnote": "Enterprise customer since 2022"
+            },
+            {
+              "id": "c7e7bb56-6864-4f57-a6a4-4f3f87342ab2",
+              "name": "TechStart",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=TechStart",
+              "text": "Our go-to solution for customer communication.",
+              "footnote": "Growth plan customer"
+            },
+            {
+              "id": "532d36dc-2928-461d-b077-a886ada3da28",
+              "name": "GlobalCo",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=GlobalCo",
+              "text": "Seamless integration with our existing tools.",
+              "footnote": "Enterprise customer since 2021"
+            },
+            {
+              "id": "865493c4-1cac-4a92-a0e1-b1cf851e94ec",
+              "name": "Startup Inc",
+              "logo": "https://placehold.co/120x32/1a1a1a/white?text=Startup",
+              "text": "Perfect for our fast-moving team.",
+              "footnote": "Starter plan customer"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "90c3abde-c1f3-4433-940b-1f86ec3d2c00",
+                "type": "text",
+                "name": "Name",
+                "value": ""
+              },
+              {
+                "id": "1cb84d14-dd2c-4f69-b37f-d5752daba4c9",
+                "type": "image",
+                "name": "Logo",
+                "value": "",
+                "config": {
+                  "maxWidth": 200,
+                  "maxHeight": 50
+                }
+              },
+              {
+                "id": "eb48251e-a034-4854-86e7-23602eef22f7",
+                "type": "text",
+                "name": "Text",
+                "value": ""
+              },
+              {
+                "id": "5f3d6b09-44f2-48eb-8705-c2de1de45f19",
+                "type": "text",
+                "name": "Footnote",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Grid of brand/client logo cards. Each item has a logo image. Best for 4-8 logos. Establishes trust by showing recognizable clients or partners. Compact section. Place after hero or after features. Choose this when the business has notable clients to showcase.",
+      "tags": [
+        "logos",
+        "proof",
+        "clients",
+        "trust"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c12",
+      "name": "Navbar",
+      "description": "Logo left, links centered",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "header",
+      "template": "<header class=\"sticky top-0 z-10 bg-base\">\n  <nav>\n    <div class=\"mx-auto flex h-20 max-w-7xl items-center gap-4 px-6 lg:px-10\">\n      <div class=\"flex flex-1 items-center\">\n        <a href=\"{{default logo_link '/'}}\" class=\"inline-flex items-center gap-2\">\n          {{#if logo}}\n            <img src=\"{{logo}}\" alt=\"{{logo_text}}\" class=\"h-8 w-auto\">\n          {{else}}\n            <span class=\"text-lg font-semibold text-fg\">{{default logo_text \"Company\"}}</span>\n          {{/if}}\n        </a>\n      </div>\n      {{#if (length links)}}\n        <div class=\"hidden lg:flex gap-8\">\n          {{#each links}}\n            <a href=\"{{url}}\" class=\"body-sm font-medium text-fg hover:text-fg-muted transition\">\n              {{label}}\n            </a>\n          {{/each}}\n        </div>\n      {{/if}}\n      <div class=\"flex flex-1 items-center justify-end gap-4\">\n        {{#if button-label}}\n          <a href=\"{{default button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition\">\n            {{button-label}}\n          </a>\n        {{/if}}\n        <button type=\"button\" aria-label=\"Toggle menu\" class=\"inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden\">\n          {{icon \"list\" size=\"24\"}}\n        </button>\n      </div>\n    </div>\n  </nav>\n</header>\n",
+      "fields": [
+        {
+          "id": "88cb13d5-1040-4f9d-b5fa-584c23aa706e",
+          "type": "image",
+          "name": "Logo",
+          "value": "",
+          "config": {
+            "maxWidth": 200,
+            "maxHeight": 60
+          }
+        },
+        {
+          "id": "b0e427ce-0b8c-4d0e-9cf9-42732823a91f",
+          "type": "text",
+          "name": "Logo Text",
+          "value": "Company"
+        },
+        {
+          "id": "f68fd2ef-7a0b-4fd7-b557-9c90262ad793",
+          "type": "text",
+          "name": "Logo Link",
+          "value": "/"
+        },
+        {
+          "id": "55249bb0-a88f-430f-b07c-816f8920309d",
+          "type": "items",
+          "name": "Links",
+          "value": [
+            {
+              "id": "5c755927-eb4a-45df-ba4d-e3d592d79f46",
+              "label": "Features",
+              "url": "#features"
+            },
+            {
+              "id": "382e0531-8f81-43b8-938e-62b577649e12",
+              "label": "Pricing",
+              "url": "#pricing"
+            },
+            {
+              "id": "77ccb5e6-b620-4ed4-848c-25f3b459b649",
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "id": "671fbf96-1559-4d2e-95ad-bc098df2b811",
+              "label": "Blog",
+              "url": "/blog"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "d8e54b6f-67dc-4140-8bf8-e8da2a89cbca",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "366d79cf-481a-47e6-b872-330de3c88866",
+                "type": "text",
+                "name": "Url",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "34f38039-8d3d-4be5-868d-76131fc499d0",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Get started"
+        },
+        {
+          "id": "8848c1d9-c637-4872-992c-b7aa4d57ee67",
+          "type": "text",
+          "name": "Button Link",
+          "value": "#"
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c13",
+      "name": "Pricing Large",
+      "description": "Single large box",
+      "thumbnailType": "price-large",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10\">\n    <div class=\"grid grid-cols-1 gap-x-2 rounded-xl bg-base-muted p-2 lg:grid-cols-2\">\n      <div class=\"flex flex-col items-start justify-between gap-10 p-6 sm:p-10\">\n        <div class=\"flex flex-col gap-6\">\n          {{#if headline}}\n            <h2 class=\"heading-lg text-fg\">{{headline}}</h2>\n          {{/if}}\n          {{#if subheadline}}\n            <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n          {{/if}}\n        </div>\n        {{#if button-label}}\n          <a href=\"{{default button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition\">\n            {{button-label}}\n          </a>\n        {{/if}}\n      </div>\n      <div class=\"rounded-lg bg-base p-6 sm:p-10\">\n        <div class=\"flex items-baseline gap-2\">\n          <p class=\"text-6xl sm:text-7xl font-light tracking-tight text-fg\">{{price}}</p>\n          {{#if period}}\n            <span class=\"body-lg text-fg-muted\">{{period}}</span>\n          {{/if}}\n        </div>\n        {{#if (length features)}}\n          <ul class=\"mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-1\">\n            {{#each features}}\n              <li class=\"flex gap-3 body-sm\">\n                <span class=\"flex w-5 h-5 shrink-0 items-center justify-center rounded-sm bg-border\">\n                  {{icon \"check\" size=\"16\" class=\"text-fg\"}}\n                </span>\n                <p class=\"text-fg-muted\">{{text}}</p>\n              </li>\n            {{/each}}\n          </ul>\n        {{/if}}\n      </div>\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "c5e5130c-d237-464e-9bc6-32033b80857d",
+          "type": "text",
+          "name": "Headline",
+          "value": "Everything you need"
+        },
+        {
+          "id": "77cbd9e1-20c2-468a-8db9-50de0562a472",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Get access to all features with one simple plan. No hidden fees, no complicated tiers.</p>"
+        },
+        {
+          "id": "1221287b-2d16-4088-ad33-f8628c9d0394",
+          "type": "text",
+          "name": "Price",
+          "value": "$49"
+        },
+        {
+          "id": "5ffee8d8-8a63-45f9-8d86-55c61cf16599",
+          "type": "text",
+          "name": "Period",
+          "value": "/mo"
+        },
+        {
+          "id": "9bd64796-f75f-46e9-ac7b-8860f0c4285b",
+          "type": "items",
+          "name": "Features",
+          "value": [
+            {
+              "id": "dec052bb-4eac-41a3-a621-599a3b8c74d3",
+              "text": "Unlimited projects"
+            },
+            {
+              "id": "1c43c333-9703-490a-898e-252cf5323141",
+              "text": "Advanced analytics"
+            },
+            {
+              "id": "e0250e52-11b4-4508-a7aa-d92ec3b13967",
+              "text": "24/7 support"
+            },
+            {
+              "id": "25bd595e-60db-40c9-a690-bd47fdbe117a",
+              "text": "Custom integrations"
+            },
+            {
+              "id": "646918c5-376f-400e-a10b-fdc329a3c7de",
+              "text": "API access"
+            },
+            {
+              "id": "cad67ec0-9398-4f86-841f-91123ac21ea9",
+              "text": "Team collaboration"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "0a421edd-261c-424b-bb25-a923ad25a8d6",
+                "type": "text",
+                "name": "Text",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "398b2ef2-1c81-495b-a17f-458c319cad12",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Get started"
+        },
+        {
+          "id": "fa1cf0fe-3957-4126-9843-7eefc7794cea",
+          "type": "text",
+          "name": "Button Link",
+          "value": "#"
+        }
+      ],
+      "aiDescription": "Single large pricing box with price, period label, feature list, and CTA button. Takes full width. Best when there is only one plan or you want to spotlight a recommended tier. Choose this over multi-tier Pricing when simplicity matters.",
+      "tags": [
+        "pricing",
+        "plans",
+        "single"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c14",
+      "name": "Pricing",
+      "description": "Multi-tier",
+      "thumbnailType": "price-cards",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length plans)}}\n      <div class=\"grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3\">\n        {{#each plans}}\n          <div class=\"flex flex-col justify-between gap-6 rounded-xl bg-panel p-6 sm:items-start\">\n            <div class=\"self-stretch\">\n              <div class=\"flex items-center justify-between\">\n                {{#if badge}}\n                  <div class=\"order-last inline-flex rounded-full bg-brand/10 px-2 text-xs font-medium text-brand\">\n                    {{badge}}\n                  </div>\n                {{/if}}\n                <h3 class=\"heading-sm tracking-tight text-fg\">{{name}}</h3>\n              </div>\n              <p class=\"mt-1 inline-flex gap-1 body-md\">\n                <span class=\"text-fg\">{{price}}</span>\n                {{#if period}}\n                  <span class=\"text-fg-alt\">{{period}}</span>\n                {{/if}}\n              </p>\n              {{#if description}}\n                <div class=\"mt-4 body-sm text-fg-muted\">{{{description}}}</div>\n              {{/if}}\n              {{#if features}}\n                <div class=\"mt-4 body-sm text-fg-muted prose prose-sm [&amp;_li]:flex [&amp;_li]:gap-2 [&amp;_li]:items-start [&amp;_li_svg]:shrink-0 [&amp;_li_svg]:mt-1\">\n                  {{{features}}}\n                </div>\n              {{/if}}\n            </div>\n            {{#if button-label}}\n              {{#isEqual highlighted \"true\"}}\n                <a href=\"{{default button-link '#'}}\" class=\"w-full inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition\">\n                  {{button-label}}\n                </a>\n              {{else}}\n                <a href=\"{{default button-link '#'}}\" class=\"w-full inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand/10 text-fg px-4 py-2 body-sm font-medium hover:bg-brand/15 transition\">\n                  {{button-label}}\n                </a>\n              {{/isEqual}}\n            {{/if}}\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "0e7ff6d6-dd9b-4814-9f61-d3cd082003f0",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Pricing"
+        },
+        {
+          "id": "ade3a5c1-00cd-42e6-8110-845f2fc72347",
+          "type": "text",
+          "name": "Headline",
+          "value": "Pricing to fit your needs."
+        },
+        {
+          "id": "e4694549-16bc-4ba2-8f37-d51673ebca27",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Simple, transparent pricing that grows with you. No hidden fees.</p>"
+        },
+        {
+          "id": "48322fc7-a87d-4fd7-8590-43096e04a02d",
+          "type": "items",
+          "name": "Plans",
+          "value": [
+            {
+              "id": "91d6b704-1068-47b5-b067-9760872094aa",
+              "name": "Starter",
+              "price": "$12",
+              "period": "/month",
+              "description": "<p>Perfect for small teams getting started.</p>",
+              "features": "<ul><li>Up to 5 team members</li><li>Basic analytics</li><li>Email support</li><li>1GB storage</li></ul>",
+              "badge": "",
+              "highlighted": "false",
+              "button-label": "Start free trial",
+              "button-link": "#"
+            },
+            {
+              "id": "9a2cb571-3314-413f-bd4b-62897c899e76",
+              "name": "Growth",
+              "price": "$49",
+              "period": "/month",
+              "description": "<p>For growing teams that need more power.</p>",
+              "features": "<ul><li>Unlimited team members</li><li>Advanced analytics</li><li>Priority support</li><li>10GB storage</li><li>API access</li></ul>",
+              "badge": "Most popular",
+              "highlighted": "true",
+              "button-label": "Start free trial",
+              "button-link": "#"
+            },
+            {
+              "id": "f52cd416-bb17-4117-a54f-76bde91e7a79",
+              "name": "Enterprise",
+              "price": "$199",
+              "period": "/month",
+              "description": "<p>For large organizations with custom needs.</p>",
+              "features": "<ul><li>Everything in Growth</li><li>SSO &amp; SAML</li><li>Dedicated support</li><li>Unlimited storage</li><li>Custom integrations</li></ul>",
+              "badge": "",
+              "highlighted": "false",
+              "button-label": "Contact sales",
+              "button-link": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "09615e47-49d6-4eae-80d7-b7af89a60202",
+                "type": "text",
+                "name": "Name",
+                "value": ""
+              },
+              {
+                "id": "a604b825-99df-4d50-86cb-6def0a3cb826",
+                "type": "text",
+                "name": "Price",
+                "value": ""
+              },
+              {
+                "id": "9eb1a929-5dc4-4eff-b1cc-511b591559e1",
+                "type": "text",
+                "name": "Period",
+                "value": ""
+              },
+              {
+                "id": "fbf151ec-44ce-413f-b99a-5f0d0ce31d06",
+                "type": "wysiwyg",
+                "name": "Description",
+                "value": ""
+              },
+              {
+                "id": "81f0dff8-4fd9-4031-b909-4cbf36ce8621",
+                "type": "wysiwyg",
+                "name": "Features",
+                "value": ""
+              },
+              {
+                "id": "a9032f70-282f-4f39-a708-ad51b232631f",
+                "type": "text",
+                "name": "Badge",
+                "value": ""
+              },
+              {
+                "id": "0c97e9ab-3016-4432-97c9-d791a47f2cff",
+                "type": "select",
+                "name": "Highlighted",
+                "value": "",
+                "config": {
+                  "selectOptions": [
+                    {
+                      "key": "No",
+                      "value": "false"
+                    },
+                    {
+                      "key": "Yes",
+                      "value": "true"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "e80117f0-a575-4a22-af34-9141aa05264d",
+                "type": "text",
+                "name": "Button Label",
+                "value": ""
+              },
+              {
+                "id": "362d4e03-04d8-4e95-90ae-fc66bd35b5ee",
+                "type": "text",
+                "name": "Button Link",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Multi-tier pricing table with repeatable plan items, each having name, price, feature list, and CTA button. Best for 2-4 plans side by side. Choose this over Pricing Large when the business offers multiple tiers or wants visitors to compare options.",
+      "tags": [
+        "pricing",
+        "plans",
+        "comparison"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c15",
+      "name": "Split",
+      "thumbnailType": "split",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<div class=\"relative bg-base-muted\">\n  <div class=\"mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8\">\n    <div class=\"px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-48 lg:pt-40 xl:col-span-6\">\n      <div class=\"mx-auto max-w-lg lg:mx-0\">\n        <div class=\"hidden sm:mt-32 sm:flex lg:mt-16\">\n          <div class=\"relative rounded-full px-3 py-1 text-sm leading-6 text-fg-muted ring-1 ring-border\">\n            {{promo-text}} <a href=\"{{promo-link-url}}\" class=\"whitespace-nowrap font-semibold text-brand\"><span aria-hidden=\"true\" class=\"absolute inset-0\"></span>{{promo-link-label}} <span aria-hidden=\"true\">→</span></a>\n          </div>\n        </div>\n        <h1 class=\"mt-24 heading-xl text-fg sm:mt-10 sm:text-heading-xl\">{{headline}}</h1>\n        <p class=\"mt-8 body-lg text-fg-muted sm:text-body-lg\">{{subheadline}}</p>\n        <div class=\"mt-10 flex items-center gap-x-6\">\n          <a href=\"{{primary-button-url}}\" class=\"rounded-md bg-brand px-3.5 py-2.5 text-sm font-semibold text-on-brand shadow-sm hover:bg-base-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand\">{{primary-button-label}}</a>\n          <a href=\"{{secondary-button-url}}\" class=\"body-sm font-semibold text-brand\">{{secondary-button-label}} <span aria-hidden=\"true\">→</span></a>\n        </div>\n      </div>\n    </div>\n    <div class=\"relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0\">\n      <img src=\"{{image}}\" alt=\"\" class=\"aspect-[3/2] w-full bg-base-muted object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full\">\n    </div>\n  </div>\n</div>",
+      "fields": [
+        {
+          "id": "67dd62f1-2685-4c46-aa5b-f483d008cecd",
+          "type": "text",
+          "name": "Logo Alt",
+          "value": "Your Company"
+        },
+        {
+          "id": "6d7c3c50-cba1-4290-b02c-7dc7b08257c4",
+          "type": "textarea",
+          "name": "Promo Text",
+          "value": "Anim aute id magna aliqua ad ad non deserunt sunt."
+        },
+        {
+          "id": "62e9e13b-428c-4da8-8780-06a26e85d671",
+          "type": "text",
+          "name": "Promo Link Label",
+          "value": "Read more"
+        },
+        {
+          "id": "4ed690a2-da54-4d82-a7ad-cf3674a968b1",
+          "type": "text",
+          "name": "Promo Link URL",
+          "value": "#"
+        },
+        {
+          "id": "2e4080aa-5370-4541-98b3-0e3708b95347",
+          "type": "text",
+          "name": "Headline",
+          "value": "Data to enrich your business"
+        },
+        {
+          "id": "8e383ed7-e749-40d1-8964-d13f895d9d8b",
+          "type": "textarea",
+          "name": "Subheadline",
+          "value": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat."
+        },
+        {
+          "id": "320041cc-f513-4029-9654-83048916adea",
+          "type": "text",
+          "name": "Primary Button Label",
+          "value": "Get started"
+        },
+        {
+          "id": "f24d0c3d-116d-482c-9f83-469a01111496",
+          "type": "text",
+          "name": "Primary Button URL",
+          "value": "#"
+        },
+        {
+          "id": "092b395d-454e-43d2-8dd5-d132de4ed517",
+          "type": "text",
+          "name": "Secondary Button Label",
+          "value": "Learn more"
+        },
+        {
+          "id": "9a435e0a-329c-47bf-83c3-cb59fa9c3f2b",
+          "type": "text",
+          "name": "Secondary Button URL",
+          "value": "#"
+        },
+        {
+          "id": "eaf02cad-83fa-482e-a870-d39a23e40e56",
+          "type": "image",
+          "name": "Image",
+          "value": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
+        }
+      ],
+      "aiDescription": "Split-screen layout: text content on one side, large image on the other, with an optional promo bar at top. Has image field. Two CTA buttons. Use as an alternative hero for landing pages. Choose this over Hero when you want a side-by-side layout instead of stacked.",
+      "tags": [
+        "hero",
+        "split",
+        "landing",
+        "promo"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c16",
+      "name": "Stats",
+      "description": "Four columns",
+      "thumbnailType": "features-intro-horz-3",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length stats)}}\n      <div class=\"grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4\">\n        {{#each stats}}\n          <div class=\"rounded-xl bg-panel p-6\">\n            <div class=\"heading-md tracking-tight text-fg\">{{stat}}</div>\n            <p class=\"mt-2 body-sm text-fg-muted\">{{text}}</p>\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "ec074e87-4ec7-4f0c-8da4-0d61931cc031",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "By the numbers"
+        },
+        {
+          "id": "dec255c7-9920-4e69-b163-70942074adce",
+          "type": "text",
+          "name": "Headline",
+          "value": "Trusted by teams everywhere."
+        },
+        {
+          "id": "8502c3ce-9ea6-4c01-a138-4497c1dbeb03",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Join thousands of companies delivering better customer support with Oatmeal.</p>"
+        },
+        {
+          "id": "ceab5c51-1f3b-45e3-9cbe-c044ea18fdea",
+          "type": "items",
+          "name": "Stats",
+          "value": [
+            {
+              "id": "368b49e1-f5e0-46cd-b4e6-fb0926de37f6",
+              "stat": "2M+",
+              "text": "Emails processed every week across thousands of teams."
+            },
+            {
+              "id": "103eca92-3d61-4b52-aa12-81f375243f15",
+              "stat": "99.98%",
+              "text": "Uptime — because your customers never stop."
+            },
+            {
+              "id": "29bff7e1-51f4-4b03-88f2-25dc0a094063",
+              "stat": "50%",
+              "text": "Reduction in average response time."
+            },
+            {
+              "id": "ba014ad5-ab9d-41da-96a7-8e2684e45bba",
+              "stat": "10k+",
+              "text": "Teams using Oatmeal worldwide."
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "5a32e74d-4012-4347-b62a-702867c458d1",
+                "type": "text",
+                "name": "Stat",
+                "value": ""
+              },
+              {
+                "id": "89c9f25c-be9b-4e29-a17c-d7ec70ddd0d9",
+                "type": "text",
+                "name": "Text",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Four-column statistics row with large numbers and labels. No images. Best for 4 key metrics (e.g. \"500+ clients\", \"10 years\"). Compact section that adds credibility through numbers. Place after features or before testimonials as lightweight social proof.",
+      "tags": [
+        "stats",
+        "proof",
+        "numbers"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c17",
+      "name": "Team",
+      "description": "Three column grid",
+      "thumbnailType": "cards-img-tall-3",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length members)}}\n      <ul role=\"list\" class=\"grid gap-x-2 gap-y-10 {{columns}}\">\n        {{#each members}}\n          <li class=\"flex flex-col gap-4 body-sm\">\n            {{#if photo}}\n              <div class=\"aspect-[3/4] w-full overflow-hidden rounded-sm outline -outline-offset-1 outline-border\">\n                <img src=\"{{photo}}\" alt=\"{{name}}\" class=\"size-full object-cover\">\n              </div>\n            {{/if}}\n            <div>\n              <p class=\"font-semibold text-fg\">{{name}}</p>\n              <p class=\"text-fg-muted\">{{role}}</p>\n            </div>\n          </li>\n        {{/each}}\n      </ul>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "57d0461a-c0a3-4822-8ad3-f8ff50e5295b",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Our team"
+        },
+        {
+          "id": "3c3cc5a7-6c8f-4d42-936f-86bccdf59ec7",
+          "type": "text",
+          "name": "Headline",
+          "value": "Meet the people behind the product."
+        },
+        {
+          "id": "3a612f33-e0fc-43d5-b685-58e96a753758",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>We're a small team of passionate people building tools to help you succeed.</p>"
+        },
+        {
+          "id": "54223407-25fb-496a-a4f9-3d2522f02d1b",
+          "type": "items",
+          "name": "Members",
+          "value": "[{\"id\":\"904e83af-a16f-40f1-80c7-8922b56862a3\",\"name\":\"Lisa Wang\",\"role\":\"Product Manager\",\"photo\":\"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"76be1b01-e26a-438c-8599-4d02ff629810\",\"name\":\"Emily Johnson\",\"role\":\"Head of Design\",\"photo\":\"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"8e726354-f697-4fb5-8bf4-b5ea71b54422\",\"name\":\"James Wilson\",\"role\":\"Customer Success\",\"photo\":\"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"59c53d6a-34ca-4fec-bd59-1eb245b5a8fa\",\"name\":\"Sarah Chen\",\"role\":\"CEO & Co-founder\",\"photo\":\"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"5b172321-1f5b-4e6e-ac4b-eebabbe41ff6\",\"name\":\"Michael Torres\",\"role\":\"CTO & Co-founder\",\"photo\":\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=533&fit=crop&crop=face\"},{\"id\":\"5e08c5ac-2b1d-4002-b2b4-6ce59af07a42\",\"name\":\"David Kim\",\"role\":\"Lead Engineer\",\"photo\":\"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=533&fit=crop&crop=face\"}]",
+          "config": {
+            "fields": [
+              {
+                "id": "20f5e1db-6d7d-45c3-9caa-fbaa85eea9d7",
+                "type": "text",
+                "name": "Name",
+                "value": ""
+              },
+              {
+                "id": "d8b59d60-857f-4e81-8081-5735a203b162",
+                "type": "text",
+                "name": "Role",
+                "value": ""
+              },
+              {
+                "id": "ff8e6174-7faf-4b48-84a7-3d6272b4871c",
+                "type": "image",
+                "name": "Photo",
+                "value": "",
+                "config": {
+                  "maxWidth": 400,
+                  "maxHeight": 533
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "e7797b82-ed0f-46c6-9a2b-772841b67092",
+          "type": "select",
+          "name": "Columns",
+          "value": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Three",
+                "value": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+              },
+              {
+                "key": "Four",
+                "value": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Team member grid with photo, name, and role per person. Has image field per member. Supports 2-4 column layout via select field. Best for 3-8 team members. Builds trust by showing real people. Place in the middle or lower section of about pages.",
+      "tags": [
+        "team",
+        "about",
+        "people"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c18",
+      "name": "Testimonial Large",
+      "description": "Two column with large photo",
+      "thumbnailType": "testimonial-card",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10\">\n    <figure class=\"grid grid-cols-1 gap-x-2 rounded-xl bg-panel p-2 lg:grid-cols-2\">\n      <div class=\"flex flex-col items-start justify-between gap-10 p-6 text-fg sm:p-10\">\n        <blockquote class=\"relative flex flex-col gap-4 heading-sm text-pretty before:content-['\">\n          {{{quote}}}\n        </blockquote>\n        <figcaption class=\"body-sm\">\n          <p class=\"font-semibold\">{{name}}</p>\n          <p class=\"text-fg-muted\">{{byline}}</p>\n        </figcaption>\n      </div>\n      {{#if photo}}\n        <div class=\"flex overflow-hidden rounded-sm outline -outline-offset-1 outline-border\">\n          <img src=\"{{photo}}\" alt=\"{{name}}\" class=\"w-full h-full object-cover\">\n        </div>\n      {{/if}}\n    </figure>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "920d67bc-7d9c-42b3-bf68-661780f4ef6b",
+          "type": "wysiwyg",
+          "name": "Quote",
+          "value": "<p>This platform has transformed how our team handles customer support. We've cut response times in half while actually improving customer satisfaction scores.</p>"
+        },
+        {
+          "id": "f6cccaee-3126-4ec9-8005-caf66b99e468",
+          "type": "text",
+          "name": "Name",
+          "value": "Sarah Chen"
+        },
+        {
+          "id": "0c810209-6b2d-4604-a83e-fe4e5b8901b4",
+          "type": "text",
+          "name": "Byline",
+          "value": "VP of Customer Success, TechCorp"
+        },
+        {
+          "id": "a3256cd3-5965-459b-9499-00b608856e2a",
+          "type": "image",
+          "name": "Photo",
+          "value": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=face",
+          "config": {
+            "maxWidth": 800,
+            "maxHeight": 1000
+          }
+        }
+      ],
+      "aiDescription": "Two-column testimonial with a large photo on one side and quote on the other. Most visually dramatic testimonial option. Has image field. Choose this over standard Testimonial when you have a strong portrait photo and want maximum visual weight.",
+      "tags": [
+        "testimonials",
+        "proof",
+        "quote",
+        "two-column"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c19",
+      "name": "Testimonial",
+      "description": "Large quote",
+      "thumbnailType": "testimonial",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10\">\n    <figure class=\"text-fg\">\n      <blockquote class=\"mx-auto flex max-w-4xl flex-col gap-4 text-center heading-lg tracking-tight text-pretty before:content-['\">\n        {{{quote}}}\n      </blockquote>\n      <figcaption class=\"mt-16 flex flex-col items-center\">\n        {{#if image}}\n          <div class=\"flex w-12 overflow-hidden rounded-full outline -outline-offset-1 outline-border\">\n            <img src=\"{{image}}\" alt=\"{{name}}\" class=\"w-full object-cover\">\n          </div>\n        {{/if}}\n        <p class=\"mt-4 text-center body-sm font-semibold text-fg\">{{name}}</p>\n        <p class=\"text-center body-sm text-fg-muted\">{{byline}}</p>\n      </figcaption>\n    </figure>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "5ce9223e-5526-44b1-8dc6-da1063f4256d",
+          "type": "wysiwyg",
+          "name": "Quote",
+          "value": "<p>Oatmeal has completely transformed our customer support operations. The team collaboration features are incredible.</p>"
+        },
+        {
+          "id": "6602614f-64c2-44bd-a2d0-0d89fbf2f4fe",
+          "type": "image",
+          "name": "Image",
+          "value": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+          "config": {
+            "maxWidth": 150,
+            "maxHeight": 150
+          }
+        },
+        {
+          "id": "474100d4-c6a4-4007-8335-281f0d4fe62c",
+          "type": "text",
+          "name": "Name",
+          "value": "Jordan Rogers"
+        },
+        {
+          "id": "5bded0bf-5938-40f7-9596-83ed518c951d",
+          "type": "text",
+          "name": "Byline",
+          "value": "Founder at Anomaly"
+        }
+      ],
+      "aiDescription": "Single large testimonial quote with author image, name, and byline. High visual impact, takes full width. Has image field. Best for featuring one key endorsement. Choose this when you want one powerful quote, not multiple. Place after features as social proof.",
+      "tags": [
+        "testimonials",
+        "proof",
+        "quote"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c1a",
+      "name": "Testimonials Grid",
+      "description": "Three column grid",
+      "thumbnailType": "testimonial-cards",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16\">\n    {{#if headline}}\n      <div class=\"flex max-w-2xl flex-col gap-6\">\n        <div class=\"flex flex-col gap-2\">\n          {{#if eyebrow}}\n            <p class=\"body-sm font-semibold text-fg-muted\">{{eyebrow}}</p>\n          {{/if}}\n          <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>\n        </div>\n        {{#if subheadline}}\n          <div class=\"body-md text-fg-muted text-pretty\">{{{subheadline}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    {{#if (length testimonials)}}\n      <div class=\"grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3\">\n        {{#each testimonials}}\n          <figure class=\"flex flex-col justify-between gap-10 rounded-md bg-panel p-6 body-sm text-fg\">\n            <blockquote class=\"relative flex flex-col gap-4 before:content-['\">\n              {{{quote}}}\n            </blockquote>\n            <figcaption class=\"flex items-center gap-4\">\n              {{#if photo}}\n                <div class=\"flex w-12 h-12 overflow-hidden rounded-full outline -outline-offset-1 outline-border\">\n                  <img src=\"{{photo}}\" alt=\"{{name}}\" class=\"w-full object-cover\">\n                </div>\n              {{/if}}\n              <div>\n                <p class=\"font-semibold\">{{name}}</p>\n                <p class=\"text-fg-muted\">{{byline}}</p>\n              </div>\n            </figcaption>\n          </figure>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "e7cad580-fa6e-4141-bd09-93868080ddd5",
+          "type": "text",
+          "name": "Eyebrow",
+          "value": "Testimonials"
+        },
+        {
+          "id": "e8a83c40-dca5-4ba3-ba46-21927d41f2e6",
+          "type": "text",
+          "name": "Headline",
+          "value": "What our customers are saying"
+        },
+        {
+          "id": "031ce501-56f0-45da-8e4d-7940626c55bf",
+          "type": "wysiwyg",
+          "name": "Subheadline",
+          "value": "<p>Don't just take our word for it. Here's what our customers have to say.</p>"
+        },
+        {
+          "id": "e97bf93b-1ee2-4a5f-9418-c336482693e3",
+          "type": "items",
+          "name": "Testimonials",
+          "value": [
+            {
+              "id": "121ecff2-0a97-4e18-9fdb-c5745ef55232",
+              "quote": "<p>This product has completely transformed how we work. The team collaboration features are incredible.</p>",
+              "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
+              "name": "Sarah Chen",
+              "byline": "CEO at TechCorp"
+            },
+            {
+              "id": "c780e037-c05e-4396-b770-98ab9532ff37",
+              "quote": "<p>We've seen a 50% improvement in our response times since switching. Highly recommended.</p>",
+              "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+              "name": "Michael Torres",
+              "byline": "Head of Support at Acme"
+            },
+            {
+              "id": "a2cb10c2-53b4-400f-b84d-b3d8bc86462b",
+              "quote": "<p>The best investment we've made this year. Our customers are happier than ever.</p>",
+              "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+              "name": "Emily Johnson",
+              "byline": "Founder at StartupXYZ"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "1a6f444c-df8c-4da8-b0f4-18b7f41bb0a4",
+                "type": "text",
+                "name": "Name",
+                "value": ""
+              },
+              {
+                "id": "70dd3953-323a-4af3-8084-6248353b9052",
+                "type": "wysiwyg",
+                "name": "Quote",
+                "value": ""
+              },
+              {
+                "id": "14de8592-ab1a-4daa-bef0-b151038bc36d",
+                "type": "image",
+                "name": "Photo",
+                "value": "",
+                "config": {
+                  "maxWidth": 150,
+                  "maxHeight": 150
+                }
+              },
+              {
+                "id": "58d0cdec-8b78-4a02-bf74-eb0c9a011795",
+                "type": "text",
+                "name": "Byline",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Three-column grid showing multiple testimonials at once, each with quote, name, and details. No images on individual items. Best for 3 or 6 testimonials. Choose this when you want to show breadth of social proof with multiple voices rather than one featured quote.",
+      "tags": [
+        "testimonials",
+        "proof",
+        "grid"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c1b",
+      "name": "Blog Content",
+      "description": "Used on blog detail",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 sm:gap-16 {{align}}\">\n    <div class=\"flex max-w-2xl flex-col gap-6 {{align}}\">\n      \n      {{#each (dataStore \"button-variations\")}}\n        <p class=\"text-fg\">{{this}}</p>\n      {{/each}}\n      \n      <p class=\"text-fg\">{{buttons}}</p>\n\n      \n      <div class=\"body-md text-fg-muted text-balance\">{{eyebrow}}</div>\n      <h1 class=\"heading-xl text-fg text-balance\">{{headline}}</h1>\n      {{#if subheadline}}\n        <div class=\"body-lg text-fg-muted max-w-xl\">{{subheadline}}</div>\n      {{/if}}\n    </div>\n    {{#if content}}\n      <div class=\"max-w-2xl\">\n        {{{prose content}}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "bc0f2614-a216-4b5f-af51-6bd11c52c68d",
+          "type": "text",
+          "name": "Headline",
+          "value": "Terms of Service"
+        },
+        {
+          "id": "38139883-6476-41e2-a09e-3167e884f4cd",
+          "type": "select",
+          "name": "category",
+          "value": "Category",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Design",
+                "value": "design"
+              },
+              {
+                "key": "Engineering",
+                "value": "engineering"
+              },
+              {
+                "key": "Process",
+                "value": "process"
+              },
+              {
+                "key": "Career",
+                "value": "career"
+              }
+            ]
+          }
+        },
+        {
+          "id": "08ddc99f-a202-492c-95d6-9d8165baced2",
+          "type": "textarea",
+          "name": "Subheadline",
+          "value": "Last updated: January 2025"
+        },
+        {
+          "id": "c0287695-e2ce-4db5-bf26-0a7e30f393fc",
+          "type": "wysiwyg",
+          "name": "Content",
+          "value": "<h2>Agreement to Terms</h2><p>By accessing or using our services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p><h2>Use License</h2><p>Permission is granted to temporarily use our services for personal, non-commercial purposes only.</p><h2>Disclaimer</h2><p>Our services are provided \"as is\" without any warranties, expressed or implied.</p><h2>Contact</h2><p>For questions about these Terms, please contact us at legal@example.com.</p>"
+        },
+        {
+          "id": "d191b7ef-c882-424f-9506-05f36be8b1cf",
+          "type": "select",
+          "name": "align",
+          "value": "items-center",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": ""
+              },
+              {
+                "key": "Center",
+                "value": "items-center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "4a31e28f-0c74-493d-9cd6-68f5bde6b23d",
+          "type": "select",
+          "name": "Buttons",
+          "value": "ghost",
+          "config": {
+            "dataStoreId": "698be9a2db8e5c335edc75e1"
+          }
+        }
+      ],
+      "aiDescription": "Blog post detail template with headline, category selector, subheadline, rich text content, and alignment/button options. Used only on individual blog post detail pages, not homepages. Do not select this for homepage generation.",
+      "tags": [
+        "blog",
+        "detail",
+        "post"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.209Z",
+      "updatedAt": "2026-02-17T21:51:03.209Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c1c",
+      "name": "Blog Index",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\" data-posts=\"blog\" data-per-page=\"6\">           \n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10\n   flex flex-col gap-10\">                                                       \n                                                                                \n      <div class=\"flex max-w-2xl flex-col gap-6\">                             \n        <h2 class=\"heading-lg text-fg text-pretty\">{{headline}}</h2>          \n          <div class=\"body-md text-fg-muted text-pretty\">{{subheadline}}</div>\n      </div>                                                                  \n\n      <div class=\"flex justify-between gap-6\">\n        <!-- Search -->\n        <input class=\"border border-border bg-base rounded-md px-3 w-48 h-10\n  body-sm placeholder-white/40 text-fg-muted\" type=\"text\" data-posts-search=\"\" placeholder=\"Search posts...\">\n\n        <!-- Filtering -->\n        <div class=\"text-fg flex space-x-2\" data-posts-filter=\"category\">\n          <button data-filter-value=\"\" class=\"rounded-sm px-4 py-1.5 body-sm\n  text-fg-muted hover:text-fg hover:bg-base-muted active\">All</button>\n          {{#each (postFieldValues \"blog\" \"category\")}}\n            <button data-filter-value=\"{{this}}\" class=\"rounded-sm px-4 py-1.5\n  body-sm text-fg-muted hover:text-fg hover:bg-base-muted\">\n              {{this}}\n            </button>\n          {{/each}}\n        </div>\n\n        <!-- Sorting -->\n        <div class=\"relative\">\n          <select class=\"appearance-none border border-border bg-base rounded-md\n   text-sm text-fg-muted h-10 w-48 pl-3 pr-7\" data-posts-sort=\"\">\n            <option value=\"\">Default</option>\n            <option value=\"publishedDate:desc\">Newest</option>\n            <option value=\"publishedDate:asc\">Oldest</option>\n            <option value=\"headline:asc\">A-Z</option>\n            <option value=\"headline:desc\">Z-A</option>\n          </select>\n          <svg class=\"absolute top-3 right-2.5 pointer-events-none\" xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 24\n  24\"><path d=\"M6 9l6 6 6-6\" fill=\"none\" stroke=\"white\" stroke-width=\"2\"></path></svg>\n        </div>\n      </div>\n\n      <!-- Posts -->\n      <div data-posts-list=\"\" class=\"grid grid-cols-3 gap-6 my-4\">\n        {{#each (posts \"blog\")}}\n          <article data-post=\"\" class=\"rounded-lg bg-base-muted p-2\">\n            <div class=\"p-6 sm:p-10 lg:p-6\">\n              <span class=\"mt-2 body-sm text-fg-muted\" data-field=\"category\">{{category}}</span>\n              <h3 class=\"body-md font-medium text-fg\">\n                <a href=\"{{url}}\" data-field-href=\"url\" data-field=\"headline\">{{headline}}</a>\n              </h3>\n              <p class=\"mt-2 body-sm text-fg-muted\" data-field=\"subheadline\">{{subheadline}}</p>\n              <div class=\"mt-2 body-sm text-fg-muted\">\n                {{{truncate content 140}}}\n              </div>\n            </div>\n          </article>\n        {{/each}}\n      </div>\n\n      <div class=\"flex justify-between items-center\">\n        <!-- Pagination -->\n          <div>\n            <nav class=\"inline-flex h-10 body-sm text-fg bg-base border\n  border-border rounded-md\" data-posts-pagination=\"\">\n              <button data-page=\"prev\" class=\"w-10 border-r border-border\">\n                <i class=\"ph ph-arrow-left\" style=\"font-size: 16px;\"></i>\n              </button>\n              <span class=\"flex divider divide-x divide-border\" data-posts-page-numbers=\"\"></span>\n              <button data-page=\"next\" class=\"w-10 border-l border-border\">\n                <i class=\"ph ph-arrow-right\" style=\"font-size: 16px;\"></i>\n              </button>\n            </nav>\n          </div>\n          <div class=\"text-fg-muted\">\n            <span data-posts-range-start=\"\"></span>–<span data-posts-range-end=\"\"></span>\n            of <span data-posts-total=\"\"></span> posts\n          </div>\n      </div>\n    </div>\n  </section>",
+      "fields": [
+        {
+          "id": "6a82d04b-01c1-4b9f-adfd-d2422b520b35",
+          "type": "text",
+          "name": "Headline",
+          "value": "Blog"
+        },
+        {
+          "id": "8b29fe17-e505-4c5c-b4ea-42478d00a28f",
+          "type": "text",
+          "name": "Subheadline",
+          "value": "These are some really great blog posts"
+        }
+      ],
+      "aiDescription": "Simple blog index with headline and subheadline. Displays a list of blog posts. Used only on blog listing pages, not homepages. Do not select this for homepage generation.",
+      "tags": [
+        "blog",
+        "index",
+        "listing"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.210Z",
+      "updatedAt": "2026-02-17T21:51:03.210Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c1d",
+      "name": "Blog Index",
+      "description": "Post listing with filters",
+      "thumbnailType": "blog-index",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10\">\n    <div class=\"flex flex-col gap-2\">\n      <h1 class=\"heading-lg text-fg text-pretty\">{{headline}}</h1>\n      {{#if subheadline}}\n        <p class=\"body-md text-fg-muted text-balance\">{{subheadline}}</p>\n      {{/if}}\n    </div>\n\n    <div class=\"flex flex-col gap-8\">\n      <div class=\"text-fg flex space-x-2\" data-posts-filter=\"category\">\n        <button class=\"body-sm font-semibold px-3 py-1.5 rounded-full bg-brand text-on-brand\" data-filter-all>All</button>\n        {{#each (postFieldValues \"blog\" \"category\")}}\n          <button class=\"body-sm font-semibold px-3 py-1.5 rounded-full bg-base-muted text-fg-muted hover:text-fg transition\">{{this}}</button>\n        {{/each}}\n      </div>\n\n      <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\" data-posts=\"blog\" data-paginate=\"{{paginate}}\" data-per-page=\"{{posts_per_page}}\">\n        {{#each (posts \"blog\")}}\n          <a href=\"{{url}}\" class=\"group flex flex-col gap-4\" data-post>\n            {{#if photo}}\n              <div class=\"aspect-[3/2] overflow-hidden rounded-lg\">\n                <img src=\"{{photo}}\" alt=\"{{title}}\" class=\"w-full h-full object-cover group-hover:scale-105 transition duration-300\" />\n              </div>\n            {{/if}}\n            <div class=\"flex flex-col gap-1\">\n              <span class=\"body-sm text-fg-muted\" data-field=\"category\">{{category}}</span>\n              <h3 class=\"body-lg font-semibold text-fg group-hover:text-brand transition\">{{title}}</h3>\n              {{#if subheadline}}\n                <p class=\"body-sm text-fg-muted line-clamp-2\">{{subheadline}}</p>\n              {{/if}}\n            </div>\n          </a>\n        {{/each}}\n      </div>\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "e4da8a38-c3e1-4205-bace-0198a48361a6",
+          "type": "text",
+          "name": "headline",
+          "value": "Blog"
+        },
+        {
+          "id": "2868e833-ed08-4107-abe7-7a2fe193eda7",
+          "type": "text",
+          "name": "Subheadline",
+          "value": "Latest posts and thoughts"
+        },
+        {
+          "id": "ef3d1d49-7026-4868-b632-25d939ced841",
+          "type": "select",
+          "name": "Paginate",
+          "value": "true",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Yes",
+                "value": "true"
+              },
+              {
+                "key": "No",
+                "value": "false"
+              }
+            ]
+          }
+        },
+        {
+          "id": "86365095-b4b0-4a27-93b7-05d233fd5a07",
+          "type": "number",
+          "name": "Posts Per Page",
+          "value": 9
+        }
+      ],
+      "aiDescription": "Blog index with headline, subheadline, pagination toggle, and posts-per-page setting. Full-featured blog listing. Used only on blog listing pages, not homepages. Do not select this for homepage generation.",
+      "tags": [
+        "blog",
+        "index",
+        "listing",
+        "pagination"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.210Z",
+      "updatedAt": "2026-02-17T21:51:03.210Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c1e",
+      "name": "Nav Bar",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "header",
+      "template": "<header class=\"sticky top-0 z-10 bg-base\">\n  <nav>\n    <div class=\"mx-auto flex h-20 max-w-7xl items-center gap-4 px-6 lg:px-10\">\n      <div class=\"flex flex-1 items-center\">\n        <a href=\"{{default logo_link '/'}}\" class=\"inline-flex items-center gap-2\">\n          {{#if logo}}\n            <img src=\"{{logo}}\" alt=\"{{logo_text}}\" class=\"h-8 w-auto\">\n          {{else}}\n            <span class=\"text-lg font-semibold text-fg\">{{default logo_text \"Company\"}}</span>\n          {{/if}}\n        </a>\n      </div>\n      {{#if (length links)}}\n        <div class=\"hidden lg:flex gap-8\">\n          {{#each links}}\n            <a href=\"{{url}}\" class=\"body-sm font-medium text-fg hover:text-fg-muted transition\">\n              {{label}}\n            </a>\n          {{/each}}\n        </div>\n      {{/if}}\n      <div class=\"flex flex-1 items-center justify-end gap-4\">\n        {{#if button-label}}\n          <a href=\"{{default button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition\">\n            {{button-label}}\n          </a>\n        {{/if}}\n        <button type=\"button\" aria-label=\"Toggle menu\" class=\"inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden\">\n          {{icon \"list\" size=\"24\"}}\n        </button>\n      </div>\n    </div>\n  </nav>\n</header>\n",
+      "fields": [
+        {
+          "id": "62a02758-104c-43b3-9f4c-68fc16f0f046",
+          "type": "image",
+          "name": "Logo",
+          "value": "",
+          "config": {
+            "maxWidth": 200,
+            "maxHeight": 60
+          }
+        },
+        {
+          "id": "864d474d-a3fe-45cd-9729-9b6bf581bd43",
+          "type": "text",
+          "name": "Logo Text",
+          "value": ""
+        },
+        {
+          "id": "423e7a4d-89e4-4c62-ae4f-e0514522dfd2",
+          "type": "text",
+          "name": "Logo Link",
+          "value": ""
+        },
+        {
+          "id": "0b7b6a70-b91c-4527-b661-f268176de988",
+          "type": "items",
+          "name": "Links",
+          "value": [],
+          "config": {
+            "fields": [
+              {
+                "id": "351cf0af-025a-419b-9735-04d8e5486e1f",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "680e69be-13b3-432b-9113-c3e2975c5c9d",
+                "type": "text",
+                "name": "Url",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "62404a56-2a61-4604-a96a-7a72c553532c",
+          "type": "text",
+          "name": "Button Label",
+          "value": ""
+        },
+        {
+          "id": "3ec247d0-d633-4613-9c28-6196ac50a4f0",
+          "type": "text",
+          "name": "Button Link",
+          "value": ""
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.210Z",
+      "updatedAt": "2026-02-17T21:51:03.210Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c1f",
+      "name": "LTA",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "category": "section",
+      "template": "<section class=\"relative overflow-hidden\">\n  <div class=\"absolute inset-0 -z-10\">\n    <img src=\"{{image}}\" alt=\"Scenic landscape\" class=\"bg-base  w-full h-full object-cover\">\n    <div class=\"absolute inset-0 bg-base/50\"></div>\n  </div>\n  <div class=\"max-w-7xl mx-auto px-6 lg:px-10 py-24\">\n    <div class=\"inline-flex items-center gap-2 bg-brand/90 px-4 py-1 rounded-full shadow-md\">\n      {{icon \"leaf\" size=\"18\" class=\"text-on-brand\"}}\n      <span class=\"body-sm text-on-brand uppercase tracking-wide\">{{subheadline}}</span>\n    </div>\n    <h1 class=\"heading-lg text-fg mt-6 max-w-3xl\">{{headline}}</h1>\n    <p class=\"body-lg text-fg mt-6 max-w-2xl\">{{text}}</p>\n    <div class=\"mt-10\">\n      {{> Button label=button_label }}\n    </div>\n    <div class=\"mt-16 grid gap-6 lg:grid-cols-3\">\n      {{#each highlights}}\n        <article class=\"bg-panel rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row\">\n          <div class=\"lg:w-32 h-28 lg:h-auto bg-base-muted\">\n            <img src=\"{{image}}\" alt=\"{{title}}\" class=\"w-full h-full object-cover\">\n          </div>\n          <div class=\"p-5 flex-1\">\n            <div class=\"flex items-center gap-2 body-sm text-brand uppercase tracking-wide\">\n              {{icon icon size=\"18\" class=\"text-brand\"}}\n              <span>{{label}}</span>\n            </div>\n            <h3 class=\"heading-xs text-fg mt-3\">{{title}}</h3>\n            <p class=\"body-sm text-fg-muted mt-2\">{{description}}</p>\n          </div>\n        </article>\n      {{/each}}\n    </div>\n  </div>\n</section>",
+      "fields": [
+        {
+          "id": "eb5c0514-9ec5-4c6b-af66-5368a691e028",
+          "type": "text",
+          "name": "Headline",
+          "value": "Save land. Strengthen communities. Create a healthier planet."
+        },
+        {
+          "id": "94e97790-a72d-4e55-ae77-79c20d031ecb",
+          "type": "text",
+          "name": "Subheadline",
+          "value": "Our Mission"
+        },
+        {
+          "id": "9fdcbfb1-1b42-4e2f-b1c2-0eaf26d2a5ea",
+          "type": "textarea",
+          "name": "Text",
+          "value": "Together with our partners, we protect the places that sustain wildlife, provide clean air and water, and nurture healthy communities for generations to come."
+        },
+        {
+          "id": "c0e5de6a-9b70-41e7-8040-876025e003dd",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Discover the work"
+        },
+        {
+          "id": "33beacc7-94cf-446c-8971-37b7f29592ac",
+          "type": "image",
+          "name": "Image",
+          "value": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+        },
+        {
+          "id": "c834afdd-5578-4dc1-8ef0-e697853ec9b5",
+          "type": "items",
+          "name": "Highlights",
+          "value": "[{\"id\":\"1\",\"label\":\"Earning Ground\",\"title\":\"Keep gaining ground\",\"description\":\"Collaborate with local leaders to preserve lands rich with biodiversity.\",\"image\":\"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400&q=80\",\"icon\":\"handshake\"},{\"id\":\"2\",\"label\":\"Conservation Priorities\",\"title\":\"Tackle urgent challenges\",\"description\":\"Direct resources to habitats most vulnerable to climate threats.\",\"image\":\"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=400&q=80\",\"icon\":\"target\"},{\"id\":\"3\",\"label\":\"Land Conservation\",\"title\":\"Protect what matters\",\"description\":\"Safeguard working lands that provide food, jobs, and natural resilience.\",\"image\":\"https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80\",\"icon\":\"shield-check\"}]",
+          "config": {
+            "fields": [
+              {
+                "id": "highlights-image",
+                "type": "image",
+                "name": "Image",
+                "value": ""
+              },
+              {
+                "id": "highlights-title",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "highlights-label",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "highlights-description",
+                "type": "textarea",
+                "name": "Description",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "aiDescription": "Long-form text section with headline, body text, image, and repeatable highlight items. Has image field. Best for detailed about-us storytelling or product deep-dives. Choose this over Content when you need an image alongside the text and a highlights list.",
+      "tags": [
+        "content",
+        "about",
+        "storytelling"
+      ],
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.210Z",
+      "updatedAt": "2026-02-17T21:51:03.210Z"
+    }
+  ],
+  "partials": [
+    {
+      "_id": "6994e2c7072d25dd9abb7c20",
+      "name": "Button",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "template": "{{#switch style}}\n  {{#case \"primary\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-primary\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#case \"secondary\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-secondary\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#case \"outline\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-outline\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#case \"ghost\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-ghost\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#otherwise}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-primary\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/otherwise}}\n{{/switch}}\n",
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.210Z",
+      "updatedAt": "2026-02-17T21:51:03.210Z"
+    },
+    {
+      "_id": "6994e2c7072d25dd9abb7c21",
+      "name": "Field",
+      "site_id": "6994e2c7072d25dd9abb7c00",
+      "template": "{{#switch type}}\n  {{#case \"email\"}}\n  <div>\n    <label for=\"{{name}}\" class=\"block body-md text-fg-muted\">{{default label \"Email\"}}</label>\n    <div class=\"mt-2.5\">\n      <input id=\"{{name}}\" type=\"email\" name=\"{{name}}\" autocomplete=\"email\" class=\"block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500\">\n    </div>\n  </div>\n  {{/case}}\n  {{#case \"textarea\"}}\n  <div>\n    <label for=\"{{name}}\" class=\"block body-md text-fg-muted\">{{default label \"Message\"}}</label>\n    <div class=\"mt-2.5\">\n      <textarea id=\"{{name}}\" name=\"{{name}}\" rows=\"4\" class=\"block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500\"></textarea>\n    </div>\n  </div>\n  {{/case}}\n  {{#otherwise}}\n  <div>\n    <label for=\"{{name}}\" class=\"block body-md text-fg-muted\">{{default label \"Text\"}}</label>\n    <div class=\"mt-2.5\">\n      <input id=\"{{name}}\" type=\"{{name}}\" name=\"{{name}}\" autocomplete=\"text\" class=\"block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500\">\n    </div>\n  </div>\n  {{/otherwise}}\n{{/switch}}\n\n\n\n\n",
+      "__v": 0,
+      "createdAt": "2026-02-17T21:51:03.210Z",
+      "updatedAt": "2026-02-17T21:51:03.210Z"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{{#switch type}}
+  {{#case "wavy-top"}}
+    <div class="absolute left-0 w-full -top-2 h-2 z-10" aria-hidden="true">
+      <svg width="1440" height="8" viewBox="0 0 1440 8" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 w-full text-base">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1440 8H0V0C0 0 145.5 7 250 7C290.373 7 345.374 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z" fill="currentColor"/>
+      </svg>
+    </div>
+  {{/case}}
+  {{#case "wavy-bottom"}}
+    <div class="absolute left-0 w-full -bottom-2 h-2" aria-hidden="true">
+      <svg width="1440" height="8" viewBox="0 0 1440 8" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 w-full text-base">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1440 8V0H0V0C0.0955 0.0046 145.534 7 250 7C290.373 7 345.373 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z" fill="currentColor"/>
+      </svg>
+    </div>
+  {{/case}}
+  {{#otherwise}}
+  {{/otherwise}}
+{{/switch}}

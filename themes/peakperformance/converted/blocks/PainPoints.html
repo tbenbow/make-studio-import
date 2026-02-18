@@ -1,0 +1,30 @@
+<section class="py-24 sm:py-32 lg:py-40 bg-base">
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-20">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-20 mb-20 lg:mb-28">
+      <div>
+        {{#if eyebrow}}
+          <p class="body-sm font-bold uppercase tracking-[0.2em] text-brand mb-6">{{eyebrow}}</p>
+        {{/if}}
+        <h2 class="heading-lg text-fg">{{{headline}}}</h2>
+      </div>
+      {{#if subheadline}}
+        <div class="flex items-end">
+          <div class="body-lg text-fg-muted leading-relaxed max-w-lg">
+            {{{subheadline}}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+    {{#if (length points)}}
+      <div class="grid md:grid-cols-3 gap-0 border-t border-fg/10">
+        {{#each points}}
+          <div class="py-10 md:py-14 md:px-8 first:md:pl-0 last:md:pr-0 border-b md:border-b-0 md:border-r border-fg/10 last:border-r-0 last:border-b-0">
+            <span class="heading-lg text-panel mb-6 block leading-none">{{number}}</span>
+            <h3 class="heading-sm text-fg mb-4 leading-tight">{{title}}</h3>
+            <p class="body-md text-fg-alt leading-relaxed">{{description}}</p>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

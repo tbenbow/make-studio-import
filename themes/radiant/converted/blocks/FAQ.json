@@ -1,0 +1,33 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Frequently asked questions",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Frequently asked questions"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Your questions answered."
+    },
+    {
+      "type": "items",
+      "name": "Questions",
+      "default": [
+        { "question": "What measures are in place to ensure the security of our data?", "answer": "Data security is a top priority for us. We employ robust security measures, including data encryption, secure data centers, and regular security audits." },
+        { "question": "Is there a mobile app available for your platform?", "answer": "Yes, we offer a mobile app that provides all the key functionalities of our desktop platform, allowing sales reps to manage deals on the go." },
+        { "question": "Can I customize the workflow to match our company's deal process?", "answer": "Yes, our platform is highly customizable. We pre-configure the platform to match your existing workflows." },
+        { "question": "What kind of support do you offer?", "answer": "We offer comprehensive support through multiple channels, including 24/7 live chat, email, and phone support." }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Question" },
+          { "type": "textarea", "name": "Answer" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Blog post listing",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Post Type",
+      "default": "post"
+    }
+  ]
+}

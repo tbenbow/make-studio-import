@@ -1,0 +1,17 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    {
+      "type": "select",
+      "name": "Type",
+      "default": "wavy-top",
+      "config": {
+        "selectOptions": [
+          { "key": "Wavy Top", "value": "wavy-top" },
+          { "key": "Wavy Bottom", "value": "wavy-bottom" }
+        ]
+      }
+    }
+  ]
+}

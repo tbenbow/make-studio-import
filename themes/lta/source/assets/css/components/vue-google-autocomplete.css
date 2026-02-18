@@ -1,0 +1,33 @@
+.pac {
+  &-container {
+    @apply bg-background border-t-0 rounded shadow-darker;
+  }
+
+  &-item {
+    @apply text-body-3 text-2xs border-line first:border-t-0;
+
+    &-query {
+      @apply pr-1 text-body text-xs;
+    }
+
+    &:hover {
+      @apply bg-line border-transparent;
+    }
+
+    &-selected {
+      @apply bg-green/12 border-transparent;
+    }
+  }
+
+  &-icon {
+    @apply mr-2;
+  }
+
+  &-matched {
+    @apply font-bold;
+  }
+
+  &-logo:after {
+    @apply m-1;
+  }
+}

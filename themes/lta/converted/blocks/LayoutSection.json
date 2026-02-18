@@ -1,0 +1,51 @@
+{
+  "description": "Section with background",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<h2>Section Title</h2><p>Add your content here. This section supports rich text formatting.</p>"
+    },
+    {
+      "type": "select",
+      "name": "Background",
+      "default": "white",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "White",
+            "value": "white"
+          },
+          {
+            "key": "Dark (Green)",
+            "value": "dark"
+          },
+          {
+            "key": "Stone",
+            "value": "stone"
+          },
+          {
+            "key": "Gray",
+            "value": "gray"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Top Edge",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "None",
+            "value": ""
+          },
+          {
+            "key": "Wavy Top",
+            "value": "wavy-top"
+          }
+        ]
+      }
+    }
+  ]
+}

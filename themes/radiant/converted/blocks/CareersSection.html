@@ -1,0 +1,66 @@
+<section class="bg-base px-6 lg:px-8 my-32">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    {{#if eyebrow}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{eyebrow}}</p>
+    {{/if}}
+    <h2 class="heading-xl text-fg mt-2">{{headline}}</h2>
+    {{#if description}}
+    <p class="mt-6 max-w-3xl text-2xl font-medium text-fg-alt">{{description}}</p>
+    {{/if}}
+    <div class="mt-24 grid grid-cols-1 gap-16 lg:grid-cols-[1fr_24rem]">
+      <div class="lg:max-w-2xl">
+        <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">Open positions</p>
+        <table class="w-full text-left">
+          <thead class="sr-only">
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Location</th>
+              <th scope="col">Read more</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each job-groups}}
+            <tr>
+              <th scope="colgroup" colspan="3" class="px-0 pt-10 pb-0">
+                <div class="-mx-4 rounded-lg bg-base-muted px-4 py-3 body-sm font-semibold text-fg">
+                  {{department}}
+                </div>
+              </th>
+            </tr>
+            {{#each jobs}}
+            <tr class="border-b border-dotted border-border body-sm font-normal">
+              <td class="px-0 py-4 text-fg">{{title}}</td>
+              <td class="px-0 py-4 text-fg-muted">{{location}}</td>
+              <td class="px-0 py-4 text-right">
+                {{> Button label="View listing" url=url style="outline"}}
+              </td>
+            </tr>
+            {{/each}}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      {{#if testimonial-image}}
+      <div class="relative flex aspect-square flex-col justify-end overflow-hidden rounded-3xl sm:aspect-[5/4] lg:aspect-[3/4]">
+        <img alt="" src="{{testimonial-image}}" class="absolute inset-0 object-cover w-full h-full" />
+        <div aria-hidden="true" class="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-10% to-75% ring-1 ring-black/10 ring-inset lg:from-25%"></div>
+        <figure class="relative p-10">
+          <blockquote>
+            <p class="relative text-xl/7 text-white before:absolute before:-translate-x-full before:content-['"'] after:absolute after:content-['"']">
+              {{testimonial-quote}}
+            </p>
+          </blockquote>
+          <figcaption class="mt-6 border-t border-white/20 pt-6">
+            <p class="body-sm font-medium text-white">{{testimonial-name}}</p>
+            <p class="body-sm font-medium">
+              <span class="bg-gradient-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
+                {{testimonial-title}}
+              </span>
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<section class="bg-base overflow-hidden px-6 lg:px-8 pb-24">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    <h2 class="heading-xl text-fg max-w-3xl">{{headline}}</h2>
+    {{#if image}}
+    <div class="mt-16 relative aspect-[1216/768]" style="--radius: 0.75rem;">
+      <div class="absolute -inset-2 rounded-[calc(var(--radius)+0.5rem)] shadow-sm ring-1 ring-black/5"></div>
+      <img alt="{{default image-alt ""}}" src="{{image}}" class="h-full rounded-[var(--radius)] shadow-2xl ring-1 ring-black/10" />
+    </div>
+    {{/if}}
+  </div>
+</section>

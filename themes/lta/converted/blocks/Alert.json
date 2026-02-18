@@ -1,0 +1,30 @@
+{
+  "description": "Alert banner with CTA",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Icon",
+      "default": "megaphone"
+    },
+    {
+      "type": "text",
+      "name": "Type Label",
+      "default": "Alert"
+    },
+    {
+      "type": "text",
+      "name": "Body",
+      "default": "Important announcement goes here."
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "text",
+      "name": "Button URL",
+      "default": "#"
+    }
+  ]
+}

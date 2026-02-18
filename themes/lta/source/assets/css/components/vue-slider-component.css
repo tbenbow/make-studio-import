@@ -1,0 +1,114 @@
+.vue-slider {
+  .vue-slider {
+    &-rail {
+      @apply bg-black-200 rounded-full;
+    }
+
+    &-process {
+      @apply bg-accent rounded-full;
+    }
+
+    &-dot {
+      @apply bg-white border-2 border-accent rounded-full;
+
+      &-focus {
+        @apply bg-accent;
+      }
+
+      &-handle {
+        @apply bg-transparent shadow-none;
+      }
+
+      &-tooltip {
+        &-inner {
+          @apply min-w-[1.25rem] px-2 py-[0.125rem] text-white text-xs font-bold text-center bg-accent rounded whitespace-nowrap;
+
+          &:after {
+            @apply absolute h-0 w-0 border-[0.25rem] border-solid border-transparent content-[''];
+          }
+
+          &-top:after,
+          &-bottom:after {
+            @apply left-1/2 -translate-x-1/2;
+          }
+
+          &-top:after {
+            @apply top-full -mt-px border-t-accent;
+          }
+
+          &-bottom:after {
+            @apply bottom-full -mb-px border-b-accent;
+          }
+
+          &-left:after,
+          &-right:after {
+            @apply top-1/2 -translate-y-1/2;
+          }
+
+          &-left:after {
+            @apply left-full -ml-px border-l-accent;
+          }
+
+          &-right:after {
+            @apply right-full -mr-px border-r-accent;
+          }
+        }
+      }
+    }
+
+    &-value {
+      @apply flex pt-6 text-sm;
+
+      &-start {
+        @apply flex-1;
+      }
+
+      & ~ .vue-slider-value {
+        @apply hidden;
+      }
+    }
+
+    &-marks {
+      @apply z-0;
+    }
+
+    &-mark {
+      @apply bg-line-2 rounded-full;
+
+      &-label {
+        @apply pt-1 text-sm text-body-2 text-center whitespace-nowrap;
+      }
+
+      &:first-child,
+      &:last-child {
+        @apply bg-transparent;
+      }
+    }
+
+    &-disabled {
+      @apply cursor-not-allowed;
+
+      .vue-slider-process {
+        @apply bg-transparent;
+      }
+
+      .vue-slider-dot {
+        @apply border-black-200;
+
+        &-focus {
+          @apply bg-white;
+        }
+      }
+    }
+  }
+
+  &.invalid {
+    .vue-slider-dot {
+      @apply border-extra-1;
+
+      &:focus {
+        @apply bg-extra-1;
+      }
+    }
+  }
+}

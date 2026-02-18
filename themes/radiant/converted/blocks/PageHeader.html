@@ -1,0 +1,11 @@
+<section class="bg-base px-6 lg:px-8 mt-16">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    {{#if eyebrow}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{eyebrow}}</p>
+    {{/if}}
+    <h1 class="heading-xl text-fg {{#if eyebrow}}mt-2{{/if}}">{{headline}}</h1>
+    {{#if description}}
+    <p class="mt-6 max-w-3xl text-2xl font-medium text-fg-alt">{{description}}</p>
+    {{/if}}
+  </div>
+</section>

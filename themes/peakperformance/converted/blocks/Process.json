@@ -1,0 +1,55 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Numbered steps",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "The process"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>FOUR PHASES.<br><span class=\"text-brand\">ZERO GUESSWORK.</span></p>"
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "default": [
+        {
+          "number": "01",
+          "title": "DISCOVERY",
+          "subtitle": "30-min free call",
+          "description": "Deep-dive conversation about your goals, history, current level, and the events you're targeting. No cookie-cutter approaches."
+        },
+        {
+          "number": "02",
+          "title": "ASSESSMENT",
+          "subtitle": "Full performance analysis",
+          "description": "Comprehensive physical and mental performance testing. We identify your strengths, weaknesses, and biggest growth opportunities."
+        },
+        {
+          "number": "03",
+          "title": "PROGRAM",
+          "subtitle": "Custom-built for you",
+          "description": "Your coach builds a periodized plan tailored to your competition schedule, with built-in progression markers."
+        },
+        {
+          "number": "04",
+          "title": "DOMINATE",
+          "subtitle": "Continuous optimization",
+          "description": "Execute with ongoing coach feedback, weekly check-ins, and real-time adjustments. We refine as you evolve."
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Number" },
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Subtitle" },
+          { "type": "textarea", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

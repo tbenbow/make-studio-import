@@ -1,0 +1,53 @@
+<section class="bg-base overflow-hidden py-32">
+  <div class="px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-7xl">
+      {{#if eyebrow}}
+      <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-xl text-fg mt-2">{{headline}}</h2>
+    </div>
+  </div>
+  <div class="mt-16 flex gap-8 px-6 lg:px-8 overflow-x-auto snap-x snap-mandatory" style="scrollbar-width: none;">
+    {{#each testimonials}}
+    <div class="relative flex aspect-[9/16] w-72 shrink-0 snap-start flex-col justify-end overflow-hidden rounded-3xl sm:aspect-3/4 sm:w-96">
+      {{#if image}}
+      <img alt="" src="{{image}}" class="absolute inset-x-0 top-0 aspect-square w-full object-cover" />
+      {{/if}}
+      <div aria-hidden="true" class="absolute inset-0 rounded-3xl bg-gradient-to-t from-black from-[calc(7/16*100%)] ring-1 ring-black/10 ring-inset sm:from-25%"></div>
+      <figure class="relative p-10">
+        <blockquote>
+          <p class="relative text-xl/7 text-white">
+            <span aria-hidden="true" class="absolute -translate-x-full">&ldquo;</span>
+            {{quote}}
+            <span aria-hidden="true" class="absolute">&rdquo;</span>
+          </p>
+        </blockquote>
+        <figcaption class="mt-6 border-t border-white/20 pt-6">
+          <p class="body-sm font-medium text-white">{{name}}</p>
+          <p class="body-sm font-medium">
+            <span class="bg-gradient-to-r from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
+              {{title}}
+            </span>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+    {{/each}}
+    <div class="w-[42rem] shrink-0 sm:w-[54rem]"></div>
+  </div>
+  <div class="mt-16 px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:max-w-7xl">
+      {{#if cta-text}}
+      <p class="max-w-sm body-sm text-fg-muted">{{cta-text}}</p>
+      {{/if}}
+      {{#if cta-label}}
+      <div class="mt-2">
+        <a href="{{default cta-url "#"}}" class="inline-flex items-center gap-2 body-sm font-medium text-brand">
+          {{cta-label}}
+          {{icon "arrow-right" size="20"}}
+        </a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

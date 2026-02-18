@@ -1,0 +1,70 @@
+{
+  "description": "Hero with background image",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Saving the Places People Love"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body"
+    },
+    {
+      "type": "image",
+      "name": "BG Image",
+      "config": {
+        "maxWidth": 3000,
+        "maxHeight": 2000,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "select",
+      "name": "Size",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Default",
+            "value": ""
+          },
+          {
+            "key": "Large",
+            "value": "lg"
+          },
+          {
+            "key": "Small",
+            "value": "sm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button 1 Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "text",
+      "name": "Button 1 URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Button 2 Label"
+    },
+    {
+      "type": "text",
+      "name": "Button 2 URL"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{{#switch style}}
+  {{#case "outline"}}
+    <a href="{{default url "#"}}" class="inline-flex items-center justify-center gap-4 min-h-[2.5rem] px-4 py-2 rounded-md border-2 text-xs font-bold uppercase tracking-wide transition-colors {{#switch color}}{{#case "yellow"}}border-yellow text-yellow hover:bg-yellow hover:text-base-alt{{/case}}{{#case "orange"}}border-orange text-orange hover:bg-orange hover:text-white{{/case}}{{#case "blue"}}border-blue text-blue hover:bg-blue hover:text-white{{/case}}{{#case "light"}}border-white/60 text-white hover:bg-white/10{{/case}}{{#otherwise}}border-brand text-fg hover:bg-brand hover:text-on-brand{{/otherwise}}{{/switch}}">
+      {{icon "arrow-right" size="18"}}
+      <span>{{default label "Click Here"}}</span>
+    </a>
+  {{/case}}
+  {{#case "solid"}}
+    <a href="{{default url "#"}}" class="inline-flex items-center justify-center gap-4 min-h-[2.5rem] px-4 py-2 rounded-md text-xs font-bold uppercase tracking-wide transition-colors {{#switch color}}{{#case "yellow"}}bg-yellow text-base-alt hover:opacity-90{{/case}}{{#case "orange"}}bg-orange text-white hover:opacity-90{{/case}}{{#case "blue"}}bg-blue text-white hover:opacity-90{{/case}}{{#otherwise}}bg-brand text-on-brand hover:opacity-90{{/otherwise}}{{/switch}}">
+      {{#if icon}}{{icon icon size="18"}}{{/if}}
+      <span>{{default label "Click Here"}}</span>
+    </a>
+  {{/case}}
+  {{#case "link"}}
+    <a href="{{default url "#"}}" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide transition-colors {{#switch color}}{{#case "yellow"}}text-yellow hover:text-yellow/80{{/case}}{{#case "orange"}}text-orange hover:text-orange/80{{/case}}{{#case "blue"}}text-blue hover:text-blue/80{{/case}}{{#otherwise}}text-fg hover:text-brand{{/otherwise}}{{/switch}}">
+      <span>{{default label "Click Here"}}</span>
+      {{icon "caret-right" size="18"}}
+    </a>
+  {{/case}}
+  {{#otherwise}}
+    <a href="{{default url "#"}}" class="inline-flex items-center justify-center gap-4 min-h-[2.5rem] px-4 py-2 rounded-md bg-brand text-on-brand text-xs font-bold uppercase tracking-wide transition-colors hover:opacity-90">
+      {{#if icon}}{{icon icon size="18"}}{{/if}}
+      <span>{{default label "Click Here"}}</span>
+    </a>
+  {{/otherwise}}
+{{/switch}}

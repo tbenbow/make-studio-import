@@ -1,0 +1,10 @@
+{
+  "description": "Video",
+  "fields": [
+    {
+      "type": "text",
+      "name": "YouTube ID",
+      "default": "agi5KtqexWA"
+    }
+  ]
+}

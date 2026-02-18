@@ -1,0 +1,285 @@
+@media print {
+  @page {
+    margin: 1.5cm auto;
+  }
+
+  /* reduce global font size */
+  body {
+    @apply text-2xs;
+  }
+
+  /* remove max-width from container (useful for landscape orientation) */
+  .container {
+    @apply max-w-none !important;
+  }
+
+  /* hide things */
+  header.site-header,
+  footer.site-footer,
+  .banner .background,
+  header img,
+  .explore-the-land,
+  ul.socials,
+  .tabs-nav,
+  .expandable .fa-plus,
+  .breadcrumbs,
+  .edge,
+  video,
+  input,
+  input ~ button,
+  select,
+  .item.item-image .figure:after,
+  .aside-item .content:after,
+  .sidebar .aside:before,
+  .link-bar,
+  .job .next,
+  .resource-details aside.sidebar {
+    @apply hidden !important;
+  }
+
+  /* remove top padding since header is gone */
+  .site-main {
+    @apply py-0 !important;
+  }
+
+  /* make sure images don't overflow */
+  img,
+  table {
+    @apply max-w-full overflow-hidden !important;
+  }
+
+  /* breaks */
+  img,
+  button,
+  address,
+  .callout,
+  .item,
+  .item .main,
+  .tabs-tab,
+  .expandable,
+  .logo-grid,
+  .hooper,
+  .sidebar .aside {
+    break-inside: avoid-page !important;
+  }
+
+  /* black text for readability */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  a,
+  button,
+  .item.item-image .label,
+  .item.item-image .subtitle,
+  .list-item .label {
+    @apply text-black !important;
+    orphans: 1;
+  }
+
+  /* buttons */
+  a.button {
+    @apply block !important;
+    &.variation-solid {
+      @apply border-2 bg-transparent !important;
+    }
+    &.variation-link {
+      @apply flex items-center justify-start !important;
+    }
+    &::after {
+      @apply order-3 text-xs;
+      content: " (" attr(href) ") ";
+      overflow-wrap: anywhere;
+    }
+  }
+
+  /* tables */
+  .table {
+    @apply shadow-none !important;
+
+    .tr {
+      grid-auto-flow: initial !important;
+      grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)) !important;
+      page-break-inside: avoid !important;
+    }
+
+    .tr.highlight .td {
+      @apply bg-black-200 !important;
+    }
+  }
+
+  /* blocks */
+  .blocks > * {
+    @apply mt-12 !important;
+  }
+
+  /* banner, layout section and callout */
+  main .banner,
+  .layout-section,
+  .callout,
+  .callout:before,
+  .sidebar .aside {
+    @apply bg-transparent mt-0 shadow-none !important;
+    background-image: none !important;
+  }
+  .banner.is-root-first-child {
+    @apply mt-0 !important;
+  }
+  .banner {
+    .items {
+      @apply static grid grid-cols-3 mb-12 !important;
+    }
+    .main,
+    &.banner.is-root-first-child .main {
+      @apply p-0 min-h-0 !important;
+    }
+  }
+  .callout .content {
+    @apply max-w-lg mx-auto;
+  }
+  .layout-section {
+    @apply py-6 !important;
+  }
+
+  /* tabs and expandables */
+  .tabs .tabs-tab,
+  .expandable .content {
+    @apply block !important;
+  }
+  .tabs {
+    .headline {
+      break-after: avoid-page;
+      break-before: auto;
+      + * {
+        break-before: avoid;
+      }
+    }
+  }
+
+  /* items */
+  .item {
+    &.orientation-horizontal {
+      @apply flex items-center !important;
+      .figure {
+        @apply mr-6 !important;
+      }
+    }
+
+    &.item-image {
+      @apply rounded shadow !important;
+
+      .figure {
+        @apply relative mb-[2px] !important;
+      }
+      .main {
+        @apply w-full bg-white flex-none absolute bottom-0 rounded-b-lg !important;
+      }
+    }
+    &.has-icon {
+      .icon-blob .background svg {
+        @apply absolute top-0 !important;
+      }
+    }
+  }
+
+  aside.sidebar .item {
+    @apply max-w-sm !important;
+  }
+
+  /* feature */
+  .feature {
+    > .main {
+      @apply grid gap-12 !important;
+      grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      > .aside {
+        grid-column: span 4 / span 4 !important;
+        .asset img {
+          @apply rounded-lg !important;
+        }
+      }
+      > .content {
+        grid-column: span 8 / span 8 !important;
+      }
+    }
+  }
+
+  /* logo grid */
+  .logo-grid {
+    .logos li {
+      @apply w-1/3 p-5 !important;
+    }
+    img {
+      @apply w-full !important;
+    }
+  }
+
+  /* grids  */
+  .layout-grid,
+  .item-list[class*="grid"] {
+    .columns {
+      @apply grid gap-12 grid-cols-2 !important;
+      .button {
+        @apply flex-wrap text-left !important;
+        &:after {
+          @apply w-full !important;
+        }
+      }
+    }
+    &.num-columns-3 .columns,
+    &.grid-columns-6,
+    &.grid-columns-3 {
+      @apply grid grid-cols-3 !important;
+    }
+  }
+
+  /* next */
+  .next .items {
+    @apply flex flex-row flex-nowrap !important;
+  }
+
+  /* popover */
+  .popover {
+    @apply block static w-auto shadow-none border-0 !important;
+    .close {
+      @apply hidden !important;
+    }
+  }
+
+  /* embedded video */
+  .vembed {
+    @apply relative p-24 my-10 max-w-lg mx-auto !important;
+    a.url {
+      @apply absolute block text-center h-auto top-auto bottom-[5px] left-[5px] right-[5px] w-11/12 bg-white z-10 !important;
+    }
+  }
+
+  /* posts */
+  .post {
+    .main {
+      > .aside,
+      > .content {
+        @apply w-full;
+      }
+
+      .asset.image,
+      .author {
+        @apply max-w-md;
+      }
+    }
+  }
+
+  /* Gaining Ground */
+  .gaining-ground {
+    .acres-protected {
+      @apply min-h-0 py-6 relative !important;
+    }
+    .doughnut-chart canvas {
+      @apply h-full !important;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<section class="bg-base-muted">
+  <div class="relative mx-auto max-w-7xl">
+    <div class="absolute -top-44 -right-60 h-60 w-[36rem] transform-gpu md:right-0 bg-gradient-to-br from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff] rotate-[-10deg] rounded-full blur-3xl"></div>
+  </div>
+  <div class="isolate flex min-h-dvh items-center justify-center p-6 lg:p-8">
+    <div class="w-full max-w-md rounded-xl bg-base shadow-md ring-1 ring-border">
+      <form action="{{default form-action "#"}}" method="POST" class="p-7 sm:p-11">
+        {{#if logo}}
+        <div class="flex items-start">
+          <a href="/" title="Home">
+            <img src="{{logo}}" alt="Home" class="h-9" />
+          </a>
+        </div>
+        {{/if}}
+        <h1 class="mt-8 body-md font-medium text-fg">{{default title "Welcome back!"}}</h1>
+        <p class="mt-1 body-sm text-fg-muted">{{default subtitle "Sign in to your account to continue."}}</p>
+        <div class="mt-8 space-y-3">
+          <label class="body-sm font-medium text-fg">Email</label>
+          <input required autofocus type="email" name="email" class="block w-full rounded-lg border border-transparent shadow-sm ring-1 ring-border px-2 py-1.5 body-md sm:body-sm focus:outline-2 focus:-outline-offset-1 focus:outline-brand" />
+        </div>
+        <div class="mt-8 space-y-3">
+          <label class="body-sm font-medium text-fg">Password</label>
+          <input required type="password" name="password" class="block w-full rounded-lg border border-transparent shadow-sm ring-1 ring-border px-2 py-1.5 body-md sm:body-sm focus:outline-2 focus:-outline-offset-1 focus:outline-brand" />
+        </div>
+        <div class="mt-8 flex items-center justify-between body-sm">
+          <label class="flex items-center gap-3">
+            <input type="checkbox" name="remember-me" class="size-4 rounded-sm border border-transparent shadow-sm ring-1 ring-border accent-brand" />
+            Remember me
+          </label>
+          {{#if forgot-password-url}}
+          <a href="{{forgot-password-url}}" class="font-medium text-fg hover:text-fg-muted">Forgot password?</a>
+          {{/if}}
+        </div>
+        <div class="mt-8">
+          {{> Button label=(default submit-label "Sign in") style="primary"}}
+        </div>
+      </form>
+      {{#if signup-url}}
+      <div class="m-1.5 rounded-lg bg-base-muted py-4 text-center body-sm ring-1 ring-border/50">
+        Not a member?
+        <a href="{{signup-url}}" class="font-medium text-fg hover:text-fg-muted">Create an account</a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

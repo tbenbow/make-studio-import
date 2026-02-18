@@ -1,0 +1,98 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "CTA + sitemap + social footer",
+  "fields": [
+    {
+      "type": "text",
+      "name": "CTA Eyebrow",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "CTA Headline",
+      "default": "Ready to dive in?<br />Start your free trial today."
+    },
+    {
+      "type": "text",
+      "name": "CTA Description",
+      "default": "Get the cheat codes for selling and unlock your team's revenue potential."
+    },
+    {
+      "type": "text",
+      "name": "CTA Button Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "CTA Button URL",
+      "default": "#"
+    },
+    {
+      "type": "image",
+      "name": "Logo",
+      "config": {
+        "maxWidth": 600,
+        "maxHeight": 200,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Logo Alt",
+      "default": "Home"
+    },
+    {
+      "type": "text",
+      "name": "Site Name",
+      "default": "Radiant"
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "&copy; 2025 Radiant Inc."
+    },
+    {
+      "type": "items",
+      "name": "Link Groups",
+      "default": [
+        { "heading": "Product", "links": [{ "label": "Pricing", "url": "/pricing" }, { "label": "Analysis", "url": "#" }, { "label": "API", "url": "#" }] },
+        { "heading": "Company", "links": [{ "label": "Careers", "url": "#" }, { "label": "Blog", "url": "/blog" }, { "label": "Company", "url": "/company" }] },
+        { "heading": "Support", "links": [{ "label": "Help center", "url": "#" }, { "label": "Community", "url": "#" }] },
+        { "heading": "Legal", "links": [{ "label": "Terms of service", "url": "#" }, { "label": "Privacy policy", "url": "#" }] }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Heading" },
+          {
+            "type": "items",
+            "name": "Links",
+            "config": {
+              "fields": [
+                { "type": "text", "name": "Label" },
+                { "type": "text", "name": "URL" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        { "label": "Facebook", "url": "https://facebook.com", "icon": "facebook-logo" },
+        { "label": "X", "url": "https://x.com", "icon": "x-logo" },
+        { "label": "LinkedIn", "url": "https://linkedin.com", "icon": "linkedin-logo" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "URL" },
+          { "type": "text", "name": "Icon" }
+        ]
+      }
+    }
+  ]
+}

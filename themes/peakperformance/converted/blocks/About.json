@@ -1,0 +1,62 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Split image and bio",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1000&h=1200&fit=crop&crop=top"
+    },
+    {
+      "type": "text",
+      "name": "Stat Value",
+      "default": "15+"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Stat Label",
+      "default": "<p>Years Elite<br>Coaching</p>"
+    },
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Meet your coach"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>COACHED BY<br>SOMEONE WHO'S<br><span class=\"text-brand\">BEEN THERE.</span></p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Founded by Dr. James Thornton, a former international-level athlete turned performance scientist. Peak Performance was born from one belief: every serious athlete deserves world-class coaching.</p><p>Two decades at the intersection of sports science and elite competition. A system that merges cutting-edge research with the gritty wisdom that only comes from standing on the start line yourself.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Credentials",
+      "default": [
+        { "text": "Former Olympic athletics coach (2012-2020)" },
+        { "text": "M.Sc. Sports Performance Science" },
+        { "text": "Certified Strength & Conditioning Specialist" },
+        { "text": "Published researcher in elite athlete development" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Text" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Train with Us"
+    },
+    {
+      "type": "text",
+      "name": "Button Link",
+      "default": "#book"
+    }
+  ]
+}

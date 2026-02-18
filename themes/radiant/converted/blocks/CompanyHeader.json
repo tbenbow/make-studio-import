@@ -1,0 +1,72 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Company intro with stats",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Helping companies generate revenue."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "We're on a mission to transform revenue organizations by harnessing vast amounts of illegally acquired customer data."
+    },
+    {
+      "type": "text",
+      "name": "Mission Title",
+      "default": "Our mission"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Mission Text",
+      "default": "<p>At Radiant, we are dedicated to transforming the way revenue organizations source and close deals.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Stats Eyebrow",
+      "default": "The Numbers"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        { "label": "Raised", "value": "$150M" },
+        { "label": "Companies", "value": "30K" },
+        { "label": "Deals Closed", "value": "1.5M" },
+        { "label": "Leads Generated", "value": "200M" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Value" }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Photos",
+      "default": [
+        { "image": "" },
+        { "image": "" },
+        { "image": "" },
+        { "image": "" }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 800,
+              "maxHeight": 800,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

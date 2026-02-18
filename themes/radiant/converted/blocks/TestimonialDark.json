@@ -1,0 +1,32 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Dark bg testimonial with photo",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Quote",
+      "default": "Thanks to Radiant, we're finding new leads that we never would have found with legal methods."
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Tina Yards"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "VP of Sales, Protocol"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "config": {
+        "maxWidth": 800,
+        "maxHeight": 1200,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    }
+  ]
+}

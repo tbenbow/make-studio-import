@@ -1,0 +1,41 @@
+<section class="bg-base px-6 lg:px-8 mt-16">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    <h1 class="heading-xl text-fg">{{headline}}</h1>
+    {{#if description}}
+    <p class="mt-6 max-w-3xl text-2xl font-medium text-fg-alt">{{description}}</p>
+    {{/if}}
+    <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
+      <div class="max-w-lg">
+        {{#if mission-title}}
+        <h2 class="text-2xl font-medium tracking-tight text-fg">{{mission-title}}</h2>
+        {{/if}}
+        {{#if mission-text}}
+        <div class="mt-6 body-sm text-fg-muted">{{{mission-text}}}</div>
+        {{/if}}
+      </div>
+      <div class="pt-20 lg:row-span-2 lg:-mr-16 xl:mr-auto">
+        <div class="-mx-8 grid grid-cols-2 gap-4 sm:-mx-16 sm:grid-cols-4 lg:mx-0 lg:grid-cols-2 lg:gap-4 xl:gap-8">
+          {{#each photos}}
+          <div class="{{#if (eq (mod @index 2) 1)}}-mt-8 lg:-mt-32{{/if}} aspect-square overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+            <img alt="" src="{{image}}" class="block size-full object-cover" />
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="max-lg:mt-16 lg:col-span-1">
+        {{#if stats-eyebrow}}
+        <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{stats-eyebrow}}</p>
+        <hr class="mt-6 border-t border-border" />
+        {{/if}}
+        <dl class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+          {{#each stats}}
+          <div class="flex flex-col gap-y-2 border-b border-dotted border-border pb-4">
+            <dt class="body-sm text-fg-muted">{{label}}</dt>
+            <dd class="order-first text-6xl font-medium tracking-tight text-fg">{{value}}</dd>
+          </div>
+          {{/each}}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

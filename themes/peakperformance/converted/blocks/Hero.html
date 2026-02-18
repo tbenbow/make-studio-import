@@ -1,0 +1,41 @@
+<section class="relative min-h-screen flex flex-col justify-end overflow-hidden bg-base">
+  <div class="absolute inset-0">
+    {{#if image}}
+      <img src="{{image}}" alt="{{headline}}" class="w-full h-full object-cover object-center" />
+    {{/if}}
+    <div class="absolute inset-0 bg-gradient-to-t from-base via-base/80 to-base/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-base/60 to-transparent"></div>
+  </div>
+  <div class="relative z-10 px-5 sm:px-8 lg:px-12 xl:px-20 pb-12 sm:pb-16 lg:pb-20 pt-40">
+    <div class="mx-auto max-w-[1440px]">
+      {{#if eyebrow}}
+        <p class="body-sm font-bold uppercase tracking-[0.2em] text-brand mb-6">{{eyebrow}}</p>
+      {{/if}}
+      <h1 class="heading-xl text-fg max-w-5xl">{{{headline}}}</h1>
+      <div class="mt-8 sm:mt-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 lg:gap-16">
+        {{#if subheadline}}
+          <div class="body-lg text-fg-muted max-w-md leading-relaxed">
+            {{{subheadline}}}
+          </div>
+        {{/if}}
+        {{#if (length buttons)}}
+          <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+            {{#each buttons}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      {{#if (length stats)}}
+        <div class="mt-16 sm:mt-20 pt-8 border-t border-fg/10 grid grid-cols-2 sm:grid-cols-4 gap-8">
+          {{#each stats}}
+            <div>
+              <p class="heading-md text-brand">{{value}}</p>
+              <p class="body-sm uppercase tracking-[0.15em] text-fg-alt mt-1">{{label}}</p>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

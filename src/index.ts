@@ -15,6 +15,7 @@ import { validatePage } from './validate-page.js'
 import { importPage } from './import-page.js'
 import { cloneSite } from './clone-site.js'
 import { pushSite } from './push-site.js'
+import { scrapeSite } from './scrape-site.js'
 import { MakeStudioClient } from './api.js'
 import { computeChangeset, type LocalBlock, type LocalPartial } from './diff.js'
 import { saveSnapshot, listSnapshots, loadSnapshot, rollbackFromSnapshot } from './snapshot.js'
@@ -309,6 +310,8 @@ async function main() {
         'import-page': 'Import page JSON to Make Studio',
         'clone-site': 'Clone a site with all blocks, partials, and pages',
         'push-site': 'Push a site from one database to another',
+        'create-site': 'Create a new Make Studio site and save credentials to .env',
+        'scrape-site': 'Scrape a live website and generate make-studio theme files',
         rollback: 'Rollback to a previous snapshot'
       },
       options: {
@@ -322,6 +325,7 @@ async function main() {
         '--from': 'Source site ID (for copy-theme/clone-site)',
         '--to': 'Target site ID (for copy-theme)',
         '--name': 'New site name (for clone-site)',
+        '--url': 'URL to scrape (for scrape-site)',
         '--target-uri': 'Target MongoDB URI (for push-site)',
         '--owner': 'Clerk user ID for new site owner (for push-site)',
         '--id': 'Block ID (for update-block)',
@@ -949,6 +953,57 @@ async function main() {
       })
       output(result)
       process.exit(result.success ? 0 : 1)
+      break
+    }
+
+    case 'create-site': {
+      const siteName = args.name
+      if (!siteName) {
+        output({ error: '--name is required' })
+        process.exit(1)
+      }
+      const baseUrl = process.env.MAKE_STUDIO_URL
+      const createToken = process.env.MAKE_STUDIO_CREATE_TOKEN
+      if (!baseUrl || !createToken) {
+        output({ error: 'MAKE_STUDIO_URL and MAKE_STUDIO_CREATE_TOKEN environment variables are required' })
+        process.exit(1)
+      }
+      const createClient = new MakeStudioClient(baseUrl, createToken)
+      console.log(`Creating site "${siteName}"...`)
+      const newSite = await createClient.createSite(siteName)
+      const newSiteId = newSite._id
+      const siteToken = (newSite as any).apiToken
+
+      if (siteToken) {
+        // Update .env with the new site credentials
+        const envPath = path.join(ROOT_DIR, '.env')
+        let envContent = fs.readFileSync(envPath, 'utf-8')
+        envContent = envContent.replace(/^MAKE_STUDIO_TOKEN=.*$/m, `MAKE_STUDIO_TOKEN=${siteToken}`)
+        envContent = envContent.replace(/^MAKE_STUDIO_SITE=.*$/m, `MAKE_STUDIO_SITE=${newSiteId}`)
+        fs.writeFileSync(envPath, envContent)
+        console.log(`Site created: ${newSiteId}`)
+        console.log(`Site token saved to .env`)
+        console.log(`MAKE_STUDIO_SITE=${newSiteId}`)
+      } else {
+        console.log(`Site created: ${newSiteId}`)
+        console.log('Warning: No API token returned (not using account token?)')
+      }
+      output({ success: true, siteId: newSiteId, hasToken: !!siteToken })
+      process.exit(0)
+      break
+    }
+
+    case 'scrape-site': {
+      const siteUrl = args.url
+      const themeName = args.theme
+      if (!siteUrl || !themeName) {
+        output({ error: '--url and --theme are required' })
+        process.exit(1)
+      }
+      const outputDir = getThemePath(themeName)
+      const result = await scrapeSite({ url: siteUrl, themeName, outputDir })
+      output(result)
+      process.exit(0)
       break
     }
 

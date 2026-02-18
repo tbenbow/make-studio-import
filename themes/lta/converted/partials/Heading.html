@@ -1,0 +1,16 @@
+<div class="flex flex-col gap-4 {{#if (eq align "center")}}text-center items-center{{/if}}">
+  {{#if label}}
+    {{> Label text=label}}
+  {{/if}}
+  {{#if title}}
+    <h2 class="heading-lg text-fg {{#if (eq align "center")}}mx-auto{{/if}}" style="color: var(--lta-heading, #26484c);">{{title}}</h2>
+  {{/if}}
+  {{#if subtitle}}
+    <h4 class="heading-sm text-fg-muted">{{subtitle}}</h4>
+  {{/if}}
+  {{#if description}}
+    <div class="body-lg text-fg-muted max-w-3xl {{#if (eq align "center")}}mx-auto{{/if}}">
+      {{{description}}}
+    </div>
+  {{/if}}
+</div>

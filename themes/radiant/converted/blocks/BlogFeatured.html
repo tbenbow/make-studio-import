@@ -1,0 +1,30 @@
+<section class="bg-base bg-gradient-to-t from-base-muted pb-14 px-6 lg:px-8 mt-16">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    {{#if headline}}
+    <h2 class="text-2xl font-medium tracking-tight text-fg">{{headline}}</h2>
+    {{/if}}
+    <div class="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3">
+      {{#each (posts post-type)}}
+      <div class="relative flex flex-col rounded-3xl bg-panel p-2 shadow-md ring-1 ring-border">
+        {{#if image}}
+        <img alt="" src="{{image}}" class="aspect-[3/2] w-full rounded-2xl object-cover" />
+        {{/if}}
+        <div class="flex flex-1 flex-col p-8">
+          <div class="body-sm text-fg-muted">
+            {{formatDate date}}
+          </div>
+          <div class="mt-2 body-md font-medium">
+            <a href="{{url}}">
+              <span class="absolute inset-0"></span>
+              {{title}}
+            </a>
+          </div>
+          <div class="mt-2 flex-1 body-sm text-fg-alt">
+            {{excerpt}}
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Full-screen with stats",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=1600&h=1000&fit=crop&crop=center"
+    },
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Elite Athletic Training"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>YOUR PEAK<br>IS NOT<br>A CEILING.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Personalized coaching for serious athletes who refuse to plateau. We don't build programs. We build champions.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Book Free Consultation", "link": "#book", "style": "primary" },
+        { "label": "See the Process", "link": "#process", "style": "outline" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Outline", "value": "outline" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        { "value": "200+", "label": "Athletes Trained" },
+        { "value": "47%", "label": "Avg. Performance Gain" },
+        { "value": "15+", "label": "Sport Disciplines" },
+        { "value": "12", "label": "Olympic Athletes" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Value" },
+          { "type": "text", "name": "Label" }
+        ]
+      }
+    }
+  ]
+}

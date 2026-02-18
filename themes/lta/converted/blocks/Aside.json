@@ -1,0 +1,15 @@
+{
+  "description": "Sidebar card with texture",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Related Information"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Additional context or related links can go here.</p>"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "description": "Multi-column grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "2",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "2 Columns",
+            "value": "2"
+          },
+          {
+            "key": "3 Columns",
+            "value": "3"
+          },
+          {
+            "key": "4 Columns",
+            "value": "4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Content",
+      "default": "<p>Column content goes here. Use headings and paragraphs for each column.</p>"
+    }
+  ]
+}

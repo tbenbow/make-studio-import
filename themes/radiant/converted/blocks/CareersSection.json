@@ -1,0 +1,83 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Job listings + testimonial",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Careers"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Join our fully remote team."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "We work together from all over the world."
+    },
+    {
+      "type": "items",
+      "name": "Job Groups",
+      "default": [
+        {
+          "department": "Engineering",
+          "jobs": [
+            { "title": "iOS Developer", "location": "Remote", "url": "#" },
+            { "title": "Backend Engineer", "location": "Remote", "url": "#" }
+          ]
+        },
+        {
+          "department": "Design",
+          "jobs": [
+            { "title": "Principal Designer", "location": "Remote", "url": "#" },
+            { "title": "Senior Designer", "location": "Remote", "url": "#" }
+          ]
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Department" },
+          {
+            "type": "items",
+            "name": "Jobs",
+            "config": {
+              "fields": [
+                { "type": "text", "name": "Title" },
+                { "type": "text", "name": "Location" },
+                { "type": "text", "name": "URL" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "image",
+      "name": "Testimonial Image",
+      "config": {
+        "maxWidth": 800,
+        "maxHeight": 1200,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Testimonial Quote",
+      "default": "We've managed to put two of our main competitors out of business in 6 months."
+    },
+    {
+      "type": "text",
+      "name": "Testimonial Name",
+      "default": "Veronica Winton"
+    },
+    {
+      "type": "text",
+      "name": "Testimonial Title",
+      "default": "CSO, Planeteria"
+    }
+  ]
+}

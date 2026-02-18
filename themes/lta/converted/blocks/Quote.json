@@ -1,0 +1,15 @@
+{
+  "description": "Blockquote with citation",
+  "fields": [
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Conservation is a cause that has no end. There is no point at which we will say our work is finished."
+    },
+    {
+      "type": "text",
+      "name": "Citation",
+      "default": "Rachel Carson"
+    }
+  ]
+}

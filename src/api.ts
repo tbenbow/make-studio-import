@@ -98,6 +98,10 @@ export class MakeStudioClient {
     return this.request('PATCH', `/sites/${siteId}`, { theme })
   }
 
+  async createSite(name: string): Promise<ApiSite & { apiToken?: string }> {
+    return this.request('POST', '/sites', { name })
+  }
+
   async reconcile(siteId: string): Promise<{ success: boolean; reconciled: Record<string, number> }> {
     return this.request('POST', `/sites/${siteId}/reconcile`)
   }

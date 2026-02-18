@@ -1,0 +1,778 @@
+{
+  "siteId": "6994aa51d89f2ba4716738fa",
+  "capturedAt": "2026-02-17T18:12:14.870Z",
+  "theme": {
+    "fonts": [
+      {
+        "family": "Merriweather",
+        "weight": 700,
+        "style": "normal"
+      },
+      {
+        "family": "Merriweather",
+        "weight": 900,
+        "style": "normal"
+      },
+      {
+        "family": "Source Sans 3",
+        "weight": 400,
+        "style": "normal"
+      },
+      {
+        "family": "Source Sans 3",
+        "weight": 600,
+        "style": "normal"
+      }
+    ],
+    "systemColors": {
+      "brand": "#7174e3",
+      "on-brand": "#ffffff",
+      "base": "#f1f1f4",
+      "base-muted": "#d8d8df",
+      "base-alt": "#e4e4e9",
+      "panel": "#e9e9ed",
+      "border": "#c1c2cd",
+      "fg": "#17171c",
+      "fg-muted": "#67687e",
+      "fg-alt": "#8c8ca1"
+    },
+    "customColors": [],
+    "palette": {
+      "primary": {
+        "label": "primary",
+        "colors": [
+          "rgb(224, 231, 255)",
+          "rgb(165, 180, 251)",
+          "rgb(100, 102, 241)",
+          "rgb(67, 56, 202)",
+          "rgb(48, 46, 129)"
+        ]
+      },
+      "accent1": {
+        "label": "accent-1",
+        "colors": [
+          "rgb(206, 250, 254)",
+          "rgb(103, 232, 249)",
+          "rgb(7, 182, 212)",
+          "rgb(13, 116, 144)",
+          "rgb(22, 78, 99)"
+        ]
+      },
+      "accent2": {
+        "label": "accent-2",
+        "colors": [
+          "rgb(209, 250, 229)",
+          "rgb(110, 231, 183)",
+          "rgb(18, 185, 129)",
+          "rgb(4, 120, 87)",
+          "rgb(18, 78, 74)"
+        ]
+      },
+      "accent3": {
+        "label": "accent-3",
+        "colors": [
+          "rgb(254, 243, 199)",
+          "rgb(251, 211, 76)",
+          "rgb(245, 158, 12)",
+          "rgb(180, 83, 10)",
+          "rgb(120, 53, 15)"
+        ]
+      },
+      "grays": {
+        "label": "gray",
+        "colors": [
+          "rgb(241, 245, 249)",
+          "rgb(203, 213, 225)",
+          "rgb(100, 116, 139)",
+          "rgb(51, 65, 85)",
+          "rgb(15, 23, 42)"
+        ]
+      }
+    },
+    "headingTypography": {
+      "heading-xl": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 80,
+        "lineHeight": 80,
+        "letterSpacing": -2,
+        "mobileLineHeight": 48,
+        "mobileFontSize": 48
+      },
+      "heading-lg": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 48,
+        "lineHeight": 56,
+        "letterSpacing": -1.2,
+        "mobileLineHeight": 40,
+        "mobileFontSize": 32
+      },
+      "heading-md": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 32,
+        "lineHeight": 40,
+        "letterSpacing": -0.8,
+        "mobileLineHeight": 36,
+        "mobileFontSize": 28
+      },
+      "heading-sm": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 24,
+        "lineHeight": 32,
+        "letterSpacing": -0.5,
+        "mobileLineHeight": 28,
+        "mobileFontSize": 20
+      },
+      "heading-xs": {
+        "fontFamily": "Instrument Serif",
+        "fontWeight": 400,
+        "fontSize": 18,
+        "lineHeight": 28,
+        "letterSpacing": -0.3,
+        "mobileLineHeight": 24,
+        "mobileFontSize": 16
+      }
+    },
+    "bodyTypography": {
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 18,
+        "lineHeight": 32,
+        "letterSpacing": 0
+      },
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 28,
+        "letterSpacing": 0
+      },
+      "body-sm": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 14,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      }
+    },
+    "prose": {
+      "elements": {
+        "h1": {
+          "typographyClass": "heading-xl",
+          "marginBottom": 1.5
+        },
+        "h2": {
+          "typographyClass": "heading-lg",
+          "marginBottom": 1.25
+        },
+        "h3": {
+          "typographyClass": "heading-md",
+          "marginBottom": 1
+        },
+        "h4": {
+          "typographyClass": "heading-sm",
+          "marginBottom": 0.75
+        },
+        "h5": {
+          "typographyClass": "heading-xs",
+          "marginBottom": 0.5
+        },
+        "h6": {
+          "typographyClass": "heading-xs",
+          "marginBottom": 0.5
+        },
+        "p": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        },
+        "ul": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        },
+        "ol": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        }
+      },
+      "lists": {
+        "listStyleType": "disc",
+        "indent": 1.5,
+        "itemSpacing": 0.5,
+        "nestedIndent": 1.5
+      },
+      "links": {
+        "color": "accent",
+        "hoverColor": "primary",
+        "underline": "always"
+      },
+      "customCSS": "blockquote {\n  border-left: 3px solid currentColor;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n  font-style: italic;\n  opacity: 0.85;\n}\n\npre {\n  background: rgba(0, 0, 0, 0.3);\n  padding: 1rem;\n  border-radius: 4px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n  overflow-x: auto;\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n}\n\npre code {\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n}\n\ncode:not(pre code) {\n  background: rgba(0, 0, 0, 0.2);\n  padding: 0.15em 0.4em;\n  border-radius: 3px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n}"
+    },
+    "customCSS": ".prose {\n  color: var(--fg-muted);\n}\n.prose h1,\n.prose h2, \n.prose h3, \n.prose h4 {\n  color: var(--fg);\n}",
+    "buttons": {
+      "global": {
+        "fontFamily": "'Helvetica', sans-serif",
+        "fontWeight": 400,
+        "uppercase": false,
+        "sizes": {
+          "lg": {
+            "fontSize": 16,
+            "letterSpacing": 0,
+            "opticalYOffset": 1,
+            "paddingTop": 12,
+            "paddingBottom": 12,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "borderRadius": 4
+          },
+          "md": {
+            "fontSize": 14,
+            "letterSpacing": 0,
+            "opticalYOffset": 0,
+            "paddingTop": 10,
+            "paddingBottom": 10,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+            "borderRadius": 3
+          },
+          "sm": {
+            "fontSize": 12,
+            "letterSpacing": 0,
+            "opticalYOffset": 0,
+            "paddingTop": 10,
+            "paddingBottom": 10,
+            "paddingLeft": 20,
+            "paddingRight": 20,
+            "borderRadius": 2
+          }
+        }
+      },
+      "variants": {
+        "primary": {
+          "backgroundColor": "system:brand",
+          "textColor": "system:on-brand",
+          "borderColor": "transparent",
+          "borderWidth": 1,
+          "hoverPreset": "scale"
+        },
+        "secondary": {
+          "backgroundColor": "system:base-muted",
+          "textColor": "system:fg",
+          "borderColor": "transparent",
+          "borderWidth": 1,
+          "hoverPreset": "darken"
+        },
+        "outline": {
+          "backgroundColor": "transparent",
+          "textColor": "system:brand",
+          "borderColor": "system:brand",
+          "borderWidth": 1,
+          "hoverPreset": "fill"
+        },
+        "ghost": {
+          "backgroundColor": "transparent",
+          "textColor": "system:fg",
+          "borderColor": "transparent",
+          "borderWidth": 1,
+          "hoverPreset": "darken"
+        }
+      }
+    },
+    "typography": {
+      "font-heading": "Merriweather",
+      "font-body": "Source Sans 3",
+      "text-display": "31px",
+      "text-h1": "27px",
+      "text-h2": "22px",
+      "text-lede": "19px",
+      "text-body": "16px",
+      "text-small": "13px",
+      "weight-heading": "700",
+      "weight-body": "400",
+      "tracking-heading": "-0.008em",
+      "tracking-body": "0em",
+      "leading-display": "1.16",
+      "leading-body": "1.65"
+    }
+  },
+  "blocks": [
+    {
+      "_id": "6994aa51d89f2ba471673906",
+      "name": "Footer",
+      "description": "Links and social icons",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "category": "footer",
+      "template": "<footer class=\"pt-16\">\n  <div class=\"bg-panel py-16 text-fg\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 text-center body-sm\">\n      <div class=\"flex flex-col gap-6\">\n        {{#if (length links)}}\n          <nav>\n            <ul class=\"flex flex-wrap items-center justify-center gap-x-10 gap-y-2\">\n              {{#each links}}\n                <li class=\"text-fg-muted hover:text-fg transition\">\n                  <a href=\"{{url}}\">{{label}}</a>\n                </li>\n              {{/each}}\n            </ul>\n          </nav>\n        {{/if}}\n        {{#if (length social-links)}}\n          <div class=\"flex items-center justify-center gap-6\">\n            {{#each social-links}}\n              <a href=\"{{url}}\" rel=\"noopener\" aria-label=\"{{name}}\" class=\"text-fg hover:text-brand transition\">\n                {{icon icon size=\"24\"}}\n              </a>\n            {{/each}}\n          </div>\n        {{/if}}\n      </div>\n      <div class=\"text-fg-alt\">{{{fineprint}}}</div>\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "77f0c478-071f-4cf7-a7bd-7c222a919545",
+          "type": "items",
+          "name": "Links",
+          "value": [
+            {
+              "id": "638eed2c-932e-4dd6-865f-0d02415dce17",
+              "label": "Home",
+              "url": "/"
+            },
+            {
+              "id": "44828037-337d-4c94-891f-3adf75adb22f",
+              "label": "Features",
+              "url": "#features"
+            },
+            {
+              "id": "805875c2-2ace-446c-9d72-55c4274ba349",
+              "label": "Pricing",
+              "url": "#pricing"
+            },
+            {
+              "id": "44a9bec8-baf9-461b-a047-36b34998f405",
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "id": "1769fda2-91a4-4014-bf77-ed8d9b0fa337",
+              "label": "Contact",
+              "url": "/contact"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "522ec7b3-abaf-4de5-bd9f-2f63dc484eb0",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "fef479fc-451e-4233-894d-3ade4367c287",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "98c1626f-624d-4e7f-8c94-fb0c310f4319",
+          "type": "items",
+          "name": "Social Links",
+          "value": [
+            {
+              "id": "c3035093-8f1e-4b08-9a1c-f612de2ca2db",
+              "name": "Twitter",
+              "icon": "x-logo",
+              "url": "https://twitter.com"
+            },
+            {
+              "id": "bc409480-b423-4278-915b-f0d24fa49879",
+              "name": "GitHub",
+              "icon": "github-logo",
+              "url": "https://github.com"
+            },
+            {
+              "id": "f1e3dc23-8450-4547-9306-e0d1d2a1ed4b",
+              "name": "LinkedIn",
+              "icon": "linkedin-logo",
+              "url": "https://linkedin.com"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "523b461c-4d76-4c38-8383-b201f809e00d",
+                "type": "text",
+                "name": "Name",
+                "value": ""
+              },
+              {
+                "id": "e94d1bea-1560-43a6-93e9-f5727cfb070d",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "4c19a016-49ef-4dbb-8979-393fe9daa494",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "b71e0487-bd41-457f-9883-aebc28544003",
+          "type": "wysiwyg",
+          "name": "Fineprint",
+          "value": "<p>© 2025 Oatmeal Inc. All rights reserved.</p>"
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.394Z",
+      "updatedAt": "2026-02-17T17:50:09.394Z"
+    },
+    {
+      "_id": "6994aa51d89f2ba471673907",
+      "name": "FooterCategories",
+      "description": "Link categories grid",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "category": "footer",
+      "template": "<footer class=\"pt-16 bg-base\">\n  <div class=\"bg-base-muted py-16\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16\">\n      {{#if (length categories)}}\n        <nav class=\"grid grid-cols-2 gap-6 body-sm sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5\">\n          {{#each categories}}\n            <div>\n              <h3 class=\"font-semibold text-fg\">{{title}}</h3>\n              <ul role=\"list\" class=\"mt-2 flex flex-col gap-2 text-fg-muted [&amp;_a]:hover:text-fg [&amp;_a]:transition\">\n                {{{links}}}\n              </ul>\n            </div>\n          {{/each}}\n        </nav>\n      {{/if}}\n      {{#if copyright}}\n        <div class=\"body-sm text-fg-alt\">{{{copyright}}}</div>\n      {{/if}}\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "cc136066-5649-48cf-8f69-52ea8142e49f",
+          "type": "items",
+          "name": "Categories",
+          "value": [
+            {
+              "id": "f9994819-6e7e-4c8d-8c1c-e15941843592",
+              "title": "Product",
+              "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>\n<a href=\"#\">Changelog</a>"
+            },
+            {
+              "id": "1f7609e9-493f-405f-9658-3bfdeaf89a3c",
+              "title": "Company",
+              "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Press</a>\n<a href=\"#\">Blog</a>"
+            },
+            {
+              "id": "636b473d-80e0-425d-bde6-3ad7495996fc",
+              "title": "Resources",
+              "links": "<a href=\"#\">Documentation</a>\n<a href=\"#\">Help Center</a>\n<a href=\"#\">API Reference</a>\n<a href=\"#\">Status</a>"
+            },
+            {
+              "id": "74e8f0d8-25d8-4293-bef6-ff71b62892ae",
+              "title": "Legal",
+              "links": "<a href=\"#\">Privacy</a>\n<a href=\"#\">Terms</a>\n<a href=\"#\">Security</a>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "3ec80ef6-cfb0-48b4-9188-db42002fd9c6",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "da2c783b-1c63-48aa-af30-66feecfda8d1",
+                "type": "wysiwyg",
+                "name": "Links",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "ccf9c410-154d-4c69-a77e-119553dc68f0",
+          "type": "wysiwyg",
+          "name": "Copyright",
+          "value": "<p>&copy; 2025 Company Inc. All rights reserved.</p>"
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.394Z",
+      "updatedAt": "2026-02-17T17:50:09.394Z"
+    },
+    {
+      "_id": "6994aa51d89f2ba471673908",
+      "name": "FooterNewsletter",
+      "description": "Newsletter + categories",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "category": "footer",
+      "template": "<footer class=\"pt-16 bg-base\">\n  <div class=\"bg-base-muted py-16\">\n    <div class=\"mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-16\">\n      <div class=\"grid grid-cols-1 gap-x-6 gap-y-16 body-sm lg:grid-cols-2\">\n        <form class=\"flex max-w-sm flex-col gap-2\">\n          {{#if newsletter-headline}}\n            <p class=\"font-semibold text-fg\">{{newsletter-headline}}</p>\n          {{/if}}\n          {{#if newsletter-text}}\n            <div class=\"text-fg-muted\">{{{newsletter-text}}}</div>\n          {{/if}}\n          <div class=\"flex items-center border-b border-border py-2 focus-within:border-fg\">\n            <input type=\"email\" placeholder=\"Email\" aria-label=\"Email\" class=\"flex-1 bg-transparent text-fg focus:outline-none\">\n            <button type=\"submit\" aria-label=\"Subscribe\" class=\"inline-flex size-7 items-center justify-center rounded-full hover:bg-panel transition\">\n              {{icon \"arrow-right\" size=\"20\"}}\n            </button>\n          </div>\n        </form>\n        {{#if (length categories)}}\n          <nav class=\"grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4\">\n            {{#each categories}}\n              <div>\n                <h3 class=\"font-semibold text-fg\">{{title}}</h3>\n                <ul role=\"list\" class=\"mt-2 flex flex-col gap-2 text-fg-muted [&amp;_a]:hover:text-fg [&amp;_a]:transition\">\n                  {{{links}}}\n                </ul>\n              </div>\n            {{/each}}\n          </nav>\n        {{/if}}\n      </div>\n      <div class=\"flex items-center justify-between gap-10 body-sm\">\n        {{#if copyright}}\n          <div class=\"text-fg-alt\">{{{copyright}}}</div>\n        {{/if}}\n        {{#if (length social-links)}}\n          <div class=\"flex items-center gap-4 sm:gap-10\">\n            {{#each social-links}}\n              <a href=\"{{url}}\" aria-label=\"{{label}}\" class=\"text-fg hover:text-fg-muted transition\">\n                {{icon icon size=\"24\"}}\n              </a>\n            {{/each}}\n          </div>\n        {{/if}}\n      </div>\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "71b34938-05cd-407e-b5a2-70a5ca4ba8e7",
+          "type": "text",
+          "name": "Newsletter Headline",
+          "value": "Stay in the loop"
+        },
+        {
+          "id": "f8d8af1f-8ee6-4186-b6c5-3084411bebe9",
+          "type": "wysiwyg",
+          "name": "Newsletter Text",
+          "value": "<p>Get the latest updates delivered to your inbox.</p>"
+        },
+        {
+          "id": "901641ac-3305-4d07-b192-3d934268d9ab",
+          "type": "items",
+          "name": "Categories",
+          "value": [
+            {
+              "id": "62f51ec4-f2c9-44bd-bc26-00de442192ac",
+              "title": "Product",
+              "links": "<a href=\"#\">Features</a>\n<a href=\"#\">Pricing</a>\n<a href=\"#\">Integrations</a>"
+            },
+            {
+              "id": "3a5c9a1c-ae72-41c9-b138-715a05bd8110",
+              "title": "Company",
+              "links": "<a href=\"#\">About</a>\n<a href=\"#\">Careers</a>\n<a href=\"#\">Blog</a>"
+            },
+            {
+              "id": "315b9eae-64ad-4f2a-82d2-ac6388309a46",
+              "title": "Resources",
+              "links": "<a href=\"#\">Docs</a>\n<a href=\"#\">Help</a>\n<a href=\"#\">API</a>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "9fb4a971-48a4-448d-bba4-5ffe8a804559",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "ff144eaa-8775-4a68-bac7-a3a990e47efc",
+                "type": "wysiwyg",
+                "name": "Links",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "d3890e9e-80d9-4e68-bbd5-ae2ab739e830",
+          "type": "wysiwyg",
+          "name": "Copyright",
+          "value": "<p>&copy; 2025 Company Inc.</p>"
+        },
+        {
+          "id": "a8946e81-22cf-44e3-991e-6f09bd9eee79",
+          "type": "items",
+          "name": "Social Links",
+          "value": [
+            {
+              "id": "2852dd61-e7fe-4b11-8976-82ff85f517cb",
+              "icon": "x-logo",
+              "url": "#",
+              "label": "X"
+            },
+            {
+              "id": "bafe14cc-0762-48f1-b6f2-8be0970ebefb",
+              "icon": "linkedin-logo",
+              "url": "#",
+              "label": "LinkedIn"
+            },
+            {
+              "id": "fa32c109-43e9-49d6-96b6-db564648bdc3",
+              "icon": "github-logo",
+              "url": "#",
+              "label": "GitHub"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "927e014c-f39f-418c-a8fa-36c446ab630f",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "b8249ef8-3770-4748-a64f-0118bb22a601",
+                "type": "text",
+                "name": "Url",
+                "value": ""
+              },
+              {
+                "id": "565c4fb7-fd35-4790-8b1a-cc0fc65a16e5",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.395Z",
+      "updatedAt": "2026-02-17T17:50:09.395Z"
+    },
+    {
+      "_id": "6994aa51d89f2ba47167390c",
+      "name": "Navbar",
+      "description": "Logo left, links centered",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "category": "header",
+      "template": "<header class=\"sticky top-0 z-10 bg-base\">\n  <nav>\n    <div class=\"mx-auto flex h-20 max-w-7xl items-center gap-4 px-6 lg:px-10\">\n      <div class=\"flex flex-1 items-center\">\n        <a href=\"{{default logo_link '/'}}\" class=\"inline-flex items-center gap-2\">\n          {{#if logo}}\n            <img src=\"{{logo}}\" alt=\"{{logo_text}}\" class=\"h-8 w-auto\">\n          {{else}}\n            <span class=\"text-lg font-semibold text-fg\">{{default logo_text \"Company\"}}</span>\n          {{/if}}\n        </a>\n      </div>\n      {{#if (length links)}}\n        <div class=\"hidden lg:flex gap-8\">\n          {{#each links}}\n            <a href=\"{{url}}\" class=\"body-sm font-medium text-fg hover:text-fg-muted transition\">\n              {{label}}\n            </a>\n          {{/each}}\n        </div>\n      {{/if}}\n      <div class=\"flex flex-1 items-center justify-end gap-4\">\n        {{#if button-label}}\n          <a href=\"{{default button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition\">\n            {{button-label}}\n          </a>\n        {{/if}}\n        <button type=\"button\" aria-label=\"Toggle menu\" class=\"inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden\">\n          {{icon \"list\" size=\"24\"}}\n        </button>\n      </div>\n    </div>\n  </nav>\n</header>\n",
+      "fields": [
+        {
+          "id": "88cb13d5-1040-4f9d-b5fa-584c23aa706e",
+          "type": "image",
+          "name": "Logo",
+          "value": "",
+          "config": {
+            "maxWidth": 200,
+            "maxHeight": 60
+          }
+        },
+        {
+          "id": "b0e427ce-0b8c-4d0e-9cf9-42732823a91f",
+          "type": "text",
+          "name": "Logo Text",
+          "value": "Company"
+        },
+        {
+          "id": "f68fd2ef-7a0b-4fd7-b557-9c90262ad793",
+          "type": "text",
+          "name": "Logo Link",
+          "value": "/"
+        },
+        {
+          "id": "55249bb0-a88f-430f-b07c-816f8920309d",
+          "type": "items",
+          "name": "Links",
+          "value": [
+            {
+              "id": "5c755927-eb4a-45df-ba4d-e3d592d79f46",
+              "label": "Features",
+              "url": "#features"
+            },
+            {
+              "id": "382e0531-8f81-43b8-938e-62b577649e12",
+              "label": "Pricing",
+              "url": "#pricing"
+            },
+            {
+              "id": "77ccb5e6-b620-4ed4-848c-25f3b459b649",
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "id": "671fbf96-1559-4d2e-95ad-bc098df2b811",
+              "label": "Blog",
+              "url": "/blog"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "d8e54b6f-67dc-4140-8bf8-e8da2a89cbca",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "366d79cf-481a-47e6-b872-330de3c88866",
+                "type": "text",
+                "name": "Url",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "34f38039-8d3d-4be5-868d-76131fc499d0",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Get started"
+        },
+        {
+          "id": "8848c1d9-c637-4872-992c-b7aa4d57ee67",
+          "type": "text",
+          "name": "Button Link",
+          "value": "#"
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.395Z",
+      "updatedAt": "2026-02-17T17:50:09.395Z"
+    },
+    {
+      "_id": "6994aa51d89f2ba471673918",
+      "name": "Nav Bar",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "category": "header",
+      "template": "<header class=\"sticky top-0 z-10 bg-base\">\n  <nav>\n    <div class=\"mx-auto flex h-20 max-w-7xl items-center gap-4 px-6 lg:px-10\">\n      <div class=\"flex flex-1 items-center\">\n        <a href=\"{{default logo_link '/'}}\" class=\"inline-flex items-center gap-2\">\n          {{#if logo}}\n            <img src=\"{{logo}}\" alt=\"{{logo_text}}\" class=\"h-8 w-auto\">\n          {{else}}\n            <span class=\"text-lg font-semibold text-fg\">{{default logo_text \"Company\"}}</span>\n          {{/if}}\n        </a>\n      </div>\n      {{#if (length links)}}\n        <div class=\"hidden lg:flex gap-8\">\n          {{#each links}}\n            <a href=\"{{url}}\" class=\"body-sm font-medium text-fg hover:text-fg-muted transition\">\n              {{label}}\n            </a>\n          {{/each}}\n        </div>\n      {{/if}}\n      <div class=\"flex flex-1 items-center justify-end gap-4\">\n        {{#if button-label}}\n          <a href=\"{{default button_link '#'}}\" class=\"inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-base-alt transition\">\n            {{button-label}}\n          </a>\n        {{/if}}\n        <button type=\"button\" aria-label=\"Toggle menu\" class=\"inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden\">\n          {{icon \"list\" size=\"24\"}}\n        </button>\n      </div>\n    </div>\n  </nav>\n</header>\n",
+      "fields": [
+        {
+          "id": "62a02758-104c-43b3-9f4c-68fc16f0f046",
+          "type": "image",
+          "name": "Logo",
+          "value": "",
+          "config": {
+            "maxWidth": 200,
+            "maxHeight": 60
+          }
+        },
+        {
+          "id": "864d474d-a3fe-45cd-9729-9b6bf581bd43",
+          "type": "text",
+          "name": "Logo Text",
+          "value": ""
+        },
+        {
+          "id": "423e7a4d-89e4-4c62-ae4f-e0514522dfd2",
+          "type": "text",
+          "name": "Logo Link",
+          "value": ""
+        },
+        {
+          "id": "0b7b6a70-b91c-4527-b661-f268176de988",
+          "type": "items",
+          "name": "Links",
+          "value": [],
+          "config": {
+            "fields": [
+              {
+                "id": "351cf0af-025a-419b-9735-04d8e5486e1f",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "680e69be-13b3-432b-9113-c3e2975c5c9d",
+                "type": "text",
+                "name": "Url",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "62404a56-2a61-4604-a96a-7a72c553532c",
+          "type": "text",
+          "name": "Button Label",
+          "value": ""
+        },
+        {
+          "id": "3ec247d0-d633-4613-9c28-6196ac50a4f0",
+          "type": "text",
+          "name": "Button Link",
+          "value": ""
+        }
+      ],
+      "tags": [],
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.395Z",
+      "updatedAt": "2026-02-17T17:50:09.395Z"
+    }
+  ],
+  "partials": [
+    {
+      "_id": "6994aa51d89f2ba47167391a",
+      "name": "Button",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "template": "{{#switch style}}\n  {{#case \"primary\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-primary\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#case \"secondary\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-secondary\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#case \"outline\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-outline\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#case \"ghost\"}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-ghost\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/case}}\n  {{#otherwise}}\n    <a href=\"{{link}}\" class=\"btn btn-md btn-primary\">\n      {{default label \"Click Here\"}}\n    </a>\n  {{/otherwise}}\n{{/switch}}\n",
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.395Z",
+      "updatedAt": "2026-02-17T17:50:09.395Z"
+    },
+    {
+      "_id": "6994aa51d89f2ba47167391b",
+      "name": "Field",
+      "site_id": "6994aa51d89f2ba4716738fa",
+      "template": "{{#switch type}}\n  {{#case \"email\"}}\n  <div>\n    <label for=\"{{name}}\" class=\"block body-md text-fg-muted\">{{default label \"Email\"}}</label>\n    <div class=\"mt-2.5\">\n      <input id=\"{{name}}\" type=\"email\" name=\"{{name}}\" autocomplete=\"email\" class=\"block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500\">\n    </div>\n  </div>\n  {{/case}}\n  {{#case \"textarea\"}}\n  <div>\n    <label for=\"{{name}}\" class=\"block body-md text-fg-muted\">{{default label \"Message\"}}</label>\n    <div class=\"mt-2.5\">\n      <textarea id=\"{{name}}\" name=\"{{name}}\" rows=\"4\" class=\"block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500\"></textarea>\n    </div>\n  </div>\n  {{/case}}\n  {{#otherwise}}\n  <div>\n    <label for=\"{{name}}\" class=\"block body-md text-fg-muted\">{{default label \"Text\"}}</label>\n    <div class=\"mt-2.5\">\n      <input id=\"{{name}}\" type=\"{{name}}\" name=\"{{name}}\" autocomplete=\"text\" class=\"block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500\">\n    </div>\n  </div>\n  {{/otherwise}}\n{{/switch}}\n\n\n\n\n",
+      "__v": 0,
+      "createdAt": "2026-02-17T17:50:09.395Z",
+      "updatedAt": "2026-02-17T17:50:09.395Z"
+    }
+  ]
+}

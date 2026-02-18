@@ -1,0 +1,38 @@
+<section class="relative py-12 bg-base-muted lta-grunge-bg overflow-hidden">
+  <div class="absolute left-0 w-full top-0 h-2 z-10" aria-hidden="true">
+    <svg width="1440" height="8" viewBox="0 0 1440 8" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 w-full text-base">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1440 8V0H0V0C0.0955 0.0046 145.534 7 250 7C290.373 7 345.373 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z" fill="currentColor"></path>
+    </svg>
+  </div>
+  <div class="relative z-[1] px-6 md:px-8 lg:px-12 xl:px-24">
+    <div class="grid gap-6 grid-cols-1 lg:grid-cols-12 lg:gap-12 lg:items-center">
+      {{#if icon}}
+        <div class="min-w-24 text-center lg:col-span-2">
+          {{> IconBlob icon=icon color="text-brand"}}
+        </div>
+      {{else if image}}
+        <div class="min-w-24 text-center lg:col-span-2">
+          <img src="{{image}}" alt="" class="inline-block align-top w-72">
+        </div>
+      {{/if}}
+      <div class="lg:col-span-6 text-center lg:text-left">
+        {{#if title}}
+          <h3 class="heading-md" style="color: #26484c;">{{title}}</h3>
+        {{/if}}
+        {{#if description}}
+          <div class="body-md mt-2 text-fg-muted">{{{description}}}</div>
+        {{/if}}
+      </div>
+      {{#if button-label}}
+        <div class="lg:col-span-4 flex justify-center">
+          {{> Button label=button-label url=button-url style="solid"}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="absolute left-0 w-full bottom-0 h-2" aria-hidden="true">
+    <svg width="1440" height="8" viewBox="0 0 1440 8" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 w-full text-base">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1440 8H0V0C0 0 145.5 7 250 7C290.373 7 345.374 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z" fill="currentColor"></path>
+    </svg>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+{
+  "description": "Card grid (static)",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Featured Resources"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "",
+          "title": "Resource Title",
+          "body": "<p>A brief description of this resource.</p>",
+          "button-label": "Read More",
+          "button-url": "#"
+        },
+        {
+          "image": "",
+          "title": "Another Resource",
+          "body": "<p>A brief description of another resource.</p>",
+          "button-label": "Read More",
+          "button-url": "#"
+        },
+        {
+          "image": "",
+          "title": "Third Resource",
+          "body": "<p>A brief description of a third resource.</p>",
+          "button-label": "Read More",
+          "button-url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 1200,
+              "maxHeight": 800,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "Button Label"
+          },
+          {
+            "type": "text",
+            "name": "Button URL"
+          }
+        ]
+      }
+    }
+  ]
+}

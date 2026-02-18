@@ -1,0 +1,71 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Investors with logos & bios",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Investors"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Funded by industry-leaders."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "We are fortunate to be backed by the best investors in the industry."
+    },
+    {
+      "type": "items",
+      "name": "Venture Firms",
+      "default": [
+        { "name": "Remington Schwartz", "description": "Remington Schwartz has been a driving force in the tech industry, backing bold entrepreneurs.", "logo": "" },
+        { "name": "Deccel", "description": "Deccel has been at the forefront of innovation, investing in pioneering companies.", "logo": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "textarea", "name": "Description" },
+          {
+            "type": "image",
+            "name": "Logo",
+            "config": {
+              "maxWidth": 600,
+              "maxHeight": 200,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Individual Investors",
+      "default": [
+        { "name": "Kristin Watson", "company": "TechNexus Ventures", "image": "" },
+        { "name": "Emma Dorsey", "company": "Innovate Capital Partners", "image": "" },
+        { "name": "Alicia Bell", "company": "FutureWave Investments", "image": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Company" },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 200,
+              "maxHeight": 200,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

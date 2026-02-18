@@ -1,0 +1,40 @@
+{
+  "description": "CTA with texture bg",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Icon",
+      "default": "hand-heart"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "config": {
+        "maxWidth": 1200,
+        "maxHeight": 1200,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Support Conservation"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Your support helps protect the places we all love.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Donate Now"
+    },
+    {
+      "type": "text",
+      "name": "Button URL",
+      "default": "#"
+    }
+  ]
+}

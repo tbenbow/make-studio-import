@@ -1,0 +1,72 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Team grid with photos",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Meet the team"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Founded by an all-star team."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Radiant is founded by two of the best sellers in the business and backed by investors who look the other way."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "About Text",
+      "default": "<p>Years ago, while working as sales associates at rival companies, Thomas, Ben, and Natalie had an idea: what if they shared data to win deals?</p>"
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Join us"
+    },
+    {
+      "type": "text",
+      "name": "Button URL",
+      "default": "#"
+    },
+    {
+      "type": "image",
+      "name": "Team Photo",
+      "config": {
+        "maxWidth": 2000,
+        "maxHeight": 2000,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        { "name": "Michael Foster", "role": "Co-Founder / CTO", "image": "" },
+        { "name": "Dries Vincent", "role": "Business Relations", "image": "" },
+        { "name": "Celeste Vandermark", "role": "Front-end Developer", "image": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Role" },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 200,
+              "maxHeight": 200,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

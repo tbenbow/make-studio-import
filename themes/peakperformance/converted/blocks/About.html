@@ -1,0 +1,43 @@
+<section class="relative overflow-hidden bg-base">
+  <div class="grid lg:grid-cols-2 min-h-[80vh]">
+    <div class="relative aspect-[4/3] lg:aspect-auto overflow-hidden">
+      {{#if image}}
+        <img src="{{image}}" alt="{{name}}" class="w-full h-full object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-base/30 hidden lg:block"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-base to-transparent lg:hidden"></div>
+      {{/if}}
+      {{#if stat_value}}
+        <div class="absolute bottom-8 right-8 bg-brand p-6 sm:p-8 hidden sm:block">
+          <p class="heading-md text-on-brand">{{stat_value}}</p>
+          <p class="body-sm font-bold uppercase tracking-[0.15em] text-on-brand/70 mt-1">{{{stat_label}}}</p>
+        </div>
+      {{/if}}
+    </div>
+    <div class="flex items-center px-5 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24">
+      <div class="max-w-lg">
+        {{#if eyebrow}}
+          <p class="body-sm font-bold uppercase tracking-[0.2em] text-brand mb-6">{{eyebrow}}</p>
+        {{/if}}
+        <h2 class="heading-lg text-fg mb-8">{{{headline}}}</h2>
+        <div class="body-lg text-fg-muted leading-relaxed mb-4">
+          {{{description}}}
+        </div>
+        {{#if (length credentials)}}
+          <ul class="space-y-4 mb-12 border-t border-fg/10 pt-8">
+            {{#each credentials}}
+              <li class="flex items-center gap-4">
+                <div class="w-2 h-2 bg-brand shrink-0"></div>
+                <span class="body-sm font-medium text-fg-muted">{{text}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if button_label}}
+          <a href="{{default button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-3 bg-brand text-on-brand px-10 py-5 body-sm font-bold uppercase tracking-[0.15em] hover:bg-base-alt transition">
+            {{button_label}}
+          </a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

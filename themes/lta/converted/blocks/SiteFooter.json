@@ -1,0 +1,123 @@
+{
+  "description": "Footer with columns",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Address",
+      "default": "<p>1250 H Street NW, Suite 600<br>Washington, DC 20005</p><p>202-638-4725</p>"
+    },
+    {
+      "type": "items",
+      "name": "Socials",
+      "default": [
+        {
+          "label": "Facebook",
+          "icon": "facebook-logo",
+          "url": "https://facebook.com"
+        },
+        {
+          "label": "LinkedIn",
+          "icon": "linkedin-logo",
+          "url": "https://linkedin.com"
+        },
+        {
+          "label": "Instagram",
+          "icon": "instagram-logo",
+          "url": "https://instagram.com"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Donate",
+      "default": "<p>When you support the Land Trust Alliance, your contribution helps to save more of the land you love.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subscribe",
+      "default": "<p>Learn how you can help land trusts gain ground — sign up for our newsletter.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Menu Columns",
+      "default": [
+        {
+          "title": "About",
+          "links": [
+            {
+              "label": "Our Mission",
+              "url": "/about/mission"
+            },
+            {
+              "label": "Leadership",
+              "url": "/about/leadership"
+            },
+            {
+              "label": "Careers",
+              "url": "/about/careers"
+            }
+          ]
+        },
+        {
+          "title": "Programs",
+          "links": [
+            {
+              "label": "Accreditation",
+              "url": "/programs/accreditation"
+            },
+            {
+              "label": "Policy",
+              "url": "/programs/policy"
+            }
+          ]
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "items",
+            "name": "Links",
+            "default": [],
+            "config": {
+              "fields": [
+                {
+                  "type": "text",
+                  "name": "Label"
+                },
+                {
+                  "type": "text",
+                  "name": "URL"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "© 2017–2026 Land Trust Alliance, Inc. All rights reserved."
+    }
+  ]
+}

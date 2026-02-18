@@ -1,0 +1,67 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "3-tier pricing cards",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Tiers",
+      "default": [
+        {
+          "name": "Starter",
+          "description": "Everything you need to start selling.",
+          "price": "99",
+          "button-label": "Start a free trial",
+          "button-url": "#",
+          "highlights": [
+            { "text": "Up to 3 team members" },
+            { "text": "Up to 5 deal progress boards" },
+            { "text": "Source leads from select platforms" }
+          ]
+        },
+        {
+          "name": "Growth",
+          "description": "All the extras for your growing team.",
+          "price": "149",
+          "button-label": "Start a free trial",
+          "button-url": "#",
+          "highlights": [
+            { "text": "Up to 10 team members" },
+            { "text": "Unlimited deal progress boards" },
+            { "text": "RadiantAI integrations" }
+          ]
+        },
+        {
+          "name": "Enterprise",
+          "description": "Added flexibility to close deals at scale.",
+          "price": "299",
+          "button-label": "Start a free trial",
+          "button-url": "#",
+          "highlights": [
+            { "text": "Unlimited active team members" },
+            { "text": "Unlimited deal progress boards" },
+            { "text": "Unlimited competitor analyses" }
+          ]
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Description" },
+          { "type": "text", "name": "Price" },
+          { "type": "text", "name": "Button Label" },
+          { "type": "text", "name": "Button URL" },
+          {
+            "type": "items",
+            "name": "Highlights",
+            "config": {
+              "fields": [
+                { "type": "text", "name": "Text" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<section class="bg-panel text-fg relative py-16 overflow-hidden">
+  <div class="lta-topography-header" aria-hidden="true"></div>
+  <div class="px-6 md:px-8 lg:px-12 xl:px-24">
+    {{#if title}}
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="heading-xl text-base-alt">{{title}}</h2>
+        {{#if description}}
+          <div class="body-lg mt-4 text-fg-muted">{{{description}}}</div>
+        {{/if}}
+      </div>
+    {{/if}}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {{#each stats}}
+        <div class="lta-stat-item text-center">
+          <div class="flex justify-center mb-4">
+            {{> IconBlob icon=this.icon}}
+          </div>
+          {{#if this.label}}
+            <div class="lta-stat-label font-bold text-sm tracking-wider uppercase mt-2">{{this.label}}</div>
+          {{/if}}
+          {{#if this.stat}}
+            <div class="lta-stat-number font-extrabold text-5xl md:text-6xl leading-tight text-base-alt mt-1" style="font-family: 'ff-meta-serif-web-pro', serif;">{{this.stat}}</div>
+          {{/if}}
+          {{#if this.body}}
+            <div class="body-sm mt-2 text-fg-muted">{{{this.body}}}</div>
+          {{/if}}
+          {{#if this.url}}
+            <a href="{{this.url}}" class="lta-stat-link inline-flex items-center gap-1.5 mt-4 font-bold text-sm tracking-wider uppercase no-underline hover:opacity-80">
+              <span>{{default this.link-label "Learn more"}}</span>
+              {{icon "caret-right" size="16"}}
+            </a>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="absolute left-0 w-full -bottom-2 h-2 text-base" aria-hidden="true">
+    <svg width="1440" height="8" viewBox="0 0 1440 8" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 w-full">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1440 8V0H0V0C0.0955 0.0046 145.534 7 250 7C290.373 7 345.373 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z" fill="currentColor"></path>
+    </svg>
+  </div>
+</section>

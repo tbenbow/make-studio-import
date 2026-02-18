@@ -1,0 +1,73 @@
+{
+  "description": "Stats with icon blobs",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "The power of land trusts"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Land trusts across the country are saving land and harnessing the power of conservation to help make their communities stronger.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "icon": "mountains",
+          "label": "Land trust members",
+          "stat": "948",
+          "body": "<p>Land trusts are community-led and supported and protect lands and waters that benefit everyone.</p>",
+          "linkLabel": "Find a land trust",
+          "url": "#"
+        },
+        {
+          "icon": "shield-plus",
+          "label": "Acres Protected",
+          "stat": "61,072,596",
+          "body": "<p>The Land Trust Alliance has set a bold goal for land trusts to conserve another 60 million acres by the end of the decade.</p>",
+          "linkLabel": "Conservation progress",
+          "url": "#"
+        },
+        {
+          "icon": "bank",
+          "label": "Years of Service",
+          "stat": "40",
+          "body": "<p>The Land Trust Alliance works passionately to support land trusts so they can secure more land now and for future generations.</p>",
+          "linkLabel": "Our Impact",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Stat"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "Link Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

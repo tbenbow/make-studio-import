@@ -1,0 +1,64 @@
+{
+  "description": "Logo and navigation",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Land Trust Alliance"
+    },
+    {
+      "type": "image",
+      "name": "Logo",
+      "config": {
+        "maxWidth": 600,
+        "maxHeight": 200,
+        "fileType": "",
+        "fileQuality": "0.9"
+      }
+    },
+    {
+      "type": "items",
+      "name": "Nav Items",
+      "default": [
+        {
+          "label": "About",
+          "url": "/about"
+        },
+        {
+          "label": "Programs",
+          "url": "/programs"
+        },
+        {
+          "label": "Resources",
+          "url": "/resources"
+        },
+        {
+          "label": "Find a Land Trust",
+          "url": "/find"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Donate"
+    },
+    {
+      "type": "text",
+      "name": "Button URL",
+      "default": "#"
+    }
+  ]
+}

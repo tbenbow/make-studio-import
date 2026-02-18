@@ -1,0 +1,45 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "5-card bento feature grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Sales"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Know more about your customers than they do."
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "default": [
+        { "eyebrow": "Insight", "title": "Get perfect clarity", "description": "Radiant uses social engineering to build a detailed financial picture of your leads.", "image": "" },
+        { "eyebrow": "Analysis", "title": "Undercut your competitors", "description": "With our advanced data mining, you'll know which companies your leads are talking to.", "image": "" },
+        { "eyebrow": "Speed", "title": "Built for power users", "description": "It's never been faster to cold email your entire contact list using streamlined shortcuts.", "image": "" },
+        { "eyebrow": "Source", "title": "Get the furthest reach", "description": "Bypass those inconvenient privacy laws to source leads from the most unexpected places.", "image": "" },
+        { "eyebrow": "Limitless", "title": "Sell globally", "description": "Radiant helps you sell in locations currently under international embargo.", "image": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Eyebrow" },
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Description" },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 2000,
+              "maxHeight": 2000,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

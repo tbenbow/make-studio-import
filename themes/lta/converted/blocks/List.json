@@ -1,0 +1,53 @@
+{
+  "description": "Icon and text list",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "icon": "check",
+          "label": "First item",
+          "body": "<p>Description of the first item.</p>"
+        },
+        {
+          "icon": "check",
+          "label": "Second item",
+          "body": "<p>Description of the second item.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Spacing",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Default",
+            "value": ""
+          },
+          {
+            "key": "Loose",
+            "value": "loose"
+          }
+        ]
+      }
+    }
+  ]
+}

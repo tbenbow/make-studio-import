@@ -1,0 +1,58 @@
+{
+  "description": "Banner hero with feature callout",
+  "fields": [
+    {
+      "name": "Banner Label",
+      "type": "text",
+      "default": "How to Help"
+    },
+    {
+      "name": "Banner Title",
+      "type": "text",
+      "default": "Together we can advance change and increase the impact of land conservation."
+    },
+    {
+      "name": "Banner Button Label",
+      "type": "text",
+      "default": "Donate Today"
+    },
+    {
+      "name": "Banner Button URL",
+      "type": "text",
+      "default": "#"
+    },
+    {
+      "name": "BG Image",
+      "type": "image"
+    },
+    {
+      "name": "Feature Label",
+      "type": "text",
+      "default": "Priority Spotlight"
+    },
+    {
+      "name": "Feature Title",
+      "type": "text",
+      "default": "An audacious and timely goal."
+    },
+    {
+      "name": "Feature Body",
+      "type": "wysiwyg",
+      "default": "<p>The Land Trust Alliance has set a bold goal with land trusts to conserve another 60 million acres by the end of 2030.</p>"
+    },
+    {
+      "name": "Feature Button Label",
+      "type": "text",
+      "default": "Learn More"
+    },
+    {
+      "name": "Feature Button URL",
+      "type": "text",
+      "default": "#"
+    },
+    {
+      "name": "Feature Image",
+      "type": "image"
+    }
+  ]
+}

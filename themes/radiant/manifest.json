@@ -1,0 +1,110 @@
+{
+  "siteId": "6992336b9d1e8d8808ac63d6",
+  "lastImport": "2026-02-15T23:49:58.962Z",
+  "components": {
+    "blocks": {
+      "BentoGrid": {
+        "status": "created",
+        "id": "69925ba552c570fadc30edef",
+        "updatedAt": "2026-02-15T23:49:58.004Z"
+      },
+      "BentoGridDark": {
+        "status": "created",
+        "id": "69925ba652c570fadc30edf3",
+        "updatedAt": "2026-02-15T23:49:58.008Z"
+      },
+      "BlogFeatured": {
+        "status": "created",
+        "id": "69925ba652c570fadc30edf7",
+        "updatedAt": "2026-02-15T23:49:58.013Z"
+      },
+      "BlogList": {
+        "status": "created",
+        "id": "69925ba652c570fadc30edfb",
+        "updatedAt": "2026-02-15T23:49:58.082Z"
+      },
+      "CareersSection": {
+        "status": "created",
+        "id": "69925ba652c570fadc30edff",
+        "updatedAt": "2026-02-15T23:49:58.546Z"
+      },
+      "CompanyHeader": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee03",
+        "updatedAt": "2026-02-15T23:49:58.593Z"
+      },
+      "FAQ": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee07",
+        "updatedAt": "2026-02-15T23:49:58.597Z"
+      },
+      "FeatureScreenshot": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee0b",
+        "updatedAt": "2026-02-15T23:49:58.600Z"
+      },
+      "Footer": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee0f",
+        "updatedAt": "2026-02-15T23:49:58.625Z"
+      },
+      "HeroGradient": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee13",
+        "updatedAt": "2026-02-15T23:49:58.713Z"
+      },
+      "InvestorsSection": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee17",
+        "updatedAt": "2026-02-15T23:49:58.801Z"
+      },
+      "LoginForm": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee1b",
+        "updatedAt": "2026-02-15T23:49:58.828Z"
+      },
+      "LogoCloud": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee1f",
+        "updatedAt": "2026-02-15T23:49:58.898Z"
+      },
+      "Navbar": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee23",
+        "updatedAt": "2026-02-15T23:49:58.945Z"
+      },
+      "PageHeader": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee27",
+        "updatedAt": "2026-02-15T23:49:58.949Z"
+      },
+      "PricingCards": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee2b",
+        "updatedAt": "2026-02-15T23:49:58.952Z"
+      },
+      "TeamSection": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee2f",
+        "updatedAt": "2026-02-15T23:49:58.956Z"
+      },
+      "TestimonialDark": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee33",
+        "updatedAt": "2026-02-15T23:49:58.959Z"
+      },
+      "Testimonials": {
+        "status": "created",
+        "id": "69925ba652c570fadc30ee37",
+        "updatedAt": "2026-02-15T23:49:58.962Z"
+      }
+    },
+    "partials": {
+      "Button": {
+        "status": "created",
+        "id": "69925ba552c570fadc30edeb",
+        "updatedAt": "2026-02-15T23:49:57.931Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Eyebrow + heading + lead text",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Pricing that grows with your team size."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Companies all over the world have closed millions of deals with Radiant. Sign up today and start selling smarter."
+    }
+  ]
+}

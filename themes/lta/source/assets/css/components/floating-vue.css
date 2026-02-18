@@ -1,0 +1,29 @@
+.v-popper__popper {
+  &.v-popper {
+    &--theme-tooltip {
+      .v-popper {
+        &__inner {
+          @apply max-w-xs px-3 pt-[0.5625rem] pb-2 text-white text-xs bg-black-900 rounded shadow-dark;
+        }
+
+        &__arrow-outer {
+          @apply border-black-900;
+        }
+
+        /* Transition */
+
+        &--hidden {
+          @apply invisible opacity-0 transition-opacity;
+        }
+
+        &--shown {
+          @apply visible opacity-100 transition-opacity;
+        }
+
+        &--skip-transition {
+          @apply !transition-none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Dark 4-card bento grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Outreach"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Customer outreach has never been easier."
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "default": [
+        { "eyebrow": "Networking", "title": "Sell at the speed of light", "description": "Our RadiantAI chat assistants analyze the sentiment of your conversations in real time.", "image": "" },
+        { "eyebrow": "Integrations", "title": "Meet leads where they are", "description": "With thousands of integrations, no one will be able to escape your cold outreach.", "image": "" },
+        { "eyebrow": "Meetings", "title": "Smart call scheduling", "description": "Automatically insert intro calls into your leads' calendars.", "image": "" },
+        { "eyebrow": "Engagement", "title": "Become a thought leader", "description": "RadiantAI automatically writes LinkedIn posts that relate current events to B2B sales.", "image": "" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Eyebrow" },
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Description" },
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 2000,
+              "maxHeight": 2000,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

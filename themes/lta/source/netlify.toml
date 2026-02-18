@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://landtrustalliance.netlify.app/*"
+  to = "https://landtrustalliance.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://landtrustalliance-preview.netlify.app/*"
+  to = "https://preview.landtrustalliance.org/:splat"
+  status = 301
+  force = true

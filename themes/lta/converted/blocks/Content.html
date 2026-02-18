@@ -1,0 +1,18 @@
+<section class="py-16 bg-base">
+  <div class="px-6 md:px-8 lg:px-12 xl:px-24">
+    {{#if sidebar}}
+      <div class="grid gap-12 grid-cols-1 lg:grid-cols-12">
+        <div class="{{#if (eq sidebar-position "left")}}order-2 lg:col-span-8 lg:col-start-5{{else}}lg:col-span-8 lg:col-start-1{{/if}}">
+          {{{prose body}}}
+        </div>
+        <div class="{{#if (eq sidebar-position "left")}}order-1 lg:col-span-4 lg:col-start-1{{else}}lg:col-span-4 xl:pl-12{{/if}}">
+          {{{prose sidebar}}}
+        </div>
+      </div>
+    {{else}}
+      <div class="mx-auto max-w-4xl">
+        {{{prose body}}}
+      </div>
+    {{/if}}
+  </div>
+</section>

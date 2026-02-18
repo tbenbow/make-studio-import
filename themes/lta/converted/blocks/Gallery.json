@@ -1,0 +1,45 @@
+{
+  "description": "Image grid",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        {
+          "image": "",
+          "caption": "Image 1"
+        },
+        {
+          "image": "",
+          "caption": "Image 2"
+        },
+        {
+          "image": "",
+          "caption": "Image 3"
+        },
+        {
+          "image": "",
+          "caption": "Image 4"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 2000,
+              "maxHeight": 1500,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Caption"
+          }
+        ]
+      }
+    }
+  ]
+}

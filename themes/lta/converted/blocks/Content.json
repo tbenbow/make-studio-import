@@ -1,0 +1,31 @@
+{
+  "description": "Rich text with sidebar",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<h2>Content Title</h2><p>This is a rich text content area. You can add headings, paragraphs, lists, and more.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Sidebar"
+    },
+    {
+      "type": "select",
+      "name": "Sidebar Position",
+      "default": "right",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Right",
+            "value": "right"
+          },
+          {
+            "key": "Left",
+            "value": "left"
+          }
+        ]
+      }
+    }
+  ]
+}

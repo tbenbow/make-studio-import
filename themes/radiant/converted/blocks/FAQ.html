@@ -1,0 +1,20 @@
+<section class="bg-base px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    <div id="faqs" class="scroll-mt-8">
+      {{#if eyebrow}}
+      <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase text-center">{{eyebrow}}</p>
+      {{/if}}
+      {{#if headline}}
+      <h2 class="heading-xl text-fg mt-2 text-center">{{headline}}</h2>
+      {{/if}}
+      <div class="mx-auto mt-16 mb-32 max-w-xl space-y-12">
+        {{#each questions}}
+        <dl>
+          <dt class="body-sm font-semibold text-fg">{{question}}</dt>
+          <dd class="mt-4 body-sm text-fg-muted">{{answer}}</dd>
+        </dl>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

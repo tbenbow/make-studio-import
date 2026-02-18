@@ -1,0 +1,48 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Fixed nav with CTA",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo",
+      "default": "",
+      "config": { "maxWidth": 200, "maxHeight": 60 }
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "PEAK"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "label": "About", "url": "#about" },
+        { "label": "Process", "url": "#process" },
+        { "label": "Results", "url": "#testimonials" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Url" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Book Now"
+    },
+    {
+      "type": "text",
+      "name": "Button Link",
+      "default": "#book"
+    }
+  ]
+}

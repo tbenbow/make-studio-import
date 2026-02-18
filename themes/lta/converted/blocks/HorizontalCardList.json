@@ -1,0 +1,98 @@
+{
+  "description": "Horizontal image card list",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "",
+          "label": "",
+          "title": "First Item",
+          "subtitle": "",
+          "body": "<p>Description of the first item.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "label": "",
+          "title": "Second Item",
+          "subtitle": "",
+          "body": "<p>Description of the second item.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "label": "",
+          "title": "Third Item",
+          "subtitle": "",
+          "body": "<p>Description of the third item.</p>",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 800,
+              "maxHeight": 800,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Subtitle"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

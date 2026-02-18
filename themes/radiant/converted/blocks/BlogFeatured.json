@@ -1,0 +1,17 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Featured blog post cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Featured"
+    },
+    {
+      "type": "text",
+      "name": "Post Type",
+      "default": "post"
+    }
+  ]
+}

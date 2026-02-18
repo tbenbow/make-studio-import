@@ -1,0 +1,29 @@
+<header class="bg-base pt-12 sm:pt-16 px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    <nav class="relative flex justify-between">
+      <div class="relative flex gap-6">
+        <div class="py-3">
+          <a href="/" title="Home">
+            {{#if logo}}
+            <img src="{{logo}}" alt="{{default logo-alt "Home"}}" class="h-9" />
+            {{else}}
+            <span class="heading-sm text-fg">{{default site-name "Radiant"}}</span>
+            {{/if}}
+          </a>
+        </div>
+      </div>
+      <div class="relative hidden lg:flex">
+        {{#each links}}
+        <a href="{{url}}" class="flex items-center px-4 py-3 body-md font-medium text-fg {{#isActive url}}text-brand{{else}}hover:text-fg-muted{{/isActive}}">
+          {{label}}
+        </a>
+        {{/each}}
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" class="flex size-12 items-center justify-center self-center rounded-lg hover:bg-base-muted" aria-label="Open main menu">
+          {{icon "list" size="24"}}
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>

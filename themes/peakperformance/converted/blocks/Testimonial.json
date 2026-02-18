@@ -1,0 +1,53 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Quote with sidebar",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Real results"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>DON'T TAKE<br><span class=\"text-brand\">OUR WORD.</span></p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Quote",
+      "default": "<p>\"I WENT FROM CONSISTENTLY PLACING 5TH TO WINNING MY FIRST NATIONAL TITLE IN UNDER 8 MONTHS.\"</p>"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&h=200&fit=crop&crop=face",
+      "config": { "maxWidth": 200, "maxHeight": 200 }
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Sasha Petrov"
+    },
+    {
+      "type": "text",
+      "name": "Byline",
+      "default": "National Swimming Champion"
+    },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        { "name": "Sasha Petrov", "byline": "National Swimming Champion" },
+        { "name": "Marcus Chen", "byline": "Olympic Trials Qualifier" },
+        { "name": "Amara Okafor", "byline": "Continental Cycling Champion" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Byline" }
+        ]
+      }
+    }
+  ]
+}

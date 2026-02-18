@@ -1,0 +1,2668 @@
+{
+  "siteId": "6992ceef9d1e8d8808ac73a4",
+  "capturedAt": "2026-02-16T23:29:56.297Z",
+  "theme": {
+    "fonts": [
+      {
+        "family": "ff-meta-serif-web-pro",
+        "weight": 300,
+        "style": "normal",
+        "source": "typekit",
+        "kitId": "esf8fzx"
+      },
+      {
+        "family": "ff-meta-serif-web-pro",
+        "weight": 800,
+        "style": "normal",
+        "source": "typekit",
+        "kitId": "esf8fzx"
+      },
+      {
+        "family": "lft-etica",
+        "weight": 400,
+        "style": "normal",
+        "source": "typekit",
+        "kitId": "esf8fzx"
+      },
+      {
+        "family": "lft-etica",
+        "weight": 600,
+        "style": "normal",
+        "source": "typekit",
+        "kitId": "esf8fzx"
+      },
+      {
+        "family": "lft-etica",
+        "weight": 700,
+        "style": "normal",
+        "source": "typekit",
+        "kitId": "esf8fzx"
+      },
+      {
+        "family": "lft-etica",
+        "weight": 800,
+        "style": "normal",
+        "source": "typekit",
+        "kitId": "esf8fzx"
+      }
+    ],
+    "systemColors": {
+      "brand": "#58a66f",
+      "on-brand": "#ffffff",
+      "base": "#ffffff",
+      "base-muted": "#f5f5f5",
+      "base-alt": "#26484c",
+      "panel": "#e6e0d5",
+      "fg": "#1a1a1a",
+      "fg-muted": "#383838",
+      "fg-alt": "#767676",
+      "border": "#e4e4e4"
+    },
+    "customColors": [
+      {
+        "name": "green-dark",
+        "value": "#26484c"
+      },
+      {
+        "name": "orange",
+        "value": "#db8043"
+      },
+      {
+        "name": "yellow",
+        "value": "#d9a832"
+      },
+      {
+        "name": "blue",
+        "value": "#50abbd"
+      },
+      {
+        "name": "stone",
+        "value": "#e6e0d5"
+      },
+      {
+        "name": "ruby",
+        "value": "#cd172f"
+      }
+    ],
+    "palette": {
+      "primary": {
+        "label": "primary",
+        "colors": [
+          "#d4edda",
+          "#8fcfa0",
+          "#58a66f",
+          "#3d7a4f",
+          "#26484c"
+        ]
+      },
+      "accent1": {
+        "label": "accent-1",
+        "colors": [
+          "#fde8d3",
+          "#f0b88a",
+          "#db8043",
+          "#ba6219",
+          "#895c3e"
+        ]
+      },
+      "accent2": {
+        "label": "accent-2",
+        "colors": [
+          "#d4f0f5",
+          "#8fd4e0",
+          "#50abbd",
+          "#3a8a9c",
+          "#26484c"
+        ]
+      },
+      "accent3": {
+        "label": "accent-3",
+        "colors": [
+          "#f5ecd0",
+          "#e8d07a",
+          "#d9a832",
+          "#b08a28",
+          "#786020"
+        ]
+      },
+      "grays": {
+        "label": "gray",
+        "colors": [
+          "#f5f5f5",
+          "#e4e4e4",
+          "#767676",
+          "#383838",
+          "#1a1a1a"
+        ]
+      }
+    },
+    "headingTypography": {
+      "heading-xl": {
+        "fontFamily": "ff-meta-serif-web-pro",
+        "fontWeight": 800,
+        "fontSize": 48,
+        "lineHeight": 55,
+        "letterSpacing": -0.5,
+        "mobileFontSize": 35,
+        "mobileLineHeight": 40
+      },
+      "heading-lg": {
+        "fontFamily": "ff-meta-serif-web-pro",
+        "fontWeight": 800,
+        "fontSize": 39,
+        "lineHeight": 45,
+        "letterSpacing": -0.3,
+        "mobileFontSize": 27,
+        "mobileLineHeight": 31
+      },
+      "heading-md": {
+        "fontFamily": "ff-meta-serif-web-pro",
+        "fontWeight": 800,
+        "fontSize": 32,
+        "lineHeight": 37,
+        "letterSpacing": -0.2,
+        "mobileFontSize": 24,
+        "mobileLineHeight": 28
+      },
+      "heading-sm": {
+        "fontFamily": "ff-meta-serif-web-pro",
+        "fontWeight": 800,
+        "fontSize": 27,
+        "lineHeight": 31,
+        "letterSpacing": 0,
+        "mobileFontSize": 22,
+        "mobileLineHeight": 25
+      },
+      "heading-xs": {
+        "fontFamily": "lft-etica",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeight": 19,
+        "letterSpacing": 1
+      }
+    },
+    "bodyTypography": {
+      "body-lg": {
+        "fontFamily": "lft-etica",
+        "fontWeight": 400,
+        "fontSize": 22,
+        "lineHeight": 33,
+        "letterSpacing": 0
+      },
+      "body-md": {
+        "fontFamily": "lft-etica",
+        "fontWeight": 400,
+        "fontSize": 18,
+        "lineHeight": 27,
+        "letterSpacing": 0
+      },
+      "body-sm": {
+        "fontFamily": "lft-etica",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 24,
+        "letterSpacing": 0
+      }
+    },
+    "prose": {
+      "elements": {
+        "h1": {
+          "typographyClass": "heading-xl",
+          "marginBottom": 1.5
+        },
+        "h2": {
+          "typographyClass": "heading-lg",
+          "marginBottom": 1.25
+        },
+        "h3": {
+          "typographyClass": "heading-md",
+          "marginBottom": 1
+        },
+        "h4": {
+          "typographyClass": "heading-sm",
+          "marginBottom": 0.75
+        },
+        "h5": {
+          "typographyClass": "heading-xs",
+          "marginBottom": 0.5
+        },
+        "h6": {
+          "typographyClass": "heading-xs",
+          "marginBottom": 0.5
+        },
+        "p": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        },
+        "ul": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        },
+        "ol": {
+          "typographyClass": "body-md",
+          "marginBottom": 1.25
+        }
+      },
+      "lists": {
+        "listStyleType": "disc",
+        "indent": 1.5,
+        "itemSpacing": 0.5,
+        "nestedIndent": 1.5
+      },
+      "links": {
+        "color": "accent",
+        "hoverColor": "primary",
+        "underline": "always"
+      },
+      "customCSS": "blockquote {\n  border-left: 3px solid #58a66f;\n  padding-left: 1.5rem;\n  margin: 1.5rem 0;\n  font-style: italic;\n  color: #383838;\n}\n\npre {\n  background: #f5f5f5;\n  padding: 1rem;\n  border-radius: 6px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n  overflow-x: auto;\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n  border: 1px solid #e4e4e4;\n}\n\npre code {\n  white-space: pre-wrap !important;\n  word-wrap: break-word !important;\n}\n\ncode:not(pre code) {\n  background: #f5f5f5;\n  padding: 0.15em 0.4em;\n  border-radius: 3px;\n  font-family: 'SF Mono', 'Fira Code', monospace;\n  font-size: 0.9em;\n}"
+    },
+    "customCSS": ".prose {\n  color: var(--color-fg-muted);\n}\n.prose h1,\n.prose h2,\n.prose h3,\n.prose h4 {\n  color: var(--color-base-alt);\n  font-family: 'ff-meta-serif-web-pro', serif;\n}\n.prose a {\n  color: var(--color-brand);\n  text-decoration: underline;\n  text-underline-offset: 2px;\n}\n.prose a:hover {\n  color: var(--color-base-alt);\n}\n\n/* Dark section descendant overrides */\n.lta-section-dark .heading-xl,\n.lta-section-dark .heading-lg,\n.lta-section-dark .heading-md,\n.lta-section-dark .heading-sm,\n.lta-section-dark .heading-xs,\n.lta-section-dark h1, .lta-section-dark h2,\n.lta-section-dark h3, .lta-section-dark h4 {\n  color: var(--color-panel);\n}\n.lta-section-dark a {\n  color: var(--color-orange);\n}\n\n/* Grunge texture overlay */\n.lta-grunge-bg {\n  position: relative;\n}\n.lta-grunge-bg::before {\n  content: '';\n  position: absolute;\n  inset: 0;\n  z-index: 0;\n  opacity: 0.12;\n  background-image: url('/assets/textures/grunge@2x.png');\n  background-size: 800px;\n  background-position: center;\n  background-repeat: repeat;\n}\n\n/* Topography texture header */\n.lta-topography-header {\n  position: relative;\n}\n.lta-topography-header::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 1.5rem;\n  background-image: url('/assets/textures/topography.png');\n  background-size: 400%;\n  background-repeat: repeat-x;\n  background-position: left top;\n}\n\n/* Expandable active state */\ndetails[open] {\n  border-color: var(--color-orange);\n}\ndetails[open] > summary {\n  background: linear-gradient(to bottom, var(--color-base-muted), transparent);\n}\ndetails[open] > summary .lta-expand-title {\n  color: var(--color-orange);\n}\n"
+  },
+  "blocks": [
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2782ca637058dca184",
+      "name": "Alert",
+      "description": "Alert banner with CTA",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-4 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <div class=\"p-4 text-sm leading-normal rounded-md bg-base-alt text-on-brand flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-6\">\n      <div class=\"flex-1 flex flex-col md:flex-row md:items-center md:gap-6\">\n        <div class=\"relative flex items-center py-2 pl-12 md:pl-7 pr-6 uppercase tracking-wide flex-shrink-0 font-bold md:border-r md:border-white/30\" style=\"color: #d9a832;\">\n          <div class=\"absolute left-0 md:-left-7 top-1/2 -translate-y-1/2\">\n            {{> IconBlob icon=icon size=\"sm\" color=\"text-yellow\" iconSize=\"16\"}}\n          </div>\n          {{default type-label \"Alert\"}}\n        </div>\n        <p class=\"pr-6 py-2 text-white\">{{body}}</p>\n      </div>\n      {{#if button-label}}\n        <div class=\"self-end lg:self-auto\">\n          {{> Button label=button-label url=button-url icon=\"arrow-right\" style=\"solid\"}}\n        </div>\n      {{/if}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "205954bd-72a8-41fd-925d-2b89f02c4376",
+          "type": "text",
+          "name": "Icon",
+          "value": "megaphone"
+        },
+        {
+          "id": "26bd7fe8-4666-4e70-96d8-48b7d1fd5a4e",
+          "type": "text",
+          "name": "Type Label",
+          "value": "Alert"
+        },
+        {
+          "id": "05a5f61e-288f-4a39-8fd6-3632ec961c38",
+          "type": "text",
+          "name": "Body",
+          "value": "Important announcement goes here."
+        },
+        {
+          "id": "04b7fbaa-4a65-475b-8256-8e8876f158b5",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Learn More"
+        },
+        {
+          "id": "361aed80-f582-4eee-bfe2-a2cf2ce3644d",
+          "type": "text",
+          "name": "Button URL",
+          "value": "#"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:11.996Z",
+      "updatedAt": "2026-02-16T21:29:11.996Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca188",
+      "name": "Aside",
+      "description": "Sidebar card with texture",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <aside class=\"overflow-hidden bg-panel rounded-lg max-w-2xl\">\n      <div class=\"relative px-8 pt-12 pb-6 lta-topography-header\">\n        {{#if title}}\n          <h5 class=\"heading-sm mb-6\" style=\"color: #26484c;\">{{title}}</h5>\n        {{/if}}\n        {{#if body}}\n          <div class=\"body-md text-fg-muted\">{{{prose body}}}</div>\n        {{/if}}\n      </div>\n    </aside>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "7a1a6c5e-6049-4f7b-8d75-be1e300b99d9",
+          "type": "text",
+          "name": "Title",
+          "value": "Related Information"
+        },
+        {
+          "id": "44ec0d7e-1cbb-4a95-8530-f7db926243da",
+          "type": "wysiwyg",
+          "name": "Body",
+          "value": "<p>Additional context or related links can go here.</p>"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.000Z",
+      "updatedAt": "2026-02-16T21:29:12.000Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca18c",
+      "name": "Banner",
+      "description": "Hero with background image",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"relative w-full bg-base-alt overflow-hidden {{#switch size}}{{#case \"lg\"}}min-h-[720px]{{/case}}{{#case \"sm\"}}min-h-[560px]{{/case}}{{#otherwise}}min-h-[640px]{{/otherwise}}{{/switch}}\">\n  {{#if bg-image}}\n    <div class=\"absolute inset-0\">\n      <img src=\"{{bg-image}}\" alt=\"\" class=\"w-full h-full object-cover object-center\" />\n      <div class=\"absolute inset-0 bg-black/60 lg:bg-transparent\">\n        <div class=\"hidden lg:block h-full w-full 2xl:w-3/4 bg-gradient-to-r from-black/60\"></div>\n      </div>\n    </div>\n  {{/if}}\n  <div class=\"relative px-6 md:px-8 lg:px-12 xl:px-24 flex items-center min-h-[inherit] py-24\">\n    <div class=\"max-w-2xl\">\n      {{#if label}}\n        {{> Label text=label}}\n      {{/if}}\n      {{#if title}}\n        <h1 class=\"heading-xl mt-4\" style=\"color: #e6e0d5;\">{{title}}</h1>\n      {{/if}}\n      {{#if subtitle}}\n        <h3 class=\"heading-sm mt-2 text-white/70\">{{subtitle}}</h3>\n      {{/if}}\n      {{#if body}}\n        <div class=\"body-lg mt-4 text-white\">\n          {{{body}}}\n        </div>\n      {{/if}}\n      {{#if button-1-label}}\n        <div class=\"flex flex-wrap gap-6 mt-8\">\n          {{> Button label=button-1-label url=button-1-url style=\"solid\"}}\n          {{#if button-2-label}}\n            {{> Button label=button-2-label url=button-2-url style=\"outline\"}}\n          {{/if}}\n        </div>\n      {{/if}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "a5f82773-28e2-4249-8346-9b94f638347f",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "01d0b58d-190a-4f78-aa22-923c13b3eac2",
+          "type": "text",
+          "name": "Title",
+          "value": "Saving the Places People Love"
+        },
+        {
+          "id": "4a069790-35e3-4077-a931-f549cc5bbe83",
+          "type": "text",
+          "name": "Subtitle",
+          "value": ""
+        },
+        {
+          "id": "af8e8813-79f8-47f6-b27c-93fd39fe93bc",
+          "type": "wysiwyg",
+          "name": "Body",
+          "value": ""
+        },
+        {
+          "id": "bff5526d-a533-435a-8b3c-3241a2c112cc",
+          "type": "image",
+          "name": "BG Image",
+          "value": "",
+          "config": {
+            "maxWidth": 3000,
+            "maxHeight": 2000,
+            "fileType": "",
+            "fileQuality": "0.8"
+          }
+        },
+        {
+          "id": "7cac9ff5-db75-4a79-b1b5-72b526f415c8",
+          "type": "select",
+          "name": "Size",
+          "value": "",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Default",
+                "value": ""
+              },
+              {
+                "key": "Large",
+                "value": "lg"
+              },
+              {
+                "key": "Small",
+                "value": "sm"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b288aef3-2aaf-4aff-871f-8b972e1ea8c3",
+          "type": "text",
+          "name": "Button 1 Label",
+          "value": "Learn More"
+        },
+        {
+          "id": "dab24d27-3997-4694-8c0f-23dcbafdb936",
+          "type": "text",
+          "name": "Button 1 URL",
+          "value": "#"
+        },
+        {
+          "id": "32e4b67b-2f13-4378-8398-8da352b8c18b",
+          "type": "text",
+          "name": "Button 2 Label",
+          "value": ""
+        },
+        {
+          "id": "8b7a2b56-a847-4b86-9a2d-f8d91fbdf850",
+          "type": "text",
+          "name": "Button 2 URL",
+          "value": ""
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.005Z",
+      "updatedAt": "2026-02-16T21:29:12.005Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca190",
+      "name": "BannerCards",
+      "description": "Hero with overlapping cards",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"relative w-full bg-base-alt overflow-hidden\">\n  {{#if bg-image}}\n    <div class=\"absolute inset-0\">\n      <img src=\"{{bg-image}}\" alt=\"\" class=\"w-full h-full object-cover object-center\" />\n      <div class=\"absolute inset-0 bg-black/60 lg:bg-transparent\">\n        <div class=\"hidden lg:block h-full w-full 2xl:w-3/4 bg-gradient-to-r from-black/60\"></div>\n      </div>\n    </div>\n  {{/if}}\n  <div class=\"relative px-6 md:px-8 lg:px-12 xl:px-24 py-24\">\n    <div class=\"max-w-2xl\">\n      {{#if label}}\n        {{> Label text=label}}\n      {{/if}}\n      {{#if title}}\n        <h1 class=\"heading-xl mt-4\" style=\"color: #e6e0d5;\">{{title}}</h1>\n      {{/if}}\n      {{#if body}}\n        <div class=\"body-lg mt-4 text-white\">{{{body}}}</div>\n      {{/if}}\n    </div>\n    {{#if (length cards)}}\n      <div class=\"grid gap-6 grid-cols-1 lg:grid-cols-3 lg:gap-12 mt-12\">\n        {{#each cards}}\n          <div class=\"flex flex-row items-center bg-base rounded-lg shadow-lg overflow-hidden\">\n            {{#if this.image}}\n              <div class=\"flex-shrink-0 w-[108px] self-stretch\">\n                <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"w-full h-full object-cover\" />\n              </div>\n            {{/if}}\n            <div class=\"flex-1 p-4\">\n              {{#if this.title}}\n                <h4 class=\"heading-xs\" style=\"color: #26484c;\">\n                  {{#if this.url}}<a href=\"{{this.url}}\">{{this.title}}</a>{{else}}{{this.title}}{{/if}}\n                </h4>\n              {{/if}}\n              {{#if this.body}}\n                <div class=\"body-sm text-fg-muted mt-1\">{{{this.body}}}</div>\n              {{/if}}\n            </div>\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "a0c23395-39a4-4a8e-a1d3-94e352391b0a",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "b48fc221-bad3-4cdb-9ec6-1878aef6084d",
+          "type": "text",
+          "name": "Title",
+          "value": "Welcome to LTA"
+        },
+        {
+          "id": "d0cfcad0-97dc-4826-955c-38bd50b64002",
+          "type": "wysiwyg",
+          "name": "Body",
+          "value": ""
+        },
+        {
+          "id": "5555377c-9872-43f6-a4b0-02a1d3a92e9c",
+          "type": "image",
+          "name": "BG Image",
+          "value": "",
+          "config": {
+            "maxWidth": 3000,
+            "maxHeight": 2000,
+            "fileType": "",
+            "fileQuality": "0.8"
+          }
+        },
+        {
+          "id": "9531b637-3bb9-45a2-ac13-e14443dbc0d6",
+          "type": "items",
+          "name": "Cards",
+          "value": [
+            {
+              "id": "01bba2aa-d19b-4a01-9825-3dbaaa7e100f",
+              "image": "",
+              "title": "Find a Land Trust",
+              "body": "<p>Locate a land trust near you.</p>",
+              "url": "#"
+            },
+            {
+              "id": "ce699ced-9482-4458-9b91-2f837e9fb0c0",
+              "image": "",
+              "title": "Get Accredited",
+              "body": "<p>Learn about accreditation.</p>",
+              "url": "#"
+            },
+            {
+              "id": "cd1b4cd3-698d-4bea-b37e-e9eae03ba692",
+              "image": "",
+              "title": "Support Conservation",
+              "body": "<p>Make a difference today.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "c6a54714-67f9-4564-a462-764241dceb00",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 400,
+                  "maxHeight": 400,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "23e745cb-78e6-4949-b1b1-b2b111c52a0c",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "e34a646c-8a1f-46c1-8792-eb77700e2404",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "db768443-7335-4af1-84b1-305b34d7d7d2",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.010Z",
+      "updatedAt": "2026-02-16T21:29:12.010Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca194",
+      "name": "Callout",
+      "description": "CTA with texture bg",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"relative py-12 bg-base-muted lta-grunge-bg overflow-hidden\">\n  <div class=\"absolute left-0 w-full top-0 h-2 z-10\" aria-hidden=\"true\">\n    <svg width=\"1440\" height=\"8\" viewBox=\"0 0 1440 8\" preserveAspectRatio=\"none\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-2 w-full text-base\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1440 8V0H0V0C0.0955 0.0046 145.534 7 250 7C290.373 7 345.373 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z\" fill=\"currentColor\"/>\n    </svg>\n  </div>\n  <div class=\"relative z-[1] px-6 md:px-8 lg:px-12 xl:px-24\">\n    <div class=\"grid gap-6 grid-cols-1 lg:grid-cols-12 lg:gap-12 lg:items-center\">\n      {{#if icon}}\n        <div class=\"min-w-24 text-center lg:col-span-2\">\n          {{> IconBlob icon=icon color=\"text-brand\"}}\n        </div>\n      {{else if image}}\n        <div class=\"min-w-24 text-center lg:col-span-2\">\n          <img src=\"{{image}}\" alt=\"\" class=\"inline-block align-top w-72\" />\n        </div>\n      {{/if}}\n      <div class=\"lg:col-span-6 text-center lg:text-left\">\n        {{#if title}}\n          <h3 class=\"heading-md\" style=\"color: #26484c;\">{{title}}</h3>\n        {{/if}}\n        {{#if description}}\n          <div class=\"body-md mt-2 text-fg-muted\">{{{description}}}</div>\n        {{/if}}\n      </div>\n      {{#if button-label}}\n        <div class=\"lg:col-span-4 flex justify-center\">\n          {{> Button label=button-label url=button-url style=\"solid\"}}\n        </div>\n      {{/if}}\n    </div>\n  </div>\n  <div class=\"absolute left-0 w-full bottom-0 h-2\" aria-hidden=\"true\">\n    <svg width=\"1440\" height=\"8\" viewBox=\"0 0 1440 8\" preserveAspectRatio=\"none\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-2 w-full text-base\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1440 8H0V0C0 0 145.5 7 250 7C290.373 7 345.374 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z\" fill=\"currentColor\"/>\n    </svg>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "072dc09c-33cf-47fa-b8c7-31b62605c624",
+          "type": "text",
+          "name": "Icon",
+          "value": "hand-heart"
+        },
+        {
+          "id": "2d8018de-ea1a-4644-9ca6-b8de49d64a75",
+          "type": "image",
+          "name": "Image",
+          "value": "",
+          "config": {
+            "maxWidth": 1200,
+            "maxHeight": 1200,
+            "fileType": "",
+            "fileQuality": "0.8"
+          }
+        },
+        {
+          "id": "15cfca9a-3a21-45b1-8318-aa95ebd2682d",
+          "type": "text",
+          "name": "Title",
+          "value": "Support Conservation"
+        },
+        {
+          "id": "135023a8-1e5c-4ab0-b1a5-e24e3a123f00",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": "<p>Your support helps protect the places we all love.</p>"
+        },
+        {
+          "id": "285c1d3a-bfe5-4bfe-8d3a-83968d3bbbfa",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Donate Now"
+        },
+        {
+          "id": "a9a2ea01-288e-4d64-a491-2fa7206a347f",
+          "type": "text",
+          "name": "Button URL",
+          "value": "#"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.015Z",
+      "updatedAt": "2026-02-16T21:29:12.015Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca198",
+      "name": "CardGrid",
+      "description": "Grid of image cards",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title subtitle=subtitle description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{#each items}}\n        <div class=\"flex flex-col bg-base rounded-lg shadow-md border border-border overflow-hidden\">\n          {{#if this.image}}\n            <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"w-full\" style=\"aspect-ratio: 16/9; object-fit: cover;\" />\n          {{/if}}\n          <div class=\"flex-1 p-6\">\n            {{#if this.label}}\n              <div class=\"mb-2 text-brand text-xs font-bold uppercase tracking-wide\">{{this.label}}</div>\n            {{/if}}\n            {{#if this.title}}\n              <h3 class=\"heading-sm\" style=\"color: #26484c;\">\n                {{#if this.url}}<a href=\"{{this.url}}\" class=\"hover:text-brand transition-colors\">{{this.title}}</a>{{else}}{{this.title}}{{/if}}\n              </h3>\n            {{/if}}\n            {{#if this.subtitle}}\n              <div class=\"mt-1 text-fg-alt text-xs uppercase tracking-wide\">{{this.subtitle}}</div>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-fg-muted mt-3\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "902b5fdf-d5e2-4600-b562-b5a43d509b05",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "6aaa4dbd-b27f-466b-b3aa-b3ebe797b5e3",
+          "type": "text",
+          "name": "Title",
+          "value": ""
+        },
+        {
+          "id": "ecdc0830-29fc-46a5-a90c-e79221db11b6",
+          "type": "text",
+          "name": "Subtitle",
+          "value": ""
+        },
+        {
+          "id": "983ae53e-0435-44fb-acc2-dde70aea6eae",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "bd530a56-0920-48e1-8820-f5840b73b088",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "8e068fa1-07ae-42ab-a4cd-b1f3b109db6c",
+          "type": "select",
+          "name": "Columns",
+          "value": "3",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              },
+              {
+                "key": "4 Columns",
+                "value": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "44e8f9c7-71aa-4e91-ab97-a8e78f1009dd",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "30c7bf17-896f-4285-9b37-80d3c10bbea9",
+              "image": "",
+              "label": "Category",
+              "title": "Card Title",
+              "subtitle": "",
+              "body": "<p>Brief description of this item.</p>",
+              "url": "#"
+            },
+            {
+              "id": "1292c324-5b5d-4efb-8a2f-880757a465fc",
+              "image": "",
+              "label": "Category",
+              "title": "Another Card",
+              "subtitle": "",
+              "body": "<p>Brief description of this item.</p>",
+              "url": "#"
+            },
+            {
+              "id": "44dfe256-01db-4a65-81f4-b4b7fb32792c",
+              "image": "",
+              "label": "Category",
+              "title": "Third Card",
+              "subtitle": "",
+              "body": "<p>Brief description of this item.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "79469a55-8898-4553-a5ab-71695d47fd2a",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 1200,
+                  "maxHeight": 800,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "f9291950-babe-4229-8a9b-829ee6fca00a",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "0296b791-b612-41e6-9eeb-b44c80e721f3",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "d6f76597-cd7e-4cf8-b5b9-d7471dc770e5",
+                "type": "text",
+                "name": "Subtitle",
+                "value": ""
+              },
+              {
+                "id": "392e57ae-f58f-4389-a0f8-5596d9eac790",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "69c31269-32af-4d2f-826b-69a9fbea5e1f",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.019Z",
+      "updatedAt": "2026-02-16T21:29:12.019Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca19c",
+      "name": "Collection",
+      "description": "Link collection card",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <div class=\"flex flex-col bg-base-muted rounded-lg overflow-hidden max-w-lg\">\n      <div class=\"px-6 py-4 bg-brand\">\n        {{#if label}}\n          <div class=\"mb-1 text-on-brand text-xs font-bold uppercase tracking-wide\">{{label}}</div>\n        {{/if}}\n        <h6 class=\"heading-xs text-on-brand\">{{name}}</h6>\n      </div>\n      <div class=\"flex-1 py-3\">\n        {{#each links}}\n          <a href=\"{{default this.url \"#\"}}\" class=\"block px-6 py-2 body-sm text-fg hover:text-brand hover:bg-white transition-colors\">\n            {{this.label}}\n          </a>\n        {{/each}}\n      </div>\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "389138d1-1e95-4e4a-a5df-5a6c5b1b2c42",
+          "type": "text",
+          "name": "Label",
+          "value": "Collection"
+        },
+        {
+          "id": "8148b2b3-2a0f-4b8b-9e3e-c856467e3391",
+          "type": "text",
+          "name": "Name",
+          "value": "Resources"
+        },
+        {
+          "id": "aa4273fc-8099-431f-99fb-307fa6d27d40",
+          "type": "items",
+          "name": "Links",
+          "value": [
+            {
+              "id": "19d42752-5b23-4583-af29-e57f6c019163",
+              "label": "Getting Started",
+              "url": "#"
+            },
+            {
+              "id": "e577eed3-29da-462c-8e89-80bb7c62ae75",
+              "label": "Best Practices",
+              "url": "#"
+            },
+            {
+              "id": "e15e4746-abae-4f64-9cd3-5c91e1f440fd",
+              "label": "Case Studies",
+              "url": "#"
+            },
+            {
+              "id": "60dde454-6d81-454b-9eed-63cfea7e971e",
+              "label": "Templates",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "51a0688b-007d-474e-a79a-64ee0cdadd10",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "5ce0be85-5a58-4d00-9dc9-c14cafa94af6",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.024Z",
+      "updatedAt": "2026-02-16T21:29:12.024Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1a0",
+      "name": "Content",
+      "description": "Rich text with sidebar",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if sidebar}}\n      <div class=\"grid gap-12 grid-cols-1 lg:grid-cols-12\">\n        <div class=\"{{#if (eq sidebar-position \"left\")}}order-2 lg:col-span-8 lg:col-start-5{{else}}lg:col-span-8 lg:col-start-1{{/if}}\">\n          {{{prose body}}}\n        </div>\n        <div class=\"{{#if (eq sidebar-position \"left\")}}order-1 lg:col-span-4 lg:col-start-1{{else}}lg:col-span-4 xl:pl-12{{/if}}\">\n          {{{prose sidebar}}}\n        </div>\n      </div>\n    {{else}}\n      <div class=\"mx-auto max-w-4xl\">\n        {{{prose body}}}\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "c641878a-c12a-439a-a18f-fd2ef2f516e6",
+          "type": "wysiwyg",
+          "name": "Body",
+          "value": "<h2>Content Title</h2><p>This is a rich text content area. You can add headings, paragraphs, lists, and more.</p>"
+        },
+        {
+          "id": "a4623340-0d20-45f4-9d8f-43d78fc02a80",
+          "type": "wysiwyg",
+          "name": "Sidebar",
+          "value": ""
+        },
+        {
+          "id": "68ae3c04-81d5-4948-89cb-4f827bd0ab37",
+          "type": "select",
+          "name": "Sidebar Position",
+          "value": "right",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Right",
+                "value": "right"
+              },
+              {
+                "key": "Left",
+                "value": "left"
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.027Z",
+      "updatedAt": "2026-02-16T21:29:12.027Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1a4",
+      "name": "DarkSection",
+      "description": "Dark themed card section",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"relative py-24 bg-base-alt text-on-brand lta-section-dark\">\n  {{> Edge type=\"wavy-top\"}}\n  <div class=\"relative px-6 md:px-8 lg:px-12 xl:px-24\">\n    <div class=\"mb-12 {{#if (eq align \"center\")}}text-center{{/if}}\">\n      {{#if label}}\n        <div class=\"relative inline-flex items-center px-3 -mx-2 min-h-6 text-sm font-semibold tracking-wide uppercase text-white mb-4\">\n          <span class=\"relative z-10 py-1\">{{label}}</span>\n          <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" viewBox=\"0 0 145 24\" preserveAspectRatio=\"none\" class=\"absolute inset-0 min-h-6 h-full w-full text-brand\">\n            <path d=\"M141.17 19.4325C135.5 23.9673 119.888 23.593 89.9934 23.7807C57.6341 23.9839 12.6676 24.5587 4.80116 22.334C-1.60038 20.5236 -1.60039 6.2696 4.80117 3.81395C17.1069 -0.906523 109.115 -0.635282 136.902 1.35903C147.236 2.10074 146.534 15.1418 141.17 19.4325Z\" fill=\"currentColor\"/>\n          </svg>\n        </div>\n      {{/if}}\n      {{#if title}}\n        <h2 class=\"heading-lg\" style=\"color: #e6e0d5;\">{{title}}</h2>\n      {{/if}}\n      {{#if description}}\n        <div class=\"body-lg text-white/70 mt-4 max-w-3xl {{#if (eq align \"center\")}}mx-auto{{/if}}\">{{{description}}}</div>\n      {{/if}}\n    </div>\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{#each items}}\n        <div class=\"flex flex-col bg-white/[0.12] rounded-lg overflow-hidden\">\n          {{#if this.image}}\n            <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"w-full\" style=\"aspect-ratio: 16/9; object-fit: cover;\" />\n          {{/if}}\n          <div class=\"flex-1 p-6\">\n            {{#if this.title}}\n              <h3 class=\"heading-sm text-white\">\n                {{#if this.url}}<a href=\"{{this.url}}\" class=\"hover:text-[#db8043] transition-colors\">{{this.title}}</a>{{else}}{{this.title}}{{/if}}\n              </h3>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-white/70 mt-3\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n    {{#if button-label}}\n      <div class=\"mt-12 {{#if (eq align \"center\")}}text-center{{/if}}\">\n        {{> Button label=button-label url=button-url style=\"solid\"}}\n      </div>\n    {{/if}}\n  </div>\n  {{> Edge type=\"wavy-bottom\"}}\n</section>\n",
+      "fields": [
+        {
+          "id": "e860c943-676f-4dc2-889a-7b2925be78f0",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "bf9c4a95-ca15-4601-9651-e9ae6dafa4b9",
+          "type": "text",
+          "name": "Title",
+          "value": "Featured Programs"
+        },
+        {
+          "id": "28d9f4e8-946e-436f-b979-be4137040ec9",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "f46c66cc-6e10-43fa-be6f-53a893f755fa",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "08d6e3b3-76c6-4a04-b936-5c2842dde96d",
+          "type": "select",
+          "name": "Columns",
+          "value": "3",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              },
+              {
+                "key": "4 Columns",
+                "value": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "0a8e8e7d-5973-4412-9560-c6a8852eeaea",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "72b77177-ae50-4767-b57e-432df46082a2",
+              "image": "",
+              "title": "Program One",
+              "body": "<p>Brief description of this program.</p>",
+              "url": "#"
+            },
+            {
+              "id": "f10568d0-eaf5-4981-8743-88296347f0d5",
+              "image": "",
+              "title": "Program Two",
+              "body": "<p>Brief description of this program.</p>",
+              "url": "#"
+            },
+            {
+              "id": "be68a79e-7a48-43f0-8931-e2c10dc18183",
+              "image": "",
+              "title": "Program Three",
+              "body": "<p>Brief description of this program.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "f998c316-379b-451e-96db-d84f7cda261c",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 1200,
+                  "maxHeight": 800,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "4754d262-9500-4d82-9058-ad0a7a957154",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "72878ea8-9264-46c8-8084-316227ebcc02",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "43505b29-e1fb-4cf9-acda-534419a96e17",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "ecb9d39e-76d3-4e62-9a7a-26201424c55b",
+          "type": "text",
+          "name": "Button Label",
+          "value": ""
+        },
+        {
+          "id": "7b991c9e-99a6-448b-ad1d-5d4dc21f5c0d",
+          "type": "text",
+          "name": "Button URL",
+          "value": "#"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.031Z",
+      "updatedAt": "2026-02-16T21:29:12.031Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1a8",
+      "name": "ExpandableList",
+      "description": "Accordion FAQ list",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <h2 class=\"heading-lg mb-8\" style=\"color: #26484c;\">{{title}}</h2>\n    {{/if}}\n    <ul class=\"list-none p-0\">\n      {{#each items}}\n        <details class=\"border-t border-b border-border transition-colors duration-200 [&:not(:last-child)]:border-b-0\">\n          <summary class=\"flex items-center gap-3 p-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden\">\n            <div class=\"flex-1\">\n              <h6 class=\"heading-xs lta-expand-title transition-colors duration-200\">{{this.title}}</h6>\n            </div>\n            <span class=\"text-fg-muted\">\n              {{icon \"plus\" size=\"18\"}}\n            </span>\n          </summary>\n          <div class=\"px-4 pb-6\">\n            {{{prose this.content}}}\n          </div>\n        </details>\n      {{/each}}\n    </ul>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "e65e6ff9-4827-49a6-8138-2e9884166bb9",
+          "type": "text",
+          "name": "Title",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "id": "a99144e1-6437-40c0-a312-309e689e4d79",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "dba9e648-ea7d-4912-8f02-73a7e6c4c6c1",
+              "title": "What is a land trust?",
+              "content": "<p>A land trust is a nonprofit organization that actively works to conserve land by undertaking or assisting in land or conservation easement acquisition.</p>"
+            },
+            {
+              "id": "854d8248-936b-41ea-bc5f-a2d0a2d16300",
+              "title": "How can I get involved?",
+              "content": "<p>There are many ways to support land conservation, from volunteering with your local land trust to making a donation.</p>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "e0022549-7315-4568-b41a-0e0aeda8552e",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "691df0b3-d6a0-43e0-950f-80cb62aaa7c0",
+                "type": "wysiwyg",
+                "name": "Content",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.033Z",
+      "updatedAt": "2026-02-16T21:29:12.033Z",
+      "__v": 0
+    },
+    {
+      "_id": "69938c2882ca637058dca1ac",
+      "name": "Feature",
+      "description": "Content plus image split",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"pl-6 md:pl-8 lg:pl-12 xl:pl-24\">\n    {{#if (eq layout \"card\")}}\n      <div class=\"grid grid-cols-1 lg:grid-cols-12 relative\">\n        <div class=\"lg:col-start-1 lg:col-end-8 lg:row-[1] lg:my-24 lg:pr-12 lg:py-12 bg-base rounded-r-lg relative z-[1]\">\n          {{#if label}}\n            {{> Label text=label}}\n          {{/if}}\n          {{#if title}}\n            <h2 class=\"heading-lg mt-4\" style=\"color: #26484c;\">{{title}}</h2>\n          {{/if}}\n          {{#if body}}\n            <div class=\"body-lg mt-4 text-fg-muted\">{{{body}}}</div>\n          {{/if}}\n        </div>\n        <div class=\"lg:col-start-5 lg:col-end-13 lg:row-[1]\">\n          {{#if image}}\n            <img src=\"{{image}}\" alt=\"{{default title \"\"}}\" class=\"w-full h-full object-cover rounded-lg lg:rounded-r-none\">\n          {{/if}}\n        </div>\n      </div>\n    {{else}}\n      <div class=\"grid gap-12 grid-cols-1 lg:grid-cols-12\">\n        <div class=\"order-2 lg:order-1 lg:col-span-4 lg:pt-12\">\n          {{#if label}}\n            {{> Label text=label}}\n          {{/if}}\n          {{#if title}}\n            <h2 class=\"heading-lg mt-4\" style=\"color: #26484c;\">{{title}}</h2>\n          {{/if}}\n          {{#if body}}\n            <div class=\"body-md mt-4 text-fg-muted\">{{{prose body}}}</div>\n          {{/if}}\n        </div>\n        <div class=\"order-1 lg:order-2 lg:col-span-8\">\n          {{#if image}}\n            <img src=\"{{image}}\" alt=\"{{default title \"\"}}\" class=\"w-full rounded-md\" style=\"aspect-ratio: 4/3; object-fit: cover;\">\n          {{/if}}\n        </div>\n      </div>\n    {{/if}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "d1ce8266-782e-4ba1-8c79-eb4e58cc8c4b",
+          "type": "text",
+          "name": "Label",
+          "value": "Take Action"
+        },
+        {
+          "id": "221a46e4-bf35-4d25-9465-29dcbd6f7d5a",
+          "type": "text",
+          "name": "Title",
+          "value": "If you love the land, there's a lot you can do."
+        },
+        {
+          "id": "b15b52bc-4994-4b27-8a01-36b6f3347fc9",
+          "type": "textarea",
+          "name": "Body",
+          "value": "<p>Land is the key to a healthy and secure future. It provides pure drinking water, healthy food, clean air and places to reflect and recreate.</p><p></p>"
+        },
+        {
+          "id": "c5d04885-a641-4b33-ac81-c8c04769672c",
+          "type": "image",
+          "name": "Image",
+          "value": "https://makestudio.site/6992ceef9d1e8d8808ac73a4/kids-fishin.webp",
+          "config": {
+            "maxWidth": 2000,
+            "maxHeight": 1500,
+            "fileType": "",
+            "fileQuality": "0.8"
+          }
+        },
+        {
+          "id": "b94a8f1c-0416-4216-9559-59c53bcecaf8",
+          "type": "select",
+          "name": "Layout",
+          "value": "card",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Default",
+                "value": "default"
+              },
+              {
+                "key": "Card Overlay",
+                "value": "card"
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.036Z",
+      "updatedAt": "2026-02-16T23:06:14.387Z",
+      "__v": 2,
+      "aiDescription": "",
+      "category": "section",
+      "tags": []
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1b0",
+      "name": "Gallery",
+      "description": "Image grid",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <div class=\"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4\">\n      {{#each images}}\n        <figure class=\"relative\">\n          <img src=\"{{this.image}}\" alt=\"{{default this.caption \"\"}}\" class=\"w-full rounded-md\" style=\"aspect-ratio: 16/9; object-fit: cover;\" />\n          {{#if this.caption}}\n            <figcaption class=\"body-sm text-fg-alt mt-2\">{{this.caption}}</figcaption>\n          {{/if}}\n        </figure>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "b6b2097f-eded-4048-886f-02d60aa007e6",
+          "type": "items",
+          "name": "Images",
+          "value": [
+            {
+              "id": "00e89f66-1916-4ef7-b1c3-0a5299384d0d",
+              "image": "",
+              "caption": "Image 1"
+            },
+            {
+              "id": "6ce7e177-0691-40a0-9a68-b6de6e01721f",
+              "image": "",
+              "caption": "Image 2"
+            },
+            {
+              "id": "c3fc12c5-9ce0-4940-8ed8-ca37823c817e",
+              "image": "",
+              "caption": "Image 3"
+            },
+            {
+              "id": "2042bf69-1af7-414f-ba9a-1e99e99bfbaa",
+              "image": "",
+              "caption": "Image 4"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "51a259c1-bc95-42e8-84ee-e18abfe3c25a",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 2000,
+                  "maxHeight": 1500,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "33377003-3e88-4eb4-b030-7abb570147d5",
+                "type": "text",
+                "name": "Caption",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.039Z",
+      "updatedAt": "2026-02-16T21:29:12.039Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1b4",
+      "name": "Heading",
+      "description": "Section heading with label",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{> Heading label=label title=title subtitle=subtitle description=description align=align}}\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "b244f3a8-47c4-4797-af7b-ff908371aec9",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "428b6e22-be6e-4a1a-8c11-4f8278d26d62",
+          "type": "text",
+          "name": "Title",
+          "value": "Section Title"
+        },
+        {
+          "id": "36630c9c-24fb-49ff-b2b0-9871ef2cdcad",
+          "type": "text",
+          "name": "Subtitle",
+          "value": ""
+        },
+        {
+          "id": "4f9878d4-3f22-41de-8e3c-a6f11cb6c377",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "e8f54ab6-3b1f-4a86-a4bd-2252e6af400a",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "4fa87a49-eeb4-4a81-b08f-307225b32d64",
+          "type": "select",
+          "name": "Width",
+          "value": "",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Default",
+                "value": ""
+              },
+              {
+                "key": "Small",
+                "value": "small"
+              },
+              {
+                "key": "Large",
+                "value": "large"
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.044Z",
+      "updatedAt": "2026-02-16T21:29:12.044Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1b8",
+      "name": "HorizontalCardList",
+      "description": "Horizontal image card list",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"flex flex-col gap-6\">\n      {{#each items}}\n        <div class=\"flex flex-col sm:flex-row sm:items-center bg-base rounded-lg shadow-md border border-border overflow-hidden\">\n          {{#if this.image}}\n            <div class=\"sm:flex-shrink-0 sm:w-[216px]\">\n              <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"w-full h-full object-cover sm:min-h-[108px]\" style=\"aspect-ratio: 1/1;\" />\n            </div>\n          {{/if}}\n          <div class=\"flex-1 p-6\">\n            {{#if this.label}}\n              <div class=\"mb-1 text-brand text-xs font-bold uppercase tracking-wide\">{{this.label}}</div>\n            {{/if}}\n            {{#if this.title}}\n              <h3 class=\"heading-sm\" style=\"color: #26484c;\">\n                {{#if this.url}}<a href=\"{{this.url}}\" class=\"hover:text-brand transition-colors\">{{this.title}}</a>{{else}}{{this.title}}{{/if}}\n              </h3>\n            {{/if}}\n            {{#if this.subtitle}}\n              <div class=\"mt-1 text-fg-alt text-xs uppercase tracking-wide\">{{this.subtitle}}</div>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-fg-muted mt-2\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "43718b8b-e6d3-4cad-9356-342d7ddbfbe8",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "00fe720e-a02b-4e99-a878-834fb76e728a",
+          "type": "text",
+          "name": "Title",
+          "value": ""
+        },
+        {
+          "id": "862c86f7-c1d1-41a4-8987-32f71c797f99",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "42f4dbdd-1d08-42ee-abb0-9e405351af46",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "b5eb9570-e53f-4d3e-8b9d-6a6444b0279f",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "7e6e9050-0313-44a6-b1a3-192e5c676a89",
+              "image": "",
+              "label": "",
+              "title": "First Item",
+              "subtitle": "",
+              "body": "<p>Description of the first item.</p>",
+              "url": "#"
+            },
+            {
+              "id": "df7e5173-cb88-4c7b-8bc5-dbb1f2c05962",
+              "image": "",
+              "label": "",
+              "title": "Second Item",
+              "subtitle": "",
+              "body": "<p>Description of the second item.</p>",
+              "url": "#"
+            },
+            {
+              "id": "acdb45c2-9403-47a5-aa0f-8d6ca7a490b9",
+              "image": "",
+              "label": "",
+              "title": "Third Item",
+              "subtitle": "",
+              "body": "<p>Description of the third item.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "3043b812-1dd7-4e12-b956-b4254c8b5496",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 800,
+                  "maxHeight": 800,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "7daa90db-68e4-4695-b9ab-3e8c1b67fa2d",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "4c764e5c-2f48-4c61-a116-7f39df952240",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "66ae757a-c92a-434a-9f99-6ed8ed888934",
+                "type": "text",
+                "name": "Subtitle",
+                "value": ""
+              },
+              {
+                "id": "ab4706f6-9d95-44bd-a2db-2d122b2b0ac2",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "572650db-9443-470c-a690-c0d14b86ba0f",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.047Z",
+      "updatedAt": "2026-02-16T21:29:12.047Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1bc",
+      "name": "IconCardGrid",
+      "description": "Grid of icon blob cards",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{#each items}}\n        <div class=\"flex flex-col bg-base rounded-lg shadow-md border border-border overflow-hidden\">\n          <div class=\"p-6 pb-0\">\n            <div class=\"-mt-12\">\n              {{> IconBlob icon=this.icon size=\"md\" color=\"text-brand\" iconSize=\"24\"}}\n            </div>\n          </div>\n          <div class=\"flex-1 p-6\">\n            {{#if this.title}}\n              <h3 class=\"heading-sm\" style=\"color: #26484c;\">\n                {{#if this.url}}<a href=\"{{this.url}}\" class=\"hover:text-brand transition-colors\">{{this.title}}</a>{{else}}{{this.title}}{{/if}}\n              </h3>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-fg-muted mt-3\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "34be5b4c-25d8-4cc1-bc0b-13ab7b817188",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "c9bfcf61-66d7-43dc-b355-3833b8b6c6d8",
+          "type": "text",
+          "name": "Title",
+          "value": ""
+        },
+        {
+          "id": "9acef82a-7dee-4653-8cd5-866c845123c1",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "428ff431-7c41-4477-97b6-9a0b94eab3c4",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "1612e8dc-e54b-4616-9c4d-ac36b786be20",
+          "type": "select",
+          "name": "Columns",
+          "value": "3",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              },
+              {
+                "key": "4 Columns",
+                "value": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "7b27c0f5-00b2-44c1-ba26-5b130cfea898",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "5a572e52-00e6-491f-98d8-ef3dcbaba9a8",
+              "icon": "tree",
+              "title": "Conservation",
+              "body": "<p>Protecting natural landscapes and habitats.</p>",
+              "url": "#"
+            },
+            {
+              "id": "72755542-a174-47e9-8df2-dfaad9bebd9f",
+              "icon": "handshake",
+              "title": "Partnership",
+              "body": "<p>Working together with land trusts nationwide.</p>",
+              "url": "#"
+            },
+            {
+              "id": "ef86aef1-a128-454f-ab49-9a253f6e0d40",
+              "icon": "shield-check",
+              "title": "Accreditation",
+              "body": "<p>Ensuring the highest standards for land trusts.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "e64c92a5-cfa1-4438-ae35-3df4e80fbcc3",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "c111ab91-cb8c-4020-bde0-6a8887179c78",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "8b3d4df2-865a-4711-85b0-732f0dc7797c",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "6cbcafa1-7fed-43b6-90fe-e396f803f5af",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.051Z",
+      "updatedAt": "2026-02-16T21:29:12.051Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1c0",
+      "name": "IconList",
+      "description": "Icon and text feature grid",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{#each items}}\n        <div class=\"flex items-start gap-4\">\n          <div class=\"flex-shrink-0 mt-1 text-brand text-3xl\">\n            {{icon (default this.icon \"leaf\") size=\"32\"}}\n          </div>\n          <div>\n            {{#if this.title}}\n              <h3 class=\"heading-xs\" style=\"color: #26484c;\">{{this.title}}</h3>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-fg-muted mt-2\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "2cbc9948-3824-421f-a1fb-bf1410a2df59",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "ab82925d-2549-47d1-b3ed-6d203b334f6c",
+          "type": "text",
+          "name": "Title",
+          "value": ""
+        },
+        {
+          "id": "8a11e328-9700-4e7a-a165-ac864ee1b436",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "93a80123-3e04-4249-beab-3575946caae2",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "2111a9b2-79be-4c8d-902c-716c8234ac66",
+          "type": "select",
+          "name": "Columns",
+          "value": "2",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              },
+              {
+                "key": "4 Columns",
+                "value": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ffb9bd00-233e-4b41-925e-4069372a35a8",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "637fdb5a-c5d5-447a-a66b-3e47bca0a59f",
+              "icon": "shield-check",
+              "title": "Accreditation",
+              "body": "<p>Ensuring the highest standards for land trusts across the nation.</p>"
+            },
+            {
+              "id": "47092875-0949-40b8-9bd5-8b2c0b0cd7ee",
+              "icon": "scales",
+              "title": "Public Policy",
+              "body": "<p>Advocating for policies that support land conservation.</p>"
+            },
+            {
+              "id": "3accacf8-2c77-409e-9d82-2e32c5ad7744",
+              "icon": "graduation-cap",
+              "title": "Education",
+              "body": "<p>Training and resources for land trust professionals.</p>"
+            },
+            {
+              "id": "61b4d168-2439-4e42-81e5-c9f0b3c19446",
+              "icon": "users",
+              "title": "Community",
+              "body": "<p>Building a strong network of conservation organizations.</p>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "65373845-51fb-449f-af5d-a3a84d7b5fe1",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "78a740dd-a603-41d9-8733-fe54004dc205",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "192bf654-72dd-4ae6-a09a-d2da15f8187e",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.055Z",
+      "updatedAt": "2026-02-16T21:29:12.055Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1c4",
+      "name": "ImageCardGrid",
+      "description": "Grid of image overlay cards",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{#each items}}\n        <a {{#if this.url}}href=\"{{this.url}}\"{{/if}} class=\"group relative flex items-end min-h-[450px] rounded-lg overflow-hidden\">\n          {{#if this.image}}\n            <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"absolute inset-0 w-full h-full object-cover object-center\" />\n          {{else}}\n            <div class=\"absolute inset-0 bg-base-alt\"></div>\n          {{/if}}\n          <div class=\"absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-b-lg\"></div>\n          <div class=\"relative flex-1 p-6 sm:p-8 text-white\">\n            {{#if this.label}}\n              <div class=\"relative inline-flex items-center px-3 -mx-2 min-h-6 text-sm font-semibold tracking-wide uppercase text-white mb-2\">\n                <span class=\"relative z-10 py-1\">{{this.label}}</span>\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" viewBox=\"0 0 145 24\" preserveAspectRatio=\"none\" class=\"absolute inset-0 min-h-6 h-full w-full text-brand\">\n                  <path d=\"M141.17 19.4325C135.5 23.9673 119.888 23.593 89.9934 23.7807C57.6341 23.9839 12.6676 24.5587 4.80116 22.334C-1.60038 20.5236 -1.60039 6.2696 4.80117 3.81395C17.1069 -0.906523 109.115 -0.635282 136.902 1.35903C147.236 2.10074 146.534 15.1418 141.17 19.4325Z\" fill=\"currentColor\"/>\n                </svg>\n              </div>\n            {{/if}}\n            {{#if this.title}}\n              <h3 class=\"heading-sm text-white\">{{this.title}}</h3>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-white/70 mt-2 line-clamp-3\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </a>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "7cf2fa91-696a-445c-abbe-b453e0e514f1",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "e6d4263e-adc0-4c8f-9ffe-1612523317d2",
+          "type": "text",
+          "name": "Title",
+          "value": ""
+        },
+        {
+          "id": "c2a8af51-6556-4dd6-84a8-542c0f93f8c9",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "5493bea2-0c80-4b22-bd8c-d6b93089e767",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "0485aa94-4592-450e-8aed-5af6c2fc1ebe",
+          "type": "select",
+          "name": "Columns",
+          "value": "3",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              }
+            ]
+          }
+        },
+        {
+          "id": "51ac46b1-2fcf-4518-974f-104b7c2445d5",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "64208d1e-2871-47d5-b6fb-a0c0dc61b53c",
+              "image": "",
+              "label": "Topic",
+              "title": "Card Title",
+              "body": "<p>Brief description visible on hover.</p>",
+              "url": "#"
+            },
+            {
+              "id": "6951b808-c440-40b4-ab85-49f9114a1349",
+              "image": "",
+              "label": "Topic",
+              "title": "Another Card",
+              "body": "<p>Brief description visible on hover.</p>",
+              "url": "#"
+            },
+            {
+              "id": "2fd0035f-4e1f-4122-aaab-8adc09a96bd8",
+              "image": "",
+              "label": "Topic",
+              "title": "Third Card",
+              "body": "<p>Brief description visible on hover.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "17e18f48-877d-4ec2-87ca-b82667d78ccb",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 1200,
+                  "maxHeight": 900,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "95818d5b-892b-410e-99c7-ce2c18b9ac1d",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "c65b63aa-63f4-45c4-9e35-0a9e7230909b",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "97dd25b5-265b-4892-8094-9bcce0ffa5d9",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "433a771c-c823-4695-be65-3cc557e824d4",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.060Z",
+      "updatedAt": "2026-02-16T21:29:12.060Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1c8",
+      "name": "LayoutGrid",
+      "description": "Multi-column grid",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title subtitle=subtitle description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{{prose content}}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "48bd67ae-61d1-4b95-984f-bdfbb9b6d32f",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "82d2e5d2-9c6b-4873-9d94-89d4a5acf3c7",
+          "type": "text",
+          "name": "Title",
+          "value": ""
+        },
+        {
+          "id": "6238e24a-1b0a-4778-9ba6-547a52b499ca",
+          "type": "text",
+          "name": "Subtitle",
+          "value": ""
+        },
+        {
+          "id": "c902590c-1ded-457d-a3cf-390e8c840b03",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "19bf5323-f4fd-44b0-94fe-c7bfdefc9124",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d1a5edf2-963d-4705-a637-4879f4fdeb3d",
+          "type": "select",
+          "name": "Columns",
+          "value": "2",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              },
+              {
+                "key": "4 Columns",
+                "value": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "85f97c23-f9c6-4ae6-8258-ccb416944fe8",
+          "type": "wysiwyg",
+          "name": "Content",
+          "value": "<p>Column content goes here. Use headings and paragraphs for each column.</p>"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.063Z",
+      "updatedAt": "2026-02-16T21:29:12.063Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1cc",
+      "name": "LayoutSection",
+      "description": "Section with background",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"relative py-24 {{#switch background}}{{#case \"dark\"}}bg-base-alt text-on-brand lta-section-dark{{/case}}{{#case \"stone\"}}bg-panel text-fg{{/case}}{{#case \"gray\"}}bg-base-muted text-fg{{/case}}{{#otherwise}}bg-base text-fg{{/otherwise}}{{/switch}}\">\n  {{#if top-edge}}\n    {{> Edge type=top-edge}}\n  {{/if}}\n  <div class=\"relative px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{{prose body}}}\n  </div>\n  {{> Edge type=\"wavy-bottom\"}}\n</section>\n",
+      "fields": [
+        {
+          "id": "76d2d4cd-990e-41dd-8e2c-8635f3ba90c7",
+          "type": "wysiwyg",
+          "name": "Body",
+          "value": "<h2>Section Title</h2><p>Add your content here. This section supports rich text formatting.</p>"
+        },
+        {
+          "id": "926ec6d4-3940-4787-8640-a7ecbd054fa1",
+          "type": "select",
+          "name": "Background",
+          "value": "white",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "White",
+                "value": "white"
+              },
+              {
+                "key": "Dark (Green)",
+                "value": "dark"
+              },
+              {
+                "key": "Stone",
+                "value": "stone"
+              },
+              {
+                "key": "Gray",
+                "value": "gray"
+              }
+            ]
+          }
+        },
+        {
+          "id": "a868bdfe-3142-4b0c-9c41-e80e4d5b0ef1",
+          "type": "select",
+          "name": "Top Edge",
+          "value": "",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "None",
+                "value": ""
+              },
+              {
+                "key": "Wavy Top",
+                "value": "wavy-top"
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.066Z",
+      "updatedAt": "2026-02-16T21:29:12.066Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1d0",
+      "name": "List",
+      "description": "Icon and text list",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <ul class=\"list-none p-0\">\n      {{#each items}}\n        <li class=\"grid gap-6 grid-flow-col auto-cols-fr py-3 first:pt-0 last:pb-0 border-b last:border-b-0 border-border {{#if (eq ../spacing \"loose\")}}py-6{{/if}}\">\n          {{#if this.icon}}\n            <div class=\"flex items-center text-fg-alt break-words\" style=\"grid-template-columns: minmax(3rem, max-content);\">\n              <span class=\"self-start flex-shrink-0 mt-[2px] mr-2 text-brand text-lg\">\n                {{icon this.icon size=\"20\"}}\n              </span>\n              {{#if this.label}}\n                <span>{{this.label}}</span>\n              {{/if}}\n            </div>\n          {{else if this.label}}\n            <div class=\"flex items-center text-fg-alt break-words\">\n              <span>{{this.label}}</span>\n            </div>\n          {{/if}}\n          {{#if this.body}}\n            <div class=\"body-md text-fg-muted\">{{{this.body}}}</div>\n          {{/if}}\n        </li>\n      {{/each}}\n    </ul>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "b0215fc5-2370-408d-aeb1-a3ab3f92b215",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "10d4af9e-694e-4054-8578-cc002e189c45",
+              "icon": "check",
+              "label": "First item",
+              "body": "<p>Description of the first item.</p>"
+            },
+            {
+              "id": "7c97f83b-49f0-48ef-9c0b-57d8c41c6ea1",
+              "icon": "check",
+              "label": "Second item",
+              "body": "<p>Description of the second item.</p>"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "7b005479-975c-4ee5-9152-233e8f994f46",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "ee20c3ad-bac7-48ab-b04c-bc71bc509803",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "7bd3c959-8374-495e-a960-5c9dea3eff43",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "46f84f2c-b071-4b79-9bb1-dd9cd23148e5",
+          "type": "select",
+          "name": "Spacing",
+          "value": "",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Default",
+                "value": ""
+              },
+              {
+                "key": "Loose",
+                "value": "loose"
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.071Z",
+      "updatedAt": "2026-02-16T21:29:12.071Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1d4",
+      "name": "Quote",
+      "description": "Blockquote with citation",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <figure class=\"relative max-w-4xl mx-auto pt-6 pb-0 text-center\" style=\"color: var(--lta-heading, #26484c);\">\n      <div class=\"absolute top-[-3rem] text-[16.5rem] text-center leading-none left-0 w-full opacity-[0.12] z-0\" style=\"font-family: 'ff-meta-serif-web-pro', serif;\">&ldquo;</div>\n      <blockquote class=\"relative pb-6 text-2xl z-[1]\" style=\"font-family: 'ff-meta-serif-web-pro', serif;\">\n        <em>{{quote}}</em>\n      </blockquote>\n      {{#if citation}}\n        <figcaption>\n          &mdash; <em>{{citation}}</em>\n        </figcaption>\n      {{/if}}\n    </figure>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "973f7927-e046-4cf5-9bd5-c8a3f2dabcf8",
+          "type": "textarea",
+          "name": "Quote",
+          "value": "Conservation is a cause that has no end. There is no point at which we will say our work is finished."
+        },
+        {
+          "id": "5bb0eabd-d308-416f-8bd8-be3b2e78e8a2",
+          "type": "text",
+          "name": "Citation",
+          "value": "Rachel Carson"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.075Z",
+      "updatedAt": "2026-02-16T21:29:12.075Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1d8",
+      "name": "SiteFooter",
+      "description": "Footer with columns",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<footer class=\"pt-24 pb-12 border-t bg-fg text-on-brand\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    <div class=\"grid gap-12 grid-cols-1 md:grid-cols-3 pb-16\">\n      <div>\n        <h5 class=\"heading-xs text-white mb-4\">Connect with Us</h5>\n        <div class=\"body-sm text-white/70\">\n          {{{default address \"<p>1250 H Street NW, Suite 600<br>Washington, DC 20005</p><p>202-638-4725</p>\"}}}\n        </div>\n        {{#if (length socials)}}\n          <div class=\"flex gap-4 mt-4\">\n            {{#each socials}}\n              <a href=\"{{this.url}}\" class=\"text-white/70 hover:text-white transition-colors\" aria-label=\"{{this.label}}\">\n                {{icon this.icon size=\"20\"}}\n              </a>\n            {{/each}}\n          </div>\n        {{/if}}\n      </div>\n      <div>\n        <h5 class=\"heading-xs text-white mb-4\">Save the Land</h5>\n        <div class=\"body-sm text-white/70\">\n          {{{default donate \"<p>When you support the Land Trust Alliance, your contribution helps to save more of the land you love.</p>\"}}}\n        </div>\n        <div class=\"mt-4\">\n          {{> Button label=\"Donate\" url=\"#\" icon=\"arrow-right\" style=\"solid\"}}\n        </div>\n      </div>\n      <div>\n        <h5 class=\"heading-xs text-white mb-4\">Subscribe</h5>\n        <div class=\"body-sm text-white/70\">\n          {{{default subscribe \"<p>Learn how you can help land trusts gain ground — sign up for our newsletter.</p>\"}}}\n        </div>\n      </div>\n    </div>\n\n    {{#if (length menu-columns)}}\n      <div class=\"grid gap-12 lg:grid-flow-col lg:auto-cols-fr pb-16\">\n        {{#each menu-columns}}\n          <div>\n            {{#if this.title}}\n              <h6 class=\"heading-xs text-white mb-3\">{{this.title}}</h6>\n            {{/if}}\n            {{#if (length this.links)}}\n              <ul class=\"list-none p-0 space-y-2\">\n                {{#each this.links}}\n                  <li>\n                    <a href=\"{{this.url}}\" class=\"body-sm text-white/70 hover:text-brand transition-colors\">{{this.label}}</a>\n                  </li>\n                {{/each}}\n              </ul>\n            {{/if}}\n          </div>\n        {{/each}}\n      </div>\n    {{/if}}\n\n    <div class=\"flex flex-col flex-wrap gap-4 items-center justify-center pt-12 text-white/70 text-sm text-center border-t border-white/15 lg:flex-row\">\n      <div>{{default copyright \"&copy; 2017–2026 Land Trust Alliance, Inc. All rights reserved.\"}}</div>\n    </div>\n  </div>\n</footer>\n",
+      "fields": [
+        {
+          "id": "f420cd8c-746f-40fd-b555-b91b27daf13e",
+          "type": "wysiwyg",
+          "name": "Address",
+          "value": "<p>1250 H Street NW, Suite 600<br>Washington, DC 20005</p><p>202-638-4725</p>"
+        },
+        {
+          "id": "752b5870-11c9-47ce-85af-3745ec063049",
+          "type": "items",
+          "name": "Socials",
+          "value": [
+            {
+              "id": "10b8d0bd-c990-47f9-ad6f-eca437d2a183",
+              "label": "Facebook",
+              "icon": "facebook-logo",
+              "url": "https://facebook.com"
+            },
+            {
+              "id": "1650ba8e-0811-4f71-b7c6-6777170e1927",
+              "label": "LinkedIn",
+              "icon": "linkedin-logo",
+              "url": "https://linkedin.com"
+            },
+            {
+              "id": "c11c4eff-9a7c-49d8-9887-00365dec7c8d",
+              "label": "Instagram",
+              "icon": "instagram-logo",
+              "url": "https://instagram.com"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "cbcd070b-f126-492d-a829-2b8d4659965e",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "34dff9b8-9d63-4d4e-a9d8-9dbf247ab18a",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "705d32e1-6cbd-4024-b8c1-64b3540586a7",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "a382740e-121d-48a5-9c0f-08ce5706a633",
+          "type": "wysiwyg",
+          "name": "Donate",
+          "value": "<p>When you support the Land Trust Alliance, your contribution helps to save more of the land you love.</p>"
+        },
+        {
+          "id": "ff052f85-23e1-43af-ab30-fdc84d5a0043",
+          "type": "wysiwyg",
+          "name": "Subscribe",
+          "value": "<p>Learn how you can help land trusts gain ground — sign up for our newsletter.</p>"
+        },
+        {
+          "id": "2030cdde-d54a-43cd-8188-0681fc92f3f4",
+          "type": "items",
+          "name": "Menu Columns",
+          "value": [
+            {
+              "id": "33b6594f-7843-453d-aae6-c339d9e0d135",
+              "title": "About",
+              "links": [
+                {
+                  "label": "Our Mission",
+                  "url": "/about/mission"
+                },
+                {
+                  "label": "Leadership",
+                  "url": "/about/leadership"
+                },
+                {
+                  "label": "Careers",
+                  "url": "/about/careers"
+                }
+              ]
+            },
+            {
+              "id": "35f8a713-9e47-4b46-a2a6-c32c48a6e9d3",
+              "title": "Programs",
+              "links": [
+                {
+                  "label": "Accreditation",
+                  "url": "/programs/accreditation"
+                },
+                {
+                  "label": "Policy",
+                  "url": "/programs/policy"
+                }
+              ]
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "41a93af0-6675-4636-ab1d-3ad308081dcd",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "38d10013-7ba3-464f-9223-079039c29467",
+                "type": "items",
+                "name": "Links",
+                "value": [],
+                "config": {
+                  "fields": [
+                    {
+                      "id": "7a3357d4-eece-499b-982c-fa8ccd466634",
+                      "type": "text",
+                      "name": "Label",
+                      "value": ""
+                    },
+                    {
+                      "id": "ec487243-29e1-48fc-a4ac-912a61b163e5",
+                      "type": "text",
+                      "name": "URL",
+                      "value": ""
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "04fc8db8-5257-4c5a-a0ca-0a77acf38d6f",
+          "type": "text",
+          "name": "Copyright",
+          "value": "© 2017–2026 Land Trust Alliance, Inc. All rights reserved."
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.078Z",
+      "updatedAt": "2026-02-16T21:29:12.078Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1dc",
+      "name": "SiteHeader",
+      "description": "Logo and navigation",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<header class=\"relative z-50 flex items-center gap-6 lg:gap-12 px-6 md:px-8 lg:px-12 xl:px-24 h-20 bg-base border-b border-border\">\n  <div class=\"flex gap-6 items-center\">\n    {{#if logo}}\n      <a href=\"/\" aria-label=\"Go to home page\">\n        <img src=\"{{logo}}\" alt=\"{{default title \"Land Trust Alliance\"}}\" class=\"h-10 w-auto\" />\n      </a>\n    {{else}}\n      <a href=\"/\" class=\"heading-sm font-bold\" style=\"color: #26484c;\" aria-label=\"Go to home page\">\n        {{default title \"Land Trust Alliance\"}}\n      </a>\n    {{/if}}\n  </div>\n  <nav class=\"flex-1 flex items-center justify-end gap-8\">\n    {{#each nav-items}}\n      <a href=\"{{this.url}}\" class=\"body-sm text-fg-muted hover:text-brand transition-colors hidden lg:inline-block\">{{this.label}}</a>\n    {{/each}}\n    {{#if button-label}}\n      {{> Button label=button-label url=button-url style=\"solid\"}}\n    {{/if}}\n  </nav>\n</header>\n",
+      "fields": [
+        {
+          "id": "bdb065b0-d87d-454b-bbb8-b9239f2ddda9",
+          "type": "text",
+          "name": "Title",
+          "value": "Land Trust Alliance"
+        },
+        {
+          "id": "a4feeb86-888c-48f0-a0ba-a346d3e61ba9",
+          "type": "image",
+          "name": "Logo",
+          "value": "",
+          "config": {
+            "maxWidth": 600,
+            "maxHeight": 200,
+            "fileType": "",
+            "fileQuality": "0.9"
+          }
+        },
+        {
+          "id": "8a4fd6ce-ca52-4dfe-9161-92415f03a732",
+          "type": "items",
+          "name": "Nav Items",
+          "value": [
+            {
+              "id": "20f98c69-127d-4dad-b275-6da573686a22",
+              "label": "About",
+              "url": "/about"
+            },
+            {
+              "id": "d9cdb615-b5d7-4517-9406-dff60d73a147",
+              "label": "Programs",
+              "url": "/programs"
+            },
+            {
+              "id": "af4018e9-ed43-4b90-974f-e7edb8031117",
+              "label": "Resources",
+              "url": "/resources"
+            },
+            {
+              "id": "92cdeafc-2bbc-4ecc-b4bc-5a9611fe112d",
+              "label": "Find a Land Trust",
+              "url": "/find"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "39feff1b-704f-4176-8f82-240dfe7c6490",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "1c357324-9e6a-4659-8551-310e9bdaf9e0",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "ede9fc47-68cb-447c-baf8-f0b34182e908",
+          "type": "text",
+          "name": "Button Label",
+          "value": "Donate"
+        },
+        {
+          "id": "bd87c359-8cc5-4bc6-942e-0681b7f5c024",
+          "type": "text",
+          "name": "Button URL",
+          "value": "#"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.081Z",
+      "updatedAt": "2026-02-16T21:29:12.081Z",
+      "__v": 0
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1e0",
+      "name": "Slider",
+      "description": "Card grid (static)",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"py-16 bg-base\">\n  <div class=\"px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-8\">\n        <h2 class=\"heading-lg\" style=\"color: #26484c;\">{{title}}</h2>\n        {{#if description}}\n          <div class=\"body-lg text-fg-muted mt-2\">{{{description}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12\">\n      {{#each items}}\n        <div class=\"flex flex-col h-full bg-base rounded-lg overflow-hidden shadow-md border border-border\">\n          {{#if this.image}}\n            <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"w-full\" style=\"aspect-ratio: 16/9; object-fit: cover;\" />\n          {{/if}}\n          <div class=\"flex flex-col flex-1 p-6\">\n            {{#if this.title}}\n              <h3 class=\"heading-sm\" style=\"color: #26484c;\">{{this.title}}</h3>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-fg-muted mt-2 flex-1\">{{{this.body}}}</div>\n            {{/if}}\n            {{#if this.button-label}}\n              <div class=\"mt-4\">\n                {{> Button label=this.button-label url=this.button-url style=\"link\"}}\n              </div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "0368645e-cd4f-4efe-ba2e-bef6e77fc566",
+          "type": "text",
+          "name": "Title",
+          "value": "Featured Resources"
+        },
+        {
+          "id": "9ee5b4aa-c87d-4137-878e-51cf265a8810",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "0df3620a-999c-40d6-a47e-e3fdfda002d4",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "711530ec-662f-41b3-9c8b-c34a52fcdd54",
+              "image": "",
+              "title": "Resource Title",
+              "body": "<p>A brief description of this resource.</p>",
+              "button-label": "Read More",
+              "button-url": "#"
+            },
+            {
+              "id": "a2c25592-fd17-4033-973f-f2812562963c",
+              "image": "",
+              "title": "Another Resource",
+              "body": "<p>A brief description of another resource.</p>",
+              "button-label": "Read More",
+              "button-url": "#"
+            },
+            {
+              "id": "076644c4-8b04-4b49-87f0-6583368830bd",
+              "image": "",
+              "title": "Third Resource",
+              "body": "<p>A brief description of a third resource.</p>",
+              "button-label": "Read More",
+              "button-url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "145879fa-63e8-4b65-aa67-b72aa3ef932a",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 1200,
+                  "maxHeight": 800,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "623d5970-3ac9-48e3-b554-b456a64fc968",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "142ba38f-df29-4cfc-8c97-fe22352788fb",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "15c32740-dfbb-4bdc-ab5f-efeaa3ecb9eb",
+                "type": "text",
+                "name": "Button Label",
+                "value": ""
+              },
+              {
+                "id": "e9ccea49-f744-4c11-b25b-ea30a93452cf",
+                "type": "text",
+                "name": "Button URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.084Z",
+      "updatedAt": "2026-02-16T21:29:12.084Z",
+      "__v": 0
+    },
+    {
+      "_id": "69938c2882ca637058dca1e4",
+      "name": "Stats",
+      "description": "Stats with icon blobs",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"bg-panel relative py-16 overflow-hidden\">\n  <div class=\"absolute top-0 h-40 w-full\">\n    <img class=\"h-full w-full object-cover\n      [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)] \n      [-webkit-mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)]\" src=\"https://makestudio.site/6992ceef9d1e8d8808ac73a4/treerings.webp\">\n  </div>\n  <div class=\"relative px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"text-center max-w-3xl mx-auto mb-12\">\n        <h2 class=\"heading-lg text-base-alt\">{{title}}</h2>\n        {{#if description}}\n          <div class=\"body-lg text-fg-muted mt-4\">{{{description}}}</div>\n        {{/if}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-12\">\n      {{#each stats}}\n        <div class=\"text-center first:text-brand text-blue last:text-orange\">\n          <div class=\"flex justify-center mb-4\">\n            {{> IconBlob icon=this.icon size=\"md\"}}\n          </div>\n          {{#if this.label}}\n            <div class=\"heading-xs uppercase mt-2\">{{this.label}}</div>\n          {{/if}}\n          {{#if this.stat}}\n            <div class=\"heading-md text-base-alt mt-1\">{{this.stat}}</div>\n          {{/if}}\n          {{#if this.body}}\n            <div class=\"body-md mt-2 text-fg-muted\">{{{this.body}}}</div>\n          {{/if}}\n          {{#if this.url}}\n            <a href=\"{{this.url}}\" class=\"inline-flex items-center gap-1.5 mt-4 font-bold text-sm tracking-wider uppercase no-underline hover:opacity-80\">\n              <span class=\"text-fg\">{{default this.button_label \"Learn more\"}}</span>\n              {{icon \"caret-right\" size=\"24\"}}\n            </a>\n          {{/if}}\n        </div>\n      {{/each}}\n    </div>\n  </div>\n  <div class=\"absolute left-0 w-full -bottom-2 h-2 text-base\" aria-hidden=\"true\">\n    <svg width=\"1440\" height=\"8\" viewBox=\"0 0 1440 8\" preserveAspectRatio=\"none\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-2 w-full\">\n      <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1440 8V0H0V0C0.0955 0.0046 145.534 7 250 7C290.373 7 345.373 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z\" fill=\"currentColor\"></path>\n    </svg>\n  </div>\n</section>\n",
+      "fields": [
+        {
+          "id": "72c2ebb3-5578-4ee7-ab4a-68531fda36fd",
+          "type": "text",
+          "name": "Title",
+          "value": "The power of land trusts"
+        },
+        {
+          "id": "3a4da034-fdf2-457d-b2a4-67dfae21874e",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": "<p>Land trusts across the country are saving land and harnessing the power of conservation to help make their communities stronger.</p>"
+        },
+        {
+          "id": "0cc5968a-20f0-4ed7-876b-489043cec04e",
+          "type": "items",
+          "name": "Stats",
+          "value": [
+            {
+              "id": "5b5c856a-b371-4bf8-b8be-7ea24d02454b",
+              "icon": "mountains",
+              "label": "Land trust members",
+              "stat": "948",
+              "body": "<p>Land trusts are community-led and supported and protect lands and waters that benefit everyone.</p>",
+              "linkLabel": "Find a land trust",
+              "url": "#"
+            },
+            {
+              "id": "2edb068f-83cf-444a-84b6-faae696b753f",
+              "icon": "shield-plus",
+              "label": "Acres Protected",
+              "stat": "61,072,596",
+              "body": "<p>The Land Trust Alliance has set a bold goal for land trusts to conserve another 60 million acres by the end of the decade.</p>",
+              "linkLabel": "Conservation progress",
+              "url": "#"
+            },
+            {
+              "id": "034bedbb-e3a6-40de-9c11-2c1e56824dd9",
+              "icon": "bank",
+              "label": "Years of Service",
+              "stat": "40",
+              "body": "<p>The Land Trust Alliance works passionately to support land trusts so they can secure more land now and for future generations.</p>",
+              "linkLabel": "Our Impact",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "209257f2-d73f-44f1-97c1-fad212b548e7",
+                "type": "text",
+                "name": "Label",
+                "value": ""
+              },
+              {
+                "id": "9af4b0bf-2afd-427e-9f34-f85a4a5a1577",
+                "type": "text",
+                "name": "Icon",
+                "value": ""
+              },
+              {
+                "id": "5ff4148f-3b40-45ae-a3be-cc0ebcc16d30",
+                "type": "text",
+                "name": "Stat",
+                "value": ""
+              },
+              {
+                "id": "28af21e0-11ee-44aa-aadf-fe55df4b214c",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "7f01f154-760c-4f98-9a3f-9685d5036863",
+                "type": "text",
+                "name": "Link Label",
+                "value": ""
+              },
+              {
+                "id": "43a327a0-8c99-4af8-b482-e5bb85b1f79f",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.086Z",
+      "updatedAt": "2026-02-16T22:31:49.405Z",
+      "__v": 2,
+      "aiDescription": "",
+      "category": "section",
+      "tags": []
+    },
+    {
+      "category": "section",
+      "tags": [],
+      "_id": "69938c2882ca637058dca1e8",
+      "name": "StoneSection",
+      "description": "Stone themed card section",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<section class=\"relative py-24 bg-panel text-fg\">\n  {{> Edge type=\"wavy-top\"}}\n  <div class=\"relative px-6 md:px-8 lg:px-12 xl:px-24\">\n    {{#if title}}\n      <div class=\"mb-12\">\n        {{> Heading label=label title=title description=description align=align}}\n      </div>\n    {{/if}}\n    <div class=\"grid grid-cols-1 gap-12 {{#switch columns}}{{#case \"3\"}}md:grid-cols-2 xl:grid-cols-3{{/case}}{{#case \"4\"}}md:grid-cols-2 xl:grid-cols-4{{/case}}{{#otherwise}}md:grid-cols-2{{/otherwise}}{{/switch}}\">\n      {{#each items}}\n        <div class=\"flex flex-col bg-white/30 rounded-lg overflow-hidden\">\n          {{#if this.image}}\n            <img src=\"{{this.image}}\" alt=\"{{default this.title \"\"}}\" class=\"w-full\" style=\"aspect-ratio: 16/9; object-fit: cover;\" />\n          {{/if}}\n          <div class=\"flex-1 p-6\">\n            {{#if this.title}}\n              <h3 class=\"heading-sm\" style=\"color: #26484c;\">\n                {{#if this.url}}<a href=\"{{this.url}}\" class=\"hover:text-brand transition-colors\">{{this.title}}</a>{{else}}{{this.title}}{{/if}}\n              </h3>\n            {{/if}}\n            {{#if this.body}}\n              <div class=\"body-sm text-fg-muted mt-3\">{{{this.body}}}</div>\n            {{/if}}\n          </div>\n        </div>\n      {{/each}}\n    </div>\n    {{#if button-label}}\n      <div class=\"mt-12 {{#if (eq align \"center\")}}text-center{{/if}}\">\n        {{> Button label=button-label url=button-url style=\"solid\"}}\n      </div>\n    {{/if}}\n  </div>\n  {{> Edge type=\"wavy-bottom\"}}\n</section>\n",
+      "fields": [
+        {
+          "id": "87d757d5-2083-48f8-93f4-38699eff37ae",
+          "type": "text",
+          "name": "Label",
+          "value": ""
+        },
+        {
+          "id": "73073756-fadd-43f7-8850-cbfa57525d78",
+          "type": "text",
+          "name": "Title",
+          "value": "Related Resources"
+        },
+        {
+          "id": "4774d7da-6de7-447c-98bb-41fcc4b38f50",
+          "type": "wysiwyg",
+          "name": "Description",
+          "value": ""
+        },
+        {
+          "id": "e69476ea-bc79-4f0c-a2d9-c41cc695ddf3",
+          "type": "select",
+          "name": "Align",
+          "value": "left",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "Left",
+                "value": "left"
+              },
+              {
+                "key": "Center",
+                "value": "center"
+              }
+            ]
+          }
+        },
+        {
+          "id": "513e0485-43f6-4dea-b776-2e9450294d25",
+          "type": "select",
+          "name": "Columns",
+          "value": "3",
+          "config": {
+            "selectOptions": [
+              {
+                "key": "2 Columns",
+                "value": "2"
+              },
+              {
+                "key": "3 Columns",
+                "value": "3"
+              },
+              {
+                "key": "4 Columns",
+                "value": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": "65e1d320-814c-46f4-9b88-fd01a0e86e70",
+          "type": "items",
+          "name": "Items",
+          "value": [
+            {
+              "id": "f33e5757-e34b-4ae2-9af2-04a307d2f15a",
+              "image": "",
+              "title": "Resource One",
+              "body": "<p>Brief description of this resource.</p>",
+              "url": "#"
+            },
+            {
+              "id": "b4e5c3d7-dcf2-4b6e-94a6-d5ceab83b07d",
+              "image": "",
+              "title": "Resource Two",
+              "body": "<p>Brief description of this resource.</p>",
+              "url": "#"
+            },
+            {
+              "id": "b36df7a2-e6a8-4ddb-91c3-e183a8db979c",
+              "image": "",
+              "title": "Resource Three",
+              "body": "<p>Brief description of this resource.</p>",
+              "url": "#"
+            }
+          ],
+          "config": {
+            "fields": [
+              {
+                "id": "e4b64619-a93a-472f-b1ec-fa7f3034e0d3",
+                "type": "image",
+                "name": "Image",
+                "value": "",
+                "config": {
+                  "maxWidth": 1200,
+                  "maxHeight": 800,
+                  "fileType": "",
+                  "fileQuality": "0.8"
+                }
+              },
+              {
+                "id": "b3b074ff-cc5c-454e-8676-44306f1b2423",
+                "type": "text",
+                "name": "Title",
+                "value": ""
+              },
+              {
+                "id": "31421d0d-8b83-4afb-9d9e-5bad138b067c",
+                "type": "wysiwyg",
+                "name": "Body",
+                "value": ""
+              },
+              {
+                "id": "45054d62-01f9-4343-aab2-a28597f0a016",
+                "type": "text",
+                "name": "URL",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "id": "c4d6f62e-6da9-4cde-9eeb-96502c7ec141",
+          "type": "text",
+          "name": "Button Label",
+          "value": ""
+        },
+        {
+          "id": "25d53509-740e-4120-a83c-7bdb626cf497",
+          "type": "text",
+          "name": "Button URL",
+          "value": "#"
+        }
+      ],
+      "createdAt": "2026-02-16T21:29:12.089Z",
+      "updatedAt": "2026-02-16T21:29:12.089Z",
+      "__v": 0
+    }
+  ],
+  "partials": [
+    {
+      "_id": "69938c2782ca637058dca170",
+      "name": "Button",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "{{#switch style}}\n  {{#case \"outline\"}}\n    <a href=\"{{default url \"#\"}}\" class=\"inline-flex items-center justify-center gap-4 min-h-[2.5rem] px-4 py-2 rounded-md border-2 border-brand text-fg text-xs font-bold uppercase tracking-wide transition-colors hover:bg-brand hover:text-on-brand\">\n      {{#if icon}}{{icon icon size=\"18\"}}{{/if}}\n      <span>{{default label \"Click Here\"}}</span>\n    </a>\n  {{/case}}\n  {{#case \"link\"}}\n    <a href=\"{{default url \"#\"}}\" class=\"inline-flex items-center gap-2 text-fg text-xs font-bold uppercase tracking-wide hover:text-brand transition-colors\">\n      <span>{{default label \"Click Here\"}}</span>\n      {{icon \"caret-right\" size=\"18\" class=\"text-brand\"}}\n    </a>\n  {{/case}}\n  {{#otherwise}}\n    <a href=\"{{default url \"#\"}}\" class=\"inline-flex items-center justify-center gap-4 min-h-[2.5rem] px-4 py-2 rounded-md bg-brand text-on-brand text-xs font-bold uppercase tracking-wide transition-colors hover:opacity-90\">\n      {{#if icon}}{{icon icon size=\"18\"}}{{/if}}\n      <span>{{default label \"Click Here\"}}</span>\n    </a>\n  {{/otherwise}}\n{{/switch}}\n",
+      "createdAt": "2026-02-16T21:29:11.973Z",
+      "updatedAt": "2026-02-16T21:29:11.973Z",
+      "__v": 0
+    },
+    {
+      "_id": "69938c2782ca637058dca174",
+      "name": "Edge",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "{{#switch type}}\n  {{#case \"wavy-top\"}}\n    <div class=\"absolute left-0 w-full -top-2 h-2 z-10\" aria-hidden=\"true\">\n      <svg width=\"1440\" height=\"8\" viewBox=\"0 0 1440 8\" preserveAspectRatio=\"none\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-2 w-full text-base\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1440 8H0V0C0 0 145.5 7 250 7C290.373 7 345.374 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z\" fill=\"currentColor\"/>\n      </svg>\n    </div>\n  {{/case}}\n  {{#case \"wavy-bottom\"}}\n    <div class=\"absolute left-0 w-full -bottom-2 h-2\" aria-hidden=\"true\">\n      <svg width=\"1440\" height=\"8\" viewBox=\"0 0 1440 8\" preserveAspectRatio=\"none\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"h-2 w-full text-base\">\n        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1440 8V0H0V0C0.0955 0.0046 145.534 7 250 7C290.373 7 345.373 5.95516 409.841 4.73048C512.238 2.78527 638.518 0.386346 768 1C884.875 1.55391 969.727 2.97936 1054.32 4.40048C1161.66 6.20372 1268.59 8 1440 8Z\" fill=\"currentColor\"/>\n      </svg>\n    </div>\n  {{/case}}\n  {{#otherwise}}\n  {{/otherwise}}\n{{/switch}}\n",
+      "createdAt": "2026-02-16T21:29:11.981Z",
+      "updatedAt": "2026-02-16T21:29:11.981Z",
+      "__v": 0
+    },
+    {
+      "_id": "69938c2782ca637058dca178",
+      "name": "Heading",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<div class=\"flex flex-col gap-4 {{#if (eq align \"center\")}}text-center items-center{{/if}}\">\n  {{#if label}}\n    {{> Label text=label}}\n  {{/if}}\n  {{#if title}}\n    <h2 class=\"heading-lg text-fg {{#if (eq align \"center\")}}mx-auto{{/if}}\" style=\"color: var(--lta-heading, #26484c);\">{{title}}</h2>\n  {{/if}}\n  {{#if subtitle}}\n    <h4 class=\"heading-sm text-fg-muted\">{{subtitle}}</h4>\n  {{/if}}\n  {{#if description}}\n    <div class=\"body-lg text-fg-muted max-w-3xl {{#if (eq align \"center\")}}mx-auto{{/if}}\">\n      {{{description}}}\n    </div>\n  {{/if}}\n</div>\n",
+      "createdAt": "2026-02-16T21:29:11.984Z",
+      "updatedAt": "2026-02-16T21:29:11.984Z",
+      "__v": 0
+    },
+    {
+      "_id": "69938c2782ca637058dca17c",
+      "name": "IconBlob",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<div class=\"relative inline-flex items-center justify-center {{#switch size}}{{#case \"sm\"}}w-10 h-10{{/case}}{{#case \"md\"}}w-24 h-24{{/case}}{{#otherwise}}w-36 h-36{{/otherwise}}{{/switch}}\">\n  <div class=\"absolute inset-0 {{color}}\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 144 144\" width=\"144\" height=\"144\" class=\"max-h-full max-w-full overflow-visible\">\n      <path opacity=\"0.6\" d=\"M139.139 96.8562C102.3 193.866 -52.3917 127.477 20.0847 21.3445C32.0359 -4.64595 83.417 -3.69912 110.403 7.28134C149.193 20.5764 145.097 62.9899 139.139 96.8562Z\" fill=\"currentColor\"></path>\n      <path d=\"M137.284 98.4265C122.788 121.848 96.9702 147.501 55.2085 143.605C34.2085 143.06 -8.47947 114.973 -1.16754 73.4802C2.69625 39.7294 37.3237 -2.68875 83.9049 0.133753C129.917 2.8492 161.653 58.0659 137.284 98.4265Z\" fill=\"currentColor\"></path>\n    </svg>\n  </div>\n  <div class=\"relative z-10 text-fg {{#switch size}}{{#case \"sm\"}}text-base{{/case}}{{#case \"md\"}}text-2xl{{/case}}{{#otherwise}}text-4xl{{/otherwise}}{{/switch}}\">\n    {{icon (default icon \"hand-heart\") size=(default iconSize \"36\")}}\n  </div>\n</div>",
+      "createdAt": "2026-02-16T21:29:11.987Z",
+      "updatedAt": "2026-02-16T22:00:58.107Z",
+      "__v": 0
+    },
+    {
+      "_id": "69938c2782ca637058dca180",
+      "name": "Label",
+      "site_id": "6992ceef9d1e8d8808ac73a4",
+      "template": "<div class=\"relative inline-flex items-center px-3 -mx-2 min-h-6 text-sm font-semibold tracking-wide uppercase text-white\">\n  <span class=\"relative z-10 py-1\">{{default text \"Label\"}}</span>\n  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" viewBox=\"0 0 145 24\" preserveAspectRatio=\"none\" class=\"absolute inset-0 min-h-6 h-full w-full text-brand\">\n    <path d=\"M141.17 19.4325C135.5 23.9673 119.888 23.593 89.9934 23.7807C57.6341 23.9839 12.6676 24.5587 4.80116 22.334C-1.60038 20.5236 -1.60039 6.2696 4.80117 3.81395C17.1069 -0.906523 109.115 -0.635282 136.902 1.35903C147.236 2.10074 146.534 15.1418 141.17 19.4325Z\" fill=\"currentColor\"/>\n  </svg>\n</div>\n",
+      "createdAt": "2026-02-16T21:29:11.991Z",
+      "updatedAt": "2026-02-16T21:29:11.991Z",
+      "__v": 0
+    }
+  ]
+}

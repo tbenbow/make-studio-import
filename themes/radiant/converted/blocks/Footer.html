@@ -1,0 +1,64 @@
+<footer class="bg-base">
+  <div class="relative bg-gradient-to-br from-[#fff1be] from-28% via-[#ee87cb] via-70% to-[#b060ff]">
+    <div class="absolute inset-2 rounded-[2rem] bg-white/80"></div>
+    <div class="relative px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-7xl">
+        <div class="relative pt-20 pb-16 text-center sm:py-24">
+          {{#if cta-eyebrow}}
+          <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{cta-eyebrow}}</p>
+          {{/if}}
+          {{#if cta-headline}}
+          <p class="mt-6 text-3xl font-medium tracking-tight text-fg sm:text-5xl">{{{cta-headline}}}</p>
+          {{/if}}
+          {{#if cta-description}}
+          <p class="mx-auto mt-6 max-w-xs body-sm text-fg-alt">{{cta-description}}</p>
+          {{/if}}
+          {{#if cta-button-label}}
+          <div class="mt-6">
+            {{> Button label=cta-button-label url=cta-button-url style="primary"}}
+          </div>
+          {{/if}}
+        </div>
+        <div class="pb-16">
+          <div class="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8">
+            <div class="col-span-2 flex">
+              <div class="pt-6 lg:pb-6">
+                {{#if logo}}
+                <img src="{{logo}}" alt="{{default logo-alt "Home"}}" class="h-9" />
+                {{else}}
+                <span class="heading-sm text-fg">{{default site-name "Radiant"}}</span>
+                {{/if}}
+              </div>
+            </div>
+            <div class="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-4 lg:pt-6">
+              {{#each link-groups}}
+              <div>
+                <h3 class="body-sm font-medium text-fg/50">{{heading}}</h3>
+                <ul class="mt-6 space-y-4 body-sm">
+                  {{#each links}}
+                  <li>
+                    <a href="{{url}}" class="font-medium text-fg hover:text-fg/75">{{label}}</a>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+          <div class="flex justify-between border-t border-border pt-6">
+            <div class="py-3">
+              <p class="body-sm text-fg">{{{default copyright "&copy; 2025 Radiant Inc."}}}</p>
+            </div>
+            <div class="flex items-center gap-8 py-3">
+              {{#each social-links}}
+              <a href="{{url}}" target="_blank" aria-label="{{label}}" class="text-fg hover:text-fg/75">
+                {{icon icon size="16"}}
+              </a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,27 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Heading with large screenshot",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "A snapshot of your entire sales pipeline."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "config": {
+        "maxWidth": 3000,
+        "maxHeight": 3000,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Image Alt",
+      "default": "App screenshot"
+    }
+  ]
+}

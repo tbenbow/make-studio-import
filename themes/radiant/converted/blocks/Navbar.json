@@ -1,0 +1,43 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Logo + nav links",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo",
+      "config": {
+        "maxWidth": 600,
+        "maxHeight": 200,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Logo Alt",
+      "default": "Home"
+    },
+    {
+      "type": "text",
+      "name": "Site Name",
+      "default": "Radiant"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "label": "Pricing", "url": "/pricing" },
+        { "label": "Company", "url": "/company" },
+        { "label": "Blog", "url": "/blog" },
+        { "label": "Login", "url": "/login" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "URL" }
+        ]
+      }
+    }
+  ]
+}

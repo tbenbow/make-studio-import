@@ -1,0 +1,11 @@
+<div class="relative inline-flex items-center justify-center {{#switch size}}{{#case "sm"}}w-10 h-10{{/case}}{{#case "md"}}w-24 h-24{{/case}}{{#otherwise}}w-36 h-36{{/otherwise}}{{/switch}}">
+  <div class="absolute inset-0 {{color}}">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144" class="max-h-full max-w-full overflow-visible">
+      <path opacity="0.6" d="M139.139 96.8562C102.3 193.866 -52.3917 127.477 20.0847 21.3445C32.0359 -4.64595 83.417 -3.69912 110.403 7.28134C149.193 20.5764 145.097 62.9899 139.139 96.8562Z" fill="currentColor"></path>
+      <path d="M137.284 98.4265C122.788 121.848 96.9702 147.501 55.2085 143.605C34.2085 143.06 -8.47947 114.973 -1.16754 73.4802C2.69625 39.7294 37.3237 -2.68875 83.9049 0.133753C129.917 2.8492 161.653 58.0659 137.284 98.4265Z" fill="currentColor"></path>
+    </svg>
+  </div>
+  <div class="relative z-10 text-fg {{#switch size}}{{#case "sm"}}text-base{{/case}}{{#case "md"}}text-2xl{{/case}}{{#otherwise}}text-4xl{{/otherwise}}{{/switch}}">
+    {{icon (default icon "hand-heart") size=(default iconSize "36")}}
+  </div>
+</div>

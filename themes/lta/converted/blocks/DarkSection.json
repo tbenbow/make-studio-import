@@ -1,0 +1,115 @@
+{
+  "description": "Dark themed card section",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Featured Programs"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "3",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "2 Columns",
+            "value": "2"
+          },
+          {
+            "key": "3 Columns",
+            "value": "3"
+          },
+          {
+            "key": "4 Columns",
+            "value": "4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "",
+          "title": "Program One",
+          "body": "<p>Brief description of this program.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "title": "Program Two",
+          "body": "<p>Brief description of this program.</p>",
+          "url": "#"
+        },
+        {
+          "image": "",
+          "title": "Program Three",
+          "body": "<p>Brief description of this program.</p>",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image",
+            "config": {
+              "maxWidth": 1200,
+              "maxHeight": 800,
+              "fileType": "",
+              "fileQuality": "0.8"
+            }
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label"
+    },
+    {
+      "type": "text",
+      "name": "Button URL",
+      "default": "#"
+    }
+  ]
+}

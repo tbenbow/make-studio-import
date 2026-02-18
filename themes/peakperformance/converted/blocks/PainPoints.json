@@ -1,0 +1,50 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Numbered pain points",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "The hard truth"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>TALENT GOT YOU HERE.<br><span style=\"opacity: 0.4\">IT WON'T GET YOU THERE.</span></p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>You've always been the best in your circle. But the gap between \"good\" and \"world-class\" is a chasm that ambition alone can't cross.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Points",
+      "default": [
+        {
+          "number": "01",
+          "title": "Your prime years are burning.",
+          "description": "You're grinding without expert direction. Every month of unfocused training is a month your competitors are pulling ahead."
+        },
+        {
+          "number": "02",
+          "title": "Programs don't build podiums.",
+          "description": "Cookie-cutter plans from the internet were never designed for someone chasing world-class. You need a system, not a spreadsheet."
+        },
+        {
+          "number": "03",
+          "title": "Your body is ready. Your mind isn't.",
+          "description": "You crumble when it counts. The mental demands of elite competition require training as deliberate as your physical prep."
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Number" },
+          { "type": "text", "name": "Title" },
+          { "type": "textarea", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

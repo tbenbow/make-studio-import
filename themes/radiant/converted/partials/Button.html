@@ -1,0 +1,9 @@
+{{#if url}}
+<a href="{{url}}" class="{{#if (eq style "secondary")}}relative inline-flex items-center justify-center px-4 py-2 rounded-full bg-base/15 shadow-md ring-1 ring-border body-md font-medium whitespace-nowrap text-fg hover:bg-base/20{{else if (eq style "outline")}}inline-flex items-center justify-center px-2 py-1.5 rounded-lg shadow-sm ring-1 ring-border body-sm font-medium whitespace-nowrap text-fg hover:bg-base-muted{{else}}inline-flex items-center justify-center px-4 py-2 rounded-full bg-brand shadow-md body-md font-medium whitespace-nowrap text-on-brand hover:bg-base-alt{{/if}}">
+  {{label}}
+</a>
+{{else}}
+<button type="{{default type "button"}}" class="{{#if (eq style "secondary")}}relative inline-flex items-center justify-center px-4 py-2 rounded-full bg-base/15 shadow-md ring-1 ring-border body-md font-medium whitespace-nowrap text-fg hover:bg-base/20{{else if (eq style "outline")}}inline-flex items-center justify-center px-2 py-1.5 rounded-lg shadow-sm ring-1 ring-border body-sm font-medium whitespace-nowrap text-fg hover:bg-base-muted{{else}}inline-flex items-center justify-center px-4 py-2 rounded-full bg-brand shadow-md body-md font-medium whitespace-nowrap text-on-brand hover:bg-base-alt{{/if}}">
+  {{label}}
+</button>
+{{/if}}

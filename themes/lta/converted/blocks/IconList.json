@@ -1,0 +1,97 @@
+{
+  "description": "Icon and text feature grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description"
+    },
+    {
+      "type": "select",
+      "name": "Align",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Left",
+            "value": "left"
+          },
+          {
+            "key": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "2",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "2 Columns",
+            "value": "2"
+          },
+          {
+            "key": "3 Columns",
+            "value": "3"
+          },
+          {
+            "key": "4 Columns",
+            "value": "4"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "icon": "shield-check",
+          "title": "Accreditation",
+          "body": "<p>Ensuring the highest standards for land trusts across the nation.</p>"
+        },
+        {
+          "icon": "scales",
+          "title": "Public Policy",
+          "body": "<p>Advocating for policies that support land conservation.</p>"
+        },
+        {
+          "icon": "graduation-cap",
+          "title": "Education",
+          "body": "<p>Training and resources for land trust professionals.</p>"
+        },
+        {
+          "icon": "users",
+          "title": "Community",
+          "body": "<p>Building a strong network of conservation organizations.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          }
+        ]
+      }
+    }
+  ]
+}

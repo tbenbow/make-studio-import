@@ -1,0 +1,90 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Multi-column with social",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo",
+      "default": "",
+      "config": { "maxWidth": 200, "maxHeight": 60 }
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "PEAK"
+    },
+    {
+      "type": "text",
+      "name": "Tagline",
+      "default": "Helping aspiring athletes achieve their peak physical and mental abilities through evidence-based coaching."
+    },
+    {
+      "type": "items",
+      "name": "Link Groups",
+      "default": [
+        {
+          "title": "Company",
+          "links": [
+            { "label": "About", "url": "#about" },
+            { "label": "Process", "url": "#process" },
+            { "label": "Results", "url": "#testimonials" },
+            { "label": "Careers", "url": "#" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "label": "Blog", "url": "#" },
+            { "label": "Podcast", "url": "#" },
+            { "label": "Training Guide", "url": "#" },
+            { "label": "FAQ", "url": "#" }
+          ]
+        },
+        {
+          "title": "Legal",
+          "links": [
+            { "label": "Privacy", "url": "#" },
+            { "label": "Terms", "url": "#" },
+            { "label": "Cookies", "url": "#" }
+          ]
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          {
+            "type": "items",
+            "name": "Links",
+            "config": {
+              "fields": [
+                { "type": "text", "name": "Label" },
+                { "type": "text", "name": "Url" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2026 Peak Performance. All rights reserved.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        { "label": "Instagram", "url": "#" },
+        { "label": "X / Twitter", "url": "#" },
+        { "label": "YouTube", "url": "#" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Url" }
+        ]
+      }
+    }
+  ]
+}

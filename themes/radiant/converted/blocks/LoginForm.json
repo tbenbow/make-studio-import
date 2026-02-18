@@ -1,0 +1,47 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Centered login card",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo",
+      "config": {
+        "maxWidth": 200,
+        "maxHeight": 200,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Welcome back!"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle",
+      "default": "Sign in to your account to continue."
+    },
+    {
+      "type": "text",
+      "name": "Form Action",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Submit Label",
+      "default": "Sign in"
+    },
+    {
+      "type": "text",
+      "name": "Forgot Password URL",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Signup URL",
+      "default": "#"
+    }
+  ]
+}

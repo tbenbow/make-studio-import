@@ -1,0 +1,56 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Centered with bg text",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Background Text",
+      "default": "START NOW"
+    },
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Limited spots for 2026"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>STOP TRAINING HARD.<br><span class=\"text-brand\">START TRAINING RIGHT.</span></p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Book a free 30-minute consultation. We'll discuss your goals, assess your current level, and show you the path forward. Zero obligation.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Book Free Consultation", "link": "#", "style": "primary" },
+        { "label": "Email Us", "link": "mailto:hello@peakperformance.com", "style": "outline" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Outline", "value": "outline" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Footnote",
+      "default": "No credit card required — Unsubscribe anytime"
+    }
+  ]
+}

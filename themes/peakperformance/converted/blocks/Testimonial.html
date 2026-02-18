@@ -1,0 +1,43 @@
+<section class="py-24 sm:py-32 lg:py-40 bg-base-muted relative overflow-hidden">
+  <div class="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-20">
+    <div class="mb-16 lg:mb-24">
+      {{#if eyebrow}}
+        <p class="body-sm font-bold uppercase tracking-[0.2em] text-brand mb-6">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg">{{{headline}}}</h2>
+    </div>
+    <div>
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-0">
+        <div class="lg:col-span-8 lg:pr-16">
+          <figure>
+            <svg class="w-16 h-16 text-brand/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z" />
+            </svg>
+            <blockquote class="heading-md sm:heading-lg text-fg leading-tight">
+              {{{quote}}}
+            </blockquote>
+            <figcaption class="mt-8 flex items-center gap-4">
+              {{#if image}}
+                <img src="{{image}}" alt="{{name}}" class="w-14 h-14 object-cover grayscale" loading="lazy" />
+              {{/if}}
+              <div>
+                <p class="body-sm font-bold text-fg">{{name}}</p>
+                <p class="body-sm text-fg-alt">{{byline}}</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        {{#if (length testimonials)}}
+          <div class="lg:col-span-4 flex lg:flex-col gap-4 lg:border-l border-fg/10 lg:pl-10">
+            {{#each testimonials}}
+              <div class="flex-1 text-left p-5 border border-fg/10">
+                <p class="body-sm font-bold text-fg">{{name}}</p>
+                <p class="body-sm text-fg-alt mt-0.5">{{byline}}</p>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

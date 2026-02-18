@@ -1,0 +1,46 @@
+{
+  "description": "Content plus image split",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Featured Content"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Describe the featured content here.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "config": {
+        "maxWidth": 2000,
+        "maxHeight": 1500,
+        "fileType": "",
+        "fileQuality": "0.8"
+      }
+    },
+    {
+      "type": "select",
+      "name": "Layout",
+      "default": "default",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Default",
+            "value": "default"
+          },
+          {
+            "key": "Card Overlay",
+            "value": "card"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "description": "Accordion FAQ list",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "title": "What is a land trust?",
+          "content": "<p>A land trust is a nonprofit organization that actively works to conserve land by undertaking or assisting in land or conservation easement acquisition.</p>"
+        },
+        {
+          "title": "How can I get involved?",
+          "content": "<p>There are many ways to support land conservation, from volunteering with your local land trust to making a donation.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Content"
+          }
+        ]
+      }
+    }
+  ]
+}

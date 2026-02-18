@@ -1,0 +1,47 @@
+<section class="bg-base px-6 lg:px-8 mt-32">
+  <div class="mx-auto max-w-2xl lg:max-w-7xl">
+    {{#if eyebrow}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase">{{eyebrow}}</p>
+    {{/if}}
+    <h2 class="heading-xl text-fg mt-2">{{headline}}</h2>
+    {{#if description}}
+    <p class="mt-6 max-w-3xl text-2xl font-medium text-fg-alt">{{description}}</p>
+    {{/if}}
+    <div class="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+      {{#if about-text}}
+      <div class="max-w-lg">
+        <div class="body-sm text-fg-muted">{{{about-text}}}</div>
+        {{#if button-label}}
+        <div class="mt-6">
+          {{> Button label=button-label url=button-url style="primary"}}
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+      {{#if team-photo}}
+      <div class="max-lg:order-first max-lg:max-w-lg">
+        <div class="aspect-[3/2] overflow-hidden rounded-xl shadow-xl outline-1 -outline-offset-1 outline-black/10">
+          <img alt="" src="{{team-photo}}" class="block size-full object-cover" />
+        </div>
+      </div>
+      {{/if}}
+    </div>
+    {{#if members.length}}
+    <p class="font-mono text-xs/5 font-semibold tracking-widest text-fg-alt uppercase mt-24">The team</p>
+    <hr class="mt-6 border-t border-border" />
+    <ul class="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {{#each members}}
+      <li class="flex items-center gap-4">
+        {{#if image}}
+        <img alt="" src="{{image}}" class="size-12 rounded-full" />
+        {{/if}}
+        <div class="body-sm">
+          <h3 class="font-medium text-fg">{{name}}</h3>
+          <p class="text-fg-alt">{{role}}</p>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</section>

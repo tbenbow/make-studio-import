@@ -33,6 +33,12 @@ function remapBlockInstances(
   }))
 }
 
+async function buildOwnerUsers(owner: string | undefined, db: any): Promise<any[]> {
+  if (!owner) return []
+  const user = await db.collection('users').findOne({ clerkId: owner })
+  return [{ userId: owner, authLevel: 0, name: user?.name || owner }]
+}
+
 export async function pushSite(
   sourceSiteId: string,
   sourceMongoUri: string,
@@ -261,7 +267,7 @@ export async function pushSite(
       ...sourceSite,
       _id: newSiteId,
       ownerId: options.owner || sourceSite.ownerId,
-      users: options.owner ? [{ userId: options.owner, authLevel: 0 }] : [],
+      users: await buildOwnerUsers(options.owner, target.db),
       customDomain: null,
       staticSite: {
         enabled: false, r2Path: null, domain: null, customDomain: null,

@@ -1,0 +1,5 @@
+declare module 'crypto-js/md5'
+declare module 'lodash-es'
+declare module 'omit-deep-lodash'
+declare module 'postscribe'
+declare module 'url-parse'

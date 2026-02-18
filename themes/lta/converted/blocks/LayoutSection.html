@@ -1,0 +1,9 @@
+<section class="relative py-24 {{#switch background}}{{#case "dark"}}bg-base-alt text-on-brand lta-section-dark{{/case}}{{#case "stone"}}bg-panel text-fg{{/case}}{{#case "gray"}}bg-base-muted text-fg{{/case}}{{#otherwise}}bg-base text-fg{{/otherwise}}{{/switch}}">
+  {{#if top-edge}}
+    {{> Edge type=top-edge}}
+  {{/if}}
+  <div class="relative px-6 md:px-8 lg:px-12 xl:px-24">
+    {{{prose body}}}
+  </div>
+  {{> Edge type="wavy-bottom"}}
+</section>

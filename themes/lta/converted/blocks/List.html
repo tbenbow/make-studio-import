@@ -1,0 +1,27 @@
+<section class="py-16 bg-base">
+  <div class="px-6 md:px-8 lg:px-12 xl:px-24">
+    <ul class="list-none p-0">
+      {{#each items}}
+        <li class="grid gap-6 grid-flow-col auto-cols-fr py-3 first:pt-0 last:pb-0 border-b last:border-b-0 border-border {{#if (eq ../spacing "loose")}}py-6{{/if}}">
+          {{#if this.icon}}
+            <div class="flex items-center text-fg-alt break-words" style="grid-template-columns: minmax(3rem, max-content);">
+              <span class="self-start flex-shrink-0 mt-[2px] mr-2 text-brand text-lg">
+                {{icon this.icon size="20"}}
+              </span>
+              {{#if this.label}}
+                <span>{{this.label}}</span>
+              {{/if}}
+            </div>
+          {{else if this.label}}
+            <div class="flex items-center text-fg-alt break-words">
+              <span>{{this.label}}</span>
+            </div>
+          {{/if}}
+          {{#if this.body}}
+            <div class="body-md text-fg-muted">{{{this.body}}}</div>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

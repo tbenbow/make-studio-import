@@ -1,0 +1,49 @@
+<footer class="bg-base border-t border-fg/5">
+  <div class="py-14 lg:py-20 px-5 sm:px-8 lg:px-12 xl:px-20">
+    <div class="mx-auto max-w-[1440px]">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-3 mb-6">
+            {{#if logo}}
+              <img src="{{logo}}" alt="{{logo_text}}" class="h-7 w-auto" />
+            {{else}}
+              <div class="relative w-7 h-7">
+                <div class="absolute inset-0 bg-brand rotate-45"></div>
+              </div>
+            {{/if}}
+            <span class="heading-sm text-fg tracking-wide">{{default logo_text "PEAK"}}</span>
+          </div>
+          {{#if tagline}}
+            <p class="body-sm text-fg-alt leading-relaxed max-w-xs">{{tagline}}</p>
+          {{/if}}
+        </div>
+        {{#if (length link_groups)}}
+          {{#each link_groups}}
+            <div class="lg:col-span-2 {{#if @first}}lg:col-start-6{{/if}}">
+              <h4 class="body-sm font-bold uppercase tracking-[0.2em] text-fg-muted mb-5">{{title}}</h4>
+              {{#if (length links)}}
+                <ul class="space-y-3">
+                  {{#each links}}
+                    <li>
+                      <a href="{{url}}" class="body-sm text-fg-alt hover:text-brand transition">{{label}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+            </div>
+          {{/each}}
+        {{/if}}
+      </div>
+      <div class="mt-16 pt-8 border-t border-fg/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="body-sm text-fg-alt">{{{fineprint}}}</p>
+        {{#if (length social_links)}}
+          <div class="flex gap-8">
+            {{#each social_links}}
+              <a href="{{url}}" class="body-sm font-bold uppercase tracking-[0.15em] text-fg-alt hover:text-brand transition">{{label}}</a>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</footer>

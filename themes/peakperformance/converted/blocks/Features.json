@@ -1,0 +1,55 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Image card grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "What we deliver"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>EVERYTHING.<br><span class=\"text-brand\">NO GAPS.</span></p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>A holistic, evidence-based system that transforms talented athletes into podium-ready competitors. No guesswork.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "headline": "PERIODIZED TRAINING",
+          "description": "Scientifically designed cycles that peak exactly when you need them. Every session has purpose.",
+          "image": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&h=600&fit=crop"
+        },
+        {
+          "headline": "PERFORMANCE ANALYTICS",
+          "description": "Data-driven insights from wearables, biomechanics, and recovery metrics. Always know where you stand.",
+          "image": "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop"
+        },
+        {
+          "headline": "MENTAL CONDITIONING",
+          "description": "Visualization, pressure management, and competitive mindset training used by Olympic athletes.",
+          "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=600&fit=crop"
+        },
+        {
+          "headline": "NUTRITION & RECOVERY",
+          "description": "Custom fueling strategies and recovery protocols. Train harder, recover faster, show up stronger.",
+          "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=600&fit=crop"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Headline" },
+          { "type": "textarea", "name": "Description" },
+          { "type": "image", "name": "Image" }
+        ]
+      }
+    }
+  ]
+}
