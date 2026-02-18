@@ -1,9 +1,25 @@
 {
   "fonts": [
-    { "family": "Roboto Slab", "weight": 400, "style": "normal" },
-    { "family": "Roboto", "weight": 400, "style": "normal" },
-    { "family": "Roboto", "weight": 500, "style": "normal" },
-    { "family": "Roboto", "weight": 700, "style": "normal" }
+    {
+      "family": "Roboto Slab",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Roboto",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Roboto",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Roboto",
+      "weight": 700,
+      "style": "normal"
+    }
   ],
   "systemColors": {
     "brand": "#46b3ff",
@@ -22,23 +38,53 @@
   "palette": {
     "primary": {
       "label": "primary",
-      "colors": ["#b3dfff", "#80ccff", "#46b3ff", "#1a8fd6", "#0d6db3"]
+      "colors": [
+        "#b3dfff",
+        "#80ccff",
+        "#46b3ff",
+        "#1a8fd6",
+        "#0d6db3"
+      ]
     },
     "grays": {
       "label": "gray",
-      "colors": ["#e0e0e0", "#b5b5b5", "#858585", "#555555", "#252525"]
+      "colors": [
+        "#e0e0e0",
+        "#b5b5b5",
+        "#858585",
+        "#555555",
+        "#252525"
+      ]
     },
     "accent1": {
       "label": "accent-1",
-      "colors": ["#fdd88a", "#fcca5e", "#ffbb2a", "#d99a1e", "#b37a12"]
+      "colors": [
+        "#fdd88a",
+        "#fcca5e",
+        "#ffbb2a",
+        "#d99a1e",
+        "#b37a12"
+      ]
     },
     "accent2": {
       "label": "accent-2",
-      "colors": ["#fcb09a", "#fa8468", "#f9613e", "#d14428", "#a93218"]
+      "colors": [
+        "#fcb09a",
+        "#fa8468",
+        "#f9613e",
+        "#d14428",
+        "#a93218"
+      ]
     },
     "accent3": {
       "label": "accent-3",
-      "colors": ["#b3dfff", "#80ccff", "#46b3ff", "#1a8fd6", "#0d6db3"]
+      "colors": [
+        "#b3dfff",
+        "#80ccff",
+        "#46b3ff",
+        "#1a8fd6",
+        "#0d6db3"
+      ]
     }
   },
   "headingTypography": {
@@ -113,15 +159,42 @@
   },
   "prose": {
     "elements": {
-      "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
-      "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
-      "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
-      "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
-      "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
-      "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
-      "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
-      "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
-      "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "h4": {
+        "typographyClass": "heading-sm",
+        "marginBottom": 0.75
+      },
+      "h5": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "h6": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ul": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ol": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      }
     },
     "lists": {
       "listStyleType": "disc",

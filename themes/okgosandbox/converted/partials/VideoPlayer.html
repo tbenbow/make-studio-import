@@ -1,0 +1,29 @@
+{{#if video-url}}
+  <div class="relative w-full bg-black" style="padding-bottom: 56.25%" x-data="{ playing: false }">
+    <template x-if="!playing">
+      <button @click="playing = true" class="absolute inset-0 w-full h-full cursor-pointer group">
+        {{#if image}}
+          <img src="{{image}}" alt="{{default image-alt 'Video'}}" class="absolute inset-0 w-full h-full object-cover">
+        {{else}}
+          <div class="absolute inset-0 w-full h-full bg-fg"></div>
+        {{/if}}
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="relative w-32 h-32 rounded-full bg-black/20 group-hover:bg-black/40 transition">
+            <div class="absolute inset-2 rounded-full border-4 border-brand flex items-center justify-center">
+              <svg class="w-18 h-18 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </button>
+    </template>
+    <template x-if="playing">
+      <iframe src="{{video-url}}&autoplay=1" class="absolute inset-0 w-full h-full" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+    </template>
+  </div>
+{{else if image}}
+  <img src="{{image}}" alt="{{default image-alt 'Video'}}" class="w-full h-auto">
+{{else}}
+  <div class="w-full aspect-video bg-base-muted"></div>
+{{/if}}

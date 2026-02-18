@@ -1,0 +1,47 @@
+{
+  "description": "Alternating Q&A cards with video and question overlay",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "question": "How did you simulate microgravity?",
+          "video-url": "https://www.youtube.com/embed/LWGJA9i18Co?rel=0"
+        },
+        {
+          "question": "What kind of math and science do you use?",
+          "video-url": "https://www.youtube.com/embed/qybUFnY7Y8w?rel=0"
+        },
+        {
+          "question": "What inspired the name OK Go Sandbox?",
+          "video-url": ""
+        },
+        {
+          "question": "How many explosives do you use?",
+          "video-url": ""
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Question"
+          },
+          {
+            "type": "text",
+            "name": "Video URL"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Image Alt"
+          }
+        ]
+      }
+    }
+  ]
+}

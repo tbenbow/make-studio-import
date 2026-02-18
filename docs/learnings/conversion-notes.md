@@ -170,3 +170,17 @@ Accumulated learnings from site conversions. Read this before starting a new con
 - **Alpine.js for interactive content** — Use `x-data`, `x-show`, `@click`, and `:src` for interactive elements like video grids where clicking a thumbnail switches the playing video. Only load the active iframe with conditional `:src` binding to avoid loading all videos at once.
 
 - **Use fixed pixel dimensions for small UI elements** — Thumbnails, icons, and other small elements should use exact pixel sizes (`w-[90px] h-[50px]`) rather than responsive grid columns. This ensures they match the original site precisely and don't scale unexpectedly.
+
+- **Extract partials for repeated UI patterns** — When the same HTML appears in 3+ blocks, extract it into a partial. Good candidates: video embeds (poster frame + play button + iframe), decorative stripes, buttons. This centralizes changes — update the partial once and it cascades everywhere.
+
+- **VideoPlayer partial for click-to-play videos** — A shared partial that shows a poster image with a play button overlay, then swaps to an iframe on click using Alpine.js `x-data="{ playing: false }"`. Expects `video-url`, `image`, and `image-alt` in context. Add `bg-black` to the container to prevent white flash during iframe load.
+
+- **Use the Button partial everywhere possible** — Define all button styles (primary, secondary, ghost, accent, nav) in the Button partial with `{{#switch style}}`. Use `{{> Button}}` in blocks for standard CTAs, and `{{> Button link=field label=field style="variant"}}` for inline buttons with explicit context. Only inline button HTML when the design is too specialized (icons + subtitles, split arrow buttons, form submits).
+
+- **Keep JSON defaults clean** — After pulling from the remote, defaults can get polluted with `id`, `value`, and stringified JSON. Clean them: defaults should be proper arrays with kebab-case keys, and `config.fields` should only have `type` and `name` (no `id` or `value`). Title Case keys in defaults (e.g. `"Title"`) should be normalized to kebab-case (`"title"`).
+
+- **Write meaningful block descriptions** — Don't use the block name as the description (`"AskOkGo"`). Write a short phrase that describes what the block looks like: `"Alternating Q&A cards with video and question overlay"`. Avoid truncation — the API may silently clip long description fields.
+
+- **Tailwind arbitrary variants for parent-child alternation** — When you need different child styles based on parent position (e.g. odd/even rows with different child layouts), use `[&:nth-child(even)>[data-child]]` on the parent. Note: Make Studio encodes `&` to `&amp;` on pull, but the unencoded version renders correctly when pushed.
+
+- **Footer semantic color workaround** — When a footer uses `bg-base-alt` (dark) and needs white text, `text-on-brand` works if `on-brand` is white, but it's semantically imprecise. There's no `on-base-alt` token in make-studio. This is an acceptable pragmatic workaround until the token system expands.

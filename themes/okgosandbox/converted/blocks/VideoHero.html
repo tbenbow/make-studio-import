@@ -1,24 +1,16 @@
 <section class="bg-base">
-  <div class="flex justify-center pt-8">
+  <div class="flex justify-center">
     <div class="w-px h-12 bg-fg"></div>
   </div>
-  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10 pb-0">
-    <h1 class="heading-xl text-fg text-center mb-8 lg:mb-12">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
+    <h1 class="heading-xl text-fg text-center mb-8 lg:mb-12 uppercase">
       {{default title "This Too Shall Pass"}}
     </h1>
   </div>
   <div class="relative pb-32 lg:pb-0">
     <div class="absolute bottom-0 left-0 right-0 h-36 bg-base-muted"></div>
     <div class="relative lg:w-3/5">
-      {{#if video-url}}
-        <div class="relative w-full" style="padding-bottom: 56.25%">
-          <iframe src="{{video-url}}" class="absolute inset-0 w-full h-full"></iframe>
-        </div>
-      {{else if poster}}
-        <img src="{{poster}}" alt="{{default poster-alt title}}" class="w-full h-auto">
-      {{else}}
-        <div class="w-full aspect-video bg-base-muted"></div>
-      {{/if}}
+      {{> VideoPlayer}}
       {{#if illustration}}
         <img src="{{illustration}}" alt="{{default illustration-alt 'Illustration'}}" class="hidden lg:block absolute -top-8 -right-[420px] h-64 w-auto pointer-events-none">
       {{/if}}
@@ -26,11 +18,7 @@
     {{#if about-heading}}
       <div class="relative lg:absolute lg:-bottom-16 lg:right-24 lg:w-2/5 px-6 lg:px-0 mt-6 lg:mt-0">
         <div class="flex">
-          <div class="w-1.5 shrink-0 flex flex-col">
-            <div class="flex-1 bg-brand"></div>
-            <div class="flex-1 bg-[#ffbb2a]"></div>
-            <div class="flex-1 bg-[#f9613e]"></div>
-          </div>
+          {{> RainbowBar}}
           <div class="bg-base shadow-lg p-8 lg:p-10 flex-1">
             <h2 class="heading-sm text-fg uppercase tracking-wider mb-4">
               {{about-heading}}

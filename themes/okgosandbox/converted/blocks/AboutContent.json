@@ -1,0 +1,43 @@
+{
+  "description": "About page with image, newsletter signup, and body text",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image"
+    },
+    {
+      "type": "text",
+      "name": "Image Alt",
+      "default": "About OK Go Sandbox"
+    },
+    {
+      "type": "text",
+      "name": "Newsletter Heading",
+      "default": "Newsletter"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Newsletter Text"
+    },
+    {
+      "type": "text",
+      "name": "Email Placeholder",
+      "default": "Email address"
+    },
+    {
+      "type": "text",
+      "name": "Subscribe Label",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "name": "Lead",
+      "default": "OK Go Sandbox is an online resource for educators that uses OK Go's music videos as starting points for integrated guided inquiry challenges allowing students to explore various STEAM concepts."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Developed as a collaboration between OK Go and the Playful Learning Lab at the University of St. Thomas (led by Dr. AnnMarie Thomas), OK Go Sandbox is about bringing different ideas, disciplines, and people together to explore creativity and learning. Director Geoff Shelton is constantly creating new videos specifically designed to inspire classroom discussions and projects.</p><p>We are particularly looking forward to interacting with even more educators as we work to expand the OK Go Sandbox offerings. We encourage you to reach out to us at <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"mailto:hello@okgosandbox.org\">hello@okgosandbox.org</a> with your feedback and ideas. The best part of a sandbox is that we can try building lots of new things and improving them based on your input; even if we occasionally need to knock down a castle and start over!</p><p></p>"
+    }
+  ]
+}

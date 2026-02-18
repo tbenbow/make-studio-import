@@ -25,9 +25,7 @@
               {{/if}}
               {{#if link}}
                 <div class="mt-6">
-                  <a href="{{link}}" class="body-sm font-bold uppercase tracking-wider text-accent hover:text-fg transition">
-                    View Resource ›
-                  </a>
+                  {{> Button link=link label="View Resource" style="accent"}}
                 </div>
               {{/if}}
             </div>

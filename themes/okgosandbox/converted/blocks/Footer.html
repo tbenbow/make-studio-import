@@ -8,7 +8,7 @@
         <div class="flex flex-wrap items-center gap-8">
           {{#each sponsors}}
             {{#if link}}
-              <a href="{{link}}" target="_blank" rel="noopener">
+              <a href="{{link}}" rel="noopener">
                 {{#if logo}}
                   <img src="{{logo}}" alt="{{default name 'Sponsor'}}" class="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition">
                 {{else}}
@@ -40,7 +40,7 @@
       {{#if (length social-links)}}
         <div class="flex items-center gap-4">
           {{#each social-links}}
-            <a href="{{url}}" target="_blank" rel="noopener" aria-label="{{label}}" class="opacity-75 hover:opacity-100 transition">
+            <a href="{{url}}" rel="noopener" aria-label="{{label}}" class="opacity-75 hover:opacity-100 transition">
               {{icon icon size="20"}}
             </a>
           {{/each}}

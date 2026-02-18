@@ -1,0 +1,23 @@
+<section class="bg-base">
+  {{#if (length items)}}
+    <div class="flex flex-col lg:gap-12">
+      {{#each items}}
+        <div class="lg:grid lg:grid-cols-12 items-center [&:nth-child(even)>[data-video]]:lg:col-start-6 [&:nth-child(even)>[data-text]]:lg:col-start-1 [&:nth-child(even)>[data-text]]:lg:col-span-5 [&:nth-child(even)>[data-text]]:lg:pr-0 [&:nth-child(even)>[data-text]]:lg:pl-24 [&:nth-child(even)_.rainbow]:hidden">
+          <div data-video class="lg:col-span-7 lg:row-start-1 lg:col-start-1">
+            {{> VideoPlayer}}
+          </div>
+          <div data-text class="lg:col-span-7 lg:row-start-1 lg:col-start-6 z-10 px-6 lg:px-0 lg:pr-24 -mt-8 lg:mt-0">
+            <div class="flex">
+              {{> RainbowBar}}
+              <div class="bg-base/97 shadow-lg p-8 lg:p-12 flex-1">
+                <h3 class="heading-md text-fg">
+                  {{default question "Question?"}}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</section>

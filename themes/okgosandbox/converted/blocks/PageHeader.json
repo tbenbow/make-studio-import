@@ -1,7 +1,15 @@
 {
-  "description": "Page header with title and subtitle",
+  "description": "Centered page title with vertical line detail",
   "fields": [
-    { "type": "text", "name": "Title", "default": "More" },
-    { "type": "text", "name": "Subtitle", "default": "Behind the Scenes, Outtakes & More" }
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "More"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle",
+      "default": "Behind the Scenes, Outtakes & More"
+    }
   ]
 }

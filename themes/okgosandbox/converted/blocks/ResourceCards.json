@@ -1,47 +1,60 @@
 {
-  "description": "Resource cards grid",
+  "description": "Resource cards with overlapping white box",
   "fields": [
     {
       "type": "items",
       "name": "Items",
-      "default": "[{\"id\":\"63eefe10-44b7-4818-84c4-2f884dbb92d5\",\"Title\":\"Making \\\"This Too Shall Pass\\\"\",\"Tags\":\"<span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Engineering</span> <span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Physics</span> <span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Science</span>\",\"Description\":\"From collaborating with engineers, to the lengthy testing process and many attempts it took to finally get it shot, OK Go tell the story of how \\\"This Too...\\\"\",\"Link\":\"/this-too-shall-pass/making-this-too-shall-pass\",\"image\":\"https://makestudio.site/69952211cb6e382590893367/home-intro.webp\",\"title\":\"Making \\\"This Too Shall Pass\\\"\",\"description\":\"From collaborating with engineers, to the lengthy testing process and many attempts it took to finally get it shot, OK Go tell the story of how \\\"This Too...\",\"tags\":\"<p>Engineering Physics Sciene</p><p></p>\",\"link\":\"#\"},{\"id\":\"36e4ea42-4883-4f80-b48c-291327958825\",\"Title\":\"Chain Reaction Machines\",\"Tags\":\"<span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Engineering</span> <span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Physics</span>\",\"Description\":\"This challenge will engage students in recognizing different simple machines and creating their own in a chain reaction machine, using the engineering design process to explore forces and...\",\"Link\":\"/this-too-shall-pass/chain-reaction-machines\",\"image\":\"https://makestudio.site/69952211cb6e382590893367/home-intro.webp\"},{\"id\":\"ca5e67fa-f09b-4bb7-84e7-b5689e29970d\",\"Title\":\"Hit the Note\",\"Tags\":\"<span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Math</span> <span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Physics</span> <span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Music</span>\",\"Description\":\"Inspired by the tuned glasses in the music video, students will learn about pitch and musical notes through a science inquiry activity, then play a song of their...\",\"Link\":\"/this-too-shall-pass/hit-the-note\",\"image\":\"https://makestudio.site/69952211cb6e382590893367/home-intro.webp\"},{\"id\":\"1b8b7a60-24da-4922-a7bc-223f9fcaf136\",\"Title\":\"Simple Machines Scavenger Hunt\",\"Tags\":\"<span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Engineering</span> <span class='inline-block bg-brand/10 text-brand px-2 py-0.5 body-sm rounded'>Physics</span>\",\"Description\":\"A chain reaction machine is a series of simple machines — one after the next. We challenge students to discover the simple machines in OK Go's videos.\",\"Link\":\"/this-too-shall-pass/simple-machines-scavenger-hunt\",\"image\":\"https://makestudio.site/69952211cb6e382590893367/home-intro.webp\"}]",
+      "default": [
+        {
+          "title": "Making \"This Too Shall Pass\"",
+          "tags": "<p>Engineering Physics Science</p>",
+          "description": "From collaborating with engineers, to the lengthy testing process and many attempts it took to finally get it shot, OK Go tell the story of how \"This Too...\"",
+          "link": "/this-too-shall-pass/making-this-too-shall-pass"
+        },
+        {
+          "title": "Chain Reaction Machines",
+          "tags": "<p>Engineering Physics</p>",
+          "description": "This challenge will engage students in recognizing different simple machines and creating their own in a chain reaction machine, using the engineering design process to explore forces and...",
+          "link": "/this-too-shall-pass/chain-reaction-machines"
+        },
+        {
+          "title": "Hit the Note",
+          "tags": "<p>Math Physics Music</p>",
+          "description": "Inspired by the tuned glasses in the music video, students will learn about pitch and musical notes through a science inquiry activity, then play a song of their...",
+          "link": "/this-too-shall-pass/hit-the-note"
+        },
+        {
+          "title": "Simple Machines Scavenger Hunt",
+          "tags": "<p>Engineering Physics</p>",
+          "description": "A chain reaction machine is a series of simple machines — one after the next. We challenge students to discover the simple machines in OK Go's videos.",
+          "link": "/this-too-shall-pass/simple-machines-scavenger-hunt"
+        }
+      ],
       "config": {
         "fields": [
           {
-            "id": "bf3d5427-efda-47bf-82c5-1085ee3189e3",
             "type": "image",
-            "name": "Image",
-            "value": ""
+            "name": "Image"
           },
           {
-            "id": "d9a8800b-151a-430b-ad06-26bb1375a976",
             "type": "text",
-            "name": "Image Alt",
-            "value": ""
+            "name": "Image Alt"
           },
           {
-            "id": "e3700810-2e20-4852-a6ce-b30ea36ed4b9",
             "type": "text",
-            "name": "Title",
-            "value": ""
+            "name": "Title"
           },
           {
-            "id": "758e2b6e-b8c6-414e-a27f-b76c2706a789",
             "type": "wysiwyg",
-            "name": "Tags",
-            "value": ""
+            "name": "Tags"
           },
           {
-            "id": "aa875d39-ebc4-43be-921b-13ca6724731b",
             "type": "textarea",
-            "name": "Description",
-            "value": ""
+            "name": "Description"
           },
           {
-            "id": "2b81858a-e0f0-417c-8f85-e232f35cef8f",
             "type": "text",
-            "name": "Link",
-            "value": ""
+            "name": "Link"
           }
         ]
       }

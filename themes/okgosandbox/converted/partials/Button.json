@@ -12,7 +12,9 @@
         "selectOptions": [
           { "key": "Primary", "value": "primary" },
           { "key": "Secondary", "value": "secondary" },
-          { "key": "Ghost", "value": "ghost" }
+          { "key": "Ghost", "value": "ghost" },
+          { "key": "Accent", "value": "accent" },
+          { "key": "Nav", "value": "nav" }
         ]
       }
     }

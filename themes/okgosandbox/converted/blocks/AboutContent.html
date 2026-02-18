@@ -1,0 +1,52 @@
+<section class="bg-base py-16">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-6xl lg:px-12">
+    <div class="flex flex-col lg:flex-row lg:gap-12">
+      <div class="lg:w-3/5">
+        {{#if image}}
+          <img src="{{image}}" alt="{{default image-alt 'About'}}" class="w-full h-auto">
+        {{else}}
+          <div class="w-full aspect-video bg-base-muted"></div>
+        {{/if}}
+      </div>
+      <div class="lg:w-2/5 mt-6 lg:mt-0">
+        {{#if newsletter-heading}}
+          <div class="flex">
+            {{> RainbowBar}}
+            <div class="bg-base shadow-xl p-8 flex-1">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="flex-1 h-px bg-border"></div>
+                <h2 class="heading-sm text-fg uppercase tracking-wider">
+                  {{newsletter-heading}}
+                </h2>
+                <div class="flex-1 h-px bg-border"></div>
+              </div>
+              {{#if newsletter-text}}
+                <div class="body-sm text-fg-muted mb-4">
+                  {{{newsletter-text}}}
+                </div>
+              {{/if}}
+              <form>
+                <input type="email" placeholder="{{default email-placeholder 'Email address'}}" class="w-full border border-border px-4 py-2.5 body-sm text-fg mb-3 focus:outline-none focus:border-brand">
+                <button type="submit" class="w-full bg-brand text-on-brand px-4 py-2.5 body-sm font-bold uppercase tracking-wider hover:opacity-90 transition">
+                  {{default subscribe-label "Subscribe"}}
+                </button>
+              </form>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="lg:w-3/5 mt-12">
+      {{#if lead}}
+        <p class="heading-md text-fg mb-8">
+          {{lead}}
+        </p>
+      {{/if}}
+      {{#if body}}
+        <div class="body-lg text-fg-muted prose-content">
+          {{{body}}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

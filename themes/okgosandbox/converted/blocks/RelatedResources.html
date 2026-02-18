@@ -1,4 +1,4 @@
-<section class="py-12 bg-base-muted">
+<section class="pt-10 pb-20 bg-base-muted">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-6xl lg:px-10">
     <div class="flex items-center gap-4 mb-8">
       <div class="flex items-baseline gap-3">
@@ -7,8 +7,8 @@
         {{/if}}
         {{#if parent-label}}
           <span class="text-fg-muted">/</span>
-          <a href="{{default parent-link '#'}}" class="body-sm font-bold uppercase tracking-wider text-brand hover:text-fg transition">
-            {{parent-label}} &rsaquo;
+          <a href="{{default parent-link '#'}}" class="heading-sm font-bold uppercase tracking-wider text-brand hover:text-fg transition">
+            {{parent-label}} ›
           </a>
         {{/if}}
       </div>
@@ -23,15 +23,13 @@
                 <img src="{{image}}" alt="{{default image-alt title}}" class="w-full h-auto object-cover">
               </a>
             {{/if}}
-            <div class="bg-base p-6 -mt-12 mx-6 relative shadow-lg">
+            <div class="bg-base p-6 -mt-12 ml-6 relative shadow-lg">
               <h3 class="heading-md text-fg">
                 {{default title "Resource Title"}}
               </h3>
               {{#if link}}
                 <div class="mt-3">
-                  <a href="{{link}}" class="heading-xs font-bold uppercase tracking-wider text-accent hover:text-fg transition">
-                    View Resource &rsaquo;
-                  </a>
+                  {{> Button link=link label="View Resource" style="accent"}}
                 </div>
               {{/if}}
             </div>

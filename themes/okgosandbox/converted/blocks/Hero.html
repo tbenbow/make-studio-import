@@ -14,12 +14,11 @@
       <p class="body-lg text-fg-muted mt-4 max-w-lg">
         {{default subheadline "Helping students learn through the joy, wonder, and fun of OK Go's music videos."}}
       </p>
-      {{#if cta-label}}
-        <div class="mt-8">
-          <a href="{{default cta-link '#'}}" class="inline-flex items-center gap-2 text-fg body-md font-bold uppercase tracking-wider hover:text-brand transition">
-            {{cta-label}}
-            <span class="text-sm">&#8595;</span>
-          </a>
+      {{#if (length buttons)}}
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          {{#each buttons}}
+            {{> Button}}
+          {{/each}}
         </div>
       {{/if}}
     </div>

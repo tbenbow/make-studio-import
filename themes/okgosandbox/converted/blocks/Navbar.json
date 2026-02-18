@@ -1,29 +1,67 @@
 {
-  "makeStudioFields": true,
-  "version": 1,
-  "description": "Site navigation header",
+  "description": "Site navigation header with logo and CTA",
   "fields": [
-    { "type": "image", "name": "Logo", "default": "" },
-    { "type": "text", "name": "Logo Alt", "default": "OK Go Sandbox" },
-    { "type": "text", "name": "Logo Text", "default": "OK Go Sandbox" },
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "text",
+      "name": "Logo Alt",
+      "default": "OK Go Sandbox"
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "OK Go Sandbox"
+    },
     {
       "type": "items",
       "name": "Nav Links",
+      "default": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Lessons",
+          "url": "/lessons"
+        },
+        {
+          "label": "More",
+          "url": "/more"
+        },
+        {
+          "label": "About",
+          "url": "/about"
+        },
+        {
+          "label": "Ask Ok Go",
+          "url": "/ask-ok-go"
+        }
+      ],
       "config": {
         "fields": [
-          { "type": "text", "name": "Label" },
-          { "type": "text", "name": "URL" }
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
         ]
-      },
-      "default": [
-        { "Label": "Home", "URL": "/" },
-        { "Label": "Lessons", "URL": "/lessons" },
-        { "Label": "More", "URL": "/more" },
-        { "Label": "About", "URL": "/about" },
-        { "Label": "Ask Ok Go", "URL": "/ask-ok-go" }
-      ]
+      }
     },
-    { "type": "text", "name": "CTA Label", "default": "Filter Resources" },
-    { "type": "text", "name": "CTA Link", "default": "#" }
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Filter Resources"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#"
+    }
   ]
 }

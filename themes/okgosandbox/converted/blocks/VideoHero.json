@@ -13,11 +13,11 @@
     },
     {
       "type": "image",
-      "name": "Poster"
+      "name": "Image"
     },
     {
       "type": "text",
-      "name": "Poster Alt"
+      "name": "Image Alt"
     },
     {
       "type": "image",

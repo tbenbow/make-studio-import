@@ -1,5 +1,5 @@
 {
-  "description": "RelatedResources",
+  "description": "Related resource cards with overlapping white box",
   "fields": [
     {
       "type": "text",
@@ -21,17 +21,14 @@
       "name": "Items",
       "default": [
         {
-          "image": "",
           "title": "Making \"This Too Shall Pass\"",
           "link": "#"
         },
         {
-          "image": "",
           "title": "Hit the Note",
           "link": "#"
         },
         {
-          "image": "",
           "title": "Simple Machines Scavenger Hunt",
           "link": "#"
         }

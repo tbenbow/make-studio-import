@@ -23,9 +23,9 @@
 
       <div class="flex-1 flex items-center justify-end gap-4">
         {{#if cta-label}}
-          <a href="{{default cta-link '#'}}" class="hidden lg:inline-flex items-center gap-2 bg-brand text-on-brand px-4 py-2 body-sm font-bold hover:opacity-90 transition">
-            {{cta-label}}
-          </a>
+          <div class="hidden lg:block">
+            {{> Button link=cta-link label=cta-label style="nav"}}
+          </div>
         {{/if}}
         <button class="lg:hidden text-fg body-sm font-medium">
           Menu

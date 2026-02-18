@@ -1,16 +1,26 @@
 {{#switch style}}
   {{#case "secondary"}}
-    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-1 bg-brand/10 text-fg px-6 py-3 body-sm font-bold uppercase tracking-wider hover:bg-brand/15 transition">
+    <a href="{{default link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 bg-brand/10 text-fg px-6 py-3 body-sm font-bold uppercase tracking-wider hover:bg-brand/15 transition">
       {{default label "Click Here"}}
     </a>
   {{/case}}
   {{#case "ghost"}}
-    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-2 text-fg px-6 py-3 body-sm font-bold uppercase tracking-wider hover:bg-brand/10 transition">
+    <a href="{{default link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-2 text-fg px-6 py-3 body-sm font-bold uppercase tracking-wider hover:text-brand transition">
+      {{default label "Click Here"}}
+    </a>
+  {{/case}}
+  {{#case "accent"}}
+    <a href="{{default link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 body-sm font-bold uppercase tracking-wider text-accent hover:text-fg transition">
+      {{default label "Click Here"}} ›
+    </a>
+  {{/case}}
+  {{#case "nav"}}
+    <a href="{{default link '#'}}" class="inline-flex shrink-0 items-center gap-2 bg-brand text-on-brand px-4 py-2 body-sm font-bold hover:opacity-90 transition">
       {{default label "Click Here"}}
     </a>
   {{/case}}
   {{#otherwise}}
-    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-1 bg-brand text-on-brand px-6 py-3 body-sm font-bold uppercase tracking-wider hover:opacity-90 transition">
+    <a href="{{default link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 bg-brand text-on-brand px-6 py-3 body-sm font-bold uppercase tracking-wider hover:opacity-90 transition">
       {{default label "Click Here"}}
     </a>
   {{/otherwise}}

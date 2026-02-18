@@ -1,73 +1,92 @@
 {
-  "makeStudioFields": true,
-  "version": 1,
-  "description": "Alternating lesson cards",
+  "description": "Alternating lesson cards with image and details",
   "fields": [
     {
       "type": "items",
       "name": "Items",
-      "config": {
-        "fields": [
-          { "type": "image", "name": "Image" },
-          { "type": "text", "name": "Image Alt" },
-          { "type": "text", "name": "Title" },
-          { "type": "textarea", "name": "Description" },
-          { "type": "text", "name": "Link" },
-          { "type": "text", "name": "Button Label" },
-          { "type": "text", "name": "Topics" }
-        ]
-      },
       "default": [
         {
-          "Title": "This Too Shall Pass",
-          "Description": "OK Go created this video by connecting a series of simple machines together, to create a single chain reaction machine, timed perfectly to their song.",
-          "Link": "/this-too-shall-pass",
-          "Button Label": "View Lessons",
-          "Topics": "Simple Machines, Chain Reactions, Pitch"
+          "title": "This Too Shall Pass",
+          "description": "OK Go created this video by connecting a series of simple machines together, to create a single chain reaction machine, timed perfectly to their song.",
+          "link": "/this-too-shall-pass",
+          "button-label": "View Lessons",
+          "topics": "Simple Machines, Chain Reactions, Pitch"
         },
         {
-          "Title": "The One Moment",
-          "Description": "This video was actually shot in 4 seconds, but when played back in slow motion, it stays in sync with the music. How did they do it?!",
-          "Link": "/the-one-moment",
-          "Button Label": "View Lessons",
-          "Topics": "Math, Physics, Flip Books"
+          "title": "The One Moment",
+          "description": "This video was actually shot in 4 seconds, but when played back in slow motion, it stays in sync with the music. How did they do it?!",
+          "link": "/the-one-moment",
+          "button-label": "View Lessons",
+          "topics": "Math, Physics, Flip Books"
         },
         {
-          "Title": "The Writing's On The Wall",
-          "Description": "Everything is not what it seems in this video! See how OK Go used art and perspective to trick your brain into seeing something that isn't actually there.",
-          "Link": "/the-writings-on-the-wall",
-          "Button Label": "View Lessons",
-          "Topics": "Optical Illusions, Neuroscience, Perception"
+          "title": "The Writing's On The Wall",
+          "description": "Everything is not what it seems in this video! See how OK Go used art and perspective to trick your brain into seeing something that isn't actually there.",
+          "link": "/the-writings-on-the-wall",
+          "button-label": "View Lessons",
+          "topics": "Optical Illusions, Neuroscience, Perception"
         },
         {
-          "Title": "Upside Down & Inside Out",
-          "Description": "Making this video took OK Go to new heights in learning! Through the joy of experimentation, they learned how the rules of physics apply in microgravity.",
-          "Link": "/upside-down-inside-out",
-          "Button Label": "View Lessons",
-          "Topics": "Physics, Parabolas, Art"
+          "title": "Upside Down & Inside Out",
+          "description": "Making this video took OK Go to new heights in learning! Through the joy of experimentation, they learned how the rules of physics apply in microgravity.",
+          "link": "/upside-down-inside-out",
+          "button-label": "View Lessons",
+          "topics": "Physics, Parabolas, Art"
         },
         {
-          "Title": "Needing/Getting",
-          "Description": "OK Go wanted to find out if they could play their song using a car and everyday objects. Turns out they could!",
-          "Link": "/needing-getting",
-          "Button Label": "View Lessons",
-          "Topics": "Music, Found Instruments, Sensors"
+          "title": "Needing/Getting",
+          "description": "OK Go wanted to find out if they could play their song using a car and everyday objects. Turns out they could!",
+          "link": "/needing-getting",
+          "button-label": "View Lessons",
+          "topics": "Music, Found Instruments, Sensors"
         },
         {
-          "Title": "All Together Now",
-          "Description": "Inspired by virtual togetherness during the COVID-19 pandemic, OK Go worked together (apart) to create this music video.",
-          "Link": "/all-together-now",
-          "Button Label": "View Lessons",
-          "Topics": "Art, Collaboration"
+          "title": "All Together Now",
+          "description": "Inspired by virtual togetherness during the COVID-19 pandemic, OK Go worked together (apart) to create this music video.",
+          "link": "/all-together-now",
+          "button-label": "View Lessons",
+          "topics": "Art, Collaboration"
         },
         {
-          "Title": "This",
-          "Description": "It doesn't get better than this! OK Go created this visualizer using a pottery wheel and a lot of paint, proving that learning can sometimes be messy.",
-          "Link": "/this",
-          "Button Label": "View Lessons",
-          "Topics": "Art, Collaboration"
+          "title": "This",
+          "description": "It doesn't get better than this! OK Go created this visualizer using a pottery wheel and a lot of paint, proving that learning can sometimes be messy.",
+          "link": "/this",
+          "button-label": "View Lessons",
+          "topics": "Art, Collaboration"
         }
-      ]
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Image Alt"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "text",
+            "name": "Button Label"
+          },
+          {
+            "type": "text",
+            "name": "Topics"
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,26 +1,50 @@
 {
-  "makeStudioFields": true,
-  "version": 1,
-  "description": "Site footer with sponsors",
+  "description": "Site footer with sponsors and social links",
   "fields": [
-    { "type": "text", "name": "Sponsors Label", "default": "Sponsored By:" },
+    {
+      "type": "text",
+      "name": "Sponsors Label",
+      "default": "Sponsored By:"
+    },
     {
       "type": "items",
       "name": "Sponsors",
+      "default": [
+        {
+          "name": "Google",
+          "link": "https://google.com"
+        },
+        {
+          "name": "Morton Salt",
+          "link": "https://mortonsalt.com"
+        },
+        {
+          "name": "Cognizant",
+          "link": "https://cognizant.com"
+        }
+      ],
       "config": {
         "fields": [
-          { "type": "text", "name": "Name" },
-          { "type": "image", "name": "Logo" },
-          { "type": "text", "name": "Link" }
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "image",
+            "name": "Logo"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
         ]
-      },
-      "default": [
-        { "Name": "Google", "Link": "https://google.com" },
-        { "Name": "Morton Salt", "Link": "https://mortonsalt.com" },
-        { "Name": "Cognizant", "Link": "https://cognizant.com" }
-      ]
+      }
     },
-    { "type": "text", "name": "Copyright", "default": "© 2026 OK Go Sandbox" },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "\u00a9 2026 OK Go Sandbox"
+    },
     {
       "type": "wysiwyg",
       "name": "Fineprint",
@@ -29,18 +53,39 @@
     {
       "type": "items",
       "name": "Social Links",
+      "default": [
+        {
+          "label": "Instagram",
+          "icon": "instagram-logo",
+          "url": "https://instagram.com/okgosandbox"
+        },
+        {
+          "label": "Facebook",
+          "icon": "facebook-logo",
+          "url": "https://facebook.com/OKGoSandbox"
+        },
+        {
+          "label": "Twitter",
+          "icon": "twitter-logo",
+          "url": "https://twitter.com/OKGoSandbox"
+        }
+      ],
       "config": {
         "fields": [
-          { "type": "text", "name": "Label" },
-          { "type": "text", "name": "Icon" },
-          { "type": "text", "name": "URL" }
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
         ]
-      },
-      "default": [
-        { "Label": "Instagram", "Icon": "instagram-logo", "URL": "https://instagram.com/okgosandbox" },
-        { "Label": "Facebook", "Icon": "facebook-logo", "URL": "https://facebook.com/OKGoSandbox" },
-        { "Label": "Twitter", "Icon": "twitter-logo", "URL": "https://twitter.com/OKGoSandbox" }
-      ]
+      }
     },
     {
       "type": "wysiwyg",

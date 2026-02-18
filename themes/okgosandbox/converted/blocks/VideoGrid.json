@@ -1,5 +1,5 @@
 {
-  "description": "Video grid with playable thumb",
+  "description": "Video grid with clickable thumbnails and player",
   "fields": [
     {
       "type": "text",
@@ -16,9 +16,9 @@
           "url": "https://www.youtube.com/embed/LWGJA9i18Co?rel=0"
         },
         {
-          "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
+          "thumbnail": "https://img.youtube.com/vi/u1ZB_rGFyeU/mqdefault.jpg",
           "title": "",
-          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+          "url": "https://www.youtube.com/embed/u1ZB_rGFyeU?rel=0"
         },
         {
           "thumbnail": "https://img.youtube.com/vi/qybUFnY7Y8w/mqdefault.jpg",
