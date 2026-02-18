@@ -1,0 +1,61 @@
+{
+  "description": "RelatedResources",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "More Resources"
+    },
+    {
+      "type": "text",
+      "name": "Parent Label",
+      "default": "This Too Shall Pass"
+    },
+    {
+      "type": "text",
+      "name": "Parent Link",
+      "default": "/this-too-shall-pass"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "",
+          "title": "Making \"This Too Shall Pass\"",
+          "link": "#"
+        },
+        {
+          "image": "",
+          "title": "Hit the Note",
+          "link": "#"
+        },
+        {
+          "image": "",
+          "title": "Simple Machines Scavenger Hunt",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Image Alt"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

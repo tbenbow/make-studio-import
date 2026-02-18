@@ -1,0 +1,41 @@
+{
+  "description": "Video hero with about card",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "This Too Shall Pass"
+    },
+    {
+      "type": "text",
+      "name": "Video URL",
+      "default": "https://www.youtube.com/embed/qybUFnY7Y8w?rel=0"
+    },
+    {
+      "type": "image",
+      "name": "Poster"
+    },
+    {
+      "type": "text",
+      "name": "Poster Alt"
+    },
+    {
+      "type": "image",
+      "name": "Illustration"
+    },
+    {
+      "type": "text",
+      "name": "Illustration Alt"
+    },
+    {
+      "type": "text",
+      "name": "About Heading",
+      "default": "About the Music Video"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "About Text",
+      "default": "<p>OK Go created this video by connecting a series of simple machines together, to create a single chain reaction machine, timed perfectly to their song. So perfectly in fact, that one section of the machine actually plays a part of the song itself.</p>"
+    }
+  ]
+}

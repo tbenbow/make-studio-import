@@ -1,0 +1,59 @@
+<footer class="bg-base-alt text-on-brand">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 py-16">
+    {{#if (length sponsors)}}
+      <div class="mb-12">
+        <p class="body-sm font-semibold uppercase tracking-wider opacity-75 mb-4">
+          {{default sponsors-label "Sponsored By:"}}
+        </p>
+        <div class="flex flex-wrap items-center gap-8">
+          {{#each sponsors}}
+            {{#if link}}
+              <a href="{{link}}" target="_blank" rel="noopener">
+                {{#if logo}}
+                  <img src="{{logo}}" alt="{{default name 'Sponsor'}}" class="h-8 brightness-0 invert opacity-80 hover:opacity-100 transition">
+                {{else}}
+                  <span class="body-md font-bold opacity-80 hover:opacity-100 transition">{{name}}</span>
+                {{/if}}
+              </a>
+            {{else}}
+              {{#if logo}}
+                <img src="{{logo}}" alt="{{default name 'Sponsor'}}" class="h-8 brightness-0 invert opacity-80">
+              {{/if}}
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
+
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+      <div class="flex-1">
+        <p class="body-sm opacity-75">
+          {{default copyright "© 2026 OK Go Sandbox"}}
+        </p>
+        {{#if fineprint}}
+          <div class="body-sm opacity-60 mt-2">
+            {{{fineprint}}}
+          </div>
+        {{/if}}
+      </div>
+
+      {{#if (length social-links)}}
+        <div class="flex items-center gap-4">
+          {{#each social-links}}
+            <a href="{{url}}" target="_blank" rel="noopener" aria-label="{{label}}" class="opacity-75 hover:opacity-100 transition">
+              {{icon icon size="20"}}
+            </a>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+
+    {{#if colophon}}
+      <div class="mt-12 pt-8 border-t border-on-brand/20">
+        <div class="body-sm opacity-60 text-center">
+          {{{colophon}}}
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</footer>

@@ -1,0 +1,13 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Hero with image and headline",
+  "fields": [
+    { "type": "image", "name": "Image", "default": "" },
+    { "type": "text", "name": "Image Alt", "default": "Hero image" },
+    { "type": "text", "name": "Headline", "default": "Inspiring Tools for Playful Learning." },
+    { "type": "textarea", "name": "Subheadline", "default": "Helping students learn through the joy, wonder, and fun of OK Go's music videos." },
+    { "type": "text", "name": "CTA Label", "default": "Explore the Lessons" },
+    { "type": "text", "name": "CTA Link", "default": "#lessons" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Site footer with sponsors",
+  "fields": [
+    { "type": "text", "name": "Sponsors Label", "default": "Sponsored By:" },
+    {
+      "type": "items",
+      "name": "Sponsors",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "image", "name": "Logo" },
+          { "type": "text", "name": "Link" }
+        ]
+      },
+      "default": [
+        { "Name": "Google", "Link": "https://google.com" },
+        { "Name": "Morton Salt", "Link": "https://mortonsalt.com" },
+        { "Name": "Cognizant", "Link": "https://cognizant.com" }
+      ]
+    },
+    { "type": "text", "name": "Copyright", "default": "© 2026 OK Go Sandbox" },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>OK Go Sandbox Challenges by the Playful Learning Lab at the University of St. Thomas is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Icon" },
+          { "type": "text", "name": "URL" }
+        ]
+      },
+      "default": [
+        { "Label": "Instagram", "Icon": "instagram-logo", "URL": "https://instagram.com/okgosandbox" },
+        { "Label": "Facebook", "Icon": "facebook-logo", "URL": "https://facebook.com/OKGoSandbox" },
+        { "Label": "Twitter", "Icon": "twitter-logo", "URL": "https://twitter.com/OKGoSandbox" }
+      ]
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Colophon",
+      "default": "<p>A collaboration between OK Go and the Playful Learning Lab at the University of St. Thomas</p>"
+    }
+  ]
+}

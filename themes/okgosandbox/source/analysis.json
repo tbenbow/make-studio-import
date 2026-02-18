@@ -1,0 +1,1120 @@
+{
+  "colors": [
+    "rgb(37, 37, 37)",
+    "rgb(70, 179, 255)",
+    "rgb(255, 255, 255)",
+    "rgb(181, 181, 181)",
+    "rgb(133, 133, 133)",
+    "rgb(249, 97, 62)",
+    "rgba(255, 255, 255, 0.75)"
+  ],
+  "bgColors": [
+    "rgb(255, 255, 255)",
+    "rgb(70, 179, 255)",
+    "rgb(255, 187, 42)",
+    "rgb(249, 97, 62)",
+    "rgb(37, 37, 37)",
+    "rgba(255, 255, 255, 0.95)",
+    "rgb(4, 29, 64)"
+  ],
+  "fonts": [
+    "Roboto, sans-serif",
+    "\"Roboto Slab\", sans-serif"
+  ],
+  "fontSizes": [
+    {
+      "tag": "a",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "text": "OK Go Sandbox"
+    },
+    {
+      "tag": "span",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "text": ""
+    },
+    {
+      "tag": "span",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "text": "Menu"
+    },
+    {
+      "tag": "li",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "text": "Home"
+    },
+    {
+      "tag": "span",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "text": ""
+    },
+    {
+      "tag": "button",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "text": "Filter Resources"
+    },
+    {
+      "tag": "span",
+      "fontSize": "24px",
+      "fontWeight": "400",
+      "text": ""
+    },
+    {
+      "tag": "h3",
+      "fontSize": "24px",
+      "fontWeight": "400",
+      "text": "Filter Resources"
+    },
+    {
+      "tag": "h5",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "text": "Music Videos"
+    },
+    {
+      "tag": "h1",
+      "fontSize": "48px",
+      "fontWeight": "400",
+      "text": "Inspiring Tools for Playful Learning."
+    },
+    {
+      "tag": "p",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "text": "Helping students learn through the joy, wonder, an"
+    },
+    {
+      "tag": "span",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "text": "Explore the Lessons"
+    },
+    {
+      "tag": "h2",
+      "fontSize": "30px",
+      "fontWeight": "400",
+      "text": "This Too Shall Pass"
+    },
+    {
+      "tag": "button",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "text": "View Lessons"
+    },
+    {
+      "tag": "h4",
+      "fontSize": "20px",
+      "fontWeight": "400",
+      "text": "View Lessons"
+    },
+    {
+      "tag": "p",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "text": "Simple Machines, Chain Reactions, Pitch"
+    },
+    {
+      "tag": "a",
+      "fontSize": "48px",
+      "fontWeight": "400",
+      "text": "Home"
+    },
+    {
+      "tag": "a",
+      "fontSize": "12px",
+      "fontWeight": "700",
+      "text": ""
+    },
+    {
+      "tag": "li",
+      "fontSize": "30px",
+      "fontWeight": "400",
+      "text": ""
+    },
+    {
+      "tag": "a",
+      "fontSize": "30px",
+      "fontWeight": "400",
+      "text": ""
+    },
+    {
+      "tag": "span",
+      "fontSize": "30px",
+      "fontWeight": "400",
+      "text": ""
+    },
+    {
+      "tag": "a",
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "text": "OK Go"
+    }
+  ],
+  "navStyles": {
+    "color": "rgb(37, 37, 37)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "fontFamily": "Roboto, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "16px",
+    "padding": "0px",
+    "margin": "0px",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "border": "0px solid rgb(37, 37, 37)"
+  },
+  "heroStyles": {
+    "color": "rgb(37, 37, 37)",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "fontFamily": "\"Roboto Slab\", sans-serif",
+    "fontSize": "48px",
+    "fontWeight": "400",
+    "lineHeight": "60px",
+    "padding": "0px",
+    "margin": "0px",
+    "borderRadius": "0px",
+    "boxShadow": "none",
+    "border": "0px solid rgb(37, 37, 37)"
+  },
+  "heroText": "Inspiring Tools for Playful Learning.",
+  "buttons": [
+    {
+      "text": "Menu",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "menu-button lg:hidden"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "menu-button__icon"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "menu-button__icon__line menu-button__icon__line--1"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgb(255, 187, 42)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "menu-button__icon__line menu-button__icon__line--2"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgb(249, 97, 62)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "menu-button__icon__line menu-button__icon__line--3"
+    },
+    {
+      "text": "Menu",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "17.5px",
+        "padding": "0px 0px 0px 8px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "menu-button__text"
+    },
+    {
+      "text": "Filter Resources",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "17.5px",
+        "padding": "8px 48px 8px 12px",
+        "margin": "0px 24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px none rgb(255, 255, 255)"
+      },
+      "classes": "showFilters button"
+    },
+    {
+      "text": "Show Results",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 48px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "results-btn font-title button px-12 py-3 disabled"
+    },
+    {
+      "text": "Explore the Lessons",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgb(70, 179, 255)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "24px 0px 0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button button--alt-layout lesson__button"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__main"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__content"
+    },
+    {
+      "text": "View Lessons",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Roboto Slab\", sans-serif",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__title"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "12px 16px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": ""
+      },
+      "classes": "button__aside"
+    },
+    {
+      "text": "",
+      "styles": {
+        "color": "rgb(255, 255, 255)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": "400",
+        "lineHeight": "30px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(255, 255, 255)"
+      },
+      "classes": "button__icon"
+    }
+  ],
+  "cards": [
+    {
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "lesson",
+      "html": "<div class=\"lesson\"><aside class=\"lesson__aside\"><div class=\"swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden\"><div class=\"swiper-wrapper\"><div class=\"swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active\" data-swiper-slide-index=\"0\" style=\"width: 864px; opacity: 1; transform: translate3d(0px, 0px, 0px);\"><img class=\"lesson__image\" srcset=\"/images/home-intro-1.jpg 960w, /images/home-intro-1@2x.jpg 1920w\"><!----></div>"
+    },
+    {
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "classes": "lesson__aside",
+      "html": "<aside class=\"lesson__aside\"><div class=\"swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden\"><div class=\"swiper-wrapper\"><div class=\"swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active\" data-swiper-slide-index=\"0\" style=\"width: 864px; opacity: 1; transform: translate3d(0px, 0px, 0px);\"><img class=\"lesson__image\" srcset=\"/images/home-intro-1.jpg 960w, /images/home-intro-1@2x.jpg 1920w\"><!----></div><div class=\"swiper-s"
+    }
+  ],
+  "sectionCount": 1,
+  "sections": [
+    {
+      "index": 0,
+      "tag": "DIV",
+      "classes": "",
+      "styles": {
+        "color": "rgb(37, 37, 37)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "Roboto, sans-serif",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "16px",
+        "padding": "0px",
+        "margin": "0px",
+        "borderRadius": "0px",
+        "boxShadow": "none",
+        "border": "0px solid rgb(37, 37, 37)"
+      },
+      "childCount": 2,
+      "text": "Inspiring Tools for Playful Learning.Helping students learn through the joy, wonder, and fun of OK Go's music videos.Explore the LessonsThis Too Shall PassOK Go created this video by connecting a seri"
+    }
+  ],
+  "bodyHTML": "<div id=\"__nuxt\"><div class=\"app\"><!--[--><!----><!----><header class=\"app-header\"><div class=\"app-header__logo\"><a aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active\"><svg data-v-b612a0aa=\"\" width=\"184px\" height=\"24px\" viewBox=\"0 0 184 24\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" class=\"logo\"><title data-v-b612a0aa=\"\">OK Go Sandbox</title><g data-v-b612a0aa=\"\" id=\"header\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g data-v-b612a0aa=\"\" id=\"brand\" fill=\"currentColor\"><path data-v-b612a0aa=\"\" d=\"M4.92278616,18.5589986 L4.92278616,17.2838824 L11.2775146,17.2838824 L11.2775146,17.9210958 C11.2775146,19.427315 10.6907095,20.8434885 9.62575738,21.9083544 C8.56089144,22.9736512 7.14506264,23.5599393 5.63858495,23.5599393 C4.13210726,23.5599393 2.71645079,22.9736512 1.65141251,21.9083544 C0.586632736,20.8434885 0,19.427832 0,17.9210958 C0,16.4143596 0.586632736,14.9987893 1.65141251,13.9339234 C2.71714014,12.8687128 4.13314127,12.28208 5.63858495,12.28208 C7.14411479,12.28208 8.56011592,12.8687128 9.62575738,13.9339234 L9.98404453,14.2921244 L9.0830704,15.1935293 L8.72435241,14.8354145 C7.89980942,14.0111301 6.80400912,13.5573686 5.63858495,13.5573686 C4.47333311,13.5573686 3.37736047,14.0111301 2.55316216,14.8354145 C1.72896384,15.6594405 1.27494388,16.755327 1.27494388,17.9210958 C1.27494388,19.0867785 1.72896384,20.1828373 2.55316216,21.0071218 C3.37736047,21.8314063 4.47333311,22.2853401 5.63858495,22.2853401 C6.80400912,22.2853401 7.89980942,21.8314063 8.72435241,21.0071218 C9.38913965,20.3422484 9.8207559,19.4812563 9.95621222,18.5589986 L4.92278616,18.5589986 Z M5.63859356,0.440043486 C8.74788493,0.440043486 11.277437,2.96959557 11.277437,6.07880077 C11.277437,9.18809214 8.74788493,11.7178166 5.63859356,11.7178166 C2.52947453,11.7178166 0.000180953106,9.18809214 0.000180953106,6.07880077 C0.000180953106,2.96959557 2.52947453,0.440043486 5.63859356,0.440043486 Z M5.63859356,10.442528 C8.04483903,10.442528 10.0022346,8.4851324 10.0022346,6.07880077 C10.0022346,3.67264147 8.04483903,1.71515971 5.63859356,1.71515971 C3.2323481,1.71515971 1.2749525,3.67264147 1.2749525,6.07880077 C1.2749525,8.4851324 3.2323481,10.442528 5.63859356,10.442528 Z M17.3694991,12.2823902 C20.4787043,12.2823902 23.0081702,14.81177 23.0081702,17.920889 C23.0081702,21.0305251 20.4787043,23.5599048 17.3694991,23.5599048 C14.2601215,23.5599048 11.7305694,21.0305251 11.7305694,17.920889 C11.7305694,14.81177 14.2601215,12.2823902 17.3694991,12.2823902 Z M17.3694991,22.2853056 C19.7756584,22.2853056 21.7331401,20.3270483 21.7331401,17.920889 C21.7331401,15.5146436 19.7756584,13.5575065 17.3694991,13.5575065 C14.9632536,13.5575065 13.0055995,15.5146436 13.0055995,17.920889 C13.0055995,20.3270483 14.9632536,22.2853056 17.3694991,22.2853056 Z M17.3646564,5.72187508 L22.4857155,11.2322418 L20.8303392,11.2322418 L16.5328753,6.58131616 L13.0878728,10.1408361 L13.0878728,11.2703281 L11.8131875,11.2703281 L11.8131875,0.785905189 L13.0878728,0.785905189 L13.0878728,8.41600832 L20.3721832,0.798744243 L22.129324,0.798744243 L17.3646564,5.72187508 Z M38.7957427,6.45228798 C38.1521528,5.92985051 37.50908,5.54304171 36.8660071,5.29143072 C36.2225896,5.04033675 35.5997662,4.91453125 34.9967615,4.91453125 C34.2326224,4.91453125 33.6097129,5.09548436 33.1275159,5.4573044 C32.6450605,5.81903828 32.4037035,6.29158439 32.4037035,6.87433956 C32.4037035,7.27665863 32.5244251,7.60831982 32.7656097,7.86932313 C33.0067944,8.13075729 33.3233761,8.35694867 33.715355,8.54772495 C34.1073339,8.73901823 34.5492042,8.90480574 35.0419998,9.04517365 C35.5341922,9.18605857 36.0219039,9.33685282 36.5042732,9.49747025 C38.4339227,10.140974 39.8458739,11.0003289 40.7403854,12.0753627 C41.6346384,13.1509135 42.0821958,14.5529554 42.0821958,16.2814022 C42.0821958,17.4473434 41.8861633,18.5026446 41.4941844,19.4472199 C41.1022916,20.3922259 40.5293596,21.2011725 39.7755607,21.874318 C39.0218479,22.5479806 38.0970914,23.070418 37.0017219,23.4421474 C35.9060078,23.8138768 34.6650142,24 33.2781378,24 C30.4033962,24 27.7403696,23.1459013 25.2881965,21.4371008 L27.8208507,16.6732949 C28.7051082,17.4572527 29.5794564,18.0405249 30.4439814,18.4220774 C31.3080755,18.804147 32.162605,18.9950094 33.0067944,18.9950094 C33.9717053,18.9950094 34.6900891,18.7739881 35.1626352,18.331687 C35.6345781,17.8897306 35.8711959,17.3870257 35.8711959,16.8240892 C35.8711959,16.4825186 35.8107058,16.1861864 35.6902428,15.9346616 C35.5696935,15.6835676 35.3684909,15.4522061 35.0872381,15.2411803 C34.8054682,15.0301545 34.4389089,14.834122 33.9866985,14.6532551 C33.5344019,14.4723881 32.986631,14.2717025 32.343472,14.0502504 C31.5793329,13.8089796 30.8307902,13.5428923 30.0973269,13.2512132 C29.3633467,12.960051 28.7102783,12.5728114 28.1374324,12.0904421 C27.5645004,11.6079866 27.1019498,11.0003289 26.7505561,10.2663486 C26.3986454,9.53279919 26.2229486,8.6033034 26.2229486,7.47734424 C26.2229486,6.35190209 26.4085548,5.33201592 26.780715,4.41708255 C27.1523582,3.50275235 27.6747957,2.7187084 28.3485444,2.06529535 C29.0217761,1.41239931 29.8457159,0.904524258 30.8207947,0.542704215 C31.7957011,0.180884171 32.886159,1.72336291e-05 34.0921683,1.72336291e-05 C35.2176966,1.72336291e-05 36.3935472,0.155981577 37.6198922,0.467307087 C38.8457202,0.779235775 40.0215708,1.23618545 41.1474438,1.83919013 L38.7957427,6.45228798 Z M58.3503367,19.4170782 L49.908185,19.4170782 L48.5514675,23.3667675 L42.249991,23.3667675 L50.9031685,0.633198001 L57.3553531,0.633198001 L66.008703,23.3667675 L59.7071403,23.3667675 L58.3503367,19.4170782 Z M56.7825073,14.9246158 L54.1292178,7.35681224 L51.4760144,14.9246158 L56.7825073,14.9246158 Z M67.9981617,23.3667848 L67.9981617,0.633129067 L73.9077455,0.633129067 L84.8223198,14.5326541 L84.8223198,0.633129067 L90.7016586,0.633129067 L90.7016586,23.3667848 L84.8223198,23.3667848 L73.9077455,9.46734586 L73.9077455,23.3667848 L67.9981617,23.3667848 Z M94.8623478,0.633129067 L103.606002,0.633129067 C105.153668,0.633129067 106.606032,0.945057754 107.962836,1.56788111 C109.319553,2.19113531 110.505399,3.02024521 111.520632,4.05529697 C112.535348,5.09077958 113.334299,6.29678894 113.917572,7.67332507 C114.500327,9.05037821 114.79192,10.4924021 114.79192,11.9999138 C114.79192,13.4877792 114.505497,14.9198938 113.932651,16.2964299 C113.359891,17.673483 112.565507,18.8847487 111.550705,19.9296236 C110.535558,20.9750155 109.349798,21.8092955 107.992995,22.4321189 C106.636191,23.0553731 105.173917,23.3667848 103.606002,23.3667848 L94.8623478,23.3667848 L94.8623478,0.633129067 Z M100.771845,18.3617942 L102.128649,18.3617942 C103.153791,18.3617942 104.068208,18.2010906 104.872415,17.8793387 C105.676105,17.5581039 106.354421,17.1157166 106.907534,16.5527801 C107.460131,15.9902745 107.882355,15.321782 108.173861,14.5477336 C108.465024,13.7742021 108.611079,12.9247565 108.611079,11.9999138 C108.611079,11.0954068 108.460284,10.2512175 108.158868,9.46734586 C107.857366,8.68338807 107.429972,8.01024252 106.877376,7.44721986 C106.324348,6.88480037 105.64586,6.44232694 104.84217,6.12057509 C104.037963,5.79925407 103.133542,5.63820581 102.128649,5.63820581 L100.771845,5.63820581 L100.771845,18.3617942 Z M117.440677,0.633163534 L126.244735,0.633163534 C128.335002,0.633163534 129.923081,1.13578233 131.008541,2.14067524 C132.093915,3.14608517 132.636688,4.59327917 132.636688,6.4824296 C132.636688,7.62812126 132.430229,8.57786656 132.018604,9.3316655 C131.606375,10.0854644 130.978296,10.7237119 130.134193,11.2461494 C130.978296,11.40737 131.696852,11.6532938 132.289947,11.984955 C132.882612,12.3165301 133.365067,12.7235884 133.737227,13.2060438 C134.108784,13.6884131 134.374958,14.2311863 134.536092,14.8341909 C134.696882,15.4371956 134.777277,16.0806993 134.777277,16.7638404 C134.777277,17.8293957 134.59124,18.7739709 134.219597,19.5979969 C133.847436,20.4224537 133.324913,21.1158488 132.651681,21.6783544 C131.978019,22.2413771 131.159249,22.6634287 130.194424,22.9446815 C129.229513,23.2264513 128.144225,23.3668192 126.93813,23.3668192 L117.440677,23.3668192 L117.440677,0.633163534 Z M123.350261,18.7838802 L124.64666,18.7838802 C126.134009,18.7838802 127.199219,18.593104 127.842723,18.2110344 C128.485796,17.8293957 128.807548,17.2160508 128.807548,16.3718615 C128.807548,15.527586 128.485796,14.914672 127.842723,14.5326024 C127.199219,14.1510499 126.134009,13.9597566 124.64666,13.9597566 L123.350261,13.9597566 L123.350261,18.7838802 Z M123.350261,9.55777072 L124.435721,9.55777072 C126.284803,9.55777072 127.209559,8.82430746 127.209559,7.35677777 C127.209559,5.88976509 126.284803,5.15578483 124.435721,5.15578483 L123.350261,5.15578483 L123.350261,9.55777072 Z M135.89256,11.9999483 C135.89256,10.3115697 136.203885,8.739001 136.82714,7.28138064 C137.450049,5.8242773 138.314488,4.55278014 139.420198,3.46732001 C140.525304,2.38185988 141.847296,1.53301748 143.385052,0.91958645 C144.922637,0.30667243 146.615755,0 148.465354,0 C150.294187,0 151.982651,0.30667243 153.530748,0.91958645 C155.078242,1.53301748 156.410057,2.38185988 157.52559,3.46732001 C158.641209,4.55278014 159.510387,5.8242773 160.133727,7.28138064 C160.756464,8.739001 161.068307,10.3115697 161.068307,11.9999483 C161.068307,13.6884131 160.756464,15.2614988 160.133727,16.718516 C159.510387,18.1762225 158.641209,19.4472026 157.52559,20.5325766 C156.410057,21.6181229 155.078242,22.4674823 153.530748,23.0803963 C151.982651,23.6933103 150.294187,23.9999828 148.465354,23.9999828 C146.615755,23.9999828 144.922637,23.6933103 143.385052,23.0803963 C141.847296,22.4674823 140.525304,21.6181229 139.420198,20.5325766 C138.314488,19.4472026 137.450049,18.1762225 136.82714,16.718516 C136.203885,15.2614988 135.89256,13.6884131 135.89256,11.9999483 Z M142.073401,11.9999483 C142.073401,12.9044553 142.243928,13.7388215 142.586015,14.5024436 C142.927586,15.2666689 143.389619,15.9299051 143.972892,16.4924107 C144.555647,17.0553472 145.234135,17.4925644 146.008011,17.8039761 C146.781628,18.1159048 147.600915,18.2713521 148.465354,18.2713521 C149.329362,18.2713521 150.148562,18.1159048 150.922697,17.8039761 C151.696229,17.4925644 152.379714,17.0553472 152.972896,16.4924107 C153.56556,15.9299051 154.032936,15.2666689 154.374938,14.5024436 C154.716508,13.7388215 154.887552,12.9044553 154.887552,11.9999483 C154.887552,11.0954413 154.716508,10.2615921 154.374938,9.49745301 C154.032936,8.73383091 153.56556,8.07050852 152.972896,7.50757203 C152.379714,6.9449802 151.696229,6.5078492 150.922697,6.19600668 C150.148562,5.884595 149.329362,5.72863066 148.465354,5.72863066 C147.600915,5.72863066 146.781628,5.884595 146.008011,6.19600668 C145.234135,6.5078492 144.555647,6.9449802 143.972892,7.50757203 C143.389619,8.07050852 142.927586,8.73383091 142.586015,9.49745301 C142.243928,10.2615921 142.073401,11.0954413 142.073401,11.9999483 Z M167.933607,11.2461924 L160.848173,0.63312045 L168.144547,0.63312045 L171.220061,6.51254536 L175.019042,0.63312045 L182.315502,0.63312045 L174.808016,11.2461924 L183.280327,23.3667761 L176.074257,23.3667761 L171.521563,15.9497668 L166.184825,23.3667761 L159.039159,23.3667761 L167.933607,11.2461924 Z\" id=\"logo\"></path></g></g></svg></a></div><aside class=\"app-header__aside app-header__aside--left\"><a class=\"menu-button lg:hidden\"><i class=\"menu-button__icon\"><span class=\"menu-button__icon__line menu-button__icon__line--1\"></span><span class=\"menu-button__icon__line menu-button__icon__line--2\"></span><span class=\"menu-button__icon__line menu-button__icon__line--3\"></span></i><span class=\"menu-button__text\">Menu</span></a><nav class=\"menu-nav hidden lg:block\"><ul class=\"menu-nav__list\"><li class=\"menu-nav__list__item\"><a aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active menu-nav__link\">Home <!----></a><!----></li><li class=\"menu-nav__list__item\"><a href=\"/lessons\" class=\"menu-nav__link\">Lessons <span class=\"iconify i-fa6-solid:caret-down align-top text-xs\" aria-hidden=\"true\"></span></a><ul class=\"menu-nav__sublist\"><li class=\"menu-nav__sublist__item\"><a href=\"/this-too-shall-pass\" class=\"menu-nav__sublink\">This Too Shall Pass</a></li><li class=\"menu-nav__sublist__item\"><a href=\"/the-one-moment\" class=\"menu-nav__sublink\">The One Moment</a></li><li class=\"menu-nav__sublist__item\"><a href=\"/the-writings-on-the-wall\" class=\"menu-nav__sublink\">The Writing's On The Wall</a></li><li class=\"menu-nav__sublist__item\"><a href=\"/upside-down-inside-out\" class=\"menu-nav__sublink\">Upside Down &amp; Inside Out</a></li><li class=\"menu-nav__sublist__item\"><a href=\"/needing-getting\" class=\"menu-nav__sublink\">Needing/Getting</a></li><li class=\"menu-nav__sublist__item\"><a href=\"/all-together-now\" class=\"menu-nav__sublink\">All Together Now</a></li><li class=\"menu-nav__sublist__item\"><a href=\"/this\" class=\"menu-nav__sublink\">This</a></li></ul></li><li class=\"menu-nav__list__item\"><a href=\"/more\" class=\"menu-nav__link\">More <!----></a><!----></li><li class=\"menu-nav__list__item\"><a href=\"/about\" class=\"menu-nav__link\">About <!----></a><!----></li><li class=\"menu-nav__list__item\"><a href=\"/ask-ok-go\" class=\"menu-nav__link\">Ask Ok Go <!----></a><!----></li></ul></nav></aside><aside class=\"app-header__aside app-header__aside--right\"><button class=\"showFilters button\"> Filter Resources<span></span></button><a href=\"mailto:hello@okgosandbox.org\"><span class=\"iconify i-fa6-solid:envelope text-2xl\" aria-hidden=\"true\"></span></a></aside><div id=\"filter-form\" class=\"\"><form class=\"grid\"><div class=\"grid-row\"><div class=\"grid-column mb-8\"><h3>Filter Resources</h3></div></div><div class=\"grid-row\"><div class=\"videos grid-column w-full lg:w-1/3 py-12 px-6 text-center\"><span class=\"background\"></span><h5>Music Videos</h5><span><input type=\"checkbox\" id=\"this-too-shall-pass\" value=\"&amp;videoUID=this-too-shall-pass\" style=\"\"><label for=\"this-too-shall-pass\" class=\"checkbox-label video-label\">This Too Shall Pass</label></span><span><input type=\"checkbox\" id=\"the-one-moment\" value=\"&amp;videoUID=the-one-moment\" style=\"\"><label for=\"the-one-moment\" class=\"checkbox-label video-label\">The One Moment</label></span><span><input type=\"checkbox\" id=\"the-writings-on-the-wall\" value=\"&amp;videoUID=the-writings-on-the-wall\" style=\"\"><label for=\"the-writings-on-the-wall\" class=\"checkbox-label video-label\">The Writing's On The Wall</label></span><span><input type=\"checkbox\" id=\"upside-down-inside-out\" value=\"&amp;videoUID=upside-down-inside-out\" style=\"\"><label for=\"upside-down-inside-out\" class=\"checkbox-label video-label\">Upside Down &amp; Inside Out</label></span><span><input type=\"checkbox\" id=\"needing-getting\" value=\"&amp;videoUID=needing-getting\" style=\"\"><label for=\"needing-getting\" class=\"checkbox-label video-label\">Needing/Getting</label></span><span><input type=\"checkbox\" id=\"all-together-now\" value=\"&amp;videoUID=all-together-now\" style=\"\"><label for=\"all-together-now\" class=\"checkbox-label video-label\">All Together Now</label></span><span><input type=\"checkbox\" id=\"this\" value=\"&amp;videoUID=this\" style=\"\"><label for=\"this\" class=\"checkbox-label video-label\">This</label></span></div><div class=\"subjects grid-column w-full lg:w-1/3 py-12 px-6 text-center\"><span class=\"background\"></span><h5>Subjects</h5><span><input type=\"checkbox\" id=\"Acceleration\" value=\"&amp;subject=Acceleration\" style=\"\"><label for=\"Acceleration\" class=\"checkbox-label subject-label\">Acceleration</label></span><span><input type=\"checkbox\" id=\"Artistic Control\" value=\"&amp;subject=Artistic Control\" style=\"\"><label for=\"Artistic Control\" class=\"checkbox-label subject-label\">Artistic Control</label></span><span><input type=\"checkbox\" id=\"Arts\" value=\"&amp;subject=Arts\" style=\"\"><label for=\"Arts\" class=\"checkbox-label subject-label\">Arts</label></span><span><input type=\"checkbox\" id=\"Design Process\" value=\"&amp;subject=Design Process\" style=\"\"><label for=\"Design Process\" class=\"checkbox-label subject-label\">Design Process</label></span><span><input type=\"checkbox\" id=\"Engineering\" value=\"&amp;subject=Engineering\" style=\"\"><label for=\"Engineering\" class=\"checkbox-label subject-label\">Engineering</label></span><span><input type=\"checkbox\" id=\"Force\" value=\"&amp;subject=Force\" style=\"\"><label for=\"Force\" class=\"checkbox-label subject-label\">Force</label></span><span><input type=\"checkbox\" id=\"Math\" value=\"&amp;subject=Math\" style=\"\"><label for=\"Math\" class=\"checkbox-label subject-label\">Math</label></span><span><input type=\"checkbox\" id=\"Music\" value=\"&amp;subject=Music\" style=\"\"><label for=\"Music\" class=\"checkbox-label subject-label\">Music</label></span><span><input type=\"checkbox\" id=\"Physics\" value=\"&amp;subject=Physics\" style=\"\"><label for=\"Physics\" class=\"checkbox-label subject-label\">Physics</label></span><span><input type=\"checkbox\" id=\"Science\" value=\"&amp;subject=Science\" style=\"\"><label for=\"Science\" class=\"checkbox-label subject-label\">Science</label></span><span><input type=\"checkbox\" id=\"Uniform Circular Motion\" value=\"&amp;subject=Uniform Circular Motion\" style=\"\"><label for=\"Uniform Circular Motion\" class=\"checkbox-label subject-label\">Uniform Circular Motion</label></span><span><input type=\"checkbox\" id=\"Velocity\" value=\"&amp;subject=Velocity\" style=\"\"><label for=\"Velocity\" class=\"checkbox-label subject-label\">Velocity</label></span><span><input type=\"checkbox\" id=\"Viscosity\" value=\"&amp;subject=Viscosity\" style=\"\"><label for=\"Viscosity\" class=\"checkbox-label subject-label\">Viscosity</label></span></div><div class=\"grades grid-column w-full lg:w-1/3 py-12 px-6 text-center\"><span class=\"background\"></span><h5>Grade Level</h5><span><input type=\"checkbox\" id=\"0-2\" value=\"&amp;grade=0-2\" style=\"\"><label for=\"0-2\" class=\"checkbox-label grade-label\">K-2</label></span><span><input type=\"checkbox\" id=\"3-5\" value=\"&amp;grade=3-5\" style=\"\"><label for=\"3-5\" class=\"checkbox-label grade-label\">3-5</label></span><span><input type=\"checkbox\" id=\"6-8\" value=\"&amp;grade=6-8\" style=\"\"><label for=\"6-8\" class=\"checkbox-label grade-label\">6-8</label></span><span><input type=\"checkbox\" id=\"9-12\" value=\"&amp;grade=9-12\" style=\"\"><label for=\"9-12\" class=\"checkbox-label grade-label\">9-12</label></span></div></div><div class=\"grid-row text-right mt-8\"><a href=\"/results?\" class=\"results-btn font-title button px-12 py-3 disabled\"> Show Results </a></div></form></div></header><main class=\"app-main\"><div><div class=\"lesson\"><aside class=\"lesson__aside\"><div class=\"swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden\"><div class=\"swiper-wrapper\"><div class=\"swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active\" data-swiper-slide-index=\"0\" style=\"width: 864px; opacity: 1; transform: translate3d(0px, 0px, 0px);\"><img class=\"lesson__image\" srcset=\"/images/home-intro-1.jpg 960w, /images/home-intro-1@2x.jpg 1920w\"><!----></div><div class=\"swiper-slide swiper-slide-next\" data-swiper-slide-index=\"1\" style=\"width: 864px; opacity: 0; transform: translate3d(-864px, 0px, 0px);\"><img class=\"lesson__image\" srcset=\"/images/home-intro-2.jpg 960w, /images/home-intro-2@2x.jpg 1920w\"><!----></div><div class=\"swiper-slide\" data-swiper-slide-index=\"2\" style=\"width: 864px; opacity: 0; transform: translate3d(-1728px, 0px, 0px);\"><img class=\"lesson__image\" srcset=\"/images/home-intro-3.jpg 960w, /images/home-intro-3@2x.jpg 1920w\"><!----></div></div><!----><!----><!----></div></aside><div class=\"lesson__content\"><h1>Inspiring Tools for Playful Learning.</h1><p class=\"lesson__text\">Helping students learn through the joy, wonder, and fun of OK Go's music videos.</p><div class=\"lesson__button\"><a href=\"#lessons\" class=\"no-underline\"><span class=\"caps font-bold\">Explore the Lessons</span><span class=\"iconify i-fa6-solid:turn-down text-xs ml-2 relative top-1\" aria-hidden=\"true\"></span></a></div></div></div><div id=\"lessons\"><div class=\"lesson lesson--alt\"><aside class=\"lesson__aside\"><a href=\"/this-too-shall-pass\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/this-too-shall-pass/teaser-ttsp.jpg 960w, /videos/this-too-shall-pass/teaser-ttsp@2x.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">This Too Shall Pass</h2><p class=\"lesson__text\">OK Go created this video by connecting a series of simple machines together, to create a single chain reaction machine, timed perfectly to their song. So perfectly in...</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Simple Machines, Chain Reactions, Pitch</p></footer></div></div></div><div class=\"lesson\"><aside class=\"lesson__aside\"><a href=\"/the-one-moment\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/the-one-moment/teaser-t1m.jpg 960w, /videos/the-one-moment/teaser-t1m@2x.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">The One Moment</h2><p class=\"lesson__text\">This video was actually shot in 4 seconds, but when played back in slow motion, it stays in sync with the music. How did they do it?! A...</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Math, Physics, Flip Books</p></footer></div></div></div><div class=\"lesson lesson--alt\"><aside class=\"lesson__aside\"><a href=\"/the-writings-on-the-wall\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/the-writings-on-the-wall/poster-finale.jpg 960w, /videos/the-writings-on-the-wall/poster-finale@2x.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">The Writing's On The Wall</h2><p class=\"lesson__text\">Everything is not what it seems in this video! See how OK Go used art and perspective to trick your brain into seeing something that isn't actually there.</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Optical Illusions, Neuroscience, Perception</p></footer></div></div></div><div class=\"lesson\"><aside class=\"lesson__aside\"><a href=\"/upside-down-inside-out\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/upside-down-inside-out/udio-bg.jpg 960w, /videos/upside-down-inside-out/udio-bg.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">Upside Down &amp; Inside Out</h2><p class=\"lesson__text\">Making this video took OK Go to new heights in learning! Through the joy of experimentation, they learned how the rules of physics apply in microgravity (everything floats!)...</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Physics, Parabolas, Art</p></footer></div></div></div><div class=\"lesson lesson--alt\"><aside class=\"lesson__aside\"><a href=\"/needing-getting\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/needing-getting/teaser-ng.jpg 960w, /videos/needing-getting/teaser-ng@2x.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">Needing/Getting</h2><p class=\"lesson__text\">OK Go wanted to find out if they could play their song using a car and everyday objects. Turns out they could!... by stunt driving a car with...</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Music, Found Instruments, Sensors</p></footer></div></div></div><div class=\"lesson\"><aside class=\"lesson__aside\"><a href=\"/all-together-now\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/all-together-now/teaser-together.jpg 960w, /videos/all-together-now/teaser-together@2x.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">All Together Now</h2><p class=\"lesson__text\">Inspired by virtual togetherness during the COVID-19 pandemic, OK Go worked together (apart) to create this music video, ending with a special tribute to our frontline healthcare workers.</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Art, Collabration</p></footer></div></div></div><div class=\"lesson lesson--alt\"><aside class=\"lesson__aside\"><a href=\"/this\" class=\"\"><img class=\"lesson__image\" srcset=\"/videos/this/this_thumbnail.jpg 960w, /videos/this/this_thumbnail.jpg 1920w\"></a></aside><div class=\"lesson__content\"><div><h2 class=\"lesson__title\">This</h2><p class=\"lesson__text\">It doesn't get better than this! OK Go created this visualizer using a pottery wheel and a lot of paint, proving that learning can sometimes be messy (and...</p><button class=\"button button--alt-layout lesson__button\"><div class=\"button__main\"><div class=\"button__content\"><h4 class=\"button__title\">View Lessons</h4><!----></div><aside class=\"button__aside\"><span class=\"button__icon\"><span class=\"iconify i-fa6-solid:angle-right\" aria-hidden=\"true\"></span></span><!----></aside></div></button><footer class=\"lesson__footer\"><div class=\"caps-xs text-gray font-bold\">Topics</div><p class=\"mt-2 text-tertiary text-sm\">Art, Collabration</p></footer></div></div></div></div></div></main><aside class=\"app-menu\"><div class=\"app-menu__main grid\"><div class=\"app-menu__main__content\"><ul class=\"app-menu__list\"><li class=\"app-menu__list__item\"><h1><a aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active app-menu__link\">Home</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/this-too-shall-pass\" class=\"app-menu__link\">This Too Shall Pass</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/the-one-moment\" class=\"app-menu__link\">The One Moment</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/the-writings-on-the-wall\" class=\"app-menu__link\">The Writing's On The Wall</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/upside-down-inside-out\" class=\"app-menu__link\">Upside Down &amp; Inside Out</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/needing-getting\" class=\"app-menu__link\">Needing/Getting</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/all-together-now\" class=\"app-menu__link\">All Together Now</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/this\" class=\"app-menu__link\">This</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/more\" class=\"app-menu__link\">More</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/about\" class=\"app-menu__link\">About</a></h1></li><li class=\"app-menu__list__item\"><h1><a href=\"/ask-ok-go\" class=\"app-menu__link\">Ask Ok Go</a></h1></li></ul></div></div></aside><footer class=\"app-footer\"><div class=\"app-footer__main\"><aside class=\"app-footer__aside\"><div class=\"app-footer__aside__label\"><span class=\"caps-sm text-white opacity-75\">Sponsored By:</span></div><div class=\"sponsor-grid\"><a class=\"sponsor sponsor--google\" href=\"https://google.com\" target=\"_blank\" rel=\"noopener\"><img class=\"sponsor__logo\" src=\"/images/sponsors/google_wordmark.png\" srcset=\"/images/sponsors/google_wordmark.png, /images/sponsors/google_wordmark@2x.png 2x\" height=\"38\" width=\"120\" alt=\"Google\"></a><a class=\"sponsor sponsor--morton\" href=\"http://mortonsalt.com\" target=\"_blank\" rel=\"noopener\"><img class=\"sponsor__logo\" src=\"/images/sponsors/morton.png\" srcset=\"/images/sponsors/morton.png, /images/sponsors/morton@2x.png 2x\" height=\"104\" width=\"97\" alt=\"Morton\"></a><a class=\"sponsor sponsor--cognizant\" href=\"https://cognizant.com\" target=\"_blank\" rel=\"noopener\"><img class=\"sponsor__logo\" src=\"/images/sponsors/cognizant.png\" srcset=\"/images/sponsors/cognizant.png, /images/sponsors/cognizant@2x.png 2x\" height=\"34\" width=\"128\" alt=\"Cognizant\"></a></div></aside><div class=\"app-footer__content\"><div class=\"app-footer__legal\"><div class=\"app-footer__copyright\"> © 2026 <a aria-current=\"page\" href=\"/\" class=\"router-link-active router-link-exact-active\">OK Go Sandbox</a></div><div class=\"app-footer__license\"><a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\"><img src=\"https://i.creativecommons.org/l/by-nc/4.0/80x15.png\" alt=\"Creative Commons License\"></a><span property=\"dct:title\">OK Go Sandbox Challenges</span> by the <span property=\"cc:attributionName\"><a href=\"https://playfullearninglab.org\">Playful Learning Lab</a> at the <a href=\"https://stthomas.edu\">University of St.Thomas</a></span> is licensed under a <a href=\"http://creativecommons.org/licenses/by-nc/4.0/\" rel=\"license\"> Creative Commons Attribution-NonCommercial 4.0 International License </a>. </div><div class=\"text-sm mt-2\"><a href=\"/art-in-space/media-materials\" rel=\"noopener noreferrer\" target=\"_blank\"> Media Materials </a></div></div><ul class=\"app-footer__social\"><li><a href=\"https://instagram.com/okgosandbox\" target=\"_blank\" rel=\"noopener\"><span class=\"iconify i-fa6-brands:instagram\" aria-hidden=\"true\"></span></a></li><li><a href=\"https://facebook.com/OKGoSandbox\" target=\"_blank\" rel=\"noopener\"><span class=\"iconify i-fa6-brands:facebook\" aria-hidden=\"true\"></span></a></li><li><a href=\"https://twitter.com/OKGoSandbox\" target=\"_blank\" rel=\"noopener\"><span class=\"iconify i-fa6-brands:twitter\" aria-hidden=\"true\"></span></a></li></ul></div></div><div class=\"app-footer__colophon\"><span>A collaboration between</span><a href=\"https://okgo.net\">OK Go</a><span>and the</span><a href=\"https://playfullearninglab.org\"><img src=\"/images/logo-pll.png\" srcset=\"/images/logo-pll.png, /images/logo-pll@2x.png 2x\" height=\"40\" alt=\"Playful Learning Lab\"></a><span>at</span><a href=\"https://stthomas.edu\"><img src=\"/images/logo-ust.png\" srcset=\"/images/logo-ust.png, /images/logo-ust@2x.png 2x\" height=\"30\" alt=\"University of St. Thomas, Minnesota\"></a></div></footer><!--]--></div></div><div id=\"teleports\"></div><script type=\"application/json\" data-nuxt-data=\"nuxt-app\" data-ssr=\"true\" id=\"__NUXT_DATA__\" data-src=\"/_payload.json?095fe349-78f6-4aed-a79f-7f5e3253bf7c\">[{\"state\":1,\"once\":3,\"_errors\":4,\"serverRendered\":6,\"path\":7,\"pinia\":8,\"prerenderedAt\":15},[\"Reactive\",2],{},[\"Set\"],[\"ShallowReactive\",5],{\"menu-videos\":-1,\"filters-videos-cache\":-1,\"filter-videos\":-1,\"videos\":-1,\"app-menu-videos\":-1,\"filter-resources\":-1},true,\"/\",[\"Reactive\",9],{\"ui\":10},{\"header\":11,\"menu\":13,\"filter\":14},{\"isFixed\":12},false,{\"isActive\":12},{\"isActive\":12},1771354436229]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{siteUrl:\"https://okgosandbox.org\",mdc:{components:{prose:true,map:{}},headings:{anchorLinks:{h1:false,h2:true,h3:true,h4:true,h5:false,h6:false}},highlight:{noApiRoute:true,highlighter:\"shiki\",theme:{default:\"github-light\",dark:\"github-dark\"},shikiEngine:\"oniguruma\",langs:[\"js\",\"jsx\",\"json\",\"ts\",\"tsx\",\"vue\",\"css\",\"html\",\"bash\",\"md\",\"mdc\",\"yaml\"]}},content:{wsUrl:\"\"}},app:{baseURL:\"/\",buildId:\"095fe349-78f6-4aed-a79f-7f5e3253bf7c\",buildAssetsDir:\"/_nuxt/\",cdnURL:\"\"}}</script>"
+}

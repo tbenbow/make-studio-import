@@ -84,3 +84,89 @@ Accumulated learnings from site conversions. Read this before starting a new con
 - **Page management needs API support** — Currently requires MongoDB. The make-studio page routes should be updated to accept API tokens, or the importer should add a dedicated page management command.
 
 - **The create-site → sync → update-page workflow** — The full deployment flow is: (1) create-site, (2) sync blocks/partials/theme, (3) update page with correct block IDs and order. All three steps are needed for a working site.
+
+---
+
+## Site: OK Go Sandbox (2026-02-17)
+
+**URL**: https://okgosandbox.org/
+**Framework**: Nuxt 3 (Vue SPA) with scoped component styles
+**Theme type**: Light (base=#ffffff, brand=#46b3ff blue accent, base-alt=#252525 dark footer)
+**Fonts**: Roboto Slab (headings) + Roboto (body)
+**Approach**: Multi-page conversion starting with homepage. Claude-driven with Playwright for analysis.
+
+### What went wrong
+
+1. **Items sub-fields in wrong location** — Put repeater sub-fields at `fields` (top-level on the items object) instead of `config.fields`. Make Studio silently ignored them — the items appeared in the editor but with "No field definitions configured." The correct format is:
+   ```json
+   {
+     "type": "items",
+     "name": "Items",
+     "config": {
+       "fields": [
+         { "type": "text", "name": "Title" }
+       ]
+     },
+     "default": [...]
+   }
+   ```
+
+2. **`isOdd` helper doesn't exist** — Tried `{{#if (isOdd @index)}}` for alternating card layouts. Not a registered Handlebars helper in Make Studio. Also tried `{{#if (eq (mod @index 2) 1)}}` — this caused a template compilation error too (likely `mod` not registered either).
+
+3. **Handlebars expressions inside class attributes can fail** — Putting conditional Handlebars blocks inside a `class=""` attribute (e.g. for alternating CSS classes) can cause compilation errors depending on the expression complexity.
+
+4. **Page block format was wrong** — First attempt used `{ _id, blockId, blockName, fields: [...] }` which rendered blocks but with empty/default content. The correct format uses `content` keyed by field UUIDs:
+   ```json
+   {
+     "id": "uuid",
+     "blockId": "mongoId",
+     "name": "BlockName",
+     "description": "...",
+     "content": {
+       "field-uuid-1": { "value": "actual content" },
+       "field-uuid-2": { "value": [...items...] }
+     }
+   }
+   ```
+
+5. **No media upload API** — Media goes to R2, and there's no API endpoint for uploading. For now, reference original site images directly by URL.
+
+### What worked well
+
+1. **Playwright scraping for SPA sites** — WebFetch couldn't extract CSS/styles from the Vue SPA (scoped styles, runtime-generated classes). Playwright rendered the page and extracted computed styles, fonts, colors, and full DOM.
+
+2. **CSS-only alternating pattern** — `even:lg:flex-row-reverse` on flex containers handles alternating card layouts purely in CSS. No Handlebars helpers needed.
+
+3. **Full-bleed layout** — Some sites don't use max-width containers. Removing the standard container wrapper and using `w-full` with percentage-based widths (`lg:w-3/5` / `lg:w-2/5`) produced the right edge-to-edge look.
+
+4. **Image aspect ratio with `h-auto`** — Using `w-full h-auto` instead of a fixed `aspect-[16/10]` container lets images maintain their natural proportions, matching the original site.
+
+5. **Compound docs still valuable** — Reference examples and design token guides prevented many first-pass errors. Validation passed on first try (0 errors).
+
+### Lessons learned
+
+- **Items sub-fields go in `config.fields`** — This is the #1 gotcha. Never put sub-fields at the top level of an items field. Always nest under `config.fields`.
+
+- **For alternating layouts, use CSS `even:` variant** — Don't try Handlebars index math. Tailwind's `even:lg:flex-row-reverse` is cleaner and always compiles.
+
+- **Page content uses field UUIDs, not names** — The page `content` object maps field UUID → `{ value }`. Get UUIDs from the block's `fields` array in MongoDB. Items within repeaters also need a `uuid` `id` field.
+
+- **Full-bleed sites skip the standard container** — Not every site uses the `max-w-7xl` container. Check the original site's layout and omit the container when the design is edge-to-edge.
+
+- **Use original site image URLs when no upload API exists** — Directly referencing `https://original-site.com/images/...` works as a stopgap. Plan for R2 upload API in the future.
+
+- **Multi-page conversions share blocks/partials** — When converting additional pages of the same site, the Navbar, Footer, and Button partial are already deployed. Only new section types need to be created.
+
+- **Always pull before sync** — Run `npm run pull -- --theme=<name> --only=Block` before editing and syncing. The user may have made changes in the Make Studio editor that will be overwritten if you sync without pulling first.
+
+- **Template variables use kebab-case** — All Handlebars variables must be kebab-case (`{{video-url}}`, `{{about-heading}}`), never snake_case (`{{video_url}}`). This is a Make Studio convention.
+
+- **Capture decorative details** — Small visual details like thin separator lines, colored stripes, and decorative illustrations are important for fidelity. Don't skip them — they define a site's personality.
+
+- **Use Playwright to measure spacing** — Don't eyeball pixel values from screenshots. Write a measurement script (`scripts/measure-spacing.ts`) that uses `getBoundingClientRect()` and `getComputedStyle()` on the original site to get exact widths, gaps, padding, font sizes, etc. This eliminates most spacing revision rounds.
+
+- **Add `accent` to systemColors when a site has a secondary action color** — OK Go Sandbox uses blue (`brand`) for primary actions and orange-red (`#f9613e`) for "View Resource" links. Adding `"accent": "#f9613e"` to systemColors enables `text-accent` across all blocks instead of hardcoding hex values. Check if `prose.links.color` already references `accent` — if so, the system expects it.
+
+- **Alpine.js for interactive content** — Use `x-data`, `x-show`, `@click`, and `:src` for interactive elements like video grids where clicking a thumbnail switches the playing video. Only load the active iframe with conditional `:src` binding to avoid loading all videos at once.
+
+- **Use fixed pixel dimensions for small UI elements** — Thumbnails, icons, and other small elements should use exact pixel sizes (`w-[90px] h-[50px]`) rather than responsive grid columns. This ensures they match the original site precisely and don't scale unexpectedly.

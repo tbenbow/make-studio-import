@@ -109,19 +109,21 @@ Buttons use the shared `Button` partial. In templates:
 
 ### Items (Repeater) Config
 
+**IMPORTANT**: Sub-fields MUST go inside `config.fields`, NOT at the top level. Putting them at `fields` will silently fail — the repeater will appear in the editor but show "No field definitions configured."
+
 ```json
 {
   "type": "items",
   "name": "Features",
-  "default": [
-    { "headline": "Feature One", "description": "<p>Description</p>" }
-  ],
   "config": {
     "fields": [
       { "type": "text", "name": "Headline" },
       { "type": "wysiwyg", "name": "Description" }
     ]
-  }
+  },
+  "default": [
+    { "headline": "Feature One", "description": "<p>Description</p>" }
+  ]
 }
 ```
 

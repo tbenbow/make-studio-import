@@ -1,0 +1,52 @@
+{
+  "description": "Video grid with playable thumb",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Upside Down & Inside Out"
+    },
+    {
+      "type": "items",
+      "name": "Videos",
+      "default": [
+        {
+          "thumbnail": "https://img.youtube.com/vi/LWGJA9i18Co/mqdefault.jpg",
+          "title": "",
+          "url": "https://www.youtube.com/embed/LWGJA9i18Co?rel=0"
+        },
+        {
+          "thumbnail": "https://img.youtube.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
+          "title": "",
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+        },
+        {
+          "thumbnail": "https://img.youtube.com/vi/qybUFnY7Y8w/mqdefault.jpg",
+          "title": "",
+          "url": "https://www.youtube.com/embed/qybUFnY7Y8w?rel=0"
+        },
+        {
+          "thumbnail": "https://img.youtube.com/vi/m86ae_e_ptU/mqdefault.jpg",
+          "title": "",
+          "url": "https://www.youtube.com/embed/m86ae_e_ptU?rel=0"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Thumbnail"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

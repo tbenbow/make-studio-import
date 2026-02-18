@@ -1,0 +1,7 @@
+{
+  "description": "Page header with title and subtitle",
+  "fields": [
+    { "type": "text", "name": "Title", "default": "More" },
+    { "type": "text", "name": "Subtitle", "default": "Behind the Scenes, Outtakes & More" }
+  ]
+}

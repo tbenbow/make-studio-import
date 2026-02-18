@@ -1,0 +1,36 @@
+<header class="sticky top-0 z-10 bg-base/95 backdrop-blur-sm">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
+    <div class="flex items-center justify-between py-4">
+      <div class="flex-1">
+        {{#if logo}}
+          <a href="/">
+            <img src="{{logo}}" alt="{{default logo-alt 'Logo'}}" class="h-6">
+          </a>
+        {{else}}
+          <a href="/" class="heading-sm text-fg hover:text-brand transition">
+            {{default logo-text "OK Go Sandbox"}}
+          </a>
+        {{/if}}
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-8">
+        {{#each nav-links}}
+          <a href="{{url}}" class="body-sm text-fg hover:text-brand transition">
+            {{label}}
+          </a>
+        {{/each}}
+      </nav>
+
+      <div class="flex-1 flex items-center justify-end gap-4">
+        {{#if cta-label}}
+          <a href="{{default cta-link '#'}}" class="hidden lg:inline-flex items-center gap-2 bg-brand text-on-brand px-4 py-2 body-sm font-bold hover:opacity-90 transition">
+            {{cta-label}}
+          </a>
+        {{/if}}
+        <button class="lg:hidden text-fg body-sm font-medium">
+          Menu
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,44 @@
+<section class="bg-base py-10" x-data="{ active: 0 }">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-6xl lg:px-10">
+    {{#if heading}}
+      <div class="flex items-center gap-4 mb-8">
+        <div class="flex-1 h-px bg-border"></div>
+        <h2 class="heading-sm text-fg text-center uppercase tracking-wide">
+          {{heading}}
+        </h2>
+        <div class="flex-1 h-px bg-border"></div>
+      </div>
+    {{/if}}
+    {{#if (length videos)}}
+      <div class="mb-6">
+        {{#each videos}}
+          <div x-show="active === {{@index}}" x-cloak>
+            <div class="relative w-full" style="padding-bottom: 56.25%">
+              <iframe
+                :src="active === {{@index}} ? '{{url}}' : ''"
+                class="absolute inset-0 w-full h-full"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      <div class="flex flex-wrap justify-center gap-3">
+        {{#each videos}}
+          <button @click="active = {{@index}}" class="text-center">
+            <div
+              class="w-[90px] h-[50px] border-4 overflow-hidden transition"
+              :class="active === {{@index}} ? 'border-brand' : 'border-border hover:border-fg-muted'"
+            >
+              <img src="{{thumbnail}}" alt="{{default title 'Video'}}" class="w-full h-full object-cover">
+            </div>
+            {{#if title}}
+              <p class="body-sm text-fg-muted mt-1 w-[90px]">{{title}}</p>
+            {{/if}}
+          </button>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

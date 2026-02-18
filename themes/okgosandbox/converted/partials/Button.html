@@ -1,0 +1,17 @@
+{{#switch style}}
+  {{#case "secondary"}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-1 bg-brand/10 text-fg px-6 py-3 body-sm font-bold uppercase tracking-wider hover:bg-brand/15 transition">
+      {{default label "Click Here"}}
+    </a>
+  {{/case}}
+  {{#case "ghost"}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-2 text-fg px-6 py-3 body-sm font-bold uppercase tracking-wider hover:bg-brand/10 transition">
+      {{default label "Click Here"}}
+    </a>
+  {{/case}}
+  {{#otherwise}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-1 bg-brand text-on-brand px-6 py-3 body-sm font-bold uppercase tracking-wider hover:opacity-90 transition">
+      {{default label "Click Here"}}
+    </a>
+  {{/otherwise}}
+{{/switch}}

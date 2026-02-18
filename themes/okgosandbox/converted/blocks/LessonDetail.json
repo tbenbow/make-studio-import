@@ -1,0 +1,92 @@
+{
+  "description": "Lesson detail with video and m",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Breadcrumb Label",
+      "default": "This Too Shall Pass"
+    },
+    {
+      "type": "text",
+      "name": "Breadcrumb Link",
+      "default": "/this-too-shall-pass"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Chain Reaction Machines"
+    },
+    {
+      "type": "text",
+      "name": "Video URL"
+    },
+    {
+      "type": "image",
+      "name": "Image"
+    },
+    {
+      "type": "text",
+      "name": "Image Alt"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "This challenge will engage students in recognizing different simple machines and creating their own in a chain reaction machine, using the engineering design process to explore forces and motion."
+    },
+    {
+      "type": "text",
+      "name": "Materials Label",
+      "default": "Materials"
+    },
+    {
+      "type": "items",
+      "name": "Materials",
+      "default": [
+        {
+          "label": "Educator Guide",
+          "subtitle": "Download the Guide",
+          "url": "#",
+          "icon": "file-pdf"
+        },
+        {
+          "label": "TTSP Clip - 6 sec.",
+          "subtitle": "Download the Clip",
+          "url": "#",
+          "icon": "play"
+        },
+        {
+          "label": "TTSP Clip - 15 sec.",
+          "subtitle": "Download the Clip",
+          "url": "#",
+          "icon": "play"
+        },
+        {
+          "label": "TTSP Clip - 22 sec.",
+          "subtitle": "Download the Clip",
+          "url": "#",
+          "icon": "play"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Subtitle"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          }
+        ]
+      }
+    }
+  ]
+}

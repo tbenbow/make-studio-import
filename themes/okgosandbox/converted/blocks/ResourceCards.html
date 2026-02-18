@@ -1,0 +1,39 @@
+<section class="py-28 bg-base-muted">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-5xl lg:max-w-6xl lg:px-10">
+    {{#if (length items)}}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+        {{#each items}}
+          <div>
+            {{#if image}}
+              <a href="{{default link '#'}}" class="w-full h-auto">
+                <img src="{{default image }}" alt="{{default image-alt title}}" class="w-full h-auto object-cover">
+              </a>
+            {{/if}}
+            <div class="bg-base shadow-xl p-8 lg:p-10 -mt-24 ml-12 relative">
+              <h3 class="heading-md text-fg">
+                {{default title "Resource Title"}}
+              </h3>
+              {{#if tags}}
+                <div class="flex flex-wrap gap-4 mt-3 body-sm font-bold tracking-wide">
+                  {{{tags}}}
+                </div>
+              {{/if}}
+              {{#if description}}
+                <p class="body-md text-fg-muted mt-4">
+                  {{description}}
+                </p>
+              {{/if}}
+              {{#if link}}
+                <div class="mt-6">
+                  <a href="{{link}}" class="body-sm font-bold uppercase tracking-wider text-accent hover:text-fg transition">
+                    View Resource ›
+                  </a>
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

@@ -16,6 +16,7 @@ Make-studio uses a semantic token system for colors and typography. All blocks m
 | `brand` | `bg-brand`, `text-brand` | Primary accent/brand color |
 | `on-brand` | `text-on-brand` | Text color that sits on brand-colored backgrounds |
 | `border` | `border-border` | Default border color |
+| `accent` | `bg-accent`, `text-accent` | Secondary accent color — for links, CTAs that differ from brand (optional) |
 
 ### Opacity Modifiers
 

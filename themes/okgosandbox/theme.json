@@ -1,0 +1,138 @@
+{
+  "fonts": [
+    { "family": "Roboto Slab", "weight": 400, "style": "normal" },
+    { "family": "Roboto", "weight": 400, "style": "normal" },
+    { "family": "Roboto", "weight": 500, "style": "normal" },
+    { "family": "Roboto", "weight": 700, "style": "normal" }
+  ],
+  "systemColors": {
+    "brand": "#46b3ff",
+    "on-brand": "#ffffff",
+    "base": "#ffffff",
+    "base-muted": "#f5f5f5",
+    "base-alt": "#252525",
+    "panel": "#f0f0f0",
+    "fg": "#252525",
+    "fg-muted": "#858585",
+    "fg-alt": "#b5b5b5",
+    "border": "#e0e0e0",
+    "accent": "#f9613e"
+  },
+  "customColors": [],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": ["#b3dfff", "#80ccff", "#46b3ff", "#1a8fd6", "#0d6db3"]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": ["#e0e0e0", "#b5b5b5", "#858585", "#555555", "#252525"]
+    },
+    "accent1": {
+      "label": "accent-1",
+      "colors": ["#fdd88a", "#fcca5e", "#ffbb2a", "#d99a1e", "#b37a12"]
+    },
+    "accent2": {
+      "label": "accent-2",
+      "colors": ["#fcb09a", "#fa8468", "#f9613e", "#d14428", "#a93218"]
+    },
+    "accent3": {
+      "label": "accent-3",
+      "colors": ["#b3dfff", "#80ccff", "#46b3ff", "#1a8fd6", "#0d6db3"]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Roboto Slab",
+      "fontWeight": 400,
+      "fontSize": 48,
+      "lineHeight": 60,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 32,
+      "mobileLineHeight": 40
+    },
+    "heading-lg": {
+      "fontFamily": "Roboto Slab",
+      "fontWeight": 400,
+      "fontSize": 30,
+      "lineHeight": 40,
+      "letterSpacing": -0.3,
+      "mobileFontSize": 24,
+      "mobileLineHeight": 32
+    },
+    "heading-md": {
+      "fontFamily": "Roboto Slab",
+      "fontWeight": 400,
+      "fontSize": 24,
+      "lineHeight": 32,
+      "letterSpacing": -0.2,
+      "mobileFontSize": 20,
+      "mobileLineHeight": 28
+    },
+    "heading-sm": {
+      "fontFamily": "Roboto",
+      "fontWeight": 700,
+      "fontSize": 20,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "mobileFontSize": 18,
+      "mobileLineHeight": 24
+    },
+    "heading-xs": {
+      "fontFamily": "Roboto",
+      "fontWeight": 700,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "mobileFontSize": 14,
+      "mobileLineHeight": 20
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+      "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+      "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+      "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+      "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "accent",
+      "hoverColor": "primary",
+      "underline": "always"
+    }
+  }
+}
