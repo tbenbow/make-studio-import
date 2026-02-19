@@ -165,7 +165,7 @@ Accumulated learnings from site conversions. Read this before starting a new con
 
 - **Use Playwright to measure spacing** — Don't eyeball pixel values from screenshots. Write a measurement script (`scripts/measure-spacing.ts`) that uses `getBoundingClientRect()` and `getComputedStyle()` on the original site to get exact widths, gaps, padding, font sizes, etc. This eliminates most spacing revision rounds.
 
-- **Add `accent` to systemColors when a site has a secondary action color** — OK Go Sandbox uses blue (`brand`) for primary actions and orange-red (`#f9613e`) for "View Resource" links. Adding `"accent": "#f9613e"` to systemColors enables `text-accent` across all blocks instead of hardcoding hex values. Check if `prose.links.color` already references `accent` — if so, the system expects it.
+- **Add extra colors as customColors, NOT systemColors** — The Make Studio UI only supports a fixed set of system colors (brand, on-brand, base, base-muted, base-alt, panel, fg, fg-muted, fg-alt, border). Adding arbitrary keys like `accent` to `systemColors` works at the rendering level but the UI doesn't expose them for editing. Instead, add them to the `customColors` array: `{ "id": "uuid", "name": "accent", "value": "#f9613e" }`. Custom colors generate the same Tailwind utilities (`bg-accent`, `text-accent`, `border-accent`) and are editable in the Make Studio color picker.
 
 - **Alpine.js for interactive content** — Use `x-data`, `x-show`, `@click`, and `:src` for interactive elements like video grids where clicking a thumbnail switches the playing video. Only load the active iframe with conditional `:src` binding to avoid loading all videos at once.
 
@@ -184,3 +184,85 @@ Accumulated learnings from site conversions. Read this before starting a new con
 - **Tailwind arbitrary variants for parent-child alternation** — When you need different child styles based on parent position (e.g. odd/even rows with different child layouts), use `[&:nth-child(even)>[data-child]]` on the parent. Note: Make Studio encodes `&` to `&amp;` on pull, but the unencoded version renders correctly when pushed.
 
 - **Footer semantic color workaround** — When a footer uses `bg-base-alt` (dark) and needs white text, `text-on-brand` works if `on-brand` is white, but it's semantically imprecise. There's no `on-base-alt` token in make-studio. This is an acceptable pragmatic workaround until the token system expands.
+
+---
+
+## Site: OK Go Sandbox — Filter Menu & Link Fixes (2026-02-19)
+
+**Scope**: Added interactive filter overlay to Navbar, created data stores, fixed resource link structure across all pages.
+
+### What went wrong
+
+1. **Resource links used source site's URL structure** — `create-all-resources.ts` and `update-lesson-pages.ts` generated links like `/{parentSlug}/{slug}` matching the original site (okgosandbox.org). Our site uses post types, so resource URLs are `/resources/{slug}.html`. Had to write a fix script to update all 23 resource posts and 8 lesson pages in MongoDB.
+
+2. **Links stored in two different places** — Resource posts store related links in `content` (top-level on the page document), but lesson pages store ResourceCards links inside `blocks[].content`. The first fix script only patched `content`, missing the `blocks` path entirely. Always check both locations when fixing page data.
+
+3. **`accent` added to systemColors but UI doesn't support it** — The Make Studio UI has a fixed set of system colors. Adding `accent` to `systemColors` worked for rendering but wasn't editable in the theme editor. Had to move it to `customColors` array instead. Custom colors produce the same Tailwind classes (`bg-accent`, `text-accent`) but are visible in the UI.
+
+4. **Filter panel z-index too low** — Initial `z-50` was behind page content blocks. Bumped to `z-[999]` for the full-screen modal overlay.
+
+5. **Theme sync removes remote-only keys** — Syncing theme.json with `--only=theme` deleted `customCSS` and `buttons` keys that existed on the remote but weren't in the local file. The sync treats missing local keys as deletions. Keep theme.json in sync with remote state, or be aware that sync is destructive for theme keys.
+
+### What worked well
+
+1. **Data stores for filter content** — Created `music-videos`, `subjects`, and `grade-levels` data stores directly in MongoDB's site document. The `{{#each (dataStore "slug")}}` helper rendered them immediately in templates without any API changes.
+
+2. **Alpine.js for modal toggle** — `x-data="{ filterOpen: false }"` on the header with `x-show` on the overlay panel provided smooth open/close behavior with CSS transitions, no custom JS needed.
+
+3. **Full-screen modal with card layout** — `fixed inset-0 z-[999] bg-fg/60 backdrop-blur-sm` creates a dimmed overlay. White cards with colored top borders (`bg-base rounded-b-lg shadow-lg`) float over it, matching the original site's design.
+
+### Lessons learned
+
+- **Post type URLs follow `/postTypePath/{slug}.html`** — Resources post type uses `/resources/{slug}.html`. Never use the source site's URL structure for internal links. Check the post type's path setting in Make Studio.
+
+- **Page data lives in two places** — For pages created via `update-page` scripts, block content is in `page.blocks[].content`. For post type pages created via `create-all-resources`, related data is in `page.content`. Fix scripts must check both.
+
+- **Custom colors, not system colors** — System colors are a fixed set (brand, on-brand, base, base-muted, base-alt, panel, fg, fg-muted, fg-alt, border). Any additional colors (accent, accent2, etc.) go in `customColors`: `{ "id": "uuid", "name": "color-name", "value": "#hex" }`. They generate identical Tailwind utilities.
+
+- **Data stores for dynamic filter/tag content** — When a block needs a list of items that aren't page content (filter categories, tag lists, dropdown options), use data stores. Add them to the site's `dataStores` array in MongoDB. Access in templates with `{{#each (dataStore "slug")}}` — each entry has `{{this.key}}` (display) and `{{this.value}}` (slug).
+
+- **Full-screen modals need z-[999]** — Page section blocks can have high z-indexes. Use `z-[999]` for modals that must appear above everything. The navbar itself uses `z-10`.
+
+- **Button system is declarative, not template-driven** — Button styling is defined in `theme.json` under `buttons` with `global` (font, sizes sm/md/lg) and `variants` (primary, secondary, outline, ghost). The template uses `btn btn-{{size}} btn-{{style}}` CSS classes generated by Make Studio. This means button appearance is controlled centrally — no inline Tailwind for colors/padding/radius in the template. The template only handles structural elements (icon placement, dividers). See `docs/references/Button.md` for the full config schema.
+
+- **Include `buttons` in theme.json** — The `buttons` key was previously only on the remote and got wiped by a theme sync. Always include it in local theme.json. It defines `global.fontFamily`, `global.sizes.{sm,md,lg}` (fontSize, padding, borderRadius), and `variants.{name}` (backgroundColor, textColor, borderColor, hoverPreset).
+
+- **Button partial supports sizing and icons** — Pass `size="lg"` or `size="sm"` to override the default `md`. Pass `icon="arrow-right"` (Phosphor icon name) to add a right-aligned icon with a divider. Icon size scales with button size (20/24/28px for sm/md/lg).
+
+---
+
+## Site: OK Go Sandbox — Database Corruption Incident (2026-02-19)
+
+**Scope**: Direct MongoDB writes caused site_id type mismatch, breaking page rendering. Root cause analysis and critical policy change.
+
+### What went wrong
+
+1. **Direct DB writes bypassed Mongoose schema casting** — Scripts like `create-all-resources.ts` and `fix-site-id-types.ts` wrote directly to MongoDB using the native driver (`mongoose.connection.db.collection()`). This bypasses Mongoose model validation and type casting entirely. The Page model defines `site_id` as `ObjectId`, but direct writes stored it as a string on some pages.
+
+2. **Misdiagnosed the type mismatch** — When investigating broken pages, we found working pages had `site_id` as ObjectId and broken pages had it as string. We incorrectly concluded that string was correct (because some scripts wrote strings) and wrote `fix-site-id-types.ts` to convert all ObjectId values to strings. This was **exactly backwards** — the Page model expects ObjectId, so we corrupted the working pages too.
+
+3. **`site.pages` array fell out of sync** — Make Studio maintains an abbreviated `pages` array on the site document (used for navigation/sitemap). Direct page creation via MongoDB doesn't update this array. The site document's `pages` list must be kept in sync with the actual pages collection, or pages won't appear in navigation/deploy.
+
+4. **Multiple scripts accumulated inconsistent data** — Different scripts used different approaches: some used `new mongoose.Types.ObjectId(siteId)` (correct for Page model), others used the bare string `siteId` (wrong for Page model but correct for blocks/partials/postTypes). This inconsistency made diagnosis harder and caused the initial misdiagnosis.
+
+### Root cause
+
+The Page Mongoose model defines `site_id: { type: Schema.Types.ObjectId }`. When using `Model.create()` or `Model.find()`, Mongoose automatically casts string IDs to ObjectId. But `db.collection('pages').insertOne()` bypasses this — whatever type you pass is what gets stored. The make-studio server's `Page.find({ site_id })` then fails to match string values because Mongoose casts the query parameter to ObjectId, which doesn't match a stored string.
+
+### Critical policy change
+
+**NEVER write directly to MongoDB. Always use the Make Studio API.**
+
+- The API handles type casting, validation, and keeps related documents (like `site.pages`) in sync
+- If an API endpoint doesn't exist for what you need, **discuss adding one** in the make-studio app rather than writing a direct DB script
+- The only acceptable direct DB reads are for inspection/debugging scripts that don't modify data
+
+### Type reference (if direct DB access is ever unavoidable)
+
+| Collection   | `site_id` type | Notes |
+|-------------|----------------|-------|
+| pages       | **ObjectId**   | `new mongoose.Types.ObjectId(siteId)` |
+| blocks      | String         | Bare string `siteId` |
+| partials    | String         | Bare string `siteId` |
+| posttypes   | String         | Bare string `siteId` |
+| sites       | N/A            | `_id` is the site identifier |

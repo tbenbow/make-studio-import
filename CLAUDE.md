@@ -58,6 +58,10 @@ After a successful conversion:
 3. Note any mistakes made and how they were fixed
 4. Update guides if a stable new pattern emerged
 
+## Critical Rules
+
+- **NEVER write directly to MongoDB** — Always use the Make Studio API for creating/updating pages, posts, and site data. Direct DB writes bypass Mongoose schema casting (e.g., `site_id` must be ObjectId for pages but String for blocks) and skip side effects like updating `site.pages`. If an API endpoint doesn't exist for what you need, discuss adding one in the make-studio app first. Read-only inspection scripts are acceptable.
+
 ## Key Guides
 
 - `docs/guides/block-format.md` — Block HTML/JSON format, container pattern, field types
