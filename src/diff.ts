@@ -46,7 +46,7 @@ export interface Changeset {
 /**
  * Deep-compare two values. Returns true if they differ.
  */
-function isDifferent(a: unknown, b: unknown): boolean {
+export function isDifferent(a: unknown, b: unknown): boolean {
   if (a === b) return false
   if (a === undefined && b === undefined) return false
   if (a === null && b === null) return false
@@ -63,7 +63,7 @@ function isDifferent(a: unknown, b: unknown): boolean {
  * The API sanitizes HTML (e.g. adds closing tags, normalizes whitespace in attributes),
  * so we normalize both sides before comparing.
  */
-function normalizeTemplate(t: string): string {
+export function normalizeTemplate(t: string): string {
   return t
     .replace(/\r\n/g, '\n')                       // normalize line endings
     .replace(/[ \t]+\n/g, '\n')                    // trim trailing whitespace per line
@@ -92,7 +92,7 @@ function stripIds(arr: unknown[]): unknown[] {
   })
 }
 
-function stripFieldVolatile(fields: unknown[]): unknown[] {
+export function stripFieldVolatile(fields: unknown[]): unknown[] {
   return fields.map(f => {
     if (typeof f !== 'object' || f === null) return f
     const { id, _id, ...rest } = f as Record<string, unknown>

@@ -2,17 +2,13 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { randomUUID } from 'crypto'
 import readline from 'readline'
 import dotenv from 'dotenv'
 import { validate } from './validate.js'
-import { generateCatalog, writeCatalog } from './catalog.js'
-import { validatePage } from './validate-page.js'
-import { scrapeSite } from './scrape-site.js'
 import { MakeStudioClient } from './api.js'
 import { computeChangeset, type LocalBlock, type LocalPartial } from './diff.js'
 import { saveSnapshot, listSnapshots, loadSnapshot, rollbackFromSnapshot } from './snapshot.js'
-import type { SourceField } from './types.js'
+import { transformField, reverseField } from './fields.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = path.resolve(__dirname, '..')
@@ -33,14 +29,6 @@ function parseArgs(args: string[]): Record<string, string> {
 
 function getThemePath(themeName: string): string {
   return path.join(ROOT_DIR, 'themes', themeName)
-}
-
-function getSitePath(siteName: string): string {
-  return path.join(ROOT_DIR, 'sites', siteName)
-}
-
-function getThemesDir(): string {
-  return path.join(ROOT_DIR, 'themes')
 }
 
 function confirm(message: string): Promise<boolean> {
@@ -70,99 +58,6 @@ function requireApiConfig(): { baseUrl: string; token: string; siteId: string } 
     process.exit(1)
   }
   return { baseUrl, token, siteId }
-}
-
-// ─── Field type mapping (shared with import.ts) ───
-
-const TYPE_MAP: Record<string, string> = {
-  text: 'text',
-  textarea: 'textarea',
-  wysiwyg: 'wysiwyg',
-  richText: 'wysiwyg',
-  image: 'image',
-  items: 'items',
-  repeater: 'items',
-  select: 'select',
-  toggle: 'select',
-  group: 'group',
-  number: 'number',
-  date: 'date'
-}
-
-function getDefaultValue(field: SourceField, dbType: string): unknown {
-  if (field.default !== undefined) {
-    if (dbType === 'items' && Array.isArray(field.default)) {
-      return (field.default as Record<string, unknown>[]).map((item) => {
-        const transformedItem: Record<string, unknown> = { id: randomUUID() }
-        for (const [key, value] of Object.entries(item)) {
-          transformedItem[key] = value
-        }
-        return transformedItem
-      })
-    }
-    return field.default
-  }
-  switch (dbType) {
-    case 'items': return []
-    case 'number': return 0
-    default: return ''
-  }
-}
-
-function transformField(field: SourceField): unknown {
-  const dbType = TYPE_MAP[field.type] || 'text'
-  const transformed: Record<string, unknown> = {
-    id: randomUUID(),
-    type: dbType,
-    name: field.name,
-    value: getDefaultValue(field, dbType),
-    config: {}
-  }
-  if (field.config) {
-    transformed.config = { ...field.config }
-    if (field.config.fields) {
-      (transformed.config as Record<string, unknown>).fields = field.config.fields.map(transformField)
-    }
-  }
-  return transformed
-}
-
-// ─── Reverse field mapping (API → source format for pull) ───
-
-function reverseField(field: Record<string, unknown>): Record<string, unknown> {
-  const result: Record<string, unknown> = {
-    type: field.type as string,
-    name: field.name as string
-  }
-
-  const value = field.value
-  if (field.type === 'items' && Array.isArray(value)) {
-    // Convert items value — strip volatile ids from items
-    result.default = (value as Record<string, unknown>[]).map(item => {
-      const { id, _id, ...rest } = item
-      return rest
-    })
-    // Convert config.fields back to source format, preserve other config keys
-    const config = field.config as Record<string, unknown> | undefined
-    if (config?.fields && Array.isArray(config.fields)) {
-      const { fields: configFields, ...otherConfig } = config
-      result.config = {
-        ...otherConfig,
-        fields: (configFields as Record<string, unknown>[]).map(f => reverseField(f))
-      }
-    }
-  } else {
-    if (value !== undefined && value !== '') {
-      result.default = value
-    }
-    // Preserve non-empty config (selectOptions, image settings, etc.)
-    const config = field.config as Record<string, unknown> | undefined
-    if (config && Object.keys(config).length > 0) {
-      result.config = config
-    }
-  }
-
-  return result
 }
 
 // ─── Local file reading ───
@@ -285,22 +180,19 @@ async function main() {
         pull: 'Pull remote state into local theme files',
         validate: 'Validate converted files',
         status: 'Show theme status',
-        'generate-catalog': 'Generate block catalog from theme',
-        'validate-page': 'Validate page JSON against catalog',
+        'setup-pages': 'Create/update pages and layouts from pages.json manifest',
         'create-site': 'Create a new Make Studio site and save credentials to .env',
-        'scrape-site': 'Scrape a live website and generate make-studio theme files',
         rollback: 'Rollback to a previous snapshot'
       },
       options: {
-        '--theme': 'Theme name (required for sync/pull/validate/status)',
+        '--theme': 'Theme name (required for sync/pull/validate/status/setup-pages)',
         '--site': 'Site ID (overrides MAKE_STUDIO_SITE env var)',
         '--apply': 'Apply changes (sync only — default is dry run)',
         '--force': 'Skip pull-before-push safety check (sync only)',
         '--delete': 'Delete remote-only blocks/partials (with --apply)',
+        '--batch': 'Skip individual confirmations, apply all changes at once (with --apply)',
         '--only': 'Comma-separated list of block/partial names to sync or pull (use "theme" for theme)',
-        '--page': 'Page name (required for validate-page)',
         '--name': 'New site name (for create-site)',
-        '--url': 'URL to scrape (for scrape-site)',
         '--snapshot': 'Snapshot filename (for rollback)'
       }
     })
@@ -331,6 +223,7 @@ async function main() {
       const applyChanges = args.apply === 'true'
       const deleteRemoteOnly = args.delete === 'true'
       const forceSync = args.force === 'true'
+      const batchMode = args.batch === 'true'
       const onlyFilter = args.only ? args.only.split(',').map(s => s.trim()) : null
       const syncStatePath = path.join(themePath, '.sync-state.json')
 
@@ -393,23 +286,27 @@ async function main() {
         process.exit(0)
       }
 
-      // 5. Confirm before applying
-      const parts: string[] = []
-      if (creates > 0) parts.push(`${creates} create`)
-      if (updates > 0) parts.push(`${updates} update`)
-      if (themeChanges > 0) parts.push(`${themeChanges} theme changes`)
-      if (deleteRemoteOnly && deletes > 0) parts.push(`${deletes} DELETE`)
+      // 5. Confirm before applying (skip with --batch)
+      if (!batchMode) {
+        const parts: string[] = []
+        if (creates > 0) parts.push(`${creates} create`)
+        if (updates > 0) parts.push(`${updates} update`)
+        if (themeChanges > 0) parts.push(`${themeChanges} theme changes`)
+        if (deleteRemoteOnly && deletes > 0) parts.push(`${deletes} DELETE`)
 
-      let prompt = `\nApply ${parts.join(', ')}?`
-      if (deleteRemoteOnly && deletes > 0) {
-        prompt += ` (${deletes} blocks/partials will be permanently deleted)`
-      }
-      prompt += ' [y/N] '
+        let prompt = `\nApply ${parts.join(', ')}?`
+        if (deleteRemoteOnly && deletes > 0) {
+          prompt += ` (${deletes} blocks/partials will be permanently deleted)`
+        }
+        prompt += ' [y/N] '
 
-      const confirmed = await confirm(prompt)
-      if (!confirmed) {
-        console.log('Aborted.')
-        process.exit(0)
+        const confirmed = await confirm(prompt)
+        if (!confirmed) {
+          console.log('Aborted.')
+          process.exit(0)
+        }
+      } else {
+        console.log('\nBatch mode — applying all changes without confirmation.')
       }
 
       // 5b. Pull-before-push safety check
@@ -432,8 +329,8 @@ async function main() {
               console.log('\nRun `npm run pull` first, or use --force to override.')
               process.exit(1)
             }
-          } catch {
-            // Activity log endpoint may not be available — skip check
+          } catch (err) {
+            console.log('Warning: Could not check activity log:', (err as Error).message)
           }
         }
       }
@@ -763,46 +660,121 @@ async function main() {
       break
     }
 
-    case 'generate-catalog': {
+
+    // ═══════════════════════════════════════
+    // setup-pages — Create/update pages and layouts from manifest
+    // ═══════════════════════════════════════
+    case 'setup-pages': {
       const themeName = args.theme
       if (!themeName) {
         output({ error: '--theme is required' })
         process.exit(1)
       }
       const themePath = getThemePath(themeName)
-      if (!fs.existsSync(themePath)) {
-        output({ error: `Theme '${themeName}' not found at ${themePath}` })
+      const pagesJsonPath = path.join(themePath, 'pages.json')
+      if (!fs.existsSync(pagesJsonPath)) {
+        output({ error: `pages.json not found at ${pagesJsonPath}` })
         process.exit(1)
       }
 
-      const catalog = generateCatalog(themePath)
-      writeCatalog(themePath, catalog)
-      output({
-        success: true,
-        theme: themeName,
-        blocks: catalog.blocks.length,
-        outputPath: path.join(themePath, 'catalog.json')
-      })
-      break
-    }
+      const apiConfig = requireApiConfig()
+      const siteId = args.site || apiConfig.siteId
+      const client = new MakeStudioClient(apiConfig.baseUrl, apiConfig.token)
 
-    case 'validate-page': {
-      const siteName = args.site
-      const pageName = args.page
-      if (!siteName || !pageName) {
-        output({ error: '--site and --page are required' })
-        process.exit(1)
+      const manifest = JSON.parse(fs.readFileSync(pagesJsonPath, 'utf-8')) as {
+        pages?: Array<{ name: string; slug?: string; layout?: string; blocks?: string[] }>
+        layouts?: Array<{ name: string; headerBlocks?: string[]; footerBlocks?: string[]; isDefault?: boolean }>
       }
 
-      const sitePath = getSitePath(siteName)
-      if (!fs.existsSync(sitePath)) {
-        output({ error: `Site '${siteName}' not found at ${sitePath}` })
-        process.exit(1)
+      // Fetch remote state
+      console.log(`Fetching remote state for site ${siteId}...`)
+      const [remotePages, remoteLayouts, remoteBlocks] = await Promise.all([
+        client.getPages(siteId),
+        client.getLayouts(siteId),
+        client.getBlocks(siteId)
+      ])
+
+      const blocksByName = new Map(remoteBlocks.map(b => [b.name, b]))
+      const layoutsByName = new Map(remoteLayouts.map(l => [l.name, l]))
+      const pagesByName = new Map(remotePages.map(p => [p.name, p]))
+
+      let layoutsCreated = 0, layoutsUpdated = 0
+      let pagesCreated = 0, pagesUpdated = 0
+
+      // Reconcile layouts first (pages reference them)
+      if (manifest.layouts) {
+        for (const layout of manifest.layouts) {
+          const existing = layoutsByName.get(layout.name)
+          const headerBlocks = (layout.headerBlocks || [])
+            .map(name => blocksByName.get(name)?._id)
+            .filter(Boolean)
+            .map(id => ({ blockId: id }))
+          const footerBlocks = (layout.footerBlocks || [])
+            .map(name => blocksByName.get(name)?._id)
+            .filter(Boolean)
+            .map(id => ({ blockId: id }))
+
+          if (existing) {
+            console.log(`  Updating layout: ${layout.name}`)
+            await client.updateLayout(existing._id, {
+              headerBlocks,
+              footerBlocks,
+              isDefault: layout.isDefault
+            })
+            layoutsByName.set(layout.name, { ...existing, headerBlocks, footerBlocks })
+            layoutsUpdated++
+          } else {
+            console.log(`  Creating layout: ${layout.name}`)
+            const created = await client.createLayout({
+              name: layout.name,
+              site_id: siteId,
+              headerBlocks,
+              footerBlocks,
+              isDefault: layout.isDefault
+            })
+            layoutsByName.set(layout.name, created)
+            layoutsCreated++
+          }
+        }
       }
 
-      const result = validatePage(sitePath, pageName, getThemesDir())
-      output(result)
-      process.exit(result.valid ? 0 : 1)
+      // Reconcile pages
+      if (manifest.pages) {
+        for (const page of manifest.pages) {
+          const existing = pagesByName.get(page.name)
+          const layoutId = page.layout ? layoutsByName.get(page.layout)?._id : undefined
+          const blocks = (page.blocks || [])
+            .map(name => blocksByName.get(name)?._id)
+            .filter(Boolean)
+            .map(id => ({ blockId: id }))
+
+          const settings: Record<string, unknown> = {}
+          if (page.slug) settings.slug = page.slug
+
+          if (existing) {
+            console.log(`  Updating page: ${page.name}`)
+            const patch: Record<string, unknown> = { blocks }
+            if (layoutId) patch.layoutId = layoutId
+            if (Object.keys(settings).length > 0) patch.settings = { ...existing.settings, ...settings }
+            await client.updatePage(existing._id, patch)
+            pagesUpdated++
+          } else {
+            console.log(`  Creating page: ${page.name}`)
+            const createData: Record<string, unknown> = {
+              name: page.name,
+              site_id: siteId,
+              blocks
+            }
+            if (layoutId) createData.layoutId = layoutId
+            if (Object.keys(settings).length > 0) createData.settings = settings
+            await client.createPage(createData as any)
+            pagesCreated++
+          }
+        }
+      }
+
+      console.log(`\nSetup complete: ${layoutsCreated} layouts created, ${layoutsUpdated} updated; ${pagesCreated} pages created, ${pagesUpdated} updated.`)
+      process.exit(0)
       break
     }
 
@@ -839,20 +811,6 @@ async function main() {
         console.log('Warning: No API token returned (not using account token?)')
       }
       output({ success: true, siteId: newSiteId, hasToken: !!siteToken })
-      process.exit(0)
-      break
-    }
-
-    case 'scrape-site': {
-      const siteUrl = args.url
-      const themeName = args.theme
-      if (!siteUrl || !themeName) {
-        output({ error: '--url and --theme are required' })
-        process.exit(1)
-      }
-      const outputDir = getThemePath(themeName)
-      const result = await scrapeSite({ url: siteUrl, themeName, outputDir })
-      output(result)
       process.exit(0)
       break
     }

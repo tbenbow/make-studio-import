@@ -9,14 +9,12 @@
     "rollback": "tsx src/index.ts rollback",
     "validate": "tsx src/index.ts validate",
     "status": "tsx src/index.ts status",
-    "generate-catalog": "tsx src/index.ts generate-catalog",
-    "validate-page": "tsx src/index.ts validate-page",
     "create-site": "tsx src/index.ts create-site",
-    "scrape-site": "tsx src/index.ts scrape-site"
+    "setup-pages": "tsx src/index.ts setup-pages",
+    "test": "tsx --test src/*.test.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.993.0",
-    "cheerio": "^1.2.0",
     "dotenv": "^16.3.1",
     "playwright": "^1.58.2",
     "sharp": "^0.34.5",

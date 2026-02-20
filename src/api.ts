@@ -364,4 +364,85 @@ export class MakeStudioClient {
   async listDeploymentRequests(siteId: string): Promise<ApiDeploymentRequest[]> {
     return this.request('GET', `/deployment-requests?site_id=${siteId}`)
   }
+
+  // ─── Batch Operations ───
+
+  async batchSync(siteId: string, operations: {
+    blocks?: Array<{ action: 'create' | 'update' | 'delete'; id?: string; data?: Record<string, unknown> }>
+    partials?: Array<{ action: 'create' | 'update' | 'delete'; id?: string; data?: Record<string, unknown> }>
+    theme?: Record<string, unknown>
+  }): Promise<{ snapshot: ApiSnapshot; results: { blocks: number; partials: number; theme: boolean } }> {
+    // Create snapshot before batch changes
+    const snapshot = await this.createSnapshot(siteId, `pre-batch-${new Date().toISOString()}`)
+
+    let blockCount = 0
+    let partialCount = 0
+    let themeUpdated = false
+
+    // Apply theme first
+    if (operations.theme) {
+      await this.updateSiteTheme(siteId, operations.theme)
+      themeUpdated = true
+    }
+
+    // Apply block operations
+    if (operations.blocks) {
+      for (const op of operations.blocks) {
+        switch (op.action) {
+          case 'create':
+            await this.createBlock({ site_id: siteId, name: '', ...op.data } as any)
+            break
+          case 'update':
+            if (op.id) await this.updateBlock(op.id, op.data || {})
+            break
+          case 'delete':
+            if (op.id) await this.deleteBlock(op.id)
+            break
+        }
+        blockCount++
+      }
+    }
+
+    // Apply partial operations
+    if (operations.partials) {
+      for (const op of operations.partials) {
+        switch (op.action) {
+          case 'create':
+            await this.createPartial({ site_id: siteId, name: '', ...op.data } as any)
+            break
+          case 'update':
+            if (op.id) await this.updatePartial(op.id, op.data || {})
+            break
+          case 'delete':
+            if (op.id) await this.deletePartial(op.id)
+            break
+        }
+        partialCount++
+      }
+    }
+
+    return { snapshot, results: { blocks: blockCount, partials: partialCount, theme: themeUpdated } }
+  }
+
+  // ─── Files (requires server auth update — see docs/review/pending.md) ───
+
+  async generateUploadUrl(siteId: string, opts: {
+    filename: string
+    contentType: string
+  }): Promise<{ uploadUrl: string; key: string }> {
+    return this.request('POST', '/files/upload-url', { siteId, ...opts })
+  }
+
+  async registerFile(siteId: string, opts: {
+    key: string
+    filename: string
+    contentType: string
+    size: number
+  }): Promise<{ _id: string; url: string }> {
+    return this.request('POST', '/files/register', { siteId, ...opts })
+  }
+
+  async listFiles(siteId: string): Promise<Array<{ _id: string; filename: string; url: string; contentType: string }>> {
+    return this.request('GET', `/files?site_id=${siteId}`)
+  }
 }
