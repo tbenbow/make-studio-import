@@ -1,0 +1,39 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Site navigation with logo text, links, and optional CTA",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Site Name",
+      "default": "Kylee Leonetti"
+    },
+    {
+      "type": "items",
+      "name": "Nav Links",
+      "default": [
+        { "label": "Home", "url": "/" },
+        { "label": "Writing", "url": "/writing" },
+        { "label": "About", "url": "/about.html" },
+        { "label": "Favorites", "url": "/favorites.html" },
+        { "label": "Contact", "url": "/contact.html" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "URL" }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": ""
+    }
+  ]
+}

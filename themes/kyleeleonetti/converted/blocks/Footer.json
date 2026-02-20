@@ -1,0 +1,102 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Site footer with brand, links,",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Site Name",
+      "default": "Kylee Leonetti"
+    },
+    {
+      "type": "text",
+      "name": "Tagline",
+      "default": "Writing for seekers, searchers, and skeptics."
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "Writing",
+          "url": "/writing"
+        },
+        {
+          "label": "About",
+          "url": "/about.html"
+        },
+        {
+          "label": "Favorites",
+          "url": "/favorites.html"
+        },
+        {
+          "label": "Contact",
+          "url": "/contact.html"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Email",
+      "default": "writetome@kyleeleonetti.com"
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        {
+          "label": "Instagram",
+          "icon": "instagram-logo",
+          "url": "#"
+        },
+        {
+          "label": "Facebook",
+          "icon": "facebook-logo",
+          "url": "#"
+        },
+        {
+          "label": "Twitter",
+          "icon": "twitter-logo",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "© 2026 Kylee Leonetti"
+    }
+  ]
+}

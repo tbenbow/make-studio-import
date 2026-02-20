@@ -1,0 +1,25 @@
+<a @click="{{click}}" href="{{default link ''}}" class="relative btn btn-{{default size 'md'}} btn-{{default style 'primary'}}">
+  {{default label 'Click Here'}}
+  {{#if icon}}
+    {{#switch size}}
+      {{#case "sm"}}
+        <div class="pr-9"></div>
+        <div class="size-9 absolute right-0 flex items-center justify-center border-l border-on-brand/50 ml-4">
+          {{icon icon size="20"}}
+        </div>
+      {{/case}}
+      {{#case "lg"}}
+        <div class="pr-14"></div>
+        <div class="size-14 absolute right-0 flex items-center justify-center border-l border-on-brand/50 ml-4">
+          {{icon icon size="28"}}
+        </div>
+      {{/case}}
+      {{#otherwise}}
+        <div class="pr-12"></div>
+        <div class="size-12 absolute right-0 flex items-center justify-center border-l border-on-brand/50 ml-4">
+          {{icon icon size="24"}}
+        </div>
+      {{/otherwise}}
+    {{/switch}}
+  {{/if}}
+</a>

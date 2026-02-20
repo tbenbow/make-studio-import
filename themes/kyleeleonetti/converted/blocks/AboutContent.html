@@ -1,0 +1,21 @@
+<section class="pb-20 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+      <!-- Image column -->
+      <div class="lg:col-span-2">
+        {{#if image}}
+          <div class="rounded-2xl overflow-hidden sticky top-24">
+            <img src="{{image}}" alt="{{image-alt}}" class="w-full h-auto object-cover" />
+          </div>
+        {{/if}}
+      </div>
+
+      <!-- Bio content -->
+      <div class="lg:col-span-3">
+        <div class="prose max-w-none">
+          {{{bio}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

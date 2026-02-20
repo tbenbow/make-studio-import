@@ -1,0 +1,29 @@
+<section class="pb-20 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {{#each items}}
+        <div x-data="{ show: false }" x-intersect.once="show = true" :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'" class="transition-all duration-500 ease-out bg-panel rounded-xl overflow-hidden">
+          {{#if image}}
+            <div class="aspect-[3/2] overflow-hidden">
+              <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+            </div>
+          {{/if}}
+          <div class="p-6">
+            {{#if category}}
+              <p class="body-sm font-semibold text-accent mb-2">{{category}}</p>
+            {{/if}}
+            <h3 class="heading-sm text-fg mb-2">{{title}}</h3>
+            {{#if description}}
+              <p class="body-md text-fg-muted mb-4">{{description}}</p>
+            {{/if}}
+            {{#if link}}
+              <a href="{{link}}" class="body-sm font-semibold text-brand hover:text-accent transition" rel="noopener">
+                Learn More →
+              </a>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Contact info card with address, email, speaking section, and appearances",
+  "fields": [
+    { "type": "text", "name": "Address", "default": "Kylee Leonetti, PO Box 24503 Edina, MN 55424" },
+    { "type": "text", "name": "Email", "default": "writetome@kyleeleonetti.com" },
+    { "type": "text", "name": "CTA Label", "default": "Contact Me!" },
+    { "type": "text", "name": "CTA Link", "default": "mailto:writetome@kyleeleonetti.com" },
+    { "type": "text", "name": "Speaking Heading", "default": "Have a Word with Me" },
+    {
+      "type": "wysiwyg",
+      "name": "Speaking Description",
+      "default": "<p>If you have a podcast or program and are looking for someone to provide a refreshing point of view on the topics of keeping the faith, boundaries in balancing family life + entrepreneurship, or being a creative female in leadership \u2013 let\u2019s talk!</p>"
+    },
+    {
+      "type": "items",
+      "name": "Appearances",
+      "default": [
+        {
+          "title": "KARE 11 Monday Refresh",
+          "subtitle": "Getting outside of yourself is the best way to find your higher purpose.",
+          "image": ""
+        },
+        {
+          "title": "To Emerge Podcast",
+          "subtitle": "Entrepreneurship and Motherhood with Kylee Leonetti",
+          "image": ""
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Subtitle" },
+          { "type": "image", "name": "Image" }
+        ]
+      }
+    }
+  ]
+}

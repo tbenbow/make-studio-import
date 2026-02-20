@@ -1,0 +1,14 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Bio section with side image and rich text content",
+  "fields": [
+    { "type": "image", "name": "Image" },
+    { "type": "text", "name": "Image Alt", "default": "Kylee in her element" },
+    {
+      "type": "wysiwyg",
+      "name": "Bio",
+      "default": "<p>Hey, I\u2019m Kylee and I write for my fellow seekers, searchers, and skeptics about everyday life through the lens of God\u2019s faithfulness. My style is infused with candid, humorous, and relatable storytelling that invites readers to explore their own life experiences with a fresh perspective.</p><p>Raised as a ministry kid in a midwest megachurch in the nineties, I had to lose my religion to find my way to Jesus. Following the teachings of this guy (deity) who loved beyond labels, included people on the margins, and invited everyone into a new way of being on the basis of belief sparked a newfound faith in me, and that is the place from which I write.</p><p>Writing to those who have lost the faith, those still keeping the faith, and those who aren\u2019t even sure what faith looks like, my work encourages people not to give up and keep growing.</p><p>My passions include creating experiences in words and visuals that provoke deeper thought, provide meaningful connection, and make change possible. I love rallying women, and helping people find a place to belong. I am also a big fan of alliterative prose, but as a Minnesotan I know to use it in moderation, of course.</p><p>Professionally, I stay busy running a film + photo production company with my husband Christian at Kylee and Christian Creative. I am also the founder of GirlCreative, a group for women from all walks of life to connect, create, + collaborate. I am enthusiastic about entrepreneurship and encouraging all people \u2013 especially women \u2013 to follow their creative dreams.</p><p>I live with my family and our three cats near the lakes in Minneapolis, MN, where my teenage daughter Lola is still not embarrassed to be seen with me in public (A GRACE). When I\u2019m not writing you can find me reading, walking, watching movies, or tending to my plants.</p><p>Writing helps me process the world, and I can usually write my way through anything \u2014 right now I\u2019m working on a memoir!</p>"
+    }
+  ]
+}

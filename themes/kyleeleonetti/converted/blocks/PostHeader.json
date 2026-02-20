@@ -1,0 +1,11 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Blog post header with title, category, author, and date",
+  "fields": [
+    { "type": "text", "name": "Title", "default": "Post Title" },
+    { "type": "text", "name": "Category", "default": "" },
+    { "type": "text", "name": "Author", "default": "Kylee Leonetti" },
+    { "type": "text", "name": "Date", "default": "" }
+  ]
+}

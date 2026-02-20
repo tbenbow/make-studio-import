@@ -18,6 +18,7 @@ Accumulated insights from site conversions. Read this before starting a new conv
 - **Start with theme.json and Button** — Get the design foundation right first.
 - **Nuxt sites use custom Tailwind color names** — Look for CSS variable definitions like `--color-coal: #0a0a0a`.
 - **Animation classes must be stripped entirely** — Replace with Alpine.js `x-intersect` patterns.
+- **Server normalizes templates on save** — Strips `x-intersect` attributes, converts `/>` to `>`, removes `target="_blank"`. After first sync, pull to get the canonical version or you'll have phantom diffs on every subsequent sync.
 - **Cheerio encodes HTML entities** — `{{> Button}}` becomes `{{&gt; Button}}`. Need post-processing to decode.
 - **Saturation heuristic for color mapping** — If the most-used bg is highly saturated, it's probably `brand`, not `base`.
 
@@ -49,6 +50,24 @@ Accumulated insights from site conversions. Read this before starting a new conv
 - **Button system is declarative** — Styling defined in `theme.json` under `buttons`, not inline Tailwind.
 - **Include `buttons` in theme.json** — The key gets wiped by theme sync if missing locally.
 - **Tailwind arbitrary variants for parent-child alternation** — `[&:nth-child(even)>[data-child]]`.
+
+---
+
+## Kylee Leonetti — New Site Build (2026-02-20)
+
+**URL**: https://kyleeleonetti.com/
+**Framework**: WordPress
+**Theme**: Light warm (base=#FDFBF7, brand=#2D5A47 deep sage)
+**Fonts**: DM Serif Display (headings) + DM Sans (body)
+**Approach**: "Modern evolution" — redesign, not pixel-perfect conversion
+
+### Key Lessons
+
+- **setup-pages was broken in 3 ways** — `createPage` doesn't accept blocks (use `updatePage` after), block refs need `{ id, blockId, name }` not `{ blockId }`, and `layoutId` goes in `settings`.
+- **All 4 button variants required** — Server hardcodes `['primary', 'secondary', 'outline', 'ghost']`. Missing `outline` crashed the preview build.
+- **Pull after first sync** — Server normalizes templates (strips `x-intersect`, `/>` → `>`). Pull to avoid permanent phantom diffs.
+- **Clean up seed site content** — New sites come with ~25 template pages and default blocks. Delete stale pages/layouts before preview or the build crashes on missing block refs.
+- **No Handlebars math helpers** — `{{multiply @index 100}}` doesn't exist. Use per-item `x-intersect` or CSS `nth-child` delays.
 
 ---
 

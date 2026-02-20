@@ -1,0 +1,42 @@
+{
+  "layouts": [
+    {
+      "name": "Default",
+      "headerBlocks": ["Navbar"],
+      "footerBlocks": ["Footer"],
+      "isDefault": true
+    }
+  ],
+  "pages": [
+    {
+      "name": "Home",
+      "slug": "",
+      "layout": "Default",
+      "blocks": ["Hero", "RecentPosts"]
+    },
+    {
+      "name": "About",
+      "slug": "about",
+      "layout": "Default",
+      "blocks": ["PageHeader", "AboutContent"]
+    },
+    {
+      "name": "Favorites",
+      "slug": "favorites",
+      "layout": "Default",
+      "blocks": ["PageHeader", "FavoritesList"]
+    },
+    {
+      "name": "Contact",
+      "slug": "contact",
+      "layout": "Default",
+      "blocks": ["PageHeader", "ContactInfo"]
+    },
+    {
+      "name": "Writing",
+      "slug": "writing",
+      "layout": "Default",
+      "blocks": ["PageHeader", "PostList"]
+    }
+  ]
+}

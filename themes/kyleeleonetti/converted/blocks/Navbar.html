@@ -1,0 +1,43 @@
+<header x-data="{ mobileOpen: false }">
+  <div class="sticky top-0 z-10 bg-base border-b border-border/50">
+    <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
+      <div class="flex items-center justify-between py-4">
+        <a href="/" class="heading-md text-fg hover:text-brand transition">
+          {{site-name}}
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          {{#each nav-links}}
+            <a href="{{url}}" class="body-sm font-medium text-fg-muted hover:text-brand transition">
+              {{label}}
+            </a>
+          {{/each}}
+          {{#if cta-label}}
+            {{> Button link=cta-link label=cta-label style="primary" size="sm"}}
+          {{/if}}
+        </nav>
+
+        <button @click="mobileOpen = !mobileOpen" class="lg:hidden text-fg" aria-label="Menu">
+          <span x-show="!mobileOpen">{{icon "list" size="28"}}</span>
+          <span x-show="mobileOpen" x-cloak="">{{icon "x" size="28"}}</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div x-show="mobileOpen" x-cloak="" class="lg:hidden border-t border-border bg-base">
+      <div class="mx-auto w-full max-w-7xl px-6 py-6 flex flex-col gap-4">
+        {{#each nav-links}}
+          <a href="{{url}}" class="body-md text-fg hover:text-brand transition">
+            {{label}}
+          </a>
+        {{/each}}
+        {{#if cta-label}}
+          <div class="pt-2">
+            {{> Button link=cta-link label=cta-label style="primary"}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</header>

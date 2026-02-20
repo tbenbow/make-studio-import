@@ -1,0 +1,65 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Grid of favorite items with im",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "title": "The Ragamuffin Gospel",
+          "description": "Good News for the Bedraggled, Beat-Up, and Burnt Out by Brennan Manning. Just what my soul needed in these anxious times.",
+          "category": "To Read",
+          "image": "",
+          "link": "#"
+        },
+        {
+          "title": "Between Two Kingdoms",
+          "description": "By Suleika Jaouad. A story about major life interruptions — what happens when the life you want to return to no longer exists?",
+          "category": "To Read",
+          "image": "",
+          "link": "#"
+        },
+        {
+          "title": "I’m Still Here",
+          "description": "By Austin Channing Brown. A spiritual memoir about black dignity in a world made for whiteness. Everyone should read this book.",
+          "category": "To Read",
+          "image": "",
+          "link": "#"
+        },
+        {
+          "title": "ONYX Candles",
+          "description": "Hand-poured soy wax candles that make anyone feel (and smell) like a rich lady! Women-owned small biz with a recycling program.",
+          "category": "To Try",
+          "image": "",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Category"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

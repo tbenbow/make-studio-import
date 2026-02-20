@@ -1,0 +1,47 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Split hero with photo left and",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Kylee Leonetti"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle",
+      "default": "Welcome To My Online Writing Sanctuary"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Have a seat right here next to me, on the chair if the floor is bad for your knees. Let’s talk about everything, plans, ideas and dreams, firm-to-shaky faiths and hard realities; this is the stuff that makes us human, after all. I’ve chewed my cuticles down thinking about my own doubts, so you know yours are safe here with me! Let’s go deep. I’m so glad you’re here."
+    },
+    {
+      "type": "text",
+      "name": "Primary CTA Label",
+      "default": "About Me"
+    },
+    {
+      "type": "text",
+      "name": "Primary CTA Link",
+      "default": "/about.html"
+    },
+    {
+      "type": "text",
+      "name": "Secondary CTA Label",
+      "default": "Explore My Writing"
+    },
+    {
+      "type": "text",
+      "name": "Secondary CTA Link",
+      "default": "/writing"
+    }
+  ],
+  "thumbnailType": "hero"
+}

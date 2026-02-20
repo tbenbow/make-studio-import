@@ -1,0 +1,9 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Centered page title with optional subtitle",
+  "fields": [
+    { "type": "text", "name": "Title", "default": "Page Title" },
+    { "type": "textarea", "name": "Subtitle", "default": "" }
+  ]
+}

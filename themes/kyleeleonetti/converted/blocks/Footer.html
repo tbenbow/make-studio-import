@@ -1,0 +1,44 @@
+<footer class="bg-base-alt py-16">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+      <!-- Brand -->
+      <div>
+        <p class="heading-md text-on-brand mb-4">{{site-name}}</p>
+        <p class="body-sm text-on-brand/70">{{tagline}}</p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <p class="body-sm font-bold text-on-brand/50 uppercase tracking-wider mb-4">Pages</p>
+        <div class="flex flex-col gap-2">
+          {{#each links}}
+            <a href="{{url}}" class="body-sm text-on-brand/70 hover:text-on-brand transition">
+              {{label}}
+            </a>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <p class="body-sm font-bold text-on-brand/50 uppercase tracking-wider mb-4">Connect</p>
+        {{#if email}}
+          <a href="mailto:{{email}}" class="body-sm text-on-brand/70 hover:text-on-brand transition block mb-4">{{email}}</a>
+        {{/if}}
+        {{#if (length social-links)}}
+          <div class="flex items-center gap-4">
+            {{#each social-links}}
+              <a href="{{url}}" class="text-on-brand/70 hover:text-on-brand transition" aria-label="{{label}}" rel="noopener">
+                {{icon icon size="22"}}
+              </a>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="border-t border-on-brand/20 pt-8">
+      <p class="body-sm text-on-brand/50 text-center">{{copyright}}</p>
+    </div>
+  </div>
+</footer>

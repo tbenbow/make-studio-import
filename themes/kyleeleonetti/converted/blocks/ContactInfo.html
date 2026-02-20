@@ -1,0 +1,51 @@
+<section class="pb-20 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Contact details -->
+      <div class="bg-panel rounded-xl p-8">
+        {{#if address}}
+          <div class="mb-6">
+            <p class="body-sm font-semibold text-fg-alt uppercase tracking-wider mb-2">Address</p>
+            <p class="body-md text-fg">{{address}}</p>
+          </div>
+        {{/if}}
+        {{#if email}}
+          <div class="mb-6">
+            <p class="body-sm font-semibold text-fg-alt uppercase tracking-wider mb-2">Email</p>
+            <a href="mailto:{{email}}" class="body-md text-brand hover:text-accent transition">{{email}}</a>
+          </div>
+        {{/if}}
+        {{#if cta-label}}
+          <div class="mt-8">
+            {{> Button link=cta-link label=cta-label style="primary"}}
+          </div>
+        {{/if}}
+      </div>
+
+      <!-- Speaking / appearances -->
+      <div>
+        <h2 class="heading-md text-fg mb-4">{{speaking-heading}}</h2>
+        <div class="prose">
+          {{{speaking-description}}}
+        </div>
+        {{#if (length appearances)}}
+          <div class="mt-8 flex flex-col gap-6">
+            {{#each appearances}}
+              <div class="flex items-center gap-4 bg-panel rounded-xl p-4">
+                {{#if image}}
+                  <img src="{{image}}" alt="{{title}}" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+                {{/if}}
+                <div>
+                  <p class="heading-xs text-fg">{{title}}</p>
+                  {{#if subtitle}}
+                    <p class="body-sm text-fg-muted">{{subtitle}}</p>
+                  {{/if}}
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="py-20 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Photo -->
+      <div x-data="{ show: false }" :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" class="transition-all duration-700 ease-out">
+        {{#if image}}
+          <div class="rounded-2xl overflow-hidden">
+            <img src="{{image}}" alt="{{name}}" class="w-full h-auto object-cover aspect-[4/3]">
+          </div>
+        {{/if}}
+      </div>
+
+      <!-- Content -->
+      <div x-data="{ show: false }" :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" class="transition-all duration-700 ease-out delay-150">
+        <h1 class="heading-xl text-fg mb-4">{{name}}</h1>
+        <p class="heading-md text-brand mb-6">{{subtitle}}</p>
+        <p class="body-lg text-fg-muted mb-8">{{description}}</p>
+        <div class="flex flex-wrap gap-4">
+          {{#if primary-cta-label}}
+            {{> Button link=primary-cta-link label=primary-cta-label style="primary"}}
+          {{/if}}
+          {{#if secondary-cta-label}}
+            {{> Button link=secondary-cta-link label=secondary-cta-label style="secondary"}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Blog post listing with title,",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Posts",
+      "default": [
+        {
+          "title": "What the Minneapolis Teacher’s Strike Taught Me About Living in Uncertainty",
+          "category": "Faith, Home Life",
+          "excerpt": "It happened last month while I sat surrounded by baskets of unfolded laundry as a warm spring rain poured outside my windows…",
+          "date": "April 16, 2022",
+          "url": "#"
+        },
+        {
+          "title": "Pray for Discernment.",
+          "category": "Faith, Home Life",
+          "excerpt": "True to my hibernation inclination, I read four books in January and hardly wrote a word. This month I’ve been back to…",
+          "date": "February 16, 2022",
+          "url": "#"
+        },
+        {
+          "title": "Write in erasable ink.",
+          "category": "",
+          "excerpt": "It’s a new year, but I haven’t felt very ceremonious about it (anyone else?). I’m the same me…and honestly, I’ve been pretty…",
+          "date": "January 13, 2022",
+          "url": "#"
+        },
+        {
+          "title": "Life is speaking.",
+          "category": "",
+          "excerpt": "I’ve been trying to write for days and life has kept getting in the way, whether it’s been work or Christmas errands…",
+          "date": "December 24, 2021",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Category"
+          },
+          {
+            "type": "textarea",
+            "name": "Excerpt"
+          },
+          {
+            "type": "text",
+            "name": "Date"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

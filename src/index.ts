@@ -706,13 +706,13 @@ async function main() {
         for (const layout of manifest.layouts) {
           const existing = layoutsByName.get(layout.name)
           const headerBlocks = (layout.headerBlocks || [])
-            .map(name => blocksByName.get(name)?._id)
+            .map(name => blocksByName.get(name))
             .filter(Boolean)
-            .map(id => ({ blockId: id }))
+            .map(b => ({ id: b!._id, blockId: b!._id, name: b!.name }))
           const footerBlocks = (layout.footerBlocks || [])
-            .map(name => blocksByName.get(name)?._id)
+            .map(name => blocksByName.get(name))
             .filter(Boolean)
-            .map(id => ({ blockId: id }))
+            .map(b => ({ id: b!._id, blockId: b!._id, name: b!.name }))
 
           if (existing) {
             console.log(`  Updating layout: ${layout.name}`)
@@ -744,17 +744,17 @@ async function main() {
           const existing = pagesByName.get(page.name)
           const layoutId = page.layout ? layoutsByName.get(page.layout)?._id : undefined
           const blocks = (page.blocks || [])
-            .map(name => blocksByName.get(name)?._id)
+            .map(name => blocksByName.get(name))
             .filter(Boolean)
-            .map(id => ({ blockId: id }))
+            .map(b => ({ id: b!._id, blockId: b!._id, name: b!.name }))
 
           const settings: Record<string, unknown> = {}
           if (page.slug) settings.slug = page.slug
+          if (layoutId) settings.layoutId = layoutId
 
           if (existing) {
             console.log(`  Updating page: ${page.name}`)
             const patch: Record<string, unknown> = { blocks }
-            if (layoutId) patch.layoutId = layoutId
             if (Object.keys(settings).length > 0) patch.settings = { ...existing.settings, ...settings }
             await client.updatePage(existing._id, patch)
             pagesUpdated++
@@ -763,11 +763,13 @@ async function main() {
             const createData: Record<string, unknown> = {
               name: page.name,
               site_id: siteId,
-              blocks
+              settings: Object.keys(settings).length > 0 ? settings : undefined
             }
-            if (layoutId) createData.layoutId = layoutId
-            if (Object.keys(settings).length > 0) createData.settings = settings
-            await client.createPage(createData as any)
+            const created = await client.createPage(createData as any)
+            // blocks must be added via update (not supported on create)
+            if (blocks.length > 0) {
+              await client.updatePage(created._id, { blocks })
+            }
             pagesCreated++
           }
         }

@@ -1,0 +1,22 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Blog post body with rich text",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Start writing your post here...</p>"
+    },
+    {
+      "type": "text",
+      "name": "Back Label",
+      "default": "← Back to Writing"
+    },
+    {
+      "type": "text",
+      "name": "Back Link",
+      "default": "/writing"
+    }
+  ]
+}

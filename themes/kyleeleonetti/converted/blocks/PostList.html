@@ -1,0 +1,24 @@
+<section class="pb-20 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
+    <div class="flex flex-col gap-6">
+      {{#each posts}}
+        <a href="{{url}}" class="group block bg-panel rounded-xl p-6 md:p-8 hover:shadow-md transition-all duration-300">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-8">
+            <div class="flex-1">
+              {{#if category}}
+                <p class="body-sm font-semibold text-accent mb-2">{{category}}</p>
+              {{/if}}
+              <h2 class="heading-sm text-fg mb-2 group-hover:text-brand transition-colors">{{title}}</h2>
+              {{#if excerpt}}
+                <p class="body-md text-fg-muted line-clamp-2">{{excerpt}}</p>
+              {{/if}}
+            </div>
+            {{#if date}}
+              <p class="body-sm text-fg-alt whitespace-nowrap mt-1">{{date}}</p>
+            {{/if}}
+          </div>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</section>
