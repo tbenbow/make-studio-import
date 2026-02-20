@@ -6,3 +6,6 @@ backup-*/
 
 # Snapshots are runtime state, not source
 themes/*/snapshots/
+
+# Sync state is local (tracks last sync timestamp per theme)
+themes/*/.sync-state.json

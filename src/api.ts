@@ -41,6 +41,60 @@ export interface ApiSite {
   layouts: Array<{ _id: string; name: string }>
 }
 
+export interface ApiLayout {
+  _id: string
+  name: string
+  site_id?: string
+  description?: string
+  headerBlocks?: unknown[]
+  footerBlocks?: unknown[]
+  settings?: Record<string, unknown>
+  isDefault?: boolean
+  createdAt?: string
+  updatedAt?: string
+}
+
+export interface ApiPostType {
+  _id: string
+  name: string
+  site_id?: string
+  detailPageId?: string
+  indexPageId?: string
+  postIds?: string[]
+  createdAt?: string
+  updatedAt?: string
+}
+
+export interface ApiActivityLogEntry {
+  _id: string
+  siteId: string
+  action: string
+  entityType: string
+  entityId?: string
+  entityName?: string
+  createdAt: string
+}
+
+export interface ApiSnapshot {
+  _id: string
+  siteId: string
+  label: string
+  createdBy?: { userId: string; name: string }
+  sizeBytes?: number
+  createdAt: string
+}
+
+export interface ApiDeploymentRequest {
+  _id: string
+  siteId: string
+  title: string
+  description?: string
+  status: string
+  selectedPageIds?: string[]
+  createdAt?: string
+  updatedAt?: string
+}
+
 export class ApiError extends Error {
   constructor(
     public status: number,
@@ -159,5 +213,155 @@ export class MakeStudioClient {
 
   async deletePartial(id: string): Promise<{ message: string }> {
     return this.request('DELETE', `/partials/${id}`)
+  }
+
+  // ─── Pages ───
+
+  async getPages(siteId: string): Promise<any[]> {
+    return this.request('GET', `/pages?site_id=${siteId}`)
+  }
+
+  async getPage(id: string): Promise<any> {
+    return this.request('GET', `/pages/${id}`)
+  }
+
+  async createPage(data: {
+    name: string
+    site_id: string
+    settings?: Record<string, unknown>
+    parentId?: string
+    postTypeId?: string
+  }): Promise<any> {
+    return this.request('POST', '/pages', data)
+  }
+
+  async updatePage(id: string, data: Record<string, unknown>): Promise<any> {
+    return this.request('PATCH', `/pages/${id}`, data)
+  }
+
+  async deletePage(id: string): Promise<{ message: string }> {
+    return this.request('DELETE', `/pages/${id}`)
+  }
+
+  // ─── Layouts ───
+
+  async getLayouts(siteId: string): Promise<ApiLayout[]> {
+    return this.request('GET', `/layouts?site_id=${siteId}`)
+  }
+
+  async getLayout(id: string): Promise<ApiLayout> {
+    return this.request('GET', `/layouts/${id}`)
+  }
+
+  async createLayout(data: {
+    name: string
+    site_id: string
+    description?: string
+    headerBlocks?: unknown[]
+    footerBlocks?: unknown[]
+    settings?: Record<string, unknown>
+    isDefault?: boolean
+  }): Promise<ApiLayout> {
+    return this.request('POST', '/layouts', data)
+  }
+
+  async updateLayout(id: string, data: {
+    name?: string
+    description?: string
+    headerBlocks?: unknown[]
+    footerBlocks?: unknown[]
+    settings?: Record<string, unknown>
+    isDefault?: boolean
+  }): Promise<ApiLayout> {
+    return this.request('PATCH', `/layouts/${id}`, data)
+  }
+
+  async deleteLayout(id: string): Promise<void> {
+    await this.request('DELETE', `/layouts/${id}`)
+  }
+
+  // ─── Post Types ───
+
+  async getPostTypes(siteId: string): Promise<ApiPostType[]> {
+    return this.request('GET', `/post-types?site_id=${siteId}`)
+  }
+
+  async createPostType(data: {
+    name: string
+    site_id: string
+  }): Promise<ApiPostType> {
+    return this.request('POST', '/post-types', data)
+  }
+
+  async updatePostType(id: string, data: Record<string, unknown>): Promise<ApiPostType> {
+    return this.request('PATCH', `/post-types/${id}`, data)
+  }
+
+  async deletePostType(id: string): Promise<{ message: string }> {
+    return this.request('DELETE', `/post-types/${id}`)
+  }
+
+  // ─── Activity Log ───
+
+  async getActivityLog(siteId: string, opts?: {
+    limit?: number
+    entityType?: string
+    action?: string
+    since?: string
+  }): Promise<ApiActivityLogEntry[]> {
+    const params = new URLSearchParams({ site_id: siteId })
+    if (opts?.limit) params.set('limit', String(opts.limit))
+    if (opts?.entityType) params.set('entityType', opts.entityType)
+    if (opts?.action) params.set('action', opts.action)
+    if (opts?.since) params.set('since', opts.since)
+    return this.request('GET', `/activity-log?${params}`)
+  }
+
+  // ─── Snapshots (server-side) ───
+
+  async listSnapshots(siteId: string): Promise<ApiSnapshot[]> {
+    return this.request('GET', `/snapshots?site_id=${siteId}`)
+  }
+
+  async createSnapshot(siteId: string, label?: string): Promise<ApiSnapshot> {
+    return this.request('POST', '/snapshots', { siteId, label })
+  }
+
+  async restoreSnapshot(id: string): Promise<{ success: boolean; message: string }> {
+    return this.request('POST', `/snapshots/${id}/restore`)
+  }
+
+  // ─── Deployment ───
+
+  async deployPreview(siteId: string): Promise<{ success: boolean; message: string; previewUrl: string }> {
+    return this.request('POST', `/static-site/preview/${siteId}`)
+  }
+
+  async getPreviewStatus(siteId: string): Promise<{
+    success: boolean
+    isStale: boolean
+    lastPreviewed: string | null
+    previewUrl: string | null
+  }> {
+    return this.request('GET', `/static-site/preview-status/${siteId}`)
+  }
+
+  // ─── Deployment Requests ───
+
+  async detectChanges(siteId: string): Promise<unknown> {
+    return this.request('GET', `/deployment-requests/changes/${siteId}`)
+  }
+
+  async createDeploymentRequest(data: {
+    siteId: string
+    title: string
+    description?: string
+    selectedPageIds?: string[]
+  }): Promise<ApiDeploymentRequest> {
+    return this.request('POST', '/deployment-requests', data)
+  }
+
+  async listDeploymentRequests(siteId: string): Promise<ApiDeploymentRequest[]> {
+    return this.request('GET', `/deployment-requests?site_id=${siteId}`)
   }
 }

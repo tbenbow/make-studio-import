@@ -1,31 +1,25 @@
 {
   "name": "make-studio-importer",
   "version": "1.0.0",
-  "description": "AI-powered theme conversion and import tool for Make Studio",
+  "description": "Agent workspace for building and managing Make Studio sites",
   "type": "module",
   "scripts": {
     "sync": "tsx src/index.ts sync",
     "pull": "tsx src/index.ts pull",
     "rollback": "tsx src/index.ts rollback",
     "validate": "tsx src/index.ts validate",
-    "import-db": "tsx src/index.ts import-db",
-    "import": "tsx src/index.ts import",
-    "export": "tsx src/index.ts export",
-    "copy-theme": "tsx src/index.ts copy-theme",
-    "update-block": "tsx src/index.ts update-block",
     "status": "tsx src/index.ts status",
     "generate-catalog": "tsx src/index.ts generate-catalog",
     "validate-page": "tsx src/index.ts validate-page",
-    "import-page": "tsx src/index.ts import-page",
-    "clone-site": "tsx src/index.ts clone-site",
-    "push-site": "tsx src/index.ts push-site",
+    "create-site": "tsx src/index.ts create-site",
     "scrape-site": "tsx src/index.ts scrape-site"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.993.0",
     "cheerio": "^1.2.0",
     "dotenv": "^16.3.1",
-    "mongoose": "^8.0.0",
     "playwright": "^1.58.2",
+    "sharp": "^0.34.5",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

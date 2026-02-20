@@ -6,15 +6,8 @@ import { randomUUID } from 'crypto'
 import readline from 'readline'
 import dotenv from 'dotenv'
 import { validate } from './validate.js'
-import { importTheme } from './import.js'
-import { exportSite } from './export.js'
-import { copyTheme } from './copy-theme.js'
-import { updateBlock } from './update-block.js'
 import { generateCatalog, writeCatalog } from './catalog.js'
 import { validatePage } from './validate-page.js'
-import { importPage } from './import-page.js'
-import { cloneSite } from './clone-site.js'
-import { pushSite } from './push-site.js'
 import { scrapeSite } from './scrape-site.js'
 import { MakeStudioClient } from './api.js'
 import { computeChangeset, type LocalBlock, type LocalPartial } from './diff.js'
@@ -62,15 +55,6 @@ function confirm(message: string): Promise<boolean> {
 
 function output(data: unknown) {
   console.log(JSON.stringify(data, null, 2))
-}
-
-function requireMongoUri(): string {
-  const mongoUri = process.env.MONGODB_URI
-  if (!mongoUri) {
-    output({ error: 'MONGODB_URI environment variable is required' })
-    process.exit(1)
-  }
-  return mongoUri
 }
 
 function requireApiConfig(): { baseUrl: string; token: string; siteId: string } {
@@ -300,36 +284,23 @@ async function main() {
         sync: 'Sync theme to Make Studio via API (dry run by default)',
         pull: 'Pull remote state into local theme files',
         validate: 'Validate converted files',
-        'import-db': 'Import to Make Studio database (legacy, direct MongoDB)',
-        export: 'Export from Make Studio database',
-        'copy-theme': 'Copy theme between sites',
-        'update-block': 'Update a single block template',
         status: 'Show theme status',
         'generate-catalog': 'Generate block catalog from theme',
         'validate-page': 'Validate page JSON against catalog',
-        'import-page': 'Import page JSON to Make Studio',
-        'clone-site': 'Clone a site with all blocks, partials, and pages',
-        'push-site': 'Push a site from one database to another',
         'create-site': 'Create a new Make Studio site and save credentials to .env',
         'scrape-site': 'Scrape a live website and generate make-studio theme files',
         rollback: 'Rollback to a previous snapshot'
       },
       options: {
-        '--theme': 'Theme name (required for sync/pull/validate/import-db/export/status)',
+        '--theme': 'Theme name (required for sync/pull/validate/status)',
         '--site': 'Site ID (overrides MAKE_STUDIO_SITE env var)',
         '--apply': 'Apply changes (sync only — default is dry run)',
+        '--force': 'Skip pull-before-push safety check (sync only)',
         '--delete': 'Delete remote-only blocks/partials (with --apply)',
         '--only': 'Comma-separated list of block/partial names to sync or pull (use "theme" for theme)',
-        '--page': 'Page name (required for validate-page/import-page)',
-        '--replace': 'Replace existing blocks/partials on import-db',
-        '--from': 'Source site ID (for copy-theme/clone-site)',
-        '--to': 'Target site ID (for copy-theme)',
-        '--name': 'New site name (for clone-site)',
+        '--page': 'Page name (required for validate-page)',
+        '--name': 'New site name (for create-site)',
         '--url': 'URL to scrape (for scrape-site)',
-        '--target-uri': 'Target MongoDB URI (for push-site)',
-        '--owner': 'Clerk user ID for new site owner (for push-site)',
-        '--id': 'Block ID (for update-block)',
-        '--template': 'Template file path (for update-block)',
         '--snapshot': 'Snapshot filename (for rollback)'
       }
     })
@@ -359,7 +330,9 @@ async function main() {
 
       const applyChanges = args.apply === 'true'
       const deleteRemoteOnly = args.delete === 'true'
+      const forceSync = args.force === 'true'
       const onlyFilter = args.only ? args.only.split(',').map(s => s.trim()) : null
+      const syncStatePath = path.join(themePath, '.sync-state.json')
 
       // 1. Fetch remote state
       console.log(`Fetching remote state for site ${siteId}...`)
@@ -437,6 +410,32 @@ async function main() {
       if (!confirmed) {
         console.log('Aborted.')
         process.exit(0)
+      }
+
+      // 5b. Pull-before-push safety check
+      if (!forceSync) {
+        let syncState: { lastSync?: string; tokenId?: string } = {}
+        if (fs.existsSync(syncStatePath)) {
+          try { syncState = JSON.parse(fs.readFileSync(syncStatePath, 'utf-8')) } catch {}
+        }
+        if (syncState.lastSync) {
+          try {
+            const recentActivity = await client.getActivityLog(siteId, { since: syncState.lastSync, limit: 10 })
+            if (recentActivity.length > 0) {
+              console.log(`\nWarning: ${recentActivity.length} remote change(s) since last sync (${syncState.lastSync}):`)
+              for (const entry of recentActivity.slice(0, 5)) {
+                console.log(`  ${entry.action} ${entry.entityType} "${entry.entityName || entry.entityId}" at ${entry.createdAt}`)
+              }
+              if (recentActivity.length > 5) {
+                console.log(`  ... and ${recentActivity.length - 5} more`)
+              }
+              console.log('\nRun `npm run pull` first, or use --force to override.')
+              process.exit(1)
+            }
+          } catch {
+            // Activity log endpoint may not be available — skip check
+          }
+        }
       }
 
       // 6. Re-fetch fresh remote state right before applying
@@ -552,6 +551,12 @@ async function main() {
           await client.deletePartial(change.remoteId!)
         }
       }
+
+      // Update sync state
+      fs.writeFileSync(syncStatePath, JSON.stringify({
+        lastSync: new Date().toISOString(),
+        tokenId: apiConfig.token.slice(0, 8)
+      }, null, 2) + '\n')
 
       console.log('\nSync complete.')
       process.exit(0)
@@ -689,6 +694,13 @@ async function main() {
         themeUpdated = true
       }
 
+      // Update sync state — pulling acknowledges remote state
+      const pullSyncStatePath = path.join(themePath, '.sync-state.json')
+      fs.writeFileSync(pullSyncStatePath, JSON.stringify({
+        lastSync: new Date().toISOString(),
+        tokenId: apiConfig.token.slice(0, 8)
+      }, null, 2) + '\n')
+
       console.log(`\nPulled ${blockCount} blocks, ${partialCount} partials${themeUpdated ? ', theme' : ''}.`)
       process.exit(0)
       break
@@ -708,106 +720,6 @@ async function main() {
       const result = validate(themePath)
       output(result)
       process.exit(result.valid ? 0 : 1)
-      break
-    }
-
-    case 'import':
-    case 'import-db': {
-      const themeName = args.theme
-      if (!themeName) {
-        output({ error: '--theme is required' })
-        process.exit(1)
-      }
-      const themePath = getThemePath(themeName)
-      if (!fs.existsSync(themePath)) {
-        output({ error: `Theme '${themeName}' not found at ${themePath}` })
-        process.exit(1)
-      }
-
-      const siteId = args.site
-      if (!siteId) {
-        output({ error: '--site is required for import-db' })
-        process.exit(1)
-      }
-
-      const mongoUri = requireMongoUri()
-
-      // Validate first
-      const validation = validate(themePath)
-      if (!validation.valid) {
-        output({ error: 'Validation failed', validation })
-        process.exit(1)
-      }
-
-      if (command === 'import') {
-        console.log('Note: "import" is now "import-db". Use "sync" for API-based sync.')
-      }
-
-      const replace = args.replace === 'true'
-      const result = await importTheme(themePath, siteId, mongoUri, { replace })
-      output(result)
-      process.exit(result.success ? 0 : 1)
-      break
-    }
-
-    case 'export': {
-      const themeName = args.theme
-      if (!themeName) {
-        output({ error: '--theme is required' })
-        process.exit(1)
-      }
-      const themePath = getThemePath(themeName)
-      if (!fs.existsSync(themePath)) {
-        // Create theme directory if it doesn't exist
-        fs.mkdirSync(themePath, { recursive: true })
-      }
-
-      const siteId = args.site
-      if (!siteId) {
-        output({ error: '--site is required for export' })
-        process.exit(1)
-      }
-
-      const mongoUri = requireMongoUri()
-      const result = await exportSite(siteId, themePath, mongoUri)
-      output(result)
-      process.exit(result.success ? 0 : 1)
-      break
-    }
-
-    case 'copy-theme': {
-      const fromId = args.from
-      const toId = args.to
-      if (!fromId || !toId) {
-        output({ error: '--from and --to are required for copy-theme' })
-        process.exit(1)
-      }
-
-      const mongoUri = requireMongoUri()
-      const result = await copyTheme(fromId, toId, mongoUri)
-      output(result)
-      process.exit(result.success ? 0 : 1)
-      break
-    }
-
-    case 'update-block': {
-      const blockId = args.id
-      const templatePath = args.template
-      if (!blockId || !templatePath) {
-        output({ error: '--id and --template are required for update-block' })
-        process.exit(1)
-      }
-
-      const resolvedPath = path.resolve(templatePath)
-      if (!fs.existsSync(resolvedPath)) {
-        output({ error: `Template file not found: ${resolvedPath}` })
-        process.exit(1)
-      }
-
-      const mongoUri = requireMongoUri()
-      const result = await updateBlock(blockId, resolvedPath, mongoUri)
-      output(result)
-      process.exit(result.success ? 0 : 1)
       break
     }
 
@@ -891,68 +803,6 @@ async function main() {
       const result = validatePage(sitePath, pageName, getThemesDir())
       output(result)
       process.exit(result.valid ? 0 : 1)
-      break
-    }
-
-    case 'import-page': {
-      const siteName = args.site
-      const pageName = args.page
-      if (!siteName || !pageName) {
-        output({ error: '--site and --page are required' })
-        process.exit(1)
-      }
-
-      const sitePath = getSitePath(siteName)
-      if (!fs.existsSync(sitePath)) {
-        output({ error: `Site '${siteName}' not found at ${sitePath}` })
-        process.exit(1)
-      }
-
-      const mongoUri = requireMongoUri()
-      const result = await importPage(sitePath, pageName, mongoUri)
-      output(result)
-      process.exit(result.success ? 0 : 1)
-      break
-    }
-
-    case 'clone-site': {
-      const fromId = args.from
-      const newName = args.name
-      if (!fromId) {
-        output({ error: '--from is required (source site ID)' })
-        process.exit(1)
-      }
-      if (!newName) {
-        output({ error: '--name is required (name for new site)' })
-        process.exit(1)
-      }
-
-      const mongoUri = requireMongoUri()
-      const result = await cloneSite(fromId, newName, mongoUri)
-      output(result)
-      process.exit(result.success ? 0 : 1)
-      break
-    }
-
-    case 'push-site': {
-      const fromId = args.from
-      if (!fromId) {
-        output({ error: '--from is required (source site ID)' })
-        process.exit(1)
-      }
-
-      const targetUri = args['target-uri'] || process.env.TARGET_MONGODB_URI
-      if (!targetUri) {
-        output({ error: '--target-uri or TARGET_MONGODB_URI env var is required' })
-        process.exit(1)
-      }
-
-      const sourceUri = requireMongoUri()
-      const result = await pushSite(fromId, sourceUri, targetUri, {
-        owner: args.owner,
-      })
-      output(result)
-      process.exit(result.success ? 0 : 1)
       break
     }
 
