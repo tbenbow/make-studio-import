@@ -21,8 +21,13 @@ Accumulated insights about page management.
 - **Page/layout block refs need full objects** — Send `{ id, blockId, name }`, not just `{ blockId }`. The API validates that `id` and `name` are present.
 - **`layoutId` goes inside `settings`** — Not at the top level of the page object. Use `settings: { layoutId: '...' }`.
 
+## Cross-Environment Copy
+
+- **Match pages by composite key, not just name** — Multiple pages can share the same name (e.g., "Index" for both the main site and a post type index page). Use `postTypeId + name` or `parentId + name` as the lookup key when matching source pages to existing target pages.
+
 ## Seed Site Issues
 
+- **Use the Index page, don't create a "Home" page** — New sites come with an "Index" page that serves as the homepage. Instead of creating a separate "Home" page and deleting Index, update the existing Index page with your blocks and content. In `pages.json`, use `"name": "Index"` (not "Home") so `setup-pages` finds and updates it.
 - **Seed site page references break after sync** — Default Index page references seed blocks by ID. After sync deletes those and creates custom ones, the page shows "Block template not found". Must update the page with new block IDs.
 - **New sites come with template cruft** — Default blocks, pages, layouts, and post types from the seed template must be cleaned up. Delete stale pages/layouts before deploying preview, or the build will crash on missing block references.
 
