@@ -36,7 +36,15 @@
       "name": "Writing",
       "slug": "writing",
       "layout": "Default",
-      "blocks": ["PageHeader", "PostList"]
+      "blocks": ["PageHeader", "PostList"],
+      "note": "Blog index with search and category filtering"
+    }
+  ],
+  "postTypes": [
+    {
+      "name": "Writing",
+      "indexBlocks": ["PageHeader", "PostList"],
+      "detailBlocks": ["PostHeader", "PostBody"]
     }
   ]
 }

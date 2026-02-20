@@ -1,9 +1,9 @@
 <section class="pt-20 pb-8 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-3xl lg:px-10">
     {{#if category}}
-      <p class="body-sm font-semibold text-accent mb-4">{{category}}</p>
+      <p class="heading-xs text-accent uppercase tracking-wider mb-4">{{category}}</p>
     {{/if}}
-    <h1 class="heading-xl text-fg mb-4">{{title}}</h1>
+    <h1 class="heading-xl text-fg mb-6">{{title}}</h1>
     <div class="flex items-center gap-4 text-fg-alt">
       {{#if author}}
         <span class="body-sm">By {{author}}</span>
@@ -12,5 +12,6 @@
         <span class="body-sm">{{date}}</span>
       {{/if}}
     </div>
+    <div class="w-16 h-0.5 bg-accent mt-8"></div>
   </div>
 </section>

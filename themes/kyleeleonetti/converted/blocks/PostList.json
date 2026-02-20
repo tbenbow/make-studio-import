@@ -1,63 +1,53 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Blog post listing with title,",
+  "description": "Blog index with search bar and category filter pills, grid layout",
   "fields": [
     {
       "type": "items",
       "name": "Posts",
       "default": [
         {
-          "title": "What the Minneapolis Teacher’s Strike Taught Me About Living in Uncertainty",
-          "category": "Faith, Home Life",
-          "excerpt": "It happened last month while I sat surrounded by baskets of unfolded laundry as a warm spring rain poured outside my windows…",
+          "title": "What the Minneapolis Teacher\u2019s Strike Taught Me About Living in Uncertainty",
+          "category": "Faith",
+          "excerpt": "It happened last month while I sat surrounded by baskets of unfolded laundry as a warm spring rain poured outside my windows\u2026",
           "date": "April 16, 2022",
-          "url": "#"
+          "url": "#",
+          "image": ""
         },
         {
           "title": "Pray for Discernment.",
-          "category": "Faith, Home Life",
-          "excerpt": "True to my hibernation inclination, I read four books in January and hardly wrote a word. This month I’ve been back to…",
+          "category": "Faith",
+          "excerpt": "True to my hibernation inclination, I read four books in January and hardly wrote a word. This month I\u2019ve been back to\u2026",
           "date": "February 16, 2022",
-          "url": "#"
+          "url": "#",
+          "image": ""
         },
         {
           "title": "Write in erasable ink.",
-          "category": "",
-          "excerpt": "It’s a new year, but I haven’t felt very ceremonious about it (anyone else?). I’m the same me…and honestly, I’ve been pretty…",
+          "category": "Creativity",
+          "excerpt": "It\u2019s a new year, but I haven\u2019t felt very ceremonious about it (anyone else?). I\u2019m the same me\u2026and honestly, I\u2019ve been pretty\u2026",
           "date": "January 13, 2022",
-          "url": "#"
+          "url": "#",
+          "image": ""
         },
         {
           "title": "Life is speaking.",
-          "category": "",
-          "excerpt": "I’ve been trying to write for days and life has kept getting in the way, whether it’s been work or Christmas errands…",
+          "category": "Home Life",
+          "excerpt": "I\u2019ve been trying to write for days and life has kept getting in the way, whether it\u2019s been work or Christmas errands\u2026",
           "date": "December 24, 2021",
-          "url": "#"
+          "url": "#",
+          "image": ""
         }
       ],
       "config": {
         "fields": [
-          {
-            "type": "text",
-            "name": "Title"
-          },
-          {
-            "type": "text",
-            "name": "Category"
-          },
-          {
-            "type": "textarea",
-            "name": "Excerpt"
-          },
-          {
-            "type": "text",
-            "name": "Date"
-          },
-          {
-            "type": "text",
-            "name": "URL"
-          }
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Category" },
+          { "type": "textarea", "name": "Excerpt" },
+          { "type": "text", "name": "Date" },
+          { "type": "text", "name": "URL" },
+          { "type": "image", "name": "Image" }
         ]
       }
     }

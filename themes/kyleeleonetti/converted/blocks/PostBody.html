@@ -1,11 +1,14 @@
-<section class="pb-20 bg-base">
+<section class="pb-24 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-3xl lg:px-10">
     <div class="prose max-w-none">
       {{{body}}}
     </div>
     {{#if back-link}}
       <div class="mt-12 pt-8 border-t border-border">
-        {{> Button link=back-link label=back-label style="ghost"}}
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-px bg-accent"></div>
+          {{> Button link=back-link label=back-label style="ghost"}}
+        </div>
       </div>
     {{/if}}
   </div>

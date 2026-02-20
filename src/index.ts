@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
+import crypto from 'crypto'
 import { fileURLToPath } from 'url'
 import readline from 'readline'
 import dotenv from 'dotenv'
@@ -708,11 +709,11 @@ async function main() {
           const headerBlocks = (layout.headerBlocks || [])
             .map(name => blocksByName.get(name))
             .filter(Boolean)
-            .map(b => ({ id: b!._id, blockId: b!._id, name: b!.name }))
+            .map(b => ({ id: crypto.randomUUID(), blockId: b!._id, name: b!.name }))
           const footerBlocks = (layout.footerBlocks || [])
             .map(name => blocksByName.get(name))
             .filter(Boolean)
-            .map(b => ({ id: b!._id, blockId: b!._id, name: b!.name }))
+            .map(b => ({ id: crypto.randomUUID(), blockId: b!._id, name: b!.name }))
 
           if (existing) {
             console.log(`  Updating layout: ${layout.name}`)
@@ -746,7 +747,7 @@ async function main() {
           const blocks = (page.blocks || [])
             .map(name => blocksByName.get(name))
             .filter(Boolean)
-            .map(b => ({ id: b!._id, blockId: b!._id, name: b!.name }))
+            .map(b => ({ id: crypto.randomUUID(), blockId: b!._id, name: b!.name }))
 
           const settings: Record<string, unknown> = {}
           if (page.slug) settings.slug = page.slug

@@ -1,17 +1,24 @@
-<section class="pb-20 bg-base">
+<section class="pb-24 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
       <!-- Image column -->
       <div class="lg:col-span-2">
-        {{#if image}}
-          <div class="rounded-2xl overflow-hidden sticky top-24">
-            <img src="{{image}}" alt="{{image-alt}}" class="w-full h-auto object-cover" />
-          </div>
-        {{/if}}
+        <div class="relative sticky top-24">
+          {{#if image}}
+            <div class="overflow-hidden">
+              <img src="{{image}}" alt="{{image-alt}}" class="w-full h-auto object-cover" />
+            </div>
+          {{else}}
+            <div class="w-full aspect-[3/4] bg-base-muted"></div>
+          {{/if}}
+          <!-- Decorative corner -->
+          <div class="absolute -bottom-3 -left-3 w-20 h-20 border-b-2 border-l-2 border-accent/40"></div>
+        </div>
       </div>
 
       <!-- Bio content -->
       <div class="lg:col-span-3">
+        <div class="w-12 h-0.5 bg-accent mb-8"></div>
         <div class="prose max-w-none">
           {{{bio}}}
         </div>

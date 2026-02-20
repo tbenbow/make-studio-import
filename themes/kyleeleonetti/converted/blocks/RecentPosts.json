@@ -1,7 +1,7 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Recent blog posts grid with heading and CTA",
+  "description": "Recent blog posts grid with art deco heading treatment",
   "fields": [
     { "type": "text", "name": "Heading", "default": "From the Blog" },
     { "type": "text", "name": "Subheading", "default": "" },
@@ -14,21 +14,24 @@
           "date": "April 16, 2022",
           "excerpt": "It happened last month while I sat surrounded by baskets of unfolded laundry as a warm spring rain poured outside my windows\u2026",
           "category": "Faith",
-          "url": "#"
+          "url": "#",
+          "image": ""
         },
         {
           "title": "Pray for Discernment.",
           "date": "February 16, 2022",
           "excerpt": "True to my hibernation inclination, I read four books in January and hardly wrote a word. This month I\u2019ve been back to\u2026",
           "category": "Faith",
-          "url": "#"
+          "url": "#",
+          "image": ""
         },
         {
           "title": "Write in erasable ink.",
           "date": "January 13, 2022",
           "excerpt": "It\u2019s a new year, but I haven\u2019t felt very ceremonious about it (anyone else?). I\u2019m the same me\u2026and honestly, I\u2019ve been pretty\u2026",
           "category": "",
-          "url": "#"
+          "url": "#",
+          "image": ""
         }
       ],
       "config": {
@@ -37,7 +40,8 @@
           { "type": "text", "name": "Date" },
           { "type": "textarea", "name": "Excerpt" },
           { "type": "text", "name": "Category" },
-          { "type": "text", "name": "URL" }
+          { "type": "text", "name": "URL" },
+          { "type": "image", "name": "Image" }
         ]
       }
     },

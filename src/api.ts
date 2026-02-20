@@ -243,6 +243,10 @@ export class MakeStudioClient {
     return this.request('DELETE', `/pages/${id}`)
   }
 
+  async setPageContent(id: string, content: Record<string, Record<string, unknown>>): Promise<any> {
+    return this.request('PATCH', `/pages/${id}/set-content`, content)
+  }
+
   // ─── Layouts ───
 
   async getLayouts(siteId: string): Promise<ApiLayout[]> {
@@ -283,22 +287,22 @@ export class MakeStudioClient {
   // ─── Post Types ───
 
   async getPostTypes(siteId: string): Promise<ApiPostType[]> {
-    return this.request('GET', `/post-types?site_id=${siteId}`)
+    return this.request('GET', `/postTypes?site_id=${siteId}`)
   }
 
   async createPostType(data: {
     name: string
     site_id: string
   }): Promise<ApiPostType> {
-    return this.request('POST', '/post-types', data)
+    return this.request('POST', '/postTypes', data)
   }
 
   async updatePostType(id: string, data: Record<string, unknown>): Promise<ApiPostType> {
-    return this.request('PATCH', `/post-types/${id}`, data)
+    return this.request('PATCH', `/postTypes/${id}`, data)
   }
 
   async deletePostType(id: string): Promise<{ message: string }> {
-    return this.request('DELETE', `/post-types/${id}`)
+    return this.request('DELETE', `/postTypes/${id}`)
   }
 
   // ─── Activity Log ───

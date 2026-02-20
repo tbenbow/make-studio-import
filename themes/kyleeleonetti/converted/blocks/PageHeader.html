@@ -1,8 +1,16 @@
 <section class="py-20 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-4xl lg:px-10 text-center">
+    <!-- Decorative element -->
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <div class="w-12 h-px bg-accent/50"></div>
+      <div class="w-2 h-2 border border-accent rotate-45"></div>
+      <div class="w-12 h-px bg-accent/50"></div>
+    </div>
     <h1 class="heading-xl text-fg mb-4">{{title}}</h1>
     {{#if subtitle}}
       <p class="body-lg text-fg-muted max-w-2xl mx-auto">{{subtitle}}</p>
     {{/if}}
+    <!-- Bottom accent line -->
+    <div class="w-20 h-0.5 bg-accent mx-auto mt-8"></div>
   </div>
 </section>

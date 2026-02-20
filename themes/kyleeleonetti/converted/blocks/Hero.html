@@ -1,26 +1,32 @@
-<section class="py-20 bg-base">
+<section class="py-24 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <!-- Photo -->
-      <div x-data="{ show: false }" :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" class="transition-all duration-700 ease-out">
+      <div class="relative">
         {{#if image}}
-          <div class="rounded-2xl overflow-hidden">
+          <div class="overflow-hidden">
             <img src="{{image}}" alt="{{name}}" class="w-full h-auto object-cover aspect-[4/3]">
           </div>
+        {{else}}
+          <div class="w-full aspect-[4/3] bg-base-muted"></div>
         {{/if}}
+        <!-- Decorative corner accent -->
+        <div class="absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-accent/40"></div>
       </div>
 
       <!-- Content -->
-      <div x-data="{ show: false }" :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'" class="transition-all duration-700 ease-out delay-150">
+      <div>
+        <!-- Decorative line -->
+        <div class="w-16 h-0.5 bg-accent mb-8"></div>
         <h1 class="heading-xl text-fg mb-4">{{name}}</h1>
-        <p class="heading-md text-brand mb-6">{{subtitle}}</p>
-        <p class="body-lg text-fg-muted mb-8">{{description}}</p>
+        <p class="heading-md text-accent mb-6">{{subtitle}}</p>
+        <p class="body-lg text-fg-muted mb-10">{{description}}</p>
         <div class="flex flex-wrap gap-4">
           {{#if primary-cta-label}}
             {{> Button link=primary-cta-link label=primary-cta-label style="primary"}}
           {{/if}}
           {{#if secondary-cta-label}}
-            {{> Button link=secondary-cta-link label=secondary-cta-label style="secondary"}}
+            {{> Button link=secondary-cta-link label=secondary-cta-label style="outline"}}
           {{/if}}
         </div>
       </div>

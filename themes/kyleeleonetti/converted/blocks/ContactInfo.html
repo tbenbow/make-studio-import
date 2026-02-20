@@ -1,18 +1,25 @@
-<section class="pb-20 bg-base">
+<section class="pb-24 bg-base">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
       <!-- Contact details -->
-      <div class="bg-panel rounded-xl p-8">
+      <div class="bg-panel p-8 lg:p-10 border border-border">
+        <!-- Decorative top -->
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-8 h-px bg-accent"></div>
+          <div class="w-1.5 h-1.5 border border-accent rotate-45"></div>
+          <div class="w-8 h-px bg-accent"></div>
+        </div>
+
         {{#if address}}
           <div class="mb-6">
-            <p class="body-sm font-semibold text-fg-alt uppercase tracking-wider mb-2">Address</p>
+            <p class="heading-xs text-accent uppercase tracking-wider mb-2">Address</p>
             <p class="body-md text-fg">{{address}}</p>
           </div>
         {{/if}}
         {{#if email}}
           <div class="mb-6">
-            <p class="body-sm font-semibold text-fg-alt uppercase tracking-wider mb-2">Email</p>
-            <a href="mailto:{{email}}" class="body-md text-brand hover:text-accent transition">{{email}}</a>
+            <p class="heading-xs text-accent uppercase tracking-wider mb-2">Email</p>
+            <a href="mailto:{{email}}" class="body-md text-fg hover:text-accent transition">{{email}}</a>
           </div>
         {{/if}}
         {{#if cta-label}}
@@ -24,21 +31,24 @@
 
       <!-- Speaking / appearances -->
       <div>
+        <div class="w-12 h-0.5 bg-accent mb-6"></div>
         <h2 class="heading-md text-fg mb-4">{{speaking-heading}}</h2>
         <div class="prose">
           {{{speaking-description}}}
         </div>
         {{#if (length appearances)}}
-          <div class="mt-8 flex flex-col gap-6">
+          <div class="mt-8 flex flex-col gap-4">
             {{#each appearances}}
-              <div class="flex items-center gap-4 bg-panel rounded-xl p-4">
+              <div class="flex items-center gap-4 bg-panel p-4 border border-border">
                 {{#if image}}
-                  <img src="{{image}}" alt="{{title}}" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+                  <img src="{{image}}" alt="{{title}}" class="w-16 h-16 object-cover flex-shrink-0" />
+                {{else}}
+                  <div class="w-16 h-16 bg-base-muted flex-shrink-0"></div>
                 {{/if}}
                 <div>
-                  <p class="heading-xs text-fg">{{title}}</p>
+                  <p class="heading-xs text-fg uppercase">{{title}}</p>
                   {{#if subtitle}}
-                    <p class="body-sm text-fg-muted">{{subtitle}}</p>
+                    <p class="body-sm text-fg-muted mt-1">{{subtitle}}</p>
                   {{/if}}
                 </div>
               </div>

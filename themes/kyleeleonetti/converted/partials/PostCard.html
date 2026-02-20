@@ -1,12 +1,23 @@
-<a href="{{url}}" class="group block bg-panel rounded-xl p-6 hover:shadow-md transition-all duration-300">
-  {{#if category}}
-    <p class="body-sm font-semibold text-accent mb-2">{{category}}</p>
+<a href="{{url}}" class="group block bg-panel border border-border overflow-hidden hover:border-accent/40 transition-colors">
+  {{#if image}}
+    <div class="aspect-[16/10] overflow-hidden">
+      <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+    </div>
+  {{else}}
+    <div class="aspect-[16/10] bg-base-muted"></div>
   {{/if}}
-  <h3 class="heading-sm text-fg mb-3 group-hover:text-brand transition-colors">{{title}}</h3>
-  {{#if date}}
-    <p class="body-sm text-fg-alt mb-3">{{date}}</p>
-  {{/if}}
-  {{#if excerpt}}
-    <p class="body-md text-fg-muted line-clamp-3">{{excerpt}}</p>
-  {{/if}}
+  <div class="p-6">
+    <div class="flex items-center gap-3 mb-3">
+      {{#if category}}
+        <span class="heading-xs text-accent uppercase tracking-wider">{{category}}</span>
+      {{/if}}
+      {{#if date}}
+        <span class="body-sm text-fg-alt">{{date}}</span>
+      {{/if}}
+    </div>
+    <h3 class="heading-sm text-fg mb-3 group-hover:text-accent transition-colors">{{title}}</h3>
+    {{#if excerpt}}
+      <p class="body-md text-fg-muted line-clamp-3">{{excerpt}}</p>
+    {{/if}}
+  </div>
 </a>

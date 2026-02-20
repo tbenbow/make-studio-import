@@ -1,44 +1,56 @@
-<footer class="bg-base-alt py-16">
-  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-      <!-- Brand -->
-      <div>
-        <p class="heading-md text-on-brand mb-4">{{site-name}}</p>
-        <p class="body-sm text-on-brand/70">{{tagline}}</p>
-      </div>
+<footer class="bg-base-alt">
+  <!-- Decorative top border -->
+  <div class="h-1 bg-gradient-to-r from-accent/60 via-accent to-accent/60"></div>
 
-      <!-- Quick links -->
-      <div>
-        <p class="body-sm font-bold text-on-brand/50 uppercase tracking-wider mb-4">Pages</p>
-        <div class="flex flex-col gap-2">
-          {{#each links}}
-            <a href="{{url}}" class="body-sm text-on-brand/70 hover:text-on-brand transition">
-              {{label}}
-            </a>
-          {{/each}}
+  <div class="py-16">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <!-- Brand -->
+        <div>
+          <p class="heading-md text-on-brand mb-2">{{site-name}}</p>
+          <div class="w-12 h-0.5 bg-accent mb-4"></div>
+          <p class="body-sm text-on-brand/70">{{tagline}}</p>
         </div>
-      </div>
 
-      <!-- Connect -->
-      <div>
-        <p class="body-sm font-bold text-on-brand/50 uppercase tracking-wider mb-4">Connect</p>
-        {{#if email}}
-          <a href="mailto:{{email}}" class="body-sm text-on-brand/70 hover:text-on-brand transition block mb-4">{{email}}</a>
-        {{/if}}
-        {{#if (length social-links)}}
-          <div class="flex items-center gap-4">
-            {{#each social-links}}
-              <a href="{{url}}" class="text-on-brand/70 hover:text-on-brand transition" aria-label="{{label}}" rel="noopener">
-                {{icon icon size="22"}}
+        <!-- Quick links -->
+        <div>
+          <p class="heading-xs text-accent uppercase tracking-wider mb-4">Pages</p>
+          <div class="flex flex-col gap-2">
+            {{#each links}}
+              <a href="{{url}}" class="body-sm text-on-brand/70 hover:text-accent transition">
+                {{label}}
               </a>
             {{/each}}
           </div>
-        {{/if}}
-      </div>
-    </div>
+        </div>
 
-    <div class="border-t border-on-brand/20 pt-8">
-      <p class="body-sm text-on-brand/50 text-center">{{copyright}}</p>
+        <!-- Connect -->
+        <div>
+          <p class="heading-xs text-accent uppercase tracking-wider mb-4">Connect</p>
+          {{#if email}}
+            <a href="mailto:{{email}}" class="body-sm text-on-brand/70 hover:text-accent transition block mb-4">{{email}}</a>
+          {{/if}}
+          {{#if (length social-links)}}
+            <div class="flex items-center gap-4">
+              {{#each social-links}}
+                <a href="{{url}}" class="text-on-brand/50 hover:text-accent transition" aria-label="{{label}}" rel="noopener">
+                  {{icon icon size="22"}}
+                </a>
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="border-t border-on-brand/15 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="body-sm text-on-brand/40">{{copyright}}</p>
+        <!-- Decorative element -->
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 border border-accent/40 rotate-45"></div>
+          <div class="w-2 h-2 border border-accent/40 rotate-45"></div>
+          <div class="w-2 h-2 border border-accent/40 rotate-45"></div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

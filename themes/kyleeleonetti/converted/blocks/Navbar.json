@@ -1,7 +1,7 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Site navigation with logo text, links, and optional CTA",
+  "description": "Art deco navbar with geometric logo mark and tracked uppercase links",
   "fields": [
     {
       "type": "text",

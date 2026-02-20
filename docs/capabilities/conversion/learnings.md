@@ -68,6 +68,10 @@ Accumulated insights from site conversions. Read this before starting a new conv
 - **Pull after first sync** — Server normalizes templates (strips `x-intersect`, `/>` → `>`). Pull to avoid permanent phantom diffs.
 - **Clean up seed site content** — New sites come with ~25 template pages and default blocks. Delete stale pages/layouts before preview or the build crashes on missing block refs.
 - **No Handlebars math helpers** — `{{multiply @index 100}}` doesn't exist. Use per-item `x-intersect` or CSS `nth-child` delays.
+- **WordPress post import via REST API** — Use `/wp-json/wp/v2/posts?per_page=100&page=N&_embed` to fetch all posts. Categories via `/wp-json/wp/v2/categories`. Content comes as full HTML even on client-side rendered WP sites.
+- **Use `set-content` endpoint for post import** — `PATCH /pages/:id/set-content` with `{ "BlockName": { "FieldName": value } }` is far simpler than manually wiring field UUIDs, block instance IDs, and dual content locations.
+- **Post content has a different storage model** — Regular pages: `blocks[].content`. Post pages: `page.content[blockId][fieldId]`. The editor reads from different places depending on page type. The `set-content` endpoint handles this.
+- **Verify your site** — When multiple sites exist locally, it's easy to import to the wrong one. Always check the editor URL's site ID matches the `.env` `MAKE_STUDIO_SITE`.
 
 ---
 

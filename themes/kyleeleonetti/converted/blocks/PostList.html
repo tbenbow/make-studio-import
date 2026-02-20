@@ -1,24 +1,92 @@
-<section class="pb-20 bg-base">
+<section class="pb-24 bg-base" x-data="{
+  search: '',
+  activeCategory: 'All',
+  get categories() {
+    const cats = new Set();
+    (this.$root.querySelectorAll('[data-categories]') || []).forEach(el => {
+      el.dataset.categories.split(',').forEach(c => { if (c.trim()) cats.add(c.trim()); });
+    });
+    return ['All', ...Array.from(cats).sort()];
+  },
+  visible(el) {
+    const title = (el.dataset.title || '').toLowerCase();
+    const excerpt = (el.dataset.excerpt || '').toLowerCase();
+    const cats = el.dataset.categories || '';
+    const matchesSearch = !this.search || title.includes(this.search.toLowerCase()) || excerpt.includes(this.search.toLowerCase());
+    const matchesCat = this.activeCategory === 'All' || cats.split(',').map(c => c.trim()).includes(this.activeCategory);
+    return matchesSearch && matchesCat;
+  }
+}">
   <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
-    <div class="flex flex-col gap-6">
+
+    <!-- Search bar -->
+    <div class="relative mb-8">
+      <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-fg-alt">
+        {{icon "magnifying-glass" size="20"}}
+      </div>
+      <input
+        type="text"
+        x-model="search"
+        placeholder="Search posts..."
+        class="w-full bg-panel border border-border pl-12 pr-4 py-3 body-md text-fg placeholder-fg-alt focus:outline-none focus:border-accent"
+      />
+    </div>
+
+    <!-- Category filter pills -->
+    <div class="flex flex-wrap gap-2 mb-10">
+      <template x-for="cat in categories" :key="cat">
+        <button
+          @click="activeCategory = cat"
+          :class="activeCategory === cat
+            ? 'bg-accent text-on-brand border-accent'
+            : 'bg-transparent text-fg-muted border-border hover:border-accent hover:text-accent'"
+          class="heading-xs uppercase tracking-wider px-4 py-2 border transition-colors"
+          x-text="cat"
+        ></button>
+      </template>
+    </div>
+
+    <!-- Posts grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {{#each posts}}
-        <a href="{{url}}" class="group block bg-panel rounded-xl p-6 md:p-8 hover:shadow-md transition-all duration-300">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-8">
-            <div class="flex-1">
-              {{#if category}}
-                <p class="body-sm font-semibold text-accent mb-2">{{category}}</p>
-              {{/if}}
-              <h2 class="heading-sm text-fg mb-2 group-hover:text-brand transition-colors">{{title}}</h2>
+        <div
+          data-title="{{title}}"
+          data-excerpt="{{excerpt}}"
+          data-categories="{{category}}"
+          x-show="visible($el)"
+        >
+          <a href="{{url}}" class="group block bg-panel border border-border overflow-hidden hover:border-accent/40 transition-colors h-full">
+            {{#if image}}
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+              </div>
+            {{else}}
+              <div class="aspect-[16/10] bg-base-muted"></div>
+            {{/if}}
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                {{#if category}}
+                  <span class="heading-xs text-accent uppercase tracking-wider">{{category}}</span>
+                {{/if}}
+                {{#if date}}
+                  <span class="body-sm text-fg-alt">{{date}}</span>
+                {{/if}}
+              </div>
+              <h3 class="heading-sm text-fg mb-3 group-hover:text-accent transition-colors">{{title}}</h3>
               {{#if excerpt}}
-                <p class="body-md text-fg-muted line-clamp-2">{{excerpt}}</p>
+                <p class="body-md text-fg-muted line-clamp-3">{{excerpt}}</p>
               {{/if}}
             </div>
-            {{#if date}}
-              <p class="body-sm text-fg-alt whitespace-nowrap mt-1">{{date}}</p>
-            {{/if}}
-          </div>
-        </a>
+          </a>
+        </div>
       {{/each}}
     </div>
+
+    <!-- Empty state -->
+    <div x-show="!$root.querySelector('[data-title][style*=\'\']') || [...$root.querySelectorAll('[data-title]')].every(el => el.style.display === 'none')" x-cloak class="text-center py-16">
+      <p class="heading-md text-fg-muted mb-2">No posts found</p>
+      <p class="body-md text-fg-alt">Try adjusting your search or filter.</p>
+    </div>
+
   </div>
 </section>

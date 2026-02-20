@@ -57,6 +57,7 @@ Block fields must be transformed from source format (JSON file) to API format be
 | `getPage(id)` | Get a single page with full content |
 | `createPage({ name, site_id, settings?, parentId?, postTypeId? })` | Create a new page |
 | `updatePage(id, data)` | Update page (name, blocks, content, settings) |
+| `setPageContent(id, content)` | Set content by block/field name: `{ "BlockName": { "FieldName": value } }`. Resolves UUIDs, handles both regular and post-type content models. |
 | `deletePage(id)` | Delete a page |
 
 ### Layouts
