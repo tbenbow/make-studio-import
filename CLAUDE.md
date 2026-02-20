@@ -35,14 +35,27 @@ After completing work:
 ## CLI Commands
 
 ```bash
-npm run sync -- --theme=<name> [--apply] [--force] [--delete] [--only=Block1,Block2]
+npm run sync -- --theme=<name> [--apply] [--force] [--delete] [--batch] [--only=Block1,Block2]
 npm run pull -- --theme=<name> [--only=Block1,theme]
 npm run validate -- --theme=<name>
 npm run status -- --theme=<name>
 npm run rollback -- --theme=<name> --snapshot=<file>
 npm run create-site -- --name=<name>
-npm run scrape-site -- --url=<url> --theme=<name>
+npm run setup-pages -- --theme=<name>
+npm test
 ```
+
+### Copy Site Between Environments
+
+```bash
+npx tsx scripts/copy-site.ts \
+  --source-url=https://api.makestudio.cc --source-token=xxx --source-site=abc123 \
+  --target-url=http://localhost:5001 --target-token=yyy \
+  [--target-site=def456] [--name="My Site Copy"] [--files]
+```
+
+Copies blocks, partials, theme, layouts, post types, and pages. Remaps all internal IDs.
+Use `--files` to also copy media files and rewrite CDN URLs in content.
 
 ## Environment
 
