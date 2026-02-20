@@ -212,60 +212,46 @@ async function copyFiles(
 
   console.log(`  Found ${fileUrls.size} file URL(s) to copy.`)
 
-  // 2. For each file: download from source CDN, upload to target
+  // 2. Batch upload via server-side URL fetch (max 20 per request)
+  const allUrls = Array.from(fileUrls)
+  const BATCH_SIZE = 20
   let copied = 0
   let failed = 0
 
-  for (const sourceFileUrl of fileUrls) {
-    const filename = sourceFileUrl.split('/').pop()!
-    const contentType = guessContentType(filename)
+  for (let i = 0; i < allUrls.length; i += BATCH_SIZE) {
+    const batch = allUrls.slice(i, i + BATCH_SIZE)
+    const batchNum = Math.floor(i / BATCH_SIZE) + 1
+    const totalBatches = Math.ceil(allUrls.length / BATCH_SIZE)
+    if (totalBatches > 1) {
+      console.log(`  Batch ${batchNum}/${totalBatches} (${batch.length} files)...`)
+    }
+
+    const files = batch.map(url => ({
+      url,
+      fileName: url.split('/').pop()!,
+    }))
 
     try {
-      // Download from source CDN
-      const response = await fetch(sourceFileUrl)
-      if (!response.ok) {
-        console.log(`  SKIP ${filename} (download failed: ${response.status})`)
-        failed++
-        continue
+      const results = await target.uploadFilesFromUrls(targetSiteId, files)
+
+      for (let j = 0; j < results.length; j++) {
+        const result = results[j]
+        const sourceUrl = batch[j]
+        const filename = files[j].fileName
+
+        if (result.success && result.fullPath) {
+          urlMap.set(sourceUrl, result.fullPath)
+          console.log(`  OK ${filename}`)
+          copied++
+        } else {
+          console.log(`  FAIL ${filename}: ${result.error || 'unknown error'}`)
+          failed++
+        }
       }
-      const fileBuffer = Buffer.from(await response.arrayBuffer())
-
-      // Get presigned upload URL from target
-      const { uploadUrl, key } = await target.generateUploadUrl(targetSiteId, {
-        filename,
-        contentType,
-      })
-
-      // Upload to target R2
-      const uploadResponse = await fetch(uploadUrl, {
-        method: 'PUT',
-        headers: { 'Content-Type': contentType },
-        body: fileBuffer,
-      })
-
-      if (!uploadResponse.ok) {
-        console.log(`  SKIP ${filename} (upload failed: ${uploadResponse.status})`)
-        failed++
-        continue
-      }
-
-      // Register the file on target
-      const registered = await target.registerFile(targetSiteId, {
-        key,
-        filename,
-        contentType,
-        size: fileBuffer.length,
-      })
-
-      // Build URL map entry
-      const targetFileUrl = registered.url || `https://${CDN_DOMAIN}/${targetSiteId}/${filename}`
-      urlMap.set(sourceFileUrl, targetFileUrl)
-
-      console.log(`  OK ${filename} (${(fileBuffer.length / 1024).toFixed(0)}KB)`)
-      copied++
     } catch (err: any) {
-      console.log(`  FAIL ${filename}: ${err.message}`)
-      failed++
+      // Entire batch failed
+      console.log(`  Batch ${batchNum} failed: ${err.message}`)
+      failed += batch.length
     }
   }
 
@@ -489,12 +475,28 @@ async function main() {
     }
   }
 
-  // 10. Copy pages (remap block IDs, layout IDs, parent IDs, post type IDs, rewrite URLs)
+  // 10. Copy pages — two-pass approach
+  //   Pass 1: Create/update page records (no blocks — createPage ignores them)
+  //   Pass 2: Set blocks on each page via updatePage
   console.log('\n═══ Copying pages ═══')
 
   // Re-fetch target pages (post type creation may have auto-created some)
   const targetPagesAfterPT = await target.getPages(targetSiteId)
-  const targetPagesByName = new Map(targetPagesAfterPT.map((p: any) => [p.name, p]))
+
+  // Build composite key map: "postTypeId:name" or "parentId:name" to handle
+  // duplicate names (e.g., "Index" for main site vs post type index pages)
+  function pageKey(page: any): string {
+    if (page.postTypeId) return `pt:${page.postTypeId}:${page.name}`
+    if (page.parentId) return `parent:${page.parentId}:${page.name}`
+    return `root:${page.name}`
+  }
+  function targetPageKey(page: any): string {
+    // Target pages use their own IDs (already remapped post type / parent IDs)
+    if (page.postTypeId) return `pt:${page.postTypeId}:${page.name}`
+    if (page.parentId) return `parent:${page.parentId}:${page.name}`
+    return `root:${page.name}`
+  }
+  const targetPagesByKey = new Map(targetPagesAfterPT.map((p: any) => [targetPageKey(p), p]))
   const pageIdMap: IdMap = new Map()
 
   // Sort: pages without parentId first, then children
@@ -504,8 +506,9 @@ async function main() {
     return aHasParent - bHasParent
   })
 
+  // Pass 1: Create/update pages (without blocks)
+  console.log('  Pass 1: Creating/updating page records...')
   for (const page of sortedPages) {
-    const remappedBlocks = page.blocks ? remapPageBlocks(page.blocks, blockIdMap, urlMap) : []
     const remappedSettings = remapPageSettings(
       urlMap.size > 0 ? rewriteUrls(page.settings, urlMap) as Record<string, unknown> : page.settings,
       layoutIdMap
@@ -513,12 +516,17 @@ async function main() {
     const parentId = page.parentId ? (pageIdMap.get(page.parentId) || page.parentId) : undefined
     const postTypeId = page.postTypeId ? (postTypeIdMap.get(page.postTypeId) || page.postTypeId) : undefined
 
-    const existing = targetPagesByName.get(page.name)
+    // Build composite key using remapped IDs for target lookup
+    const sourceKey = pageKey({
+      name: page.name,
+      postTypeId: postTypeId, // use remapped ID for matching
+      parentId: parentId,     // use remapped ID for matching
+    })
+    const existing = targetPagesByKey.get(sourceKey)
 
     if (existing) {
       console.log(`  ~ ${page.name} (update)`)
       const patch: Record<string, unknown> = {
-        blocks: remappedBlocks,
         settings: remappedSettings,
       }
       if (parentId) patch.parentId = parentId
@@ -530,15 +538,35 @@ async function main() {
       const createData: Record<string, unknown> = {
         name: page.name,
         site_id: targetSiteId,
-        blocks: remappedBlocks,
         settings: remappedSettings,
       }
       if (parentId) createData.parentId = parentId
       if (postTypeId) createData.postTypeId = postTypeId
       const created = await target.createPage(createData as any)
       pageIdMap.set(page._id, created._id)
-      targetPagesByName.set(page.name, created)
+      // Add to lookup so child pages can find their parent
+      targetPagesByKey.set(targetPageKey(created), created)
     }
+  }
+
+  // Pass 2: Set blocks on each page
+  console.log('  Pass 2: Setting blocks on pages...')
+  for (const page of sortedPages) {
+    const remappedBlocks = page.blocks ? remapPageBlocks(page.blocks, blockIdMap, urlMap) : []
+    const targetPageId = pageIdMap.get(page._id)
+
+    if (!targetPageId) {
+      console.log(`  SKIP ${page.name} (no target page ID)`)
+      continue
+    }
+
+    if (remappedBlocks.length === 0) {
+      console.log(`  - ${page.name} (no blocks)`)
+      continue
+    }
+
+    await target.updatePage(targetPageId, { blocks: remappedBlocks })
+    console.log(`  ✓ ${page.name} → ${remappedBlocks.length} block(s)`)
   }
 
   // 11. Summary

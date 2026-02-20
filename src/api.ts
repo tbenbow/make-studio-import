@@ -446,7 +446,49 @@ export class MakeStudioClient {
     return this.request('POST', '/files/register', { siteId, ...opts })
   }
 
-  async listFiles(siteId: string): Promise<Array<{ _id: string; filename: string; url: string; contentType: string }>> {
-    return this.request('GET', `/files?site_id=${siteId}`)
+  async listFiles(siteId: string, folder = '/'): Promise<Array<{ _id: string; filename: string; url: string; contentType: string }>> {
+    const params = new URLSearchParams({ site_id: siteId, folder })
+    return this.request('GET', `/files?${params}`)
+  }
+
+  /**
+   * Batch upload files by URL. The server fetches, resizes (max 3000x3000),
+   * converts to WebP, and stores in R2. Max 20 per request.
+   */
+  async uploadFilesFromUrls(siteId: string, files: Array<{ url: string; fileName?: string }>): Promise<Array<{ url: string; success: boolean; fullPath?: string; error?: string }>> {
+    return this.request('POST', '/files/upload-from-urls', { siteId, files })
+  }
+
+  /**
+   * Upload a local file via multipart form data.
+   * Uses POST /files/upload which accepts the binary directly.
+   */
+  async uploadFile(siteId: string, buffer: Buffer, filename: string, contentType: string, folder = '/'): Promise<{ _id: string; url: string; filename: string; contentType: string; size: number }> {
+    const formData = new FormData()
+    formData.append('siteId', siteId)
+    formData.append('folder', folder)
+    formData.append('file', new Blob([new Uint8Array(buffer)], { type: contentType }), filename)
+
+    const url = `${this.baseUrl}/files/upload`
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.token}`,
+      },
+      body: formData,
+    })
+
+    if (!res.ok) {
+      let message = `HTTP ${res.status}`
+      let code: string | undefined
+      try {
+        const err = await res.json()
+        message = err.message || message
+        code = err.code
+      } catch {}
+      throw new ApiError(res.status, message, code)
+    }
+
+    return res.json() as any
   }
 }
