@@ -148,8 +148,12 @@ export class MakeStudioClient {
     return this.request('GET', `/sites/${siteId}`)
   }
 
+  async updateSite(siteId: string, data: Record<string, unknown>): Promise<ApiSite> {
+    return this.request('PATCH', `/sites/${siteId}`, data)
+  }
+
   async updateSiteTheme(siteId: string, theme: Record<string, unknown>): Promise<ApiSite> {
-    return this.request('PATCH', `/sites/${siteId}`, { theme })
+    return this.updateSite(siteId, { theme })
   }
 
   async createSite(name: string): Promise<ApiSite & { apiToken?: string }> {
@@ -335,6 +339,14 @@ export class MakeStudioClient {
     return this.request('POST', `/snapshots/${id}/restore`)
   }
 
+  async exportSnapshot(id: string): Promise<{ _id: string; siteId: string; data: Record<string, unknown> }> {
+    return this.request('GET', `/snapshots/${id}/export`)
+  }
+
+  async importSnapshot(siteId: string, data: Record<string, unknown>): Promise<{ success: boolean; message: string }> {
+    return this.request('POST', '/snapshots/import', { siteId, data })
+  }
+
   // ─── Deployment ───
 
   async deployPreview(siteId: string): Promise<{ success: boolean; message: string; previewUrl: string }> {
@@ -446,9 +458,9 @@ export class MakeStudioClient {
     return this.request('POST', '/files/register', { siteId, ...opts })
   }
 
-  async listFiles(siteId: string, folder = '/'): Promise<Array<{ _id: string; filename: string; url: string; contentType: string }>> {
-    const params = new URLSearchParams({ site_id: siteId, folder })
-    return this.request('GET', `/files?${params}`)
+  async listFiles(siteId: string): Promise<Array<{ _id: string; name: string; fullPath: string; fileKey: string; mimeType: string; size: number }>> {
+    const res = await this.request<{ files: Array<{ _id: string; name: string; fullPath: string; fileKey: string; mimeType: string; size: number }> }>('GET', `/files?folder=${siteId}`)
+    return res.files
   }
 
   /**
@@ -456,7 +468,8 @@ export class MakeStudioClient {
    * converts to WebP, and stores in R2. Max 20 per request.
    */
   async uploadFilesFromUrls(siteId: string, files: Array<{ url: string; fileName?: string }>): Promise<Array<{ url: string; success: boolean; fullPath?: string; error?: string }>> {
-    return this.request('POST', '/files/upload-from-urls', { siteId, files })
+    const res = await this.request<{ results: Array<{ url: string; success: boolean; fullPath?: string; error?: string }> }>('POST', '/files/upload-from-urls', { siteId, images: files })
+    return res.results
   }
 
   /**

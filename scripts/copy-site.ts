@@ -2,13 +2,14 @@
 /**
  * Copy Site Between Environments
  *
- * Copies a complete site (blocks, partials, theme, layouts, pages, post types)
- * from one Make Studio environment to another.
+ * Copies a complete site (blocks, partials, theme, layouts, pages, post types,
+ * folders, data stores) from one Make Studio environment to another using the
+ * snapshot export/import system.
  *
  * Usage:
  *   npx tsx scripts/copy-site.ts \
- *     --source-url=https://api.makestudio.cc --source-token=xxx --source-site=abc123 \
- *     --target-url=http://localhost:5001 --target-token=yyy \
+ *     --source-url=https://api.makestudio.io --source-token=xxx --source-site=abc123 \
+ *     --target-url=http://localhost:3001 --target-token=yyy \
  *     [--target-site=def456] [--name="My Site Copy"] [--files]
  *
  * Options:
@@ -19,16 +20,14 @@
  *   --target-token   Target API token (required)
  *   --target-site    Target site ID (omit to create a new site)
  *   --name           Name for the new site (required if --target-site is omitted)
- *   --files          Copy media files (default: skip, content keeps source URLs)
+ *   --files          Copy media files and rewrite CDN URLs (default: skip)
  *
- * If --target-site is omitted, a new site is created using --name.
- * If --target-site is provided, existing content on that site will be overwritten.
- *
- * File copying (--files):
- *   Downloads files from the source CDN and re-uploads to the target via presigned
- *   URLs. All file references in page content, block fields, and theme are rewritten
- *   to point to the target site's CDN path.
- *   NOTE: Requires the target server to accept API tokens on /files routes.
+ * How it works:
+ *   1. Creates a snapshot on the source site (serializes everything)
+ *   2. Exports the snapshot data blob
+ *   3. Optionally copies media files via upload-from-urls
+ *   4. Imports the snapshot data on the target site (restores everything)
+ *   5. Rewrites CDN URLs in the restored content if files were copied
  */
 import { MakeStudioClient } from '../src/api.js'
 
@@ -73,67 +72,14 @@ if (!targetSiteId && !siteName) {
   process.exit(1)
 }
 
-// ─── ID remapping helpers ───
-
-type IdMap = Map<string, string>
-type UrlMap = Map<string, string>
-
-function remapBlockId(blockId: string, blockIdMap: IdMap): string {
-  return blockIdMap.get(blockId) || blockId
-}
-
-function remapPageBlocks(
-  pageBlocks: any[],
-  blockIdMap: IdMap,
-  urlMap?: UrlMap
-): any[] {
-  return pageBlocks.map(pb => {
-    const remapped: any = {
-      ...pb,
-      blockId: remapBlockId(pb.blockId, blockIdMap),
-    }
-    if (urlMap && urlMap.size > 0 && remapped.content) {
-      remapped.content = rewriteUrls(remapped.content, urlMap)
-    }
-    return remapped
-  })
-}
-
-function remapLayoutBlocks(
-  layoutBlocks: any[] | undefined,
-  blockIdMap: IdMap,
-  urlMap?: UrlMap
-): any[] {
-  if (!layoutBlocks || !Array.isArray(layoutBlocks)) return []
-  return layoutBlocks.map(lb => {
-    const remapped: any = {
-      ...lb,
-      blockId: remapBlockId(lb.blockId, blockIdMap),
-    }
-    if (urlMap && urlMap.size > 0 && remapped.content) {
-      remapped.content = rewriteUrls(remapped.content, urlMap)
-    }
-    return remapped
-  })
-}
-
-function remapPageSettings(
-  settings: Record<string, unknown> | undefined,
-  layoutIdMap: IdMap
-): Record<string, unknown> | undefined {
-  if (!settings) return settings
-  const remapped = { ...settings }
-  if (remapped.layoutId && typeof remapped.layoutId === 'string') {
-    remapped.layoutId = layoutIdMap.get(remapped.layoutId) || remapped.layoutId
-  }
-  return remapped
-}
-
 // ─── URL rewriting ───
+
+type UrlMap = Map<string, string>
+const CDN_DOMAIN = 'makestudio.site'
 
 /**
  * Recursively walk a data structure, replacing any string values that match
- * URLs in the urlMap. This handles page content, block fields, theme values, etc.
+ * URLs in the urlMap.
  */
 function rewriteUrls(data: unknown, urlMap: UrlMap): unknown {
   if (typeof data === 'string') {
@@ -158,17 +104,11 @@ function rewriteUrls(data: unknown, urlMap: UrlMap): unknown {
   return data
 }
 
-// ─── File copying ───
-
-const CDN_DOMAIN = 'makestudio.site'
-
 /**
  * Find all CDN URLs referencing the source site in a data structure.
  */
 function findFileUrls(data: unknown, siteId: string, found: Set<string>): void {
-  const prefix = `https://${CDN_DOMAIN}/${siteId}/`
   if (typeof data === 'string') {
-    // Extract URLs from strings (could be in HTML or plain values)
     const regex = new RegExp(`https://${CDN_DOMAIN}/${siteId}/[^"'\\s<>)]+`, 'g')
     const matches = data.match(regex)
     if (matches) {
@@ -187,61 +127,64 @@ function findFileUrls(data: unknown, siteId: string, found: Set<string>): void {
   }
 }
 
+// ─── File copying ───
+
 /**
- * Copy files from source to target. Returns a URL map for rewriting.
+ * Copy ALL media files from source to target via upload-from-urls.
+ * Lists the source media library, uploads everything, returns a URL map for rewriting.
  */
 async function copyFiles(
   source: MakeStudioClient,
   target: MakeStudioClient,
   sourceSiteId: string,
   targetSiteId: string,
-  allData: unknown[]
 ): Promise<UrlMap> {
   const urlMap: UrlMap = new Map()
 
-  // 1. Collect all file URLs referenced in the data
-  const fileUrls = new Set<string>()
-  for (const data of allData) {
-    findFileUrls(data, sourceSiteId, fileUrls)
-  }
+  // List all files in the source media library
+  const sourceFiles = await source.listFiles(sourceSiteId)
 
-  if (fileUrls.size === 0) {
-    console.log('  No file URLs found in content.')
+  if (sourceFiles.length === 0) {
+    console.log('  No files in source media library.')
     return urlMap
   }
 
-  console.log(`  Found ${fileUrls.size} file URL(s) to copy.`)
+  console.log(`  Found ${sourceFiles.length} file(s) in source media library.`)
 
-  // 2. Batch upload via server-side URL fetch (max 20 per request)
-  const allUrls = Array.from(fileUrls)
+  // Batch upload via server-side URL fetch (max 20 per request)
   const BATCH_SIZE = 20
   let copied = 0
   let failed = 0
 
-  for (let i = 0; i < allUrls.length; i += BATCH_SIZE) {
-    const batch = allUrls.slice(i, i + BATCH_SIZE)
+  for (let i = 0; i < sourceFiles.length; i += BATCH_SIZE) {
+    const batch = sourceFiles.slice(i, i + BATCH_SIZE)
     const batchNum = Math.floor(i / BATCH_SIZE) + 1
-    const totalBatches = Math.ceil(allUrls.length / BATCH_SIZE)
+    const totalBatches = Math.ceil(sourceFiles.length / BATCH_SIZE)
     if (totalBatches > 1) {
       console.log(`  Batch ${batchNum}/${totalBatches} (${batch.length} files)...`)
     }
 
-    const files = batch.map(url => ({
-      url,
-      fileName: url.split('/').pop()!,
+    const images = batch.map(f => ({
+      url: f.fullPath,
+      fileName: f.name,
     }))
 
     try {
-      const results = await target.uploadFilesFromUrls(targetSiteId, files)
+      const results = await target.uploadFilesFromUrls(targetSiteId, images)
 
       for (let j = 0; j < results.length; j++) {
         const result = results[j]
-        const sourceUrl = batch[j]
-        const filename = files[j].fileName
+        const sourceFile = batch[j]
+        const filename = sourceFile.name
 
         if (result.success && result.fullPath) {
-          urlMap.set(sourceUrl, result.fullPath)
+          urlMap.set(sourceFile.fullPath, result.fullPath)
           console.log(`  OK ${filename}`)
+          copied++
+        } else if (result.error?.includes('already exists')) {
+          const targetFileUrl = `https://${CDN_DOMAIN}/${targetSiteId}/${filename}`
+          urlMap.set(sourceFile.fullPath, targetFileUrl)
+          console.log(`  OK ${filename} (already exists)`)
           copied++
         } else {
           console.log(`  FAIL ${filename}: ${result.error || 'unknown error'}`)
@@ -249,7 +192,6 @@ async function copyFiles(
         }
       }
     } catch (err: any) {
-      // Entire batch failed
       console.log(`  Batch ${batchNum} failed: ${err.message}`)
       failed += batch.length
     }
@@ -259,57 +201,41 @@ async function copyFiles(
   return urlMap
 }
 
-function guessContentType(filename: string): string {
-  const ext = filename.split('.').pop()?.toLowerCase()
-  switch (ext) {
-    case 'webp': return 'image/webp'
-    case 'jpg': case 'jpeg': return 'image/jpeg'
-    case 'png': return 'image/png'
-    case 'gif': return 'image/gif'
-    case 'svg': return 'image/svg+xml'
-    case 'mp4': return 'video/mp4'
-    case 'webm': return 'video/webm'
-    case 'pdf': return 'application/pdf'
-    default: return 'application/octet-stream'
-  }
-}
-
 // ─── Main ───
 
 async function main() {
   const source = new MakeStudioClient(sourceUrl, sourceToken)
   const target = new MakeStudioClient(targetUrl, targetToken)
 
-  // 1. Pull everything from source
-  console.log('═══ Reading source site ═══')
+  // 1. Create snapshot on source
+  console.log('═══ Creating source snapshot ═══')
   console.log(`  URL: ${sourceUrl}`)
   console.log(`  Site: ${sourceSiteId}`)
 
-  const [sourceSite, sourceBlocks, sourcePartialsRes, sourcePages, sourceLayouts, sourcePostTypes] =
-    await Promise.all([
-      source.getSite(sourceSiteId),
-      source.getBlocks(sourceSiteId),
-      source.getPartials(sourceSiteId),
-      source.getPages(sourceSiteId),
-      source.getLayouts(sourceSiteId),
-      source.getPostTypes(sourceSiteId),
-    ])
-  const sourcePartials = sourcePartialsRes.partials
+  const snapshot = await source.createSnapshot(sourceSiteId, `copy-${new Date().toISOString()}`)
+  console.log(`  Snapshot: ${snapshot._id} (${((snapshot.sizeBytes || 0) / 1024).toFixed(0)}KB)`)
 
-  console.log(`  Site name: ${sourceSite.name}`)
-  console.log(`  Blocks: ${sourceBlocks.length}`)
-  console.log(`  Partials: ${sourcePartials.length}`)
-  console.log(`  Pages: ${sourcePages.length}`)
-  console.log(`  Layouts: ${sourceLayouts.length}`)
-  console.log(`  Post types: ${sourcePostTypes.length}`)
+  // 2. Export snapshot data
+  console.log('\n═══ Exporting snapshot data ═══')
+  const exported = await source.exportSnapshot(snapshot._id)
+  const snapshotData = exported.data
 
-  // Fetch full page data (getPages returns summaries, we need blocks/content)
-  console.log('  Fetching full page data...')
-  const sourcePagesFull = await Promise.all(
-    sourcePages.map((p: any) => source.getPage(p._id))
-  )
+  const pages = (snapshotData.pages as any[]) || []
+  const blocks = (snapshotData.blocks as any[]) || []
+  const partials = (snapshotData.partials as any[]) || []
+  const layouts = (snapshotData.layouts as any[]) || []
+  const postTypes = (snapshotData.postTypes as any[]) || []
+  const folders = (snapshotData.folders as any[]) || []
+  const site = snapshotData.site as Record<string, unknown> || {}
 
-  // 2. Create or connect to target site
+  console.log(`  Pages: ${pages.length}`)
+  console.log(`  Blocks: ${blocks.length}`)
+  console.log(`  Partials: ${partials.length}`)
+  console.log(`  Layouts: ${layouts.length}`)
+  console.log(`  Post types: ${postTypes.length}`)
+  console.log(`  Folders: ${folders.length}`)
+
+  // 3. Create or connect to target site
   console.log('\n═══ Preparing target site ═══')
   console.log(`  URL: ${targetUrl}`)
 
@@ -327,257 +253,37 @@ async function main() {
     console.log(`  Using existing site: ${targetSiteId}`)
   }
 
-  // 3. Copy files (before everything else, so we have the URL map)
+  // 4. Copy files (before import, so we can rewrite URLs in the snapshot data)
   let urlMap: UrlMap = new Map()
   if (includeFiles) {
     console.log('\n═══ Copying files ═══')
-    urlMap = await copyFiles(source, target, sourceSiteId, targetSiteId, [
-      sourceSite.theme,
-      sourceBlocks,
-      sourcePartials,
-      sourcePagesFull,
-      sourceLayouts,
-    ])
+    urlMap = await copyFiles(source, target, sourceSiteId, targetSiteId)
   } else {
     console.log('\n═══ Skipping files (use --files to copy media) ═══')
   }
 
-  // 4. Check what already exists on target
-  const [existingBlocks, existingPartialsRes, existingLayouts, existingPages] = await Promise.all([
-    target.getBlocks(targetSiteId),
-    target.getPartials(targetSiteId),
-    target.getLayouts(targetSiteId),
-    target.getPages(targetSiteId),
-  ])
-  const existingPartials = existingPartialsRes.partials
-  const existingBlocksByName = new Map(existingBlocks.map(b => [b.name, b]))
-  const existingPartialsByName = new Map(existingPartials.map(p => [p.name, p]))
-  const existingLayoutsByName = new Map(existingLayouts.map(l => [l.name, l]))
-
-  // 5. Copy blocks (preserving field UUIDs so page content keys stay valid)
-  console.log('\n═══ Copying blocks ═══')
-  const blockIdMap: IdMap = new Map()
-
-  for (const block of sourceBlocks) {
-    // Rewrite file URLs in block templates and field values
-    const template = urlMap.size > 0 ? rewriteUrls(block.template, urlMap) as string : block.template
-    const fields = urlMap.size > 0 ? rewriteUrls(block.fields, urlMap) as any[] : block.fields
-
-    const existing = existingBlocksByName.get(block.name)
-    if (existing) {
-      console.log(`  ~ ${block.name} (update)`)
-      await target.updateBlock(existing._id, {
-        template,
-        fields,
-        description: block.description,
-        thumbnailType: block.thumbnailType,
-      })
-      blockIdMap.set(block._id, existing._id)
-    } else {
-      console.log(`  + ${block.name} (create)`)
-      const created = await target.createBlock({
-        name: block.name,
-        site_id: targetSiteId,
-        template,
-        fields,
-        category: block.category || 'section',
-      })
-      blockIdMap.set(block._id, created._id)
-    }
+  // 5. Rewrite URLs in snapshot data if files were copied
+  let importData = snapshotData
+  if (urlMap.size > 0) {
+    console.log('\n═══ Rewriting CDN URLs ═══')
+    importData = rewriteUrls(snapshotData, urlMap) as Record<string, unknown>
+    console.log(`  Rewrote ${urlMap.size} URL(s) in snapshot data.`)
   }
 
-  // 6. Copy partials
-  console.log('\n═══ Copying partials ═══')
-  const partialIdMap: IdMap = new Map()
+  // 6. Import snapshot on target
+  console.log('\n═══ Importing to target ═══')
+  const result = await target.importSnapshot(targetSiteId, importData)
+  console.log(`  ${result.message || 'Import complete.'}`)
 
-  for (const partial of sourcePartials) {
-    const template = urlMap.size > 0 ? rewriteUrls(partial.template, urlMap) as string : partial.template
-
-    const existing = existingPartialsByName.get(partial.name)
-    if (existing) {
-      console.log(`  ~ ${partial.name} (update)`)
-      await target.updatePartial(existing._id, { template })
-      partialIdMap.set(partial._id, existing._id)
-    } else {
-      console.log(`  + ${partial.name} (create)`)
-      const created = await target.createPartial({
-        name: partial.name,
-        site_id: targetSiteId,
-        template,
-      })
-      partialIdMap.set(partial._id, created._id)
-    }
-  }
-
-  // 7. Copy theme
-  console.log('\n═══ Copying theme ═══')
-  if (sourceSite.theme && Object.keys(sourceSite.theme).length > 0) {
-    const theme = urlMap.size > 0 ? rewriteUrls(sourceSite.theme, urlMap) as Record<string, unknown> : sourceSite.theme
-    await target.updateSiteTheme(targetSiteId, theme)
-    console.log('  Theme copied.')
-  } else {
-    console.log('  No theme data to copy.')
-  }
-
-  // 8. Copy layouts (remap block IDs, rewrite URLs)
-  console.log('\n═══ Copying layouts ═══')
-  const layoutIdMap: IdMap = new Map()
-
-  for (const layout of sourceLayouts) {
-    const headerBlocks = remapLayoutBlocks(layout.headerBlocks, blockIdMap, urlMap)
-    const footerBlocks = remapLayoutBlocks(layout.footerBlocks, blockIdMap, urlMap)
-    const settings = urlMap.size > 0 ? rewriteUrls(layout.settings, urlMap) as Record<string, unknown> : layout.settings
-    const existing = existingLayoutsByName.get(layout.name)
-
-    if (existing) {
-      console.log(`  ~ ${layout.name} (update)`)
-      await target.updateLayout(existing._id, {
-        description: layout.description,
-        headerBlocks,
-        footerBlocks,
-        settings,
-        isDefault: layout.isDefault,
-      })
-      layoutIdMap.set(layout._id, existing._id)
-    } else {
-      console.log(`  + ${layout.name} (create)`)
-      const created = await target.createLayout({
-        name: layout.name,
-        site_id: targetSiteId,
-        description: layout.description,
-        headerBlocks,
-        footerBlocks,
-        settings,
-        isDefault: layout.isDefault,
-      })
-      layoutIdMap.set(layout._id, created._id)
-    }
-  }
-
-  // 9. Copy post types
-  console.log('\n═══ Copying post types ═══')
-  const postTypeIdMap: IdMap = new Map()
-
-  for (const pt of sourcePostTypes) {
-    const existingPostTypes = await target.getPostTypes(targetSiteId)
-    const existing = existingPostTypes.find(e => e.name === pt.name)
-
-    if (existing) {
-      console.log(`  ~ ${pt.name} (exists)`)
-      postTypeIdMap.set(pt._id, existing._id)
-    } else {
-      console.log(`  + ${pt.name} (create)`)
-      const created = await target.createPostType({
-        name: pt.name,
-        site_id: targetSiteId,
-      })
-      postTypeIdMap.set(pt._id, created._id)
-    }
-  }
-
-  // 10. Copy pages — two-pass approach
-  //   Pass 1: Create/update page records (no blocks — createPage ignores them)
-  //   Pass 2: Set blocks on each page via updatePage
-  console.log('\n═══ Copying pages ═══')
-
-  // Re-fetch target pages (post type creation may have auto-created some)
-  const targetPagesAfterPT = await target.getPages(targetSiteId)
-
-  // Build composite key map: "postTypeId:name" or "parentId:name" to handle
-  // duplicate names (e.g., "Index" for main site vs post type index pages)
-  function pageKey(page: any): string {
-    if (page.postTypeId) return `pt:${page.postTypeId}:${page.name}`
-    if (page.parentId) return `parent:${page.parentId}:${page.name}`
-    return `root:${page.name}`
-  }
-  function targetPageKey(page: any): string {
-    // Target pages use their own IDs (already remapped post type / parent IDs)
-    if (page.postTypeId) return `pt:${page.postTypeId}:${page.name}`
-    if (page.parentId) return `parent:${page.parentId}:${page.name}`
-    return `root:${page.name}`
-  }
-  const targetPagesByKey = new Map(targetPagesAfterPT.map((p: any) => [targetPageKey(p), p]))
-  const pageIdMap: IdMap = new Map()
-
-  // Sort: pages without parentId first, then children
-  const sortedPages = [...sourcePagesFull].sort((a: any, b: any) => {
-    const aHasParent = a.parentId ? 1 : 0
-    const bHasParent = b.parentId ? 1 : 0
-    return aHasParent - bHasParent
-  })
-
-  // Pass 1: Create/update pages (without blocks)
-  console.log('  Pass 1: Creating/updating page records...')
-  for (const page of sortedPages) {
-    const remappedSettings = remapPageSettings(
-      urlMap.size > 0 ? rewriteUrls(page.settings, urlMap) as Record<string, unknown> : page.settings,
-      layoutIdMap
-    )
-    const parentId = page.parentId ? (pageIdMap.get(page.parentId) || page.parentId) : undefined
-    const postTypeId = page.postTypeId ? (postTypeIdMap.get(page.postTypeId) || page.postTypeId) : undefined
-
-    // Build composite key using remapped IDs for target lookup
-    const sourceKey = pageKey({
-      name: page.name,
-      postTypeId: postTypeId, // use remapped ID for matching
-      parentId: parentId,     // use remapped ID for matching
-    })
-    const existing = targetPagesByKey.get(sourceKey)
-
-    if (existing) {
-      console.log(`  ~ ${page.name} (update)`)
-      const patch: Record<string, unknown> = {
-        settings: remappedSettings,
-      }
-      if (parentId) patch.parentId = parentId
-      if (postTypeId) patch.postTypeId = postTypeId
-      await target.updatePage(existing._id, patch)
-      pageIdMap.set(page._id, existing._id)
-    } else {
-      console.log(`  + ${page.name} (create)`)
-      const createData: Record<string, unknown> = {
-        name: page.name,
-        site_id: targetSiteId,
-        settings: remappedSettings,
-      }
-      if (parentId) createData.parentId = parentId
-      if (postTypeId) createData.postTypeId = postTypeId
-      const created = await target.createPage(createData as any)
-      pageIdMap.set(page._id, created._id)
-      // Add to lookup so child pages can find their parent
-      targetPagesByKey.set(targetPageKey(created), created)
-    }
-  }
-
-  // Pass 2: Set blocks on each page
-  console.log('  Pass 2: Setting blocks on pages...')
-  for (const page of sortedPages) {
-    const remappedBlocks = page.blocks ? remapPageBlocks(page.blocks, blockIdMap, urlMap) : []
-    const targetPageId = pageIdMap.get(page._id)
-
-    if (!targetPageId) {
-      console.log(`  SKIP ${page.name} (no target page ID)`)
-      continue
-    }
-
-    if (remappedBlocks.length === 0) {
-      console.log(`  - ${page.name} (no blocks)`)
-      continue
-    }
-
-    await target.updatePage(targetPageId, { blocks: remappedBlocks })
-    console.log(`  ✓ ${page.name} → ${remappedBlocks.length} block(s)`)
-  }
-
-  // 11. Summary
+  // 7. Summary
   console.log('\n═══ Copy complete ═══')
-  console.log(`  Blocks:     ${blockIdMap.size}`)
-  console.log(`  Partials:   ${partialIdMap.size}`)
-  console.log(`  Theme:      copied`)
-  console.log(`  Layouts:    ${layoutIdMap.size}`)
-  console.log(`  Post types: ${postTypeIdMap.size}`)
-  console.log(`  Pages:      ${pageIdMap.size}`)
-  console.log(`  Files:      ${includeFiles ? `${urlMap.size} copied` : 'skipped'}`)
+  console.log(`  Blocks:      ${blocks.length}`)
+  console.log(`  Partials:    ${partials.length}`)
+  console.log(`  Layouts:     ${layouts.length}`)
+  console.log(`  Pages:       ${pages.length}`)
+  console.log(`  Folders:     ${folders.length}`)
+  console.log(`  Post types:  ${postTypes.length}`)
+  console.log(`  Files:       ${includeFiles ? `${urlMap.size} rewritten` : 'skipped'}`)
   console.log(`\n  Target site: ${targetSiteId}`)
   console.log(`  Target URL:  ${targetUrl}`)
 }
