@@ -1,35 +1,141 @@
-<header class="sticky top-0 z-10 bg-base/95 backdrop-blur-sm">
-  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
-    <div class="flex items-center justify-between py-4">
-      <div class="flex-1">
-        {{#if logo}}
+<header x-data="{
+    filterOpen: false,
+    sel: {
+      'music-video': new URLSearchParams(window.location.search).get('music-video') || '',
+      'subjects': new URLSearchParams(window.location.search).get('subjects') || '',
+      'grade-level': new URLSearchParams(window.location.search).get('grade-level') || ''
+    },
+    toggle(group, val) {
+      this.sel[group] = this.sel[group] === val ? '' : val;
+    },
+    showResults() {
+      const params = new URLSearchParams();
+      for (const [k, v] of Object.entries(this.sel)) { if (v) params.set(k, v); }
+      const qs = params.toString();
+      window.location.href = '/resources/' + (qs ? '?' + qs : '');
+    }
+  }">
+  <div class="sticky top-0 z-10 bg-base backdrop-blur-sm">
+    <div class="flex h-1 w-[220px] mx-auto">
+      <div class="flex-1 bg-brand"></div>
+      <div class="flex-1 bg-[#ffbb2a]"></div>
+      <div class="flex-1 bg-accent"></div>
+    </div>
+    <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
+      <div class="flex items-center justify-between py-4">
+        <nav class="hidden lg:flex items-center gap-6 flex-1">
+          {{#each nav-links}}
+            <a href="{{url}}" class="body-sm font-bold uppercase tracking-wider text-fg hover:text-brand transition">
+              {{label}}
+            </a>
+          {{/each}}
+        </nav>
+
+        <div class="flex items-center justify-center">
           <a href="/">
-            <img src="{{logo}}" alt="{{default logo-alt 'Logo'}}" class="h-6">
+            {{> Logo}}
           </a>
-        {{else}}
-          <a href="/" class="heading-sm text-fg hover:text-brand transition">
-            {{default logo-text "OK Go Sandbox"}}
-          </a>
-        {{/if}}
-      </div>
+        </div>
 
-      <nav class="hidden lg:flex items-center gap-8">
-        {{#each nav-links}}
-          <a href="{{url}}" class="body-sm text-fg hover:text-brand transition">
-            {{label}}
-          </a>
-        {{/each}}
-      </nav>
+        <div class="hidden lg:flex items-center justify-end gap-4 flex-1">
+          <button @click="filterOpen = !filterOpen" class="inline-flex w-40 gap-2 btn btn-sm btn-primary">
+            Filter Resources
+            {{icon "funnel" size="24" weight="bold"}}
+          </button>
+          {{#if email}}
+            <a x-show="!filterOpen" href="mailto:{{email}}" class="text-brand hover:text-fg transition" aria-label="Email">
+              {{icon "envelope-simple" size="24"}}
+            </a>
+          {{/if}}
+        </div>
 
-      <div class="flex-1 flex items-center justify-end gap-4">
-        {{#if cta-label}}
-          <div class="hidden lg:block">
-            {{> Button link=cta-link label=cta-label style="nav"}}
-          </div>
-        {{/if}}
         <button class="lg:hidden text-fg body-sm font-medium">
           Menu
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Modal Overlay -->
+  <div x-show="filterOpen" x-cloak="" class="fixed inset-0 top-0 z-[999] bg-base/95 backdrop-blur-xs overflow-y-auto">
+    <div class="min-h-screen px-6 lg:px-10 py-8">
+      <div class="mx-auto w-full max-w-6xl">
+
+        <!-- Header row -->
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="heading-md text-fg flex items-center gap-2">
+            <span class="text-brand">{{icon "funnel" size="24"}}</span>
+            Filter Resources
+          </h2>
+          <button @click="filterOpen = false" class="w-40 inline-flex -mt-5 mr-4 gap-2 btn btn-sm btn-secondary">
+            Filter Resources
+            {{icon "x" size="24" weight="bold"}}
+          </button>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Music Videos -->
+          <div>
+            <div class="h-1 bg-brand"></div>
+            <div class="bg-base rounded-b-lg shadow-lg p-6">
+              <h3 class="heading-xs font-bold uppercase tracking-wider text-fg text-center mb-5">Music Videos</h3>
+              <div class="flex flex-wrap justify-center gap-2">
+                {{#each (dataStore "music-videos")}}
+                  <button
+                    @click="toggle('music-video', '{{this.value}}')"
+                    :class="sel['music-video'] === '{{this.value}}' ? 'bg-brand text-on-brand border-brand' : 'border-border text-fg-alt hover:bg-brand hover:text-on-brand hover:border-brand'"
+                    class="border px-4 py-2 heading-xs transition">
+                    {{this.key}}
+                  </button>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+
+          <!-- Subjects -->
+          <div>
+            <div class="h-1 bg-accent2"></div>
+            <div class="bg-base rounded-b-lg shadow-lg p-6">
+              <h3 class="body-sm font-bold uppercase tracking-wider text-fg text-center mb-5">Subjects</h3>
+              <div class="flex flex-wrap justify-center gap-2">
+                {{#each (dataStore "subjects")}}
+                  <button
+                    @click="toggle('subjects', '{{this.value}}')"
+                    :class="sel['subjects'] === '{{this.value}}' ? 'bg-accent2 text-on-brand border-accent2' : 'border-border text-fg-alt hover:bg-accent2 hover:text-on-brand hover:border-accent2'"
+                    class="border px-4 py-2 heading-xs transition">
+                    {{this.key}}
+                  </button>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+
+          <!-- Grade Level -->
+          <div>
+            <div class="h-1 bg-accent"></div>
+            <div class="bg-base rounded-b-lg shadow-lg p-6">
+              <h3 class="body-sm font-bold uppercase tracking-wider text-fg text-center mb-5">Grade Level</h3>
+              <div class="flex flex-wrap justify-center gap-2">
+                {{#each (dataStore "grade-levels")}}
+                  <button
+                    @click="toggle('grade-level', '{{this.value}}')"
+                    :class="sel['grade-level'] === '{{this.value}}' ? 'bg-accent text-on-brand border-accent' : 'border-border text-fg-alt hover:bg-accent hover:text-on-brand hover:border-accent'"
+                    class="border px-4 py-2 heading-xs transition">
+                    {{this.key}}
+                  </button>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Show Results button -->
+        <div class="mt-8">
+          <button @click="showResults()" class="btn btn-md btn-primary">
+            Show Results
+          </button>
+        </div>
       </div>
     </div>
   </div>

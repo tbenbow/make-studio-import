@@ -1,0 +1,38 @@
+<section class="bg-base">
+  {{#if (length items)}}
+    <div class="flex flex-col">
+      {{#each items}}
+        <div class="flex flex-col lg:flex-row-reverse even:lg:flex-row">
+          <div class="lg:w-3/5 overflow-hidden">
+            {{#if image}}
+              <a href="{{default link '#'}}" class="block">
+                <img src="{{image}}" alt="{{default image-alt title}}" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
+              </a>
+            {{else}}
+              <div class="w-full aspect-[16/10] bg-base-muted"></div>
+            {{/if}}
+          </div>
+          <div class="flex flex-col justify-center py-8 lg:py-12 px-8 lg:px-12 xl:px-16 lg:w-2/5">
+            <h2 class="heading-lg text-fg">
+              {{default title "Lesson Title"}}
+            </h2>
+            <p class="body-md text-fg-muted mt-3">
+              {{default description "Lesson description goes here."}}
+            </p>
+            {{#if link}}
+              <div class="mt-6">
+                {{> Button href=link label='View Lessons' icon='caret-right' size='lg' style='primary'}}
+              </div>
+            {{/if}}
+            {{#if topics}}
+              <div class="mt-6">
+                <p class="body-sm text-fg-muted uppercase tracking-wider">Topics</p>
+                <p class="body-sm text-accent mt-1">{{topics}}</p>
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</section>

@@ -31,10 +31,20 @@
     "fg": "#252525",
     "fg-muted": "#858585",
     "fg-alt": "#b5b5b5",
-    "border": "#e0e0e0",
-    "accent": "#f9613e"
+    "border": "#e0e0e0"
   },
-  "customColors": [],
+  "customColors": [
+    {
+      "id": "d6e160d8-cb4a-409f-9cae-81fb07efdd38",
+      "name": "accent2",
+      "value": "#ffbb2a"
+    },
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "accent",
+      "value": "#f9613e"
+    }
+  ],
   "palette": {
     "primary": {
       "label": "primary",
@@ -206,6 +216,75 @@
       "color": "accent",
       "hoverColor": "primary",
       "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Roboto Slab",
+      "fontWeight": 400,
+      "uppercase": false,
+      "sizes": {
+        "lg": {
+          "fontSize": 20,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 17,
+          "paddingBottom": 17,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "borderRadius": 0
+        },
+        "md": {
+          "fontSize": 16,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "borderRadius": 0
+        },
+        "sm": {
+          "fontSize": 14,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 6,
+          "paddingBottom": 6,
+          "paddingLeft": 14,
+          "paddingRight": 14,
+          "borderRadius": 0
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "secondary": {
+        "backgroundColor": "system:base-muted",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
     }
   }
 }

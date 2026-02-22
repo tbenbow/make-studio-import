@@ -1,5 +1,5 @@
 {
-  "description": "Site footer with sponsors and social links",
+  "description": "Site footer with sponsors and",
   "fields": [
     {
       "type": "text",
@@ -43,7 +43,7 @@
     {
       "type": "text",
       "name": "Copyright",
-      "default": "\u00a9 2026 OK Go Sandbox"
+      "default": "© 2026 OK Go Sandbox"
     },
     {
       "type": "wysiwyg",

@@ -1,0 +1,87 @@
+{
+  "description": "Lesson resource detail",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Breadcrumb Label",
+      "default": "This Too Shall Pass"
+    },
+    {
+      "type": "text",
+      "name": "Breadcrumb Link",
+      "default": "/this-too-shall-pass"
+    },
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Chain Reaction Machines"
+    },
+    {
+      "type": "text",
+      "name": "Video URL"
+    },
+    {
+      "type": "image",
+      "name": "Image"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "This challenge will engage students in recognizing different simple machines and creating their own in a chain reaction machine, using the engineering design process to explore forces and motion."
+    },
+    {
+      "type": "items",
+      "name": "Materials",
+      "default": "[{\"id\":\"f76e1449-a0d2-4e03-8d73-f13ed8f490b1\",\"label\":\"Educator Guide\",\"subtitle\":\"Download the Guide\",\"url\":\"#\",\"icon\":\"file-pdf\"},{\"id\":\"0d472128-9764-45b8-9783-c23ca42a2372\",\"label\":\"TTSP CLIP - 6 sec.\",\"subtitle\":\"Download the Clip\",\"icon\":\"play\"},{\"id\":\"6e7f7b5e-4b73-40e5-ad1c-3fc3a0da3877\",\"label\":\"TTSP Clip - 15 sec.\",\"subtitle\":\"Download the Clip\",\"icon\":\"play\"},{\"id\":\"b911df35-a0e8-41cd-b9ff-0cc8b405e9da\",\"label\":\"TTSP Clip - 22 sec.\",\"subtitle\":\"Download the Clip\",\"icon\":\"play\"}]",
+      "config": {
+        "fields": [
+          {
+            "id": "23bd0186-79e0-4e79-b1ea-b1c2361349b3",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "cb1e7018-23a8-4d38-afe7-c67df1421917",
+            "type": "text",
+            "name": "Subtitle",
+            "value": ""
+          },
+          {
+            "id": "292c4bcf-f18a-4738-aee1-0fa2b62e179c",
+            "type": "text",
+            "name": "URL",
+            "value": ""
+          },
+          {
+            "id": "661a991a-6f32-48d5-91f7-7a5fbddf9335",
+            "type": "text",
+            "name": "Icon",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Music Video",
+      "config": {
+        "dataStoreId": "6996388c1a153506bd4085fe"
+      }
+    },
+    {
+      "type": "select",
+      "name": "Subjects",
+      "config": {
+        "dataStoreId": "6996389cff22adb3652d8366"
+      }
+    },
+    {
+      "type": "select",
+      "name": "Grade Level",
+      "config": {
+        "dataStoreId": "699638a5e38fe6395deb6b24"
+      }
+    }
+  ]
+}

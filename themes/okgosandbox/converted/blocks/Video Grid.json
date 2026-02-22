@@ -1,0 +1,38 @@
+{
+  "description": "Clickable thumbs",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Upside Down & Inside Out"
+    },
+    {
+      "type": "items",
+      "name": "Videos",
+      "default": "[{\"id\":\"7c8d1ceb-1999-4908-8c3e-c2932affa964\",\"thumbnail\":\"https://img.youtube.com/vi/LWGJA9i18Co/mqdefault.jpg\",\"title\":\"This is \",\"url\":\"https://www.youtube.com/embed/LWGJA9i18Co?rel=0\"},{\"id\":\"a4f9caed-414c-4f58-b2c6-2eccc5de57c2\",\"thumbnail\":\"https://img.youtube.com/vi/u1ZB_rGFyeU/mqdefault.jpg\",\"title\":\"\",\"url\":\"https://www.youtube.com/embed/u1ZB_rGFyeU?rel=0\"},{\"id\":\"a9c9362b-8d0f-443a-aa1d-ed8601616fe0\",\"thumbnail\":\"https://img.youtube.com/vi/qybUFnY7Y8w/mqdefault.jpg\",\"title\":\"\",\"url\":\"https://www.youtube.com/embed/qybUFnY7Y8w?rel=0\"},{\"id\":\"334ab684-34fc-4032-8946-13ddb30ce006\",\"thumbnail\":\"https://img.youtube.com/vi/m86ae_e_ptU/mqdefault.jpg\",\"title\":\"\",\"url\":\"https://www.youtube.com/embed/m86ae_e_ptU?rel=0\"}]",
+      "config": {
+        "fields": [
+          {
+            "id": "bff3e4e0-f463-47f0-8279-cad4a9b88f26",
+            "type": "image",
+            "name": "Thumbnail",
+            "value": ""
+          },
+          {
+            "id": "c9833941-7f7c-4f08-b501-aee57f765e3f",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "c1a9fa47-9ecb-4327-92f2-a6af22df9074",
+            "type": "text",
+            "name": "URL",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ],
+  "thumbnailType": "video"
+}

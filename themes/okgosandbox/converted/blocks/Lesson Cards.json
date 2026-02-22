@@ -1,5 +1,5 @@
 {
-  "description": "Alternating lesson cards with image and details",
+  "description": "Alternating lesson cards",
   "fields": [
     {
       "type": "items",
@@ -58,16 +58,16 @@
       "config": {
         "fields": [
           {
+            "type": "text",
+            "name": "Title"
+          },
+          {
             "type": "image",
             "name": "Image"
           },
           {
             "type": "text",
             "name": "Image Alt"
-          },
-          {
-            "type": "text",
-            "name": "Title"
           },
           {
             "type": "textarea",
@@ -88,5 +88,6 @@
         ]
       }
     }
-  ]
+  ],
+  "thumbnailType": "cards-alternating"
 }

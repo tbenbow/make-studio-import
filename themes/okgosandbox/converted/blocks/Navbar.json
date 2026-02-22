@@ -1,20 +1,6 @@
 {
-  "description": "Site navigation header with logo and CTA",
+  "description": "Site navigation header with lo",
   "fields": [
-    {
-      "type": "image",
-      "name": "Logo"
-    },
-    {
-      "type": "text",
-      "name": "Logo Alt",
-      "default": "OK Go Sandbox"
-    },
-    {
-      "type": "text",
-      "name": "Logo Text",
-      "default": "OK Go Sandbox"
-    },
     {
       "type": "items",
       "name": "Nav Links",
@@ -29,15 +15,15 @@
         },
         {
           "label": "More",
-          "url": "/more"
+          "url": "/more.html"
         },
         {
           "label": "About",
-          "url": "/about"
+          "url": "/about.html"
         },
         {
           "label": "Ask Ok Go",
-          "url": "/ask-ok-go"
+          "url": "/ask-ok-go.html"
         }
       ],
       "config": {
@@ -55,13 +41,8 @@
     },
     {
       "type": "text",
-      "name": "CTA Label",
-      "default": "Filter Resources"
-    },
-    {
-      "type": "text",
-      "name": "CTA Link",
-      "default": "#"
+      "name": "Email",
+      "default": "hello@okgosandbox.org"
     }
   ]
 }

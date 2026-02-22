@@ -1,0 +1,16 @@
+{
+  "description": "Centered page title with verti",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "More"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle",
+      "default": "Behind the Scenes, Outtakes & More"
+    }
+  ],
+  "thumbnailType": "hero"
+}

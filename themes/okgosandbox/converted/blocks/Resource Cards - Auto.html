@@ -1,0 +1,54 @@
+<section class="py-28 bg-base-muted" x-data="{
+    filters: Object.fromEntries(new URLSearchParams(window.location.search)),
+    matches(el) {
+      for (const [key, val] of Object.entries(this.filters)) {
+        const attr = el.getAttribute('data-' + key);
+        if (attr !== null &amp;&amp; attr !== val) return false;
+      }
+      return true;
+    }
+  }">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-5xl lg:max-w-6xl lg:px-10">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+        {{#each (posts "resources")}}
+          <div data-music-video="{{musicVideo}}" data-subjects="{{subjects}}" data-grade-level="{{gradeLevel}}" x-show="matches($el)">
+
+              <a href="{{default link '#'}}" class="w-full h-auto">
+                <img src="{{default image 'https://placehold.co/600x400'}}" alt="{{default image-alt title}}" class="w-full h-auto object-cover">
+              </a>
+
+            <div class="bg-base shadow-xl p-8 lg:p-10 -mt-24 ml-12 relative">
+              {{#if musicVideo}}
+                <p class="inline-block body-sm text-on-brand bg-accent uppercase px-2.5 pt-1 pb-0.5 mb-2">
+                  {{dataStoreLabel "music-videos" musicVideo}}
+                </p>
+              {{/if}}
+              <h3 class="heading-md text-fg">
+                {{default title "Resource Title"}}
+              </h3>
+              {{#if gradeLevel}}
+                <div class="flex flex-wrap gap-4 mt-3 body-sm tracking-wide">
+                  <span class="text-brand uppercase">Grade {{dataStoreLabel "grade-level" gradeLevel}}</span>
+                  {{#if subjects}}
+                    <span class="text-accent2 uppercase">{{dataStoreLabel "subjects" subjects}}</span>
+                  {{/if}}
+                </div>
+              {{/if}}
+              {{#if description}}
+                <p class="body-md text-fg-muted mt-4">
+                  {{description}}
+                </p>
+              {{/if}}
+              {{#if link}}
+                <div class="mt-6">
+                  {{> Button link=link label="View Resource" style="accent"}}
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+  </div>
+</section>
