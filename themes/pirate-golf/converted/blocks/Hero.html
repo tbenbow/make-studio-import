@@ -1,0 +1,33 @@
+<section class="relative text-on-brand overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="{{image}}" alt="" class="w-full h-full object-cover object-[center_30%]" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[--custom-teal-dark]/20 via-transparent to-[--custom-teal-dark]/70"></div>
+  </div>
+  <div class="relative z-[5] mx-auto w-full max-w-5xl px-6 text-center py-24 sm:py-36">
+    {{#if eyebrow}}
+      <div class="inline-block bg-[--custom-sunset] text-on-brand body-sm font-bold px-4 py-1.5 rounded-full mb-6 shadow-lg" style="transform: rotate(-2deg)">
+        {{eyebrow}}
+      </div>
+    {{/if}}
+    <h1 class="heading-xl text-on-brand mb-4">
+      {{default headline "BUCCANEER'S BLUFF"}}
+    </h1>
+    {{#if subtitle}}
+      <p class="body-lg font-semibold text-on-brand/90 mb-2">
+        {{subtitle}}
+      </p>
+    {{/if}}
+    {{#if body}}
+      <div class="body-md text-on-brand/70 max-w-xl mx-auto mb-10">
+        {{{body}}}
+      </div>
+    {{/if}}
+    {{#if (length buttons)}}
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        {{#each buttons}}
+          {{> Button size="lg"}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

@@ -1,0 +1,38 @@
+<section id="about" class="py-20 lg:py-28 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <div class="relative">
+        <div class="absolute -inset-4 rounded-2xl bg-accent/10 -rotate-2"></div>
+        {{#if image}}
+          <img src="{{image}}" alt="{{default image_alt 'Instructor portrait'}}" class="relative rounded-2xl w-full aspect-[3/4] object-cover shadow-lg" />
+        {{else}}
+          <div class="relative rounded-2xl w-full aspect-[3/4] bg-base-muted flex items-center justify-center">
+            <span class="text-fg-alt body-md">Instructor portrait</span>
+          </div>
+        {{/if}}
+      </div>
+      <div class="flex flex-col gap-6">
+        {{#if eyebrow}}
+          <p class="heading-xs uppercase tracking-widest text-accent">{{eyebrow}}</p>
+        {{/if}}
+        <h2 class="heading-lg text-fg">{{headline}}</h2>
+        <div class="body-md text-fg-muted">
+          {{{description}}}
+        </div>
+        {{#if (length principles)}}
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4 pt-8 border-t border-border">
+            {{#each principles}}
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-3">
+                  <span class="block h-px w-6 bg-brand"></span>
+                  <h3 class="heading-sm text-fg">{{title}}</h3>
+                </div>
+                <p class="body-sm text-fg-muted">{{description}}</p>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

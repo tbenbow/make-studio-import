@@ -1,0 +1,63 @@
+{
+  "description": "LTA",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Save land. Strengthen communities. Create a healthier planet."
+    },
+    {
+      "type": "text",
+      "name": "Subheadline",
+      "default": "Our Mission"
+    },
+    {
+      "type": "textarea",
+      "name": "Text",
+      "default": "Together with our partners, we protect the places that sustain wildlife, provide clean air and water, and nurture healthy communities for generations to come."
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Discover the work"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+    },
+    {
+      "type": "items",
+      "name": "Highlights",
+      "default": "[{\"id\":\"1\",\"label\":\"Earning Ground\",\"title\":\"Keep gaining ground\",\"description\":\"Collaborate with local leaders to preserve lands rich with biodiversity.\",\"image\":\"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=400&q=80\",\"icon\":\"handshake\"},{\"id\":\"2\",\"label\":\"Conservation Priorities\",\"title\":\"Tackle urgent challenges\",\"description\":\"Direct resources to habitats most vulnerable to climate threats.\",\"image\":\"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=400&q=80\",\"icon\":\"target\"},{\"id\":\"3\",\"label\":\"Land Conservation\",\"title\":\"Protect what matters\",\"description\":\"Safeguard working lands that provide food, jobs, and natural resilience.\",\"image\":\"https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80\",\"icon\":\"shield-check\"}]",
+      "config": {
+        "fields": [
+          {
+            "id": "highlights-image",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          },
+          {
+            "id": "highlights-title",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "highlights-label",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "highlights-description",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

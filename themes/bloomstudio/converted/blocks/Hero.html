@@ -1,0 +1,24 @@
+<section class="relative overflow-hidden bg-base py-24 lg:py-32">
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 20% 50%, #7A956E 1px, transparent 1px), radial-gradient(circle at 80% 20%, #C4918A 1px, transparent 1px), radial-gradient(circle at 60% 80%, #7A956E 1px, transparent 1px); background-size: 60px 60px, 80px 80px, 70px 70px;"></div>
+  <div class="relative mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col items-center gap-8">
+    {{#if eyebrow}}
+      <p class="heading-xs uppercase tracking-widest text-accent">{{eyebrow}}</p>
+    {{/if}}
+    <h1 class="heading-xl text-fg max-w-4xl text-center text-balance">{{headline}}</h1>
+    <div class="body-lg text-fg-muted max-w-xl text-center">
+      {{{subheadline}}}
+    </div>
+    {{#if (length buttons)}}
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-2">
+        {{#each buttons}}
+          {{> Button}}
+        {{/each}}
+      </div>
+    {{/if}}
+    <div class="mt-8 flex items-center gap-3 text-fg-alt body-sm">
+      <span class="block h-px w-8 bg-border"></span>
+      <span>{{default tagline "Mindful movement for modern life"}}</span>
+      <span class="block h-px w-8 bg-border"></span>
+    </div>
+  </div>
+</section>

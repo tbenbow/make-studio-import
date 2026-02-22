@@ -1,0 +1,34 @@
+<header class="sticky top-0 z-10 bg-base/95 backdrop-blur-sm">
+  <nav>
+    <div class="mx-auto flex h-20 max-w-7xl items-center gap-4 px-6 lg:px-10">
+      <div class="flex flex-1 items-center">
+        <a href="{{default logo_link '/'}}" class="inline-flex items-center gap-2">
+          {{#if logo}}
+            <img src="{{logo}}" alt="{{logo_text}}" class="h-8 w-auto" />
+          {{else}}
+            <span class="heading-md text-fg" style="font-style: italic;">{{default logo_text "bloom"}}</span>
+          {{/if}}
+        </a>
+      </div>
+      {{#if (length links)}}
+        <div class="hidden lg:flex gap-10">
+          {{#each links}}
+            <a href="{{url}}" class="body-sm font-medium text-fg-muted hover:text-brand transition-all duration-300 {{#if (isActive url)}}text-brand{{/if}}">
+              {{label}}
+            </a>
+          {{/each}}
+        </div>
+      {{/if}}
+      <div class="flex flex-1 items-center justify-end gap-4">
+        {{#if button_label}}
+          <a href="{{default button_link '#'}}" class="hidden sm:inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand text-on-brand px-5 py-2.5 body-sm font-medium hover:bg-base-alt transition-all duration-300">
+            {{button_label}}
+          </a>
+        {{/if}}
+        <button type="button" aria-label="Toggle menu" class="inline-flex rounded-full p-2 text-fg hover:bg-base-muted transition lg:hidden">
+          {{icon "list" size="24"}}
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

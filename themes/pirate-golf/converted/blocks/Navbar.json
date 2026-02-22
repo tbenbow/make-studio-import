@@ -1,0 +1,26 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "Buccaneer's Bluff" },
+    { "type": "text", "name": "Logo Link", "default": "/" },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "label": "Courses", "link": "#courses" },
+        { "label": "What's Inside", "link": "#epic" },
+        { "label": "The Galley", "link": "#galley" },
+        { "label": "Prices", "link": "#prices" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" }
+        ]
+      }
+    },
+    { "type": "text", "name": "CTA Label", "default": "Book Your Tee Time!" },
+    { "type": "text", "name": "CTA Link", "default": "#prices" }
+  ]
+}

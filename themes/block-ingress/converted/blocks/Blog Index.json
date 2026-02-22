@@ -1,0 +1,38 @@
+{
+  "description": "Post listing with filters",
+  "fields": [
+    {
+      "type": "text",
+      "name": "headline",
+      "default": "Blog"
+    },
+    {
+      "type": "text",
+      "name": "Subheadline",
+      "default": "Latest posts and thoughts"
+    },
+    {
+      "type": "select",
+      "name": "Paginate",
+      "default": "true",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Yes",
+            "value": "true"
+          },
+          {
+            "key": "No",
+            "value": "false"
+          }
+        ]
+      }
+    },
+    {
+      "type": "number",
+      "name": "Posts Per Page",
+      "default": 9
+    }
+  ],
+  "thumbnailType": "blog-index"
+}

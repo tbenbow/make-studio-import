@@ -1,0 +1,28 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Sticky navbar with logo, nav links, and CTA",
+  "fields": [
+    { "type": "image", "name": "Logo", "default": "" },
+    { "type": "text", "name": "Logo Text", "default": "bloom" },
+    { "type": "text", "name": "Logo Link", "default": "/" },
+    {
+      "type": "items",
+      "name": "Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Url" }
+        ]
+      },
+      "default": [
+        { "label": "About", "url": "#about" },
+        { "label": "Classes", "url": "#classes" },
+        { "label": "Schedule", "url": "#schedule" },
+        { "label": "Community", "url": "#testimonials" }
+      ]
+    },
+    { "type": "text", "name": "Button Label", "default": "Book a Class" },
+    { "type": "text", "name": "Button Link", "default": "#schedule" }
+  ]
+}

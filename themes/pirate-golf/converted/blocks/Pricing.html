@@ -1,0 +1,35 @@
+<section class="relative text-on-brand py-24 sm:py-32 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="{{background-image}}" alt="" class="w-full h-full object-cover object-bottom" />
+    <div class="absolute inset-0 bg-[--custom-teal-dark]/70"></div>
+  </div>
+  <div class="relative z-[5] mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="text-center mb-16">
+      <h2 class="heading-lg text-[--custom-treasure] mb-3">{{default headline "GRAB YOUR PUTTER"}}</h2>
+      {{#if subheadline}}
+        <p class="body-lg text-fg-alt">{{subheadline}}</p>
+      {{/if}}
+    </div>
+
+    {{#if (length tiers)}}
+      <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {{#each tiers}}
+          <div class="{{#if featured}}bg-[--custom-sunset] shadow-2xl relative scale-105{{else}}bg-on-brand/10 border border-on-brand/10{{/if}} rounded-2xl p-8 text-center">
+            {{#if featured}}
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[--custom-treasure] text-[--custom-teal-dark] body-sm font-bold px-4 py-1 rounded-full">BEST VALUE</div>
+            {{/if}}
+            <h3 class="heading-sm {{#if featured}}text-on-brand{{else}}text-[--custom-treasure]{{/if}} mb-2">{{name}}</h3>
+            <p class="heading-lg text-on-brand mb-1">{{price}}</p>
+            <p class="body-sm {{#if featured}}text-on-brand/80{{else}}text-fg-alt{{/if}} mb-6">{{unit}}</p>
+            {{#if features}}
+              <div class="body-sm {{#if featured}}text-on-brand/80{{else}}text-fg-alt/80{{/if}} text-left mb-8">
+                {{{features}}}
+              </div>
+            {{/if}}
+            {{> Button link=cta-link label=cta-label style=(default cta-style "ghost")}}
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

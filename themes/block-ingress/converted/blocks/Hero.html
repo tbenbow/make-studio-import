@@ -1,0 +1,90 @@
+<section class="relative bg-base overflow-hidden">
+
+  <!-- Top section: person image + heading + CTA -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-10 lg:pt-16 pb-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
+      <!-- Left: tagline + person image -->
+      <div class="relative">
+        {{#if tagline}}
+          <p class="body-sm text-fg-muted mb-6">{{tagline}}</p>
+        {{/if}}
+        {{#if hero-image}}
+          <div class="relative rounded-xl overflow-hidden aspect-[4/5] max-h-[480px]">
+            <img src="{{hero-image}}" alt="{{default hero-image-alt ''}}" class="w-full h-full object-cover object-top">
+          </div>
+        {{/if}}
+      </div>
+
+      <!-- Right: heading + CTA button -->
+      <div class="flex flex-col justify-center lg:pt-12">
+        <h1 class="heading-xl text-fg uppercase tracking-tight">
+          {{default heading "Stable Data Protection"}}
+        </h1>
+        {{#if cta-label}}
+          <div class="mt-8">
+            {{> Button link=cta-link label=cta-label style="secondary" size="lg"}}
+          </div>
+        {{/if}}
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bento grid: feature cards -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pb-10 lg:pb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      <!-- Card 1: Feature with icon image -->
+      <div class="bg-base-alt rounded-2xl p-6 flex flex-col justify-between min-h-[240px]">
+        {{#if card-1-title}}
+          <p class="heading-sm text-base">{{card-1-title}}</p>
+        {{/if}}
+        {{#if card-1-image}}
+          <div class="flex justify-center my-4">
+            <img src="{{card-1-image}}" alt="" class="w-24 h-24 object-contain">
+          </div>
+        {{/if}}
+        {{#if card-1-text}}
+          <p class="body-sm text-base/70">{{card-1-text}}</p>
+        {{/if}}
+      </div>
+
+      <!-- Card 2: Stat card -->
+      <div class="bg-brand rounded-2xl p-6 flex flex-col justify-between min-h-[240px]">
+        {{#if card-2-title}}
+          <div class="flex items-center gap-3">
+            <p class="heading-xs text-on-brand">{{card-2-title}}</p>
+            {{#if card-2-avatars}}
+              <div class="flex -space-x-2">
+                <img src="{{card-2-avatars}}" alt="" class="h-8 rounded-full">
+              </div>
+            {{/if}}
+          </div>
+        {{/if}}
+        {{#if card-2-stat}}
+          <p class="heading-lg text-on-brand mt-auto">{{card-2-stat}}</p>
+        {{/if}}
+      </div>
+
+      <!-- Card 3: Description card -->
+      <div class="bg-base-alt rounded-2xl p-6 flex flex-col justify-between min-h-[240px]">
+        {{#if card-3-title}}
+          <p class="heading-md text-base">{{card-3-title}}</p>
+        {{/if}}
+        {{#if card-3-text}}
+          <p class="body-sm text-base/70 mt-auto">{{card-3-text}}</p>
+        {{/if}}
+      </div>
+
+      <!-- Card 4: Device mockup -->
+      <div class="bg-brand rounded-2xl overflow-hidden relative min-h-[240px]">
+        {{#if card-4-image}}
+          <img src="{{card-4-image}}" alt="{{default card-4-image-alt ''}}" class="w-full h-full object-cover">
+        {{/if}}
+      </div>
+
+    </div>
+  </div>
+
+</section>

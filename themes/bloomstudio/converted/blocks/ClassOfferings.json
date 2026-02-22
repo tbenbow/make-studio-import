@@ -1,0 +1,55 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Two-column split comparing in-person and online class offerings",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Two Ways to Practice" },
+    { "type": "text", "name": "Headline", "default": "Find Your Practice" },
+    { "type": "text", "name": "In Person Title", "default": "In the Studio" },
+    {
+      "type": "wysiwyg",
+      "name": "In Person Description",
+      "default": "<p>Join us in our sun-filled Williamsburg studio for guided classes in a warm, intimate setting. Small class sizes mean personal attention and real community.</p>"
+    },
+    {
+      "type": "items",
+      "name": "In Person Features",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Text" }
+        ]
+      },
+      "default": [
+        { "text": "Small classes, 12 students max" },
+        { "text": "Hands-on adjustments and modifications" },
+        { "text": "Community events and workshops" },
+        { "text": "Complimentary tea after every class" }
+      ]
+    },
+    { "type": "text", "name": "In Person Button Label", "default": "View Studio Schedule" },
+    { "type": "text", "name": "In Person Button Link", "default": "#schedule" },
+    { "type": "text", "name": "Online Title", "default": "On Demand" },
+    {
+      "type": "wysiwyg",
+      "name": "Online Description",
+      "default": "<p>Your practice, your schedule. Access a growing library of classes filmed in the studio — from 15-minute flows to 75-minute deep practices. New classes added weekly.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Online Features",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Text" }
+        ]
+      },
+      "default": [
+        { "text": "80+ classes across all levels" },
+        { "text": "New classes added every week" },
+        { "text": "Practice anywhere, any device" },
+        { "text": "Curated programs and series" }
+      ]
+    },
+    { "type": "text", "name": "Online Button Label", "default": "Browse the Library" },
+    { "type": "text", "name": "Online Button Link", "default": "#" }
+  ]
+}

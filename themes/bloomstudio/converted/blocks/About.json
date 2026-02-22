@@ -1,0 +1,36 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Instructor bio with portrait, philosophy, and three guiding principles",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Meet Your Teacher" },
+    { "type": "text", "name": "Headline", "default": "Rooted in Practice, Led by Curiosity" },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>I believe yoga isn't about perfect poses — it's about building an honest relationship with your body. My classes blend traditional Vinyasa with functional movement, creating space for both challenge and stillness.</p><p>After 12 years of teaching and thousands of hours of study, my approach remains simple: meet yourself where you are, breathe through what's hard, and leave feeling more like yourself.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "",
+      "config": { "maxWidth": 800, "maxHeight": 1000 }
+    },
+    { "type": "text", "name": "Image Alt", "default": "Instructor portrait" },
+    {
+      "type": "items",
+      "name": "Principles",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Description" }
+        ]
+      },
+      "default": [
+        { "title": "Breath", "description": "Every movement begins and ends with the breath. It's the foundation of everything we practice together." },
+        { "title": "Strength", "description": "Not just physical — the quiet strength that comes from showing up for yourself, consistently and without judgment." },
+        { "title": "Presence", "description": "The rare gift of being fully here. On the mat, we practice the focus that carries into everything else." }
+      ]
+    }
+  ]
+}

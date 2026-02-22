@@ -1,0 +1,22 @@
+{{#switch style}}
+  {{#case "secondary"}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-brand bg-transparent text-brand px-6 py-3 body-sm font-medium hover:bg-brand hover:text-on-brand transition-all duration-300">
+      {{default label "Learn More"}}
+    </a>
+  {{/case}}
+  {{#case "ghost"}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-2 text-brand px-4 py-3 body-sm font-medium hover:text-accent transition-all duration-300 underline underline-offset-4 decoration-border hover:decoration-accent">
+      {{default label "Learn More"}}
+    </a>
+  {{/case}}
+  {{#case "accent"}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-accent text-on-brand px-6 py-3 body-sm font-medium hover:bg-accent/80 transition-all duration-300">
+      {{default label "Learn More"}}
+    </a>
+  {{/case}}
+  {{#otherwise}}
+    <a href="{{link}}" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand text-on-brand px-6 py-3 body-sm font-medium hover:bg-base-alt transition-all duration-300">
+      {{default label "Learn More"}}
+    </a>
+  {{/otherwise}}
+{{/switch}}

@@ -1,0 +1,42 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "2x2 feature grid with image cards on dark background",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "THIS AIN'T YOUR AVERAGE MINI GOLF" },
+    { "type": "text", "name": "Subheadline", "default": "We went completely overboard — in the best way possible." },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "",
+          "heading": "30+ ANIMATRONIC PIRATES",
+          "description": "<p>Life-size robotic buccaneers that move, talk, sing, and react to your game. Blackbeard guards the 18th hole. Captain Bones tells terrible jokes on the 7th. The parrot on hole 3 heckles everyone.</p>"
+        },
+        {
+          "image": "",
+          "heading": "SEVEN REAL WATERFALLS",
+          "description": "<p>Not a trickle. Real, thundering waterfalls. Putt under them. Putt through them. One of them actually parts like the sea when your ball approaches. You'll get a little misty. In both senses.</p>"
+        },
+        {
+          "image": "",
+          "heading": "TOWERING PIRATE STRUCTURES",
+          "description": "<p>A 40-foot fortress with real lookout towers. A full ship bow you putt through. A lighthouse you can see from the highway. These aren't decorations — they're destinations.</p>"
+        },
+        {
+          "image": "",
+          "heading": "CINEMATIC SOUNDTRACK",
+          "description": "<p>An original score plays through 40 hidden speakers. You'll hear sea shanties in the cove, thunder on Blackbeard's course, and the Kraken's roar echoing through the caves. It's a whole production.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "image", "name": "Image" },
+          { "type": "text", "name": "Heading" },
+          { "type": "wysiwyg", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

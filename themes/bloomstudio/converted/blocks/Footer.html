@@ -1,0 +1,53 @@
+<footer class="pt-16">
+  <div class="bg-base-alt py-16 text-on-brand">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div class="flex flex-col gap-4">
+          <span class="heading-md text-on-brand" style="font-style: italic;">{{default logo_text "bloom"}}</span>
+          <div class="body-sm text-on-brand/60">{{{tagline}}}</div>
+          {{#if (length social_links)}}
+            <div class="flex items-center gap-4 mt-2">
+              {{#each social_links}}
+                <a href="{{url}}" target="_blank" rel="noopener" aria-label="{{name}}" class="text-on-brand/60 hover:text-on-brand transition-all duration-300">
+                  {{icon icon size="20"}}
+                </a>
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="body-sm font-semibold text-on-brand uppercase tracking-wider">{{default contact_heading "Visit the Studio"}}</h4>
+          <div class="body-sm text-on-brand/60 flex flex-col gap-2">
+            {{{contact_details}}}
+          </div>
+        </div>
+        {{#if (length links)}}
+          <div class="flex flex-col gap-4">
+            <h4 class="body-sm font-semibold text-on-brand uppercase tracking-wider">{{default links_heading "Quick Links"}}</h4>
+            <nav>
+              <ul class="flex flex-col gap-2">
+                {{#each links}}
+                  <li>
+                    <a href="{{url}}" class="body-sm text-on-brand/60 hover:text-on-brand transition-all duration-300">
+                      {{label}}
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </nav>
+          </div>
+        {{/if}}
+      </div>
+      <div class="mt-12 pt-8 border-t border-on-brand/10">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="body-sm text-on-brand/40">{{{fineprint}}}</div>
+          <div class="flex items-center gap-1 text-on-brand/20">
+            <span class="block h-px w-4 bg-current"></span>
+            <span class="block h-1 w-1 rounded-full bg-current"></span>
+            <span class="block h-px w-4 bg-current"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,37 @@
+<section id="testimonials" class="py-20 lg:py-28 bg-panel">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="flex flex-col items-center gap-4 mb-16 text-center">
+      {{#if eyebrow}}
+        <p class="heading-xs uppercase tracking-widest text-accent">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg">{{headline}}</h2>
+    </div>
+    {{#if (length testimonials)}}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {{#each testimonials}}
+          <div class="rounded-2xl bg-base p-8 lg:p-10 flex flex-col gap-6 shadow-sm">
+            <div class="flex items-center gap-1 text-accent">
+              <span class="heading-lg leading-none">&ldquo;</span>
+            </div>
+            <div class="body-md text-fg-muted italic flex-1">{{{quote}}}</div>
+            <div class="flex items-center gap-4 pt-4 border-t border-border/50">
+              {{#if image}}
+                <img src="{{image}}" alt="{{name}}" class="h-10 w-10 rounded-full object-cover" />
+              {{else}}
+                <div class="h-10 w-10 rounded-full bg-brand/10 flex items-center justify-center text-brand body-sm font-semibold">
+                  {{initials}}
+                </div>
+              {{/if}}
+              <div>
+                <p class="body-sm font-semibold text-fg">{{name}}</p>
+                {{#if detail}}
+                  <p class="body-sm text-fg-alt">{{detail}}</p>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

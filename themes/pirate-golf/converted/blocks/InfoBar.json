@@ -1,0 +1,31 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "3-column info grid on dark background",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Columns",
+      "default": [
+        {
+          "heading": "HOURS",
+          "body": "<p>Mon – Thu: 10am – 10pm</p><p>Fri – Sat: 10am – Midnight</p><p>Sun: 10am – 9pm</p>"
+        },
+        {
+          "heading": "FIND US",
+          "body": "<p>1742 Corsair Boulevard</p><p>Port Harbor, FL 33019</p><p class='body-sm mt-2 text-fg-alt'>Look for the 40-foot pirate fortress!</p>"
+        },
+        {
+          "heading": "CONTACT",
+          "body": "<p>(555) 742-ARGH</p><p>ahoy@buccaneersbluff.com</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Heading" },
+          { "type": "wysiwyg", "name": "Body" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "fonts": [
+    {
+      "family": "Space Grotesk",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": 700,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "brand": "#2845C4",
+    "on-brand": "#ffffff",
+    "base": "#0B1640",
+    "base-muted": "#111F52",
+    "base-alt": "#D8DEF0",
+    "panel": "#1A2A6C",
+    "fg": "#ffffff",
+    "fg-muted": "#8A94B8",
+    "fg-alt": "#5A6488",
+    "border": "#1E3070"
+  },
+  "customColors": [],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": [
+        "#8A9AE8",
+        "#5A70D6",
+        "#2845C4",
+        "#1E35A0",
+        "#14257C"
+      ]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": [
+        "#D8DEF0",
+        "#8A94B8",
+        "#5A6488",
+        "#2A3460",
+        "#0B1640"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 700,
+      "fontSize": 72,
+      "lineHeight": 76,
+      "letterSpacing": -1,
+      "mobileFontSize": 40,
+      "mobileLineHeight": 44
+    },
+    "heading-lg": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 700,
+      "fontSize": 48,
+      "lineHeight": 54,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 30,
+      "mobileLineHeight": 36
+    },
+    "heading-md": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 700,
+      "fontSize": 28,
+      "lineHeight": 36,
+      "letterSpacing": -0.3,
+      "mobileFontSize": 22,
+      "mobileLineHeight": 28
+    },
+    "heading-sm": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 500,
+      "fontSize": 20,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "mobileFontSize": 18,
+      "mobileLineHeight": 24
+    },
+    "heading-xs": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 500,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "mobileFontSize": 14,
+      "mobileLineHeight": 20
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+      "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+      "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+      "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+      "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "brand",
+      "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Space Grotesk",
+      "fontWeight": 500,
+      "uppercase": false,
+      "sizes": {
+        "lg": {
+          "fontSize": 18,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "borderRadius": 6
+        },
+        "md": {
+          "fontSize": 16,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 12,
+          "paddingBottom": 12,
+          "paddingLeft": 28,
+          "paddingRight": 28,
+          "borderRadius": 6
+        },
+        "sm": {
+          "fontSize": 14,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 8,
+          "paddingBottom": 8,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "borderRadius": 4
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "secondary": {
+        "backgroundColor": "system:fg",
+        "textColor": "system:base",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "system:fg",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
+    }
+  }
+}

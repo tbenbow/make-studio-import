@@ -1,0 +1,80 @@
+{
+  "description": "Bento hero with heading, perso",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Stable Data Protection"
+    },
+    {
+      "type": "text",
+      "name": "Tagline",
+      "default": "Model predict and stop threats"
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Get Started"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#"
+    },
+    {
+      "type": "image",
+      "name": "Hero Image"
+    },
+    {
+      "type": "text",
+      "name": "Hero Image Alt"
+    },
+    {
+      "type": "text",
+      "name": "Card 1 Title",
+      "default": "AI-Driven"
+    },
+    {
+      "type": "image",
+      "name": "Card 1 Image"
+    },
+    {
+      "type": "text",
+      "name": "Card 1 Text",
+      "default": "Scanning securely..."
+    },
+    {
+      "type": "text",
+      "name": "Card 2 Title",
+      "default": "Secured Users"
+    },
+    {
+      "type": "image",
+      "name": "Card 2 Avatars"
+    },
+    {
+      "type": "text",
+      "name": "Card 2 Stat",
+      "default": "20K+"
+    },
+    {
+      "type": "text",
+      "name": "Card 3 Title",
+      "default": "Unbeatable defense with AI"
+    },
+    {
+      "type": "text",
+      "name": "Card 3 Text",
+      "default": "Adaptive learning system that evolves with every breach attempt"
+    },
+    {
+      "type": "image",
+      "name": "Card 4 Image"
+    },
+    {
+      "type": "text",
+      "name": "Card 4 Image Alt"
+    }
+  ],
+  "thumbnailType": "hero"
+}

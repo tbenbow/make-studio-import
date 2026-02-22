@@ -1,0 +1,30 @@
+<section class="py-24 sm:py-32 bg-base-alt text-on-brand overflow-hidden">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="text-center mb-16">
+      <h2 class="heading-lg text-[--custom-treasure] mb-3">{{default headline "THIS AIN'T YOUR AVERAGE MINI GOLF"}}</h2>
+      {{#if subheadline}}
+        <p class="body-lg text-fg-alt">{{subheadline}}</p>
+      {{/if}}
+    </div>
+
+    {{#if (length items)}}
+      <div class="grid md:grid-cols-2 gap-8">
+        {{#each items}}
+          <div class="rounded-2xl overflow-hidden">
+            <div class="aspect-[16/9] overflow-hidden">
+              <img src="{{image}}" alt="{{heading}}" class="w-full h-full object-cover" />
+            </div>
+            <div class="bg-on-brand/5 border border-on-brand/10 border-t-0 rounded-b-2xl p-8">
+              <h3 class="heading-sm text-[--custom-treasure] mb-2">{{heading}}</h3>
+              {{#if description}}
+                <div class="body-md text-fg-alt/80 leading-relaxed">
+                  {{{description}}}
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

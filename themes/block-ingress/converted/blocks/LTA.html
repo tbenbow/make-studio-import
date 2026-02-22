@@ -1,0 +1,34 @@
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <img src="{{image}}" alt="Scenic landscape" class="bg-base  w-full h-full object-cover">
+    <div class="absolute inset-0 bg-base/50"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+    <div class="inline-flex items-center gap-2 bg-brand/90 px-4 py-1 rounded-full shadow-md">
+      {{icon "leaf" size="18" class="text-on-brand"}}
+      <span class="body-sm text-on-brand uppercase tracking-wide">{{subheadline}}</span>
+    </div>
+    <h1 class="heading-lg text-fg mt-6 max-w-3xl">{{headline}}</h1>
+    <p class="body-lg text-fg mt-6 max-w-2xl">{{text}}</p>
+    <div class="mt-10">
+      {{> Button label=button_label }}
+    </div>
+    <div class="mt-16 grid gap-6 lg:grid-cols-3">
+      {{#each highlights}}
+        <article class="bg-panel rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row">
+          <div class="lg:w-32 h-28 lg:h-auto bg-base-muted">
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+          </div>
+          <div class="p-5 flex-1">
+            <div class="flex items-center gap-2 body-sm text-brand uppercase tracking-wide">
+              {{icon icon size="18" class="text-brand"}}
+              <span>{{label}}</span>
+            </div>
+            <h3 class="heading-xs text-fg mt-3">{{title}}</h3>
+            <p class="body-sm text-fg-muted mt-2">{{description}}</p>
+          </div>
+        </article>
+      {{/each}}
+    </div>
+  </div>
+</section>

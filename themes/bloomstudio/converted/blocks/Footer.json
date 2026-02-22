@@ -1,0 +1,58 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three-column footer with contact info, links, and social icons",
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "bloom" },
+    {
+      "type": "wysiwyg",
+      "name": "Tagline",
+      "default": "<p>Mindful movement for modern life. In-studio and online yoga in Williamsburg, Brooklyn.</p>"
+    },
+    { "type": "text", "name": "Contact Heading", "default": "Visit the Studio" },
+    {
+      "type": "wysiwyg",
+      "name": "Contact Details",
+      "default": "<p>218 Bedford Avenue<br>Williamsburg, Brooklyn<br>New York, NY 11249</p><p>hello@bloomyogastudio.com<br>(718) 555-0132</p>"
+    },
+    { "type": "text", "name": "Links Heading", "default": "Quick Links" },
+    {
+      "type": "items",
+      "name": "Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Url" }
+        ]
+      },
+      "default": [
+        { "label": "Class Schedule", "url": "#schedule" },
+        { "label": "Online Library", "url": "#" },
+        { "label": "Private Sessions", "url": "#" },
+        { "label": "Teacher Training", "url": "#" },
+        { "label": "Gift Cards", "url": "#" }
+      ]
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Icon" },
+          { "type": "text", "name": "Url" }
+        ]
+      },
+      "default": [
+        { "name": "Instagram", "icon": "instagram-logo", "url": "#" },
+        { "name": "YouTube", "icon": "youtube-logo", "url": "#" },
+        { "name": "Spotify", "icon": "spotify-logo", "url": "#" }
+      ]
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2026 Bloom Yoga Studio. All rights reserved.</p>"
+    }
+  ]
+}

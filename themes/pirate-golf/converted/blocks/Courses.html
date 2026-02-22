@@ -1,0 +1,40 @@
+<section class="py-20 sm:py-28 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="text-center mb-16">
+      <h2 class="heading-lg text-base-alt mb-3">{{default headline "CHOOSE YOUR ADVENTURE"}}</h2>
+      {{#if subheadline}}
+        <p class="body-lg text-fg-muted">{{subheadline}}</p>
+      {{/if}}
+    </div>
+
+    {{#each courses}}
+      <div class="flex flex-col {{#if @odd}}lg:flex-row-reverse{{else}}lg:flex-row{{/if}} gap-8 {{#unless @last}}mb-12{{/unless}} items-center">
+        <div class="lg:w-1/2">
+          <div class="rounded-3xl overflow-hidden shadow-2xl">
+            <img src="{{image}}" alt="{{heading}}" class="w-full h-auto" />
+          </div>
+        </div>
+        <div class="lg:w-1/2">
+          {{#if badge}}
+            <div class="inline-block bg-panel text-brand body-sm font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-3">
+              {{badge}}
+            </div>
+          {{/if}}
+          <h3 class="heading-md text-base-alt mb-4">{{heading}}</h3>
+          {{#if description}}
+            <div class="body-md text-fg-muted leading-relaxed mb-6">
+              {{{description}}}
+            </div>
+          {{/if}}
+          {{#if (length tags)}}
+            <div class="flex flex-wrap gap-3">
+              {{#each tags}}
+                <span class="bg-brand text-on-brand body-sm font-semibold px-4 py-2 rounded-full">{{label}}</span>
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

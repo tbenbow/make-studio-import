@@ -1,0 +1,21 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Label", "default": "Learn More" },
+    { "type": "text", "name": "Link", "default": "#" },
+    {
+      "type": "select",
+      "name": "Style",
+      "default": "primary",
+      "config": {
+        "selectOptions": [
+          { "key": "Primary", "value": "primary" },
+          { "key": "Secondary", "value": "secondary" },
+          { "key": "Accent", "value": "accent" },
+          { "key": "Ghost", "value": "ghost" }
+        ]
+      }
+    }
+  ]
+}

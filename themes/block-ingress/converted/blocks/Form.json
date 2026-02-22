@@ -1,0 +1,59 @@
+{
+  "description": "Form",
+  "fields": [
+    {
+      "type": "text",
+      "name": "headline",
+      "default": "Contact sales"
+    },
+    {
+      "type": "text",
+      "name": "subheadline",
+      "default": "We desperately want to hear from you."
+    },
+    {
+      "type": "items",
+      "name": "Fields",
+      "default": "[{\"id\":\"c1f551d2-248d-4164-a174-2ef4bd9d4af3\",\"label\":\"Name\",\"name\":\"name\"},{\"id\":\"ad02e7a5-b888-4a1b-b72d-33ffc3a61549\",\"label\":\"Email\",\"name\":\"email\",\"type\":\"email\"},{\"id\":\"5346bea7-3adf-46c9-95da-d2b713a5de12\",\"label\":\"Message\",\"name\":\"message\",\"type\":\"textarea\"}]",
+      "config": {
+        "fields": [
+          {
+            "id": "1f952a93-e737-4ced-937d-3ca49824f4cd",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "86894dc6-fab9-439b-9402-0fd644eb49f3",
+            "type": "text",
+            "name": "name",
+            "value": ""
+          },
+          {
+            "id": "ee74b04a-a494-4099-a368-3f51b43bfbae",
+            "type": "select",
+            "name": "Type",
+            "value": "",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Text",
+                  "value": "text"
+                },
+                {
+                  "key": "Email",
+                  "value": "email"
+                },
+                {
+                  "key": "Textarea",
+                  "value": "textarea"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "thumbnailType": "form"
+}

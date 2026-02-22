@@ -1,0 +1,290 @@
+{
+  "fonts": [
+    {
+      "family": "Bangers",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Quicksand",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Quicksand",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Quicksand",
+      "weight": 600,
+      "style": "normal"
+    },
+    {
+      "family": "Quicksand",
+      "weight": 700,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "brand": "#0e7a6e",
+    "on-brand": "#ffffff",
+    "base": "#fff4e0",
+    "base-muted": "#f5e6c8",
+    "base-alt": "#0a524a",
+    "panel": "#e8d8b8",
+    "fg": "#0c3547",
+    "fg-muted": "#4d7585",
+    "fg-alt": "#38d9c4",
+    "border": "#c8b898"
+  },
+  "customColors": [
+    {
+      "id": "sunset-001",
+      "name": "sunset",
+      "value": "#ff6b35"
+    },
+    {
+      "id": "treasure-001",
+      "name": "treasure",
+      "value": "#ffd700"
+    },
+    {
+      "id": "teal-dark-001",
+      "name": "teal-dark",
+      "value": "#062e2a"
+    }
+  ],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": [
+        "#38d9c4",
+        "#20c9b0",
+        "#0e7a6e",
+        "#0a524a",
+        "#062e2a"
+      ]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": [
+        "#f5e6c8",
+        "#c8b898",
+        "#4d7585",
+        "#0c3547",
+        "#062e2a"
+      ]
+    },
+    "accent1": {
+      "label": "accent-1",
+      "colors": [
+        "#ff8c5a",
+        "#ff6b35",
+        "#e55a2a",
+        "#cc4a20",
+        "#b33a15"
+      ]
+    },
+    "accent2": {
+      "label": "accent-2",
+      "colors": [
+        "#ffe566",
+        "#ffd700",
+        "#e6c200",
+        "#ccad00",
+        "#b39800"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Bangers",
+      "fontWeight": 400,
+      "fontSize": 96,
+      "lineHeight": 96,
+      "letterSpacing": 1,
+      "mobileFontSize": 56,
+      "mobileLineHeight": 56
+    },
+    "heading-lg": {
+      "fontFamily": "Bangers",
+      "fontWeight": 400,
+      "fontSize": 60,
+      "lineHeight": 64,
+      "letterSpacing": 0.5,
+      "mobileFontSize": 40,
+      "mobileLineHeight": 44
+    },
+    "heading-md": {
+      "fontFamily": "Bangers",
+      "fontWeight": 400,
+      "fontSize": 36,
+      "lineHeight": 40,
+      "letterSpacing": 0.3,
+      "mobileFontSize": 28,
+      "mobileLineHeight": 32
+    },
+    "heading-sm": {
+      "fontFamily": "Bangers",
+      "fontWeight": 400,
+      "fontSize": 24,
+      "lineHeight": 28,
+      "letterSpacing": 0.2,
+      "mobileFontSize": 20,
+      "mobileLineHeight": 24
+    },
+    "heading-xs": {
+      "fontFamily": "Quicksand",
+      "fontWeight": 700,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "mobileFontSize": 14,
+      "mobileLineHeight": 20
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Quicksand",
+      "fontWeight": 500,
+      "fontSize": 18,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "Quicksand",
+      "fontWeight": 500,
+      "fontSize": 16,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Quicksand",
+      "fontWeight": 600,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "h4": {
+        "typographyClass": "heading-sm",
+        "marginBottom": 0.75
+      },
+      "h5": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "h6": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ul": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ol": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "sunset",
+      "hoverColor": "primary",
+      "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Quicksand",
+      "fontWeight": 700,
+      "uppercase": false,
+      "sizes": {
+        "lg": {
+          "fontSize": 18,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "borderRadius": 9999
+        },
+        "md": {
+          "fontSize": 14,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "borderRadius": 9999
+        },
+        "sm": {
+          "fontSize": 13,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 6,
+          "paddingBottom": 6,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "borderRadius": 9999
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "custom:sunset",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "secondary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      }
+    }
+  }
+}

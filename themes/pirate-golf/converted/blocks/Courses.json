@@ -1,0 +1,56 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Alternating course cards with image, badge, tags",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "CHOOSE YOUR ADVENTURE" },
+    { "type": "text", "name": "Subheadline", "default": "Two courses. Two legends. Thirty-six holes of pure pirate glory." },
+    {
+      "type": "items",
+      "name": "Courses",
+      "default": [
+        {
+          "image": "",
+          "badge": "Advanced · 18 Holes",
+          "heading": "BLACKBEARD'S COURSE",
+          "description": "<p>Think you've got what it takes? Blackbeard's Course is the ultimate test. Putt through a full-scale ghost ship, dodge cannon-blast water jets, navigate fortress walls, and face the man himself — a towering animatronic Blackbeard who taunts you from his perch above the final green.</p>",
+          "tags": [
+            { "label": "Ghost Ship" },
+            { "label": "Cannon Blasts" },
+            { "label": "Fortress Walls" },
+            { "label": "Wicked Slopes" }
+          ]
+        },
+        {
+          "image": "",
+          "badge": "All Ages · 18 Holes",
+          "heading": "THE KRAKEN'S COVE",
+          "description": "<p>Venture into the Kraken's underwater domain. Glowing cave passages, cascading waterfalls you putt right through, and a colossal animatronic Kraken whose tentacles sweep across the course. Friendlier fairways make it perfect for families — but nobody said the Kraken plays nice.</p>",
+          "tags": [
+            { "label": "Giant Kraken" },
+            { "label": "Waterfall Caves" },
+            { "label": "Glow Effects" },
+            { "label": "Family Fun" }
+          ]
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "image", "name": "Image" },
+          { "type": "text", "name": "Badge" },
+          { "type": "text", "name": "Heading" },
+          { "type": "wysiwyg", "name": "Description" },
+          {
+            "type": "items",
+            "name": "Tags",
+            "config": {
+              "fields": [
+                { "type": "text", "name": "Label" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

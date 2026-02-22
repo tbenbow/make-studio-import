@@ -1,0 +1,69 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "3-tier pricing with background image and featured highlight",
+  "fields": [
+    { "type": "image", "name": "Background Image" },
+    { "type": "text", "name": "Headline", "default": "GRAB YOUR PUTTER" },
+    { "type": "text", "name": "Subheadline", "default": "Walk-ins welcome. Booking ahead = skip the line." },
+    {
+      "type": "items",
+      "name": "Tiers",
+      "default": [
+        {
+          "name": "SINGLE COURSE",
+          "price": "$16",
+          "unit": "per person",
+          "features": "<ul><li>✓ 18 holes, pick your course</li><li>✓ Putter & ball included</li><li>✓ Pirate name tag</li></ul>",
+          "featured": false,
+          "cta_label": "Choose Course",
+          "cta_link": "#",
+          "cta_style": "ghost"
+        },
+        {
+          "name": "BOTH COURSES",
+          "price": "$26",
+          "unit": "per person",
+          "features": "<ul><li>✓ All 36 holes</li><li>✓ Putter & ball included</li><li>✓ Free drink at The Galley</li></ul>",
+          "featured": true,
+          "cta_label": "Book Now!",
+          "cta_link": "#",
+          "cta_style": "primary"
+        },
+        {
+          "name": "PIRATE PARTY",
+          "price": "$199",
+          "unit": "up to 10 people",
+          "features": "<ul><li>✓ Both courses, whole crew</li><li>✓ Captain's Table reserved</li><li>✓ Treasure chest dessert</li></ul>",
+          "featured": false,
+          "cta_label": "Plan a Party",
+          "cta_link": "#",
+          "cta_style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Price" },
+          { "type": "text", "name": "Unit" },
+          { "type": "wysiwyg", "name": "Features" },
+          { "type": "checkbox", "name": "Featured", "default": false },
+          { "type": "text", "name": "CTA Label" },
+          { "type": "text", "name": "CTA Link" },
+          {
+            "type": "select",
+            "name": "CTA Style",
+            "default": "ghost",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

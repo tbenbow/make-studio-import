@@ -1,0 +1,41 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Full-bleed hero with background image and gradient overlay",
+  "fields": [
+    { "type": "image", "name": "Image" },
+    { "type": "text", "name": "Eyebrow", "default": "Now Open — Port Harbor, FL" },
+    { "type": "text", "name": "Headline", "default": "BUCCANEER'S BLUFF" },
+    { "type": "text", "name": "Subtitle", "default": "The Most Epic Pirate Mini Golf on the Planet" },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Two jaw-dropping courses. Animatronic pirates. Towering fortresses. Real waterfalls. A clubhouse inside a pirate ship. You've never putted like this before.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "Grab Your Putter →", "link": "#prices", "style": "primary" },
+        { "label": "See the Courses", "link": "#courses", "style": "ghost" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

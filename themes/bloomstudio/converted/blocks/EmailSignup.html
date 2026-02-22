@@ -1,0 +1,28 @@
+<section class="py-20 lg:py-28 bg-brand">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-5xl lg:px-10">
+    <div class="flex flex-col items-center gap-6 text-center">
+      {{#if eyebrow}}
+        <p class="heading-xs uppercase tracking-widest text-on-brand/60">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-on-brand max-w-xl text-balance">{{headline}}</h2>
+      <div class="body-md text-on-brand/70 max-w-md">
+        {{{description}}}
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-3 mt-4 w-full max-w-md">
+        <input
+          type="email"
+          placeholder="{{default placeholder 'Your email address'}}"
+          class="w-full rounded-full bg-on-brand/10 border border-on-brand/20 text-on-brand placeholder:text-on-brand/40 px-5 py-3 body-sm focus:outline-none focus:border-on-brand/40 transition"
+        />
+        {{#if button_label}}
+          <button type="submit" class="shrink-0 inline-flex items-center justify-center rounded-full bg-on-brand text-brand px-6 py-3 body-sm font-medium hover:bg-on-brand/90 transition-all duration-300 w-full sm:w-auto">
+            {{button_label}}
+          </button>
+        {{/if}}
+      </div>
+      {{#if note}}
+        <p class="body-sm text-on-brand/50">{{note}}</p>
+      {{/if}}
+    </div>
+  </div>
+</section>

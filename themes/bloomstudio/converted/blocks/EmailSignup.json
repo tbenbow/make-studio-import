@@ -1,0 +1,17 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Email signup block with botanical green background",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Stay Connected" },
+    { "type": "text", "name": "Headline", "default": "Join the Studio Community" },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Weekly class highlights, seasonal workshops, and the occasional quiet reflection. No spam, ever.</p>"
+    },
+    { "type": "text", "name": "Placeholder", "default": "Your email address" },
+    { "type": "text", "name": "Button Label", "default": "Subscribe" },
+    { "type": "text", "name": "Note", "default": "Unsubscribe anytime. We respect your inbox." }
+  ]
+}

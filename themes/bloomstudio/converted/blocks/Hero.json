@@ -1,0 +1,41 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Centered hero with botanical dot pattern and staggered entrance",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Yoga & Movement Studio" },
+    { "type": "text", "name": "Headline", "default": "Move with Intention." },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>A modern yoga practice rooted in breath, strength, and presence. In-studio classes and an on-demand video library designed for the way you actually live.</p>"
+    },
+    { "type": "text", "name": "Tagline", "default": "Mindful movement for modern life" },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Accent", "value": "accent" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      },
+      "default": [
+        { "label": "View Class Schedule", "link": "#schedule", "style": "primary" },
+        { "label": "Practice Online", "link": "#classes", "style": "secondary" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<section class="bg-[--custom-teal-dark] text-on-brand py-16">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    {{#if (length columns)}}
+      <div class="grid md:grid-cols-3 gap-10 text-center">
+        {{#each columns}}
+          <div>
+            <h3 class="heading-sm text-[--custom-treasure] mb-3">{{heading}}</h3>
+            <div class="body-md text-fg-alt">
+              {{{body}}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

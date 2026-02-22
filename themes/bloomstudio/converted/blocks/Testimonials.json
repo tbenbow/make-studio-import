@@ -1,0 +1,45 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Three-column testimonial cards with quotes and author details",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "From the Community" },
+    { "type": "text", "name": "Headline", "default": "Words from the Mat" },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "config": {
+        "fields": [
+          { "type": "wysiwyg", "name": "Quote" },
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Detail" },
+          { "type": "text", "name": "Initials" },
+          { "type": "image", "name": "Image" }
+        ]
+      },
+      "default": [
+        {
+          "quote": "<p>I've tried dozens of studios in the city. This is the first one where I feel like the teacher actually sees me. Every class feels personal, even in a group setting.</p>",
+          "name": "Margaux L.",
+          "detail": "Member for 2 years",
+          "initials": "ML",
+          "image": ""
+        },
+        {
+          "quote": "<p>The online library saved my practice during a season of travel. The production quality is beautiful, and the classes are just as thoughtful as being there in person.</p>",
+          "name": "Suki R.",
+          "detail": "Online member",
+          "initials": "SR",
+          "image": ""
+        },
+        {
+          "quote": "<p>I came for the workout and stayed for the way it changed how I breathe, sleep, and handle stress. It's the best hour of my week.</p>",
+          "name": "David K.",
+          "detail": "Member for 8 months",
+          "initials": "DK",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}

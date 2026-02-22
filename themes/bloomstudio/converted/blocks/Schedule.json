@@ -1,0 +1,57 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "How it works with numbered steps and booking CTA",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Getting Started" },
+    { "type": "text", "name": "Headline", "default": "Book Your First Class in Minutes" },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>No complicated sign-ups, no long-term commitments. Just show up and move.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Number" },
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Description" }
+        ]
+      },
+      "default": [
+        { "number": "1", "title": "Choose Your Class", "description": "Browse the schedule and pick a class that fits your level and your calendar. First class is always free." },
+        { "number": "2", "title": "Book Your Spot", "description": "Reserve online in seconds. You'll get a confirmation with everything you need to know before you arrive." },
+        { "number": "3", "title": "Show Up & Flow", "description": "Arrive 10 minutes early, roll out a mat, and let the practice meet you where you are. We handle the rest." }
+      ]
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Accent", "value": "accent" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      },
+      "default": [
+        { "label": "View Full Schedule", "link": "#", "style": "primary" },
+        { "label": "Gift a Class", "link": "#", "style": "ghost" }
+      ]
+    },
+    { "type": "text", "name": "Note", "default": "New students: your first class is on us." }
+  ]
+}

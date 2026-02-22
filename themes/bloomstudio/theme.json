@@ -1,0 +1,141 @@
+{
+  "fonts": [
+    { "family": "Playfair Display", "weight": 400, "style": "normal" },
+    { "family": "Playfair Display", "weight": 400, "style": "italic" },
+    { "family": "Playfair Display", "weight": 600, "style": "normal" },
+    { "family": "DM Sans", "weight": 400, "style": "normal" },
+    { "family": "DM Sans", "weight": 500, "style": "normal" },
+    { "family": "DM Sans", "weight": 600, "style": "normal" }
+  ],
+  "systemColors": {
+    "base": "#FAF7F2",
+    "base-muted": "#F2EDE5",
+    "base-alt": "#2A3C2A",
+    "panel": "#FFF5F3",
+    "fg": "#2A3C2A",
+    "fg-muted": "#6B7F6B",
+    "fg-alt": "#9EAB9E",
+    "brand": "#7A956E",
+    "on-brand": "#FAF7F2",
+    "border": "#D8D0C4",
+    "accent": "#C4918A"
+  },
+  "customColors": [],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": ["#E8F0E4", "#B8CEB0", "#7A956E", "#5A7A4E", "#2A3C2A"]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": ["#FAF7F2", "#F2EDE5", "#D8D0C4", "#9EAB9E", "#6B7F6B"]
+    },
+    "accent1": {
+      "label": "accent-1",
+      "colors": ["#FFF5F3", "#F2D4CF", "#C4918A", "#A06B64", "#704842"]
+    },
+    "accent2": {
+      "label": "accent-2",
+      "colors": ["#F5F0E8", "#E8DFD2", "#C4B8A6", "#8C8270", "#5C5448"]
+    },
+    "accent3": {
+      "label": "accent-3",
+      "colors": ["#EDF2E8", "#D4E0CC", "#A8C098", "#7A9668", "#4C6840"]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Playfair Display",
+      "fontWeight": 400,
+      "fontSize": 72,
+      "lineHeight": 80,
+      "letterSpacing": -1.5,
+      "mobileFontSize": 42,
+      "mobileLineHeight": 48
+    },
+    "heading-lg": {
+      "fontFamily": "Playfair Display",
+      "fontWeight": 400,
+      "fontSize": 44,
+      "lineHeight": 52,
+      "letterSpacing": -0.8,
+      "mobileFontSize": 32,
+      "mobileLineHeight": 40
+    },
+    "heading-md": {
+      "fontFamily": "Playfair Display",
+      "fontWeight": 400,
+      "fontSize": 32,
+      "lineHeight": 40,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 26,
+      "mobileLineHeight": 34
+    },
+    "heading-sm": {
+      "fontFamily": "DM Sans",
+      "fontWeight": 600,
+      "fontSize": 20,
+      "lineHeight": 28,
+      "letterSpacing": -0.2,
+      "mobileFontSize": 18,
+      "mobileLineHeight": 26
+    },
+    "heading-xs": {
+      "fontFamily": "DM Sans",
+      "fontWeight": 600,
+      "fontSize": 14,
+      "lineHeight": 20,
+      "letterSpacing": 1.5,
+      "mobileFontSize": 12,
+      "mobileLineHeight": 18
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "DM Sans",
+      "fontWeight": 400,
+      "fontSize": 19,
+      "lineHeight": 32,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "DM Sans",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "DM Sans",
+      "fontWeight": 500,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0.2
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+      "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+      "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+      "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+      "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "accent",
+      "underline": "always"
+    }
+  },
+  "customCSS": ".prose {\n  color: #6B7F6B;\n}\n.prose h1,\n.prose h2,\n.prose h3,\n.prose h4 {\n  color: #2A3C2A;\n}"
+}

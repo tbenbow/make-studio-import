@@ -1,0 +1,33 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Clubhouse showcase with image, stats grid, and CTA",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "THE CAPTAIN'S GALLEY" },
+    { "type": "text", "name": "Subtitle", "default": "Our clubhouse is literally inside a pirate ship." },
+    { "type": "image", "name": "Image" },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Duck under timber beams, peer through porthole windows, and belly up to a bar built into the hull. The Captain's Galley serves gourmet burgers, fish tacos, tropical smoothies, craft cocktails from the Grog Bar, and the legendary treasure chest dessert — a real chocolate chest filled with gold-dusted truffles.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        { "value": "50+", "label": "Menu Items" },
+        { "value": "12", "label": "Craft Cocktails" },
+        { "value": "200", "label": "Seats" },
+        { "value": "1", "label": "Pirate Ship" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Value" },
+          { "type": "text", "name": "Label" }
+        ]
+      }
+    },
+    { "type": "text", "name": "CTA Label", "default": "See the Full Menu" },
+    { "type": "text", "name": "CTA Link", "default": "#" }
+  ]
+}

@@ -1,0 +1,64 @@
+<section id="classes" class="py-20 lg:py-28 bg-base-muted">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="flex flex-col items-center gap-4 mb-16 text-center">
+      {{#if eyebrow}}
+        <p class="heading-xs uppercase tracking-widest text-accent">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg max-w-2xl text-balance">{{headline}}</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="rounded-2xl bg-base p-10 lg:p-12 flex flex-col gap-6 shadow-sm border border-border/50">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand">
+            {{icon "sun" size="22"}}
+          </div>
+          <h3 class="heading-md text-fg">{{in_person_title}}</h3>
+        </div>
+        <div class="body-md text-fg-muted">{{{in_person_description}}}</div>
+        {{#if (length in_person_features)}}
+          <ul class="flex flex-col gap-3 mt-2">
+            {{#each in_person_features}}
+              <li class="flex items-start gap-3 body-sm text-fg-muted">
+                <span class="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+                {{text}}
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        <div class="mt-auto pt-4">
+          {{#if in_person_button_label}}
+            <a href="{{default in_person_button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-brand text-on-brand px-6 py-3 body-sm font-medium hover:bg-base-alt transition-all duration-300">
+              {{in_person_button_label}}
+            </a>
+          {{/if}}
+        </div>
+      </div>
+      <div class="rounded-2xl bg-base p-10 lg:p-12 flex flex-col gap-6 shadow-sm border border-border/50">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-accent">
+            {{icon "play" size="22"}}
+          </div>
+          <h3 class="heading-md text-fg">{{online_title}}</h3>
+        </div>
+        <div class="body-md text-fg-muted">{{{online_description}}}</div>
+        {{#if (length online_features)}}
+          <ul class="flex flex-col gap-3 mt-2">
+            {{#each online_features}}
+              <li class="flex items-start gap-3 body-sm text-fg-muted">
+                <span class="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-accent"></span>
+                {{text}}
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        <div class="mt-auto pt-4">
+          {{#if online_button_label}}
+            <a href="{{default online_button_link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-accent bg-transparent text-accent px-6 py-3 body-sm font-medium hover:bg-accent hover:text-on-brand transition-all duration-300">
+              {{online_button_label}}
+            </a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
