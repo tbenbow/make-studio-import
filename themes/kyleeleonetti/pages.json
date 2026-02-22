@@ -9,10 +9,11 @@
   ],
   "pages": [
     {
-      "name": "Home",
+      "name": "Index",
       "slug": "",
       "layout": "Default",
-      "blocks": ["Hero", "RecentPosts"]
+      "blocks": ["Hero", "RecentPosts"],
+      "note": "Uses the site's built-in Index page — do not create a separate Home page"
     },
     {
       "name": "About",
@@ -21,30 +22,10 @@
       "blocks": ["PageHeader", "AboutContent"]
     },
     {
-      "name": "Favorites",
-      "slug": "favorites",
-      "layout": "Default",
-      "blocks": ["PageHeader", "FavoritesList"]
-    },
-    {
-      "name": "Contact",
-      "slug": "contact",
-      "layout": "Default",
-      "blocks": ["PageHeader", "ContactInfo"]
-    },
-    {
       "name": "Writing",
       "slug": "writing",
       "layout": "Default",
-      "blocks": ["PageHeader", "PostList"],
-      "note": "Blog index with search and category filtering"
-    }
-  ],
-  "postTypes": [
-    {
-      "name": "Writing",
-      "indexBlocks": ["PageHeader", "PostList"],
-      "detailBlocks": ["PostHeader", "PostBody"]
+      "blocks": ["PostHeader", "PostBody"]
     }
   ]
 }

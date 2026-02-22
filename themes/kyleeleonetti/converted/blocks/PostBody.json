@@ -1,7 +1,7 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Blog post body with rich text",
+  "description": "Blog post body with rich text and back link",
   "fields": [
     {
       "type": "wysiwyg",
@@ -11,12 +11,12 @@
     {
       "type": "text",
       "name": "Back Label",
-      "default": "← Back to Writing"
+      "default": "\u2190 Back to Home"
     },
     {
       "type": "text",
       "name": "Back Link",
-      "default": "/writing"
+      "default": "/"
     }
   ]
 }

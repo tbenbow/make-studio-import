@@ -1,7 +1,7 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Recent blog posts grid with art deco heading treatment",
+  "description": "Blog post cards grid with centered heading",
   "fields": [
     { "type": "text", "name": "Heading", "default": "From the Blog" },
     { "type": "text", "name": "Subheading", "default": "" },
@@ -14,7 +14,7 @@
           "date": "April 16, 2022",
           "excerpt": "It happened last month while I sat surrounded by baskets of unfolded laundry as a warm spring rain poured outside my windows\u2026",
           "category": "Faith",
-          "url": "#",
+          "url": "/writing",
           "image": ""
         },
         {

@@ -1,56 +1,21 @@
-<footer class="bg-base-alt">
-  <!-- Decorative top border -->
-  <div class="h-1 bg-gradient-to-r from-accent/60 via-accent to-accent/60"></div>
-
-  <div class="py-16">
-    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-        <!-- Brand -->
-        <div>
-          <p class="heading-md text-on-brand mb-2">{{site-name}}</p>
-          <div class="w-12 h-0.5 bg-accent mb-4"></div>
-          <p class="body-sm text-on-brand/70">{{tagline}}</p>
-        </div>
-
-        <!-- Quick links -->
-        <div>
-          <p class="heading-xs text-accent uppercase tracking-wider mb-4">Pages</p>
-          <div class="flex flex-col gap-2">
-            {{#each links}}
-              <a href="{{url}}" class="body-sm text-on-brand/70 hover:text-accent transition">
-                {{label}}
-              </a>
-            {{/each}}
-          </div>
-        </div>
-
-        <!-- Connect -->
-        <div>
-          <p class="heading-xs text-accent uppercase tracking-wider mb-4">Connect</p>
-          {{#if email}}
-            <a href="mailto:{{email}}" class="body-sm text-on-brand/70 hover:text-accent transition block mb-4">{{email}}</a>
-          {{/if}}
-          {{#if (length social-links)}}
-            <div class="flex items-center gap-4">
-              {{#each social-links}}
-                <a href="{{url}}" class="text-on-brand/50 hover:text-accent transition" aria-label="{{label}}" rel="noopener">
-                  {{icon icon size="22"}}
-                </a>
+<footer class="pt-16">
+  <div class="bg-panel py-16 text-fg">
+    <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-10 text-center body-sm">
+      <div class="flex flex-col gap-6">
+        <div class="w-12 h-px bg-gradient-to-r from-brand/20 via-brand/60 to-brand/20 mx-auto"></div>
+        {{#if (length links)}}
+          <nav>
+            <ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+              {{#each links}}
+                <li class="text-fg-muted hover:text-brand transition">
+                  <a href="{{url}}">{{label}}</a>
+                </li>
               {{/each}}
-            </div>
-          {{/if}}
-        </div>
+            </ul>
+          </nav>
+        {{/if}}
       </div>
-
-      <div class="border-t border-on-brand/15 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="body-sm text-on-brand/40">{{copyright}}</p>
-        <!-- Decorative element -->
-        <div class="flex items-center gap-2">
-          <div class="w-2 h-2 border border-accent/40 rotate-45"></div>
-          <div class="w-2 h-2 border border-accent/40 rotate-45"></div>
-          <div class="w-2 h-2 border border-accent/40 rotate-45"></div>
-        </div>
-      </div>
+      <div class="text-fg-alt">{{{fineprint}}}</div>
     </div>
   </div>
 </footer>

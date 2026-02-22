@@ -1,19 +1,13 @@
 <header x-data="{ mobileOpen: false }">
-  <div class="sticky top-0 z-10 bg-base border-b border-accent/20">
+  <div class="sticky top-0 z-10 bg-base/95 backdrop-blur-sm border-b border-border/50">
     <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
       <div class="flex items-center justify-between py-5">
-        <!-- Logo / site name -->
-        <a href="/" class="flex items-center gap-3 group">
-          <div class="w-8 h-8 border-2 border-accent flex items-center justify-center">
-            <span class="heading-xs text-accent" style="letter-spacing:0">K</span>
-          </div>
-          <span class="heading-md text-fg group-hover:text-accent transition">{{site-name}}</span>
-        </a>
+        <a href="/" class="heading-md text-fg hover:text-brand transition">{{site-name}}</a>
 
         <!-- Desktop nav -->
         <nav class="hidden lg:flex items-center gap-8">
           {{#each nav-links}}
-            <a href="{{url}}" class="heading-xs uppercase text-fg-muted hover:text-accent transition">
+            <a href="{{url}}" class="body-sm font-medium text-fg-muted hover:text-brand transition {{#if (isActive url)}}text-brand{{/if}}">
               {{label}}
             </a>
           {{/each}}
@@ -24,20 +18,17 @@
 
         <!-- Mobile toggle -->
         <button @click="mobileOpen = !mobileOpen" class="lg:hidden text-fg" aria-label="Menu">
-          <span x-show="!mobileOpen">{{icon "list" size="28"}}</span>
-          <span x-show="mobileOpen" x-cloak="">{{icon "x" size="28"}}</span>
+          <span x-show="!mobileOpen">{{icon "list" size="24"}}</span>
+          <span x-show="mobileOpen" x-cloak="">{{icon "x" size="24"}}</span>
         </button>
       </div>
     </div>
-
-    <!-- Decorative gold line -->
-    <div class="h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
 
     <!-- Mobile menu -->
     <div x-show="mobileOpen" x-cloak="" class="lg:hidden border-t border-border bg-base">
       <div class="mx-auto w-full max-w-7xl px-6 py-6 flex flex-col gap-4">
         {{#each nav-links}}
-          <a href="{{url}}" class="heading-xs uppercase text-fg hover:text-accent transition">
+          <a href="{{url}}" class="body-sm font-medium text-fg hover:text-brand transition">
             {{label}}
           </a>
         {{/each}}

@@ -1,47 +1,50 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Split hero with photo and art deco decorative accents",
+  "description": "Full-width centered hero with heading, subheadline, intro, CTAs, and image",
   "fields": [
     {
-      "type": "image",
-      "name": "Image"
-    },
-    {
       "type": "text",
-      "name": "Name",
+      "name": "Headline",
       "default": "Kylee Leonetti"
     },
     {
       "type": "text",
-      "name": "Subtitle",
+      "name": "Subheadline",
       "default": "Welcome To My Online Writing Sanctuary"
     },
     {
-      "type": "textarea",
-      "name": "Description",
-      "default": "Have a seat right here next to me, on the chair if the floor is bad for your knees. Let\u2019s talk about everything, plans, ideas and dreams, firm-to-shaky faiths and hard realities; this is the stuff that makes us human, after all. I\u2019ve chewed my cuticles down thinking about my own doubts, so you know yours are safe here with me! Let\u2019s go deep. I\u2019m so glad you\u2019re here."
+      "type": "wysiwyg",
+      "name": "Intro",
+      "default": "<p>Have a seat right here next to me, on the chair if the floor is bad for your knees. Let\u2019s talk about everything, plans, ideas and dreams, firm-to-shaky faiths and hard realities; this is the stuff that makes us human, after all.</p>"
     },
     {
-      "type": "text",
-      "name": "Primary CTA Label",
-      "default": "About Me"
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "label": "About Me", "link": "/about", "style": "primary" },
+        { "label": "Explore My Writing", "link": "/writing", "style": "outline" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                { "key": "Primary", "value": "primary" },
+                { "key": "Secondary", "value": "secondary" },
+                { "key": "Outline", "value": "outline" },
+                { "key": "Ghost", "value": "ghost" }
+              ]
+            }
+          }
+        ]
+      }
     },
-    {
-      "type": "text",
-      "name": "Primary CTA Link",
-      "default": "/about.html"
-    },
-    {
-      "type": "text",
-      "name": "Secondary CTA Label",
-      "default": "Explore My Writing"
-    },
-    {
-      "type": "text",
-      "name": "Secondary CTA Link",
-      "default": "/writing"
-    }
-  ],
-  "thumbnailType": "hero"
+    { "type": "image", "name": "Image" },
+    { "type": "text", "name": "Image Alt", "default": "" }
+  ]
 }

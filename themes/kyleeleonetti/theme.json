@@ -1,53 +1,55 @@
 {
   "fonts": [
-    { "family": "Playfair Display", "weight": 400, "style": "normal" },
-    { "family": "Playfair Display", "weight": 700, "style": "normal" },
-    { "family": "DM Sans", "weight": 400, "style": "normal" },
-    { "family": "DM Sans", "weight": 500, "style": "normal" },
-    { "family": "DM Sans", "weight": 700, "style": "normal" }
+    { "family": "Cormorant Garamond", "weight": 400, "style": "normal" },
+    { "family": "Cormorant Garamond", "weight": 400, "style": "italic" },
+    { "family": "Cormorant Garamond", "weight": 600, "style": "normal" },
+    { "family": "Nunito Sans", "weight": 400, "style": "normal" },
+    { "family": "Nunito Sans", "weight": 600, "style": "normal" },
+    { "family": "Nunito Sans", "weight": 700, "style": "normal" }
   ],
   "systemColors": {
-    "brand": "#2C3E35",
-    "on-brand": "#FAF6F0",
-    "base": "#FAF6F0",
-    "base-muted": "#F0EAE0",
-    "base-alt": "#2C3E35",
-    "panel": "#EDE6DB",
-    "fg": "#1C1917",
-    "fg-muted": "#5C554E",
-    "fg-alt": "#9A9189",
-    "border": "#D9D0C5"
+    "brand": "#9B6B7D",
+    "on-brand": "#FFFBF8",
+    "base": "#FFFBF8",
+    "base-muted": "#FAF4F0",
+    "base-alt": "#9B6B7D",
+    "panel": "#F5EDE8",
+    "fg": "#2D2926",
+    "fg-muted": "#736A65",
+    "fg-alt": "#A89F9A",
+    "border": "#E8DDD7"
   },
   "customColors": [
     {
       "id": "c4825a00-0001-4000-8000-000000000001",
       "name": "accent",
-      "value": "#B68D4C"
+      "value": "#D4956B"
     },
     {
       "id": "c4825a00-0001-4000-8000-000000000002",
       "name": "accent-light",
-      "value": "#DFC9A0"
+      "value": "#E8C4AB"
     }
   ],
   "palette": {
     "primary": {
       "label": "primary",
-      "colors": ["#D4DED8", "#7FA393", "#2C3E35", "#1D2A24", "#0F1612"]
+      "colors": ["#D4B8C4", "#B88D9E", "#9B6B7D", "#7A5464", "#5A3D4B"]
     },
     "grays": {
       "label": "gray",
-      "colors": ["#D9D0C5", "#9A9189", "#5C554E", "#3A3530", "#1C1917"]
+      "colors": ["#E8DDD7", "#A89F9A", "#736A65", "#4A4340", "#2D2926"]
     },
     "accent1": {
       "label": "accent",
-      "colors": ["#EEDCBB", "#DFC9A0", "#B68D4C", "#8E6D3A", "#654E29"]
+      "colors": ["#E8C4AB", "#D4956B", "#B87D56", "#8E6042", "#654430"]
     }
   },
   "headingTypography": {
     "heading-xl": {
-      "fontFamily": "Playfair Display",
+      "fontFamily": "Cormorant Garamond",
       "fontWeight": 400,
+      "fontStyle": "italic",
       "fontSize": 56,
       "lineHeight": 64,
       "letterSpacing": -0.5,
@@ -55,7 +57,7 @@
       "mobileLineHeight": 42
     },
     "heading-lg": {
-      "fontFamily": "Playfair Display",
+      "fontFamily": "Cormorant Garamond",
       "fontWeight": 400,
       "fontSize": 36,
       "lineHeight": 44,
@@ -64,7 +66,7 @@
       "mobileLineHeight": 34
     },
     "heading-md": {
-      "fontFamily": "Playfair Display",
+      "fontFamily": "Cormorant Garamond",
       "fontWeight": 400,
       "fontSize": 28,
       "lineHeight": 36,
@@ -73,7 +75,7 @@
       "mobileLineHeight": 28
     },
     "heading-sm": {
-      "fontFamily": "DM Sans",
+      "fontFamily": "Nunito Sans",
       "fontWeight": 700,
       "fontSize": 20,
       "lineHeight": 28,
@@ -82,36 +84,36 @@
       "mobileLineHeight": 24
     },
     "heading-xs": {
-      "fontFamily": "DM Sans",
-      "fontWeight": 700,
-      "fontSize": 14,
+      "fontFamily": "Nunito Sans",
+      "fontWeight": 600,
+      "fontSize": 13,
       "lineHeight": 20,
-      "letterSpacing": 1.5,
+      "letterSpacing": 0.5,
       "mobileFontSize": 12,
       "mobileLineHeight": 18
     }
   },
   "bodyTypography": {
     "body-lg": {
-      "fontFamily": "DM Sans",
+      "fontFamily": "Nunito Sans",
       "fontWeight": 400,
       "fontSize": 18,
       "lineHeight": 30,
       "letterSpacing": 0
     },
     "body-md": {
-      "fontFamily": "DM Sans",
+      "fontFamily": "Nunito Sans",
       "fontWeight": 400,
       "fontSize": 16,
       "lineHeight": 28,
       "letterSpacing": 0
     },
     "body-sm": {
-      "fontFamily": "DM Sans",
-      "fontWeight": 500,
+      "fontFamily": "Nunito Sans",
+      "fontWeight": 600,
       "fontSize": 14,
       "lineHeight": 22,
-      "letterSpacing": 0.3
+      "letterSpacing": 0.2
     }
   },
   "prose": {
@@ -133,52 +135,52 @@
       "nestedIndent": 1.5
     },
     "links": {
-      "color": "accent",
-      "hoverColor": "brand",
+      "color": "brand",
+      "hoverColor": "accent",
       "underline": "always"
     }
   },
   "buttons": {
     "global": {
-      "fontFamily": "DM Sans",
-      "fontWeight": 500,
-      "uppercase": true,
+      "fontFamily": "Nunito Sans",
+      "fontWeight": 600,
+      "uppercase": false,
       "sizes": {
         "lg": {
-          "fontSize": 15,
-          "letterSpacing": 1.5,
+          "fontSize": 16,
+          "letterSpacing": 0.3,
           "opticalYOffset": 0,
           "paddingTop": 16,
           "paddingBottom": 16,
           "paddingLeft": 36,
           "paddingRight": 36,
-          "borderRadius": 0
+          "borderRadius": 100
         },
         "md": {
-          "fontSize": 13,
-          "letterSpacing": 1.5,
+          "fontSize": 14,
+          "letterSpacing": 0.3,
           "opticalYOffset": 0,
           "paddingTop": 12,
           "paddingBottom": 12,
           "paddingLeft": 28,
           "paddingRight": 28,
-          "borderRadius": 0
+          "borderRadius": 100
         },
         "sm": {
-          "fontSize": 12,
-          "letterSpacing": 1.2,
+          "fontSize": 13,
+          "letterSpacing": 0.2,
           "opticalYOffset": 0,
           "paddingTop": 8,
           "paddingBottom": 8,
           "paddingLeft": 20,
           "paddingRight": 20,
-          "borderRadius": 0
+          "borderRadius": 100
         }
       }
     },
     "variants": {
       "primary": {
-        "backgroundColor": "custom:accent",
+        "backgroundColor": "system:brand",
         "textColor": "system:on-brand",
         "borderColor": "transparent",
         "borderWidth": 0,
@@ -193,8 +195,8 @@
       },
       "outline": {
         "backgroundColor": "transparent",
-        "textColor": "custom:accent",
-        "borderColor": "custom:accent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
         "borderWidth": 1,
         "hoverPreset": "fill"
       },
@@ -204,20 +206,6 @@
         "borderColor": "transparent",
         "borderWidth": 0,
         "hoverPreset": "lighten"
-      },
-      "accent": {
-        "backgroundColor": "system:brand",
-        "textColor": "system:on-brand",
-        "borderColor": "transparent",
-        "borderWidth": 0,
-        "hoverPreset": "darken"
-      },
-      "nav": {
-        "backgroundColor": "transparent",
-        "textColor": "system:fg",
-        "borderColor": "system:border",
-        "borderWidth": 1,
-        "hoverPreset": "fill"
       }
     }
   }

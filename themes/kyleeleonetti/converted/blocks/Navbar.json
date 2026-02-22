@@ -1,7 +1,7 @@
 {
   "makeStudioFields": true,
   "version": 1,
-  "description": "Art deco navbar with geometric logo mark and tracked uppercase links",
+  "description": "Sticky header with site name, nav links, and optional CTA",
   "fields": [
     {
       "type": "text",
@@ -13,10 +13,8 @@
       "name": "Nav Links",
       "default": [
         { "label": "Home", "url": "/" },
-        { "label": "Writing", "url": "/writing" },
-        { "label": "About", "url": "/about.html" },
-        { "label": "Favorites", "url": "/favorites.html" },
-        { "label": "Contact", "url": "/contact.html" }
+        { "label": "About", "url": "/about" },
+        { "label": "Writing", "url": "/writing" }
       ],
       "config": {
         "fields": [
