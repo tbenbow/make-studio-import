@@ -4,6 +4,9 @@ node_modules/
 **/.DS_Store
 backup-*/
 
+# Legacy guides (superseded by docs/capabilities/)
+guides-legacy/
+
 # Snapshots are runtime state, not source
 themes/*/snapshots/
 

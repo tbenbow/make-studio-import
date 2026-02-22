@@ -1,177 +1,204 @@
-# Make Studio Importer
+# Make Studio Agent Workspace
 
-AI-powered theme conversion tool for Make Studio. Converts React/Next.js themes into Make Studio blocks and partials.
+AI-powered workspace for building and managing Make Studio sites.
 
 ## Overview
 
-This tool helps convert commercial UI themes (built with Next.js, React, Tailwind) into Make Studio format. It's designed to be used with AI assistants (Claude Code, Cursor, etc.) that handle the conversion logic.
+This workspace enables AI agents to work with Make Studio through a structured set of capabilities:
 
-### Workflow
+- **Conversion** — Convert third-party websites into Make Studio themes
+- **Generation** — Generate complete sites from vibe prompts
+- **Blocks** — Build individual blocks from screenshots
+- **Design** — Manage color tokens, typography, and theme configuration
+- **Pages** — Create and manage pages, layouts, and post types
+- **Deployment** — Preview deployments and manage snapshots
 
-```
-1. Drop theme source files → themes/<name>/source/
-2. AI converts to Make Studio format → themes/<name>/converted/
-3. Validate the conversion → npm run validate
-4. Import to staging site → npm run import
-5. Review in Make Studio UI
-6. Iterate until correct
-7. Theme becomes reference for future conversions
-```
-
-## Setup
+## Quick Start
 
 ```bash
 # Install dependencies
 npm install
 
-# Copy env file and configure
+# Configure environment
 cp .env.example .env
-# Edit .env with your MongoDB connection string
+# Edit .env with your API credentials
 ```
 
-## Usage
+## Core Workflows
 
-### Validate Converted Files
+### Theme Sync (Primary Workflow)
+
+Bi-directional sync between local theme files and Make Studio API:
 
 ```bash
-npm run validate -- --theme=<theme-name>
+# Push local changes to Make Studio
+npm run sync -- --theme=<name> --apply
+
+# Pull remote changes to local files
+npm run pull -- --theme=<name>
+
+# Validate local files
+npm run validate -- --theme=<name>
+
+# Check sync status
+npm run status -- --theme=<name>
+
+# Rollback to snapshot
+npm run rollback -- --theme=<name> --snapshot=<file>
 ```
 
-Returns JSON with validation results:
-```json
-{
-  "valid": true,
-  "components": { "blocks": 25, "partials": 3 },
-  "errors": [],
-  "warnings": []
-}
-```
+**Sync Options**:
+- `--apply`: Apply changes (otherwise dry-run)
+- `--force`: Skip confirmation prompts
+- `--delete`: Allow deletions
+- `--batch`: Use batch operations
+- `--only=Block1,Block2,theme`: Sync specific components only
 
-### Import to Make Studio
+### Site Management
 
 ```bash
-npm run import -- --theme=<theme-name> --site=<siteId>
+# Create new site
+npm run create-site -- --name="Site Name"
+
+# Setup pages and layouts from theme manifest
+npm run setup-pages -- --theme=<name>
 ```
 
-Returns JSON with import results:
-```json
-{
-  "success": true,
-  "created": { "blocks": ["Hero", "Features"], "partials": ["Button"] },
-  "updated": { "blocks": [], "partials": [] },
-  "errors": []
-}
-```
+**Copy Site Between Environments**:
 
-### Check Theme Status
+Use `scripts/copy-site.ts` to copy blocks, partials, theme, layouts, post types, and pages:
 
 ```bash
-npm run status -- --theme=<theme-name>
+npx tsx scripts/copy-site.ts \
+  --source-url=https://api.makestudio.cc \
+  --source-token=xxx \
+  --source-site=abc123 \
+  --target-url=http://localhost:5001 \
+  --target-token=yyy \
+  [--target-site=def456] \
+  [--name="My Site Copy"] \
+  [--files]
 ```
 
-### Clone a Site
+Use `--files` to copy media library and rewrite CDN URLs.
 
-Creates a new site with all blocks, partials, pages, and theme settings copied from an existing site:
+## Environment Variables
 
 ```bash
-npm run clone-site -- --from=<sourceSiteId> --name="New Site Name"
+MAKE_STUDIO_URL=https://api.makestudio.cc
+MAKE_STUDIO_TOKEN=<per-site API token>
+MAKE_STUDIO_SITE=<site ID>
+
+# Optional: R2 credentials for media uploads
+R2_ACCOUNT_ID=<cloudflare account ID>
+R2_ACCESS_KEY_ID=<R2 access key>
+R2_SECRET_ACCESS_KEY=<R2 secret>
 ```
-
-Returns:
-```json
-{
-  "success": true,
-  "newSiteId": "65abc123...",
-  "copied": {
-    "blocks": 25,
-    "partials": 3,
-    "pages": 5,
-    "theme": true
-  },
-  "errors": []
-}
-```
-
-### Push Site to Production
-
-Copies a site (with all blocks, partials, folders, layouts, pages, and post types) from one database to another — typically from staging to production:
-
-```bash
-npm run push-site -- --from=<sourceSiteId> --target-uri=<productionMongoURI> --owner=<clerkUserId>
-```
-
-You can also set `TARGET_MONGODB_URI` in your `.env` instead of passing `--target-uri` each time. The `--owner` flag sets the Clerk user ID for the new site owner in the target database.
-
-## Adding a New Theme
-
-1. Create theme folder structure:
-   ```bash
-   cp -r themes/.template themes/<new-theme-name>
-   ```
-
-2. Add source files to `themes/<new-theme-name>/source/`
-
-3. Create a staging site in Make Studio and note the site ID
-
-4. Have AI convert the components (see Conversion Guide)
-
-5. Validate and import:
-   ```bash
-   npm run validate -- --theme=<name>
-   npm run import -- --theme=<name> --site=<siteId>
-   ```
-
-## Guides
-
-- `guides/BASE_GUIDE.md` — Universal block conversion rules
-- `guides/PAGE_GENERATION.md` — Generate and import pages from JSON
-
-Each theme should also have its own `THEME_GUIDE.md` documenting:
-- Theme-specific color mappings
-- Icon library mappings
-- Component patterns discovered
-- Issues encountered and solutions
 
 ## File Structure
 
 ```
-make-studio-importer/
-├── guides/
-│   ├── BASE_GUIDE.md          # Universal conversion rules
-│   └── PAGE_GENERATION.md     # Page generation guide
-│
-├── themes/
-│   ├── .template/             # Copy for new themes
-│   ├── stock/                 # Stock block library
-│   │   ├── catalog.json       # Generated block catalog
-│   │   └── converted/blocks/  # Block HTML + JSON
-│   └── <your-theme>/
-│       ├── THEME_GUIDE.md     # Theme-specific notes
-│       ├── source/            # Original files
-│       ├── converted/
-│       │   ├── blocks/
-│       │   └── partials/
-│       └── manifest.json      # Import tracking
-│
-├── sites/                     # Site-specific content
-│   └── <site-name>/
-│       ├── site.json          # { siteId, theme, name }
-│       ├── content/           # Reference docs for AI
-│       └── pages/             # Page interchange JSON
-│
-└── src/
-    ├── index.ts               # CLI entry point
-    ├── catalog.ts             # Catalog generation
-    ├── validate-page.ts       # Page validation
-    └── import-page.ts         # Page import
+themes/<name>/
+  theme.json                    # Design system (fonts, colors, typography)
+  .sync-state.json              # Last sync timestamp (auto-managed)
+  converted/
+    blocks/
+      BlockName.html            # Handlebars template
+      BlockName.json            # Field definitions
+    partials/
+      Button.html               # Shared components
+  source/                       # Reference material (not in git)
+  snapshots/                    # Pre-sync backups (not in git)
+
+docs/
+  capabilities/                 # Workflow guides + learnings
+    conversion/
+    generation/
+    blocks/
+    design/
+    pages/
+    deployment/
+  references/                   # Gold-standard block examples
+  guides/api-reference.md       # Complete API documentation
+  review/pending.md             # Agent-to-human review queue
+
+scripts/
+  copy-site.ts                  # Cross-environment site copy
+  setup-pirate-golf.ts          # Site-specific setup
+  generate-image.ts             # AI image generation
+  search-pexels.ts              # Pexels API integration
+  archive/                      # One-off scripts (reference only)
+
+src/
+  index.ts                      # CLI entry point
+  api.ts                        # Make Studio API client
+  diff.ts                       # Changeset computation
+  snapshot.ts                   # Snapshot management
+  validate.ts                   # Local file validation
+  fields.ts                     # Field transformations
 ```
 
-## For AI Assistants
+## For AI Agents
 
-This tool is designed for AI-assisted conversion. Key points:
+Read `CLAUDE.md` first — it contains:
+- All capabilities with guide links
+- Critical guardrails (no MongoDB writes, no production deploys)
+- Compound loop for documenting learnings
+- Reference examples and API docs
 
-1. **Read `guides/BASE_GUIDE.md` first** - Contains all conversion rules
-2. **Check past themes** - Look at `themes/*/THEME_GUIDE.md` for similar patterns
-3. **Document as you go** - Update the theme's `THEME_GUIDE.md` with learnings
-4. **Output is JSON** - All CLI commands return structured JSON
-5. **Iterate** - Run validate/import, check results, fix issues, repeat
+### Agent Slash Commands
+
+Available in `.claude/commands/`:
+- `/ms-guide` — Show capability guide for current workflow
+- `/ms-progress` — Show workflow progress and next steps
+- `/ms-convert` — Start site conversion workflow
+- `/ms-generate` — Generate site from vibe prompt
+- `/ms-block` — Build individual block from screenshot
+- `/ms-deploy` — Deploy preview
+- `/ms-done` — Complete workflow and document learnings
+
+## Active Themes
+
+| Theme | Blocks | Status |
+|-------|--------|--------|
+| `oatmeal` | 76 | Complete |
+| `block-ingress` | 58 | Active (block library) |
+| `lta` | 56 | Complete |
+| `stock` | 50 | Library |
+| `okgosandbox` | 44 | Complete |
+| `radiant` | 38 | Complete |
+| `spotlight` | 26 | Complete |
+| `peakperformance` | 18 | Complete |
+| `pirate-golf` | 16 | In progress |
+| `kyleeleonetti` | 16 | Complete |
+| `bloomstudio` | 16 | Complete |
+
+## Testing
+
+```bash
+npm test
+```
+
+Runs unit tests for field transformations and diff computation.
+
+## Documentation
+
+- **Main Reference**: `CLAUDE.md` (agent workspace overview)
+- **Capability Guides**: `docs/capabilities/*/guide.md`
+- **API Reference**: `docs/guides/api-reference.md`
+- **Workflow State**: `docs/guides/workflow-state.md` (progress tracking system)
+- **Block Examples**: `docs/references/` (Hero, Features, CTA, Footer, etc.)
+
+## Guardrails
+
+- **NEVER write directly to MongoDB** — Always use the Make Studio API
+- **NEVER production deploy** — Use preview or create deployment requests
+- **ALWAYS pull before push** — Enforced by sync engine
+- **ALWAYS check `docs/review/pending.md`** for resolved items before starting work
+
+## Contributing
+
+After completing work, follow the compound loop:
+1. Write learnings to `docs/capabilities/<name>/learnings.md`
+2. Add questions to `docs/review/pending.md`
+3. After human review, incorporate feedback into `guide.md`

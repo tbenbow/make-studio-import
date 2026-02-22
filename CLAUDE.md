@@ -30,9 +30,10 @@ After completing work:
 
 `docs/references/` — Gold-standard block examples (Hero, Features, Stats, Navbar, Footer, CTA, Button, Testimonial)
 
-## API Reference
+## Reference Documentation
 
-`docs/guides/api-reference.md` — All client methods documented
+- `docs/guides/api-reference.md` — All client methods documented
+- `docs/guides/workflow-state.md` — Workflow tracking system (`.state/active.json`)
 
 ## CLI Commands
 
@@ -89,10 +90,22 @@ themes/<name>/
       Button.html               # Shared button partial
   source/                       # Generated HTML variations (site generation)
   snapshots/                    # Pre-sync state snapshots
+
 docs/
   capabilities/                 # Capability guides and learnings
   references/                   # Gold-standard block examples
-  guides/api-reference.md       # API client documentation
+  guides/
+    api-reference.md            # API client documentation
+    workflow-state.md           # Workflow progress tracking
   review/pending.md             # Agent-to-human review queue
+
 scripts/                        # Utility scripts (archive/ for one-offs)
+
+.state/
+  active.json                   # Current workflow state (ignored in git)
+  history/                      # Archived workflow states
+
+.claude/
+  commands/                     # Slash commands (ms-generate, ms-convert, etc.)
+  statusline.sh                 # Progress bar for Cursor status bar
 ```
