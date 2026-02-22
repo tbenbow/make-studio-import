@@ -83,3 +83,68 @@ Accumulated insights from site conversions. Read this before starting a new conv
 - Direct page creation doesn't update `site.pages` array
 - Multiple scripts with inconsistent approaches made diagnosis harder
 - Always use the Make Studio API — it handles type casting, validation, and keeps related documents in sync
+
+---
+
+## Buccaneer's Bluff — Generated Site (2026-02-22)
+
+**Source**: AI-generated HTML (`themes/pirate-golf/source/v2.html`)
+**Theme**: Vibrant tropical (base=#fff4e0 sand, brand=#0e7a6e teal, sunset=#ff6b35, treasure=#ffd700)
+**Fonts**: Bangers (headings) + Quicksand (body)
+**Approach**: Generate HTML → convert to blocks → fresh site with only custom blocks
+
+### Key Lessons
+
+#### Template Field References Must Use `fieldToSlug()` Format
+
+The compiler normalizes field names via `fieldToSlug()` before passing to Handlebars:
+- `"Background Image"` → `background-image`
+- `"CTA Label"` → `cta-label`
+- `"Logo Text"` → `logo-text`
+
+**Always use dashes in templates**, never underscores. `{{cta-label}}` not `{{cta_label}}`. Make Studio's Handlebars supports dashes directly in expressions (unlike stock Handlebars).
+
+#### Items Sub-Field Keys Are Pass-Through
+
+The `set-content` API resolves top-level field names to UUIDs, but items array contents pass through as-is. Sub-field keys in items data must exactly match what the template references:
+- Template: `{{image}}`, `{{heading}}`, `{{cta-label}}`
+- Data: `{ image: "url", heading: "text", "cta-label": "Click" }`
+
+For sub-fields with spaces in the JSON definition (e.g., "CTA Label"), use the slugified form (`cta-label`) in both the template AND the items data.
+
+#### Image Upload: R2 Direct + `uploadFilesFromUrls` for Registration
+
+1. Upload to R2 via `@aws-sdk/client-s3` (converts to WebP via sharp, key = `{siteId}/{name}.webp`)
+2. Call `uploadFilesFromUrls` with the R2 public URLs — server registers files in the media library
+3. "File already exists" from step 2 is fine — the file is already usable
+
+This avoids needing direct MongoDB access. The images display via CDN regardless of media library registration.
+
+#### Layout Assignment Uses `settings.layoutId`
+
+Not a top-level field. Must use:
+```typescript
+await client.updatePage(pageId, { settings: { layoutId: layoutId } })
+```
+
+#### Fresh Sites Need Cleanup
+
+New sites come with ~25 default pages and a "Default Layout" referencing seed blocks. When creating a fresh site with custom blocks only:
+1. Use `--delete` flag on sync to remove all default blocks
+2. The setup-pages command handles layout creation, but existing default layouts may conflict
+3. Default blog post pages remain after sync — they're harmless but messy
+
+#### `setPageContent` Uses Block Names, Not Instance IDs
+
+The API accepts `{ "Hero": { "Headline": "text" } }` — block names as top-level keys, field names as nested keys. Server resolves everything to UUIDs internally. Case-insensitive matching for both block names and field names.
+
+#### End-to-End Setup Script Pattern
+
+A single setup script should:
+1. Upload images to R2 → register via `uploadFilesFromUrls`
+2. Find the Index page and assign a layout (`settings.layoutId`)
+3. Set block order via `updatePage(id, { blocks: [...] })`
+4. Set content via `setPageContent(id, { BlockName: { Field: value } })`
+5. Deploy preview
+
+This is the repeatable pattern for any site conversion.

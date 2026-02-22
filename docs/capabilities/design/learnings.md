@@ -22,6 +22,18 @@ Accumulated insights about the Make Studio design system.
 - **All 4 hardcoded variants must exist** — The server CSS generator iterates `['primary', 'secondary', 'outline', 'ghost']` and crashes with `Cannot read properties of undefined (reading 'backgroundColor')` if any is missing. Always define all four, even if the theme doesn't use them.
 - **Button partial supports sizing and icons** — `size="lg"` or `size="sm"`, `icon="arrow-right"` for Phosphor icons.
 
+## Field Name to Template Variable Mapping
+
+- **`fieldToSlug()` normalizes all field names** — The compiler converts field names before passing to Handlebars templates:
+  1. Replace underscores with spaces
+  2. Lowercase
+  3. Strip non-alphanumeric (except spaces and dashes)
+  4. Replace spaces with dashes
+  5. Collapse multiple dashes
+- **Examples**: `"Background Image"` → `background-image`, `"CTA Label"` → `cta-label`, `"Logo Text"` → `logo-text`, `"Headline"` → `headline`
+- **Make Studio's Handlebars supports dashes** — `{{cta-label}}` works directly, no bracket notation needed. This is a custom extension.
+- **NEVER use underscores in template variables** — `{{cta_label}}` will never match because `fieldToSlug()` never produces underscores.
+
 ## Animations
 
 - **Strip all source animations** — Remove opacity-0, translate-y, transition, duration, delay, ease, AOS, GSAP, Vue transitions.

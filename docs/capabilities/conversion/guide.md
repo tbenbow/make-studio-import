@@ -90,7 +90,7 @@ Transform source HTML into clean Handlebars:
 2. Replace color classes with semantic tokens (`bg-[#hex]` → `bg-base`)
 3. Replace typography classes with tiers (`text-7xl` → `heading-xl`)
 4. Apply standard container wrapper
-5. Extract text into `{{fieldName}}` variables
+5. Extract text into `{{field-name}}` variables (use `fieldToSlug()` format — see below)
 6. Convert similar siblings to `{{#each items}}`
 7. Use `{{> Button}}` for buttons
 8. Wrap optional elements in `{{#if fieldName}}`
@@ -119,6 +119,23 @@ Every section block MUST use this wrapper:
 ```
 
 Exceptions: Navbar (sticky header), Footer, full-bleed sections.
+
+### Field Name → Template Variable (`fieldToSlug`)
+
+**CRITICAL**: The compiler normalizes JSON field names before passing to templates. Template variables MUST use the slugified form:
+
+| JSON Field Name | Template Variable |
+|----------------|-------------------|
+| `Headline` | `{{headline}}` |
+| `Background Image` | `{{background-image}}` |
+| `CTA Label` | `{{cta-label}}` |
+| `Logo Text` | `{{logo-text}}` |
+
+Rules: lowercase, spaces→dashes, strip non-alphanumeric (except dashes). **Never use underscores** — `{{cta_label}}` will never match.
+
+Make Studio's Handlebars supports dashes directly (no bracket notation needed).
+
+For **items sub-fields**, the same slugified keys must be used in both the template AND in content data passed to `setPageContent`, since items arrays pass through the API without field name resolution.
 
 ### Handlebars Syntax
 
@@ -169,13 +186,75 @@ Exceptions: Navbar (sticky header), Footer, full-bleed sections.
 
 Never include: `opacity-0`, `translate-y-*`, `transition-*`, `duration-*`, `ease-*`, `data-v-*`, `v-bind`, `ng-*`, `__nuxt`, `bg-[#hex]`.
 
-## Phase 4: Assessment
+## Phase 4: Page Setup & Content
 
-1. Full deployment: `npm run sync -- --theme=<name> --apply`
-2. Full-page screenshot comparison
-3. Present to human for feedback
-4. Iterate on specific blocks
+After all blocks are synced, wire them into pages with images and content.
 
-## Phase 5: Compound
+### 4.1 Upload Images
+
+Upload local images to R2, then register in media library:
+
+```typescript
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
+import sharp from 'sharp'
+
+// 1. Convert to WebP and upload to R2
+const buffer = await sharp(input).webp({ quality: 80 }).toBuffer()
+await s3.send(new PutObjectCommand({
+  Bucket: 'make-studio', Key: `${siteId}/${name}.webp`,
+  Body: buffer, ContentType: 'image/webp',
+}))
+const url = `https://makestudio.site/${siteId}/${name}.webp`
+
+// 2. Register in media library
+await client.uploadFilesFromUrls(siteId, [{ url, fileName: `${name}.webp` }])
+```
+
+### 4.2 Assign Layout and Blocks to Page
+
+```typescript
+// Find layout and assign to page
+const layouts = await client.getLayouts(siteId)
+const layout = layouts.find(l => l.name === 'Default' && l.isDefault)
+await client.updatePage(pageId, { settings: { layoutId: layout._id } })
+
+// Set block order
+await client.updatePage(pageId, { blocks: [
+  { id: crypto.randomUUID(), blockId: heroBlock._id, name: 'Hero' },
+  { id: crypto.randomUUID(), blockId: featuresBlock._id, name: 'Features' },
+] })
+```
+
+### 4.3 Set Block Content
+
+Use block names (not IDs) and field names (case-insensitive):
+
+```typescript
+await client.setPageContent(pageId, {
+  Hero: {
+    Headline: "Welcome",
+    Image: "https://makestudio.site/siteId/hero.webp",
+    Buttons: [
+      { label: "Get Started", link: "#", style: "primary" }
+    ],
+  },
+})
+```
+
+**Items sub-field keys must use the slugified form** (lowercase, dashes) since they pass through without resolution.
+
+### 4.4 Deploy Preview
+
+```typescript
+await client.deployPreview(siteId)
+```
+
+## Phase 5: Assessment
+
+1. Full-page screenshot comparison
+2. Present to human for feedback
+3. Iterate on specific blocks
+
+## Phase 6: Compound
 
 After successful conversion, update `docs/capabilities/conversion/learnings.md`.

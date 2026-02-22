@@ -38,3 +38,11 @@ Accumulated insights about page management.
 - **Always verify which site the editor is connected to** — When working with multiple sites locally, the `.env` site ID and the editor session can point to different sites. The editor URL starts with the site ID (`localhost:5173/{siteId}/...`).
 - **Rename seed post type before importing** — New sites come with a "Blog" post type. Rename it (or delete + recreate) to match your post type name before importing content. Name conflicts with existing pages must be resolved first.
 - **WordPress REST API is reliable for content** — `/wp-json/wp/v2/posts?per_page=100&page=N&_embed` returns full HTML content even for client-side rendered WP sites. No need to scrape rendered pages.
+
+## set-content Field Name Resolution
+
+- **Top-level keys are block names** — `{ "Hero": { ... } }`, not block instance UUIDs. The server looks up block definitions by name on the site.
+- **Nested keys are field names** — `{ "Hero": { "Headline": "text" } }`. Case-insensitive matching against the block's field definitions.
+- **Items arrays pass through as-is** — The server does NOT resolve sub-field names within items arrays. Whatever keys you put in the array items are stored verbatim and passed directly to Handlebars. Use the `fieldToSlug()` format (lowercase, spaces→dashes) so they match what the template expects.
+- **Field name to template variable mapping** — `fieldToSlug()` converts: underscores→spaces→dashes, lowercase, strip non-alphanumeric. Examples: `"Background Image"` → `background-image`, `"CTA Label"` → `cta-label`, `"Headline"` → `headline`.
+- **Items field values can be arrays or JSON strings** — The compiler's `parseFieldValue()` handles both. If stored as an array (from API), it passes through. If stored as a JSON string (from editor), it parses it.
