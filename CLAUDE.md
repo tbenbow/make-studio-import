@@ -7,7 +7,9 @@ Agent workspace for building and managing Make Studio sites.
 - **Conversion** — Convert third-party websites into Make Studio themes (`docs/capabilities/conversion/guide.md`)
 - **Design** — Color tokens, typography tiers, animations (`docs/capabilities/design/guide.md`)
 - **Pages** — Page management, layouts, post types via API (`docs/capabilities/pages/guide.md`)
+- **Blocks** — Image-to-block workflow: screenshot → theme → block → iterate (`docs/capabilities/blocks/guide.md`)
 - **Deployment** — Preview, deploy requests, snapshots (`docs/capabilities/deployment/guide.md`)
+- **Generation** — Generate sites from vibe prompts: 4 HTML variations → pick one → convert to blocks (`docs/capabilities/generation/guide.md`)
 
 ## Guardrails
 
@@ -65,6 +67,14 @@ MAKE_STUDIO_TOKEN=<per-site API token>
 MAKE_STUDIO_SITE=<site ID>
 ```
 
+### Block Ingress Site
+
+Dedicated site for building individual blocks from screenshots.
+
+- **Site ID**: `699a31ac451f939b5bab64d2`
+- **Theme**: `block-ingress`
+- Credentials are stored in `.env` — swap `MAKE_STUDIO_SITE` and `MAKE_STUDIO_TOKEN` when switching between sites.
+
 ## File Structure
 
 ```
@@ -77,6 +87,7 @@ themes/<name>/
       BlockName.json            # Field definitions
     partials/
       Button.html               # Shared button partial
+  source/                       # Generated HTML variations (site generation)
   snapshots/                    # Pre-sync state snapshots
 docs/
   capabilities/                 # Capability guides and learnings

@@ -11,11 +11,16 @@
     "status": "tsx src/index.ts status",
     "create-site": "tsx src/index.ts create-site",
     "setup-pages": "tsx src/index.ts setup-pages",
-    "test": "tsx --test src/*.test.ts"
+    "test": "tsx --test src/*.test.ts",
+    "preview-generations": "npx tsx scripts/preview-generations.ts",
+    "generate-image": "npx tsx scripts/generate-image.ts",
+    "search-pexels": "npx tsx scripts/search-pexels.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@aws-sdk/client-s3": "^3.993.0",
     "dotenv": "^16.3.1",
+    "openai": "^6.22.0",
     "playwright": "^1.58.2",
     "sharp": "^0.34.5",
     "uuid": "^9.0.0"
