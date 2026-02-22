@@ -12,3 +12,6 @@ themes/*/source/
 
 # Sync state is local (tracks last sync timestamp per theme)
 themes/*/.sync-state.json
+
+# Workflow progress state (local/ephemeral)
+.state/
