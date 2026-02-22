@@ -11,16 +11,22 @@
     "status": "tsx src/index.ts status",
     "create-site": "tsx src/index.ts create-site",
     "setup-pages": "tsx src/index.ts setup-pages",
-    "test": "tsx --test src/*.test.ts",
+    "media": "tsx src/index.ts media",
+    "test": "tsx --test src/*.test.ts src/utils/*.test.ts",
     "preview-generations": "npx tsx scripts/preview-generations.ts",
     "generate-image": "npx tsx scripts/generate-image.ts",
-    "search-pexels": "npx tsx scripts/search-pexels.ts"
+    "search-pexels": "npx tsx scripts/search-pexels.ts",
+    "prepare": "husky"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
     "@aws-sdk/client-s3": "^3.993.0",
+    "@inquirer/prompts": "^8.2.1",
+    "chalk": "^5.6.2",
+    "cli-table3": "^0.6.5",
     "dotenv": "^16.3.1",
     "openai": "^6.22.0",
+    "ora": "^9.3.0",
     "playwright": "^1.58.2",
     "sharp": "^0.34.5",
     "uuid": "^9.0.0"
@@ -28,6 +34,7 @@
   "devDependencies": {
     "@types/node": "^20.10.0",
     "@types/uuid": "^9.0.0",
+    "husky": "^9.1.7",
     "tsx": "^4.6.0",
     "typescript": "^5.3.0"
   }

@@ -4,6 +4,85 @@ import type { ValidationResult, SourceField } from './types.js'
 
 const VALID_FIELD_TYPES = ['text', 'textarea', 'wysiwyg', 'richText', 'image', 'items', 'repeater', 'select', 'toggle', 'group', 'number', 'date']
 
+/**
+ * Lint a Handlebars template for common syntax issues.
+ * Returns an array of warning messages.
+ */
+export function lintTemplate(template: string): string[] {
+  const warnings: string[] = []
+
+  // Check for unmatched opening/closing block helpers
+  const openBlocks = template.match(/\{\{#(\w+)/g) || []
+  const closeBlocks = template.match(/\{\{\/(\w+)/g) || []
+
+  const openCounts: Record<string, number> = {}
+  const closeCounts: Record<string, number> = {}
+
+  for (const m of openBlocks) {
+    const name = m.replace('{{#', '')
+    openCounts[name] = (openCounts[name] || 0) + 1
+  }
+  for (const m of closeBlocks) {
+    const name = m.replace('{{/', '')
+    closeCounts[name] = (closeCounts[name] || 0) + 1
+  }
+
+  for (const name of new Set([...Object.keys(openCounts), ...Object.keys(closeCounts)])) {
+    const opens = openCounts[name] || 0
+    const closes = closeCounts[name] || 0
+    if (opens > closes) {
+      warnings.push(`Unclosed {{#${name}}} block (${opens} opens, ${closes} closes)`)
+    } else if (closes > opens) {
+      warnings.push(`Extra {{/${name}}} without matching {{#${name}}} (${opens} opens, ${closes} closes)`)
+    }
+  }
+
+  // Check for unclosed expressions ({{ without }})
+  const unclosed = template.match(/\{\{(?![\s\S]*?\}\})/g)
+  if (unclosed) {
+    warnings.push('Possibly unclosed Handlebars expression ({{ without matching }})')
+  }
+
+  return warnings
+}
+
+/**
+ * Find all blocks that reference a given partial via {{> partialName}}.
+ */
+export function findPartialReferences(blocksDir: string, partialName: string): string[] {
+  const references: string[] = []
+  if (!fs.existsSync(blocksDir)) return references
+
+  for (const file of fs.readdirSync(blocksDir).filter(f => f.endsWith('.html'))) {
+    const blockName = file.replace('.html', '')
+    const template = fs.readFileSync(path.join(blocksDir, file), 'utf-8')
+    if (template.includes(`{{> ${partialName}}}`) || template.includes(`{{>${partialName}}`)) {
+      references.push(blockName)
+    }
+  }
+  return references
+}
+
+/**
+ * Build a dependency map: partial name → list of blocks that use it.
+ */
+export function buildPartialDependencyMap(blocksDir: string, partialsDir: string): Map<string, string[]> {
+  const map = new Map<string, string[]>()
+  if (!fs.existsSync(partialsDir)) return map
+
+  const partialNames = fs.readdirSync(partialsDir)
+    .filter(f => f.endsWith('.html'))
+    .map(f => f.replace('.html', ''))
+
+  for (const partialName of partialNames) {
+    const refs = findPartialReferences(blocksDir, partialName)
+    if (refs.length > 0) {
+      map.set(partialName, refs)
+    }
+  }
+  return map
+}
+
 function validateFieldSchema(fields: SourceField[], filePath: string): string[] {
   const errors: string[] = []
 
@@ -60,6 +139,12 @@ export function validate(themePath: string): ValidationResult {
       if (!htmlContent.trim()) {
         result.errors.push({ file: `blocks/${htmlFile}`, message: 'Template is empty' })
         result.valid = false
+      } else {
+        // Lint Handlebars syntax
+        const templateWarnings = lintTemplate(htmlContent)
+        for (const w of templateWarnings) {
+          result.warnings.push({ file: `blocks/${htmlFile}`, message: w })
+        }
       }
 
       // Check JSON exists
@@ -88,7 +173,7 @@ export function validate(themePath: string): ValidationResult {
           }
         }
       } catch (e) {
-        result.errors.push({ file: `blocks/${name}.json`, message: `Invalid JSON: ${e}` })
+        result.errors.push({ file: `blocks/${name}.json`, message: `Invalid JSON: ${(e as Error).message}` })
         result.valid = false
       }
     }
@@ -106,6 +191,11 @@ export function validate(themePath: string): ValidationResult {
       if (!htmlContent.trim()) {
         result.errors.push({ file: `partials/${htmlFile}`, message: 'Template is empty' })
         result.valid = false
+      } else {
+        const templateWarnings = lintTemplate(htmlContent)
+        for (const w of templateWarnings) {
+          result.warnings.push({ file: `partials/${htmlFile}`, message: w })
+        }
       }
     }
   }

@@ -30,23 +30,7 @@
  *   5. Rewrites CDN URLs in the restored content if files were copied
  */
 import { MakeStudioClient } from '../src/api.js'
-
-// ─── Argument parsing ───
-
-function parseArgs(args: string[]): Record<string, string> {
-  const result: Record<string, string> = {}
-  for (const arg of args) {
-    if (arg.startsWith('--')) {
-      const eq = arg.indexOf('=')
-      if (eq > -1) {
-        result[arg.slice(2, eq)] = arg.slice(eq + 1)
-      } else {
-        result[arg.slice(2)] = 'true'
-      }
-    }
-  }
-  return result
-}
+import { parseArgs } from '../src/utils/args.js'
 
 const args = parseArgs(process.argv.slice(2))
 

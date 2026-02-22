@@ -3,6 +3,9 @@
  * Fetch-based client for syncing themes via per-site API tokens.
  */
 
+import type { ApiPage, UploadedFile, CreateSiteResponse } from './types.js'
+export type { ApiPage, UploadedFile, CreateSiteResponse } from './types.js'
+
 export interface ApiBlock {
   _id: string
   name: string
@@ -156,7 +159,7 @@ export class MakeStudioClient {
     return this.updateSite(siteId, { theme })
   }
 
-  async createSite(name: string): Promise<ApiSite & { apiToken?: string }> {
+  async createSite(name: string): Promise<CreateSiteResponse> {
     return this.request('POST', '/sites', { name })
   }
 
@@ -221,11 +224,11 @@ export class MakeStudioClient {
 
   // ─── Pages ───
 
-  async getPages(siteId: string): Promise<any[]> {
+  async getPages(siteId: string): Promise<ApiPage[]> {
     return this.request('GET', `/pages?site_id=${siteId}`)
   }
 
-  async getPage(id: string): Promise<any> {
+  async getPage(id: string): Promise<ApiPage> {
     return this.request('GET', `/pages/${id}`)
   }
 
@@ -235,11 +238,11 @@ export class MakeStudioClient {
     settings?: Record<string, unknown>
     parentId?: string
     postTypeId?: string
-  }): Promise<any> {
+  }): Promise<ApiPage> {
     return this.request('POST', '/pages', data)
   }
 
-  async updatePage(id: string, data: Record<string, unknown>): Promise<any> {
+  async updatePage(id: string, data: Record<string, unknown>): Promise<ApiPage> {
     return this.request('PATCH', `/pages/${id}`, data)
   }
 
@@ -247,7 +250,7 @@ export class MakeStudioClient {
     return this.request('DELETE', `/pages/${id}`)
   }
 
-  async setPageContent(id: string, content: Record<string, Record<string, unknown>>): Promise<any> {
+  async setPageContent(id: string, content: Record<string, Record<string, unknown>>): Promise<ApiPage> {
     return this.request('PATCH', `/pages/${id}/set-content`, content)
   }
 
@@ -405,9 +408,17 @@ export class MakeStudioClient {
     if (operations.blocks) {
       for (const op of operations.blocks) {
         switch (op.action) {
-          case 'create':
-            await this.createBlock({ site_id: siteId, name: '', ...op.data } as any)
+          case 'create': {
+            const data = op.data || {}
+            await this.createBlock({
+              site_id: siteId,
+              name: (data.name as string) || '',
+              template: data.template as string | undefined,
+              fields: data.fields as unknown[] | undefined,
+              category: data.category as string | undefined
+            })
             break
+          }
           case 'update':
             if (op.id) await this.updateBlock(op.id, op.data || {})
             break
@@ -423,9 +434,15 @@ export class MakeStudioClient {
     if (operations.partials) {
       for (const op of operations.partials) {
         switch (op.action) {
-          case 'create':
-            await this.createPartial({ site_id: siteId, name: '', ...op.data } as any)
+          case 'create': {
+            const data = op.data || {}
+            await this.createPartial({
+              site_id: siteId,
+              name: (data.name as string) || '',
+              template: data.template as string | undefined
+            })
             break
+          }
           case 'update':
             if (op.id) await this.updatePartial(op.id, op.data || {})
             break
@@ -502,6 +519,6 @@ export class MakeStudioClient {
       throw new ApiError(res.status, message, code)
     }
 
-    return res.json() as any
+    return res.json() as Promise<UploadedFile>
   }
 }

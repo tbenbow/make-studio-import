@@ -1,0 +1,12 @@
+# Prevent committing sensitive files
+if git diff --cached --name-only | grep -qE '\.env$|\.make-studio\.json$'; then
+  echo "Error: Attempting to commit .env or .make-studio.json files."
+  echo "These contain sensitive credentials and should not be committed."
+  exit 1
+fi
+
+if git diff --cached --name-only | grep -qE 'snapshots/'; then
+  echo "Error: Attempting to commit snapshot files."
+  echo "Snapshots are runtime state and should not be committed."
+  exit 1
+fi

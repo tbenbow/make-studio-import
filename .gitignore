@@ -1,5 +1,6 @@
 node_modules/
 .env
+.make-studio.json
 *.log
 **/.DS_Store
 backup-*/

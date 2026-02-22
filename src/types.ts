@@ -46,3 +46,38 @@ export interface ValidationResult {
   warnings: { file: string; message: string }[]
 }
 
+export interface ApiPage {
+  _id: string
+  name: string
+  site_id: string
+  blocks?: Array<{ id: string; blockId: string; name: string }>
+  settings?: {
+    slug?: string
+    layoutId?: string
+    [key: string]: unknown
+  }
+  parentId?: string
+  postTypeId?: string
+  createdAt?: string
+  updatedAt?: string
+}
+
+export interface UploadedFile {
+  _id: string
+  url: string
+  filename: string
+  contentType: string
+  size: number
+}
+
+export interface CreateSiteResponse {
+  _id: string
+  name: string
+  theme: Record<string, unknown>
+  blocks: Array<{ _id: string; name: string }>
+  partials: Array<{ _id: string; name: string }>
+  pages: Array<{ _id: string; name: string }>
+  layouts: Array<{ _id: string; name: string }>
+  apiToken?: string
+}
+

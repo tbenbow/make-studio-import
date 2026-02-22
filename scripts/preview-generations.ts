@@ -8,9 +8,10 @@
  */
 
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http"
-import { readFile, readdir, stat } from "node:fs/promises"
+import { readFile, readdir, stat, copyFile } from "node:fs/promises"
 import { join, extname, resolve } from "node:path"
 import { chromium } from "playwright"
+import { select } from "@inquirer/prompts"
 
 const MIME_TYPES: Record<string, string> = {
   ".html": "text/html",
@@ -106,6 +107,22 @@ async function main() {
   console.log(`\nScreenshots saved:`)
   for (const p of screenshotPaths) {
     console.log(`  ${p}`)
+  }
+
+  // Interactive selection if running in a TTY
+  if (process.stdin.isTTY && files.length > 1) {
+    const chosen = await select({
+      message: "Which variation do you want to use?",
+      choices: files.map((f, i) => ({
+        name: `${i + 1}. ${f}`,
+        value: f,
+      })),
+    })
+
+    const selectedPath = join(sourceDir, chosen)
+    const outputPath = join(sourceDir, "selected.html")
+    await copyFile(selectedPath, outputPath)
+    console.log(`\nSelected: ${chosen} → ${outputPath}`)
   }
 }
 

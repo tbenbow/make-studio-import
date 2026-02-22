@@ -92,6 +92,17 @@ function stripIds(arr: unknown[]): unknown[] {
   })
 }
 
+/**
+ * Strip volatile properties from fields for diff comparison.
+ *
+ * Removes `id` and `_id` (regenerated UUIDs that always differ),
+ * strips IDs from items-type `value` arrays, removes empty `config: {}`,
+ * and recurses into nested `config.fields`.
+ *
+ * @example
+ *   stripFieldVolatile([{ id: 'abc', type: 'text', name: 'heading', value: '' }])
+ *   // [{ type: 'text', name: 'heading', value: '' }]
+ */
 export function stripFieldVolatile(fields: unknown[]): unknown[] {
   return fields.map(f => {
     if (typeof f !== 'object' || f === null) return f

@@ -2,7 +2,7 @@
 
 Utility scripts for the agent workspace.
 
-## Active Scripts
+## Utilities
 
 | Script | Description |
 |--------|-------------|
@@ -11,13 +11,16 @@ Utility scripts for the agent workspace.
 | `generate-image.ts` | Generate images using AI (DALL-E or Flux) |
 | `search-pexels.ts` | Search and download images from Pexels |
 | `preview-generations.ts` | Preview site generation variations |
-| `setup-pirate-golf.ts` | One-time setup script for Pirate Golf site |
-| `import-wp-posts.ts` | Import WordPress posts into Make Studio |
 | `check-media.ts` | Audit media files referenced by blocks and pages |
 | `inspect-page.ts` | Inspect page structure via API |
 
 ## Archive
 
-`scripts/archive/` contains 90+ one-off scripts from past conversions (okgosandbox, peakperformance).
+`scripts/archive/` contains one-off setup and migration scripts:
 
-**⚠️ WARNING**: Most archived scripts use direct MongoDB access, which violates current guardrails. They are kept for reference only and should NOT be used for new work. Always use the Make Studio API via `src/api.ts` instead.
+| Script | Description |
+|--------|-------------|
+| `setup-pirate-golf.ts` | One-time setup script for Pirate Golf site |
+| `import-wp-posts.ts` | Import WordPress posts into Make Studio |
+
+**Warning**: Archived scripts may use outdated patterns. Always use the Make Studio API via `src/api.ts` for new work.

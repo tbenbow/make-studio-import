@@ -22,6 +22,19 @@ export const TYPE_MAP: Record<string, string> = {
   date: 'date'
 }
 
+/**
+ * Compute the default/initial value for a field.
+ *
+ * - If an explicit `default` is set on the source field, use it.
+ *   For `items` type with array defaults, each item gets a fresh UUID `id`.
+ * - Otherwise: `items` → `[]`, `number` → `0`, everything else → `''`.
+ *
+ * @example
+ *   getDefaultValue({ type: 'text', name: 'title' }, 'text')  // ''
+ *   getDefaultValue({ type: 'text', name: 'title', default: 'Hello' }, 'text')  // 'Hello'
+ *   getDefaultValue({ type: 'items', name: 'links', default: [{ url: '/' }] }, 'items')
+ *   // [{ id: '<uuid>', url: '/' }]
+ */
 export function getDefaultValue(field: SourceField, dbType: string): unknown {
   if (field.default !== undefined) {
     if (dbType === 'items' && Array.isArray(field.default)) {
@@ -42,6 +55,25 @@ export function getDefaultValue(field: SourceField, dbType: string): unknown {
   }
 }
 
+/**
+ * Transform a source field definition (from JSON files) to API/database format.
+ *
+ * Source format (what developers write):
+ *   `{ type: 'richText', name: 'body', default: '<p>Hello</p>' }`
+ *
+ * API format (what the database stores):
+ *   `{ id: '<uuid>', type: 'wysiwyg', name: 'body', value: '<p>Hello</p>', config: {} }`
+ *
+ * Type aliases are resolved via TYPE_MAP (e.g. `richText` → `wysiwyg`, `repeater` → `items`).
+ * Nested `config.fields` (for items/repeater) are recursively transformed.
+ *
+ * @example
+ *   transformField({ type: 'text', name: 'heading' })
+ *   // { id: '<uuid>', type: 'text', name: 'heading', value: '', config: {} }
+ *
+ *   transformField({ type: 'items', name: 'links', config: { fields: [{ type: 'text', name: 'url' }] } })
+ *   // { id: '<uuid>', type: 'items', name: 'links', value: [], config: { fields: [<transformed>] } }
+ */
 export function transformField(field: SourceField): unknown {
   const dbType = TYPE_MAP[field.type] || 'text'
   const transformed: Record<string, unknown> = {
@@ -62,6 +94,28 @@ export function transformField(field: SourceField): unknown {
 
 // ─── Reverse field mapping (API → source format for pull) ───
 
+/**
+ * Reverse-transform an API/database field back to source format (for `pull`).
+ *
+ * API format (input):
+ *   `{ id: '<uuid>', type: 'wysiwyg', name: 'body', value: '<p>Hello</p>', config: {} }`
+ *
+ * Source format (output):
+ *   `{ type: 'wysiwyg', name: 'body', default: '<p>Hello</p>' }`
+ *
+ * - The `id` and `_id` are stripped (volatile, regenerated each transform).
+ * - `value` becomes `default` (omitted if empty string or undefined).
+ * - For `items` type: `id`/`_id` are stripped from each value item,
+ *   and `config.fields` are recursively reversed.
+ * - Empty `config` objects are omitted entirely.
+ *
+ * @example
+ *   reverseField({ id: 'abc', type: 'text', name: 'heading', value: 'Hello', config: {} })
+ *   // { type: 'text', name: 'heading', default: 'Hello' }
+ *
+ *   reverseField({ id: 'abc', type: 'items', name: 'links', value: [{ id: 'x', url: '/' }], config: { fields: [...] } })
+ *   // { type: 'items', name: 'links', default: [{ url: '/' }], config: { fields: [<reversed>] } }
+ */
 export function reverseField(field: Record<string, unknown>): Record<string, unknown> {
   const result: Record<string, unknown> = {
     type: field.type as string,
