@@ -20,7 +20,7 @@ This enables:
 
 ```json
 {
-  "workflow": "generate|convert|block|deploy",
+  "workflow": "generate|compose|convert|block|deploy",
   "theme": "theme-name",
   "startedAt": "2026-02-22T10:00:00Z",
   "currentPhase": 0,
@@ -69,6 +69,19 @@ Converts an existing website into a Make Studio theme.
 7. Deploy + verify
 
 **Slash command**: `/ms-convert <theme-name>`
+
+### Compose Workflow
+
+Composes a site from existing seed blocks + a vibe prompt.
+
+**Phases**:
+1. Fetch seed blocks + user prompt
+2. Select blocks + generate theme
+3. Source images
+4. Create site + push blocks/theme
+5. Populate content + deploy
+
+**Slash command**: `/ms-compose <theme-name>`
 
 ### Block Workflow
 
@@ -205,7 +218,7 @@ Both files are ignored in git (ephemeral, machine-local state).
 ## Integration with Slash Commands
 
 All major workflows automatically manage state:
-- **Start**: `/ms-generate`, `/ms-convert`, `/ms-block`, `/ms-deploy`
+- **Start**: `/ms-generate`, `/ms-compose`, `/ms-convert`, `/ms-block`, `/ms-deploy`
 - **Check**: `/ms-progress`
 - **Complete**: `/ms-done`
 

@@ -12,6 +12,7 @@ Display the following help text:
 | Command | What it does |
 |---------|-------------|
 | `/ms-generate <theme>` | Generate a site from a vibe prompt — 4 HTML variations, pick one, convert to blocks |
+| `/ms-compose <theme>` | Compose a site from existing seed blocks + a vibe prompt — faster than generate |
 | `/ms-convert <theme>` | Convert a static website into Make Studio blocks |
 | `/ms-block <name>` | Build a single block from a screenshot |
 | `/ms-deploy <theme>` | Sync and deploy a preview |
@@ -21,9 +22,10 @@ Display the following help text:
 ### Quick start
 
 1. **New site from scratch:** `/ms-generate my-site-name` then describe what you want
-2. **Convert an existing site:** Put source HTML in `themes/<name>/source/`, then `/ms-convert <name>`
-3. **Build one block:** `/ms-block block-ingress` then share a screenshot
-4. **Check where you left off:** `/ms-progress`
+2. **New site from seed blocks:** `/ms-compose my-site-name` then describe what you want (faster than generate)
+3. **Convert an existing site:** Put source HTML in `themes/<name>/source/`, then `/ms-convert <name>`
+4. **Build one block:** `/ms-block block-ingress` then share a screenshot
+5. **Check where you left off:** `/ms-progress`
 
 ### How it works
 
