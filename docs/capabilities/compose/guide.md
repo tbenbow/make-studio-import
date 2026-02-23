@@ -29,31 +29,42 @@ const blocks = await client.getBlocks(seedSiteId)
 const { partials } = await client.getPartials(seedSiteId)
 ```
 
-**Present blocks to user** grouped by `thumbnailType` or `category`:
+**Build a block catalog** from the fetched blocks' `aiDescription`, `tags`, and `fields`:
 
+```typescript
+function buildBlockCatalog(blocks: ApiBlock[]): string {
+  // Group blocks by thumbnailType (hero, features, stats, etc.)
+  const groups: Record<string, ApiBlock[]> = {}
+  for (const block of blocks) {
+    const group = block.thumbnailType || block.category || 'other'
+    ;(groups[group] ??= []).push(block)
+  }
+
+  let catalog = ''
+  for (const [group, groupBlocks] of Object.entries(groups)) {
+    catalog += `\n### ${group}\n`
+    for (const block of groupBlocks) {
+      const desc = block.aiDescription || block.description || '(no description)'
+      const tagStr = block.tags?.length ? ` [${block.tags.join(', ')}]` : ''
+      // Summarize fields: list image fields and items/repeater fields
+      const imageFields = block.fields?.filter(f => f.type === 'image').map(f => f.name) || []
+      const itemsFields = block.fields?.filter(f => f.type === 'items').map(f => f.name) || []
+      let fieldSummary = ''
+      if (imageFields.length) fieldSummary += ` | images: ${imageFields.join(', ')}`
+      if (itemsFields.length) fieldSummary += ` | repeaters: ${itemsFields.join(', ')}`
+      catalog += `- **${block.name}**: ${desc}${tagStr}${fieldSummary}\n`
+    }
+  }
+  return catalog
+}
+
+const catalog = buildBlockCatalog(blocks)
 ```
-## Available Blocks
 
-### Headers
-- Navbar1 — Centered logo with nav links and CTA button
-- Navbar2 — Left-aligned logo with dropdown menus
-
-### Heroes
-- Hero1 — Split layout with image right, text left
-- Hero2 — Full-bleed background image with centered overlay text
-- Hero3 — Gradient background with floating cards
-
-### Features
-- Features1 — 3-column icon grid
-- Features2 — Alternating image/text rows
-...
-```
-
-Use block metadata to build this catalog:
-- `thumbnailType` — visual category (hero, features, stats, etc.)
-- `description` — what the block does
-- `category` — structural role (header, footer, content)
-- `fields` — what content it expects (images, text, items/repeaters)
+This catalog is what gets passed to the model in Phase 2. Each entry includes:
+- `aiDescription` — what the block does and when to choose it over alternatives
+- `tags` — searchable categories (e.g., `minimal`, `image-heavy`, `social-proof`)
+- Field summaries — which blocks need images, which have repeater items
 
 **Collect the vibe prompt:**
 - Business type and industry
@@ -65,16 +76,24 @@ Use block metadata to build this catalog:
 
 ### Phase 2: Select Blocks + Generate Theme
 
-For each variation, select a set of blocks to compose a homepage:
+**Pass the block catalog + vibe prompt to the model** for AI-driven block selection:
+
+The model receives:
+1. The full block catalog (built in Phase 1 with `aiDescription`, `tags`, and field summaries)
+2. The user's vibe prompt (business type, tone, content needs)
+3. The selection constraints below
+
+The model selects blocks with reasoning, informed by the "choose this over X when..." guidance baked into each `aiDescription`.
 
 **Required blocks:**
 - 1 navbar (category: `header`)
 - 1 hero (thumbnailType: `hero`)
 - 1 footer (category: `footer`)
 
-**Optional blocks** — select based on the vibe prompt:
-- Features, testimonials, pricing, stats, CTA, team, FAQ, logo cloud, etc.
-- Selection guided by: `thumbnailType`, `description`, `category`, field structure
+**Optional blocks** — model selects based on the vibe prompt + `aiDescription` guidance:
+- Each `aiDescription` includes "choose this over X when..." to help the model differentiate similar blocks
+- `tags` help match blocks to the prompt (e.g., `social-proof` tags for testimonial-heavy prompts)
+- Field summaries show content requirements (image-heavy blocks vs text-only)
 
 **Variation strategy** — when generating multiple variations, differ by:
 - Which hero block (different layout/visual style)

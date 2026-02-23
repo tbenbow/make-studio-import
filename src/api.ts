@@ -21,6 +21,8 @@ export interface ApiBlock {
     value: unknown
     config?: Record<string, unknown>
   }>
+  aiDescription?: string
+  tags?: string[]
   createdAt?: string
   updatedAt?: string
 }
@@ -189,6 +191,8 @@ export class MakeStudioClient {
     fields?: unknown[]
     description?: string
     thumbnailType?: string
+    aiDescription?: string
+    tags?: string[]
   }): Promise<ApiBlock> {
     return this.request('PATCH', `/blocks/${id}`, data)
   }

@@ -30,4 +30,8 @@ As you complete each phase, update .state/active.json:
 - Advance currentPhase to the next phase index
 - Update notes with context useful for resuming (what's done, what's next, any blockers)
 
+In Phase 1, build a block catalog from each block's `aiDescription`, `tags`, and field summaries (image fields, repeater fields). This catalog is what you pass to the model in Phase 2 for block selection — do NOT pick blocks from memory.
+
+In Phase 2, use the block catalog + the user's vibe prompt to select blocks. Each `aiDescription` includes "choose this over X when..." guidance. Let the catalog inform your selection reasoning.
+
 Follow the guide's phases in order. After each major milestone, deploy a preview and verify.
