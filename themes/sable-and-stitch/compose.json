@@ -1,0 +1,190 @@
+{
+  "siteName": "Sable & Stitch",
+  "blocks": ["Navbar", "Hero", "Features Triple", "Testimonial Large", "Stats", "Pricing Large", "CTA", "FooterNewsletter"],
+  "theme": {
+    "fonts": [
+      { "family": "Playfair Display", "weight": 400, "style": "normal" },
+      { "family": "Playfair Display", "weight": 700, "style": "normal" },
+      { "family": "IBM Plex Sans", "weight": 400, "style": "normal" },
+      { "family": "IBM Plex Sans", "weight": 500, "style": "normal" },
+      { "family": "IBM Plex Sans", "weight": 600, "style": "normal" }
+    ],
+    "systemColors": {
+      "brand": "#2c3e6b",
+      "on-brand": "#f4f0eb",
+      "base": "#1c1814",
+      "base-muted": "#241f1a",
+      "base-alt": "#2e2720",
+      "panel": "#2e2720",
+      "border": "#3e352d",
+      "fg": "#f4f0eb",
+      "fg-muted": "#b8a99a",
+      "fg-alt": "#8a7b6e"
+    },
+    "customColors": [],
+    "palette": {
+      "primary": { "label": "primary", "colors": ["rgb(22,28,48)", "rgb(34,48,82)", "rgb(44,62,107)", "rgb(82,108,158)", "rgb(140,162,204)"] },
+      "accent1": { "label": "accent-1", "colors": ["rgb(42,32,22)", "rgb(96,68,42)", "rgb(152,108,68)", "rgb(192,156,112)", "rgb(224,200,168)"] },
+      "accent2": { "label": "accent-2", "colors": ["rgb(38,28,22)", "rgb(82,52,32)", "rgb(132,82,48)", "rgb(176,124,78)", "rgb(212,172,132)"] },
+      "accent3": { "label": "accent-3", "colors": ["rgb(28,34,28)", "rgb(48,62,48)", "rgb(72,92,72)", "rgb(112,138,112)", "rgb(162,186,162)"] },
+      "grays": { "label": "gray", "colors": ["rgb(28,24,20)", "rgb(46,39,32)", "rgb(80,68,58)", "rgb(138,123,110)", "rgb(184,169,154)"] }
+    },
+    "headingTypography": {
+      "heading-xl": { "fontFamily": "Playfair Display", "fontWeight": 400, "fontSize": 60, "lineHeight": 68, "letterSpacing": -1.5, "mobileFontSize": 36, "mobileLineHeight": 42 },
+      "heading-lg": { "fontFamily": "Playfair Display", "fontWeight": 400, "fontSize": 44, "lineHeight": 52, "letterSpacing": -1, "mobileFontSize": 28, "mobileLineHeight": 34 },
+      "heading-md": { "fontFamily": "Playfair Display", "fontWeight": 400, "fontSize": 30, "lineHeight": 38, "letterSpacing": -0.5, "mobileFontSize": 22, "mobileLineHeight": 28 },
+      "heading-sm": { "fontFamily": "IBM Plex Sans", "fontWeight": 600, "fontSize": 20, "lineHeight": 28, "letterSpacing": -0.2, "mobileFontSize": 17, "mobileLineHeight": 24 },
+      "heading-xs": { "fontFamily": "IBM Plex Sans", "fontWeight": 600, "fontSize": 16, "lineHeight": 24, "letterSpacing": 0, "mobileFontSize": 15, "mobileLineHeight": 21 }
+    },
+    "bodyTypography": {
+      "body-lg": { "fontFamily": "IBM Plex Sans", "fontWeight": 400, "fontSize": 18, "lineHeight": 32, "letterSpacing": 0 },
+      "body-md": { "fontFamily": "IBM Plex Sans", "fontWeight": 400, "fontSize": 16, "lineHeight": 28, "letterSpacing": 0 },
+      "body-sm": { "fontFamily": "IBM Plex Sans", "fontWeight": 400, "fontSize": 14, "lineHeight": 22, "letterSpacing": 0 }
+    },
+    "prose": {
+      "elements": {
+        "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+        "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+        "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+        "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+        "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+        "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+        "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+        "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+        "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+      },
+      "lists": { "listStyleType": "disc", "indent": 1.5, "itemSpacing": 0.5, "nestedIndent": 1.5 },
+      "links": { "color": "accent", "hoverColor": "primary", "underline": "always" },
+      "customCSS": ""
+    },
+    "buttons": {
+      "global": {
+        "fontFamily": "'IBM Plex Sans', sans-serif",
+        "fontWeight": 600,
+        "uppercase": true,
+        "sizes": {
+          "lg": { "fontSize": 14, "letterSpacing": 1.5, "opticalYOffset": 0, "paddingTop": 16, "paddingBottom": 16, "paddingLeft": 32, "paddingRight": 32, "borderRadius": 0 },
+          "md": { "fontSize": 13, "letterSpacing": 1.2, "opticalYOffset": 0, "paddingTop": 12, "paddingBottom": 12, "paddingLeft": 24, "paddingRight": 24, "borderRadius": 0 },
+          "sm": { "fontSize": 11, "letterSpacing": 1, "opticalYOffset": 0, "paddingTop": 9, "paddingBottom": 9, "paddingLeft": 18, "paddingRight": 18, "borderRadius": 0 }
+        }
+      },
+      "variants": {
+        "primary": { "backgroundColor": "system:brand", "textColor": "system:on-brand", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "scale" },
+        "secondary": { "backgroundColor": "system:base-alt", "textColor": "system:fg", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "darken" },
+        "outline": { "backgroundColor": "transparent", "textColor": "system:fg", "borderColor": "system:border", "borderWidth": 1, "hoverPreset": "fill" },
+        "ghost": { "backgroundColor": "transparent", "textColor": "system:fg-muted", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "darken" }
+      }
+    }
+  },
+  "images": {
+    "hero": "leather-craftsman-workshop-han-1.jpg",
+    "workshop2": "leather-craftsman-workshop-han-2.jpg",
+    "wallet": "handmade-leather-wallet-artisa-1.jpg",
+    "bag": "leather-bag-handmade-artisan-w-1.jpg",
+    "belt": "leather-belt-handcrafted-detai-1.jpg",
+    "portrait": "man-portrait-artisan-craftsman-1.jpg",
+    "logo": "logo.png"
+  },
+  "content": {
+    "Navbar": {
+      "Logo": "$logo",
+      "Logo Text": "Sable & Stitch",
+      "Logo Link": "/",
+      "Button Label": "Commission",
+      "Button Link": "/commission",
+      "Links": [
+        { "label": "Workshop", "url": "/workshop" },
+        { "label": "Collection", "url": "/collection" },
+        { "label": "Custom Orders", "url": "/commission" },
+        { "label": "About", "url": "/about" }
+      ]
+    },
+    "Hero": {
+      "Eyebrow": "Bespoke Leather Goods — Minneapolis",
+      "Headline": "Made by hand, meant to last",
+      "Subheadline": "<p>Small-batch wallets, bags, and belts crafted from full-grain leather in our North Loop workshop. Every piece is cut, stitched, and finished by hand.</p>",
+      "Photo": "$hero",
+      "align": "items-start text-left"
+    },
+    "Features Triple": {
+      "Eyebrow": "The Collection",
+      "Headline": "Three ways to carry",
+      "Subheadline": "<p>Each piece starts as a single hide and becomes something you'll reach for every day.</p>",
+      "Features": [
+        {
+          "title": "Wallets & Card Cases",
+          "description": "Slim bifolds, minimalist card holders, and long wallets. Hand-stitched with waxed linen thread that only gets stronger with use.",
+          "image": "$wallet"
+        },
+        {
+          "title": "Bags & Totes",
+          "description": "Crossbody bags, market totes, and dopp kits built from vegetable-tanned leather that develops a rich patina over years of daily carry.",
+          "image": "$bag"
+        },
+        {
+          "title": "Belts & Straps",
+          "description": "Single-piece construction from thick bridle leather. Solid brass hardware. No bonded layers, no shortcuts — just leather that lasts decades.",
+          "image": "$belt"
+        }
+      ]
+    },
+    "Testimonial Large": {
+      "Quote": "<p>I've carried my Sable & Stitch bifold every day for two years. The leather has darkened into this gorgeous amber, and the stitching hasn't budged. It's the only wallet I've owned that actually gets better looking over time.</p>",
+      "Name": "Daniel Kessler",
+      "Byline": "Custom order client since 2024",
+      "Photo": "$portrait"
+    },
+    "Stats": {
+      "Eyebrow": "The Craft",
+      "Headline": "Measured in stitches, not shortcuts",
+      "Subheadline": "<p>Every number here represents a choice to do things the slow way.</p>",
+      "Stats": [
+        { "stat": "8", "text": "Years of leatherwork" },
+        { "stat": "2,400+", "text": "Pieces hand-stitched" },
+        { "stat": "6", "text": "Tanneries we source from" },
+        { "stat": "1", "text": "Workshop, right here in the North Loop" }
+      ]
+    },
+    "Pricing Large": {
+      "Headline": "Custom commissions",
+      "Subheadline": "<p>Have something specific in mind? We'll work with you to design and build a one-of-a-kind piece from scratch. Choose your leather, thread color, hardware, and monogram.</p>",
+      "Price": "$195",
+      "Period": "starting",
+      "Features": [
+        { "text": "One-on-one design consultation" },
+        { "text": "Choice of 12 full-grain leathers" },
+        { "text": "Hand-stitched with waxed linen thread" },
+        { "text": "Solid brass or nickel hardware" },
+        { "text": "Optional monogram or embossing" },
+        { "text": "Completed in 2–4 weeks" }
+      ],
+      "Button Label": "Start a Commission",
+      "Button Link": "/commission"
+    },
+    "CTA": {
+      "Eyebrow": "Visit the Workshop",
+      "Headline": "See the work up close",
+      "Subheadline": "<p>Our North Loop studio is open for visits Thursday through Saturday. Watch a piece being made, browse the collection, or talk through a custom order over coffee.</p>",
+      "Align": "items-center text-center"
+    },
+    "FooterNewsletter": {
+      "Newsletter Headline": "From the bench",
+      "Newsletter Text": "<p>New pieces, workshop updates, and the occasional leather care tip — delivered monthly.</p>",
+      "Copyright": "<p>&copy; 2026 Sable & Stitch. Minneapolis, MN.</p>",
+      "Categories": [
+        {
+          "title": "Shop",
+          "links": "<a href=\"/collection\">Full Collection</a>\n<a href=\"/collection/wallets\">Wallets</a>\n<a href=\"/collection/bags\">Bags</a>\n<a href=\"/collection/belts\">Belts</a>"
+        },
+        {
+          "title": "Workshop",
+          "links": "<a href=\"/commission\">Custom Orders</a>\n<a href=\"/workshop\">Visit Us</a>\n<a href=\"/care\">Leather Care</a>"
+        },
+        {
+          "title": "Connect",
+          "links": "<a href=\"/about\">Our Story</a>\n<a href=\"https://instagram.com\">Instagram</a>\n<a href=\"/contact\">Contact</a>"
+        }
+      ]
+    }
+  }
+}

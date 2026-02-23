@@ -68,3 +68,23 @@ Accumulated insights from composing sites from seed blocks. Read this before sta
 - **Don't use layouts for navbar/footer content** — put navbar and footer directly in the page blocks array (first and last). Clear the layout's headerBlocks and footerBlocks to empty arrays. This ensures `setPageContent` content is found by the build. The layout `<header>` and `<footer>` wrappers render empty, and the navbar/footer render inside `<main>` with correct content.
 - **Correct compose order (updated)**: (1) create blocks from seed, (2) clear layout headerBlocks/footerBlocks, (3) assign ALL blocks to page (navbar first, footer last), (4) set ALL content via `setPageContent`, (5) re-order blocks to desired sequence (setPageContent may have shuffled them), (6) deploy.
 - **`createSite` default blocks share names with seed** — must delete ALL existing blocks before creating from seed. Otherwise the "Already exists" check keeps the default templates which have different HTML.
+
+## Sable & Stitch — Leather Goods Atelier (2026-02-23)
+
+**Prompt**: Surprise me (agent-chosen concept). Bespoke leather goods workshop, artisan/tactile aesthetic, North Loop Minneapolis.
+**Design**: Dark warm base `#1c1814` + deep indigo brand `#2c3e6b`, Playfair Display + IBM Plex Sans, square-cornered uppercase buttons (borderRadius: 0).
+**Blocks Used**: Navbar, Hero, Features Triple, Testimonial Large, Stats, Pricing Large, CTA, FooterNewsletter
+
+### What Worked
+- **`compose-site.ts` worked on the first run** — zero fix scripts needed. All 13 steps executed correctly: site creation, R2 upload, theme push, seed block copy, layout clearing, block assignment, content population, re-ordering, and deploy. This validates the unified script approach.
+- **Config-driven workflow is fast** — writing `compose.json` with all content up front, then running a single command, is significantly faster than the interactive step-by-step approach of previous composes.
+- **Pricing Large block used for first time** — items sub-field is just `{ "text": "..." }`, straightforward. Works well for commission/service pricing with a feature checklist.
+- **New block variety** — 8 blocks including Pricing Large (not used in previous composes). Proves the script generalizes beyond the blocks tested in Wax & Pour.
+
+### What Didn't
+- **`$key` image ref matched `$195`** — the `resolveImageRefs` function treated any string starting with `$` as an image reference. The price field `"$195"` triggered a warning. Fixed: regex now requires `$` followed by a letter (`/^\$[a-zA-Z]/`).
+
+### Patterns Discovered
+- **compose.json as the single source of truth** — having theme, blocks, images, and content all in one file makes the workflow reproducible and reviewable. The `compose-site.ts` script is fully config-driven.
+- **`$key` syntax for image refs** — content references like `"$hero"` get resolved to CDN URLs after upload. Must start with a letter after `$` to avoid false matches on currency values.
+- **Compose is now a one-command workflow** — `npx tsx scripts/compose-site.ts --config=themes/<name>/compose.json` handles everything. The creative work is in writing the config; execution is automated.

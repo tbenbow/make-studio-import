@@ -123,7 +123,7 @@ async function uploadImage(localPath: string, filename: string, siteId: string):
 
 /** Recursively resolve $key image references in content */
 function resolveImageRefs(obj: unknown, urls: Record<string, string>): unknown {
-  if (typeof obj === 'string' && obj.startsWith('$')) {
+  if (typeof obj === 'string' && obj.startsWith('$') && /^\$[a-zA-Z]/.test(obj)) {
     const key = obj.slice(1)
     if (urls[key]) return urls[key]
     console.warn(`  WARN: Image ref "${obj}" not found in URL map`)
