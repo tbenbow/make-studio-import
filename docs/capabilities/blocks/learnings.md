@@ -10,13 +10,18 @@ Accumulated insights from building individual blocks from screenshots. Read this
 **Type**: Hero / Features / Stats / Navbar / Footer / CTA / Testimonial / etc.
 **Source**: Description of where the screenshot came from
 **Design**: Brief description (dark/light, brand color, fonts)
-**Iterations**: How many screenshot iterations were needed
+**Iterations**: N automated + M human feedback rounds
 
 ### What Worked
 - ...
 
 ### What Didn't
 - ...
+
+### Human Feedback Received
+- Round 1: "verbatim feedback" → fix applied: what changed
+- Round 2: "verbatim feedback" → fix applied: what changed
+(This is the highest-signal section — reveals gaps between what Claude sees and what a designer sees)
 
 ### Patterns Discovered
 - ...

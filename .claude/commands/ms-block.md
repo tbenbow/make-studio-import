@@ -26,6 +26,7 @@ Read the current state from `.state/active.json` (if it exists and workflow is "
     { "name": "Extract theme tokens", "status": "pending" },
     { "name": "Create block template + fields", "status": "pending" },
     { "name": "Visual iteration", "status": "pending" },
+    { "name": "Human feedback", "status": "pending" },
     { "name": "Finalize", "status": "pending" }
   ],
   "notes": ""
@@ -64,9 +65,11 @@ Write the block files following reference patterns in `docs/references/`:
 
 Include realistic default content that matches the source design. Use the Button partial (`{{> Button}}`) if the block has buttons.
 
-## Phase 4: Visual Iteration (up to 3 rounds)
+## Phase 4: Visual Iteration (up to 3 automated rounds)
 
-This is the core feedback loop. For each round:
+Self-review loop — compare your own render to the source and fix obvious issues.
+
+For each round:
 
 1. **Screenshot the rendered block:**
    ```bash
@@ -86,28 +89,52 @@ This is the core feedback loop. For each round:
 
 4. **If issues found:** Fix the template (`.html`) and/or fields (`.json`), then repeat from step 1.
 
-5. **If the render matches well enough:** Proceed to Phase 5.
+5. **If the render looks good:** Proceed to Phase 5.
 
-Stop iterating after 3 rounds maximum, even if imperfect — diminishing returns.
+Stop automated iteration after 3 rounds — get human eyes on it.
 
-## Phase 5: Finalize
+## Phase 5: Human Feedback Loop
 
-1. Deploy final preview and share the preview URL with the user for approval.
-2. **Write learnings** to `docs/capabilities/blocks/learnings.md` using this format:
+**This is the most important phase.** Present the work and ask for feedback. Repeat until approved.
+
+1. Show the user the latest rendered screenshot alongside the source screenshot.
+2. Share the preview URL so they can inspect in a browser.
+3. Ask: "What needs fixing?" — be specific about what you think is good and what might be off.
+4. **Wait for user feedback.** Do not proceed until they respond.
+5. If the user gives feedback:
+   - Fix the template/fields based on their notes
+   - Run `block-screenshot.ts` again to re-render
+   - Show the new screenshot and ask again
+   - Repeat — there is no limit on human feedback rounds
+6. If the user approves: proceed to Phase 6.
+
+**Every piece of human feedback is a learning.** Pay attention to the *type* of feedback:
+- If it's about spacing/sizing → future blocks should use similar values
+- If it's about color accuracy → note the gap between what you extracted and what was right
+- If it's about missing elements → note what you overlooked in analysis
+- If it's about feel/vibe → hardest to codify, but note the pattern
+
+## Phase 6: Finalize
+
+1. **Write learnings** to `docs/capabilities/blocks/learnings.md` using this format:
    ```
    ## Block Name (YYYY-MM-DD)
-   **Type**: ...  **Source**: ...  **Design**: ...  **Iterations**: N
+   **Type**: ...  **Source**: ...  **Design**: ...
+   **Iterations**: N automated + M human feedback rounds
    ### What Worked
    ### What Didn't
+   ### Human Feedback Received
+   - Round 1: "..." → fix applied: ...
+   - Round 2: "..." → fix applied: ...
    ### Patterns Discovered
    ```
-   Focus on surprises — things that would save time next time. Skip the obvious.
-3. **Update checklist** — if a new gotcha or rule emerged, add it to `docs/capabilities/blocks/checklist.md`.
-4. **Update guide** — if the workflow itself changed (not just a block-specific issue), update `docs/capabilities/blocks/guide.md`.
-5. Run `/ms-done` or archive state manually.
+   **Include the human feedback verbatim.** This is the highest-signal data — it reveals gaps between what Claude sees and what a designer sees. Over time, these accumulate into better first-pass blocks.
+2. **Update checklist** — if a new gotcha or rule emerged, add it to `docs/capabilities/blocks/checklist.md`.
+3. **Update guide** — if the workflow itself changed (not just a block-specific issue), update `docs/capabilities/blocks/guide.md`.
+4. Run `/ms-done` or archive state manually.
 
 ## Notes
 
-- The block-ingress site (ID `699a31ac451f939b5bab64d2`) is the dedicated sandbox for this workflow. Ensure `.env` is pointed at it.
-- The script creates a "Scratch" page automatically — no manual page setup needed.
-- Each iteration screenshot is numbered (render-1.png, render-2.png, render-3.png) so you can track progress.
+- The script uses the Index page at `/` for previews — no slug setup needed.
+- Each iteration screenshot is numbered (render-1.png, render-2.png, ...) so you can track progress.
+- Iteration artifacts are in `themes/<theme>/iterations/<BlockName>/` (git-ignored).
