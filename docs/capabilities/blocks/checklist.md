@@ -35,9 +35,17 @@ Quick-reference for building blocks. Distilled from conversion and design learni
 - [ ] Grid: `grid grid-cols-1 lg:grid-cols-2 gap-8` (adjust columns as needed)
 - [ ] For alternating layouts, use CSS `even:` variant, not Handlebars index math
 
+## Screenshot Pipeline (block-screenshot.ts)
+
+- [ ] Block description ≤30 characters — API rejects longer
+- [ ] Use inline styles for colors/backgrounds — Tailwind gets overridden by site theme
+- [ ] Pipeline uses Index page at `/` — no slug setup needed
+- [ ] Iteration screenshots saved to `themes/<theme>/iterations/<BlockName>/render-N.png`
+
 ## Common Gotchas
 
 - [ ] No Handlebars math helpers — can't do `{{multiply @index 100}}`
 - [ ] Pull after first sync — server normalizes templates
 - [ ] Strip source animations — replace with Alpine.js `x-intersect` if needed
 - [ ] `x-intersect` attributes get stripped by server — pull to get canonical version
+- [ ] Page slug doesn't persist via updatePage settings — use existing pages with known URLs

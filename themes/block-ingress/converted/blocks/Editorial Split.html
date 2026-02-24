@@ -1,0 +1,43 @@
+<section style="background-color: #f5f5f0; color: #3a3a3a; padding: 0;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+    <!-- Left column: Image + Quote -->
+    <div style="display: flex; flex-direction: column;">
+      <div style="overflow: hidden;">
+        <img
+          src="{{left-image}}"
+          alt="{{left-image-alt}}"
+          style="width: 100%; height: 450px; object-fit: cover; display: block;"
+        >
+      </div>
+      <div style="padding: 3rem 3rem 4rem;">
+        <blockquote style="position: relative; margin: 0;">
+          <span style="position: absolute; top: -10px; left: -8px; font-size: 100px; line-height: 1; color: #d4c9a8; font-family: Georgia, serif; user-select: none;" aria-hidden="true">"</span>
+          <p style="font-size: 1.35rem; line-height: 1.7; font-style: italic; font-family: Georgia, 'Times New Roman', serif; color: #3a3a3a; padding-top: 1.5rem; margin: 0;">
+            {{{quote}}}
+          </p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Right column: Video/Image with play button -->
+    <div style="display: flex; flex-direction: column;">
+      <div style="border-top: 1px solid #d0d0d0; margin-bottom: 1.5rem;"></div>
+      <div style="position: relative; overflow: hidden; flex: 1; min-height: 500px;">
+        <img
+          src="{{right-image}}"
+          alt="{{right-image-alt}}"
+          style="width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;"
+        >
+        {{#if video-url}}
+        <a href="{{video-url}}" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-decoration: none;" aria-label="Play video">
+          <div style="width: 64px; height: 64px; border-radius: 50%; background-color: #e8d9a0; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <svg style="width: 20px; height: 20px; color: white; margin-left: 2px;" fill="white" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

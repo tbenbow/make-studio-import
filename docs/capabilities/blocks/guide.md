@@ -40,24 +40,35 @@ Build the `.html` and `.json` files from the screenshot:
 npm run sync -- --theme=block-ingress --apply --only=BlockName
 ```
 
-### Step 3: Preview & Iterate
+### Step 3: Visual Iteration (screenshot pipeline)
 
-1. Preview the site to see the block rendered.
-2. User compares the preview to the original screenshot.
-3. User provides feedback — adjust spacing, colors, layout, typography.
-4. Re-sync and preview again.
+Use `block-screenshot.ts` for automated screenshot comparison:
 
+```bash
+npx tsx scripts/block-screenshot.ts --theme=block-ingress --block=BlockName
+```
+
+This syncs the block, deploys a preview, and captures a Playwright screenshot to `themes/block-ingress/iterations/BlockName/render-N.png`. Compare the rendered screenshot to the source screenshot and fix issues. Repeat up to 3 rounds.
+
+Key details:
+- Uses the Index page at `/` (always exists, reliable URL)
+- Use **inline styles** for colors/backgrounds — Tailwind classes get overridden by the site theme
+- Block description must be **≤30 characters**
+- ~15 seconds per round-trip
+
+For manual sync (without the screenshot pipeline):
 ```bash
 npm run sync -- --theme=block-ingress --apply --only=BlockName
 ```
 
-### Step 4: Completion
+### Step 4: Completion (compound loop)
 
 When the user approves the block:
 
-1. Write learnings to `docs/capabilities/blocks/learnings.md`.
-2. If the block reveals a new pattern, update `docs/capabilities/blocks/checklist.md`.
-3. The block files remain in `themes/block-ingress/converted/blocks/` for reference.
+1. **Write learnings** to `docs/capabilities/blocks/learnings.md` — focus on surprises and time-savers.
+2. **Update checklist** at `docs/capabilities/blocks/checklist.md` if a new rule or gotcha emerged.
+3. **Update this guide** if the workflow itself changed.
+4. The block files remain in `themes/block-ingress/converted/blocks/` for reference.
 
 ## Theme Swap Strategy
 

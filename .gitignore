@@ -14,6 +14,9 @@ themes/*/snapshots/
 # Source files are scraped reference material (HTML, screenshots, content dumps)
 themes/*/source/
 
+# Iteration artifacts (screenshots from visual iteration loop)
+themes/*/iterations/
+
 # Sync state is local (tracks last sync timestamp per theme)
 themes/*/.sync-state.json
 

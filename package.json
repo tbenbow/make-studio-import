@@ -16,6 +16,7 @@
     "preview-generations": "npx tsx scripts/preview-generations.ts",
     "generate-image": "npx tsx scripts/generate-image.ts",
     "search-pexels": "npx tsx scripts/search-pexels.ts",
+    "block-screenshot": "npx tsx scripts/block-screenshot.ts",
     "prepare": "husky"
   },
   "dependencies": {
