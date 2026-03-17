@@ -1,0 +1,33 @@
+<section class="bg-base py-16 sm:py-24">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    {{#if heading}}
+      <h2 class="heading-xs font-bold text-fg">{{heading}}</h2>
+    {{/if}}
+    <div class="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+      {{#each products}}
+        <div>
+          <div class="relative">
+            <div class="relative h-72 w-full overflow-hidden rounded-lg">
+              {{#if image}}
+                <img src="{{image}}" alt="{{name}}" class="size-full object-cover">
+              {{/if}}
+            </div>
+            <div class="relative mt-4">
+              <h3 class="body-sm font-medium text-fg">{{name}}</h3>
+              {{#if variant}}
+                <p class="mt-1 body-sm text-fg-muted">{{variant}}</p>
+              {{/if}}
+            </div>
+            <div class="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
+              <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-36 bg-linear-to-t from-black opacity-50"></div>
+              <p class="relative body-lg font-semibold text-white">{{price}}</p>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="{{link}}" class="relative flex items-center justify-center rounded-md border border-border bg-base-muted px-8 py-2 body-sm font-medium text-fg hover:bg-panel">{{button-text}}</a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

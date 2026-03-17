@@ -1,0 +1,25 @@
+<footer class="bg-fg border-t border-on-brand/10 py-8">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>
+      {{#if logo}}
+        <img src="{{image logo}}" alt="{{default logo-text 'Make'}}" class="h-5 w-auto">
+      {{else}}
+        <span class="heading-sm text-on-brand/60" style="font-style: italic;">{{default logo-text "Make"}}</span>
+      {{/if}}
+    </div>
+    {{#if (length links)}}
+      <nav>
+        <ul class="flex items-center gap-6">
+          {{#each links}}
+            <li>
+              <a href="{{url}}" class="body-sm text-on-brand/40 hover:text-on-brand/60 transition">{{label}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </nav>
+    {{/if}}
+    {{#if fineprint}}
+      <div class="body-sm text-on-brand/40">{{{fineprint}}}</div>
+    {{/if}}
+  </div>
+</footer>

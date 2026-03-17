@@ -1,0 +1,62 @@
+{
+  "description": "ProductFeatureHero",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/1400x400/374151/e5e7eb?text=Product+Hero"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Technical Specifications"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Organize is a system to keep your desk tidy and photo-worthy all day long. Procrastinate your work while you meticulously arrange items into dedicated trays."
+    },
+    {
+      "type": "items",
+      "name": "Specs",
+      "default": [
+        {
+          "label": "Origin",
+          "value": "Designed by Good Goods, Inc."
+        },
+        {
+          "label": "Material",
+          "value": "Solid walnut base with rare earth magnets and polycarbonate add-ons."
+        },
+        {
+          "label": "Dimensions",
+          "value": "15\" x 3.75\" x .75\""
+        },
+        {
+          "label": "Finish",
+          "value": "Hand sanded and finished with natural oil"
+        },
+        {
+          "label": "Includes",
+          "value": "Pen Tray, Phone Tray, Small Tray, Large Tray, Sticky Note Holder"
+        },
+        {
+          "label": "Considerations",
+          "value": "Made from natural materials. Grain and color vary with each item."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "textarea",
+            "name": "Value"
+          }
+        ]
+      }
+    }
+  ]
+}

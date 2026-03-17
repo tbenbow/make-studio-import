@@ -1,0 +1,69 @@
+{
+  "description": "Split hero with skewed bg",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "We're changing the way people connect"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/1280x1060/1f2937/6366f1?text=Hero+Image"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Learn more",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

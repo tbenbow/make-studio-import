@@ -1,0 +1,276 @@
+{
+  "fonts": [
+    {
+      "family": "Bodoni Moda",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Bodoni Moda",
+      "weight": 700,
+      "style": "normal"
+    },
+    {
+      "family": "Bodoni Moda",
+      "weight": 400,
+      "style": "italic"
+    },
+    {
+      "family": "Bodoni Moda",
+      "weight": 700,
+      "style": "italic"
+    },
+    {
+      "family": "Poppins",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Poppins",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Poppins",
+      "weight": 600,
+      "style": "normal"
+    },
+    {
+      "family": "Poppins",
+      "weight": 700,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "brand": "#355834",
+    "on-brand": "#FFFFFC",
+    "base": "#FFFFFC",
+    "base-muted": "#F5F0EB",
+    "base-alt": "#355834",
+    "panel": "#FFFFFC",
+    "fg": "#355834",
+    "fg-muted": "#C5BAAF",
+    "fg-alt": "#8A7F75",
+    "border": "#C5BAAF",
+    "accent-1": "#E1CE7A",
+    "accent-2": "#EBCFB2"
+  },
+  "customColors": [
+    { "id": "hunter-green", "name": "hunter-green", "value": "#355834" },
+    { "id": "golden-sand", "name": "golden-sand", "value": "#E1CE7A" },
+    { "id": "desert-sand", "name": "desert-sand", "value": "#EBCFB2" },
+    { "id": "silver", "name": "silver", "value": "#C5BAAF" }
+  ],
+  "palette": {
+    "primary": {
+      "label": "primary",
+      "colors": [
+        "#E1CE7A",
+        "#C5B85E",
+        "#355834",
+        "#2A4629",
+        "#1F351F"
+      ]
+    },
+    "grays": {
+      "label": "gray",
+      "colors": [
+        "#FFFFFC",
+        "#EBCFB2",
+        "#C5BAAF",
+        "#8A7F75",
+        "#355834"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Bodoni Moda",
+      "fontWeight": 400,
+      "fontSize": 72,
+      "lineHeight": 76,
+      "letterSpacing": -1,
+      "mobileFontSize": 44,
+      "mobileLineHeight": 48
+    },
+    "heading-lg": {
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 40,
+      "lineHeight": 48,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 30,
+      "mobileLineHeight": 36
+    },
+    "heading-md": {
+      "fontFamily": "Bodoni Moda",
+      "fontWeight": 700,
+      "fontSize": 28,
+      "lineHeight": 34,
+      "letterSpacing": 0,
+      "mobileFontSize": 22,
+      "mobileLineHeight": 28
+    },
+    "heading-sm": {
+      "fontFamily": "Poppins",
+      "fontWeight": 700,
+      "fontSize": 20,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "mobileFontSize": 18,
+      "mobileLineHeight": 24
+    },
+    "heading-xs": {
+      "fontFamily": "Poppins",
+      "fontWeight": 700,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "mobileFontSize": 14,
+      "mobileLineHeight": 20
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "Poppins",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Poppins",
+      "fontWeight": 500,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "h4": {
+        "typographyClass": "heading-sm",
+        "marginBottom": 0.75
+      },
+      "h5": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "h6": {
+        "typographyClass": "heading-xs",
+        "marginBottom": 0.5
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ul": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "ol": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "golden-sand",
+      "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Poppins",
+      "fontWeight": 600,
+      "uppercase": false,
+      "sizes": {
+        "lg": {
+          "fontSize": 16,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 14,
+          "paddingBottom": 14,
+          "paddingLeft": 28,
+          "paddingRight": 28,
+          "borderRadius": 4
+        },
+        "md": {
+          "fontSize": 14,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "borderRadius": 4
+        },
+        "sm": {
+          "fontSize": 13,
+          "letterSpacing": 0,
+          "opticalYOffset": 0,
+          "paddingTop": 6,
+          "paddingBottom": 6,
+          "paddingLeft": 14,
+          "paddingRight": 14,
+          "borderRadius": 4
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      },
+      "secondary": {
+        "backgroundColor": "custom:golden-sand",
+        "textColor": "system:brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg-muted",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
+    }
+  }
+}

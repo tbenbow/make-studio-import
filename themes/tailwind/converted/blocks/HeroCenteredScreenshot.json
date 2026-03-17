@@ -1,0 +1,74 @@
+{
+  "description": "Centered hero with screenshot",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Data to enrich your online business"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat."
+    },
+    {
+      "type": "image",
+      "name": "Screenshot",
+      "default": "https://placehold.co/2432x1442/1f2937/6366f1?text=App+Screenshot"
+    },
+    {
+      "type": "text",
+      "name": "Screenshot Alt",
+      "default": "App screenshot"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Learn more",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

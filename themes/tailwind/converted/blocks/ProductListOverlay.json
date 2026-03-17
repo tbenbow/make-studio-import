@@ -1,0 +1,76 @@
+{
+  "description": "ProductListOverlay",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Customers also bought"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+1",
+          "name": "Zip Tote Basket",
+          "variant": "White and black",
+          "price": "$140",
+          "button-text": "Add to bag",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+2",
+          "name": "Zip High Wall Tote",
+          "variant": "White and blue",
+          "price": "$150",
+          "button-text": "Add to bag",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+3",
+          "name": "Halfsize Tote",
+          "variant": "Clay",
+          "price": "$210",
+          "button-text": "Add to bag",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+4",
+          "name": "High Wall Tote",
+          "variant": "Black and orange",
+          "price": "$210",
+          "button-text": "Add to bag",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Button Text"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<header class="sticky top-0 z-10 bg-base backdrop-blur-md border-b border-border/10">
+  <nav>
+    <div class="mx-auto flex h-20 max-w-6xl items-center gap-4 px-6 lg:px-10">
+      <div class="flex flex-1 items-center">
+        <a href="{{default logo-link '/'}}" class="inline-flex items-center gap-2">
+          {{#if logo}}
+            <img src="{{logo}}" alt="{{logo-text}}" class="h-8 w-auto">
+          {{else}}
+            <span class="heading-xs text-fg">{{default logo-text "The Stillness Hour"}}</span>
+          {{/if}}
+        </a>
+      </div>
+      {{#if (length links)}}
+        <div class="hidden lg:flex gap-8">
+          {{#each links}}
+            <a href="{{url}}" class="body-sm font-medium text-fg-muted hover:text-fg transition">
+              {{label}}
+            </a>
+          {{/each}}
+        </div>
+      {{/if}}
+      <div class="flex flex-1 items-center justify-end gap-4">
+        {{#if button-label}}
+          <a href="{{default button-link '#'}}" class="inline-flex shrink-0 items-center justify-center gap-1 rounded-full bg-brand text-on-brand px-4 py-2 body-sm font-medium hover:bg-brand-dim transition">
+            {{button-label}}
+          </a>
+        {{/if}}
+        <button type="button" aria-label="Toggle menu" class="inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden">
+          {{icon "list" size="24"}}
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

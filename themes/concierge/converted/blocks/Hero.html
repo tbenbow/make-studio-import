@@ -1,0 +1,19 @@
+<section class="bg-base border-b border-border">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 py-0 min-h-[88vh] grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
+    <div class="py-16 lg:py-0">
+      <p class="body-sm uppercase tracking-[0.18em] text-brand mb-7">{{kicker}}</p>
+      <h1 class="heading-xl mb-8">{{{headline}}}</h1>
+      <p class="body-lg text-fg-muted mb-10 max-w-[420px]">{{subheadline}}</p>
+      {{> Button link=cta-link label=cta-label style="primary"}}
+    </div>
+    <div class="lg:border-l border-border lg:pl-16 flex flex-col gap-10 py-10 lg:py-0">
+      {{#each stats}}
+        {{#if @index}}<div class="w-10 h-px bg-border"></div>{{/if}}
+        <div class="flex flex-col gap-1">
+          <span class="heading-lg text-fg">{{value}}</span>
+          <span class="body-sm uppercase tracking-[0.1em] text-fg-muted">{{label}}</span>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

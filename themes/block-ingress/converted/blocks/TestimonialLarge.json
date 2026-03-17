@@ -1,0 +1,10 @@
+{
+  "description": "Single large testimonial. Big quote text centered, author name and photo below. High-impact social proof.",
+  "fields": [
+    { "type": "textarea", "name": "Quote", "default": "This is the tool I wish existed five years ago. It's changed how our entire team thinks about building websites. We shipped our rebrand in two weeks instead of three months." },
+    { "type": "text", "name": "Name", "default": "Sarah Chen" },
+    { "type": "text", "name": "Role", "default": "VP of Marketing, Flowbase" },
+    { "type": "image", "name": "Avatar", "default": "https://placehold.co/64x64/2845c4/ffffff?text=SC" },
+    { "type": "image", "name": "Company Logo", "default": "https://placehold.co/120x32/0b1640/8a94b8?text=Flowbase" }
+  ]
+}

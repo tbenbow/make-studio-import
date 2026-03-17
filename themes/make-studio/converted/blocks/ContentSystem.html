@@ -1,0 +1,44 @@
+<section class="py-20 lg:py-32 bg-base-muted border-t border-border">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-xl mb-16">
+      {{#if eyebrow}}
+        <p class="body-sm font-medium text-brand mb-3">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg mb-6" style="font-style: italic;">{{{headline}}}</h2>
+      {{#if description}}
+        <div class="body-md text-fg-muted">{{{description}}}</div>
+      {{/if}}
+    </div>
+
+    {{#if (length cards)}}
+      <div class="grid md:grid-cols-4 gap-4">
+        {{#each cards}}
+          {{#if featured}}
+            <div class="md:col-span-2 md:row-span-2 bg-panel border border-border rounded-xl p-6">
+              <div class="heading-sm text-fg mb-4" style="font-style: italic;">{{title}}</div>
+              <p class="body-sm text-fg-muted mb-6">{{{body}}}</p>
+              {{#if (length items)}}
+                <div class="flex flex-col gap-2">
+                  {{#each items}}
+                    <div class="border border-border rounded-lg p-3 flex gap-3 items-center">
+                      <div class="w-10 h-10 bg-brand/10 rounded flex-shrink-0"></div>
+                      <div>
+                        <div class="body-sm font-medium text-fg">{{title}}</div>
+                        <div class="body-sm text-fg-alt">{{meta}}</div>
+                      </div>
+                    </div>
+                  {{/each}}
+                </div>
+              {{/if}}
+            </div>
+          {{else}}
+            <div class="bg-panel border border-border rounded-xl p-6">
+              <div class="heading-xs text-fg mb-2" style="font-style: italic;">{{title}}</div>
+              <p class="body-sm text-fg-muted">{{body}}</p>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

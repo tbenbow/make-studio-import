@@ -1,0 +1,60 @@
+{
+  "description": "Two pricing cards side by side with plan name, price, feature list, and CTA. One highlighted as popular.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Simple, Transparent Pricing" },
+    { "type": "textarea", "name": "Subheading", "default": "No hidden fees. No surprises. Pick the plan that works for you." },
+    {
+      "type": "items",
+      "name": "Plans",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name", "default": "Plan" },
+          { "type": "text", "name": "Price", "default": "$0" },
+          { "type": "text", "name": "Period", "default": "/month" },
+          { "type": "textarea", "name": "Description", "default": "Plan description" },
+          { "type": "text", "name": "Button Label", "default": "Get Started" },
+          { "type": "link", "name": "Button Link", "default": "#" },
+          { "type": "toggle", "name": "Popular", "default": false },
+          { "type": "text", "name": "Feature 1", "default": "" },
+          { "type": "text", "name": "Feature 2", "default": "" },
+          { "type": "text", "name": "Feature 3", "default": "" },
+          { "type": "text", "name": "Feature 4", "default": "" },
+          { "type": "text", "name": "Feature 5", "default": "" },
+          { "type": "text", "name": "Feature 6", "default": "" }
+        ]
+      },
+      "default": [
+        {
+          "Name": "Starter",
+          "Price": "$19",
+          "Period": "/month",
+          "Description": "Everything you need to get started with a professional web presence.",
+          "Button Label": "Start Free Trial",
+          "Button Link": "#",
+          "Popular": false,
+          "Feature 1": "Up to 5 pages",
+          "Feature 2": "Custom domain",
+          "Feature 3": "SSL certificate",
+          "Feature 4": "Basic analytics",
+          "Feature 5": "Email support",
+          "Feature 6": ""
+        },
+        {
+          "Name": "Pro",
+          "Price": "$49",
+          "Period": "/month",
+          "Description": "For growing teams that need more power, flexibility, and collaboration.",
+          "Button Label": "Start Free Trial",
+          "Button Link": "#",
+          "Popular": true,
+          "Feature 1": "Unlimited pages",
+          "Feature 2": "Custom domain",
+          "Feature 3": "SSL certificate",
+          "Feature 4": "Advanced analytics",
+          "Feature 5": "Priority support",
+          "Feature 6": "Team collaboration"
+        }
+      ]
+    }
+  ]
+}

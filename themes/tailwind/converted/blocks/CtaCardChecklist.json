@@ -1,0 +1,66 @@
+{
+  "description": "CTA card with checklist",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Join our team"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/800x800/1f2937/6366f1?text=Team+Photo"
+    },
+    {
+      "type": "text",
+      "name": "Image Alt"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "label": "Competitive salaries"
+        },
+        {
+          "label": "Flexible work hours"
+        },
+        {
+          "label": "30 days of paid vacation"
+        },
+        {
+          "label": "Annual team retreats"
+        },
+        {
+          "label": "Benefits for you and your family"
+        },
+        {
+          "label": "A great work environment"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Cta Label",
+      "default": "See our job postings"
+    },
+    {
+      "type": "text",
+      "name": "Cta Link",
+      "default": "#"
+    }
+  ]
+}

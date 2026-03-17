@@ -1,0 +1,49 @@
+{
+  "description": "Navbar",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "Concierge"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "How it works",
+          "link": "#how"
+        },
+        {
+          "label": "Pricing",
+          "link": "#pricing"
+        },
+        {
+          "label": "About",
+          "link": "#about"
+        },
+        {
+          "label": "Get started",
+          "link": "#contact"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

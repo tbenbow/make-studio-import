@@ -1,0 +1,42 @@
+{
+  "description": "Bento grid layout with 1 large feature card spanning 2 columns and 4 smaller cards. Each has icon, title, description.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Built for Modern Teams" },
+    { "type": "textarea", "name": "Subheading", "default": "A thoughtfully designed platform where every feature works together seamlessly." },
+    {
+      "type": "group",
+      "name": "Featured Card",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon", "default": "lightning" },
+          { "type": "text", "name": "Title", "default": "Blazing Fast Performance" },
+          { "type": "textarea", "name": "Description", "default": "Every millisecond matters. Our edge network delivers your site from 200+ locations worldwide, with automatic image optimization and code splitting built in." },
+          { "type": "image", "name": "Image", "default": "https://placehold.co/640x300/1a2a6c/8a9ae8?text=Dashboard" }
+        ]
+      },
+      "default": {
+        "Icon": "lightning",
+        "Title": "Blazing Fast Performance",
+        "Description": "Every millisecond matters. Our edge network delivers your site from 200+ locations worldwide, with automatic image optimization and code splitting built in.",
+        "Image": "https://placehold.co/640x300/1a2a6c/8a9ae8?text=Dashboard"
+      }
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon", "default": "star" },
+          { "type": "text", "name": "Title", "default": "Feature" },
+          { "type": "textarea", "name": "Description", "default": "Description of this feature." }
+        ]
+      },
+      "default": [
+        { "Icon": "lock-simple", "Title": "Enterprise Security", "Description": "SOC 2 certified, SSO, 2FA, and role-based access control for your entire team." },
+        { "Icon": "arrows-clockwise", "Title": "Real-time Sync", "Description": "Changes propagate instantly across all team members. No refresh needed." },
+        { "Icon": "chart-bar", "Title": "Deep Analytics", "Description": "Understand visitor behavior with privacy-first analytics built right in." },
+        { "Icon": "gear", "Title": "API First", "Description": "Full REST and GraphQL APIs. Build custom integrations and automations." }
+      ]
+    }
+  ]
+}

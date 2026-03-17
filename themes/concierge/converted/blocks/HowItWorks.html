@@ -1,0 +1,14 @@
+<section class="bg-base border-b border-border">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 py-20 lg:py-28">
+    <p class="body-sm uppercase tracking-[0.18em] text-brand font-medium mb-12">{{label}}</p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+      {{#each steps}}
+        <div class="py-8 lg:py-10 lg:pr-12 {{#if @last}}lg:pl-12 lg:pr-0{{else}}{{#if @index}}lg:pl-12{{/if}}{{/if}} border-b lg:border-b-0 {{#unless @last}}lg:border-r{{/unless}} border-border">
+          <div class="heading-lg font-normal text-border mb-4" style="font-family: 'Playfair Display', serif;">{{number}}</div>
+          <h3 class="heading-sm mb-4">{{title}}</h3>
+          <p class="body-md text-fg-muted leading-[1.8]">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

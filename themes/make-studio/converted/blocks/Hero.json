@@ -1,0 +1,82 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Block-based platform for static sites"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Build once,<br>reuse forever.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Every block you build works on your next project. Spend less time rebuilding and more time on what makes your projects great.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Code Preview",
+      "default": "<p>&lt;section class=\"bg-base\"&gt;<br>&nbsp;&nbsp;&lt;h1 class=\"heading-xl\"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;{{headline}}<br>&nbsp;&nbsp;&lt;/h1&gt;<br>&nbsp;&nbsp;&lt;p class=\"body-lg\"&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;{{subheadline}}<br>&nbsp;&nbsp;&lt;/p&gt;<br>&nbsp;&nbsp;{{&gt; Button}}<br>&lt;/section&gt;</p>"
+    },
+    {
+      "type": "text",
+      "name": "Code Filename",
+      "default": "Hero.html"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Try it free",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "See how it works",
+          "link": "#build",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Outline",
+                  "value": "outline"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

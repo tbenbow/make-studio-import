@@ -1,0 +1,12 @@
+{
+  "description": "Hero with animated gradient background (CSS only). Large bold headline, badge/pill, subtext, CTA. Modern SaaS aesthetic.",
+  "fields": [
+    { "type": "text", "name": "Badge", "default": "Introducing v2.0" },
+    { "type": "text", "name": "Heading", "default": "The Future of Web Design Is Here" },
+    { "type": "textarea", "name": "Subheading", "default": "AI-powered design tools that understand your brand. Generate beautiful pages in seconds, customize everything, deploy instantly." },
+    { "type": "text", "name": "Primary Button Label", "default": "Try It Free" },
+    { "type": "link", "name": "Primary Button Link", "default": "#" },
+    { "type": "text", "name": "Secondary Button Label", "default": "Watch Demo" },
+    { "type": "link", "name": "Secondary Button Link", "default": "#" }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "description": "Screenshot with feature grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Everything you need"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "No server? No problem."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis."
+    },
+    {
+      "type": "image",
+      "name": "Screenshot",
+      "default": "https://placehold.co/2432x1442/1f2937/6366f1?text=App+Screenshot"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "cloud-arrow-up",
+          "title": "Push to deploy",
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna."
+        },
+        {
+          "icon": "lock-simple",
+          "title": "SSL certificates",
+          "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+        },
+        {
+          "icon": "arrows-clockwise",
+          "title": "Simple queues",
+          "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus."
+        },
+        {
+          "icon": "fingerprint",
+          "title": "Advanced security",
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna."
+        },
+        {
+          "icon": "gear",
+          "title": "Powerful API",
+          "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+        },
+        {
+          "icon": "database",
+          "title": "Database backups",
+          "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

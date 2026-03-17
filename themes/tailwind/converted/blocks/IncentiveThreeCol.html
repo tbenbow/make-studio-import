@@ -1,0 +1,29 @@
+<section class="bg-base">
+  <div class="mx-auto max-w-7xl py-24 sm:px-2 sm:py-32 lg:px-4">
+    <div class="mx-auto max-w-2xl px-4 lg:max-w-none">
+      <div class="max-w-3xl">
+        <h2 class="heading-lg text-fg">{{headline}}</h2>
+        {{#if description}}
+          <p class="mt-4 body-md text-fg-muted">{{description}}</p>
+        {{/if}}
+      </div>
+      <div class="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+        {{#each perks}}
+          <div class="sm:flex lg:block">
+            {{#if icon}}
+              <div class="sm:shrink-0">
+                <div class="size-16 text-brand">
+                  {{icon icon size="64"}}
+                </div>
+              </div>
+            {{/if}}
+            <div class="mt-4 sm:mt-0 sm:ml-6 lg:mt-6 lg:ml-0">
+              <h3 class="body-sm font-medium text-fg">{{title}}</h3>
+              <p class="mt-2 body-sm text-fg-muted">{{description}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

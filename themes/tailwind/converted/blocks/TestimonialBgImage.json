@@ -1,0 +1,29 @@
+{
+  "description": "TestimonialBgImage",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://placehold.co/1216x800/374151/e5e7eb?text=Background"
+    },
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Judith Black"
+    },
+    {
+      "type": "text",
+      "name": "Role",
+      "default": "CEO of Workcation"
+    }
+  ]
+}

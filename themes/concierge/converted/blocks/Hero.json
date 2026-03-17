@@ -1,0 +1,60 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Kicker",
+      "default": "A website service by Jamey & Tom"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Your website,<br><em>built live.</em><br>Two hours.<br>Five hundred bucks.</p>"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "We show up, we build together, you leave with a real website. No long timelines. No mystery. Just two people who've been doing this for 25 years, focused entirely on you."
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "See how it works"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#pricing"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "2 hrs",
+          "label": "From nothing to live"
+        },
+        {
+          "value": "$500",
+          "label": "Flat rate, no surprises"
+        },
+        {
+          "value": "50 yrs",
+          "label": "Combined experience"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

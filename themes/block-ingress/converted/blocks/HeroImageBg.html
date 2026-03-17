@@ -1,0 +1,28 @@
+<section class="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="{{[Background Image]}}" alt="" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-base/70 via-base/60 to-base/80"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-24 lg:py-32">
+
+    <h1 class="heading-xl text-fg">
+      {{Heading}}
+    </h1>
+
+    <p class="body-lg text-fg-muted mt-6 max-w-2xl mx-auto">
+      {{Subheading}}
+    </p>
+
+    <div class="mt-10">
+      {{> Button label=[Button Label] style="primary" size="lg" link=[Button Link]}}
+    </div>
+
+  </div>
+
+</section>

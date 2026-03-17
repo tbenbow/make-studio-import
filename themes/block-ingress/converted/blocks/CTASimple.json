@@ -1,0 +1,10 @@
+{
+  "description": "Centered CTA section with headline, subtext, and prominent button. Contrasting background.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Ready to Get Started?" },
+    { "type": "textarea", "name": "Subheading", "default": "Join thousands of teams already building better websites. Start your free trial today." },
+    { "type": "text", "name": "Button Label", "default": "Start Free Trial" },
+    { "type": "link", "name": "Button Link", "default": "#" },
+    { "type": "text", "name": "Note", "default": "No credit card required. Cancel anytime." }
+  ]
+}

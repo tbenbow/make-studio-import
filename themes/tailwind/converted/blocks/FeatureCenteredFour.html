@@ -1,0 +1,30 @@
+<section class="bg-base py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center">
+      {{#if eyebrow}}
+        <h2 class="body-sm font-semibold text-brand">{{eyebrow}}</h2>
+      {{/if}}
+      <p class="mt-2 heading-lg text-fg">{{headline}}</p>
+      {{#if description}}
+        <p class="mt-6 body-md text-fg-alt">{{description}}</p>
+      {{/if}}
+    </div>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+        {{#each features}}
+          <div class="relative pl-16">
+            <dt class="body-md font-semibold text-fg">
+              {{#if icon}}
+              <div class="absolute top-0 left-0 flex size-10 items-center justify-center rounded-lg bg-brand text-on-brand">
+                {{icon icon size="24"}}
+              </div>
+            {{/if}}
+              {{title}}
+            </dt>
+            <dd class="mt-2 body-md text-fg-muted">{{description}}</dd>
+          </div>
+        {{/each}}
+      </dl>
+    </div>
+  </div>
+</section>

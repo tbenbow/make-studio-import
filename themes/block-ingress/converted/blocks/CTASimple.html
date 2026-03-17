@@ -1,0 +1,23 @@
+<section class="bg-base py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="rounded-2xl bg-brand px-8 py-16 lg:px-16 lg:py-20 text-center">
+
+      <h2 class="heading-lg text-on-brand">{{Heading}}</h2>
+
+      <p class="body-lg text-on-brand/80 mt-4 max-w-xl mx-auto">
+        {{Subheading}}
+      </p>
+
+      <div class="mt-8">
+        {{> Button label=[Button Label] style="secondary" size="lg" link=[Button Link]}}
+      </div>
+
+      {{#if Note}}
+      <p class="body-sm text-on-brand/60 mt-4">
+        {{Note}}
+      </p>
+      {{/if}}
+
+    </div>
+  </div>
+</section>

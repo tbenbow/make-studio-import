@@ -1,0 +1,37 @@
+<header class="sticky top-0 z-10 bg-base/90 backdrop-blur-xl">
+  <nav>
+    <div class="mx-auto flex h-14 max-w-7xl items-center px-4 sm:px-6 lg:px-8 border-b border-border">
+      <div class="flex flex-1 items-center">
+        <a href="{{default logo-link '/'}}" class="inline-flex items-center">
+          {{#if logo}}
+            <img src="{{image logo}}" alt="{{default logo-text 'Make'}}" class="h-6 w-auto">
+          {{else}}
+            <span class="heading-md text-fg" style="font-style: italic;">{{default logo-text "Make"}}</span>
+          {{/if}}
+        </a>
+      </div>
+      {{#if (length links)}}
+        <div class="hidden lg:flex items-center gap-8">
+          {{#each links}}
+            <a href="{{url}}" class="body-sm text-fg-muted hover:text-fg transition {{#if (isActive url)}}text-brand{{/if}}">
+              {{label}}
+            </a>
+          {{/each}}
+        </div>
+      {{/if}}
+      <div class="flex flex-1 items-center justify-end gap-4">
+        {{#if login-label}}
+          <a href="{{default login-link '#'}}" class="body-sm text-fg-muted hover:text-fg transition hidden sm:inline">
+            {{login-label}}
+          </a>
+        {{/if}}
+        {{#if cta-label}}
+          {{> Button link=cta-link label=cta-label style="primary" size="sm"}}
+        {{/if}}
+        <button type="button" aria-label="Toggle menu" class="inline-flex rounded-full p-1.5 text-fg hover:bg-base-muted lg:hidden">
+          {{icon "list" size="24"}}
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

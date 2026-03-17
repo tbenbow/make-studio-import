@@ -1,0 +1,52 @@
+{
+  "description": "Sidebar headline with features",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Stay on top of customer support"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "trash",
+          "title": "Spam report",
+          "description": "Autem reprehenderit aut debitis ut. Officiis harum omnis placeat blanditiis delectus sint vel et voluptatum."
+        },
+        {
+          "icon": "pencil-simple",
+          "title": "Compose in markdown",
+          "description": "Illum et aut inventore. Ut et dignissimos quasi. Omnis saepe dolorum. Hic autem fugiat."
+        },
+        {
+          "icon": "chat-circle",
+          "title": "Email commenting",
+          "description": "Commodi quam quo. In quasi mollitia optio voluptate et est reiciendis. Ut et sunt id officiis vitae perspiciatis."
+        },
+        {
+          "icon": "heart",
+          "title": "Customer connections",
+          "description": "Deserunt corrupti praesentium quo vel cupiditate est occaecati ad. Aperiam libero modi similique iure praesentium facilis."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

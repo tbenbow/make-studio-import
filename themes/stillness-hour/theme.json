@@ -1,0 +1,265 @@
+{
+  "fonts": [
+    {
+      "family": "Cormorant Garamond",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant Garamond",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant Garamond",
+      "weight": 600,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant Garamond",
+      "weight": 700,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant Garamond",
+      "weight": 400,
+      "style": "italic"
+    },
+    {
+      "family": "Cormorant Garamond",
+      "weight": 500,
+      "style": "italic"
+    },
+    {
+      "family": "Inter",
+      "weight": 300,
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "weight": 600,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "base": "#0a0e1a",
+    "base-muted": "#111827",
+    "base-alt": "#1e293b",
+    "panel": "#1e293b",
+    "fg": "#f8fafc",
+    "fg-muted": "#94a3b8",
+    "fg-alt": "#64748b",
+    "brand": "#d4a574",
+    "on-brand": "#0a0e1a",
+    "border": "#334155"
+  },
+  "customColors": [
+    {
+      "id": "brand-dim",
+      "name": "brand-dim",
+      "value": "#b8956a"
+    }
+  ],
+  "palette": {
+    "primary": {
+      "label": "gold",
+      "colors": [
+        "#f5d5b0",
+        "#d4a574",
+        "#b8956a",
+        "#9a7d58",
+        "#7c6546"
+      ]
+    },
+    "grays": {
+      "label": "navy",
+      "colors": [
+        "#f8fafc",
+        "#94a3b8",
+        "#475569",
+        "#1e293b",
+        "#0a0e1a"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Cormorant Garamond",
+      "fontWeight": 500,
+      "fontSize": 80,
+      "lineHeight": 84,
+      "letterSpacing": -1,
+      "mobileFontSize": 48,
+      "mobileLineHeight": 52
+    },
+    "heading-lg": {
+      "fontFamily": "Cormorant Garamond",
+      "fontWeight": 500,
+      "fontSize": 48,
+      "lineHeight": 54,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 32,
+      "mobileLineHeight": 38
+    },
+    "heading-md": {
+      "fontFamily": "Cormorant Garamond",
+      "fontWeight": 500,
+      "fontSize": 30,
+      "lineHeight": 38,
+      "letterSpacing": 0,
+      "mobileFontSize": 24,
+      "mobileLineHeight": 30
+    },
+    "heading-sm": {
+      "fontFamily": "Cormorant Garamond",
+      "fontWeight": 500,
+      "fontSize": 22,
+      "lineHeight": 28,
+      "letterSpacing": 0,
+      "mobileFontSize": 20,
+      "mobileLineHeight": 26
+    },
+    "heading-xs": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "fontSize": 16,
+      "lineHeight": 24,
+      "letterSpacing": 0,
+      "mobileFontSize": 14,
+      "mobileLineHeight": 20
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Cormorant Garamond",
+      "fontWeight": 400,
+      "fontSize": 22,
+      "lineHeight": 32,
+      "letterSpacing": 0,
+      "fontStyle": "italic"
+    },
+    "body-md": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 28,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Inter",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 22,
+      "letterSpacing": 0
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "brand-dim",
+      "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Inter",
+      "fontWeight": 500,
+      "uppercase": false,
+      "sizes": {
+        "lg": {
+          "fontSize": 16,
+          "letterSpacing": 0.5,
+          "opticalYOffset": 0,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "borderRadius": 9999
+        },
+        "md": {
+          "fontSize": 14,
+          "letterSpacing": 0.3,
+          "opticalYOffset": 0,
+          "paddingTop": 12,
+          "paddingBottom": 12,
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "borderRadius": 9999
+        },
+        "sm": {
+          "fontSize": 13,
+          "letterSpacing": 0.2,
+          "opticalYOffset": 0,
+          "paddingTop": 8,
+          "paddingBottom": 8,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "borderRadius": 9999
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "secondary": {
+        "backgroundColor": "system:base-alt",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg-muted",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
+    }
+  }
+}

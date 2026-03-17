@@ -1,0 +1,47 @@
+{
+  "description": "HowItWorks",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "How it works"
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "default": [
+        {
+          "number": "01",
+          "title": "You come prepared",
+          "description": "Bring the copy you want on the site, any photos you'd like to use, and a list of what you need your site to do. A domain name if you have one. That's the homework. We handle the rest."
+        },
+        {
+          "number": "02",
+          "title": "We build it together",
+          "description": "Jamey art directs. Tom builds on Make Studio. You're in the room (or on a call), making real-time decisions, watching your site come to life. No waiting a week to see a draft. It happens right in front of you."
+        },
+        {
+          "number": "03",
+          "title": "You leave with a website",
+          "description": "We walk you through how to update and manage your site. If you need a domain, we'll get that set up and connected before we're done. We work in-person or remote, whatever works best for you. Two hours later, you're live."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Number"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

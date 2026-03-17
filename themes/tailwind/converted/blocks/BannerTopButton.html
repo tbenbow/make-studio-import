@@ -1,0 +1,18 @@
+<div x-data="{ show: true }" x-show="show">
+  <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-base-alt px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <p class="body-sm text-fg">
+        {{#if label}}<strong class="font-semibold">{{label}}</strong><svg viewBox="0 0 2 2" aria-hidden="true" class="mx-2 inline size-0.5 fill-current"><circle r="1" cx="1" cy="1"></circle></svg>{{/if}}{{message}}
+      </p>
+      {{#if button-text}}
+        <a href="{{button-url}}" class="flex-none rounded-full bg-panel px-3.5 py-1 body-sm font-semibold text-fg shadow-xs hover:opacity-80">{{button-text}} <span aria-hidden="true">→</span></a>
+      {{/if}}
+    </div>
+    <div class="flex flex-1 justify-end">
+      <button type="button" @click="show = false" class="-m-3 p-3">
+        <span class="sr-only">Dismiss</span>
+        <span class="size-5 text-fg-muted">{{icon "x" size="20"}}</span>
+      </button>
+    </div>
+  </div>
+</div>

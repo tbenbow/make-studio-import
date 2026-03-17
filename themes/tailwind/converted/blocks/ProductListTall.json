@@ -1,0 +1,82 @@
+{
+  "description": "ProductListTall",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://placehold.co/400x600/374151/e5e7eb?text=Product+1",
+          "name": "Focus Paper Refill",
+          "variant": "3 sizes available",
+          "price": "$13",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x600/374151/e5e7eb?text=Product+2",
+          "name": "Focus Card Holder",
+          "variant": "Walnut",
+          "price": "$64",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x600/374151/e5e7eb?text=Product+3",
+          "name": "Focus Carry Case",
+          "variant": "Heather Gray",
+          "price": "$32",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x600/374151/e5e7eb?text=Product+4",
+          "name": "Focus Multi-Pack",
+          "variant": "3 refill packs",
+          "price": "$39",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x600/374151/e5e7eb?text=Product+5",
+          "name": "Machined Pencil",
+          "variant": "Black and brass",
+          "price": "$35",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x600/374151/e5e7eb?text=Product+6",
+          "name": "Brass Scissors",
+          "variant": "Includes stand",
+          "price": "$50",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

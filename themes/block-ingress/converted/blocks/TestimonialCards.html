@@ -1,0 +1,43 @@
+<section class="bg-base py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="heading-lg text-fg">{{Heading}}</h2>
+      <p class="body-lg text-fg-muted mt-4">{{Subheading}}</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{#each Testimonials}}
+      <div class="p-8 rounded-xl border border-border bg-base-muted/20 flex flex-col">
+
+        <!-- Stars -->
+        <div class="flex gap-1 text-brand mb-4">
+          {{icon "star" size="16"}}
+          {{icon "star" size="16"}}
+          {{icon "star" size="16"}}
+          {{icon "star" size="16"}}
+          {{icon "star" size="16"}}
+        </div>
+
+        <!-- Quote -->
+        <p class="body-md text-fg flex-1">
+          "{{Quote}}"
+        </p>
+
+        <!-- Author -->
+        <div class="flex items-center gap-3 mt-6 pt-6 border-t border-border">
+          <img src="{{Avatar}}" alt="{{Name}}" class="w-10 h-10 rounded-full object-cover" />
+          <div>
+            <p class="body-sm text-fg font-medium">{{Name}}</p>
+            <p class="body-sm text-fg-muted">{{Role}}</p>
+          </div>
+        </div>
+
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</section>

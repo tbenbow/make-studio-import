@@ -1,0 +1,35 @@
+{
+  "description": "ErrorSplitImage",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Code",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Page not found"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Sorry, we couldn't find the page you're looking for."
+    },
+    {
+      "type": "text",
+      "name": "Link Text",
+      "default": "Back to home"
+    },
+    {
+      "type": "text",
+      "name": "Link Url",
+      "default": "/"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/1825x1200/1f2937/6366f1?text=404"
+    }
+  ]
+}

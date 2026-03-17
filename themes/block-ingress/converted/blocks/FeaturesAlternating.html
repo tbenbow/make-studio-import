@@ -1,0 +1,54 @@
+<section class="bg-base py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <h2 class="heading-lg text-fg">{{Heading}}</h2>
+      <p class="body-lg text-fg-muted mt-4">{{Subheading}}</p>
+    </div>
+
+    <!-- Feature Rows -->
+    <div class="space-y-24 lg:space-y-32">
+      {{#each Features}}
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center {{#if (math @index "%" 2)}}lg:direction-rtl{{/if}}">
+
+        <!-- Text -->
+        <div class="{{#if (math @index "%" 2)}}lg:order-2{{/if}}">
+          <h3 class="heading-md text-fg mb-4">{{Title}}</h3>
+          <p class="body-lg text-fg-muted mb-6">{{Description}}</p>
+
+          <ul class="space-y-3">
+            {{#if [Bullet 1]}}
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-brand">{{icon "check-circle" size="18"}}</span>
+              <span class="body-md text-fg-muted">{{[Bullet 1]}}</span>
+            </li>
+            {{/if}}
+            {{#if [Bullet 2]}}
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-brand">{{icon "check-circle" size="18"}}</span>
+              <span class="body-md text-fg-muted">{{[Bullet 2]}}</span>
+            </li>
+            {{/if}}
+            {{#if [Bullet 3]}}
+            <li class="flex items-start gap-3">
+              <span class="mt-1 text-brand">{{icon "check-circle" size="18"}}</span>
+              <span class="body-md text-fg-muted">{{[Bullet 3]}}</span>
+            </li>
+            {{/if}}
+          </ul>
+        </div>
+
+        <!-- Image -->
+        <div class="{{#if (math @index "%" 2)}}lg:order-1{{/if}}">
+          <div class="rounded-xl overflow-hidden border border-border">
+            <img src="{{Image}}" alt="{{Title}}" class="w-full h-auto" />
+          </div>
+        </div>
+
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</section>

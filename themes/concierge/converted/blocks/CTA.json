@@ -1,0 +1,35 @@
+{
+  "description": "CTA",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Ready to build your site?"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Fill out the form below and we'll be in touch to get a session on the books. Takes about two minutes."
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Book a Concierge Session"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Footnote",
+      "default": "We'll follow up within one business day."
+    }
+  ]
+}

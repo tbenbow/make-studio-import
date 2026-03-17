@@ -1,0 +1,77 @@
+{
+  "description": "Navbar",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "Make"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Build",
+          "url": "#build"
+        },
+        {
+          "label": "Content",
+          "url": "#content"
+        },
+        {
+          "label": "Edit",
+          "url": "#edit"
+        },
+        {
+          "label": "Ship",
+          "url": "#ship"
+        },
+        {
+          "label": "AI",
+          "url": "#ai"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Login Label",
+      "default": "Log in"
+    },
+    {
+      "type": "text",
+      "name": "Login Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Try it free"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#"
+    }
+  ]
+}

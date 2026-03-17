@@ -1,0 +1,75 @@
+{
+  "description": "Pricing",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Pricing"
+    },
+    {
+      "type": "items",
+      "name": "Plans",
+      "default": [
+        {
+          "tier": "Core offering",
+          "name": "Concierge Session",
+          "price": "$500",
+          "unit": "flat rate / 2 hours",
+          "description": "Two hours with Jamey and Tom, fully focused on your site. This is where we build the thing. Art direction, development, and Make Studio setup all included. Domain connection included if you need it.",
+          "note": "The most efficient $500 you'll spend on your business.",
+          "featured": true
+        },
+        {
+          "tier": "If you need more time",
+          "name": "Extended Session",
+          "price": "$300",
+          "unit": "per hour, after the first 2",
+          "description": "If scope grows or we all know going in it'll take more time, we keep going. Billed in 15-minute increments. We round down for a couple extra minutes because that's who we are.",
+          "note": "",
+          "featured": false
+        },
+        {
+          "tier": "Ongoing",
+          "name": "On-Call Support",
+          "price": "$175",
+          "unit": "per person / 30 min minimum",
+          "description": "Your site is live. Now you've got a website team on call whenever you need one. Updates, additions, something new. We bill for combined time across both of us, so if Tom spends 15 minutes and Jamey spends 5, you're billed for 20. We keep it honest and sort the math out between us.",
+          "note": "",
+          "featured": false
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Tier"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Unit"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Note"
+          },
+          {
+            "type": "select",
+            "name": "Featured"
+          }
+        ]
+      }
+    }
+  ]
+}

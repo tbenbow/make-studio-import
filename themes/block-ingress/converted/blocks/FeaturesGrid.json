@@ -1,0 +1,26 @@
+{
+  "description": "3-column icon grid with section heading. 6 feature cards with icon, title, and description.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Everything You Need to Succeed" },
+    { "type": "textarea", "name": "Subheading", "default": "Powerful features designed to help you build, launch, and grow — without the usual headaches." },
+    {
+      "type": "items",
+      "name": "Features",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon", "default": "star" },
+          { "type": "text", "name": "Title", "default": "Feature" },
+          { "type": "textarea", "name": "Description", "default": "A short description of this feature and why it matters." }
+        ]
+      },
+      "default": [
+        { "Icon": "lightning", "Title": "Lightning Fast", "Description": "Optimized for speed at every level. Your sites load in milliseconds, not seconds." },
+        { "Icon": "lock-simple", "Title": "Secure by Default", "Description": "Enterprise-grade security built in. SSL, backups, and monitoring come standard." },
+        { "Icon": "arrows-clockwise", "Title": "Automatic Updates", "Description": "Stay current without lifting a finger. Updates deploy seamlessly in the background." },
+        { "Icon": "users", "Title": "Team Collaboration", "Description": "Invite your team, assign roles, and work together in real time on any project." },
+        { "Icon": "chart-bar", "Title": "Built-in Analytics", "Description": "Understand your audience with clear, actionable insights — no third-party tools needed." },
+        { "Icon": "gear", "Title": "Fully Customizable", "Description": "Make it yours. Every element is configurable to match your brand perfectly." }
+      ]
+    }
+  ]
+}

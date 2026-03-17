@@ -1,0 +1,35 @@
+{
+  "description": "FeaturedEpisode",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Now Playing"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Walking Through a Quiet Winter Forest"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>A gentle nighttime meditation guiding you through a silent forest after fresh snowfall. Slow breathing, peaceful imagery, and warm ambient music help release tension and quiet the mind.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Play Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Current Time",
+      "default": "12:34"
+    },
+    {
+      "type": "text",
+      "name": "Duration",
+      "default": "38:20"
+    }
+  ]
+}

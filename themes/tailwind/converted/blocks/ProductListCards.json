@@ -1,0 +1,68 @@
+{
+  "description": "ProductListCards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+1",
+          "name": "Basic Tee 8-Pack",
+          "description": "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
+          "variant": "8 colors",
+          "price": "$256",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+2",
+          "name": "Basic Tee",
+          "description": "Look like a visionary CEO and wear the same black t-shirt every day.",
+          "variant": "Black",
+          "price": "$32",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+3",
+          "name": "Kinda White Basic Tee",
+          "description": "It's probably, like, 5000 Kelvin instead of 6000 K.",
+          "variant": "White",
+          "price": "$32",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

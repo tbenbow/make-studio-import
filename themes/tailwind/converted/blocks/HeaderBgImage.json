@@ -1,0 +1,37 @@
+{
+  "description": "HeaderBgImage",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Support center"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+    },
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://placehold.co/2830x1500/1f2937/6366f1?text=Background"
+    },
+    {
+      "type": "select",
+      "name": "Alignment",
+      "default": "left",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "left",
+            "value": "Left"
+          },
+          {
+            "key": "centered",
+            "value": "Centered"
+          }
+        ]
+      }
+    }
+  ]
+}

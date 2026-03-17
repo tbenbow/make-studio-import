@@ -1,0 +1,34 @@
+<section class="bg-base py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="heading-lg text-fg">{{headline}}</h2>
+      {{#if description}}
+        <p class="mt-6 body-md text-fg-alt">{{description}}</p>
+      {{/if}}
+    </div>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+        {{#each features}}
+          <div class="flex flex-col">
+            <dt class="body-md font-semibold text-fg">
+              {{#if icon}}
+                <div class="mb-6 flex size-10 items-center justify-center rounded-lg bg-brand text-on-brand">
+                  {{icon icon size="24"}}
+                </div>
+              {{/if}}
+              {{title}}
+            </dt>
+            <dd class="mt-1 flex flex-auto flex-col body-md text-fg-muted">
+              <p class="flex-auto">{{description}}</p>
+              {{#if link}}
+                <p class="mt-6">
+                  <a href="{{link}}" class="body-sm font-semibold text-brand hover:text-brand/80">Learn more <span aria-hidden="true">→</span></a>
+                </p>
+              {{/if}}
+            </dd>
+          </div>
+        {{/each}}
+      </dl>
+    </div>
+  </div>
+</section>

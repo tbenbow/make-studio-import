@@ -1,0 +1,15 @@
+<section class="relative isolate min-h-full bg-base">
+  <img src="{{background-image}}" alt="" class="absolute inset-0 -z-10 size-full object-cover object-top">
+  <div class="mx-auto max-w-7xl px-6 py-32 text-center sm:py-40 lg:px-8">
+    <p class="body-md font-semibold text-fg">{{code}}</p>
+    <h1 class="mt-4 heading-xl text-balance text-fg">{{heading}}</h1>
+    {{#if description}}
+      <p class="mt-6 body-lg font-medium text-pretty text-fg-muted">{{description}}</p>
+    {{/if}}
+    {{#if link-text}}
+      <div class="mt-10 flex justify-center">
+        <a href="{{link-url}}" class="body-sm font-semibold text-fg"><span aria-hidden="true">←</span> {{link-text}}</a>
+      </div>
+    {{/if}}
+  </div>
+</section>

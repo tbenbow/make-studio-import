@@ -1,0 +1,93 @@
+{
+  "description": "Hero with staggered gallery",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "We're changing the way people connect"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Live demo",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Gallery",
+      "default": [
+        {
+          "image": "https://placehold.co/400x528/1f2937/6366f1?text=Photo+1"
+        },
+        {
+          "image": "https://placehold.co/400x528/1f2937/818cf8?text=Photo+2"
+        },
+        {
+          "image": "https://placehold.co/400x528/1f2937/a5b4fc?text=Photo+3"
+        },
+        {
+          "image": "https://placehold.co/400x528/1f2937/6366f1?text=Photo+4"
+        },
+        {
+          "image": "https://placehold.co/400x528/1f2937/818cf8?text=Photo+5"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    }
+  ]
+}

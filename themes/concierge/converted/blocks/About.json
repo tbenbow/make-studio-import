@@ -1,0 +1,46 @@
+{
+  "description": "About",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "About Jamey & Tom"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>We've been at this for <em>a long time.</em></p>"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "25+",
+          "label": "Years, Jamey"
+        },
+        {
+          "value": "25+",
+          "label": "Years, Tom"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Between us, we have about 50 years of experience making websites and digital experiences. We've worked in-house at major brands, at agencies, run our own shops, and done every flavor of freelance and contract work you can imagine. We know how to make great things and we know how to move fast.</p><p>We started Concierge because we kept seeing the same problem. Small businesses and independent creatives need real websites, but the standard options are either a DIY template that looks like a DIY template, or a full agency project that costs too much and takes too long.</p><p>We think there's a better way. <strong>Show up, dig in, get it done.</strong> That's Concierge.</p>"
+    }
+  ]
+}

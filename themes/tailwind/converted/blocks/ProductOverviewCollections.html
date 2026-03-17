@@ -1,0 +1,21 @@
+<section class="bg-base-alt py-16 sm:py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <h2 class="heading-sm text-fg">{{heading}}</h2>
+    <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:space-y-0 lg:gap-x-6">
+      {{#each collections}}
+        <div class="group relative">
+          {{#if image}}
+            <img src="{{image}}" alt="{{name}}" class="w-full rounded-lg bg-base object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+          {{/if}}
+          <h3 class="mt-6 body-sm text-fg-muted">
+            <a href="{{link}}">
+              <span class="absolute inset-0"></span>
+              {{name}}
+            </a>
+          </h3>
+          <p class="body-md font-semibold text-fg">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

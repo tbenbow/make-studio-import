@@ -1,0 +1,87 @@
+<section class="bg-base py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="heading-lg text-fg">{{Heading}}</h2>
+      <p class="body-lg text-fg-muted mt-4">{{Subheading}}</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {{#each Plans}}
+      <div class="relative rounded-2xl border {{#if Popular}}border-brand bg-base-muted/40{{else}}border-border bg-base-muted/20{{/if}} p-8 lg:p-10 flex flex-col">
+
+        {{#if Popular}}
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+          <span class="bg-brand text-on-brand body-sm font-medium px-4 py-1 rounded-full">Most Popular</span>
+        </div>
+        {{/if}}
+
+        <!-- Plan Name -->
+        <h3 class="heading-sm text-fg">{{Name}}</h3>
+
+        <!-- Price -->
+        <div class="mt-4 flex items-baseline gap-1">
+          <span class="heading-xl text-fg">{{Price}}</span>
+          <span class="body-md text-fg-muted">{{Period}}</span>
+        </div>
+
+        <!-- Description -->
+        <p class="body-md text-fg-muted mt-4">{{Description}}</p>
+
+        <!-- CTA -->
+        <div class="mt-8">
+          {{#if Popular}}
+            <a href="{{[Button Link]}}" class="btn btn-lg btn-primary w-full justify-center">{{[Button Label]}}</a>
+          {{else}}
+            <a href="{{[Button Link]}}" class="btn btn-lg btn-outline w-full justify-center">{{[Button Label]}}</a>
+          {{/if}}
+        </div>
+
+        <!-- Features -->
+        <ul class="mt-8 pt-8 border-t border-border space-y-3 flex-1">
+          {{#if [Feature 1]}}
+          <li class="flex items-center gap-3 body-md text-fg-muted">
+            <span class="text-brand">{{icon "check" size="16"}}</span>
+            {{[Feature 1]}}
+          </li>
+          {{/if}}
+          {{#if [Feature 2]}}
+          <li class="flex items-center gap-3 body-md text-fg-muted">
+            <span class="text-brand">{{icon "check" size="16"}}</span>
+            {{[Feature 2]}}
+          </li>
+          {{/if}}
+          {{#if [Feature 3]}}
+          <li class="flex items-center gap-3 body-md text-fg-muted">
+            <span class="text-brand">{{icon "check" size="16"}}</span>
+            {{[Feature 3]}}
+          </li>
+          {{/if}}
+          {{#if [Feature 4]}}
+          <li class="flex items-center gap-3 body-md text-fg-muted">
+            <span class="text-brand">{{icon "check" size="16"}}</span>
+            {{[Feature 4]}}
+          </li>
+          {{/if}}
+          {{#if [Feature 5]}}
+          <li class="flex items-center gap-3 body-md text-fg-muted">
+            <span class="text-brand">{{icon "check" size="16"}}</span>
+            {{[Feature 5]}}
+          </li>
+          {{/if}}
+          {{#if [Feature 6]}}
+          <li class="flex items-center gap-3 body-md text-fg-muted">
+            <span class="text-brand">{{icon "check" size="16"}}</span>
+            {{[Feature 6]}}
+          </li>
+          {{/if}}
+        </ul>
+
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<section class="bg-base px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl {{#if (eq alignment 'centered')}}text-center{{else}}lg:mx-0{{/if}}">
+    {{#if eyebrow}}
+      <p class="body-md font-semibold text-brand">{{eyebrow}}</p>
+    {{/if}}
+    <h2 class="{{#if eyebrow}}mt-2 {{/if}}heading-xl text-fg">{{heading}}</h2>
+    {{#if description}}
+      <p class="mt-8 body-lg font-medium text-pretty text-fg-muted">{{description}}</p>
+    {{/if}}
+  </div>
+</section>

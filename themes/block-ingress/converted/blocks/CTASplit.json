@@ -1,0 +1,11 @@
+{
+  "description": "Split CTA — text and button on left, decorative image on right. Rounded corners, panel background.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Start Building Today" },
+    { "type": "textarea", "name": "Subheading", "default": "Join 2,000+ teams who've already made the switch. Your first site is free — no credit card required." },
+    { "type": "text", "name": "Button Label", "default": "Create Your Site" },
+    { "type": "link", "name": "Button Link", "default": "#" },
+    { "type": "text", "name": "Note", "default": "Free forever for personal projects" },
+    { "type": "image", "name": "Image", "default": "https://placehold.co/560x400/2845c4/8a9ae8?text=Preview" }
+  ]
+}

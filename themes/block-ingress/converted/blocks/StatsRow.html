@@ -1,0 +1,18 @@
+<section class="{{#if [Brand Background]}}bg-brand{{else}}bg-base-muted/30{{/if}} py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      {{#each Stats}}
+      <div class="text-center {{#unless @first}}lg:border-l lg:border-border/30{{/unless}}">
+        <div class="heading-xl {{#if ../[Brand Background]}}text-on-brand{{else}}text-fg{{/if}}">
+          {{Value}}{{#if Suffix}}<span class="heading-md {{#if ../[Brand Background]}}text-on-brand/70{{else}}text-fg-muted{{/if}}">{{Suffix}}</span>{{/if}}
+        </div>
+        <p class="body-md {{#if ../[Brand Background]}}text-on-brand/70{{else}}text-fg-muted{{/if}} mt-2">
+          {{Label}}
+        </p>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{
+  "description": "Centered hero with large headline, subtext, and dual CTA buttons. Clean, text-focused with generous spacing.",
+  "fields": [
+    { "type": "toggle", "name": "Show Badge", "default": true },
+    { "type": "text", "name": "Badge", "default": "Now Available" },
+    { "type": "text", "name": "Heading", "default": "Build Beautiful Websites Without the Complexity" },
+    { "type": "textarea", "name": "Subheading", "default": "Create stunning, professional websites in minutes. No coding required, no design skills needed — just your vision brought to life." },
+    { "type": "text", "name": "Primary Button Label", "default": "Get Started Free" },
+    { "type": "link", "name": "Primary Button Link", "default": "#" },
+    { "type": "text", "name": "Secondary Button Label", "default": "See How It Works" },
+    { "type": "link", "name": "Secondary Button Link", "default": "#" },
+    { "type": "toggle", "name": "Show Trusted By", "default": true },
+    { "type": "text", "name": "Trusted By Label", "default": "Trusted by 2,000+ teams worldwide" }
+  ]
+}

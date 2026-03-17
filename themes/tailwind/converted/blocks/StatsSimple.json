@@ -1,0 +1,35 @@
+{
+  "description": "StatsSimple",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "44 million",
+          "label": "Transactions every 24 hours"
+        },
+        {
+          "value": "$119 trillion",
+          "label": "Assets under holding"
+        },
+        {
+          "value": "46,000",
+          "label": "New users annually"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -12,6 +12,7 @@ export interface ApiBlock {
   description?: string
   thumbnailType?: string
   category?: string
+  blockCategory?: string | null
   site_id?: string
   template?: string
   fields?: Array<{
@@ -144,7 +145,9 @@ export class MakeStudioClient {
       throw new ApiError(res.status, message, code)
     }
 
-    return res.json() as Promise<T>
+    const text = await res.text()
+    if (!text) return {} as T
+    return JSON.parse(text) as T
   }
 
   // ─── Site ───
@@ -191,6 +194,8 @@ export class MakeStudioClient {
     fields?: unknown[]
     description?: string
     thumbnailType?: string
+    category?: 'section' | 'header' | 'footer'
+    blockCategory?: 'hero' | 'features' | 'content' | 'cta' | 'testimonials' | 'pricing' | 'faq' | 'gallery' | 'cards' | 'team' | 'contact' | 'logos' | 'stats' | 'posts' | 'forms' | 'tools' | null
     aiDescription?: string
     tags?: string[]
   }): Promise<ApiBlock> {

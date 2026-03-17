@@ -1,0 +1,42 @@
+{
+  "description": "IncentiveDivided",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "calendar",
+          "title": "10-year all-inclusive warranty",
+          "description": "We'll replace it with a new one"
+        },
+        {
+          "icon": "arrows-clockwise",
+          "title": "Free shipping on returns",
+          "description": "Send it back for free"
+        },
+        {
+          "icon": "truck",
+          "title": "Free, contactless delivery",
+          "description": "The shipping is on us"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

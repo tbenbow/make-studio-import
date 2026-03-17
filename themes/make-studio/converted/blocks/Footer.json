@@ -1,0 +1,53 @@
+{
+  "description": "Dark footer with links",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "Make"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Docs",
+          "url": "#"
+        },
+        {
+          "label": "GitHub",
+          "url": "#"
+        },
+        {
+          "label": "Twitter",
+          "url": "#"
+        },
+        {
+          "label": "Discord",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2026 Make Studio</p>"
+    }
+  ]
+}

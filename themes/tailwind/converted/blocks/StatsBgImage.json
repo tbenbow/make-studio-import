@@ -1,0 +1,59 @@
+{
+  "description": "StatsBgImage",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our track record"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Trusted by thousands of creators worldwide"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis."
+    },
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://placehold.co/2850x1500/1f2937/6366f1?text=Background"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "8,000+",
+          "label": "Creators on the platform"
+        },
+        {
+          "value": "3%",
+          "label": "Flat platform fee"
+        },
+        {
+          "value": "99.9%",
+          "label": "Uptime guarantee"
+        },
+        {
+          "value": "$70M",
+          "label": "Paid out to creators"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

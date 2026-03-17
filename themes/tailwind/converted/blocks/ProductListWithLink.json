@@ -1,0 +1,77 @@
+{
+  "description": "ProductListWithLink",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Trending products"
+    },
+    {
+      "type": "text",
+      "name": "Link Text",
+      "default": "Shop the collection"
+    },
+    {
+      "type": "text",
+      "name": "Link URL"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+1",
+          "name": "Leather Long Wallet",
+          "variant": "Natural",
+          "price": "$75",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+2",
+          "name": "Machined Pencil Set",
+          "variant": "Black",
+          "price": "$70",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+3",
+          "name": "Mini-Sketchbooks",
+          "variant": "Light Brown",
+          "price": "$27",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x500/374151/e5e7eb?text=Product+4",
+          "name": "Organizer Set",
+          "variant": "Walnut",
+          "price": "$149",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

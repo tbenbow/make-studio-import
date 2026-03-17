@@ -1,0 +1,62 @@
+{
+  "description": "CTABanner",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Start building blocks."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Every project makes you faster. Every block is a permanent asset.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Try it free",
+          "link": "#",
+          "style": "primary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Outline",
+                  "value": "outline"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

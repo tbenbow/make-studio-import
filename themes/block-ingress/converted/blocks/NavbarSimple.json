@@ -1,0 +1,25 @@
+{
+  "description": "Simple navbar with logo, centered nav links, and CTA button. Mobile hamburger menu.",
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "Acme" },
+    { "type": "link", "name": "Logo Link", "default": "/" },
+    {
+      "type": "items",
+      "name": "Nav Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label", "default": "Link" },
+          { "type": "link", "name": "URL", "default": "#" }
+        ]
+      },
+      "default": [
+        { "Label": "Features", "URL": "#features" },
+        { "Label": "Pricing", "URL": "#pricing" },
+        { "Label": "About", "URL": "#about" },
+        { "Label": "Blog", "URL": "#blog" }
+      ]
+    },
+    { "type": "text", "name": "CTA Label", "default": "Get Started" },
+    { "type": "link", "name": "CTA Link", "default": "#" }
+  ]
+}

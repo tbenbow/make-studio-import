@@ -1,0 +1,49 @@
+{
+  "description": "StatsPanel",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Trusted by creators worldwide"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet consect adipisicing possimus."
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "8,000+",
+          "label": "Creators on the platform"
+        },
+        {
+          "value": "3%",
+          "label": "Flat platform fee"
+        },
+        {
+          "value": "99.9%",
+          "label": "Uptime guarantee"
+        },
+        {
+          "value": "$70M",
+          "label": "Paid out to creators"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

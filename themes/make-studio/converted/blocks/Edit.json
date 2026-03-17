@@ -1,0 +1,59 @@
+{
+  "description": "Edit",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Edit"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Hand it off.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Your clients edit content through simple forms. They never see code. They can't break your design.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Live preview",
+          "body": "Edit a field, see it update instantly."
+        },
+        {
+          "title": "Design protection",
+          "body": "You define the fields. That's the editing interface. No rogue font changes."
+        },
+        {
+          "title": "Drag-and-drop",
+          "body": "Add blocks, reorder, publish. The page builder clients actually use."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Body"
+          }
+        ]
+      }
+    },
+    {
+      "type": "image",
+      "name": "Mockup Image"
+    },
+    {
+      "type": "text",
+      "name": "Mockup Alt",
+      "default": "Content editing interface"
+    }
+  ]
+}

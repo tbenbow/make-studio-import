@@ -1,0 +1,74 @@
+{
+  "description": "Split hero with full image",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Badge",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Read more →"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Data to enrich your business"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/2102x1400/1f2937/6366f1?text=Hero+Image"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Learn more",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

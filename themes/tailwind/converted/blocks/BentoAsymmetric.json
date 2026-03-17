@@ -1,0 +1,139 @@
+{
+  "description": "Asymmetric 4-card bento",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Deploy faster"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Everything you need to deploy your app"
+    },
+    {
+      "type": "group",
+      "name": "Card 1",
+      "default": {
+        "title": "Mobile friendly",
+        "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+        "image": "https://placehold.co/400x600/1f2937/6366f1?text=Mobile"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "c0af0b4b-1a18-4275-807d-c0b567c12ed2",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "0e02a6b9-9c4c-4b1b-a77b-43f0cdf30049",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "31251278-93b9-47c2-a4dc-3e9fbc66a295",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 2",
+      "default": {
+        "title": "Performance",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.",
+        "image": "https://placehold.co/600x300/1f2937/6366f1?text=Performance"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "f6d58172-80e7-4f00-bb86-fdf3390e061e",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "352f39a1-b12d-4195-ac02-fde0cc3768fe",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "eca4c50b-f72f-4bc6-810a-6e8fa989316e",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 3",
+      "default": {
+        "title": "Security",
+        "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.",
+        "image": "https://placehold.co/600x160/1f2937/6366f1?text=Security"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "63f14047-84b9-4a4b-8016-6ba3e526169b",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "8dc89750-8746-44bb-8924-17fcde56b802",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "0852881e-2778-43c9-b2ae-16292650da1c",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 4",
+      "default": {
+        "title": "Powerful APIs",
+        "description": "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.",
+        "image": "https://placehold.co/400x600/1f2937/6366f1?text=APIs"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "e4e16349-5458-44c9-814f-e37bb7b2c679",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "314edc90-6921-4f35-a6ae-447fd3db7d93",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "4aafb9f1-ff30-42d1-a66f-ec8b31aa0c5f",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

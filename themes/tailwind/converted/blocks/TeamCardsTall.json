@@ -1,0 +1,68 @@
+{
+  "description": "TeamCardsTall",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our team"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Meet the people behind the product."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>We're a small team of passionate people building tools to help you succeed.</p><p></p>"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": "[{\"id\":\"f859368b-ea88-4b00-9f36-ec70b88f38d4\",\"name\":\"Lisa Wang\",\"role\":\"Product Manager\",\"photo\":\"https://makestudio.site/69ae41bd212dd9e93c104e55/photo-1534528741775-53994a69daeb.webp\"},{\"id\":\"e62a7590-a349-4806-bf62-ba370c476b2f\"}]",
+      "config": {
+        "fields": [
+          {
+            "id": "65fc845a-e37e-4b91-b20f-a2d8126c5b15",
+            "type": "text",
+            "name": "Name",
+            "value": ""
+          },
+          {
+            "id": "dd59eb95-5bb0-4b7a-89d2-d334984bf803",
+            "type": "text",
+            "name": "Role",
+            "value": ""
+          },
+          {
+            "id": "a24cc253-40a7-4efb-bcff-a0026a3ef40c",
+            "type": "image",
+            "name": "Photo",
+            "value": "",
+            "config": {
+              "maxWidth": 400,
+              "maxHeight": 533
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Three",
+            "value": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+          },
+          {
+            "key": "Four",
+            "value": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          }
+        ]
+      }
+    }
+  ]
+}

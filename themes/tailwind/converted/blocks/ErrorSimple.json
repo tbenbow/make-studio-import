@@ -1,0 +1,58 @@
+{
+  "description": "ErrorSimple",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Code",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Page not found"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Sorry, we couldn't find the page you're looking for."
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "text": "Go back home",
+          "url": "/",
+          "style": "primary",
+          "size": "md"
+        },
+        {
+          "text": "Contact support",
+          "url": "#",
+          "style": "link",
+          "size": "md"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Text"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          },
+          {
+            "type": "text",
+            "name": "Style"
+          },
+          {
+            "type": "text",
+            "name": "Size"
+          }
+        ]
+      }
+    }
+  ]
+}

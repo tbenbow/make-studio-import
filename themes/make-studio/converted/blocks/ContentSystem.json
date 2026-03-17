@@ -1,0 +1,77 @@
+{
+  "description": "ContentSystem",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Content System"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Posts aren't<br>just for blogs.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Define any content type -- products, team members, events -- with the same block-based workflow.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "default": [
+        {
+          "featured": "true",
+          "title": "Blog",
+          "body": "Categories, tags, authors. Built-in search via JSON indexes. The whole system, not just a feed.",
+          "items": [
+            {
+              "title": "Getting Started",
+              "meta": "2 days ago"
+            },
+            {
+              "title": "Your First Block",
+              "meta": "5 days ago"
+            },
+            {
+              "title": "Theme Deep Dive",
+              "meta": "1 week ago"
+            }
+          ]
+        },
+        {
+          "title": "Products",
+          "body": "Images, pricing, variants. Stripe checkout."
+        },
+        {
+          "title": "Team",
+          "body": "Bios, roles, photos, social links."
+        },
+        {
+          "title": "Events",
+          "body": "Dates, locations, RSVP."
+        },
+        {
+          "title": "Data Stores",
+          "body": "Link data across content types."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Featured"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "description": "ProductFeatureSplit",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Technical Specifications"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated steel divider separates active cards from new ones."
+    },
+    {
+      "type": "items",
+      "name": "Specs",
+      "default": [
+        {
+          "label": "Origin",
+          "value": "Designed by Good Goods, Inc."
+        },
+        {
+          "label": "Material",
+          "value": "Solid walnut base with rare earth magnets and powder coated steel card cover"
+        },
+        {
+          "label": "Dimensions",
+          "value": "6.25\" x 3.55\" x 1.15\""
+        },
+        {
+          "label": "Finish",
+          "value": "Hand sanded and finished with natural oil"
+        },
+        {
+          "label": "Includes",
+          "value": "Wood card tray and 3 refill packs"
+        },
+        {
+          "label": "Considerations",
+          "value": "Made from natural materials. Grain and color vary with each item."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "textarea",
+            "name": "Value"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        {
+          "src": "https://placehold.co/400x400/374151/e5e7eb?text=Detail+1",
+          "alt": "Product detail 1"
+        },
+        {
+          "src": "https://placehold.co/400x400/374151/e5e7eb?text=Detail+2",
+          "alt": "Product detail 2"
+        },
+        {
+          "src": "https://placehold.co/400x400/374151/e5e7eb?text=Detail+3",
+          "alt": "Product detail 3"
+        },
+        {
+          "src": "https://placehold.co/400x400/374151/e5e7eb?text=Detail+4",
+          "alt": "Product detail 4"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Src"
+          },
+          {
+            "type": "text",
+            "name": "Alt"
+          }
+        ]
+      }
+    }
+  ]
+}

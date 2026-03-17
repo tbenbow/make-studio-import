@@ -1,0 +1,57 @@
+{
+  "description": "Feature card with screenshot",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Boost your productivity. Start using our app today."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla."
+    },
+    {
+      "type": "image",
+      "name": "Screenshot",
+      "default": "https://placehold.co/2432x1442/1f2937/6366f1?text=App+Screenshot"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "cloud-arrow-up",
+          "title": "Push to deploy",
+          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna."
+        },
+        {
+          "icon": "lock-simple",
+          "title": "SSL certificates",
+          "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+        },
+        {
+          "icon": "database",
+          "title": "Database backups",
+          "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

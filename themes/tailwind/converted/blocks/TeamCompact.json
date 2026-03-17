@@ -1,0 +1,67 @@
+{
+  "description": "TeamCompact",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Meet our leadership"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "We're a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients."
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=LA",
+          "name": "Leslie Alexander",
+          "role": "Co-Founder / CEO"
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=MF",
+          "name": "Michael Foster",
+          "role": "Co-Founder / CTO"
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=DV",
+          "name": "Dries Vincent",
+          "role": "Business Relations"
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=LW",
+          "name": "Lindsay Walton",
+          "role": "Front-end Developer"
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=CH",
+          "name": "Courtney Henry",
+          "role": "Designer"
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=TC",
+          "name": "Tom Cook",
+          "role": "Director of Product"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          }
+        ]
+      }
+    }
+  ]
+}

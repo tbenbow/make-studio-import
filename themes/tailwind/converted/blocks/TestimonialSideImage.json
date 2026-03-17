@@ -1,0 +1,25 @@
+{
+  "description": "TestimonialSideImage",
+  "fields": [
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc. Et non lorem tortor posuere."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/800x1200/374151/e5e7eb?text=Portrait"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Judith Black"
+    },
+    {
+      "type": "text",
+      "name": "Role",
+      "default": "CEO of Workcation"
+    }
+  ]
+}

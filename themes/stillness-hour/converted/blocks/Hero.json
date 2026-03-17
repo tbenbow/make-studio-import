@@ -1,0 +1,99 @@
+{
+  "description": "Centered hero with CTA",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Meditation Podcast"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "The Stillness Hour"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Meditations for sleep and quiet reflection, narrated by Allen Jones</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>A deeply calming meditation podcast combining a rich, resonant voice with original music composed to help you unwind, breathe deeply, and settle into rest.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Play Latest Episode",
+          "link": "#featured",
+          "style": "primary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Platform Links",
+      "default": [
+        {
+          "label": "Spotify",
+          "url": "#"
+        },
+        {
+          "label": "Apple Podcasts",
+          "url": "#"
+        },
+        {
+          "label": "YouTube",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    }
+  ],
+  "thumbnailType": "hero"
+}

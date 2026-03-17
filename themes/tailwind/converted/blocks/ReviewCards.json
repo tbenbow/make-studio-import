@@ -1,0 +1,49 @@
+{
+  "description": "ReviewCards",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Reviews",
+      "default": [
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=ME",
+          "author": "Mark Edwards",
+          "title": "This is the best white t-shirt out there",
+          "body": "I've searched my entire life for a t-shirt that reflects every color in the visible spectrum. Incredible!"
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=BR",
+          "author": "Blake Reid",
+          "title": "Adds the perfect variety to my wardrobe",
+          "body": "I used to be one of those unbearable minimalists who only wore the same black v-necks every day."
+        },
+        {
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=BR",
+          "author": "Ben Russel",
+          "title": "All good things come in 6-Packs",
+          "body": "Tasty beverages, strong abs that will never be seen, and these Basic Tees!"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Author"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Body"
+          }
+        ]
+      }
+    }
+  ]
+}

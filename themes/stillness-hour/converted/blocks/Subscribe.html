@@ -1,0 +1,14 @@
+<section class="py-20 lg:py-28 bg-base-muted">
+  <div class="mx-auto w-full max-w-xl px-6 text-center">
+    <div class="bg-panel/40 backdrop-blur-sm border border-border/10 rounded-2xl p-10 sm:p-14" style="background: linear-gradient(135deg, rgba(30,41,59,0.6), rgba(30,41,59,0.3));">
+      <h2 class="heading-lg text-fg mb-4">{{headline}}</h2>
+      <div class="body-md text-fg-muted mb-8">
+        {{{description}}}
+      </div>
+      <form class="flex flex-col sm:flex-row gap-3">
+        <input type="email" placeholder="{{default placeholder 'Email address'}}" class="flex-1 bg-base/60 border border-border/20 rounded-full px-6 py-3.5 body-sm text-fg placeholder-fg-alt focus:outline-none focus:border-brand/40 transition">
+        <button type="submit" class="btn btn-md btn-primary whitespace-nowrap">{{default button-label "Subscribe"}}</button>
+      </form>
+    </div>
+  </div>
+</section>

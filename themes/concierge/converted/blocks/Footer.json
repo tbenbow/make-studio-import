@@ -1,0 +1,15 @@
+{
+  "description": "Footer",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Left Text",
+      "default": "Concierge — A website service by Jamey & Tom"
+    },
+    {
+      "type": "text",
+      "name": "Right Text",
+      "default": "Built on Make Studio"
+    }
+  ]
+}

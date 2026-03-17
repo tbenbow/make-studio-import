@@ -1,0 +1,20 @@
+{
+  "description": "Simple centered footer",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "The Stillness Hour"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle",
+      "default": "Created by Allen Jones"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2026 The Stillness Hour. All rights reserved.</p>"
+    }
+  ]
+}

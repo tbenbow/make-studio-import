@@ -1,0 +1,194 @@
+{
+  "siteName": "Allen Ginsberg — V3 Bold",
+  "blocks": ["Nav Bar", "Hero", "Features Alternating", "Content", "Testimonial", "Stats", "CTA Highlight", "FooterNewsletter"],
+  "theme": {
+    "fonts": [
+      { "family": "Archivo", "weight": 400, "style": "normal" },
+      { "family": "Archivo", "weight": 700, "style": "normal" },
+      { "family": "Archivo", "weight": 800, "style": "normal" },
+      { "family": "Inter", "weight": 400, "style": "normal" },
+      { "family": "Inter", "weight": 500, "style": "normal" }
+    ],
+    "systemColors": {
+      "brand": "#e63946",
+      "on-brand": "#ffffff",
+      "base": "#ffffff",
+      "base-muted": "#f8f8f8",
+      "base-alt": "#f0f0f0",
+      "panel": "#ffffff",
+      "border": "#e0e0e0",
+      "fg": "#111111",
+      "fg-muted": "#555555",
+      "fg-alt": "#999999"
+    },
+    "palette": {
+      "primary": { "label": "primary", "colors": ["rgb(252,220,222)", "rgb(245,170,175)", "rgb(230,57,70)", "rgb(180,30,45)", "rgb(130,20,30)"] },
+      "accent1": { "label": "accent-1", "colors": ["rgb(220,225,230)", "rgb(170,180,195)", "rgb(100,120,150)", "rgb(60,80,110)", "rgb(30,45,70)"] },
+      "accent2": { "label": "accent-2", "colors": ["rgb(240,240,240)", "rgb(200,200,200)", "rgb(150,150,150)", "rgb(100,100,100)", "rgb(50,50,50)"] },
+      "accent3": { "label": "accent-3", "colors": ["rgb(255,240,230)", "rgb(255,210,180)", "rgb(240,160,100)", "rgb(200,120,60)", "rgb(150,85,35)"] },
+      "grays": { "label": "gray", "colors": ["rgb(248,248,248)", "rgb(200,200,200)", "rgb(150,150,150)", "rgb(85,85,85)", "rgb(17,17,17)"] }
+    },
+    "headingTypography": {
+      "heading-xl": { "fontFamily": "Archivo", "fontWeight": 800, "fontSize": 68, "lineHeight": 72, "letterSpacing": -2, "mobileFontSize": 40, "mobileLineHeight": 44 },
+      "heading-lg": { "fontFamily": "Archivo", "fontWeight": 800, "fontSize": 52, "lineHeight": 56, "letterSpacing": -1.5, "mobileFontSize": 32, "mobileLineHeight": 36 },
+      "heading-md": { "fontFamily": "Archivo", "fontWeight": 700, "fontSize": 34, "lineHeight": 40, "letterSpacing": -1, "mobileFontSize": 24, "mobileLineHeight": 30 },
+      "heading-sm": { "fontFamily": "Archivo", "fontWeight": 700, "fontSize": 22, "lineHeight": 28, "letterSpacing": -0.5, "mobileFontSize": 18, "mobileLineHeight": 24 },
+      "heading-xs": { "fontFamily": "Archivo", "fontWeight": 700, "fontSize": 18, "lineHeight": 24, "letterSpacing": -0.3, "mobileFontSize": 16, "mobileLineHeight": 22 }
+    },
+    "bodyTypography": {
+      "body-lg": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 18, "lineHeight": 32, "letterSpacing": 0 },
+      "body-md": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 16, "lineHeight": 28, "letterSpacing": 0 },
+      "body-sm": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": 14, "lineHeight": 22, "letterSpacing": 0 }
+    },
+    "prose": {
+      "elements": {
+        "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+        "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+        "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+        "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+        "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+        "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+        "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+        "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+        "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+      },
+      "lists": { "listStyleType": "disc", "indent": 1.5, "itemSpacing": 0.5, "nestedIndent": 1.5 },
+      "links": { "color": "accent", "hoverColor": "primary", "underline": "always" },
+      "customCSS": ""
+    },
+    "buttons": {
+      "global": {
+        "fontFamily": "'Archivo', sans-serif",
+        "fontWeight": 700,
+        "uppercase": true,
+        "sizes": {
+          "lg": { "fontSize": 14, "letterSpacing": 2, "opticalYOffset": 0, "paddingTop": 16, "paddingBottom": 16, "paddingLeft": 32, "paddingRight": 32, "borderRadius": 0 },
+          "md": { "fontSize": 13, "letterSpacing": 1.5, "opticalYOffset": 0, "paddingTop": 12, "paddingBottom": 12, "paddingLeft": 24, "paddingRight": 24, "borderRadius": 0 },
+          "sm": { "fontSize": 11, "letterSpacing": 1, "opticalYOffset": 0, "paddingTop": 8, "paddingBottom": 8, "paddingLeft": 16, "paddingRight": 16, "borderRadius": 0 }
+        }
+      },
+      "variants": {
+        "primary": { "backgroundColor": "system:brand", "textColor": "system:on-brand", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "scale" },
+        "secondary": { "backgroundColor": "system:fg", "textColor": "system:base", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "darken" },
+        "outline": { "backgroundColor": "transparent", "textColor": "system:fg", "borderColor": "system:fg", "borderWidth": 2, "hoverPreset": "fill" },
+        "ghost": { "backgroundColor": "transparent", "textColor": "system:fg", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "darken" }
+      }
+    }
+  },
+  "images": {
+    "logo": "logo.png",
+    "hero": "professional-man-suit-portrait-2.jpg",
+    "featureOpera": "man-opera-singer-performing-st-3.jpg",
+    "featureVoiceover": "recording-studio-microphone-vo-2.jpg",
+    "featureEvents": "live-event-hosting-stage-corpo-2.jpg",
+    "testimonialImage": "concert-hall-opera-house-inter-2.jpg",
+    "ctaDemo": "man-opera-singer-performing-st-1.jpg"
+  },
+  "content": {
+    "Nav Bar": {
+      "Logo": "$logo",
+      "Logo Text": "Allen Ginsberg",
+      "Logo Link": "/",
+      "Button Label": "Hire Allen",
+      "Button Link": "/contact",
+      "Links": [
+        { "label": "Services", "url": "#services" },
+        { "label": "About", "url": "#about" },
+        { "label": "Contact", "url": "/contact" }
+      ]
+    },
+    "Hero": {
+      "Eyebrow": "Opera Singer — Voice Over — Live Events",
+      "Headline": "A voice you don't forget",
+      "Subheadline": "<p>Allen Ginsberg is a classically trained bass-baritone who brings fifteen years of vocal mastery to every stage, studio, and screen. Deep. Resonant. Unforgettable.</p>",
+      "Photo": "$hero",
+      "Buttons": [
+        { "label": "Hear My Work", "link": "#services", "style": "primary" },
+        { "label": "Book Now", "link": "/contact", "style": "outline" }
+      ],
+      "align": "items-start text-left"
+    },
+    "Features Alternating": {
+      "Eyebrow": "Services",
+      "Headline": "What Allen does",
+      "Subheadline": "<p>Three disciplines, one voice. Classically trained and professionally versatile.</p>",
+      "Features": [
+        {
+          "title": "Opera & Concert Performance",
+          "description": "Full opera productions, orchestral concerts, oratorio, and solo recitals. Allen's bass-baritone repertoire spans from Mozart and Verdi to contemporary works. Available for productions, guest soloist engagements, and concert series nationwide.",
+          "image": "$featureOpera",
+          "button_label": "Learn More",
+          "button_link": "/opera"
+        },
+        {
+          "title": "Professional Voice Over",
+          "description": "A deep, resonant voice for commercial spots, documentary narration, audiobooks, corporate video, and brand campaigns. Allen records from a professional home studio with broadcast-quality equipment — available for remote sessions and in-studio bookings.",
+          "image": "$featureVoiceover",
+          "button_label": "Hear Samples",
+          "button_link": "/samples"
+        },
+        {
+          "title": "Live Event Hosting",
+          "description": "Commanding stage presence for corporate galas, award ceremonies, fundraisers, product launches, and special events. Allen brings the gravitas of a trained performer and the warmth of a natural host to every occasion.",
+          "image": "$featureEvents",
+          "button_label": "Book an Event",
+          "button_link": "/contact"
+        }
+      ]
+    },
+    "Content": {
+      "Headline": "Trained for the stage. Ready for anything.",
+      "Category": "About Allen",
+      "Subheadline": "Fifteen years of filling rooms.",
+      "Content": "<p>Allen Ginsberg earned his Master of Music in Vocal Performance and spent the first decade of his career on opera stages — performing with companies and orchestras across the country. His bass-baritone voice, praised for its depth and emotional range, earned him roles in everything from baroque oratorio to contemporary opera premieres.</p><p>Today, Allen brings that same training and instinct to commercial voice over and live event work. His clients include production companies, advertising agencies, corporate event planners, and nonprofit organizations who need a voice that commands attention without demanding it.</p>",
+      "align": "items-center text-center"
+    },
+    "Testimonial": {
+      "Quote": "<p>We auditioned over forty voice actors for our documentary series. Allen was the clear choice — his voice has this rare combination of authority and warmth that made every word land. He elevated the entire project.</p>",
+      "Image": "$testimonialImage",
+      "Name": "David Moreira",
+      "Byline": "Executive Producer, Greyline Films"
+    },
+    "Stats": {
+      "Eyebrow": "Track Record",
+      "Headline": "The numbers behind the voice",
+      "Subheadline": "<p>A career built on consistency, craft, and repeat bookings.</p>",
+      "Stats": [
+        { "stat": "15+", "text": "Years of professional performance" },
+        { "stat": "200+", "text": "Live events and productions" },
+        { "stat": "50+", "text": "Voice over projects completed" },
+        { "stat": "98%", "text": "Client rebooking rate" }
+      ]
+    },
+    "CTA Highlight": {
+      "Eyebrow": "Ready?",
+      "Headline": "Let's put that voice to work",
+      "Subheadline": "<p>Whether it's a 30-second spot or a three-hour gala, Allen brings the same preparation and presence to every engagement. Tell him about your project.</p>",
+      "Button Label": "Hire Allen",
+      "Button Link": "/contact",
+      "Secondary Button Label": "Listen to Samples",
+      "Secondary Button Link": "/samples",
+      "Demo Image": "$ctaDemo",
+      "Footer": "<p>Typically responds within 24 hours. Based in the Twin Cities, available nationwide.</p>"
+    },
+    "FooterNewsletter": {
+      "Newsletter Headline": "Updates from Allen",
+      "Newsletter Text": "<p>New recordings, upcoming performances, and availability — straight to your inbox.</p>",
+      "Copyright": "<p>&copy; 2026 Allen Ginsberg. All rights reserved.</p>",
+      "Categories": [
+        {
+          "title": "Services",
+          "links": "<a href=\"#services\">Opera & Concert</a>\n<a href=\"#services\">Voice Over</a>\n<a href=\"#services\">Live Events</a>"
+        },
+        {
+          "title": "Resources",
+          "links": "<a href=\"/samples\">Audio Samples</a>\n<a href=\"/press\">Press Kit</a>\n<a href=\"#about\">Biography</a>"
+        },
+        {
+          "title": "Connect",
+          "links": "<a href=\"/contact\">Contact</a>\n<a href=\"https://instagram.com\">Instagram</a>\n<a href=\"https://linkedin.com\">LinkedIn</a>"
+        }
+      ]
+    }
+  }
+}

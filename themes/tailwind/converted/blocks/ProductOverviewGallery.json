@@ -1,0 +1,59 @@
+{
+  "description": "ProductOverviewGallery",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Shop by Collection"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Each season, we collaborate with world-class designers to create a collection inspired by the natural world."
+    },
+    {
+      "type": "items",
+      "name": "Collections",
+      "default": [
+        {
+          "image": "https://placehold.co/600x500/374151/e5e7eb?text=Collection+1",
+          "name": "Handcrafted Collection",
+          "description": "Keep your phone, keys, and wallet together, so you can lose everything at once.",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/600x500/374151/e5e7eb?text=Collection+2",
+          "name": "Organized Desk Collection",
+          "description": "The rest of the house will still be a mess, but your desk will look great.",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/600x500/374151/e5e7eb?text=Collection+3",
+          "name": "Focus Collection",
+          "description": "Be more productive than enterprise project managers with a single piece of paper.",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

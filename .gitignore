@@ -22,3 +22,19 @@ themes/*/.sync-state.json
 
 # Workflow progress state (local/ephemeral)
 .state/
+
+# One-off / throwaway scripts (underscore-prefixed)
+scripts/_*.ts
+
+# Audit artifacts
+_block-audit.json
+
+# Factory runtime state
+factory/
+
+# Backup themes
+themes/tailwind-backup/
+
+# Generated mesh gradient experiments
+themes/block-ingress/converted/blocks/HeroMeshGen_*
+themes/block-ingress/converted/blocks/HeroMesh[A-Z]*

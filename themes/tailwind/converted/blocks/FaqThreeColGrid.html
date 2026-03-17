@@ -1,0 +1,20 @@
+<section class="bg-base">
+  <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+    <div class="{{#if (eq alignment 'centered')}}mx-auto max-w-2xl text-center{{/if}}">
+      <h2 class="heading-lg text-fg">{{heading}}</h2>
+      {{#if support-text}}
+        <p class="mt-6 {{#unless (eq alignment 'centered')}}max-w-2xl {{/unless}}body-md text-fg-muted">{{{support-text}}}</p>
+      {{/if}}
+    </div>
+    <div class="mt-20">
+      <dl class="space-y-16 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-x-6 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-10">
+        {{#each faqs}}
+          <div>
+            <dt class="body-md font-semibold text-fg">{{question}}</dt>
+            <dd class="mt-2 body-md text-fg-muted">{{answer}}</dd>
+          </div>
+        {{/each}}
+      </dl>
+    </div>
+  </div>
+</section>

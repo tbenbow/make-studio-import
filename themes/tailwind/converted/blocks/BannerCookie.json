@@ -1,0 +1,20 @@
+{
+  "description": "BannerCookie",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Message",
+      "default": "This website uses cookies to supplement a balanced diet and provide a much deserved reward to the senses after consuming bland but nutritious meals. Accepting our cookies is optional but recommended, as they are delicious. See our <a href=\"#\">cookie policy</a>."
+    },
+    {
+      "type": "text",
+      "name": "Accept Text",
+      "default": "Accept all"
+    },
+    {
+      "type": "text",
+      "name": "Reject Text",
+      "default": "Reject all"
+    }
+  ]
+}

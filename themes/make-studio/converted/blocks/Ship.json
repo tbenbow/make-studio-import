@@ -1,0 +1,62 @@
+{
+  "description": "Ship",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Ship"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Click deploy.<br>That's it.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Your site is live on a global CDN in seconds. No build pipeline, no server config, no DevOps.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Custom domains",
+          "body": "Automatic SSL. Point your domain, you're live."
+        },
+        {
+          "title": "Snapshots",
+          "body": "Back up before big changes. One-click restore."
+        },
+        {
+          "title": "Publish requests",
+          "body": "Publishers request, developers approve. No surprises."
+        },
+        {
+          "title": "Optimized media",
+          "body": "Auto-converted to WebP. No giant files by accident."
+        },
+        {
+          "title": "Portable output",
+          "body": "Download as ZIP. Host anywhere. You own your site."
+        },
+        {
+          "title": "Stripe checkout",
+          "body": "Lightweight payments when you need them."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Body"
+          }
+        ]
+      }
+    }
+  ]
+}

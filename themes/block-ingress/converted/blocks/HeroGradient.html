@@ -1,0 +1,44 @@
+<section class="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden">
+
+  <!-- Animated Gradient Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-brand via-base to-panel" style="background-size: 400% 400%; animation: gradientShift 12s ease infinite;"></div>
+
+  <!-- Grid Pattern Overlay -->
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+
+  <!-- Radial Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand/20 rounded-full blur-3xl"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-24 lg:py-32">
+
+    <div class="mb-6">
+      <span class="inline-flex items-center gap-2 rounded-full bg-fg/10 backdrop-blur-sm border border-fg/20 px-4 py-1.5 body-sm text-fg font-medium">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+        {{Badge}}
+      </span>
+    </div>
+
+    <h1 class="heading-xl text-fg">
+      {{Heading}}
+    </h1>
+
+    <p class="body-lg text-fg/70 mt-6 max-w-2xl mx-auto">
+      {{Subheading}}
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      {{> Button label=[Primary Button Label] style="secondary" size="lg" link=[Primary Button Link]}}
+      {{> Button label=[Secondary Button Label] style="ghost" size="lg" link=[Secondary Button Link]}}
+    </div>
+
+  </div>
+
+  <style>
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</section>

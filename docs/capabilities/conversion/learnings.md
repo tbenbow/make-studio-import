@@ -86,6 +86,38 @@ Accumulated insights from site conversions. Read this before starting a new conv
 
 ---
 
+## Tailwind Plus — Block Library Import (2026-03-09)
+
+**Source**: Tailwind Plus authenticated UI blocks (copy-pasted HTML)
+**Theme**: Dark (base=#111827 gray-900, brand=#6366F1 indigo-500)
+**Fonts**: Inter
+**Approach**: Clean source HTML → convert to Make Studio blocks with semantic tokens
+
+### Key Lessons
+
+#### Field Types — Complete List
+Make Studio supports 12 field types: `text`, `textarea`, `wysiwyg`, `image`, `video`, `link`, `options`, `number`, `date`, `toggle`, `items`, `group`. Previous docs were missing group, link, video, number, date, options (was called "select").
+
+#### Group Fields for Fixed Layouts
+Bento grids and other fixed-position card layouts should use `group` fields — not flat `card-1-title`, `card-1-description` fields. Groups create collapsible sections in the editor. Access via dot notation: `{{card-1.title}}`. Default is an object: `"default": { "title": "...", "image": "..." }`.
+
+#### Image Refs Are Simple
+Use `{{field-name}}` not `{{image field-name}}`. The `image` helper doesn't exist — images are just URL strings.
+
+#### Items Need Default Arrays
+Without a `default` array on items fields, repeaters render empty. Always populate with representative content from the source design.
+
+#### Image Placeholders
+All image fields need `"default": "https://placehold.co/WxH/bg/fg?text=Label"` with dimensions matching the intended aspect ratio.
+
+#### No `richtext` Field Type
+The validator rejects `richtext` — use `textarea` for plain multi-line or `wysiwyg` for HTML content.
+
+#### Cleaning Script for Tailwind Plus Source
+`scripts/clean-tailwind-blocks.py` handles two formats: clean code paste (top-level elements) and raw page source (HTML-encoded in srcdoc iframes). Saves significant time across 24+ files.
+
+---
+
 ## Buccaneer's Bluff — Generated Site (2026-02-22)
 
 **Source**: AI-generated HTML (`themes/pirate-golf/source/v2.html`)
@@ -148,3 +180,29 @@ A single setup script should:
 5. Deploy preview
 
 This is the repeatable pattern for any site conversion.
+
+---
+
+## Concierge — Custom CSS Site (2026-03-10)
+
+**Source**: Single HTML file with embedded `<style>` (custom CSS variables, no framework)
+**Theme**: Light warm (base=#f5f2ed paper, brand=#9e7c3f warm-dark, custom warm=#c8a96e)
+**Fonts**: Playfair Display (headings) + DM Sans (body, weight 300)
+**Approach**: Direct conversion from custom CSS to Tailwind semantic tokens
+
+### Key Lessons
+
+#### Always call `setPageContent` after setting block order
+Block field `default` values render in the preview, but the editor fields show empty until content is explicitly set via `setPageContent`. This is the #1 gotcha — every conversion must include this step. The End-to-End Setup Script Pattern (step 4) already documents this, but it's easy to skip when blocks "look fine" in the preview.
+
+#### Navbar and Footer go in layout `headerBlocks`/`footerBlocks`, not page blocks
+Layout blocks are shared across all pages. Use `updateLayout(id, { headerBlocks: [...], footerBlocks: [...] })` with the same `{ id, blockId, name }` ref format as page blocks. The page's `blocks` array should only contain body content blocks. Set content for layout blocks via `setPageContent` on the page — it resolves block names across both page and layout blocks.
+
+#### Custom CSS sites convert cleanly to semantic tokens
+CSS variable-based sites (no Tailwind) map directly to Make Studio's system colors. The mapping is straightforward: `--paper` → `base`, `--ink` → `fg`, `--muted` → `fg-muted`, `--rule` → `border`, etc. No class-name translation needed — just identify the variables and map them.
+
+#### `toggle` field type gets converted to `select` by server
+When syncing a field with `"type": "toggle"`, the server converts it to a `select` type. Use `select` from the start if you need boolean-like behavior in items sub-fields.
+
+#### Deleting blocks requires block ID only, not site ID
+`client.deleteBlock(blockId)` — not `client.deleteBlock(siteId, blockId)`. The `getPages` list endpoint also doesn't return `blocks` array — it's only available on single-page fetch.

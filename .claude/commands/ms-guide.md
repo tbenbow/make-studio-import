@@ -19,6 +19,12 @@ Display the following help text:
 | `/ms-progress` | Show current workflow progress and next steps |
 | `/ms-done` | Complete the current job, write learnings, archive state |
 
+### Utilities
+
+| Command | What it does |
+|---------|-------------|
+| `npx tsx scripts/name-app.ts --prompt="..."` | Generate brand names with available domains checked via Fastly/Domainr |
+
 ### Quick start
 
 1. **New site from scratch:** `/ms-generate my-site-name` then describe what you want

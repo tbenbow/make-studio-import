@@ -1,0 +1,28 @@
+<section class="bg-base py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="rounded-2xl bg-panel border border-border overflow-hidden">
+      <div class="grid lg:grid-cols-2 gap-0">
+
+        <!-- Text Side -->
+        <div class="p-10 lg:p-16 flex flex-col justify-center">
+          <h2 class="heading-lg text-fg">{{Heading}}</h2>
+          <p class="body-lg text-fg-muted mt-4">{{Subheading}}</p>
+
+          <div class="mt-8">
+            {{> Button label=[Button Label] style="primary" size="lg" link=[Button Link]}}
+          </div>
+
+          {{#if Note}}
+          <p class="body-sm text-fg-alt mt-4">{{Note}}</p>
+          {{/if}}
+        </div>
+
+        <!-- Image Side -->
+        <div class="hidden lg:block relative">
+          <img src="{{Image}}" alt="" class="w-full h-full object-cover" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

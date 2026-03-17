@@ -1,0 +1,84 @@
+{
+  "description": "Split hero with phone mockup",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Badge Label",
+      "default": "We're hiring"
+    },
+    {
+      "type": "text",
+      "name": "Badge Link Text",
+      "default": "See open positions"
+    },
+    {
+      "type": "text",
+      "name": "Badge Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "A better way to ship your projects"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+    },
+    {
+      "type": "image",
+      "name": "Phone Screenshot",
+      "default": "https://placehold.co/316x684/1f2937/6366f1?text=App"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Learn more",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

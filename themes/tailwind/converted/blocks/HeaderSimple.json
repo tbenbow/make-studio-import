@@ -1,0 +1,36 @@
+{
+  "description": "HeaderSimple",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Support center"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+    },
+    {
+      "type": "select",
+      "name": "Alignment",
+      "default": "centered",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "centered",
+            "value": "Centered"
+          },
+          {
+            "key": "left",
+            "value": "Left"
+          }
+        ]
+      }
+    }
+  ]
+}

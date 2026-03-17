@@ -1,0 +1,11 @@
+{
+  "description": "Full-width background image hero with dark overlay. Centered white text, single CTA. Moody, editorial feel.",
+  "fields": [
+    { "type": "image", "name": "Background Image", "default": "https://placehold.co/1920x900/0b1640/1a2a6c?text=Background" },
+    { "type": "text", "name": "Heading", "default": "Stories That Move the World Forward" },
+    { "type": "textarea", "name": "Subheading", "default": "Award-winning journalism, in-depth features, and perspectives that challenge the way you think." },
+    { "type": "text", "name": "Button Label", "default": "Start Reading" },
+    { "type": "link", "name": "Button Link", "default": "#" },
+    { "type": "select", "name": "Overlay Strength", "default": "medium", "config": { "selectOptions": [{ "key": "light", "value": "Light" }, { "key": "medium", "value": "Medium" }, { "key": "heavy", "value": "Heavy" }] } }
+  ]
+}

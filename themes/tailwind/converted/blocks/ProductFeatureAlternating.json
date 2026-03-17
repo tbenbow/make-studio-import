@@ -1,0 +1,47 @@
+{
+  "description": "ProductFeatureAlternating",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Protect your device"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "As a digital creative, your laptop or tablet is at the center of your work. Keep your device safe with a fabric sleeve that matches in quality and looks."
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Minimal and thoughtful",
+          "description": "Our laptop sleeve is compact and precisely fits 13\" devices. The zipper allows you to access the interior with ease.",
+          "image": "https://placehold.co/1000x400/374151/e5e7eb?text=Feature+1"
+        },
+        {
+          "title": "Refined details",
+          "description": "We design every detail with the best materials and finishes. This laptop sleeve features durable canvas with double-stitched construction.",
+          "image": "https://placehold.co/1000x400/374151/e5e7eb?text=Feature+2"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    }
+  ]
+}

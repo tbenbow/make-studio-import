@@ -1,0 +1,20 @@
+{
+  "description": "MakeStudio",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Built on Make Studio"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "The reason we can do this in two hours."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Make Studio is our own content management system, built from the ground up for exactly this kind of project. It's what's under the hood of every Concierge site. Because we built it, we know every inch of it, and Tom can move through it incredibly fast without sacrificing quality or flexibility.</p><p>Once your site is live, Make Studio is yours to use. Updating copy, swapping photos, adding a page, it's all straightforward. You don't need to know how to code and you don't need to call us every time something changes. We built it to hand off cleanly.</p>"
+    }
+  ]
+}

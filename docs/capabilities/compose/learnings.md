@@ -88,3 +88,24 @@ Accumulated insights from composing sites from seed blocks. Read this before sta
 - **compose.json as the single source of truth** — having theme, blocks, images, and content all in one file makes the workflow reproducible and reviewable. The `compose-site.ts` script is fully config-driven.
 - **`$key` syntax for image refs** — content references like `"$hero"` get resolved to CDN URLs after upload. Must start with a letter after `$` to avoid false matches on currency values.
 - **Compose is now a one-command workflow** — `npx tsx scripts/compose-site.ts --config=themes/<name>/compose.json` handles everything. The creative work is in writing the config; execution is automated.
+
+## Allen Ginsberg — Opera Singer / Voice Over / Live Events (2026-02-23)
+
+**Prompt**: Personal site for a professionally trained opera singer who also does voice over work and live event hosting. Deep, resonant voice. Highlight professional background and availability.
+**Design**: 4 variations — V1 dark/DM Serif Display, V2 warm parchment/Playfair Display, V3 white+red/Archivo bold, V4 cream+brown/Lora
+**Blocks Used (across 4 variations)**: Nav Bar, Navbar, Split, Hero, AB - Hero Photo Offset, Features Triple, Features Grid, Features Alternating, Features Double, LTA, Content, Testimonial Large, Testimonial, Testimonials Grid, Stats, FAQ, CTA, CTA Highlight, Form, FooterCategories, FooterNewsletter
+
+### What Worked
+- **Batch multi-variation compose** — `compose-site.ts` ran 4 times in succession with zero errors. Each created a new site, uploaded images to R2, pushed theme, copied seed blocks, populated content, and deployed. No fix scripts needed.
+- **Shared image pool** — 14 Pexels images + 1 DALL-E logo sourced once and reused across all 4 variations via different `images` mappings in each compose config. Efficient.
+- **New blocks used for first time** — AB - Hero Photo Offset (editorial hero with sidebar metadata), Features Alternating (image+text rows), Features Double (2-column), Features Grid (icon-based), Form, FAQ, FooterCategories all worked correctly on first deploy.
+- **Config-per-variation pattern** — `compose-v1.json` through `compose-v4.json` in the same theme directory, sharing the same `source/images/` folder. Clean separation.
+
+### What Didn't
+- **Block selection was too conservative / repetitive** — despite a catalog of 35+ seed blocks, all 4 variations gravitated toward the same handful: a features block variant, a testimonial block variant, Stats, CTA, LTA. Many blocks were never considered: **Features Demo** (product screenshot + feature list), **Logo Cloud** (client logos), **Team** (people grid), **Pricing** / **Pricing Large** (rate cards), **AB - Feature Photo Pullquote**, **AB - Feature Photo Quote**, **AB - Feature Offset 2x**, **AB - CTA Two Topics**. For a personal site like Allen's, Logo Cloud (brands/venues worked with), Team (collaborators/accompanists), Pricing (rate card for services), and Features Demo (anchor on a demo reel with supporting features) would have added genuine variety. The `aiDescription` "choose this over X when..." guidance wasn't enough to overcome the tendency to default to familiar blocks.
+
+### Patterns Discovered
+- **Variation diversity must go beyond layout swaps** — swapping Features Triple for Features Grid is a layout change, not a meaningful content/structural difference. True variation means using fundamentally different block types: one variation uses a Logo Cloud + Pricing table, another uses a Team grid + FAQ, a third uses Features Demo (product anchor) + Form. The section *purpose* should vary, not just the column count.
+- **Block selection needs forced diversity rules for multi-variation** — when generating N variations, enforce a rule like: "each variation must include at least 2 blocks not used in any other variation." This prevents gravitating to the same safe picks across all variations.
+- **Underused blocks in the catalog** — the following blocks have been used 0 times across all composes: Features Demo, Logo Cloud, Team, Footer (minimal), AB - Feature Offset 2x, AB - Feature Photo Pullquote, AB - Feature Photo Quote, AB - CTA Two Topics. These should be actively considered in future composes, especially for multi-variation runs where variety matters.
+- **Personal/portfolio sites benefit from different block archetypes** — Logo Cloud → "who I've worked with"; Team → "collaborators"; Pricing → "rate card"; Features Demo → "demo reel with supporting points"; Form → "book me directly". These aren't generic features blocks — they serve distinct content purposes that map naturally to a personal brand site.

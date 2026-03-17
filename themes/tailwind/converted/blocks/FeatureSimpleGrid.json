@@ -1,0 +1,57 @@
+{
+  "description": "Simple text feature grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "All-in-one platform"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Push to deploy",
+          "description": "Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia."
+        },
+        {
+          "title": "SSL certificates",
+          "description": "Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae."
+        },
+        {
+          "title": "Simple queues",
+          "description": "Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum."
+        },
+        {
+          "title": "Advanced security",
+          "description": "Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus."
+        },
+        {
+          "title": "Powerful API",
+          "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure."
+        },
+        {
+          "title": "Database backups",
+          "description": "Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "layouts": [
+    {
+      "name": "Default",
+      "headerBlocks": ["Navbar"],
+      "footerBlocks": ["Footer"],
+      "isDefault": true
+    }
+  ],
+  "pages": [
+    {
+      "name": "Index",
+      "slug": "",
+      "layout": "Default",
+      "blocks": ["Hero", "Build", "ContentSystem", "Edit", "Ship", "AI", "CTABanner"]
+    }
+  ]
+}

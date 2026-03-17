@@ -1,0 +1,24 @@
+<section class="bg-base">
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      {{#if badge}}
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div class="relative rounded-full px-3 py-1 body-sm text-fg-alt ring-1 ring-fg/10 hover:ring-fg/20">
+            {{badge}}
+          </div>
+        </div>
+      {{/if}}
+      <div class="text-center">
+        <h1 class="text-balance heading-xl text-fg">{{headline}}</h1>
+        {{#if subheadline}}
+          <p class="mt-8 text-pretty body-lg text-fg-alt">{{subheadline}}</p>
+        {{/if}}
+        <div class="mt-10 flex items-center justify-center gap-4">
+          {{#each buttons}}
+            {{> Button}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

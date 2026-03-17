@@ -1,0 +1,25 @@
+{
+  "description": "TestimonialSideAvatar",
+  "fields": [
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Commodo amet fugiat excepteur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat. Elit sunt proident ea nulla ad nulla dolore ad pariatur tempor non."
+    },
+    {
+      "type": "image",
+      "name": "Avatar",
+      "default": "https://placehold.co/576x576/374151/e5e7eb?text=JB"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Judith Black"
+    },
+    {
+      "type": "text",
+      "name": "Role",
+      "default": "CEO of Workcation"
+    }
+  ]
+}

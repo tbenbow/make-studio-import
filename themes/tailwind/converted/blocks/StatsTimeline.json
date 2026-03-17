@@ -1,0 +1,47 @@
+{
+  "description": "StatsTimeline",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Milestones",
+      "default": [
+        {
+          "date": "Aug 2021",
+          "title": "Founded company",
+          "description": "Nihil aut nam. Dignissimos a pariatur et quos omnis. Aspernatur asperiores et dolorem dolorem optio voluptate repudiandae."
+        },
+        {
+          "date": "Dec 2021",
+          "title": "Secured $65m in funding",
+          "description": "Provident quia ut esse. Vero vel eos repudiandae aspernatur. Cumque minima impedit sapiente a architecto nihil."
+        },
+        {
+          "date": "Feb 2022",
+          "title": "Released beta",
+          "description": "Sunt perspiciatis incidunt. Non necessitatibus aliquid. Consequatur ut officiis earum eum quia facilis."
+        },
+        {
+          "date": "Dec 2022",
+          "title": "Global launch of product",
+          "description": "Ut ipsa sint distinctio quod itaque nam qui. Possimus aut unde id architecto voluptatem hic aut pariatur velit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Date"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

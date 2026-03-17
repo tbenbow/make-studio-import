@@ -1,0 +1,41 @@
+{
+  "description": "ProductFeatureImages",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "The Fine Details"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Our patented padded snack sleeve construction protects your favorite treats from getting smooshed during all-day adventures, long shifts at work, and tough travel schedules."
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "image": "https://placehold.co/800x533/374151/e5e7eb?text=Detail+1",
+          "description": "The 20L model has enough space for 370 candy bars, 6 cylinders of chips, 1220 standard gumballs, or any combination of on-the-go treats that your heart desires."
+        },
+        {
+          "image": "https://placehold.co/800x533/374151/e5e7eb?text=Detail+2",
+          "description": "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

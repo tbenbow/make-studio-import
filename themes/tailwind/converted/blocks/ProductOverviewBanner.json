@@ -1,0 +1,29 @@
+{
+  "description": "ProductOverviewBanner",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/1200x400/374151/e5e7eb?text=Collection+Banner"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Workspace Collection"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Upgrade your desk with objects that keep you organized and clear-minded."
+    },
+    {
+      "type": "text",
+      "name": "Button Text",
+      "default": "View the collection"
+    },
+    {
+      "type": "text",
+      "name": "Button URL"
+    }
+  ]
+}

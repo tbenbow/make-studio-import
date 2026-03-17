@@ -1,0 +1,35 @@
+{
+  "description": "About",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "The Voice Behind the Show"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "About Allen Jones"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Allen Jones"
+    },
+    {
+      "type": "image",
+      "name": "Portrait",
+      "default": "https://placehold.co/480x640/1e293b/94a3b8?text=Allen+Jones"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Bio Intro",
+      "default": "<p>Allen Jones is a professionally trained opera singer and Emmy-award-winning podcaster known for his rich baritone voice and thoughtful storytelling.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Bio Detail",
+      "default": "<p>Drawing on years of vocal performance and audio production experience, Allen created The Stillness Hour to offer listeners a deeply calming meditation experience. Each episode blends guided narration with original compositions designed specifically to support relaxation and sleep.</p>"
+    }
+  ]
+}

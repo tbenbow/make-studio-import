@@ -1,0 +1,47 @@
+{
+  "description": "Alternating left-right feature rows. Each row has an image on one side and text with bullet points on the other.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "How It Works" },
+    { "type": "textarea", "name": "Subheading", "default": "Three simple steps to go from idea to live website." },
+    {
+      "type": "items",
+      "name": "Features",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title", "default": "Feature" },
+          { "type": "textarea", "name": "Description", "default": "Description of this feature." },
+          { "type": "image", "name": "Image", "default": "https://placehold.co/600x440/1a2a6c/8a9ae8?text=Feature" },
+          { "type": "text", "name": "Bullet 1", "default": "First benefit of this feature" },
+          { "type": "text", "name": "Bullet 2", "default": "Second benefit of this feature" },
+          { "type": "text", "name": "Bullet 3", "default": "Third benefit of this feature" }
+        ]
+      },
+      "default": [
+        {
+          "Title": "Design Without Limits",
+          "Description": "Start with a beautiful template or build from scratch. Drag, drop, and customize every detail until it's perfect.",
+          "Image": "https://placehold.co/600x440/1a2a6c/8a9ae8?text=Design",
+          "Bullet 1": "50+ professionally designed templates",
+          "Bullet 2": "Drag-and-drop editor with real-time preview",
+          "Bullet 3": "Custom fonts, colors, and animations"
+        },
+        {
+          "Title": "Collaborate in Real Time",
+          "Description": "Work with your team simultaneously. Leave comments, track changes, and keep everyone aligned from first draft to launch.",
+          "Image": "https://placehold.co/600x440/1a2a6c/8a9ae8?text=Collaborate",
+          "Bullet 1": "Real-time multi-user editing",
+          "Bullet 2": "Inline comments and @mentions",
+          "Bullet 3": "Version history with one-click restore"
+        },
+        {
+          "Title": "Launch With Confidence",
+          "Description": "One-click publish with built-in hosting, SSL, and CDN. Your site is fast, secure, and ready for the world.",
+          "Image": "https://placehold.co/600x440/1a2a6c/8a9ae8?text=Launch",
+          "Bullet 1": "Global CDN for blazing-fast load times",
+          "Bullet 2": "Free SSL certificates on every site",
+          "Bullet 3": "99.9% uptime guarantee"
+        }
+      ]
+    }
+  ]
+}

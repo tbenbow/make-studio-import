@@ -1,0 +1,29 @@
+<section class="bg-base py-20 lg:py-32">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+
+    <!-- Large Quote Mark -->
+    <div class="text-brand/30 mb-8">
+      <svg class="w-12 h-12 mx-auto" viewBox="0 0 48 48" fill="currentColor">
+        <path d="M14 24c-3.3 0-6-2.7-6-6s2.7-6 6-6c1 0 2 .3 2.8.7C18.8 10.3 20 7 20 7s-5 1-9 5c-3 3-4 7-4 12 0 5.5 3.1 10 7 10s7-3.1 7-7-3.1-7-7-7zm20 0c-3.3 0-6-2.7-6-6s2.7-6 6-6c1 0 2 .3 2.8.7C38.8 10.3 40 7 40 7s-5 1-9 5c-3 3-4 7-4 12 0 5.5 3.1 10 7 10s7-3.1 7-7-3.1-7-7-7z"/>
+      </svg>
+    </div>
+
+    <!-- Quote Text -->
+    <blockquote class="heading-md text-fg leading-relaxed">
+      {{Quote}}
+    </blockquote>
+
+    <!-- Author -->
+    <div class="mt-10 flex flex-col items-center gap-4">
+      <img src="{{Avatar}}" alt="{{Name}}" class="w-14 h-14 rounded-full object-cover border-2 border-border" />
+      <div>
+        <p class="body-md text-fg font-medium">{{Name}}</p>
+        <p class="body-sm text-fg-muted">{{Role}}</p>
+      </div>
+      {{#if [Company Logo]}}
+      <img src="{{[Company Logo]}}" alt="" class="h-6 w-auto opacity-50 mt-2" />
+      {{/if}}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,167 @@
+{
+  "description": "Wide/narrow 4-card bento",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Deploy faster"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Everything you need to deploy your app"
+    },
+    {
+      "type": "group",
+      "name": "Card 1",
+      "default": {
+        "label": "Releases",
+        "title": "Push to deploy",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida justo et nulla efficitur, maximus egestas sem pellentesque.",
+        "image": "https://placehold.co/800x320/1f2937/6366f1?text=Releases"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "a758300b-2766-47be-ac19-67659a4dc5cd",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "25cf8a3f-7d8c-4b83-84c5-b3e06e2fc1ec",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "772a2c5e-c19e-480a-87e6-2770bd538d90",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "f21fbc40-b7c6-488a-8dd3-6cd913687c8c",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 2",
+      "default": {
+        "label": "Integrations",
+        "title": "Connect your favorite tools",
+        "description": "Curabitur auctor, ex quis auctor venenatis, eros arcu rhoncus massa.",
+        "image": "https://placehold.co/400x320/1f2937/6366f1?text=Integrations"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "171c354b-33bb-446e-9606-d8f5cb61c1ce",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "24cc203e-bff4-46e2-9b00-26f628fe6b47",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "a13988c5-97e6-4efe-9df2-9c44eb76132c",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "be1ce398-5520-42f6-a6d6-d272c218fa51",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 3",
+      "default": {
+        "label": "Security",
+        "title": "Advanced access control",
+        "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.",
+        "image": "https://placehold.co/400x320/1f2937/6366f1?text=Security"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "5e08de2d-429f-4a9f-8eea-24e3545afc0d",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "3757c7af-6358-4bc7-aa0b-0b89032b5b33",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "ff92955c-9aa8-4b1c-acc2-54d1e8ac2f6a",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "49ee868a-320d-4922-848d-10800c301a06",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 4",
+      "default": {
+        "label": "Performance",
+        "title": "Lightning-fast builds",
+        "description": "Sed congue eros non finibus molestie. Vestibulum euismod augue vel commodo vulputate. Maecenas at augue sed elit dictum vulputate.",
+        "image": "https://placehold.co/800x320/1f2937/6366f1?text=Performance"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "e3a88510-e76a-41d2-885b-3b9d3cd5c83e",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "c1706c7a-9a4b-4faf-b7eb-b7e34d95a357",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "e523ca12-c685-442b-af11-f08888909392",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "176c9610-1686-4f75-abd0-6e0c1e70c7ec",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

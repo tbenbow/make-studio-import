@@ -1,0 +1,57 @@
+{
+  "description": "ListenEverywhere",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Listen Everywhere"
+    },
+    {
+      "type": "text",
+      "name": "Subheadline",
+      "default": "Listen on your favorite platform, wherever your evenings begin."
+    },
+    {
+      "type": "items",
+      "name": "Platforms",
+      "default": [
+        {
+          "name": "Spotify",
+          "icon": "spotify-logo",
+          "url": "#"
+        },
+        {
+          "name": "Apple Podcasts",
+          "icon": "apple-logo",
+          "url": "#"
+        },
+        {
+          "name": "YouTube",
+          "icon": "youtube-logo",
+          "url": "#"
+        },
+        {
+          "name": "RSS Feed",
+          "icon": "rss",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    }
+  ]
+}

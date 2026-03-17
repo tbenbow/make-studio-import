@@ -1,0 +1,54 @@
+{
+  "description": "ProductOverviewCollections",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Collections"
+    },
+    {
+      "type": "items",
+      "name": "Collections",
+      "default": [
+        {
+          "image": "https://placehold.co/600x600/374151/e5e7eb?text=Collection+1",
+          "name": "Desk and Office",
+          "description": "Work from home accessories",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/600x600/374151/e5e7eb?text=Collection+2",
+          "name": "Self-Improvement",
+          "description": "Journals and note-taking",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/600x600/374151/e5e7eb?text=Collection+3",
+          "name": "Travel",
+          "description": "Daily commute essentials",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

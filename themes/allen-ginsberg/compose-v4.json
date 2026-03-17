@@ -1,0 +1,198 @@
+{
+  "siteName": "Allen Ginsberg — V4 Warm",
+  "blocks": ["Navbar", "Split", "Features Double", "LTA", "Testimonial Large", "FAQ", "CTA", "FooterCategories"],
+  "theme": {
+    "fonts": [
+      { "family": "Lora", "weight": 400, "style": "normal" },
+      { "family": "Lora", "weight": 400, "style": "italic" },
+      { "family": "Lora", "weight": 700, "style": "normal" },
+      { "family": "Nunito Sans", "weight": 400, "style": "normal" },
+      { "family": "Nunito Sans", "weight": 600, "style": "normal" }
+    ],
+    "systemColors": {
+      "brand": "#8b5e3c",
+      "on-brand": "#ffffff",
+      "base": "#fdfbf7",
+      "base-muted": "#f6f1ea",
+      "base-alt": "#ede5d8",
+      "panel": "#ffffff",
+      "border": "#ddd3c4",
+      "fg": "#2c2118",
+      "fg-muted": "#6b5b4e",
+      "fg-alt": "#9a8b7c"
+    },
+    "palette": {
+      "primary": { "label": "primary", "colors": ["rgb(240,225,210)", "rgb(210,180,150)", "rgb(170,120,80)", "rgb(139,94,60)", "rgb(100,65,35)"] },
+      "accent1": { "label": "accent-1", "colors": ["rgb(225,235,230)", "rgb(175,200,190)", "rgb(110,150,135)", "rgb(70,115,100)", "rgb(40,80,65)"] },
+      "accent2": { "label": "accent-2", "colors": ["rgb(235,225,220)", "rgb(200,180,170)", "rgb(160,130,115)", "rgb(120,90,75)", "rgb(85,60,45)"] },
+      "accent3": { "label": "accent-3", "colors": ["rgb(230,230,240)", "rgb(190,185,210)", "rgb(140,130,170)", "rgb(100,88,130)", "rgb(65,55,90)"] },
+      "grays": { "label": "gray", "colors": ["rgb(253,251,247)", "rgb(200,190,180)", "rgb(154,139,124)", "rgb(107,91,78)", "rgb(44,33,24)"] }
+    },
+    "headingTypography": {
+      "heading-xl": { "fontFamily": "Lora", "fontWeight": 700, "fontSize": 56, "lineHeight": 64, "letterSpacing": -1, "mobileFontSize": 34, "mobileLineHeight": 40 },
+      "heading-lg": { "fontFamily": "Lora", "fontWeight": 700, "fontSize": 44, "lineHeight": 52, "letterSpacing": -0.8, "mobileFontSize": 28, "mobileLineHeight": 34 },
+      "heading-md": { "fontFamily": "Lora", "fontWeight": 700, "fontSize": 30, "lineHeight": 38, "letterSpacing": -0.5, "mobileFontSize": 22, "mobileLineHeight": 28 },
+      "heading-sm": { "fontFamily": "Nunito Sans", "fontWeight": 600, "fontSize": 22, "lineHeight": 30, "letterSpacing": -0.2, "mobileFontSize": 18, "mobileLineHeight": 24 },
+      "heading-xs": { "fontFamily": "Nunito Sans", "fontWeight": 600, "fontSize": 18, "lineHeight": 25, "letterSpacing": -0.1, "mobileFontSize": 16, "mobileLineHeight": 22 }
+    },
+    "bodyTypography": {
+      "body-lg": { "fontFamily": "Nunito Sans", "fontWeight": 400, "fontSize": 18, "lineHeight": 32, "letterSpacing": 0 },
+      "body-md": { "fontFamily": "Nunito Sans", "fontWeight": 400, "fontSize": 16, "lineHeight": 28, "letterSpacing": 0 },
+      "body-sm": { "fontFamily": "Nunito Sans", "fontWeight": 400, "fontSize": 14, "lineHeight": 22, "letterSpacing": 0 }
+    },
+    "prose": {
+      "elements": {
+        "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+        "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+        "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+        "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+        "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+        "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+        "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+        "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+        "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+      },
+      "lists": { "listStyleType": "disc", "indent": 1.5, "itemSpacing": 0.5, "nestedIndent": 1.5 },
+      "links": { "color": "accent", "hoverColor": "primary", "underline": "always" },
+      "customCSS": ""
+    },
+    "buttons": {
+      "global": {
+        "fontFamily": "'Nunito Sans', sans-serif",
+        "fontWeight": 600,
+        "uppercase": false,
+        "sizes": {
+          "lg": { "fontSize": 16, "letterSpacing": 0, "opticalYOffset": 0, "paddingTop": 14, "paddingBottom": 14, "paddingLeft": 28, "paddingRight": 28, "borderRadius": 24 },
+          "md": { "fontSize": 14, "letterSpacing": 0, "opticalYOffset": 0, "paddingTop": 11, "paddingBottom": 11, "paddingLeft": 22, "paddingRight": 22, "borderRadius": 20 },
+          "sm": { "fontSize": 12, "letterSpacing": 0, "opticalYOffset": 0, "paddingTop": 8, "paddingBottom": 8, "paddingLeft": 16, "paddingRight": 16, "borderRadius": 16 }
+        }
+      },
+      "variants": {
+        "primary": { "backgroundColor": "system:brand", "textColor": "system:on-brand", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "scale" },
+        "secondary": { "backgroundColor": "system:base-alt", "textColor": "system:fg", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "darken" },
+        "outline": { "backgroundColor": "transparent", "textColor": "system:brand", "borderColor": "system:brand", "borderWidth": 1, "hoverPreset": "fill" },
+        "ghost": { "backgroundColor": "transparent", "textColor": "system:fg", "borderColor": "transparent", "borderWidth": 1, "hoverPreset": "darken" }
+      }
+    }
+  },
+  "images": {
+    "logo": "logo.png",
+    "split": "man-opera-singer-performing-st-1.jpg",
+    "featureVoiceover": "recording-studio-microphone-vo-1.jpg",
+    "featureEvents": "live-event-hosting-stage-corpo-1.jpg",
+    "lta": "concert-hall-opera-house-inter-1.jpg",
+    "testimonialPhoto": "business-woman-professional-he-1.jpg"
+  },
+  "content": {
+    "Navbar": {
+      "Logo": "$logo",
+      "Logo Text": "Allen Ginsberg",
+      "Logo Link": "/",
+      "Button Label": "Work With Me",
+      "Button Link": "/contact",
+      "Links": [
+        { "label": "What I Do", "url": "#services" },
+        { "label": "My Story", "url": "#story" },
+        { "label": "Kind Words", "url": "#testimonial" },
+        { "label": "FAQ", "url": "#faq" }
+      ]
+    },
+    "Split": {
+      "Headline": "Hi, I'm Allen",
+      "Subheadline": "I'm a classically trained opera singer with a deep, resonant bass-baritone voice — and I'd love to bring it to your next project. Whether you need a voice for a recording, a host for your event, or a performer for your production, I'm here to help.",
+      "Primary Button Label": "What I Do",
+      "Primary Button URL": "#services",
+      "Secondary Button Label": "Let's Talk",
+      "Secondary Button URL": "/contact",
+      "Image": "$split"
+    },
+    "Features Double": {
+      "Eyebrow": "What I Do",
+      "Headline": "Voice over and live events",
+      "Subheadline": "<p>My opera training gave me the technique and presence. These are the two areas where I put them to work every day.</p>",
+      "Features": [
+        {
+          "title": "Professional Voice Over",
+          "description": "Commercials, narration, audiobooks, documentaries, corporate video, and brand campaigns. I record from a professional home studio with broadcast-quality equipment, and I'm available for remote directed sessions anytime.",
+          "image": "$featureVoiceover",
+          "button_label": "Hear Samples",
+          "button_link": "/samples"
+        },
+        {
+          "title": "Live Event Hosting",
+          "description": "Corporate galas, award ceremonies, fundraisers, product launches, and special occasions. I bring the stage presence of a trained performer and the warmth of someone who genuinely loves connecting with an audience.",
+          "image": "$featureEvents",
+          "button_label": "Book Me",
+          "button_link": "/contact"
+        }
+      ]
+    },
+    "LTA": {
+      "Headline": "The story behind the voice",
+      "Subheadline": "My Story",
+      "Text": "I started singing seriously in college and never looked back. After earning my Master of Music in Vocal Performance, I spent more than a decade on opera stages — performing with companies and orchestras across the country. Verdi, Mozart, Handel, Britten — I've sung them all, and each one taught me something new about what a voice can do.\n\nSomewhere along the way, people started asking me to lend that voice to other things: a commercial here, an event there, a documentary narration. I discovered that the same skills that make a great opera performance — breath control, pacing, emotional range, commanding a room — translate beautifully to voice over and live hosting. Today, those are the areas where I do most of my work, and I love every minute of it.",
+      "Button Label": "Get in Touch",
+      "Image": "$lta",
+      "Highlights": [
+        { "title": "15+ Years", "label": "Experience", "description": "Professional performance across opera, voice over, and live events." },
+        { "title": "Master of Music", "label": "Education", "description": "Advanced degree in Vocal Performance from a top conservatory." },
+        { "title": "200+ Engagements", "label": "Track Record", "description": "Productions, recordings, galas, and brand campaigns." }
+      ]
+    },
+    "Testimonial Large": {
+      "Quote": "<p>We hired Allen to host our annual fundraiser and he made the whole evening feel effortless. His voice filled the room, his timing was perfect, and our guests loved him. We've already booked him for next year.</p>",
+      "Name": "Rebecca Thornton",
+      "Byline": "Director of Events, Lakewood Foundation",
+      "Photo": "$testimonialPhoto"
+    },
+    "FAQ": {
+      "Headline": "Questions people usually ask",
+      "Subheadline": "<p>Here are the things clients most often want to know before we start working together.</p>",
+      "Questions": [
+        {
+          "question": "What kind of voice over work do you do?",
+          "answer": "<p>Commercials, documentary and film narration, audiobooks, corporate video, e-learning, and brand campaigns. My voice is a deep bass-baritone — think authoritative but warm. I'm especially well-suited to projects that need gravitas without feeling stiff.</p>"
+        },
+        {
+          "question": "Do you have a professional studio?",
+          "answer": "<p>Yes. I record from a treated home studio with broadcast-quality equipment (Neumann U87, Universal Audio interface, acoustically treated booth). I can deliver broadcast-ready files and am available for remote directed sessions via Source-Connect, Zoom, or phone patch.</p>"
+        },
+        {
+          "question": "What does live event hosting include?",
+          "answer": "<p>I serve as your emcee and host for the entire event — opening remarks, speaker introductions, segment transitions, audience engagement, and closing. I work closely with event planners to understand the run of show and rehearse timing. My goal is to make the evening feel polished and seamless.</p>"
+        },
+        {
+          "question": "How far in advance should I book?",
+          "answer": "<p>For live events, two to four weeks is ideal, though I can sometimes accommodate shorter timelines. For voice over projects, turnaround can be as fast as 24–48 hours depending on the scope. Reach out and we'll figure out the timeline together.</p>"
+        }
+      ]
+    },
+    "CTA": {
+      "Eyebrow": "Let's Work Together",
+      "Headline": "Tell me about your project",
+      "Subheadline": "<p>I'd love to hear what you're working on. Whether it's a 30-second spot, a three-hour gala, or something in between — drop me a line and I'll get back to you within a day.</p>",
+      "Buttons": [
+        { "label": "Get in Touch", "link": "/contact", "style": "primary" },
+        { "label": "Hear Samples", "link": "/samples", "style": "ghost" }
+      ],
+      "Align": "items-center text-center"
+    },
+    "FooterCategories": {
+      "Copyright": "<p>&copy; 2026 Allen Ginsberg. All rights reserved.</p>",
+      "Categories": [
+        {
+          "title": "What I Do",
+          "links": "<a href=\"/opera\">Opera & Concert</a>\n<a href=\"/voiceover\">Voice Over</a>\n<a href=\"/events\">Live Events</a>"
+        },
+        {
+          "title": "Learn More",
+          "links": "<a href=\"#story\">My Story</a>\n<a href=\"/samples\">Audio Samples</a>\n<a href=\"/press\">Press Kit</a>"
+        },
+        {
+          "title": "Connect",
+          "links": "<a href=\"/contact\">Contact</a>\n<a href=\"https://instagram.com\">Instagram</a>\n<a href=\"https://linkedin.com\">LinkedIn</a>"
+        }
+      ]
+    }
+  }
+}

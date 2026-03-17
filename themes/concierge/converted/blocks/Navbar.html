@@ -1,0 +1,12 @@
+<nav class="sticky top-0 z-50 bg-base border-b border-border">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 py-5 flex items-center justify-between">
+    <a href="{{default logo-link '/'}}" class="heading-sm tracking-wide text-fg no-underline">{{default logo-text 'Concierge'}}</a>
+    <ul class="hidden md:flex gap-10 list-none">
+      {{#each links}}
+        <li>
+          <a href="{{link}}" class="body-sm uppercase tracking-[0.12em] text-fg-muted no-underline hover:text-fg transition-colors duration-200">{{label}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</nav>

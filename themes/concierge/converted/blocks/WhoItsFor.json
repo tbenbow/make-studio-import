@@ -1,0 +1,64 @@
+{
+  "description": "WhoItsFor",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Who this is for"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Intro",
+      "default": "<p>Simple websites for people who need to get on with it.</p><p><em>Not everyone needs a $10,000 website.</em> Most people just need something great, up fast, and easy to update.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Tags",
+      "default": [
+        {
+          "label": "Bands"
+        },
+        {
+          "label": "Photographers"
+        },
+        {
+          "label": "Coffee shops"
+        },
+        {
+          "label": "Therapists"
+        },
+        {
+          "label": "Consultants"
+        },
+        {
+          "label": "Artists"
+        },
+        {
+          "label": "Small businesses"
+        },
+        {
+          "label": "Freelancers"
+        },
+        {
+          "label": "Restaurants"
+        },
+        {
+          "label": "Yoga studios"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>If your website has a small scope and you want it done right, Concierge is built for you. You need a professional, good-looking site. You don't have a lot of time or money to throw at it. And you need to be able to update it yourself without calling someone every time.</p><p>We built our own content management system called <strong>Make Studio</strong> specifically for this. It's what lets us move so fast in a session without cutting corners. Clean, flexible, and simple enough that you can manage your site on your own once we hand it off. No subscription traps. No bloated page builders. Just a tight, well-built tool designed for exactly this kind of site.</p><p>This is not a template you fill out yourself. This is a live session with a creative director and a developer, both paying attention to nothing but your site for two hours.</p>"
+    }
+  ]
+}

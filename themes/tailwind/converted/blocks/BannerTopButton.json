@@ -1,0 +1,25 @@
+{
+  "description": "BannerTopButton",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "GeneriCon 2023"
+    },
+    {
+      "type": "text",
+      "name": "Message",
+      "default": "Join us in Denver from June 7 – 9 to see what's coming next."
+    },
+    {
+      "type": "text",
+      "name": "Button Text",
+      "default": "Register now"
+    },
+    {
+      "type": "text",
+      "name": "Button Url",
+      "default": "#"
+    }
+  ]
+}

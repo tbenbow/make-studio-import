@@ -1,0 +1,37 @@
+<section class="py-20 lg:py-32 bg-base">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-end">
+      <div class="lg:col-span-7">
+        {{#if eyebrow}}
+          <p class="body-sm font-medium text-brand mb-6">{{eyebrow}}</p>
+        {{/if}}
+        <h1 class="heading-xl text-fg mb-8" style="font-style: italic;">{{{headline}}}</h1>
+        <div class="border-l-[3px] border-brand pl-6 max-w-md">
+          <div class="body-lg text-fg-muted">{{{subheadline}}}</div>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        {{#if code-preview}}
+          <div class="bg-panel border border-border rounded-xl shadow-sm overflow-hidden">
+            <div class="bg-fg px-4 py-2.5 flex items-center gap-1.5">
+              <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: rgba(255,255,255,0.2);"></span>
+              <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: rgba(255,255,255,0.2);"></span>
+              <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: rgba(255,255,255,0.2);"></span>
+              <span class="text-on-brand/40 body-sm ml-2">{{default code-filename 'Hero.html'}}</span>
+            </div>
+            <div class="p-5 body-sm text-fg-muted" style="font-family: monospace;">
+              {{{code-preview}}}
+            </div>
+          </div>
+        {{/if}}
+        {{#if (length buttons)}}
+          <div class="flex items-center gap-4 mt-8">
+            {{#each buttons}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+{
+  "description": "TestimonialCentered",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "select",
+      "name": "Show Stars",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."
+    },
+    {
+      "type": "image",
+      "name": "Avatar",
+      "default": "https://placehold.co/256x256/374151/e5e7eb?text=JB"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Judith Black"
+    },
+    {
+      "type": "text",
+      "name": "Role",
+      "default": "CEO of Workcation"
+    }
+  ]
+}

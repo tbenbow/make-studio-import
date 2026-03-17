@@ -1,0 +1,68 @@
+{
+  "description": "ProductListSimple",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Customers also purchased"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+1",
+          "name": "Basic Tee",
+          "variant": "Black",
+          "price": "$35",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+2",
+          "name": "Basic Tee",
+          "variant": "Aspen White",
+          "price": "$35",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+3",
+          "name": "Basic Tee",
+          "variant": "Charcoal",
+          "price": "$35",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x400/374151/e5e7eb?text=Product+4",
+          "name": "Artwork Tee",
+          "variant": "Iso Dots",
+          "price": "$35",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

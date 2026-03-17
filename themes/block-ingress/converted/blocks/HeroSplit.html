@@ -1,0 +1,51 @@
+<section class="bg-base py-20 lg:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Text Side -->
+      <div>
+        {{#if [Show Badge]}}
+        <div class="mb-6">
+          <span class="inline-flex items-center gap-2 rounded-full bg-brand/10 border border-brand/30 px-4 py-1.5 body-sm text-brand font-medium">
+            {{Badge}}
+          </span>
+        </div>
+        {{/if}}
+
+        <h1 class="heading-xl text-fg">
+          {{Heading}}
+        </h1>
+
+        <p class="body-lg text-fg-muted mt-6 max-w-lg">
+          {{Subheading}}
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          {{> Button label=[Primary Button Label] style="primary" size="lg" link=[Primary Button Link]}}
+          {{> Button label=[Secondary Button Label] style="ghost" size="lg" link=[Secondary Button Link]}}
+        </div>
+
+        {{#if Highlights}}
+        <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+          {{#each Highlights}}
+          <span class="inline-flex items-center gap-2 body-sm text-fg-muted">
+            {{icon Icon size="16"}}
+            {{Text}}
+          </span>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+
+      <!-- Image Side -->
+      <div class="relative">
+        <div class="rounded-xl overflow-hidden shadow-2xl border border-border">
+          <img src="{{Image}}" alt="" class="w-full h-auto" />
+        </div>
+        <!-- Subtle glow behind image -->
+        <div class="absolute -inset-4 bg-brand/5 rounded-2xl -z-10 blur-2xl"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

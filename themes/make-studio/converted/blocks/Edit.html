@@ -1,0 +1,64 @@
+<section class="py-20 lg:py-32 bg-base border-t border-border">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-16 items-center">
+      <div class="lg:col-span-5">
+        {{#if eyebrow}}
+          <p class="body-sm font-medium text-brand mb-3">{{eyebrow}}</p>
+        {{/if}}
+        <h2 class="heading-lg text-fg mb-6" style="font-style: italic;">{{{headline}}}</h2>
+        <div class="border-l-[3px] border-brand pl-6 mb-8">
+          <div class="body-lg text-fg-muted">{{{description}}}</div>
+        </div>
+
+        {{#if (length features)}}
+          <div class="flex flex-col">
+            {{#each features}}
+              <div class="{{#unless @first}}border-t border-border pt-6{{/unless}} {{#unless @last}}pb-6{{/unless}}">
+                <h3 class="heading-sm text-fg mb-1">{{title}}</h3>
+                <p class="body-sm text-fg-muted">{{body}}</p>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+
+      <div class="lg:col-span-7">
+        {{#if mockup-image}}
+          <img src="{{image mockup-image}}" alt="{{default mockup-alt 'Content editing interface'}}" class="w-full rounded-xl border border-border shadow-sm">
+        {{else}}
+          <div class="bg-panel border border-border rounded-xl shadow-sm overflow-hidden">
+            <div class="bg-fg text-on-brand/60 px-4 py-2.5 flex items-center gap-6 body-sm uppercase tracking-wider">
+              <span class="text-on-brand">Content</span>
+              <span>Media</span>
+              <span>Theme</span>
+              <span>Blocks</span>
+            </div>
+            <div class="grid grid-cols-3">
+              <div class="col-span-1 bg-base-muted border-r border-border p-4 flex flex-col gap-2">
+                <div class="bg-panel border border-brand rounded-lg px-3 py-2 body-sm font-medium">Hero</div>
+                <div class="bg-panel border border-border rounded-lg px-3 py-2 body-sm text-fg-muted">Features</div>
+                <div class="bg-panel border border-border rounded-lg px-3 py-2 body-sm text-fg-muted">Content</div>
+                <div class="bg-panel border border-border rounded-lg px-3 py-2 body-sm text-fg-muted">CTA</div>
+              </div>
+              <div class="col-span-2 p-5 flex flex-col gap-4">
+                <div>
+                  <label class="text-fg-alt body-sm uppercase tracking-wider font-medium block mb-1.5" style="font-size: 10px;">Headline</label>
+                  <div class="border border-border rounded-md px-3 py-2 body-sm text-fg">Build once, reuse forever.</div>
+                </div>
+                <div>
+                  <label class="text-fg-alt body-sm uppercase tracking-wider font-medium block mb-1.5" style="font-size: 10px;">Subheadline</label>
+                  <div class="border border-border rounded-md px-3 py-2 body-sm text-fg-muted">Every block works on your next project.</div>
+                </div>
+                <div>
+                  <label class="text-fg-alt body-sm uppercase tracking-wider font-medium block mb-1.5" style="font-size: 10px;">Button</label>
+                  <div class="border border-border rounded-md px-3 py-2 body-sm text-fg">Try it free</div>
+                </div>
+                <div class="bg-brand text-on-brand py-2 rounded-md body-sm font-medium text-center">Save</div>
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

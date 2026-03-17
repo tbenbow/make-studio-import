@@ -1,0 +1,39 @@
+<section class="bg-base py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="heading-lg text-fg">{{Heading}}</h2>
+      <p class="body-lg text-fg-muted mt-4">{{Subheading}}</p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+      <!-- Featured Card (spans 2 cols) -->
+      <div class="md:col-span-2 lg:row-span-2 rounded-2xl border border-border bg-base-muted/30 p-8 flex flex-col">
+        <div class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand mb-4">
+          {{icon [Featured Card].Icon size="20"}}
+        </div>
+        <h3 class="heading-md text-fg mb-2">{{[Featured Card].Title}}</h3>
+        <p class="body-md text-fg-muted mb-6">{{[Featured Card].Description}}</p>
+        <div class="mt-auto rounded-lg overflow-hidden border border-border">
+          <img src="{{[Featured Card].Image}}" alt="{{[Featured Card].Title}}" class="w-full h-auto" />
+        </div>
+      </div>
+
+      <!-- Smaller Cards -->
+      {{#each Cards}}
+      <div class="rounded-2xl border border-border bg-base-muted/30 p-6 flex flex-col">
+        <div class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand mb-4">
+          {{icon Icon size="20"}}
+        </div>
+        <h3 class="heading-sm text-fg mb-2">{{Title}}</h3>
+        <p class="body-sm text-fg-muted">{{Description}}</p>
+      </div>
+      {{/each}}
+
+    </div>
+
+  </div>
+</section>

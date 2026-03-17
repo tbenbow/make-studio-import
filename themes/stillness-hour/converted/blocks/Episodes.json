@@ -1,0 +1,67 @@
+{
+  "description": "Episodes",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Explore"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Recent Episodes"
+    },
+    {
+      "type": "items",
+      "name": "Episodes",
+      "default": [
+        {
+          "title": "The Lighthouse at Dusk",
+          "description": "A slow and steady meditation set beside the sea as evening fades into night.",
+          "link": "#"
+        },
+        {
+          "title": "A Walk Beside the River",
+          "description": "Gentle narration and soft instrumentation guide the listener along calm moonlit water.",
+          "link": "#"
+        },
+        {
+          "title": "The Library After Midnight",
+          "description": "A quiet and reflective sleep story set among shelves, lamps, and stillness.",
+          "link": "#"
+        },
+        {
+          "title": "Drifting Across the Night Sky",
+          "description": "A spacious guided meditation with celestial imagery and floating ambient tones.",
+          "link": "#"
+        },
+        {
+          "title": "Quiet Rain on the Cabin Roof",
+          "description": "A cozy evening soundscape with soft narration and rain in the background.",
+          "link": "#"
+        },
+        {
+          "title": "Breathing Beneath the Stars",
+          "description": "A simple meditation focused on breath, release, and restful presence.",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

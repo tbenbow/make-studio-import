@@ -1,0 +1,23 @@
+{
+  "description": "Logo cloud — 'Trusted by' heading with a row of company logos. Simple, centered credibility section.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Trusted by innovative teams" },
+    {
+      "type": "items",
+      "name": "Logos",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name", "default": "Company" },
+          { "type": "image", "name": "Logo", "default": "https://placehold.co/160x48/1a2a6c/5a6488?text=Logo" }
+        ]
+      },
+      "default": [
+        { "Name": "Vercel", "Logo": "https://placehold.co/140x40/0b1640/8a94b8?text=Vercel" },
+        { "Name": "Stripe", "Logo": "https://placehold.co/140x40/0b1640/8a94b8?text=Stripe" },
+        { "Name": "Notion", "Logo": "https://placehold.co/140x40/0b1640/8a94b8?text=Notion" },
+        { "Name": "Linear", "Logo": "https://placehold.co/140x40/0b1640/8a94b8?text=Linear" },
+        { "Name": "Figma", "Logo": "https://placehold.co/140x40/0b1640/8a94b8?text=Figma" }
+      ]
+    }
+  ]
+}

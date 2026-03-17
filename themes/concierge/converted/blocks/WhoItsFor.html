@@ -1,0 +1,18 @@
+<section class="bg-base border-b border-border">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 py-20 lg:py-28">
+    <p class="body-sm uppercase tracking-[0.18em] text-brand font-medium mb-12">{{label}}</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <div>
+        <div class="heading-md font-normal" style="font-family: 'Playfair Display', serif; line-height: 1.5;">{{{intro}}}</div>
+        <div class="flex flex-wrap gap-2.5 mt-10">
+          {{#each tags}}
+            <span class="border border-border bg-panel px-4 py-1.5 body-sm tracking-[0.06em] text-fg-muted">{{label}}</span>
+          {{/each}}
+        </div>
+      </div>
+      <div class="pt-0 lg:pt-2">
+        <div class="body-md text-fg-muted space-y-6 leading-[1.9]">{{{body}}}</div>
+      </div>
+    </div>
+  </div>
+</section>

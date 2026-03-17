@@ -1,0 +1,64 @@
+{
+  "description": "Three column feature cards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Deploy faster"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Everything you need to deploy your app"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at."
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "cloud-arrow-up",
+          "title": "Push to deploy",
+          "description": "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus.",
+          "link": "#"
+        },
+        {
+          "icon": "lock-simple",
+          "title": "SSL certificates",
+          "description": "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
+          "link": "#"
+        },
+        {
+          "icon": "arrows-clockwise",
+          "title": "Simple queues",
+          "description": "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget.",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

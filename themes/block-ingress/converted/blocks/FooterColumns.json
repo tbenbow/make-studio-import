@@ -1,0 +1,58 @@
+{
+  "description": "Multi-column footer with logo, tagline, 3 link columns, and bottom bar with copyright and social icons.",
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "Acme" },
+    { "type": "textarea", "name": "Tagline", "default": "Build better websites, faster. No code required." },
+    { "type": "text", "name": "Col 1 Title", "default": "Product" },
+    {
+      "type": "items",
+      "name": "Col 1 Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label", "default": "Link" },
+          { "type": "link", "name": "URL", "default": "#" }
+        ]
+      },
+      "default": [
+        { "Label": "Features", "URL": "#" },
+        { "Label": "Pricing", "URL": "#" },
+        { "Label": "Templates", "URL": "#" },
+        { "Label": "Integrations", "URL": "#" }
+      ]
+    },
+    { "type": "text", "name": "Col 2 Title", "default": "Company" },
+    {
+      "type": "items",
+      "name": "Col 2 Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label", "default": "Link" },
+          { "type": "link", "name": "URL", "default": "#" }
+        ]
+      },
+      "default": [
+        { "Label": "About", "URL": "#" },
+        { "Label": "Blog", "URL": "#" },
+        { "Label": "Careers", "URL": "#" },
+        { "Label": "Contact", "URL": "#" }
+      ]
+    },
+    { "type": "text", "name": "Col 3 Title", "default": "Legal" },
+    {
+      "type": "items",
+      "name": "Col 3 Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label", "default": "Link" },
+          { "type": "link", "name": "URL", "default": "#" }
+        ]
+      },
+      "default": [
+        { "Label": "Privacy Policy", "URL": "#" },
+        { "Label": "Terms of Service", "URL": "#" },
+        { "Label": "Cookie Policy", "URL": "#" }
+      ]
+    },
+    { "type": "text", "name": "Copyright", "default": "2026 Acme Inc. All rights reserved." }
+  ]
+}

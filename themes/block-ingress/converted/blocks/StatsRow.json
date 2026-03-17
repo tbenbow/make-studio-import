@@ -1,0 +1,23 @@
+{
+  "description": "Horizontal row of 4 stats with large numbers and labels. Optional brand background.",
+  "fields": [
+    { "type": "toggle", "name": "Brand Background", "default": false },
+    {
+      "type": "items",
+      "name": "Stats",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Value", "default": "100" },
+          { "type": "text", "name": "Label", "default": "Stat label" },
+          { "type": "text", "name": "Suffix", "default": "" }
+        ]
+      },
+      "default": [
+        { "Value": "2,000", "Label": "Active Teams", "Suffix": "+" },
+        { "Value": "99.9", "Label": "Uptime", "Suffix": "%" },
+        { "Value": "4.8", "Label": "Average Rating", "Suffix": "/5" },
+        { "Value": "150", "Label": "Countries", "Suffix": "+" }
+      ]
+    }
+  ]
+}

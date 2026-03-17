@@ -1,0 +1,47 @@
+{
+  "description": "IncentiveTwoColGrid",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "truck",
+          "title": "Free delivery",
+          "description": "Order now and you'll get delivery absolutely free. Well, it's not actually free, we just price it into the products."
+        },
+        {
+          "icon": "shield-check",
+          "title": "10-year warranty",
+          "description": "We have a 10 year warranty with every product that you purchase, whether that's a new pen or organizer."
+        },
+        {
+          "icon": "arrows-left-right",
+          "title": "Exchanges",
+          "description": "We understand that when your product arrives you might not particularly like it, or you ordered the wrong thing."
+        },
+        {
+          "icon": "globe-hemisphere-west",
+          "title": "For the planet",
+          "description": "Like you, we love the planet, and so we've pledged 1% of all sales to the preservation of the natural environment."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

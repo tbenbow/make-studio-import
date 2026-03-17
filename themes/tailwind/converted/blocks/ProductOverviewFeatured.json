@@ -1,0 +1,63 @@
+{
+  "description": "ProductOverviewFeatured",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "text",
+      "name": "Link Text",
+      "default": "Browse all categories"
+    },
+    {
+      "type": "text",
+      "name": "Link URL"
+    },
+    {
+      "type": "items",
+      "name": "Categories",
+      "default": [
+        {
+          "image": "https://placehold.co/800x800/374151/e5e7eb?text=Featured",
+          "name": "New Arrivals",
+          "subtitle": "Shop now",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/600x300/374151/e5e7eb?text=Category+1",
+          "name": "Accessories",
+          "subtitle": "Shop now",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/600x300/374151/e5e7eb?text=Category+2",
+          "name": "Workspace",
+          "subtitle": "Shop now",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Subtitle"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

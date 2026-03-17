@@ -1,0 +1,25 @@
+{
+  "layouts": [
+    {
+      "name": "Default",
+      "headerBlocks": ["Navbar"],
+      "footerBlocks": ["Footer"],
+      "isDefault": true
+    }
+  ],
+  "pages": [
+    {
+      "name": "Home",
+      "slug": "/",
+      "layout": "Default",
+      "blocks": [
+        "Hero",
+        "FeaturedEpisode",
+        "About",
+        "Episodes",
+        "Subscribe",
+        "ListenEverywhere"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "description": "Subscribe",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Stay Connected"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Receive new meditation episodes and occasional reflections from Allen. Perfect for listeners who want to make The Stillness Hour part of their nightly routine.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Placeholder",
+      "default": "Email address"
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Subscribe"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<section class="bg-base py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      {{#each testimonials}}
+        <div class="flex flex-col {{#if @first}}pb-10 sm:pb-16 lg:pr-8 lg:pb-0 xl:pr-20{{else}}border-t border-border pt-10 sm:pt-16 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8 xl:pl-20{{/if}}">
+          {{#if logo}}
+            <img src="{{logo}}" alt="" class="h-12 self-start">
+          {{/if}}
+          <figure class="mt-10 flex flex-auto flex-col justify-between">
+            <blockquote class="body-lg text-fg">
+              <p>"{{quote}}"</p>
+            </blockquote>
+            <figcaption class="mt-10 flex items-center gap-x-6">
+              {{#if avatar}}
+                <img src="{{avatar}}" alt="{{name}}" class="size-14 rounded-full">
+              {{/if}}
+              <div class="body-md">
+                <div class="font-semibold text-fg">{{name}}</div>
+                <div class="mt-1 text-fg-muted">{{role}}</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

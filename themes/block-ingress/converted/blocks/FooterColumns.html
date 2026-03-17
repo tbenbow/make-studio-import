@@ -1,0 +1,59 @@
+<footer class="bg-base-muted/20 border-t border-border">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
+
+    <div class="grid lg:grid-cols-5 gap-12 lg:gap-8">
+
+      <!-- Brand Column -->
+      <div class="lg:col-span-2">
+        <span class="heading-md text-fg">{{[Logo Text]}}</span>
+        <p class="body-md text-fg-muted mt-4 max-w-sm">{{Tagline}}</p>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="text-fg-alt hover:text-fg transition-colors">{{icon "x-logo" size="20"}}</a>
+          <a href="#" class="text-fg-alt hover:text-fg transition-colors">{{icon "github-logo" size="20"}}</a>
+          <a href="#" class="text-fg-alt hover:text-fg transition-colors">{{icon "linkedin-logo" size="20"}}</a>
+        </div>
+      </div>
+
+      <!-- Link Column 1 -->
+      <div>
+        <h4 class="heading-xs text-fg mb-4">{{[Col 1 Title]}}</h4>
+        <ul class="space-y-3 list-none">
+          {{#each [Col 1 Links]}}
+          <li><a href="{{URL}}" class="body-sm text-fg-muted hover:text-fg transition-colors">{{Label}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <!-- Link Column 2 -->
+      <div>
+        <h4 class="heading-xs text-fg mb-4">{{[Col 2 Title]}}</h4>
+        <ul class="space-y-3 list-none">
+          {{#each [Col 2 Links]}}
+          <li><a href="{{URL}}" class="body-sm text-fg-muted hover:text-fg transition-colors">{{Label}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <!-- Link Column 3 -->
+      <div>
+        <h4 class="heading-xs text-fg mb-4">{{[Col 3 Title]}}</h4>
+        <ul class="space-y-3 list-none">
+          {{#each [Col 3 Links]}}
+          <li><a href="{{URL}}" class="body-sm text-fg-muted hover:text-fg transition-colors">{{Label}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="body-sm text-fg-alt">&copy; {{Copyright}}</p>
+    </div>
+  </div>
+</footer>

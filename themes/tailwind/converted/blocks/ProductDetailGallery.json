@@ -1,0 +1,85 @@
+{
+  "description": "ProductDetailGallery",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Basic Tee"
+    },
+    {
+      "type": "text",
+      "name": "Price",
+      "default": "$35"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Details"
+    },
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        {
+          "src": "https://placehold.co/800x800/374151/e5e7eb?text=Main+Image",
+          "alt": "Product main view"
+        },
+        {
+          "src": "https://placehold.co/400x400/374151/e5e7eb?text=Detail+1",
+          "alt": "Product detail 1"
+        },
+        {
+          "src": "https://placehold.co/400x400/374151/e5e7eb?text=Detail+2",
+          "alt": "Product detail 2"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Src"
+          },
+          {
+            "type": "text",
+            "name": "Alt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "text": "Add to cart",
+          "style": "primary",
+          "size": "lg"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Text"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "text",
+            "name": "Style"
+          },
+          {
+            "type": "text",
+            "name": "Size"
+          }
+        ]
+      }
+    }
+  ]
+}

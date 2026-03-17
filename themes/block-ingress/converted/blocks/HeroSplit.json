@@ -1,0 +1,29 @@
+{
+  "description": "Split hero — headline and CTA on left, large image on right. Classic SaaS layout.",
+  "fields": [
+    { "type": "toggle", "name": "Show Badge", "default": true },
+    { "type": "text", "name": "Badge", "default": "New Release" },
+    { "type": "text", "name": "Heading", "default": "Ship Faster With the Tools You Already Love" },
+    { "type": "textarea", "name": "Subheading", "default": "Streamline your workflow with powerful integrations, real-time collaboration, and beautiful dashboards that keep your whole team aligned." },
+    { "type": "text", "name": "Primary Button Label", "default": "Start Free Trial" },
+    { "type": "link", "name": "Primary Button Link", "default": "#" },
+    { "type": "text", "name": "Secondary Button Label", "default": "Book a Demo" },
+    { "type": "link", "name": "Secondary Button Link", "default": "#" },
+    { "type": "image", "name": "Image", "default": "https://placehold.co/720x520/1a2a6c/8a9ae8?text=Product+Screenshot" },
+    {
+      "type": "items",
+      "name": "Highlights",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Icon", "default": "check-circle" },
+          { "type": "text", "name": "Text", "default": "Feature highlight" }
+        ]
+      },
+      "default": [
+        { "Icon": "check-circle", "Text": "Free 14-day trial" },
+        { "Icon": "check-circle", "Text": "No credit card required" },
+        { "Icon": "check-circle", "Text": "Cancel anytime" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "description": "TeamCards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Our team"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "We're a dynamic group of individuals who are passionate about what we do and dedicated to delivering the best results for our clients."
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        {
+          "photo": "https://placehold.co/1024x683/374151/e5e7eb?text=Lindsay+W",
+          "name": "Lindsay Walton",
+          "role": "Front-end Developer",
+          "x-url": "#",
+          "linkedin-url": "#"
+        },
+        {
+          "photo": "https://placehold.co/1024x683/374151/e5e7eb?text=Courtney+H",
+          "name": "Courtney Henry",
+          "role": "Designer",
+          "x-url": "#",
+          "linkedin-url": "#"
+        },
+        {
+          "photo": "https://placehold.co/1024x683/374151/e5e7eb?text=Tom+C",
+          "name": "Tom Cook",
+          "role": "Director of Product",
+          "x-url": "#",
+          "linkedin-url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Photo"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          },
+          {
+            "type": "text",
+            "name": "X Url"
+          },
+          {
+            "type": "text",
+            "name": "Linkedin Url"
+          }
+        ]
+      }
+    }
+  ]
+}

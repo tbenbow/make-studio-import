@@ -1,0 +1,65 @@
+{
+  "description": "TestimonialGrid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Testimonials"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "We have worked with thousands of amazing people"
+    },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        {
+          "quote": "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=LA",
+          "name": "Leslie Alexander",
+          "handle": "@lesliealexander"
+        },
+        {
+          "quote": "Aut reprehenderit voluptatem eum asperiores beatae id. Iure molestiae ipsam ut officia rem nulla blanditiis.",
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=LW",
+          "name": "Lindsay Walton",
+          "handle": "@lindsaywalton"
+        },
+        {
+          "quote": "Voluptas quos itaque ipsam in voluptatem est. Iste eos blanditiis repudiandae. Earum deserunt enim molestiae ipsum.",
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=TC",
+          "name": "Tom Cook",
+          "handle": "@tomcook"
+        },
+        {
+          "quote": "Quia dolorem qui et. Atque quo aliquid sit eos officia. Dolores similique laboriosam quaerat cupiditate.",
+          "avatar": "https://placehold.co/256x256/374151/e5e7eb?text=MF",
+          "name": "Michael Foster",
+          "handle": "@michaelfoster"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "textarea",
+            "name": "Quote"
+          },
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Handle"
+          }
+        ]
+      }
+    }
+  ]
+}

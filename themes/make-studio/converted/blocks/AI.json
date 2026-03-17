@@ -1,0 +1,65 @@
+{
+  "description": "AI",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "AI-Native"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Screenshot in,<br>working block out.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>AI-native by architecture. Not a chatbot bolted on -- the same API developers use is the API AI uses.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Levels",
+      "default": [
+        {
+          "number": "01",
+          "title": "Block generation",
+          "body": "Screenshot or prompt in, working CMS block out. Layout, template, theme styles, and editing sidebar -- all generated in one step."
+        },
+        {
+          "number": "02",
+          "title": "Page composition",
+          "body": "AI composes full pages from your block library and writes fitting copy. Real pages from reusable components. The more blocks you build, the faster this gets."
+        },
+        {
+          "number": "03",
+          "title": "API-driven workflows",
+          "body": "The entire app is a REST API. Claude Code builds, iterates, and deploys programmatically. Scoped tokens keep it safe."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Number"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Code"
+          }
+        ]
+      }
+    }
+  ]
+}

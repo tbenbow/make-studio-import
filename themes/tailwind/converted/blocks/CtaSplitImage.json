@@ -1,0 +1,73 @@
+{
+  "description": "Split CTA with image",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Award winning support"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "We're here to help"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/960x640/4f46e5/ffffff?text=Support"
+    },
+    {
+      "type": "text",
+      "name": "Image Alt"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Visit the help center",
+          "link": "#",
+          "style": "primary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

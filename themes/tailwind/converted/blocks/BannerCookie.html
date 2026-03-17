@@ -1,0 +1,9 @@
+<div x-data="{ show: true }" x-show="show">
+  <div class="fixed inset-x-0 bottom-0 flex flex-col justify-between gap-x-8 gap-y-4 border-t border-border bg-base-alt p-6 md:flex-row md:items-center lg:px-8 z-50">
+    <p class="body-sm text-fg">{{{message}}}</p>
+    <div class="flex flex-none items-center gap-x-5">
+      <button type="button" @click="show = false" class="rounded-md bg-panel px-3 py-2 body-sm font-semibold text-fg shadow-xs border border-border hover:opacity-80">{{accept-text}}</button>
+      <button type="button" @click="show = false" class="body-sm font-semibold text-fg-muted hover:text-fg">{{reject-text}}</button>
+    </div>
+  </div>
+</div>

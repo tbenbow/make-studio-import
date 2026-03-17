@@ -1,0 +1,35 @@
+{
+  "description": "IncentiveBanner",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "truck",
+          "title": "Free, contactless delivery"
+        },
+        {
+          "icon": "seal-check",
+          "title": "No questions asked returns"
+        },
+        {
+          "icon": "calendar",
+          "title": "2-year warranty"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          }
+        ]
+      }
+    }
+  ]
+}

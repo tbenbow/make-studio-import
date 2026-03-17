@@ -1,0 +1,84 @@
+{
+  "description": "CTA with image gallery",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Our people"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Quasi est quaerat. Sit molestiae et. Provident ad dolorem occaecati eos iste. Soluta rerum quidem minus ut molestiae velit error quod."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo."
+    },
+    {
+      "type": "image",
+      "name": "Image 1",
+      "default": "https://placehold.co/1152x820/1f2937/6366f1?text=Photo+1"
+    },
+    {
+      "type": "image",
+      "name": "Image 2",
+      "default": "https://placehold.co/768x604/1f2937/6366f1?text=Photo+2"
+    },
+    {
+      "type": "image",
+      "name": "Image 3",
+      "default": "https://placehold.co/1152x842/1f2937/6366f1?text=Photo+3"
+    },
+    {
+      "type": "image",
+      "name": "Image 4",
+      "default": "https://placehold.co/768x604/1f2937/6366f1?text=Photo+4"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Join our team",
+          "link": "#",
+          "style": "primary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

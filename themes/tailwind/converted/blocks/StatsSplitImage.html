@@ -1,0 +1,24 @@
+<section class="relative bg-base">
+  <img src="{{image}}" alt="" class="h-56 w-full bg-base-alt object-cover lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-1/2">
+  <div class="mx-auto grid max-w-7xl lg:grid-cols-2">
+    <div class="px-6 pt-16 pb-24 sm:pt-20 sm:pb-32 lg:col-start-2 lg:px-8 lg:pt-32">
+      <div class="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
+        {{#if eyebrow}}
+          <h2 class="body-md font-semibold text-brand">{{eyebrow}}</h2>
+        {{/if}}
+        <p class="{{#if eyebrow}}mt-2 {{/if}}heading-lg text-pretty text-fg">{{heading}}</p>
+        {{#if description}}
+          <p class="mt-6 body-lg text-fg-muted">{{description}}</p>
+        {{/if}}
+        <dl class="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
+          {{#each stats}}
+            <div class="flex flex-col gap-y-3 border-l border-border pl-6">
+              <dt class="body-sm text-fg-muted">{{label}}</dt>
+              <dd class="order-first heading-md tracking-tight text-fg">{{value}}</dd>
+            </div>
+          {{/each}}
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+{
+  "description": "HeaderStats",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Work with us"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+    },
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://placehold.co/2830x1500/1f2937/6366f1?text=Background"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Open roles",
+          "url": "#"
+        },
+        {
+          "label": "Internship program",
+          "url": "#"
+        },
+        {
+          "label": "Our values",
+          "url": "#"
+        },
+        {
+          "label": "Meet our leadership",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "12",
+          "label": "Offices worldwide"
+        },
+        {
+          "value": "300+",
+          "label": "Full-time colleagues"
+        },
+        {
+          "value": "40",
+          "label": "Hours per week"
+        },
+        {
+          "value": "Unlimited",
+          "label": "Paid time off"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

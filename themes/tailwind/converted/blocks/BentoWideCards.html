@@ -1,0 +1,58 @@
+<section class="bg-base py-24 sm:py-32">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    {{#if eyebrow}}
+      <p class="body-sm font-semibold text-brand">{{eyebrow}}</p>
+    {{/if}}
+    <h2 class="mt-2 max-w-lg heading-lg text-fg text-pretty">{{headline}}</h2>
+    <div class="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
+      <div class="flex p-px lg:col-span-4">
+        <div class="w-full overflow-hidden rounded-lg bg-panel outline outline-fg/15 max-lg:rounded-t-4xl lg:rounded-tl-4xl">
+          {{#if card-1.image}}
+            <img src="{{card-1.image}}" alt="" class="h-80 w-full object-cover object-left">
+          {{/if}}
+          <div class="p-10">
+            <p class="body-sm font-semibold text-fg-alt">{{card-1.label}}</p>
+            <p class="mt-2 heading-xs text-fg">{{card-1.title}}</p>
+            <p class="mt-2 max-w-lg body-sm text-fg-alt">{{card-1.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex p-px lg:col-span-2">
+        <div class="w-full overflow-hidden rounded-lg bg-panel outline outline-fg/15 lg:rounded-tr-4xl">
+          {{#if card-2.image}}
+            <img src="{{card-2.image}}" alt="" class="h-80 w-full object-cover">
+          {{/if}}
+          <div class="p-10">
+            <p class="body-sm font-semibold text-fg-alt">{{card-2.label}}</p>
+            <p class="mt-2 heading-xs text-fg">{{card-2.title}}</p>
+            <p class="mt-2 max-w-lg body-sm text-fg-alt">{{card-2.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex p-px lg:col-span-2">
+        <div class="w-full overflow-hidden rounded-lg bg-panel outline outline-fg/15 lg:rounded-bl-4xl">
+          {{#if card-3.image}}
+            <img src="{{card-3.image}}" alt="" class="h-80 w-full object-cover">
+          {{/if}}
+          <div class="p-10">
+            <p class="body-sm font-semibold text-fg-alt">{{card-3.label}}</p>
+            <p class="mt-2 heading-xs text-fg">{{card-3.title}}</p>
+            <p class="mt-2 max-w-lg body-sm text-fg-alt">{{card-3.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex p-px lg:col-span-4">
+        <div class="w-full overflow-hidden rounded-lg bg-panel outline outline-fg/15 max-lg:rounded-b-4xl lg:rounded-br-4xl">
+          {{#if card-4.image}}
+            <img src="{{card-4.image}}" alt="" class="h-80 w-full object-cover object-left">
+          {{/if}}
+          <div class="p-10">
+            <p class="body-sm font-semibold text-fg-alt">{{card-4.label}}</p>
+            <p class="mt-2 heading-xs text-fg">{{card-4.title}}</p>
+            <p class="mt-2 max-w-lg body-sm text-fg-alt">{{card-4.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

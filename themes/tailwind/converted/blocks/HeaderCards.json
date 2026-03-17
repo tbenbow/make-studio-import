@@ -1,0 +1,57 @@
+{
+  "description": "HeaderCards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Support center"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat."
+    },
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://placehold.co/2830x1500/1f2937/6366f1?text=Background"
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "default": [
+        {
+          "icon": "phone",
+          "title": "Sales",
+          "description": "Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur."
+        },
+        {
+          "icon": "gear",
+          "title": "Technical Support",
+          "description": "Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam."
+        },
+        {
+          "icon": "newspaper",
+          "title": "Media Inquiries",
+          "description": "Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "description": "ReviewList",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Recent reviews"
+    },
+    {
+      "type": "items",
+      "name": "Reviews",
+      "default": [
+        {
+          "rating": "5",
+          "title": "Can't say enough good things",
+          "body": "I was really pleased with the overall shopping experience. The product quality is amazing.",
+          "author": "Risako M",
+          "date": "May 16, 2021"
+        },
+        {
+          "rating": "5",
+          "title": "Very comfy and looks the part",
+          "body": "After a quick chat with customer support, I had a good feeling about this and ordered three.",
+          "author": "Jackie H",
+          "date": "April 6, 2021"
+        },
+        {
+          "rating": "4",
+          "title": "The last shirts I may ever need",
+          "body": "I bought two of those comfy cotton shirts, and let me tell you: they're amazing!",
+          "author": "Laura G",
+          "date": "February 24, 2021"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Rating"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "Author"
+          },
+          {
+            "type": "text",
+            "name": "Date"
+          }
+        ]
+      }
+    }
+  ]
+}

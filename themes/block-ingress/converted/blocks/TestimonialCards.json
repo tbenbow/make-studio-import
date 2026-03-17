@@ -1,0 +1,39 @@
+{
+  "description": "3-column testimonial cards with quote, author name, role, and avatar.",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "Loved by Teams Everywhere" },
+    { "type": "textarea", "name": "Subheading", "default": "Don't just take our word for it — hear from some of our customers." },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "config": {
+        "fields": [
+          { "type": "textarea", "name": "Quote", "default": "This product changed everything for us." },
+          { "type": "text", "name": "Name", "default": "Alex Johnson" },
+          { "type": "text", "name": "Role", "default": "CEO, Acme Inc." },
+          { "type": "image", "name": "Avatar", "default": "https://placehold.co/48x48/1a2a6c/8a9ae8?text=AJ" }
+        ]
+      },
+      "default": [
+        {
+          "Quote": "We rebuilt our entire marketing site in a weekend. The templates are gorgeous and the editor is incredibly intuitive. Our conversion rate jumped 40%.",
+          "Name": "Sarah Chen",
+          "Role": "Head of Marketing, Flowbase",
+          "Avatar": "https://placehold.co/48x48/2845c4/ffffff?text=SC"
+        },
+        {
+          "Quote": "As a solo founder, I needed something fast and professional. This delivered both. I went from idea to live site in under three hours.",
+          "Name": "Marcus Rivera",
+          "Role": "Founder, Launchpad",
+          "Avatar": "https://placehold.co/48x48/2845c4/ffffff?text=MR"
+        },
+        {
+          "Quote": "The collaboration features are what sold us. Our design and content teams work together seamlessly now. No more handoff headaches.",
+          "Name": "Emily Park",
+          "Role": "Creative Director, Studio Nine",
+          "Avatar": "https://placehold.co/48x48/2845c4/ffffff?text=EP"
+        }
+      ]
+    }
+  ]
+}

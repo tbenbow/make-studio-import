@@ -1,0 +1,24 @@
+<section class="py-20 lg:py-32 bg-base-muted border-t border-border">
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-xl mb-16">
+      {{#if eyebrow}}
+        <p class="body-sm font-medium text-brand mb-3">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg mb-6" style="font-style: italic;">{{{headline}}}</h2>
+      {{#if description}}
+        <div class="body-md text-fg-muted">{{{description}}}</div>
+      {{/if}}
+    </div>
+
+    {{#if (length features)}}
+      <div class="grid md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden">
+        {{#each features}}
+          <div class="bg-panel p-8">
+            <h3 class="heading-sm text-fg mb-2">{{title}}</h3>
+            <p class="body-sm text-fg-muted">{{body}}</p>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

@@ -1,0 +1,76 @@
+{
+  "description": "Build",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Build"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "<p>Blocks are the<br>building blocks.</p>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Each block combines a Handlebars template, Tailwind styling, and a set of fields. The fields become the editing interface your clients see.</p><p>It's just HTML. If you know HTML, you're 90% there. Alpine.js and HTMX are included but optional.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Pillars",
+      "default": [
+        {
+          "number": "01",
+          "title": "Template",
+          "body": "Handlebars + Tailwind. Semantic classes that inherit the theme. No proprietary syntax to learn."
+        },
+        {
+          "number": "02",
+          "title": "Fields",
+          "body": "Text, images, links, repeaters. Fields define what's editable -- and what's protected."
+        },
+        {
+          "number": "03",
+          "title": "Theme",
+          "body": "10 colors, 8 type tiers, 4 button variants. Change the theme, every block adapts instantly."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Number"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Body"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Theme Headline",
+      "default": "The theme is the superpower."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Theme Description",
+      "default": "<p>Semantic tokens make blocks portable across projects. Build a block library over time -- every new project starts with everything you've already built.</p><p>Not too many tokens, not too few. Carefully curated so designs stay consistent without being restrictive.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Theme Image"
+    },
+    {
+      "type": "text",
+      "name": "Theme Image Alt",
+      "default": "Theme color tokens"
+    }
+  ]
+}

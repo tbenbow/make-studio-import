@@ -1,0 +1,47 @@
+{
+  "description": "IncentiveFourCol",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "truck",
+          "title": "Free Shipping",
+          "description": "It's not actually free we just price it into the products. Someone's paying for it, and it's not us."
+        },
+        {
+          "icon": "chat-circle-dots",
+          "title": "24/7 Customer Support",
+          "description": "Our AI chat widget is powered by a naive series of if/else statements. Guaranteed to irritate."
+        },
+        {
+          "icon": "shopping-cart",
+          "title": "Fast Shopping Cart",
+          "description": "Look how fast that cart is going. What does this mean for the actual experience? I don't know."
+        },
+        {
+          "icon": "gift",
+          "title": "Gift Cards",
+          "description": "Buy them for your friends, especially if they don't like our store. Free money for us, it's great."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

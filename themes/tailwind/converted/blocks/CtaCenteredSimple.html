@@ -1,0 +1,15 @@
+<section class="bg-base">
+  <div class="px-6 py-24 sm:py-32 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="heading-lg text-fg text-balance">{{headline}}</h2>
+      {{#if subheadline}}
+        <p class="mx-auto mt-6 max-w-xl body-md text-fg-muted text-pretty">{{subheadline}}</p>
+      {{/if}}
+      <div class="mt-10 flex items-center justify-center gap-4">
+        {{#each buttons}}
+          {{> Button}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

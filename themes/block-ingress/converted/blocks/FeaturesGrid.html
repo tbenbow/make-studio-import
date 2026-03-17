@@ -1,0 +1,24 @@
+<section class="bg-base py-20 lg:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="heading-lg text-fg">{{Heading}}</h2>
+      <p class="body-lg text-fg-muted mt-4">{{Subheading}}</p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{#each Features}}
+      <div class="p-6 rounded-xl border border-border bg-base-muted/30 hover:bg-base-muted/50 transition-colors">
+        <div class="w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center text-brand mb-4">
+          {{icon Icon size="20"}}
+        </div>
+        <h3 class="heading-sm text-fg mb-2">{{Title}}</h3>
+        <p class="body-md text-fg-muted">{{Description}}</p>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</section>
