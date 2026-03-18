@@ -1,0 +1,101 @@
+{
+  "empty": {
+    "label": "Empty",
+    "description": "Blank site with reference blocks for building from scratch",
+    "buildPage": false,
+    "slots": [
+      { "role": "hero", "blockName": "HeroSplitImage", "blockTag": "hero" },
+      { "role": "features", "blockName": "FeatureSimpleGrid", "blockTag": "features" },
+      { "role": "testimonials", "blockName": "TestimonialCentered", "blockTag": "testimonials" },
+      { "role": "cta", "blockName": "CtaBrandBg", "blockTag": "cta" },
+      { "role": "faq", "blockName": "FaqAccordion", "blockTag": "faq" }
+    ],
+    "extras": {}
+  },
+
+  "service-provider": {
+    "label": "Service Provider",
+    "description": "Businesses that offer services — consultants, agencies, contractors, freelancers",
+    "buildPage": true,
+    "slots": [
+      { "role": "hero", "blockName": null, "blockTag": "hero" },
+      { "role": "services", "blockName": "FeatureThreeColIcons", "blockTag": "features" },
+      { "role": "social-proof", "blockName": "TestimonialCentered", "blockTag": "testimonials" },
+      { "role": "cta", "blockName": "CtaBrandBg", "blockTag": "cta" }
+    ],
+    "extras": {
+      "gallery": { "role": "work-gallery", "blockName": "ProductListCards", "blockTag": "gallery" },
+      "contact-form": { "role": "contact", "blockName": "CtaCardChecklist", "blockTag": "cta" },
+      "pricing": { "role": "pricing", "blockName": "FeatureChecklistGrid", "blockTag": "features" },
+      "team": { "role": "team", "blockName": "TeamCards", "blockTag": "team" },
+      "faq": { "role": "faq", "blockName": "FaqAccordion", "blockTag": "faq" },
+      "location": { "role": "location", "blockName": "CtaSplitImage", "blockTag": "cta" }
+    }
+  },
+
+  "portfolio": {
+    "label": "Portfolio",
+    "description": "Creatives, photographers, designers — work-first sites that showcase projects",
+    "buildPage": true,
+    "slots": [
+      { "role": "hero", "blockName": null, "blockTag": "hero" },
+      { "role": "work", "blockName": "ProductFeatureAlternating", "blockTag": "gallery" },
+      { "role": "about", "blockName": "FeatureSplitLeft", "blockTag": "features" },
+      { "role": "cta", "blockName": "CtaCenteredSimple", "blockTag": "cta" }
+    ],
+    "extras": {
+      "gallery": { "role": "gallery", "blockName": "ProductListTall", "blockTag": "gallery" },
+      "testimonials": { "role": "testimonials", "blockName": "TestimonialSideImage", "blockTag": "testimonials" },
+      "pricing": { "role": "pricing", "blockName": "FeatureChecklistGrid", "blockTag": "features" },
+      "faq": { "role": "faq", "blockName": "FaqSidebar", "blockTag": "faq" },
+      "contact-form": { "role": "contact", "blockName": "CtaCardChecklist", "blockTag": "cta" },
+      "blog": { "role": "blog", "blockName": "ProductOverviewGallery", "blockTag": "gallery" }
+    }
+  },
+
+  "local-business": {
+    "label": "Local Business",
+    "description": "Restaurants, shops, local services — location-focused with hours, menus, and directions",
+    "buildPage": true,
+    "slots": [
+      { "role": "hero", "blockName": null, "blockTag": "hero" },
+      { "role": "features", "blockName": "IncentiveThreeCol", "blockTag": "features" },
+      { "role": "social-proof", "blockName": "TestimonialCentered", "blockTag": "testimonials" },
+      { "role": "cta", "blockName": "CtaBrandBg", "blockTag": "cta" }
+    ],
+    "extras": {
+      "gallery": { "role": "gallery", "blockName": "ProductOverviewCollections", "blockTag": "gallery" },
+      "menu": { "role": "menu", "blockName": "ProductListCards", "blockTag": "gallery" },
+      "hours": { "role": "hours", "blockName": "FeatureSimpleGrid", "blockTag": "features" },
+      "team": { "role": "team", "blockName": "TeamCompact", "blockTag": "team" },
+      "booking": { "role": "booking", "blockName": "CtaSplitImage", "blockTag": "cta" },
+      "contact-form": { "role": "contact", "blockName": "CtaCardChecklist", "blockTag": "cta" },
+      "faq": { "role": "faq", "blockName": "FaqAccordion", "blockTag": "faq" },
+      "pricing": { "role": "pricing", "blockName": "FeatureCenteredFour", "blockTag": "features" },
+      "location": { "role": "location", "blockName": "CtaSplitImage", "blockTag": "cta" }
+    }
+  },
+
+  "about": {
+    "label": "About",
+    "description": "About page — company story, team, values",
+    "buildPage": true,
+    "slots": [
+      { "role": "header", "blockName": "HeaderSimple", "blockTag": "hero" },
+      { "role": "story", "blockName": "FeatureSplitLeft", "blockTag": "features" },
+      { "role": "team", "blockName": "TeamCards", "blockTag": "team" }
+    ],
+    "extras": {}
+  },
+
+  "contact": {
+    "label": "Contact",
+    "description": "Contact page — form and contact info",
+    "buildPage": true,
+    "slots": [
+      { "role": "header", "blockName": "HeaderSimple", "blockTag": "hero" },
+      { "role": "contact", "blockName": "CtaCardChecklist", "blockTag": "cta" }
+    ],
+    "extras": {}
+  }
+}

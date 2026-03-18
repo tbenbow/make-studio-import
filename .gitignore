@@ -35,6 +35,9 @@ factory/
 # Backup themes
 themes/tailwind-backup/
 
+# Block catalog working artifacts (screenshots, raw API dumps)
+data/catalog/
+
 # Generated mesh gradient experiments
 themes/block-ingress/converted/blocks/HeroMeshGen_*
 themes/block-ingress/converted/blocks/HeroMesh[A-Z]*

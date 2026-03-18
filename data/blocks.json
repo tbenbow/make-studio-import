@@ -1,0 +1,709 @@
+[
+  {
+    "name": "HeroBgImage",
+    "blockCategory": "hero",
+    "description": "Centered hero with bg image",
+    "aiDescription": "Full-width hero with a background image covering the entire section. Content is centered with max-w-2xl container. Fields: background image, optional badge pill, headline, subheadline, and repeatable buttons. The badge appears as a rounded pill with ring border. Best for dramatic visual impact where the background image sets the mood — restaurants, travel, real estate, events. Text overlays the image directly.",
+    "tags": ["centered", "background-image", "dramatic", "full-width"]
+  },
+  {
+    "name": "HeroCentered",
+    "blockCategory": "hero",
+    "description": "Minimal centered text hero",
+    "aiDescription": "Clean centered hero with no images at all. Content constrained to max-w-2xl. Fields: optional badge pill, headline, subheadline, and repeatable buttons. The simplest hero variant — pure typography focus. Best for SaaS landing pages, apps, or any product where the copy is the star. Works well when paired with a separate screenshot or feature section below.",
+    "tags": ["centered", "minimal", "text-only", "clean"]
+  },
+  {
+    "name": "HeroCenteredScreenshot",
+    "blockCategory": "hero",
+    "description": "Centered hero with app screenshot",
+    "aiDescription": "Centered text hero with a large product screenshot below the content area. The screenshot sits in a rounded container with shadow and ring border, creating a browser/app window effect. Fields: headline, subheadline, repeatable buttons, screenshot image, and screenshot alt text. Best for SaaS products, dashboards, and software tools where showing the UI builds credibility.",
+    "tags": ["centered", "screenshot", "saas", "product"]
+  },
+  {
+    "name": "HeroImageGallery",
+    "blockCategory": "hero",
+    "description": "Split hero with 5-image gallery",
+    "aiDescription": "Split layout with text on the left and a staggered 5-image gallery on the right in three columns with varying vertical offsets. Images display at 2:3 aspect ratio with rounded corners and shadows. Fields: headline, subheadline, repeatable buttons, and gallery items (each with an image). Best for creative agencies, portfolios, real estate, or any brand that needs to showcase multiple visuals immediately.",
+    "tags": ["split", "gallery", "creative", "multi-image"]
+  },
+  {
+    "name": "HeroSplitDiagonal",
+    "blockCategory": "hero",
+    "description": "Split hero with diagonal divider",
+    "aiDescription": "Two-column hero where a diagonal SVG polygon creates an angled divider between the text area and the image. Text is on the left with max-w-xl, image fills the right half absolutely positioned. Fields: optional badge pill, headline, subheadline, image, and repeatable buttons. The diagonal line adds visual dynamism. Best for modern startups, tech companies, or brands wanting an energetic, non-boxy layout.",
+    "tags": ["split", "diagonal", "dynamic", "modern"]
+  },
+  {
+    "name": "HeroSplitImage",
+    "blockCategory": "hero",
+    "description": "Split hero with side image",
+    "aiDescription": "Classic two-column split using a 12-column grid (7/5 ratio). Text on the left, full-height image on the right that extends to the edge. Fields: optional badge pill, headline, subheadline, image, and repeatable buttons. The image uses aspect-[3/2] on mobile and fills the column height on desktop. Best for general-purpose landing pages, corporate sites, and any layout needing a clean text-image balance.",
+    "tags": ["split", "classic", "versatile", "grid"]
+  },
+  {
+    "name": "HeroSplitPhone",
+    "blockCategory": "hero",
+    "description": "Split hero with phone mockup",
+    "aiDescription": "Split layout with text on the left and a phone device mockup (SVG frame) on the right displaying a screenshot. Includes a decorative grid pattern background. Fields: badge label, badge link text, badge link URL, headline, subheadline, phone screenshot image, and repeatable buttons. The badge is an interactive pill with a label, separator, and linked text. Best for mobile apps, app stores, and fintech products.",
+    "tags": ["split", "phone-mockup", "mobile-app", "tech"]
+  },
+  {
+    "name": "HeroSplitScreenshot",
+    "blockCategory": "hero",
+    "description": "Split hero with wide screenshot",
+    "aiDescription": "Split layout with text on the left and an oversized product screenshot on the right that extends beyond the container (w-[76rem]). The screenshot has rounded corners, shadow, and ring border. Fields: badge as a brand-colored pill, headline, subheadline, screenshot image, screenshot alt text, and repeatable buttons. Best for desktop SaaS products, admin panels, and tools where a wide UI screenshot sells the product.",
+    "tags": ["split", "screenshot", "saas", "wide-image"]
+  },
+  {
+    "name": "HeroSplitSkewed",
+    "blockCategory": "hero",
+    "description": "Split hero with skewed background",
+    "aiDescription": "Two-column grid layout with a dramatic skewed decorative background element (30deg skew with shadow and gradient). Text on the left, rounded image on the right at 6:5 aspect ratio. The section has a brand gradient overlay at the top. Fields: headline, subheadline, image, and repeatable buttons. Best for startups and brands wanting visual flair without a full background image — the skewed element adds depth and energy.",
+    "tags": ["split", "skewed", "gradient", "decorative"]
+  },
+  {
+    "name": "HeaderBgImage",
+    "blockCategory": "hero",
+    "description": "Page header with bg image",
+    "aiDescription": "Page-level header section with a full-cover background image. Supports both centered and left-aligned layouts via an alignment select field. Fields: heading, description, background image, and alignment selector. Simpler than full heroes — no buttons or badges. Best for interior page headers, about pages, category pages, and blog archive headers where you need a visual header but not a full CTA hero.",
+    "tags": ["header", "background-image", "page-header", "configurable"]
+  },
+  {
+    "name": "HeaderCards",
+    "blockCategory": "hero",
+    "description": "Page header with feature cards",
+    "aiDescription": "Page header with a background image and a 3-column grid of feature cards below the heading. Cards have translucent panel backgrounds with backdrop blur, each containing an icon, title, and description. Fields: heading, description, background image, and repeatable cards (icon, title, description). Best for company pages, about sections, or service overviews where you want to highlight key points immediately.",
+    "tags": ["header", "cards", "feature-highlights", "background-image"]
+  },
+  {
+    "name": "HeaderSimple",
+    "blockCategory": "hero",
+    "description": "Minimal text-only page header",
+    "aiDescription": "The simplest page header — just text on a plain background with no images. Supports centered or left-aligned layout via alignment select. Fields: optional eyebrow text in brand color, heading, description, and alignment selector. Best for blog pages, documentation headers, legal pages, or any interior page needing a clean typographic header without visual distraction.",
+    "tags": ["header", "minimal", "text-only", "clean"]
+  },
+  {
+    "name": "HeaderStats",
+    "blockCategory": "hero",
+    "description": "Page header with stats and links",
+    "aiDescription": "Page header with a background image, action links with arrow indicators, and a 4-column stats grid showing key metrics. Fields: heading, description, background image, repeatable links (label + url), and repeatable stats (value + label). The stats display as large numbers with labels below in a responsive grid. Best for company about pages, investor pages, or any page where credibility metrics matter.",
+    "tags": ["header", "stats", "metrics", "background-image"]
+  },
+  {
+    "name": "FeatureCardPanel",
+    "blockCategory": "features",
+    "description": "Split screenshot with card panel",
+    "aiDescription": "Two-column split layout inside a rounded panel card with ring border. Left side has headline, description, and a stacked list of features with icons. Right side shows a large product screenshot spanning multiple rows. Features repeater has icon, title, description. Use when you want a contained card feel with a prominent screenshot and a short feature list.",
+    "tags": ["split", "screenshot", "panel", "icons"]
+  },
+  {
+    "name": "FeatureCenteredFour",
+    "blockCategory": "features",
+    "description": "Centered header, 2x2 icon grid",
+    "aiDescription": "Centered eyebrow, headline, and description at top, followed by a 2-column grid (up to 4 items) of features with branded icon badges (rounded-lg bg), title, and description. Features repeater has icon, title, description. Best for showcasing exactly 4 core capabilities with a symmetrical centered layout.",
+    "tags": ["grid", "centered", "icons", "2-column"]
+  },
+  {
+    "name": "FeatureChecklistGrid",
+    "blockCategory": "features",
+    "description": "Sidebar header, 2-col checklist",
+    "aiDescription": "Five-column grid: left 2 columns hold eyebrow, headline, and description as a sidebar; right 3 columns contain a 2-column grid of features with small inline icons, title, and description. Features repeater has icon, title, description. Good for longer feature lists where the header should stay visible alongside the items.",
+    "tags": ["sidebar", "grid", "icons", "2-column"]
+  },
+  {
+    "name": "FeatureInlineGrid",
+    "blockCategory": "features",
+    "description": "Left header, 3-col inline list",
+    "aiDescription": "Left-aligned eyebrow, headline, and description at top, followed by a 3-column grid of inline features where title and description flow as continuous text. Each feature has a small icon. Features repeater has icon, title, description. Use for compact feature lists where descriptions are short, one-liner style.",
+    "tags": ["grid", "inline", "icons", "3-column"]
+  },
+  {
+    "name": "FeatureScreenshotGrid",
+    "blockCategory": "features",
+    "description": "Hero screenshot + 3-col grid",
+    "aiDescription": "Centered header section with eyebrow, headline, description. Below it a large full-width product screenshot with gradient fade at bottom. Below the screenshot, a 3-column grid of inline icon features. Fields: eyebrow, headline, description, screenshot image, features repeater (icon, title, description). Ideal for product pages where a big UI screenshot anchors the section.",
+    "tags": ["screenshot", "grid", "centered", "3-column", "icons"]
+  },
+  {
+    "name": "FeatureSimpleGrid",
+    "blockCategory": "features",
+    "description": "Minimal 3-col text-only grid",
+    "aiDescription": "Left-aligned headline and description, followed by a clean 3-column grid of features with only title and description — no icons, no images. Features repeater has title and description only. The most minimal feature block; use when you want a clean, text-focused layout without visual embellishments.",
+    "tags": ["grid", "text-only", "minimal", "3-column"]
+  },
+  {
+    "name": "Feature Split Brand",
+    "blockCategory": "features",
+    "description": "Split with branded screenshot bg",
+    "aiDescription": "Two-column split: left has eyebrow, headline, description, and stacked icon features; right has a product screenshot on a branded (bg-brand) background with decorative skew element and rounded corners. Features repeater has icon, title, description. Use when you want the screenshot to feel premium with brand-colored framing.",
+    "tags": ["split", "screenshot", "brand-accent", "icons"]
+  },
+  {
+    "name": "FeatureSplitBrand",
+    "blockCategory": "features",
+    "description": "Split with branded screenshot bg",
+    "aiDescription": "Two-column split: left has eyebrow, headline, description, and stacked icon features; right has a product screenshot on a branded (bg-brand) background with decorative skew element. Duplicate of 'Feature Split Brand' with PascalCase naming. Features repeater has icon, title, description.",
+    "tags": ["split", "screenshot", "brand-accent", "icons"]
+  },
+  {
+    "name": "FeatureSplitLeft",
+    "blockCategory": "features",
+    "description": "Split with screenshot on left",
+    "aiDescription": "Two-column split layout. Screenshot on the LEFT (order-first), text content on the right with eyebrow, headline, description, and stacked icon features. Features repeater has icon, title, description. Mirror of FeatureSplitRight. Choose this when the screenshot should appear first visually.",
+    "tags": ["split", "screenshot", "icons", "image-left"]
+  },
+  {
+    "name": "FeatureSplitRight",
+    "blockCategory": "features",
+    "description": "Split with screenshot on right",
+    "aiDescription": "Two-column split layout. Text on the left with eyebrow, headline, description, and stacked icon features. Screenshot on the RIGHT. Features repeater has icon, title, description. The classic split-feature layout; use when text should lead and the screenshot supports it.",
+    "tags": ["split", "screenshot", "icons", "image-right"]
+  },
+  {
+    "name": "FeatureSplitTestimonial",
+    "blockCategory": "features",
+    "description": "Split screenshot + testimonial",
+    "aiDescription": "Two-column split: left has eyebrow, headline, description, a CTA button, and a testimonial quote with author avatar, name, and role. Right has a product screenshot. No features repeater — this block focuses on social proof alongside a screenshot. Fields: eyebrow, headline, description, screenshot, button-label, button-link, quote, quote-author, quote-role, quote-avatar. Use when you want to pair a product image with a customer endorsement.",
+    "tags": ["split", "screenshot", "testimonial", "cta"]
+  },
+  {
+    "name": "FeatureThreeColIcons",
+    "blockCategory": "features",
+    "description": "3-col with icon badges + links",
+    "aiDescription": "Left-aligned headline and description, then a 3-column grid of features. Each feature has a branded icon badge (rounded-lg bg-brand), title, description, and an optional 'Learn more' link. Features repeater has icon, title, description, link. Use when features need individual detail pages or call-to-action links.",
+    "tags": ["grid", "icons", "3-column", "links"]
+  },
+  {
+    "name": "FeatureThreeColLinks",
+    "blockCategory": "features",
+    "description": "Centered 3-col icons + links",
+    "aiDescription": "Centered eyebrow, headline, description header, then a 3-column grid of features. Each has an inline icon (not badge), title, description, and optional 'Learn more' link. Features repeater has icon, title, description, link. Similar to FeatureThreeColIcons but with centered header and smaller inline icons instead of badge icons.",
+    "tags": ["grid", "centered", "icons", "3-column", "links"]
+  },
+  {
+    "name": "FeatureTwoColSidebar",
+    "blockCategory": "features",
+    "description": "Headline sidebar + 2-col grid",
+    "aiDescription": "Five-column grid: left 2 columns are just a large headline (no description). Right 3 columns hold a 2-column grid of features with branded icon badges (rounded-lg bg-brand), title, and description. Features repeater has icon, title, description. Use for a bold headline-driven layout with icon-badged features alongside.",
+    "tags": ["sidebar", "grid", "icons", "2-column"]
+  },
+  {
+    "name": "IncentiveBanner",
+    "blockCategory": "features",
+    "description": "Horizontal scrolling perk bar",
+    "aiDescription": "A single-row horizontal scrolling banner of perks. Each perk shows an icon and title inline, no descriptions. Perks repeater has icon and title only. Use as a trust/benefit strip — e.g. 'Free shipping', '24/7 Support'. Compact, no headline, meant to sit between other sections.",
+    "tags": ["banner", "horizontal", "icons", "compact"]
+  },
+  {
+    "name": "IncentiveCard",
+    "blockCategory": "features",
+    "description": "3-col perks in rounded card",
+    "aiDescription": "A rounded panel card (bg-panel) containing a centered headline and a 3-column grid of perks. Each perk has a large icon (64px), title, and description. Perks repeater has icon, title, description. Use for benefit/incentive sections that should feel contained and card-like with prominent icons.",
+    "tags": ["grid", "card", "icons", "3-column"]
+  },
+  {
+    "name": "IncentiveCentered",
+    "blockCategory": "features",
+    "description": "3-col centered perks, alt bg",
+    "aiDescription": "Full-width alternate background (bg-base-alt) section with a 3-column grid of centered perks. Each perk has a very large icon (96px), title, and description. No headline. Perks repeater has icon, title, description. Use for benefit strips with oversized icons and no section header.",
+    "tags": ["grid", "centered", "icons", "3-column", "alt-bg"]
+  },
+  {
+    "name": "IncentiveDivided",
+    "blockCategory": "features",
+    "description": "3-col perks with dividers",
+    "aiDescription": "Three perks displayed in a row separated by divider lines (divide-x on desktop, divide-y on mobile). Each perk has an icon, title, and description in a compact horizontal layout. Perks repeater has icon, title, description. Use for a clean, divider-separated benefit bar — more structured than a banner but still compact.",
+    "tags": ["divided", "horizontal", "icons", "compact"]
+  },
+  {
+    "name": "IncentiveFourCol",
+    "blockCategory": "features",
+    "description": "4-col perks grid, alt bg",
+    "aiDescription": "Alternate background section with a 4-column grid of perks (2-col on tablet). Each perk has a very large icon (96px), title, and description stacked vertically. No headline. Perks repeater has icon, title, description. Use when you have exactly 4 benefits/incentives to display in an even grid.",
+    "tags": ["grid", "icons", "4-column", "alt-bg"]
+  },
+  {
+    "name": "IncentiveSplitHero",
+    "blockCategory": "features",
+    "description": "Split hero image + 3-col perks",
+    "aiDescription": "Two-part layout: top section is a 2-column split with headline and description on the left, a large hero image on the right. Below that, a 3-column grid of perks with large icons (64px), title, and description. Fields: headline, description, image, perks repeater (icon, title, description). Use when benefits need a hero image to set context.",
+    "tags": ["split", "image", "grid", "icons", "3-column"]
+  },
+  {
+    "name": "IncentiveThreeCol",
+    "blockCategory": "features",
+    "description": "Headline + 3-col perk grid",
+    "aiDescription": "Left-aligned headline and description at top, followed by a 3-column grid of perks with large icons (64px), title, and description. Perks repeater has icon, title, description. The standard incentive layout — similar to IncentiveCentered but with a headline and left-aligned on base background.",
+    "tags": ["grid", "icons", "3-column", "headline"]
+  },
+  {
+    "name": "IncentiveTwoColGrid",
+    "blockCategory": "features",
+    "description": "2-col perks grid, alt bg",
+    "aiDescription": "Alternate background section with a 2-column grid of perks. Each perk has a very large icon (96px) on the left and title + description on the right in a horizontal layout. No headline. Perks repeater has icon, title, description. Use for 4-6 benefits in a spacious two-column arrangement with oversized icons.",
+    "tags": ["grid", "icons", "2-column", "alt-bg"]
+  },
+  {
+    "name": "CtaBrandBg",
+    "blockCategory": "cta",
+    "description": "Brand background CTA",
+    "aiDescription": "Centered CTA section with solid brand-color background. Headline, subheadline, and button group over a bold brand fill. Text uses on-brand color for contrast. Choose this when you want a high-impact, colorful call-to-action that breaks up neutral page sections. No images.",
+    "tags": ["cta", "centered", "brand-bg", "bold"]
+  },
+  {
+    "name": "CtaCardChecklist",
+    "blockCategory": "cta",
+    "description": "CTA card with checklist",
+    "aiDescription": "CTA inside a rounded card with a left image and a right content area containing headline, subheadline, a two-column checklist of benefits with check icons, and a text link. Great for sign-up or onboarding CTAs where you need to list features or benefits alongside an image.",
+    "tags": ["cta", "card", "checklist", "image", "split"]
+  },
+  {
+    "name": "CtaCenteredCard",
+    "blockCategory": "cta",
+    "description": "Centered CTA in card",
+    "aiDescription": "Centered CTA contained inside a rounded card with a subtle ring border. Headline, subheadline, and button group on a panel background. Choose this over CtaCenteredSimple when you want the CTA visually boxed and separated from the page background. No images.",
+    "tags": ["cta", "centered", "card", "bordered"]
+  },
+  {
+    "name": "CtaCenteredGradient",
+    "blockCategory": "cta",
+    "description": "CTA with gradient backdrop",
+    "aiDescription": "Centered CTA with a large radial gradient SVG orb behind the text. Headline, subheadline, and button group float over a purple-to-pink gradient backdrop. Choose this when you want a decorative, eye-catching CTA with a modern gradient effect. No images.",
+    "tags": ["cta", "centered", "gradient", "decorative"]
+  },
+  {
+    "name": "CtaCenteredSimple",
+    "blockCategory": "cta",
+    "description": "Centered simple CTA",
+    "aiDescription": "The simplest centered CTA: headline, subheadline, and button group on a plain base background. No card, no image, no decoration. Choose this as a clean, minimal call-to-action when the surrounding page provides enough visual context.",
+    "tags": ["cta", "centered", "simple", "minimal"]
+  },
+  {
+    "name": "CtaDarkBrandSplit",
+    "blockCategory": "cta",
+    "description": "Dark brand split CTA",
+    "aiDescription": "Split-layout CTA on a dark alt background. Headline on the left, buttons on the right, aligned inline on desktop. Compact and bold. Choose this over CtaSplitInline when you want a darker, more prominent background treatment. Headline-only, no subheadline.",
+    "tags": ["cta", "split", "dark", "inline"]
+  },
+  {
+    "name": "CtaImageGallery",
+    "blockCategory": "cta",
+    "description": "CTA with image gallery",
+    "aiDescription": "Split CTA with text content on the left and an asymmetric collage of 4 images on the right. Headline, subheadline, description, and buttons alongside varied-size rounded photos. Choose this when you need a visually rich CTA that showcases multiple images like a portfolio or team.",
+    "tags": ["cta", "split", "image-gallery", "collage", "4-images"]
+  },
+  {
+    "name": "CtaSimpleLeft",
+    "blockCategory": "cta",
+    "description": "Left-aligned simple CTA",
+    "aiDescription": "Left-aligned CTA with headline and buttons only, no subheadline. The most minimal CTA option. Full-width layout with left-aligned text. Choose this for a quick, no-frills call-to-action at the end of a content section.",
+    "tags": ["cta", "left-aligned", "minimal", "headline-only"]
+  },
+  {
+    "name": "CtaSplitImage",
+    "blockCategory": "cta",
+    "description": "Split CTA with image",
+    "aiDescription": "Half-and-half split layout with a full-bleed image on the left and CTA content on the right. Includes eyebrow, headline, subheadline, and buttons. The image fills the left half of the viewport on desktop. Choose this for dramatic visual impact with a single hero image.",
+    "tags": ["cta", "split", "full-bleed-image", "eyebrow"]
+  },
+  {
+    "name": "CtaSplitInline",
+    "blockCategory": "cta",
+    "description": "Inline split CTA",
+    "aiDescription": "Split-layout CTA on a base background. Headline on the left, buttons on the right, inline on desktop. Clean and simple. Choose this over CtaDarkBrandSplit when you want a lighter, neutral background. Headline-only, no subheadline or images.",
+    "tags": ["cta", "split", "inline", "light"]
+  },
+  {
+    "name": "CtaSplitScreenshot",
+    "blockCategory": "cta",
+    "description": "Split CTA with screenshot",
+    "aiDescription": "CTA inside a rounded card with text on the left and a product screenshot on the right that overflows the card edge. Headline, subheadline, and buttons. The screenshot appears as a floating app window. Choose this for SaaS or product CTAs where you want to show a UI preview.",
+    "tags": ["cta", "split", "screenshot", "card", "product"]
+  },
+  {
+    "name": "BannerTopButton",
+    "blockCategory": "cta",
+    "description": "Dismissible top banner",
+    "aiDescription": "Thin announcement banner pinned to the top of the page with a label, message text, a pill-shaped button, and a dismiss X button. Uses alt background. Dismissible via Alpine.js. Choose this for site-wide announcements, promos, or event notices that need a CTA button.",
+    "tags": ["banner", "announcement", "dismissible", "top-bar"]
+  },
+  {
+    "name": "BannerTopLink",
+    "blockCategory": "cta",
+    "description": "Dismissible link banner",
+    "aiDescription": "Thin announcement banner pinned to the top of the page with a label, message text, and an inline link (the entire bar is clickable). Uses brand background color. Dismissible via Alpine.js. Choose this over BannerTopButton when you want a simpler, link-only banner without a separate button.",
+    "tags": ["banner", "announcement", "dismissible", "brand-bg", "link"]
+  },
+  {
+    "name": "AB - CTA Two Topics",
+    "blockCategory": "cta",
+    "description": "Statement with two topic cards",
+    "aiDescription": "Split layout with a rich-text statement on the left and a 2-column grid of topic cards on the right. Each topic has a title and description. Choose this for an A/B comparison, dual-value-prop, or when you need to pair a narrative statement with two distinct offerings or paths.",
+    "tags": ["cta", "split", "topics", "two-column", "comparison"]
+  },
+  {
+    "name": "TestimonialBgImage",
+    "blockCategory": "testimonials",
+    "description": "Quote over background image",
+    "aiDescription": "Single large testimonial quote displayed over a full-bleed background image with a dark overlay. Optional logo above the quote, plus author name and role below. Dramatic and cinematic. Choose this for a hero-style testimonial that needs maximum visual impact.",
+    "tags": ["testimonial", "single", "background-image", "dramatic", "overlay"]
+  },
+  {
+    "name": "TestimonialCentered",
+    "blockCategory": "testimonials",
+    "description": "Centered quote with stars",
+    "aiDescription": "Single centered testimonial with optional company logo, optional 5-star rating, large blockquote, author avatar, name, and role. Clean and focused. Choose this as the default single-testimonial block when you want a classic, centered quote with optional social proof elements.",
+    "tags": ["testimonial", "single", "centered", "stars", "avatar", "logo"]
+  },
+  {
+    "name": "TestimonialGrid",
+    "blockCategory": "testimonials",
+    "description": "4-column testimonial grid",
+    "aiDescription": "Multi-testimonial grid with eyebrow, heading, and a responsive grid of testimonial cards (1-2-4 columns). Each card shows quote text, author avatar, name, and role inside a bordered panel. Choose this when you have many testimonials (4+) and want to show social proof at scale.",
+    "tags": ["testimonial", "grid", "multi", "cards", "4-column"]
+  },
+  {
+    "name": "TestimonialSideAvatar",
+    "blockCategory": "testimonials",
+    "description": "Quote with side avatar",
+    "aiDescription": "Single testimonial with a large avatar/photo on the left and a blockquote on the right. Author name and role below the quote. The avatar is small on mobile but expands to a large portrait on desktop. Choose this when the person's photo is important to the testimonial's credibility.",
+    "tags": ["testimonial", "single", "side-avatar", "portrait", "split"]
+  },
+  {
+    "name": "TestimonialSideImage",
+    "blockCategory": "testimonials",
+    "description": "Quote with side image",
+    "aiDescription": "Single testimonial with a full-height image on the left inside a bordered panel and a large blockquote, star rating, and author info on the right. The image area is taller and more prominent than TestimonialSideAvatar. Choose for testimonials that benefit from a lifestyle or context photo.",
+    "tags": ["testimonial", "single", "side-image", "stars", "panel"]
+  },
+  {
+    "name": "TestimonialSplit",
+    "blockCategory": "testimonials",
+    "description": "Two-column split quotes",
+    "aiDescription": "Two testimonials displayed side by side in a 2-column split layout, separated by a vertical border. Each side has an optional logo, blockquote, and author info with avatar. Choose this when you want to feature exactly two key testimonials with equal visual weight.",
+    "tags": ["testimonial", "split", "two-column", "paired", "logos"]
+  },
+  {
+    "name": "ReviewCards",
+    "blockCategory": "testimonials",
+    "description": "Stacked review cards",
+    "aiDescription": "Single-column stacked list of product reviews. Each review shows a star rating, title, body text, author avatar, and author name. Vertical stack with spacing between cards. Choose this for a product review section where detailed written reviews matter more than brief quotes.",
+    "tags": ["testimonials", "reviews", "stacked", "stars", "avatar"]
+  },
+  {
+    "name": "ReviewList",
+    "blockCategory": "testimonials",
+    "description": "Review list with ratings",
+    "aiDescription": "Structured review list with a heading and divider-separated rows. Each review shows star rating, title, body, author info, and date in a multi-column grid layout (rating left, content right). Choose this for a detailed product review page or when reviews need a formal, structured presentation.",
+    "tags": ["testimonials", "reviews", "list", "stars", "structured"]
+  },
+  {
+    "name": "FaqAccordion",
+    "blockCategory": "faq",
+    "description": "Expandable FAQ accordion",
+    "aiDescription": "Single-column FAQ with expandable accordion items powered by Alpine.js. Click a question to reveal the answer with a smooth toggle. Dividers between items. Choose this when you have many FAQs and want to keep the page compact by hiding answers until clicked. The most interactive FAQ layout.",
+    "tags": ["faq", "accordion", "expandable", "single-column", "interactive"]
+  },
+  {
+    "name": "FaqSidebar",
+    "blockCategory": "faq",
+    "description": "FAQ with sidebar heading",
+    "aiDescription": "Two-column FAQ layout with heading and optional support text pinned to the left sidebar (5 cols) and Q&A pairs stacked in the right column (7 cols). Answers are always visible. Choose this when you want the heading to stay alongside the FAQs, good for shorter FAQ lists (3-6 items).",
+    "tags": ["faq", "sidebar", "two-column", "always-visible"]
+  },
+  {
+    "name": "FaqThreeColGrid",
+    "blockCategory": "faq",
+    "description": "3-column FAQ grid",
+    "aiDescription": "FAQ displayed in a responsive 3-column grid (2 cols on tablet). Heading and optional support text on top, with optional centered or left alignment. All answers visible. Choose this for longer FAQ lists where you want to maximize horizontal space and show everything at once.",
+    "tags": ["faq", "grid", "three-column", "always-visible"]
+  },
+  {
+    "name": "FaqTwoColGrid",
+    "blockCategory": "faq",
+    "description": "2-column FAQ grid",
+    "aiDescription": "FAQ displayed in a responsive 2-column grid. Heading and optional support text on top, with optional centered or left alignment. All answers visible. Choose this over FaqThreeColGrid when you have fewer FAQs or want wider Q&A cards with more breathing room.",
+    "tags": ["faq", "grid", "two-column", "always-visible"]
+  },
+  {
+    "name": "FaqTwoColWide",
+    "blockCategory": "faq",
+    "description": "Wide 2-column FAQ rows",
+    "aiDescription": "FAQ in a wide two-column row layout: question on the left (5 cols), answer on the right (7 cols), separated by dividers. Full-width rows stacked vertically. Choose this for a clean editorial FAQ style where questions and answers sit side by side. No accordion, all answers visible.",
+    "tags": ["faq", "wide-rows", "two-column", "editorial", "dividers"]
+  },
+  {
+    "name": "Stats Bg Image",
+    "blockCategory": "stats",
+    "description": "Stats over background image",
+    "aiDescription": "Stats section with a full-bleed background image behind the content. Eyebrow, heading, and description on the left with a 4-column stat grid below showing large values and labels. Choose this for a visually dramatic stats section where a hero image adds emotional context to the numbers.",
+    "tags": ["stats", "background-image", "4-column", "dramatic"]
+  },
+  {
+    "name": "Stats Simple",
+    "blockCategory": "stats",
+    "description": "Minimal 3-column stats",
+    "aiDescription": "The simplest stats layout: a 3-column grid of large numbers with labels below, centered on the page. No heading, no description, no cards. Choose this for a minimal, clean stat counter when the numbers speak for themselves and no additional context is needed.",
+    "tags": ["stats", "simple", "minimal", "3-column"]
+  },
+  {
+    "name": "Stats Split",
+    "blockCategory": "stats",
+    "description": "Stats with side image",
+    "aiDescription": "Split layout with a full-bleed image covering the left half and stats content on the right. Eyebrow, heading, description, and a 2-column stat grid with large values. Choose this when you want to pair key metrics with a relevant photo for storytelling impact.",
+    "tags": ["stats", "split", "image", "two-column"]
+  },
+  {
+    "name": "StatsPanel",
+    "blockCategory": "stats",
+    "description": "Stats in panel cards",
+    "aiDescription": "Centered heading and description above a 4-column grid of stat cards on panel backgrounds with rounded corners. Each card shows a stat label and a large value. Clean and structured. Choose this as the default stats block when you want numbers displayed in neat, visually separated cards.",
+    "tags": ["stats", "panel", "cards", "4-column", "centered"]
+  },
+  {
+    "name": "Timeline",
+    "blockCategory": "stats",
+    "description": "4-column milestone timeline",
+    "aiDescription": "Horizontal timeline showing milestones in a 4-column grid. Each milestone has a date with a dot indicator and a connecting line, plus a headline and description. Choose this for company history, product roadmap, or any chronological milestone display.",
+    "tags": ["stats", "timeline", "milestones", "4-column", "chronological"]
+  },
+  {
+    "name": "TeamCards",
+    "blockCategory": "team",
+    "description": "3-column team cards",
+    "aiDescription": "Team section with heading and description, followed by a 3-column grid of member cards. Each card has a large landscape photo (3:2 aspect), name, and role. Choose this as the default team block for medium-sized teams (3-9 people) where photos are important.",
+    "tags": ["team", "cards", "3-column", "photo", "landscape"]
+  },
+  {
+    "name": "TeamCardsTall",
+    "blockCategory": "team",
+    "description": "Tall portrait team cards",
+    "aiDescription": "Team section with eyebrow, headline, subheadline, and a configurable-column grid of tall portrait cards. Each card has a portrait photo, name, role, and optional bio. Choose this for executive or leadership team pages where tall portrait photography creates a professional, editorial feel.",
+    "tags": ["team", "cards", "tall", "portrait", "configurable-columns"]
+  },
+  {
+    "name": "TeamCompact",
+    "blockCategory": "team",
+    "description": "Compact team with avatars",
+    "aiDescription": "Compact team layout with heading on the left and a 2-column grid of small team entries on the right. Each entry shows a round avatar (64px), name, and role in an inline row. Choose this for larger teams or when you want a space-efficient team section without large photos.",
+    "tags": ["team", "compact", "avatar", "2-column", "inline"]
+  },
+  {
+    "name": "TeamGrid",
+    "blockCategory": "team",
+    "description": "Dense team avatar grid",
+    "aiDescription": "Dense team grid that scales from 2 to 6 columns showing round avatars, names, and roles. Centered text under each avatar. Choose this for large teams (10+) where you need to show many members in a compact grid. The most scalable team layout option.",
+    "tags": ["team", "grid", "avatars", "dense", "scalable"]
+  },
+  {
+    "name": "BentoAsymmetric",
+    "blockCategory": "cards",
+    "description": "Asymmetric 4-card bento",
+    "aiDescription": "Bento grid with 4 asymmetric cards in a 3-column, 2-row layout. One tall card spans the left column, two cards fill the top right, and one wide card spans the bottom right. Each card has an image, title, and description. Eyebrow and headline above. Choose for feature showcases needing visual variety.",
+    "tags": ["bento", "cards", "asymmetric", "3-col", "4-cards"]
+  },
+  {
+    "name": "BentoFiveCards",
+    "blockCategory": "cards",
+    "description": "5-card bento grid",
+    "aiDescription": "Bento grid with 5 cards on a 6-column, 2-row layout. Two cards on the top row (3+3), three on the bottom (2+2+2). Each card has an image, title, and description with rounded corners. Eyebrow and headline above. The most card-dense bento option. Choose for showcasing 5 features or capabilities.",
+    "tags": ["bento", "cards", "5-cards", "6-col", "dense"]
+  },
+  {
+    "name": "BentoWideCards",
+    "blockCategory": "cards",
+    "description": "Wide/narrow 4-card bento",
+    "aiDescription": "Bento grid with 4 cards alternating wide and narrow on a 6-column, 2-row layout. Top row has a wide (4-col) card and a narrow (2-col) card; bottom row reverses. Each card has an image, title, and description. Choose this for a balanced bento grid where two items need more visual emphasis.",
+    "tags": ["bento", "cards", "wide-narrow", "4-cards", "6-col"]
+  },
+  {
+    "name": "ProductDetailGallery",
+    "blockCategory": "gallery",
+    "description": "Product detail with gallery",
+    "aiDescription": "Product detail page with a multi-image gallery on the left (main image + thumbnails in a 2-column grid) and product info on the right: name, price, description, expandable details accordion, and action buttons. Choose for e-commerce product pages needing multiple product photos.",
+    "tags": ["product", "detail", "gallery", "multi-image", "e-commerce"]
+  },
+  {
+    "name": "ProductDetailSimple",
+    "blockCategory": "gallery",
+    "description": "Simple product detail",
+    "aiDescription": "Clean 2-column product detail with a single square image on the left and product info on the right: name, price, description, expandable details accordion, and buttons. Choose this over ProductDetailGallery when you only need one product image for a simpler presentation.",
+    "tags": ["product", "detail", "simple", "single-image", "e-commerce"]
+  },
+  {
+    "name": "ProductFeatureAlternating",
+    "blockCategory": "gallery",
+    "description": "Alternating feature rows",
+    "aiDescription": "Product features displayed in alternating left-right rows. Each feature has a large image on one side and text (name, description) on the other, flipping sides on each row. Centered heading above. Choose for product tours or feature walkthroughs that need a storytelling rhythm.",
+    "tags": ["product", "features", "alternating", "two-column", "storytelling"]
+  },
+  {
+    "name": "ProductFeatureHero",
+    "blockCategory": "gallery",
+    "description": "Hero image with specs grid",
+    "aiDescription": "Full-width hero product image at the top with a gradient fade, followed by centered heading, description, and a responsive spec grid (up to 3 columns) below. Each spec has a name and description. Choose for product launch pages or hero-style product showcases with technical specs.",
+    "tags": ["product", "hero", "specs", "full-width-image", "grid"]
+  },
+  {
+    "name": "ProductFeatureImages",
+    "blockCategory": "gallery",
+    "description": "2-column feature images",
+    "aiDescription": "Product features in a 2-column grid on an alt background. Each feature card has a large image, name, and description. Centered heading and description above. Choose for showcasing product features where each feature has a distinct image, like product categories or capabilities.",
+    "tags": ["product", "features", "2-column", "image-cards", "alt-bg"]
+  },
+  {
+    "name": "ProductFeatureSplit",
+    "blockCategory": "gallery",
+    "description": "Split specs with images",
+    "aiDescription": "2-column split layout: specs list on the left (name/description pairs with dividers) and a 2x2 image grid on the right. Heading and description above. Choose for technical product pages where you need to pair a detailed spec list with multiple product angles.",
+    "tags": ["product", "features", "split", "specs", "image-grid"]
+  },
+  {
+    "name": "ProductFeatureStacked",
+    "blockCategory": "gallery",
+    "description": "Stacked feature panels",
+    "aiDescription": "Product features in stacked full-width panels. Left-aligned heading with eyebrow above, then features displayed as alternating image-text rows within a 12-column grid. Each feature has an image, name, and description. Choose for in-depth product feature breakdowns.",
+    "tags": ["product", "features", "stacked", "panels", "eyebrow"]
+  },
+  {
+    "name": "ProductListCards",
+    "blockCategory": "gallery",
+    "description": "Product cards with details",
+    "aiDescription": "3-column grid of product cards with rounded borders. Each card shows a product image, name, description, price, and options. Cards have a structured, e-commerce feel. Choose for product listing pages where each item needs detailed info visible at a glance.",
+    "tags": ["product", "list", "cards", "3-column", "bordered"]
+  },
+  {
+    "name": "ProductListOverlay",
+    "blockCategory": "gallery",
+    "description": "Product grid with overlays",
+    "aiDescription": "4-column product grid where each item has a large image with overlay badges (like 'New'), plus name, price, and color options below. Choose for fashion or lifestyle product listings where quick-shop visual scanning and badges matter.",
+    "tags": ["product", "list", "overlay", "4-column", "badges"]
+  },
+  {
+    "name": "ProductListSimple",
+    "blockCategory": "gallery",
+    "description": "Simple 4-column product grid",
+    "aiDescription": "Clean 4-column product grid with square images, name, category, and price for each item. Minimal styling with hover opacity effect. The simplest product list option. Choose as the default product listing when you want a clean, no-frills grid.",
+    "tags": ["product", "list", "simple", "4-column", "minimal"]
+  },
+  {
+    "name": "ProductListTall",
+    "blockCategory": "gallery",
+    "description": "Tall product cards",
+    "aiDescription": "3-column grid of tall product cards with square images that are larger than ProductListSimple. Each card shows image, name, price, and a link. Cards scale up on hover. Choose for product listings where visual impact and large images are priorities, like art, furniture, or fashion.",
+    "tags": ["product", "list", "tall", "3-column", "large-images"]
+  },
+  {
+    "name": "ProductListWithLink",
+    "blockCategory": "gallery",
+    "description": "Product grid with header link",
+    "aiDescription": "Product grid with a heading and a 'browse all' link in the header. 4-column grid below with product image, name, and price. Choose this over ProductListSimple when you need a header with a link to a full catalog page, like a 'Trending Products' section.",
+    "tags": ["product", "list", "header-link", "4-column", "browse"]
+  },
+  {
+    "name": "ProductOverviewBanner",
+    "blockCategory": "gallery",
+    "description": "Product overview banner",
+    "aiDescription": "Full-width banner with a background product image, overlaid heading, description, and a CTA button in a floating panel at the bottom. Choose for hero-style product or collection showcases like seasonal promotions or featured category banners.",
+    "tags": ["product", "overview", "banner", "hero", "full-width"]
+  },
+  {
+    "name": "ProductOverviewCollections",
+    "blockCategory": "gallery",
+    "description": "3-column collection cards",
+    "aiDescription": "Collection overview with heading and a 3-column grid of collection cards on an alt background. Each card has a large image, collection name, and description. Choose for showcasing product categories, collections, or departments (e.g., Men's, Women's, Accessories).",
+    "tags": ["product", "overview", "collections", "3-column", "alt-bg"]
+  },
+  {
+    "name": "ProductOverviewFeatured",
+    "blockCategory": "gallery",
+    "description": "Featured categories grid",
+    "aiDescription": "Featured category showcase with heading, a 'browse all' link, and a 2-column grid of category cards on alt background. Each category shows a featured image, name, and description. Choose for homepage category highlights with a link to the full catalog.",
+    "tags": ["product", "overview", "featured", "categories", "2-column"]
+  },
+  {
+    "name": "ProductOverviewGallery",
+    "blockCategory": "gallery",
+    "description": "Collection gallery grid",
+    "aiDescription": "Collection gallery with heading, description, and a 3-column grid of linked collection cards. Each card has a 3:2 aspect image, name, and description. Clean and browsable. Choose for collection or category landing pages that need a gallery-style browsing experience.",
+    "tags": ["product", "overview", "gallery", "3-column", "browsable"]
+  },
+  {
+    "name": "ErrorBgImage",
+    "blockCategory": "content",
+    "description": "Error page with bg image",
+    "aiDescription": "Full-screen error/404 page with a background image covering the entire viewport. Error code, heading, description, and a back link centered over the image. Choose this for a visually dramatic error page when you have a relevant background photo.",
+    "tags": ["error", "404", "background-image", "full-screen"]
+  },
+  {
+    "name": "ErrorSimple",
+    "blockCategory": "content",
+    "description": "Simple centered error page",
+    "aiDescription": "Minimal centered error/404 page on a plain background. Error code in brand color, heading, description, and button group. The simplest error page option. Choose this as the default 404 or error page when no special visual treatment is needed.",
+    "tags": ["error", "404", "simple", "centered", "minimal"]
+  },
+  {
+    "name": "ErrorSplitImage",
+    "blockCategory": "content",
+    "description": "Error page with side image",
+    "aiDescription": "Split-layout error/404 page with text content on the left and a large image filling the right side. Error code, heading, description, and a back link. Choose this for error pages that need visual interest without a full background image.",
+    "tags": ["error", "404", "split", "image", "two-column"]
+  },
+  {
+    "name": "ErrorWithLinks",
+    "blockCategory": "content",
+    "description": "Error page with page links",
+    "aiDescription": "Error/404 page with centered error info on top and a list of suggested pages below, each with an icon, title, description, and arrow link. Helps users navigate to relevant content after hitting a dead end. Choose this when you want to guide lost users to popular pages.",
+    "tags": ["error", "404", "page-links", "navigation", "helpful"]
+  },
+  {
+    "name": "Listen",
+    "blockCategory": "content",
+    "description": "Podcast episode list",
+    "aiDescription": "Vertical list of podcast episodes with date, title, description, a listen button, and a show-notes link for each entry. Dividers between episodes. Designed for podcast or audio content pages. Choose this for any audio series, podcast archive, or episode listing page.",
+    "tags": ["podcast", "episodes", "audio", "list", "media"]
+  },
+  {
+    "name": "Lesson Cards",
+    "blockCategory": "content",
+    "description": "Alternating lesson rows",
+    "aiDescription": "Full-width alternating rows of lesson cards. Each row has a large image (60% width) and text content (40% width) that alternate sides (image-right then image-left). Each card shows title, description, topics, and a view-lessons button. Choose for course catalogs, tutorial series, or educational content pages.",
+    "tags": ["lessons", "courses", "alternating", "education", "full-width"]
+  },
+  {
+    "name": "Navbar",
+    "blockCategory": null,
+    "description": "Logo left, links centered",
+    "aiDescription": "Centered navigation bar with logo, horizontal nav links, and a CTA button. Clean single-row layout. Choose this over Nav Bar when you want a simpler, centered header without dropdown menus or mega-nav features.",
+    "tags": ["navbar", "header", "navigation", "centered"]
+  },
+  {
+    "name": "Nav Bar",
+    "blockCategory": null,
+    "description": "Full-featured nav bar",
+    "aiDescription": "Full-featured navigation bar with left-aligned logo, multi-level dropdown menus, and dual action buttons. Choose this over Navbar when the site needs dropdown navigation or a more complex header structure.",
+    "tags": ["navbar", "header", "navigation", "dropdown", "full-featured"]
+  },
+  {
+    "name": "Footer",
+    "blockCategory": null,
+    "description": "Links and social icons",
+    "aiDescription": "Minimal footer with logo, social links, and copyright. Single-row layout without multi-column link lists. Choose this over FooterCategories/FooterNewsletter when you want a compact, clean footer.",
+    "tags": ["footer", "minimal", "social-links"]
+  },
+  {
+    "name": "FooterCategories",
+    "blockCategory": null,
+    "description": "Link categories grid",
+    "aiDescription": "Multi-column footer with categorized link lists (Company, Product, Resources, etc.), logo, and copyright. Choose this over Footer when the site has many pages that need organized navigation. Choose over FooterNewsletter when you don't need an email signup.",
+    "tags": ["footer", "multi-column", "link-lists", "categories"]
+  },
+  {
+    "name": "FooterNewsletter",
+    "blockCategory": null,
+    "description": "Newsletter + categories",
+    "aiDescription": "Multi-column footer with categorized link lists plus a newsletter signup form. The most feature-rich footer option. Choose this over FooterCategories when the site needs email capture. Choose over Footer when you need organized link navigation.",
+    "tags": ["footer", "multi-column", "newsletter", "email-signup", "categories"]
+  }
+]
