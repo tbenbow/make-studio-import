@@ -1,0 +1,40 @@
+{
+  "description": "BlogPost",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "Blog Post Title"
+    },
+    {
+      "type": "text",
+      "name": "Breadcrumb",
+      "default": "Home / Blog / Post Title"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/800x430/FFF4F5/DB6885?text=Featured+Image"
+    },
+    {
+      "type": "text",
+      "name": "Author",
+      "default": "Trojan Fox"
+    },
+    {
+      "type": "image",
+      "name": "Author Avatar",
+      "default": "https://placehold.co/96x96/DB6885/fff?text=TF"
+    },
+    {
+      "type": "text",
+      "name": "Date",
+      "default": "2023/11/28"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Blog post content goes here.</p>"
+    }
+  ]
+}

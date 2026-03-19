@@ -1,0 +1,120 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Welcome to Fofood"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Super Delicious Food Special for You"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Order your favorites food from anywhere and get delivery at your door"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Order Now",
+          "link": "#",
+          "style": "primary",
+          "size": "medium"
+        },
+        {
+          "label": "Learn More",
+          "link": "#",
+          "style": "outline",
+          "size": "medium"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "dataStoreId": "698be9a2db8e5c335edc75e1"
+            }
+          },
+          {
+            "type": "select",
+            "name": "Size",
+            "default": "medium",
+            "config": {
+              "dataStoreId": "698c898950a2e6bef85751ae"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/600x600/FFF4F5/DB6885?text=Hero+Image"
+    },
+    {
+      "type": "items",
+      "name": "Avatars",
+      "default": [
+        {
+          "name": "Customer 1",
+          "image": "https://placehold.co/96x96/DB6885/fff?text=1"
+        },
+        {
+          "name": "Customer 2",
+          "image": "https://placehold.co/96x96/AE1339/fff?text=2"
+        },
+        {
+          "name": "Customer 3",
+          "image": "https://placehold.co/96x96/DB6885/fff?text=3"
+        },
+        {
+          "name": "Customer 4",
+          "image": "https://placehold.co/96x96/AE1339/fff?text=4"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Social Proof Label",
+      "default": "Our Happy Customers"
+    },
+    {
+      "type": "text",
+      "name": "Rating",
+      "default": "4.9"
+    },
+    {
+      "type": "text",
+      "name": "Rating Label",
+      "default": "(12.8k reviews)"
+    }
+  ]
+}

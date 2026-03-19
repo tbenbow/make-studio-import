@@ -218,7 +218,13 @@ const layouts = await client.getLayouts(siteId)
 const layout = layouts.find(l => l.name === 'Default' && l.isDefault)
 await client.updatePage(pageId, { settings: { layoutId: layout._id } })
 
-// Set block order
+// Put Navbar/Footer in layout, NOT in page body
+await client.updateLayout(layout._id, {
+  headerBlocks: [{ id: crypto.randomUUID(), blockId: navbarBlock._id, name: 'Navbar' }],
+  footerBlocks: [{ id: crypto.randomUUID(), blockId: footerBlock._id, name: 'Footer' }],
+})
+
+// Set body block order (no Navbar/Footer here)
 await client.updatePage(pageId, { blocks: [
   { id: crypto.randomUUID(), blockId: heroBlock._id, name: 'Hero' },
   { id: crypto.randomUUID(), blockId: featuresBlock._id, name: 'Features' },
@@ -227,15 +233,18 @@ await client.updatePage(pageId, { blocks: [
 
 ### 4.3 Set Block Content
 
-Use block names (not IDs) and field names (case-insensitive):
+**CRITICAL**: Always set block order (4.2) BEFORE setting content. `updatePage({ blocks })` generates new instance UUIDs — calling it after `setPageContent` orphans all content.
+
+**CRITICAL**: Only include body blocks in `setPageContent`. Including layout block names (Navbar, Footer) causes the API to re-add them to the page body, creating duplicates.
 
 ```typescript
 await client.setPageContent(pageId, {
+  // Body blocks only — no Navbar/Footer
   Hero: {
     Headline: "Welcome",
     Image: "https://makestudio.site/siteId/hero.webp",
     Buttons: [
-      { label: "Get Started", link: "#", style: "primary" }
+      { label: "Get Started", link: "#", style: "primary", size: "medium" }
     ],
   },
 })

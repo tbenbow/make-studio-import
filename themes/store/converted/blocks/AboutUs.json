@@ -1,0 +1,70 @@
+{
+  "description": "AboutUs",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "About us"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Welcome to Fofood"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Welcome to Fofood, where we're committed to combating food deserts. Our goal is to ensure everyone has access to fresh, healthy, and affordable food, regardless of their location. Join us in creating a brighter future for all."
+    },
+    {
+      "type": "image",
+      "name": "Image 1",
+      "default": "https://placehold.co/518x756/FFF4F5/DB6885?text=About+1"
+    },
+    {
+      "type": "image",
+      "name": "Image 2",
+      "default": "https://placehold.co/518x756/FFF4F5/DB6885?text=About+2"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Read More",
+          "link": "#",
+          "style": "outline",
+          "size": "medium"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "dataStoreId": "698be9a2db8e5c335edc75e1"
+            }
+          },
+          {
+            "type": "select",
+            "name": "Size",
+            "default": "medium",
+            "config": {
+              "dataStoreId": "698c898950a2e6bef85751ae"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

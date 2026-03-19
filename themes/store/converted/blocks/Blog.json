@@ -1,0 +1,52 @@
+{
+  "description": "Blog",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our Blog"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Latest Post"
+    },
+    {
+      "type": "items",
+      "name": "Posts",
+      "default": [
+        {
+          "image": "https://placehold.co/400x250/FFF4F5/DB6885?text=Article+1",
+          "title": "How To Cook The Sweet Cupcakes with Strawberry Honey",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x250/FFF4F5/DB6885?text=Article+2",
+          "title": "Donut topping recommendations for donut lovers",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/400x250/FFF4F5/DB6885?text=Article+3",
+          "title": "How To Cook The Sweet Macarons with Strawberry Cream",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

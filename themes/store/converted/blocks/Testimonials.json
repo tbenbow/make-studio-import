@@ -1,0 +1,53 @@
+{
+  "description": "Testimonials",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Testimonial"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "What People Say"
+    },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        {
+          "avatar": "https://placehold.co/96x96/DB6885/fff?text=TF",
+          "title": "It's very delicious!",
+          "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet venenatis a vel id tincidunt volutpat faucibus scelerisque. Morbi eget turpis aliquet nunc, varius aliquam ipsum.",
+          "name": "Trojan Fox"
+        },
+        {
+          "avatar": "https://placehold.co/96x96/AE1339/fff?text=JD",
+          "title": "Best bakery in town!",
+          "quote": "The quality of their pastries is outstanding. Every visit is a delightful experience with fresh, perfectly crafted desserts that keep me coming back for more.",
+          "name": "Jane Doe"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Quote"
+          }
+        ]
+      }
+    }
+  ]
+}

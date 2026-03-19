@@ -1,0 +1,52 @@
+{
+  "description": "ChefGrid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our Chefs"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Meet Our Talented Chefs"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        {
+          "name": "Chef Ethan Mitchell",
+          "role": "Executive Chef",
+          "image": "https://placehold.co/518x832/FFF4F5/DB6885?text=Chef+1"
+        },
+        {
+          "name": "Chef Marcus Thompson",
+          "role": "Head Chef",
+          "image": "https://placehold.co/541x832/FFF4F5/DB6885?text=Chef+2"
+        },
+        {
+          "name": "Chef Alexander Scott",
+          "role": "Food Advocate",
+          "image": "https://placehold.co/530x832/FFF4F5/DB6885?text=Chef+3"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    }
+  ]
+}

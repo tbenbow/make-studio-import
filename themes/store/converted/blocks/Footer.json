@@ -1,0 +1,151 @@
+{
+  "description": "Links and social icons",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Newsletter Headline",
+      "default": "Newsletter Subscribe"
+    },
+    {
+      "type": "text",
+      "name": "Newsletter Button Label",
+      "default": "Subscribe Now"
+    },
+    {
+      "type": "image",
+      "name": "Logo",
+      "default": "https://placehold.co/118x46/fff/DB6885?text=Fofood"
+    },
+    {
+      "type": "text",
+      "name": "Email",
+      "default": "example@gmail.com"
+    },
+    {
+      "type": "text",
+      "name": "Phone",
+      "default": "123 45678910"
+    },
+    {
+      "type": "text",
+      "name": "Hours",
+      "default": "Monday - Friday, 08 am - 05 pm"
+    },
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        {
+          "name": "Facebook",
+          "icon": "facebook-logo",
+          "url": "#"
+        },
+        {
+          "name": "Instagram",
+          "icon": "instagram-logo",
+          "url": "#"
+        },
+        {
+          "name": "WhatsApp",
+          "icon": "whatsapp-logo",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Links 1 Title",
+      "default": "Quick Links"
+    },
+    {
+      "type": "items",
+      "name": "Links 1",
+      "default": [
+        {
+          "label": "Home",
+          "link": "/"
+        },
+        {
+          "label": "About",
+          "link": "/about"
+        },
+        {
+          "label": "Menu",
+          "link": "/menu"
+        },
+        {
+          "label": "Blog",
+          "link": "/blog"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Links 2 Title",
+      "default": "More"
+    },
+    {
+      "type": "items",
+      "name": "Links 2",
+      "default": [
+        {
+          "label": "My Favorites",
+          "link": "#"
+        },
+        {
+          "label": "My Cart",
+          "link": "#"
+        },
+        {
+          "label": "Contact us",
+          "link": "/contact"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "Copyright Banana Studio 2022 All Right Reserved"
+    }
+  ]
+}

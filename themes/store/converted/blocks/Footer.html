@@ -1,0 +1,60 @@
+<footer class="bg-brand">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="divide-y divide-on-brand/40">
+      <!-- Newsletter -->
+      <div class="flex flex-col space-y-6 pb-8 pt-12 lg:flex-row lg:justify-between lg:items-center lg:space-y-0 lg:pb-16 lg:pt-20">
+        <h2 class="heading-lg text-on-brand text-center lg:text-left">{{newsletter-headline}}</h2>
+        <div class="flex flex-col items-center space-y-4 lg:flex-row lg:space-x-5 lg:space-y-0">
+          <input type="text" placeholder="Email Address" class="body-md w-full rounded-full border border-on-brand bg-transparent px-8 py-4 text-on-brand placeholder:text-on-brand/70 focus:outline-0 focus:ring-1 focus:ring-on-brand lg:w-96">
+          {{> Button label=newsletter-button-label style="secondary" size="lg"}}
+        </div>
+      </div>
+      <!-- Footer content -->
+      <div class="pb-14 pt-10 lg:py-16">
+        <div class="flex flex-col space-y-10 lg:flex-row lg:space-x-24 lg:space-y-0">
+          <div class="flex flex-col space-y-6">
+            {{#if logo}}
+              <img src="{{logo}}" alt="Logo" class="h-10 w-auto max-w-[120px]">
+            {{/if}}
+            <p class="body-md text-on-brand">
+              {{icon "envelope-simple" size="16"}} {{email}}
+            </p>
+            <p class="body-md text-on-brand">
+              {{icon "phone" size="16"}} {{phone}}
+            </p>
+            <p class="body-md text-on-brand">
+              {{icon "clock" size="16"}} {{hours}}
+            </p>
+            {{#if (length social-links)}}
+              <div class="flex space-x-5">
+                {{#each social-links}}
+                  <a href="{{url}}" class="flex h-8 w-8 items-center justify-center rounded-full bg-on-brand/10 text-on-brand hover:bg-on-brand hover:text-brand transition duration-300" aria-label="{{name}}">
+                    {{icon icon size="16"}}
+                  </a>
+                {{/each}}
+              </div>
+            {{/if}}
+          </div>
+          <div class="grid grid-cols-2 gap-x-12 gap-y-10 lg:gap-x-24">
+            <div class="flex flex-col space-y-4">
+              <p class="heading-xs text-on-brand">{{links-1-title}}</p>
+              {{#each links-1}}
+                <a class="body-sm text-on-brand hover:underline" href="{{link}}">{{label}}</a>
+              {{/each}}
+            </div>
+            <div class="flex flex-col space-y-4">
+              <p class="heading-xs text-on-brand">{{links-2-title}}</p>
+              {{#each links-2}}
+                <a class="body-sm text-on-brand hover:underline" href="{{link}}">{{label}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="py-6">
+        <p class="body-md text-on-brand text-center">{{copyright}}</p>
+      </div>
+    </div>
+  </div>
+</footer>

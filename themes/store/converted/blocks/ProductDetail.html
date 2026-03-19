@@ -1,0 +1,26 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    {{#if breadcrumb}}
+      <p class="heading-md text-fg-muted mb-8">{{breadcrumb}}</p>
+    {{/if}}
+    <div class="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-16">
+      <div class="flex items-center justify-center">
+        <img src="{{image}}" alt="{{name}}" class="mx-auto max-h-[500px] object-contain">
+      </div>
+      <div>
+        <h1 class="heading-xl text-fg">{{name}}</h1>
+        <h5 class="heading-sm text-fg mt-4 lg:mt-8">Price</h5>
+        <p class="heading-md text-brand">{{price}}</p>
+        <h5 class="heading-sm text-fg mt-8">Description</h5>
+        <p class="body-md text-fg-muted mt-2">{{description}}</p>
+        {{#if (length buttons)}}
+          <div class="mt-8 flex flex-wrap gap-4">
+            {{#each buttons}}
+              {{> Button link=link label=label style=style size=size}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

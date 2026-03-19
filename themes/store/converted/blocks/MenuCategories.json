@@ -1,0 +1,77 @@
+{
+  "description": "MenuCategories",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Explore"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Our Delicious Menu"
+    },
+    {
+      "type": "items",
+      "name": "Categories",
+      "default": [
+        {
+          "image": "https://placehold.co/130x130/FFF4F5/DB6885?text=Cakes",
+          "name": "Cakes",
+          "count": "3",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/130x130/FFF4F5/DB6885?text=Cupcakes",
+          "name": "Cupcakes",
+          "count": "3",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/130x130/FFF4F5/DB6885?text=Donuts",
+          "name": "Donuts",
+          "count": "2",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/130x130/FFF4F5/DB6885?text=Cookies",
+          "name": "Cookies",
+          "count": "1",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/130x130/FFF4F5/DB6885?text=Macarons",
+          "name": "Macarons",
+          "count": "0",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/130x130/FFF4F5/DB6885?text=Drinks",
+          "name": "Drinks",
+          "count": "0",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Count"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

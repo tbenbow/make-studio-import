@@ -1,0 +1,22 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 gap-y-6 lg:grid-cols-2 lg:gap-x-24">
+      <div class="grid grid-cols-2 gap-x-4 lg:gap-x-7">
+        <img src="{{image-1}}" alt="About" class="rounded-2xl w-full object-cover">
+        <img src="{{image-2}}" alt="About" class="rounded-2xl w-full object-cover mt-10 lg:mt-12">
+      </div>
+      <div>
+        <p class="heading-xs text-brand lg:pt-5">{{eyebrow}}</p>
+        <h2 class="heading-lg text-fg mt-2">{{headline}}</h2>
+        <p class="body-md text-fg-muted mt-4 lg:max-w-[436px]">{{description}}</p>
+        {{#if (length buttons)}}
+          <div class="mt-6 flex flex-wrap gap-4">
+            {{#each buttons}}
+              {{> Button link=link label=label style=style size=size}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,129 @@
+{
+  "description": "PopularMenu",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Popular Menu"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Most Popular Food"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Cake",
+          "name": "Chococheese Cake",
+          "price": "$2.5",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Donut",
+          "name": "Pink Donuts",
+          "price": "$2.8",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Choco",
+          "name": "Choco Cake",
+          "price": "$2.9",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Sweet",
+          "name": "Sweet Cake",
+          "price": "$2.3",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Pink",
+          "name": "Pink Sweet",
+          "price": "$2.1",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Cookies",
+          "name": "Choco Cookies",
+          "price": "$2.8",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Donuts",
+          "name": "Sweet Donuts",
+          "price": "$1.8",
+          "link": "#"
+        },
+        {
+          "image": "https://placehold.co/200x200/FFF4F5/DB6885?text=Choco",
+          "name": "Sweet Choco",
+          "price": "$3.6",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "See All Menu",
+          "link": "#",
+          "style": "outline",
+          "size": "medium"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "dataStoreId": "698be9a2db8e5c335edc75e1"
+            }
+          },
+          {
+            "type": "select",
+            "name": "Size",
+            "default": "medium",
+            "config": {
+              "dataStoreId": "698c898950a2e6bef85751ae"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

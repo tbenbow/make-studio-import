@@ -23,8 +23,9 @@ themes/*/.sync-state.json
 # Workflow progress state (local/ephemeral)
 .state/
 
-# One-off / throwaway scripts (underscore-prefixed)
+# One-off / throwaway scripts (underscore-prefixed or archived)
 scripts/_*.ts
+scripts/archive/
 
 # Audit artifacts
 _block-audit.json

@@ -1,0 +1,42 @@
+{
+  "description": "Values",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Values",
+      "default": [
+        {
+          "title": "Collective Collaboration",
+          "number": "01",
+          "description": "We believe that real change happens when we join forces. By partnering with local residents, organizations, farmers, and businesses, we create a network of support."
+        },
+        {
+          "title": "Commitment to Community",
+          "number": "02",
+          "description": "At Fofood, our mission is simple - ensuring equitable access to fresh, healthy, and affordable food for all."
+        },
+        {
+          "title": "Technology-driven Impact",
+          "number": "03",
+          "description": "Embracing the power of technology, we leverage our online platform to reach and empower a wider audience."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Number"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

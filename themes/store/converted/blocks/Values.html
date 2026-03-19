@@ -1,0 +1,15 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:gap-x-8">
+      {{#each values}}
+        <div class="{{#if @index}}lg:mt-14{{/if}}">
+          <div class="flex h-14 w-14 items-center justify-center rounded-full bg-base-muted">
+            <p class="heading-md text-brand">{{number}}</p>
+          </div>
+          <h5 class="heading-sm text-fg mt-6">{{title}}</h5>
+          <p class="body-md text-fg-muted mt-4">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

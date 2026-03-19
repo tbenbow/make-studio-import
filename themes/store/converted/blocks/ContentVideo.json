@@ -1,0 +1,19 @@
+{
+  "description": "ContentVideo",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "One Meal at a Time"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Through collaborative efforts with local residents, organizations, and key stakeholders, we have established a strong network of support."
+    },
+    {
+      "type": "text",
+      "name": "Video"
+    }
+  ]
+}

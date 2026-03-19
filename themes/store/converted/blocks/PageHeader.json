@@ -1,0 +1,15 @@
+{
+  "description": "PageHeader",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Breadcrumb",
+      "default": "Home / About"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "About"
+    }
+  ]
+}

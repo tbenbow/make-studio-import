@@ -1,0 +1,36 @@
+<section class="relative bg-base-muted pt-24 lg:min-h-screen lg:flex lg:items-center">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="py-10 lg:py-0">
+        <p class="heading-xs text-brand">{{eyebrow}}</p>
+        <h1 class="heading-xl text-fg mt-2 lg:mt-4">{{headline}}</h1>
+        <p class="body-lg text-fg-muted mt-2 lg:mt-6">{{description}}</p>
+        {{#if (length buttons)}}
+          <div class="mt-4 flex flex-wrap gap-4 lg:mt-8">
+            {{#each buttons}}
+              {{> Button link=link label=label style=style size=size}}
+            {{/each}}
+          </div>
+        {{/if}}
+        <div class="mt-8 flex items-center space-x-4 lg:mt-16">
+          <div class="flex -space-x-2">
+            {{#each avatars}}
+              <img src="{{image}}" alt="Customer" class="inline-block h-12 w-12 rounded-full ring-2 ring-white">
+            {{/each}}
+          </div>
+          <div>
+            <p class="body-sm font-bold text-fg">{{social-proof-label}}</p>
+            <div class="mt-1 flex items-center space-x-1">
+              {{icon "star-fill" size="14" class="text-yellow"}}
+              <p class="body-sm font-bold text-fg">{{rating}}</p>
+              <p class="body-sm text-fg">{{rating-label}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center lg:justify-end">
+        <img src="{{image}}" alt="{{headline}}" class="max-h-[500px] object-contain">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<section class="py-16 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    {{#if breadcrumb}}
+      <p class="heading-md text-fg-muted mb-4">{{breadcrumb}}</p>
+    {{/if}}
+    <div class="mx-auto lg:w-4/5">
+      <h1 class="heading-lg text-fg text-center">{{title}}</h1>
+      <div class="mt-4 flex items-center justify-center space-x-3">
+        {{#if author-avatar}}
+          <img src="{{author-avatar}}" alt="{{author}}" class="h-12 w-12 rounded-full ring-2 ring-white">
+        {{/if}}
+        <div class="space-y-1">
+          <span class="body-sm font-bold text-fg block">By {{author}}</span>
+          <span class="body-sm font-bold text-fg-muted block">{{date}}</span>
+        </div>
+      </div>
+      <div class="mx-auto lg:w-3/4">
+        {{#if image}}
+          <div class="mt-4 h-[240px] rounded-2xl bg-cover bg-center lg:h-[430px]" style="background-image:url({{image}})"></div>
+        {{/if}}
+        <div class="mt-8 prose">
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

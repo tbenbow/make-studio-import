@@ -4,6 +4,94 @@ Accumulated insights from site conversions. Read this before starting a new conv
 
 ---
 
+## Fofood Store (2026-03-18)
+
+**URL**: https://fofood-store.vercel.app/
+**Framework**: Next.js App Router + Tailwind CSS
+**Theme**: Light pink (base=#ffffff, brand=#DB6885, base-muted=#FFF4F5)
+**Fonts**: Figtree (headings + body) + Fredoka (eyebrows/captions only)
+**Approach**: Full conversion with Playwright analysis, R2 image upload, Alpine carousel
+
+### Key Lessons
+
+#### Extract typography from computed styles, never guess
+Next.js compiles Tailwind config into opaque chunks — you can't read the source CSS. Use Playwright `getComputedStyle()` on every typography class to get exact fontFamily, fontSize, fontWeight, lineHeight, and letterSpacing values. The initial theme had Fredoka for headings when it was actually Figtree — the mistake was visible immediately. Run the extraction script for both desktop (1440px) and mobile (375px) viewports to get mobile overrides too.
+
+#### `setPageContent` adds missing blocks to the page body
+If you call `setPageContent(pageId, { Navbar: {...}, Hero: {...} })` and Navbar is a layout block (not in page body), the API will ADD Navbar to the page's `blocks` array. This causes duplicate rendering — Navbar appears once from the layout and once from the body. **Always exclude layout blocks (Navbar, Footer) from setPageContent payloads.** Set their content separately or rely on field defaults.
+
+#### `updatePage({ blocks })` generates new instance IDs that orphan content
+Content is stored in `page.content` keyed by block instance UUIDs. When you call `updatePage` with `blocks: [{ id: crypto.randomUUID(), ... }]`, new instance IDs are created and the content becomes unreachable. **Always set block order BEFORE setting content.** The correct sequence is:
+1. `updatePage(pageId, { blocks: [...] })` — establish order with new IDs
+2. `setPageContent(pageId, { BlockName: { ... } })` — content maps to current IDs
+
+Never call `updatePage` to fix block order AFTER `setPageContent` — it will wipe the content.
+
+#### Buttons should use items field with data store selects
+Don't use separate `CTA Label` / `CTA Link` text fields for buttons. Use an `items` field named "Buttons" with sub-fields:
+- `Label` (text) — first, so it's the CMS list label
+- `Link` (text)
+- `Style` (select with `config.dataStoreId` pointing to the "Button Style" data store)
+- `Size` (select with `config.dataStoreId` pointing to the "Button Size" data store)
+
+Default style to `primary`, size to `medium`. The Button partial needs a switch to map data store values (`small`/`medium`/`large`) to CSS classes (`sm`/`md`/`lg`).
+
+#### First items sub-field must be a human-readable string
+The CMS uses the first sub-field as the list item label. If the first field is an `image`, every item shows a URL as its label. Always put a text field (Name, Title, Label) first in `config.fields`.
+
+#### Data store selects use `config.dataStoreId`, not `selectOptions`
+For selects backed by a site-wide data store, use `{ "type": "select", "config": { "dataStoreId": "..." } }`. Don't inline `selectOptions` — data stores keep options consistent across all blocks. Get IDs from `site.dataStores` on the site object.
+
+#### Lazy-loaded images need Playwright scroll or direct URL construction
+`page.evaluate()` only captures images in the initial viewport. For Next.js sites with lazy loading, either scroll the page first (`window.scrollTo` in a loop) or construct URLs from known patterns (e.g., `/_next/image?url=...&w=640&q=75` or `/assets/img/food-{N}.png`).
+
+#### Pull before sync overwrites local files
+Running `npm run pull` downloads ALL remote blocks into the local theme directory — including blocks from other themes on the same site. This overwrites any local files you've created. Use `--only` on sync to target specific blocks, and don't pull into a fresh theme directory that shares a site with an existing block library.
+
+#### Items array entries must include `id` fields — now fixed in the API
+The CMS editor needs each item in an items array to have a unique `id` field. Without IDs, clicking any item shows the first item's content, and editing any item overwrites the first. The `set-content` endpoint was patched (`make-studio/server/routes/pages.ts`) to auto-add `id: crypto.randomUUID()` to items that lack one. This means `setPageContent` now handles it — no need to add IDs manually in content scripts. Items sub-field keys should use the slugified form (not sub-field UUIDs).
+
+#### Register images in media library in batches of 20
+`uploadFilesFromUrls` has a 20-file limit per request. When uploading many images, batch them: `allFiles.slice(i, i + 20)`. The first upload script hit this limit silently, leaving most images unregistered in the media library (they still rendered via CDN but weren't selectable in the CMS image picker).
+
+#### Multi-page conversions: reuse blocks, only create what's new
+After the initial homepage conversion (14 blocks), subsequent pages needed far fewer new blocks:
+- **About page**: 4 new blocks (PageHeader, Values, ContentVideo, ChefGrid) + 2 reused (AboutUs, Testimonials)
+- **Blog page**: 0 new blocks — all reused (PageHeader, Blog×2)
+- **Product detail**: 1 new block (ProductDetail) + 1 reused (PopularMenu)
+- **Blog post**: 1 new block (BlogPost) + 1 reused (Blog)
+
+Design blocks to be reusable across pages by keeping content in fields rather than hardcoding.
+
+#### Clean up seed blocks at the start of a conversion
+When converting onto an existing site, delete all seed/default blocks first — or do it after conversion. The site ended up with 99 leftover blocks from a previous theme alongside our 14 Store blocks. Use a cleanup script that keeps only the blocks you created: `client.deleteBlock(id)` for each non-conversion block. This should be a standard step in the conversion workflow.
+
+#### Preview URLs for non-index pages need `.html` extension
+The preview worker doesn't do clean URL rewriting. `/about` returns 404 but `/about.html` works. When verifying new pages, always check with the `.html` extension. This is a worker/CDN routing issue, not a build issue — the page is generated correctly.
+
+#### Alpine.js carousel pattern for testimonials/sliders
+```html
+<div x-data="{ active: 0, count: {{length items}} }">
+  <div class="overflow-hidden">
+    <div class="flex transition-transform duration-500"
+         :style="'transform: translateX(-' + (active * 100) + '%)'">
+      {{#each items}}
+        <div class="w-full flex-shrink-0 px-4">...</div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="flex justify-center gap-3">
+    <template x-for="i in count">
+      <button @click="active = i - 1"
+              :class="active === i - 1 ? 'bg-brand' : 'bg-brand/30'"
+              class="h-3 w-3 rounded-full"></button>
+    </template>
+  </div>
+</div>
+```
+
+---
+
 ## PeakPerformance (2026-02-17)
 
 **URL**: https://699333a35bec310008209eec--peakperformance-nuxt.netlify.app/
