@@ -1,0 +1,40 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Label", "default": "Custom Pieces" },
+    { "type": "wysiwyg", "name": "Headline", "default": "Made for You,<br>Shaped by Story" },
+    { "type": "text", "name": "Description", "default": "Beyond our seasonal and signature collections, Allison accepts a limited number of custom commissions each month. Whether it's a reimagined heirloom or something entirely new, every custom piece begins with conversation." },
+    {
+      "type": "items",
+      "name": "Features",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Text" }
+        ]
+      },
+      "default": [
+        { "text": "Choose your metals — recycled silver, copper, or bronze" },
+        { "text": "Select stones from our ethically sourced collection" },
+        { "text": "Rings, earrings, necklaces, or something entirely your own" },
+        { "text": "Typical turnaround of 4–6 weeks" }
+      ]
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Description" },
+          { "type": "text", "name": "Numeral" }
+        ]
+      },
+      "default": [
+        { "title": "Share Your Vision", "description": "Tell Allison what you're dreaming of — a sketch, a feeling, a memory to carry with you.", "numeral": "01" },
+        { "title": "Design Together", "description": "Allison sketches options and selects materials. You'll approve the direction before any metal is shaped.", "numeral": "02" },
+        { "title": "Handcraft & Ship", "description": "Your piece is made entirely by hand in the Hackensack workshop, then carefully packaged and sent to you.", "numeral": "03" }
+      ]
+    }
+  ]
+}

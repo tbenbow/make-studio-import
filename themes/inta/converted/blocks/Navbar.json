@@ -1,0 +1,55 @@
+{
+  "description": "Navbar",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "INTA"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Services",
+          "url": "#services"
+        },
+        {
+          "label": "About",
+          "url": "#about"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Talk to Us"
+    },
+    {
+      "type": "text",
+      "name": "Button Link",
+      "default": "#contact"
+    }
+  ]
+}

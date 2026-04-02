@@ -1,0 +1,29 @@
+{
+  "description": "About",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Photo"
+    },
+    {
+      "type": "text",
+      "name": "Initial",
+      "default": "B"
+    },
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Founder"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Brooks"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Bio",
+      "default": "<p>Brooks has held senior leadership roles at major carriers, SD-WAN pioneers, and cybersecurity firms. He launched Comcast Business's Major Account Program and has spent decades navigating the full vendor landscape.</p><p>That experience is INTA's edge — knowing how vendors think, how deals really work, and where the leverage lives in every negotiation.</p>"
+    }
+  ]
+}

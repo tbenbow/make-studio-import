@@ -1,0 +1,12 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Quote with image",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Testimonials" },
+    { "type": "wysiwyg", "name": "Quote", "default": "<p>HeavenHomes helped us find our dream home. We were able to find a home that was perfect for our family. We are so grateful for their help and support throughout the process.</p>" },
+    { "type": "text", "name": "Name", "default": "John and Lisa Anderson" },
+    { "type": "text", "name": "Byline", "default": "Happy Homeowners" },
+    { "type": "image", "name": "Image", "default": "https://placehold.co/520x600/e2e8f0/64748b?text=Testimonial" }
+  ]
+}

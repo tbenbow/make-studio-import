@@ -1,0 +1,32 @@
+<section class="py-16 bg-base">
+  <div class="max-w-7xl mx-auto px-6">
+    {{#if eyebrow}}
+      <p class="body-sm font-medium text-fg-muted uppercase tracking-wider mb-8">{{eyebrow}}</p>
+    {{/if}}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="bg-brand rounded-2xl p-10 flex flex-col gap-6 text-on-brand">
+        <h3 class="heading-sm">{{cta-headline}}</h3>
+        <p class="body-md text-on-brand/80">{{cta-description}}</p>
+        {{#if (length cta-buttons)}}
+          <div class="flex gap-3">
+            {{#each cta-buttons}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      <div class="bg-base-muted rounded-2xl p-10 flex flex-col gap-6">
+        <h3 class="heading-sm text-fg">{{newsletter-headline}}</h3>
+        <p class="body-md text-fg-muted">{{newsletter-description}}</p>
+        <div class="flex gap-3">
+          <input type="email" placeholder="{{default email-placeholder 'Enter your email'}}" class="flex-1 rounded-lg border border-border bg-base px-4 py-3 body-md text-fg placeholder:text-fg-alt" />
+          {{#if (length newsletter-buttons)}}
+            {{#each newsletter-buttons}}
+              {{> Button}}
+            {{/each}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

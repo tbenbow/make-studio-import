@@ -1,0 +1,47 @@
+{
+  "description": "Footer",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Social Links",
+      "default": [
+        {
+          "name": "TikTok",
+          "url": "#",
+          "icon": "tiktok-logo"
+        },
+        {
+          "name": "Instagram",
+          "url": "#",
+          "icon": "instagram-logo"
+        },
+        {
+          "name": "Twitter",
+          "url": "#",
+          "icon": "x-logo"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2025 Kirovi Productions. All images &amp; videos are for style purposes only and are the copyright of the original creator(s).</p>"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Property cards grid",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "Latest Property Listings" },
+    { "type": "text", "name": "Subheadline", "default": "Discover the newest additions to our exclusive real estate portfolio." },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "id": "pl-btn1", "label": "View All Listings", "link": "/listings", "style": "outline", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Properties",
+      "default": [
+        {
+          "id": "prop1",
+          "name": "123 Serenity Lane",
+          "price": "$850,000",
+          "description": "A spacious and modern home with an open floor plan, large windows, and a beautifully landscaped garden.",
+          "image": "https://placehold.co/768x768/e2e8f0/64748b?text=Property+1",
+          "sqft": "4,500",
+          "beds": "4",
+          "baths": "3"
+        },
+        {
+          "id": "prop2",
+          "name": "456 Harmony Drive",
+          "price": "$550,000",
+          "description": "A beautiful and spacious home with a large garden, swimming pool, and stunning views of the city.",
+          "image": "https://placehold.co/768x768/e2e8f0/64748b?text=Property+2",
+          "sqft": "2,500",
+          "beds": "3",
+          "baths": "2.5"
+        },
+        {
+          "id": "prop3",
+          "name": "789 Bliss Boulevard",
+          "price": "$650,000",
+          "description": "A stunning and luxurious home with a large garden, swimming pool, and breathtaking views of the ocean.",
+          "image": "https://placehold.co/768x768/e2e8f0/64748b?text=Property+3",
+          "sqft": "3,200",
+          "beds": "3",
+          "baths": "2"
+        }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Price" },
+          { "type": "textarea", "name": "Description" },
+          { "type": "image", "name": "Image" },
+          { "type": "text", "name": "Sqft" },
+          { "type": "text", "name": "Beds" },
+          { "type": "text", "name": "Baths" }
+        ]
+      }
+    }
+  ]
+}

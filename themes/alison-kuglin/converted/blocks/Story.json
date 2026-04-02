@@ -1,0 +1,25 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Label", "default": "The Material Story" },
+    { "type": "wysiwyg", "name": "Headline", "default": "From Reclaimed<br>to Remarkable" },
+    { "type": "wysiwyg", "name": "Description", "default": "<p>In a world of mass-produced jewelry, Allison transforms what others discard into something extraordinary. Recycled metals from her father's job site. Thrifted treasures given new purpose. Wire shaped by hand into wearable art.</p><p>Every material has a past — and in Allison's hands, a luminous future. Stones are sourced from a team of sisters in the mountains, and metals come from trusted US companies committed to sustainable practices.</p>" },
+    {
+      "type": "items",
+      "name": "Cards",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "text", "name": "Description" },
+          { "type": "text", "name": "Icon" }
+        ]
+      },
+      "default": [
+        { "title": "Recycled Metals", "description": "Salvaged from construction sites and refined with care — each piece begins its second life in our workshop.", "icon": "♦" },
+        { "title": "Mountain Stones", "description": "Ethically sourced by a family of sisters who know every trail and stream where these gems are found.", "icon": "♣" },
+        { "title": "Made by Hand", "description": "Wire to jewelry, start to finish. No factory lines — just patient hands, simple tools, and deep intention.", "icon": "✿" }
+      ]
+    }
+  ]
+}

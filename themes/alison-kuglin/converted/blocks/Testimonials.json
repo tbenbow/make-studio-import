@@ -1,0 +1,24 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Label", "default": "Kind Words" },
+    { "type": "text", "name": "Headline", "default": "Worn & Loved" },
+    {
+      "type": "items",
+      "name": "Items",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Author" },
+          { "type": "text", "name": "Location" },
+          { "type": "textarea", "name": "Quote" }
+        ]
+      },
+      "default": [
+        { "author": "Sarah M.", "location": "Minneapolis, MN", "quote": "I've never had a piece of jewelry that feels so intentional. The weight, the texture, the way it catches the light — it's clearly made by someone who cares deeply about their craft." },
+        { "author": "Rachel K.", "location": "Duluth, MN", "quote": "Allison made my wedding band from recycled copper and a stone I found on a trip with my grandmother. I cry every time I look at it. Truly one of a kind." },
+        { "author": "Jennifer L.", "location": "Brainerd, MN", "quote": "I bought the autumn collection earrings last year and wear them almost daily. They're the only jewelry I get asked about constantly. People can feel the difference." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Alternating features",
+  "fields": [
+    { "type": "text", "name": "Headline 1", "default": "Why choose us?" },
+    { "type": "textarea", "name": "Description 1", "default": "We are committed to providing exceptional service and unparalleled expertise in the real estate market." },
+    {
+      "type": "items",
+      "name": "Features 1",
+      "default": [
+        { "id": "f1", "label": "Expert agents" },
+        { "id": "f2", "label": "Comprehensive listings" },
+        { "id": "f3", "label": "Personalized service" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons 1",
+      "default": [
+        { "id": "wcu-btn1", "label": "Learn more", "link": "#", "style": "ghost", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    },
+    { "type": "image", "name": "Image 1", "default": "https://placehold.co/960x708/e2e8f0/64748b?text=Why+Choose+Us" },
+    { "type": "text", "name": "Headline 2", "default": "Benefits of choosing HeavenHomes" },
+    { "type": "textarea", "name": "Description 2", "default": "We offer a range of benefits that set us apart from other real estate agencies." },
+    {
+      "type": "items",
+      "name": "Features 2",
+      "default": [
+        { "id": "f4", "label": "Tailored approach" },
+        { "id": "f5", "label": "Extensive network" },
+        { "id": "f6", "label": "Proven track record" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons 2",
+      "default": [
+        { "id": "wcu-btn2", "label": "Learn more", "link": "#", "style": "ghost", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    },
+    { "type": "image", "name": "Image 2", "default": "https://placehold.co/960x708/e2e8f0/64748b?text=Benefits" }
+  ]
+}

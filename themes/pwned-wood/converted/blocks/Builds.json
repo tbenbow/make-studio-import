@@ -1,0 +1,73 @@
+{
+  "description": "Builds",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "ls -la ./portfolio"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Recent Deploys"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "name": "The Anderson Compound",
+          "spec": "800 sqft composite · multi-level · cable rail",
+          "status": "SHIPPED",
+          "image": "https://placehold.co/600x220/1A1A1A/333333?text=Build+1",
+          "building": false
+        },
+        {
+          "name": "Lakeside Zero-Day",
+          "spec": "1200 sqft cedar · pergola · integrated lighting",
+          "status": "SHIPPED",
+          "image": "https://placehold.co/600x220/1A1A1A/333333?text=Build+2",
+          "building": false
+        },
+        {
+          "name": "The Thompson Rootkit",
+          "spec": "600 sqft pressure-treated · wraparound · stairs",
+          "status": "SHIPPED",
+          "image": "https://placehold.co/600x220/1A1A1A/333333?text=Build+3",
+          "building": false
+        },
+        {
+          "name": "Project Backdoor Patio",
+          "spec": "450 sqft composite · glass rail · hot tub pad",
+          "status": "BUILDING",
+          "image": "https://placehold.co/600x220/1A1A1A/333333?text=Build+4",
+          "building": true
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Spec"
+          },
+          {
+            "type": "text",
+            "name": "Status"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "select",
+            "name": "Building"
+          }
+        ]
+      }
+    }
+  ]
+}

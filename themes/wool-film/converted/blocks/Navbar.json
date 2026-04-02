@@ -1,0 +1,46 @@
+{
+  "description": "Navbar",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo",
+      "default": "https://makestudio.site/69cdf3f08d3cdd7487d07bd2/wool-logo.webp"
+    },
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "WOOL"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Creator & Crew",
+          "url": "/crew"
+        },
+        {
+          "label": "Synopsis",
+          "url": "/synopsis"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    }
+  ]
+}

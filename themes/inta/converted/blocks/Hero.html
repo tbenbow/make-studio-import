@@ -1,0 +1,30 @@
+<section class="py-16 lg:py-24 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <div class="flex flex-col gap-6">
+      {{#if eyebrow}}
+        <p class="body-sm font-medium text-brand">{{eyebrow}}</p>
+      {{/if}}
+      <h1 class="heading-xl text-fg">{{headline}}</h1>
+      <div class="body-lg text-fg-muted max-w-lg">{{{subheadline}}}</div>
+      {{#if (length buttons)}}
+        <div class="flex flex-wrap gap-4 mt-2">
+          {{#each buttons}}
+            {{> Button}}
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+    <div class="hidden lg:block">
+      <div class="bg-base-muted rounded-3xl p-10">
+        <div class="grid grid-cols-2 gap-4">
+          {{#each stats}}
+            <div class="bg-base rounded-xl p-5 shadow-sm">
+              <div class="heading-lg text-brand mb-1">{{value}}</div>
+              <div class="body-sm text-fg-muted">{{label}}</div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

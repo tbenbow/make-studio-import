@@ -1,0 +1,26 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Service cards grid",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Our services" },
+    {
+      "type": "items",
+      "name": "Services",
+      "default": [
+        { "id": "svc1", "title": "Buying a home", "description": "We provide expert guidance and support to help you secure the best mortgage rates and terms." },
+        { "id": "svc2", "title": "Property management", "description": "Our property management services ensure that your investment is well-maintained and profitable." },
+        { "id": "svc3", "title": "Selling your property", "description": "We offer comprehensive services to sell your property quickly and at the best price." },
+        { "id": "svc4", "title": "Investment consultation", "description": "Our investment consultants provide expert advice and strategic planning to help you build." },
+        { "id": "svc5", "title": "Market analysis", "description": "Our market analysis services provide you with detailed insights into the current market trends." },
+        { "id": "svc6", "title": "Home staging", "description": "Our home staging services enhance the appeal of your property, making it more attractive." }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "textarea", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

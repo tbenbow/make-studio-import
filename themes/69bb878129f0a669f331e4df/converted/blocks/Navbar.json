@@ -1,0 +1,27 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Dark sticky header",
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "HeavenHomes™" },
+    { "type": "link", "name": "Logo Link", "default": "/" },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        { "id": "nav1", "label": "Home", "url": "/" },
+        { "id": "nav2", "label": "About us", "url": "/about" },
+        { "id": "nav3", "label": "Listings", "url": "/listings" },
+        { "id": "nav4", "label": "Agents", "url": "/agents" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Url" }
+        ]
+      }
+    },
+    { "type": "text", "name": "Button Label", "default": "Get In Touch" },
+    { "type": "link", "name": "Button Link", "default": "/contact" }
+  ]
+}

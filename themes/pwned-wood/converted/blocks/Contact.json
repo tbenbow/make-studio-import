@@ -1,0 +1,59 @@
+{
+  "description": "Contact",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "ssh contact@pwned.wood"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Open a Ticket"
+    },
+    {
+      "type": "text",
+      "name": "Description",
+      "default": "Ready to get pwned? (Your backyard, we mean.) Drop us a line and we'll scope the project. Free estimates. No sprint planning required."
+    },
+    {
+      "type": "text",
+      "name": "Submit Text",
+      "default": "Deploy Message"
+    },
+    {
+      "type": "items",
+      "name": "Info",
+      "default": [
+        {
+          "label": "LOCATION",
+          "value": "Hackensack, MN"
+        },
+        {
+          "label": "EMAIL",
+          "value": "tom@pwned.wood"
+        },
+        {
+          "label": "UPTIME",
+          "value": "Mon-Sat, 7AM-6PM"
+        },
+        {
+          "label": "RESPONSE",
+          "value": "< 24 hours (faster than our old CI/CD)"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Value"
+          }
+        ]
+      }
+    }
+  ]
+}

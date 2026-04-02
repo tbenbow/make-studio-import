@@ -1,0 +1,30 @@
+{
+  "description": "Newsletter",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Stay close"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "New pieces, studio notes &<br>the occasional behind-the-scenes"
+    },
+    {
+      "type": "text",
+      "name": "Description",
+      "default": "I send a letter once or twice a month — never more. Just quiet updates from the bench."
+    },
+    {
+      "type": "text",
+      "name": "Placeholder",
+      "default": "Your email address"
+    },
+    {
+      "type": "text",
+      "name": "Button Text",
+      "default": "Subscribe"
+    }
+  ]
+}

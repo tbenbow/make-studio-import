@@ -1,0 +1,39 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Partner logos section",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "Our Trusted Partners" },
+    { "type": "wysiwyg", "name": "Description", "default": "<p>We believe in the power of strong partnerships. Our trusted partners include some of the most respected names in the real estate and related industries.</p>" },
+    {
+      "type": "items",
+      "name": "Logos",
+      "default": [
+        { "id": "p1", "name": "Flexport", "image": "https://placehold.co/200x80/e2e8f0/64748b?text=Flexport" },
+        { "id": "p2", "name": "Check", "image": "https://placehold.co/200x80/e2e8f0/64748b?text=Check" },
+        { "id": "p3", "name": "Corning", "image": "https://placehold.co/200x80/e2e8f0/64748b?text=Corning" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "image", "name": "Image" }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "id": "part-btn1", "label": "Learn More", "link": "#", "style": "outline", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    }
+  ]
+}

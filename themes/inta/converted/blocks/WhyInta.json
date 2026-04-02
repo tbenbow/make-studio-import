@@ -1,0 +1,44 @@
+{
+  "description": "WhyInta",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Why INTA"
+    },
+    {
+      "type": "items",
+      "name": "Reasons",
+      "default": [
+        {
+          "title": "Decades of experience",
+          "description": "<p>Deep expertise across MSPs, telecom, cybersecurity, cloud, SD-WAN, and SaaS. We've evaluated the vendors you're considering — probably more than once.</p>"
+        },
+        {
+          "title": "Vendor-neutral",
+          "description": "<p>We work for you, not the vendor. No commissions, no referral fees, no conflicts of interest. Our only incentive is getting you to the right decision.</p>"
+        },
+        {
+          "title": "Give your team time back",
+          "description": "<p>We absorb the meeting load, the follow-ups, and all the vendor coordination. Your engineers and managers stay focused on delivery.</p>"
+        },
+        {
+          "title": "Proprietary framework",
+          "description": "<p>Our prioritization scoring system gives you a defensible, data-driven basis for every technology investment decision.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

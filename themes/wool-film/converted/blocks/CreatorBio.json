@@ -1,0 +1,30 @@
+{
+  "description": "CreatorBio",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Meet the Creator"
+    },
+    {
+      "type": "image",
+      "name": "Photo",
+      "default": "https://placehold.co/600x600/141414/ffffff?text=Creator"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Jamey Erickson"
+    },
+    {
+      "type": "text",
+      "name": "Role",
+      "default": "Creator, Writer & Director"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Bio",
+      "default": "<p>Jamey has 25 years in the creative industry creating and working on everything from documentary films, small commercial productions, immersive website experiences, marketing activations and event series.</p><p>Writing his first short film 'WOOL' is a lifelong dream. He always dreamed of writing stories that you feel and that develop over time. His work focuses on memory, perception, and how those memories can change over time, and that passion is a big part of what led him to put pen to paper.</p><p>After writing scripts solely for himself over the past 5 years, he finally decided to make one of those scripts into something real, and he plans to debut and release WOOL at film festivals.</p>"
+    }
+  ]
+}

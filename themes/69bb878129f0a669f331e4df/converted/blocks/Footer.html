@@ -1,0 +1,32 @@
+<footer class="bg-base-alt">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <div class="flex flex-col gap-4 lg:col-span-1">
+        <a href="/" class="text-xl font-semibold text-on-brand">{{default logo-text "HeavenHomes™"}}</a>
+        <h2 class="heading-lg text-on-brand">{{tagline}}</h2>
+      </div>
+      <div class="flex flex-col gap-3 lg:col-span-1">
+        <p class="body-sm font-medium text-on-brand/60 uppercase tracking-wider">{{default contact-email "HEAVENHOMES@INFO.COM"}}</p>
+        <p class="body-sm text-on-brand/80">{{default address "123 Main Street, Hometown, USA"}}</p>
+        <p class="body-sm text-on-brand/80">{{default phone "(123) 456-7890"}}</p>
+      </div>
+      {{#if (length links-col-1)}}
+        <div class="flex flex-col gap-3 lg:col-span-1">
+          {{#each links-col-1}}
+            <a href="{{url}}" class="body-md font-semibold text-on-brand/80 hover:text-on-brand transition">{{label}}</a>
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if (length links-col-2)}}
+        <div class="flex flex-col gap-3 lg:col-span-1">
+          {{#each links-col-2}}
+            <a href="{{url}}" class="body-md font-semibold text-on-brand/80 hover:text-on-brand transition">{{label}}</a>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+    <div class="mt-12 pt-6 border-t border-on-brand/20">
+      <p class="body-sm text-on-brand/60">{{{fineprint}}}</p>
+    </div>
+  </div>
+</footer>

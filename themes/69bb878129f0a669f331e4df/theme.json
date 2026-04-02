@@ -1,0 +1,132 @@
+{
+  "fonts": [
+    { "family": "Plus Jakarta Sans", "weight": 600, "style": "normal" },
+    { "family": "Plus Jakarta Sans", "weight": 500, "style": "normal" },
+    { "family": "Inter", "weight": 400, "style": "normal" },
+    { "family": "Inter", "weight": 500, "style": "normal" },
+    { "family": "DM Sans", "weight": 600, "style": "normal" }
+  ],
+  "systemColors": {
+    "brand": "#EA580C",
+    "on-brand": "#FFFFFF",
+    "base": "#FFFFFF",
+    "base-muted": "#F1F5F9",
+    "base-alt": "#0F172A",
+    "panel": "#0F172A",
+    "fg": "#0F172A",
+    "fg-muted": "#64748B",
+    "fg-alt": "#94A3B8",
+    "border": "#E2E8F0"
+  },
+  "customColors": [
+    { "name": "orange-dark", "value": "#C2410C" },
+    { "name": "orange-light", "value": "#FFF7ED" }
+  ],
+  "headingTypography": {
+    "fontFamily": "Plus Jakarta Sans",
+    "xl": { "fontSize": 72, "lineHeight": 80, "letterSpacing": -1.5 },
+    "lg": { "fontSize": 48, "lineHeight": 56, "letterSpacing": -1 },
+    "md": { "fontSize": 36, "lineHeight": 44, "letterSpacing": -0.5 },
+    "sm": { "fontSize": 24, "lineHeight": 32, "letterSpacing": -0.3 },
+    "xs": { "fontSize": 20, "lineHeight": 28, "letterSpacing": -0.2 }
+  },
+  "bodyTypography": {
+    "fontFamily": "Inter",
+    "lg": { "fontSize": 18, "lineHeight": 32, "letterSpacing": -0.3 },
+    "md": { "fontSize": 16, "lineHeight": 28, "letterSpacing": -0.2 },
+    "sm": { "fontSize": 14, "lineHeight": 20, "letterSpacing": -0.1 }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "DM Sans",
+      "fontWeight": 600,
+      "uppercase": false,
+      "sizes": {
+        "lg": {
+          "fontSize": 16,
+          "letterSpacing": -0.2,
+          "opticalYOffset": 0,
+          "paddingTop": 14,
+          "paddingBottom": 14,
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "borderRadius": 8
+        },
+        "md": {
+          "fontSize": 14,
+          "letterSpacing": -0.1,
+          "opticalYOffset": 0,
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "borderRadius": 8
+        },
+        "sm": {
+          "fontSize": 14,
+          "letterSpacing": -0.1,
+          "opticalYOffset": 0,
+          "paddingTop": 6,
+          "paddingBottom": 6,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "borderRadius": 6
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:on-brand",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "secondary": {
+        "backgroundColor": "system:base-muted",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "system:border",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": { "typographyClass": "heading-xl", "marginBottom": 1.5 },
+      "h2": { "typographyClass": "heading-lg", "marginBottom": 1.25 },
+      "h3": { "typographyClass": "heading-md", "marginBottom": 1 },
+      "h4": { "typographyClass": "heading-sm", "marginBottom": 0.75 },
+      "h5": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "h6": { "typographyClass": "heading-xs", "marginBottom": 0.5 },
+      "p": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ul": { "typographyClass": "body-md", "marginBottom": 1.25 },
+      "ol": { "typographyClass": "body-md", "marginBottom": 1.25 }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5,
+      "nestedIndent": 1.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "brand",
+      "underline": "always"
+    }
+  }
+}

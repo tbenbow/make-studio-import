@@ -1,0 +1,24 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "Allison Kuglin" },
+    {
+      "type": "items",
+      "name": "Links",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Link" }
+        ]
+      },
+      "default": [
+        { "label": "Story", "link": "#story" },
+        { "label": "Collection", "link": "#collection" },
+        { "label": "Custom", "link": "#commissions" },
+        { "label": "Voices", "link": "#testimonials" },
+        { "label": "Connect", "link": "#contact" }
+      ]
+    }
+  ]
+}

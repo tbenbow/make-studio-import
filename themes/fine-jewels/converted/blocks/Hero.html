@@ -1,0 +1,22 @@
+<section class="min-h-screen bg-base grid grid-cols-1 lg:grid-cols-2 relative">
+  <div class="flex flex-col justify-center px-6 pt-28 pb-12 lg:px-20 lg:pt-32 lg:pb-16 relative">
+    <div class="hidden lg:block absolute top-[15%] left-12 w-px h-[180px] bg-gradient-to-b from-transparent via-gold-light to-transparent"></div>
+    <p class="heading-xs uppercase text-brand mb-8">{{eyebrow}}</p>
+    <h1 class="heading-xl text-fg mb-3">{{{headline}}}</h1>
+    <p class="body-lg text-fg-muted mb-12 max-w-[380px]">{{tagline}}</p>
+    <a href="{{cta-link}}" class="inline-flex items-center gap-4 body-sm uppercase tracking-[0.15em] text-fg no-underline font-normal hover:gap-6 transition-all duration-400">
+      {{cta-label}}
+      <svg viewBox="0 0 32 1" class="w-8 h-px overflow-visible">
+        <line x1="0" y1="0.5" x2="28" y2="0.5" stroke="currentColor" stroke-width="1" class="text-brand"></line>
+        <line x1="24" y1="-3" x2="31" y2="0.5" stroke="currentColor" stroke-width="1" class="text-brand"></line>
+        <line x1="24" y1="4" x2="31" y2="0.5" stroke="currentColor" stroke-width="1" class="text-brand"></line>
+      </svg>
+    </a>
+  </div>
+  <div class="relative overflow-hidden hidden lg:block">
+    <div class="absolute inset-y-8 right-8 left-0 bg-base-muted flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-3 border border-gold-light/40 pointer-events-none"></div>
+      <img src="{{image}}" alt="{{headline}}" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>

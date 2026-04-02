@@ -1,0 +1,11 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Text and image split",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "Find your dream home with our curated listings and expert guidance." },
+    { "type": "text", "name": "Stat Value", "default": "$1B+" },
+    { "type": "text", "name": "Stat Label", "default": "Property Investments" },
+    { "type": "image", "name": "Image", "default": "https://placehold.co/960x708/e2e8f0/64748b?text=Property" }
+  ]
+}

@@ -1,0 +1,28 @@
+<section class="py-16 lg:py-24 bg-panel relative overflow-hidden">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-16 mb-16 lg:mb-20 items-end">
+      <div>
+        <p class="heading-xs uppercase text-brand mb-6 flex items-center gap-4">
+          <span class="w-[30px] h-px bg-gold-light"></span>
+          {{label}}
+        </p>
+        <h2 class="heading-lg text-fg">{{{headline}}}</h2>
+      </div>
+      <p class="body-md text-fg-muted max-w-[400px]">{{description}}</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+      {{#each steps}}
+        <div>
+          <div class="aspect-square bg-base-muted mb-6 relative flex items-center justify-center overflow-hidden">
+            <span class="absolute top-4 left-4 font-heading italic text-[2rem] text-gold-light/60 leading-none">{{numeral}}</span>
+            <img src="{{image}}" alt="{{title}}" class="w-full h-full object-cover">
+          </div>
+          <h3 class="heading-sm text-fg mb-2">{{title}}</h3>
+          <p class="body-md text-fg-muted">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

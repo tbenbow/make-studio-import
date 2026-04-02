@@ -1,0 +1,133 @@
+{
+  "description": "Links and social icons",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Brand Name",
+      "default": "PWNED.WOOD"
+    },
+    {
+      "type": "text",
+      "name": "Brand Description",
+      "default": "Former software engineers. Current deck builders. We traded merge conflicts for miter cuts. Serving Hackensack, MN."
+    },
+    {
+      "type": "text",
+      "name": "Col 1 Title",
+      "default": "Services"
+    },
+    {
+      "type": "items",
+      "name": "Col 1 Links",
+      "default": [
+        {
+          "label": "Deck Builds",
+          "link": "#services"
+        },
+        {
+          "label": "Pergolas",
+          "link": "#services"
+        },
+        {
+          "label": "Railings",
+          "link": "#services"
+        },
+        {
+          "label": "Repairs",
+          "link": "#services"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Col 2 Title",
+      "default": "Info"
+    },
+    {
+      "type": "items",
+      "name": "Col 2 Links",
+      "default": [
+        {
+          "label": "Our Story",
+          "link": "#origin"
+        },
+        {
+          "label": "Portfolio",
+          "link": "#builds"
+        },
+        {
+          "label": "Reviews",
+          "link": "#reviews"
+        },
+        {
+          "label": "Contact",
+          "link": "#contact"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Col 3 Title",
+      "default": "Social"
+    },
+    {
+      "type": "items",
+      "name": "Col 3 Links",
+      "default": [
+        {
+          "label": "Instagram",
+          "link": "#"
+        },
+        {
+          "label": "GitHub (archived)",
+          "link": "#"
+        },
+        {
+          "label": "LinkedIn (outdated)",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "© 2026 PWNED WOOD LLC. Hackensack, MN. All rights reserved. YOLO."
+    }
+  ]
+}

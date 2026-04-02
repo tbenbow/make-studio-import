@@ -1,0 +1,18 @@
+<section class="py-16 lg:py-24 bg-base-alt text-base relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-brand/8 rounded-full pointer-events-none"></div>
+  <div class="mx-auto max-w-[600px] px-6 text-center relative">
+    <p class="heading-xs uppercase text-gold-light mb-6 flex items-center justify-center gap-4">
+      <span class="w-[30px] h-px bg-brand/30"></span>
+      {{label}}
+      <span class="w-[30px] h-px bg-brand/30"></span>
+    </p>
+    <h2 class="heading-lg text-base mb-4">{{{headline}}}</h2>
+    <p class="body-md text-border mb-10">{{description}}</p>
+    <form class="flex flex-col sm:flex-row max-w-[440px] mx-auto">
+      <input type="email" placeholder="{{placeholder}}" required="" aria-label="Email address" class="flex-1 px-5 py-3.5 bg-on-brand/[0.06] border border-brand/25 sm:border-r-0 text-base font-body font-light text-[0.9rem] outline-none focus:border-brand focus:bg-on-brand/[0.09] transition-all placeholder:text-border/50">
+      <button type="submit" class="px-7 py-3.5 bg-brand border border-brand text-fg body-sm uppercase tracking-[0.15em] cursor-pointer hover:bg-gold-light transition-colors font-normal whitespace-nowrap">
+        {{button-text}}
+      </button>
+    </form>
+  </div>
+</section>

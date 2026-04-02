@@ -1,0 +1,273 @@
+{
+  "fonts": [
+    {
+      "family": "Cormorant",
+      "weight": 300,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant",
+      "weight": 300,
+      "style": "italic"
+    },
+    {
+      "family": "Cormorant",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant",
+      "weight": 400,
+      "style": "italic"
+    },
+    {
+      "family": "Cormorant",
+      "weight": 500,
+      "style": "normal"
+    },
+    {
+      "family": "Cormorant",
+      "weight": 500,
+      "style": "italic"
+    },
+    {
+      "family": "Cormorant",
+      "weight": 600,
+      "style": "normal"
+    },
+    {
+      "family": "Outfit",
+      "weight": 300,
+      "style": "normal"
+    },
+    {
+      "family": "Outfit",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Outfit",
+      "weight": 500,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "base": "#F5F0EA",
+    "base-muted": "#EDE6DC",
+    "base-alt": "#2C2420",
+    "panel": "#FDFBF8",
+    "fg": "#2C2420",
+    "fg-muted": "#5C524A",
+    "fg-alt": "#8A7F74",
+    "brand": "#B8956A",
+    "on-brand": "#FDFBF8",
+    "border": "#D8CFC4"
+  },
+  "customColors": [
+    {
+      "id": "gold-light",
+      "name": "gold-light",
+      "value": "#D4B896"
+    },
+    {
+      "id": "gold-dark",
+      "name": "gold-dark",
+      "value": "#8A6D4B"
+    }
+  ],
+  "palette": {
+    "primary": {
+      "label": "gold",
+      "colors": [
+        "#D4B896",
+        "#B8956A",
+        "#8A6D4B",
+        "#6B5438",
+        "#4D3C28"
+      ]
+    },
+    "grays": {
+      "label": "warm",
+      "colors": [
+        "#FDFBF8",
+        "#F5F0EA",
+        "#D8CFC4",
+        "#5C524A",
+        "#2C2420"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Cormorant",
+      "fontWeight": 300,
+      "fontSize": 80,
+      "lineHeight": 84,
+      "letterSpacing": -0.5,
+      "mobileFontSize": 48,
+      "mobileLineHeight": 50
+    },
+    "heading-lg": {
+      "fontFamily": "Cormorant",
+      "fontWeight": 300,
+      "fontSize": 48,
+      "lineHeight": 58,
+      "letterSpacing": -0.3,
+      "mobileFontSize": 32,
+      "mobileLineHeight": 38
+    },
+    "heading-md": {
+      "fontFamily": "Cormorant",
+      "fontWeight": 300,
+      "fontSize": 40,
+      "lineHeight": 48,
+      "letterSpacing": 0,
+      "mobileFontSize": 28,
+      "mobileLineHeight": 34
+    },
+    "heading-sm": {
+      "fontFamily": "Cormorant",
+      "fontWeight": 500,
+      "fontSize": 18,
+      "lineHeight": 24,
+      "letterSpacing": 0.3,
+      "mobileFontSize": 16,
+      "mobileLineHeight": 22
+    },
+    "heading-xs": {
+      "fontFamily": "Outfit",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeight": 16,
+      "letterSpacing": 3.5,
+      "mobileFontSize": 11,
+      "mobileLineHeight": 14
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Cormorant",
+      "fontWeight": 400,
+      "fontStyle": "italic",
+      "fontSize": 20,
+      "lineHeight": 32,
+      "letterSpacing": 0
+    },
+    "body-md": {
+      "fontFamily": "Outfit",
+      "fontWeight": 300,
+      "fontSize": 15,
+      "lineHeight": 26,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Outfit",
+      "fontWeight": 400,
+      "fontSize": 13,
+      "lineHeight": 20,
+      "letterSpacing": 1.5
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "li": {
+        "typographyClass": "body-md"
+      }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "fg",
+      "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Outfit",
+      "fontWeight": 400,
+      "uppercase": true,
+      "sizes": {
+        "lg": {
+          "fontSize": 14,
+          "letterSpacing": 2,
+          "opticalYOffset": 0,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "paddingLeft": 36,
+          "paddingRight": 36,
+          "borderRadius": 0
+        },
+        "md": {
+          "fontSize": 13,
+          "letterSpacing": 2,
+          "opticalYOffset": 0,
+          "paddingTop": 14,
+          "paddingBottom": 14,
+          "paddingLeft": 28,
+          "paddingRight": 28,
+          "borderRadius": 0
+        },
+        "sm": {
+          "fontSize": 12,
+          "letterSpacing": 1.5,
+          "opticalYOffset": 0,
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "borderRadius": 0
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "system:brand",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      },
+      "secondary": {
+        "backgroundColor": "system:base-muted",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "darken"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
+    }
+  }
+}

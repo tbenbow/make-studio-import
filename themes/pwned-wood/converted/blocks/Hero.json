@@ -1,0 +1,67 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Terminal Path",
+      "default": "~/career"
+    },
+    {
+      "type": "text",
+      "name": "Terminal Cmd",
+      "default": "$ sudo rm -rf ./software-engineering"
+    },
+    {
+      "type": "text",
+      "name": "Title Line 1",
+      "default": "PWNED"
+    },
+    {
+      "type": "text",
+      "name": "Title Line 2",
+      "default": "WOOD"
+    },
+    {
+      "type": "text",
+      "name": "Tagline",
+      "default": "We Build Decks Now. Deal With It."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>We used to ship code. Now we ship <span class=\"text-brand\">pressure-treated lumber</span>.<br><span class=\"text-fg-alt\">// AI took our jobs so we grabbed a circular saw</span><br><span class=\"line-through opacity-40\">Full-stack developers</span> → <span class=\"text-brand\">Full-deck builders</span><br>Same obsessive attention to detail. Same 2AM finishes.<br>Different stack. <span class=\"text-fg-alt\">// literally</span></p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get a Quote",
+          "link": "#contact",
+          "style": "primary"
+        },
+        {
+          "label": "view --builds",
+          "link": "#builds",
+          "style": "secondary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "text",
+            "name": "Style"
+          }
+        ]
+      }
+    }
+  ]
+}

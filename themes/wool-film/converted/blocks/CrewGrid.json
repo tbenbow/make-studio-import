@@ -1,0 +1,60 @@
+{
+  "description": "CrewGrid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Meet the Crew"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        {
+          "name": "Shane Nelson",
+          "role": "Executive Producer",
+          "photo": "https://placehold.co/400x400/141414/ffffff?text=SN",
+          "bio": "Runs Omni-Fusion.com, a video production company. Created 11 short films and 60+ music videos. Work featured on ESPN, NBC, MTV, Netflix."
+        },
+        {
+          "name": "John Samels (Paper Tiger)",
+          "role": "Music / Score",
+          "photo": "https://placehold.co/400x400/141414/ffffff?text=JS",
+          "bio": "Electronic music composer from New York. Founding member of Doomtree hip hop collective. Music featured on Billboard Top 200 albums."
+        },
+        {
+          "name": "Jim Morgan",
+          "role": "Sound Engineer & Mixing",
+          "photo": "https://placehold.co/400x400/141414/ffffff?text=JM",
+          "bio": "Minneapolis-based sound engineer. Founder of Conduit Sound. 20+ years working on film projects."
+        },
+        {
+          "name": "Cynthia Bravo",
+          "role": "Advisory Associate Producer",
+          "photo": "https://placehold.co/400x400/141414/ffffff?text=CB",
+          "bio": "Manager of Supplier Diversity at Walt Disney Company. Over a decade as freelance producer."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          },
+          {
+            "type": "image",
+            "name": "Photo"
+          },
+          {
+            "type": "textarea",
+            "name": "Bio"
+          }
+        ]
+      }
+    }
+  ]
+}

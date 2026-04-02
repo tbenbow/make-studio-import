@@ -1,0 +1,47 @@
+{
+  "description": "ImageGallery",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        {
+          "src": "https://placehold.co/640x360/0a0a0a/22d3ee?text=Concert",
+          "alt": "Concert scene"
+        },
+        {
+          "src": "https://placehold.co/640x360/0a0a0a/22d3ee?text=At+the+Club",
+          "alt": "At the club"
+        },
+        {
+          "src": "https://placehold.co/640x360/0a0a0a/22d3ee?text=Rough+Day",
+          "alt": "Rough day"
+        },
+        {
+          "src": "https://placehold.co/640x360/0a0a0a/22d3ee?text=Kitchen",
+          "alt": "Kitchen scene"
+        },
+        {
+          "src": "https://placehold.co/640x360/0a0a0a/22d3ee?text=Kitchen+Scene",
+          "alt": "Kitchen scene"
+        },
+        {
+          "src": "https://placehold.co/640x360/0a0a0a/22d3ee?text=Out+at+Night",
+          "alt": "Out at night"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Src"
+          },
+          {
+            "type": "text",
+            "name": "Alt"
+          }
+        ]
+      }
+    }
+  ]
+}

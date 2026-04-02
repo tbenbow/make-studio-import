@@ -1,0 +1,18 @@
+<nav x-data="{ open: false, scrolled: false }" x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 60 }, { passive: true })" :class="scrolled ? 'bg-base/85 backdrop-blur-md py-4' : 'py-6'" class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 flex justify-between items-center transition-all duration-400">
+  <a href="/" class="font-heading text-[1.3rem] font-normal tracking-[0.15em] uppercase text-fg no-underline">
+    {{logo-text}}
+  </a>
+  <ul :class="open ? 'flex' : 'hidden'" class="md:flex gap-6 lg:gap-10 list-none" x-cloak="">
+    {{#each links}}
+      <li>
+        <a href="{{link}}" class="body-sm uppercase tracking-[0.12em] text-fg-muted no-underline hover:text-fg relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-px after:bg-brand hover:after:w-full after:transition-all after:duration-400">
+          {{label}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+  <button @click="open = !open" class="md:hidden bg-transparent border-none cursor-pointer p-1" aria-label="Toggle navigation">
+    <span class="block w-6 h-[1.5px] bg-fg my-[6px] transition-transform duration-300" :class="open &amp;&amp; 'rotate-45 translate-y-[7.5px]'"></span>
+    <span class="block w-6 h-[1.5px] bg-fg my-[6px] transition-transform duration-300" :class="open &amp;&amp; '-rotate-45 -translate-y-[7.5px]'"></span>
+  </button>
+</nav>

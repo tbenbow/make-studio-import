@@ -466,6 +466,45 @@ export class MakeStudioClient {
     return { snapshot, results: { blocks: blockCount, partials: partialCount, theme: themeUpdated } }
   }
 
+  // ─── Bootstrap ───
+
+  /**
+   * Atomic site bootstrap: push theme, partials, blocks, layout, pages, and content in one call.
+   * Wipes existing blocks/partials/layouts/pages and replaces with the provided data.
+   */
+  async bootstrap(siteId: string, data: {
+    theme?: Record<string, unknown>
+    partials?: Array<{ name: string; template: string }>
+    blocks: Array<{
+      name: string
+      template: string
+      fields: Array<{ type: string; name: string; default?: unknown; value?: unknown; config?: Record<string, unknown> }>
+      category?: string
+      blockCategory?: string
+      description?: string
+    }>
+    layout?: {
+      name?: string
+      headerBlocks?: string[]
+      footerBlocks?: string[]
+    }
+    pages?: Array<{
+      name: string
+      slug?: string
+      isHome?: boolean
+      blocks: string[]
+      content?: Record<string, Record<string, unknown>>
+    }>
+  }): Promise<{
+    success: boolean
+    blocks: Array<{ _id: string; name: string }>
+    partials: Array<{ _id: string; name: string }>
+    layouts: Array<{ _id: string; name: string }>
+    pages: Array<{ _id: string; name: string }>
+  }> {
+    return this.request('POST', `/sites/${siteId}/bootstrap`, data)
+  }
+
   // ─── Files (requires server auth update — see docs/review/pending.md) ───
 
   async generateUploadUrl(siteId: string, opts: {

@@ -1,0 +1,15 @@
+{
+  "description": "Synopsis",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Synopsis"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Body",
+      "default": "<p>Pete Madison has never met a narrative he couldn't control. His career, his marriage, his reputation, all carefully curated, all built on his terms. But when his wife leaves him, Pete's carefully constructed world begins to crack.</p><p>Desperate to maintain the story he's built for himself, Pete attempts to rewrite his memory of the events, searching for a version where he's still in control. But the deeper he goes, the more the people in his memories refuse to play along, and the truth he's spent his life avoiding begins to close in.</p><p><strong>WOOL</strong> asks the question: what happens when a man who has always rewritten the story runs out of versions to tell?</p>"
+    }
+  ]
+}

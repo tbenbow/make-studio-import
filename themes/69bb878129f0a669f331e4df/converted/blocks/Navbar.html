@@ -1,0 +1,30 @@
+<header class="sticky top-0 z-10 bg-base-alt">
+  <nav>
+    <div class="mx-auto flex h-20 max-w-7xl items-center gap-4 px-6">
+      <div class="flex flex-1 items-center">
+        <a href="{{default logo-link '/'}}" class="inline-flex items-center gap-2">
+          <span class="text-xl font-semibold text-on-brand">{{default logo-text "HeavenHomes™"}}</span>
+        </a>
+      </div>
+      {{#if (length links)}}
+        <div class="hidden lg:flex gap-8">
+          {{#each links}}
+            <a href="{{url}}" class="body-sm font-semibold text-on-brand/80 hover:text-on-brand transition {{#if (isActive url)}}text-on-brand{{/if}}">
+              {{label}}
+            </a>
+          {{/each}}
+        </div>
+      {{/if}}
+      <div class="flex flex-1 items-center justify-end gap-4">
+        {{#if button-label}}
+          <a href="{{default button-link '#'}}" class="inline-flex shrink-0 items-center justify-center rounded-full bg-brand text-on-brand px-5 py-2.5 body-sm font-semibold hover:opacity-90 transition">
+            {{button-label}}
+          </a>
+        {{/if}}
+        <button type="button" aria-label="Toggle menu" class="inline-flex rounded-full p-1.5 text-on-brand hover:bg-on-brand/10 lg:hidden">
+          {{icon "list" size="24"}}
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

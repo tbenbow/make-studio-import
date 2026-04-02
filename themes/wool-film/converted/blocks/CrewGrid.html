@@ -1,0 +1,19 @@
+<section class="py-16 lg:py-24 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <h2 class="heading-lg text-fg mb-12 uppercase tracking-wide">{{default heading "Meet the Crew"}}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      {{#each members}}
+        <div class="flex flex-col gap-4">
+          <div class="aspect-square overflow-hidden">
+            <img src="{{photo}}" alt="{{name}}" class="h-full w-full object-cover">
+          </div>
+          <h3 class="heading-sm text-brand uppercase tracking-wide">{{name}}</h3>
+          <p class="body-sm text-fg-muted italic">{{role}}</p>
+          {{#if bio}}
+            <p class="body-sm text-fg-muted">{{bio}}</p>
+          {{/if}}
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Label", "default": "Spring 2026" },
+    { "type": "text", "name": "Headline", "default": "The River Stone Collection" },
+    { "type": "text", "name": "Subtitle", "default": "Inspired by the quiet shimmer of Hackensack's waterways — smooth forms, cool tones, and the gentle weight of stone in your palm." },
+    {
+      "type": "items",
+      "name": "Items",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Type" },
+          { "type": "text", "name": "Price" },
+          { "type": "image", "name": "Image" }
+        ]
+      },
+      "default": [
+        { "name": "Current Band", "type": "Ring", "price": "$148", "image": "https://placehold.co/400x340/DDD5CA/C4B8A8?text=Ring" },
+        { "name": "Eddy Drops", "type": "Earrings", "price": "$124", "image": "https://placehold.co/400x340/DDD5CA/C4B8A8?text=Earrings" },
+        { "name": "Tributary Pendant", "type": "Necklace", "price": "$186", "image": "https://placehold.co/400x340/DDD5CA/C4B8A8?text=Necklace" }
+      ]
+    }
+  ]
+}

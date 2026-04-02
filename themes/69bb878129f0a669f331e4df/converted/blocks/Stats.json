@@ -1,0 +1,23 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Key metrics grid",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Facts" },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        { "id": "s1", "value": "98%", "description": "With a client satisfaction rate of 98%, our commitment to exceptional service and personalized support is evident." },
+        { "id": "s2", "value": "300+", "description": "We have over 300 clients, ranging from small businesses to Fortune 500 companies, who trust us." },
+        { "id": "s3", "value": "15", "description": "Our team of 15 experts is dedicated to providing the highest quality service and support to our clients." }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Value" },
+          { "type": "textarea", "name": "Description" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<section class="py-16 bg-base">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col gap-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="flex flex-col gap-6">
+        <h2 class="heading-lg text-fg">{{headline-1}}</h2>
+        <p class="body-lg text-fg-muted">{{description-1}}</p>
+        {{#if (length features-1)}}
+          <ul class="flex flex-col gap-3">
+            {{#each features-1}}
+              <li class="flex items-center gap-3 body-md text-fg">
+                {{icon "check-circle" size="20"}}
+                <span>{{label}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if (length buttons-1)}}
+          <div class="flex gap-3">
+            {{#each buttons-1}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      <div>
+        <img src="{{default image-1 'https://placehold.co/960x708/e2e8f0/64748b?text=Why+Choose+Us'}}" alt="{{headline-1}}" class="w-full h-auto rounded-2xl object-cover" />
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1">
+        <img src="{{default image-2 'https://placehold.co/960x708/e2e8f0/64748b?text=Benefits'}}" alt="{{headline-2}}" class="w-full h-auto rounded-2xl object-cover" />
+      </div>
+      <div class="flex flex-col gap-6 order-1 lg:order-2">
+        <h2 class="heading-lg text-fg">{{headline-2}}</h2>
+        <p class="body-lg text-fg-muted">{{description-2}}</p>
+        {{#if (length features-2)}}
+          <ul class="flex flex-col gap-3">
+            {{#each features-2}}
+              <li class="flex items-center gap-3 body-md text-fg">
+                {{icon "check-circle" size="20"}}
+                <span>{{label}}</span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+        {{#if (length buttons-2)}}
+          <div class="flex gap-3">
+            {{#each buttons-2}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

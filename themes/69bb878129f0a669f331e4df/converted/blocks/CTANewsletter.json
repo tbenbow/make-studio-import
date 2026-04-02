@@ -1,0 +1,44 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "CTA and newsletter duo",
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Newsletter" },
+    { "type": "text", "name": "CTA Headline", "default": "We're hiring!" },
+    { "type": "textarea", "name": "CTA Description", "default": "HeavenHomes is always looking for talented and passionate individuals to join our team." },
+    {
+      "type": "items",
+      "name": "CTA Buttons",
+      "default": [
+        { "id": "cta-btn1", "label": "Our Story", "link": "/about", "style": "secondary", "size": "md" },
+        { "id": "cta-btn2", "label": "Join Us", "link": "/careers", "style": "outline", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    },
+    { "type": "text", "name": "Newsletter Headline", "default": "Join our newsletter" },
+    { "type": "textarea", "name": "Newsletter Description", "default": "Sign up for our newsletter to receive real estate news, market updates, and exclusive property listings." },
+    { "type": "text", "name": "Email Placeholder", "default": "Enter your email" },
+    {
+      "type": "items",
+      "name": "Newsletter Buttons",
+      "default": [
+        { "id": "nl-btn1", "label": "Subscribe", "link": "#", "style": "primary", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    }
+  ]
+}

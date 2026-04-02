@@ -1,0 +1,30 @@
+<section class="py-20 lg:py-28 bg-base-alt text-base relative overflow-hidden">
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <p class="heading-xs uppercase text-water-light font-medium mb-4">{{label}}</p>
+        <h2 class="heading-lg text-base mb-8">{{{headline}}}</h2>
+        <p class="body-md text-base-muted max-w-[460px] mb-8">{{description}}</p>
+        <ul class="list-none flex flex-col gap-4">
+          {{#each features}}
+            <li class="flex items-start gap-4 body-md text-base-muted">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand mt-2.5 shrink-0"></span>
+              {{text}}
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="flex flex-col gap-6">
+        {{#each steps}}
+          <div class="flex gap-6 items-start">
+            <div class="font-heading text-[2.5rem] font-light text-brand/30 leading-none shrink-0 w-[50px]">{{numeral}}</div>
+            <div>
+              <h4 class="heading-md text-base mb-1">{{title}}</h4>
+              <p class="body-md text-border leading-relaxed">{{description}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

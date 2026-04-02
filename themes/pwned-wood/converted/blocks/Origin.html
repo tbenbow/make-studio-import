@@ -1,0 +1,24 @@
+<section class="py-16 lg:py-24 bg-base border-t border-fg-alt relative z-10">
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-16 items-start">
+      <div class="bg-base-muted border border-border overflow-hidden">
+        <div class="flex items-center gap-2 px-4 py-2.5 bg-panel border-b border-border">
+          <div class="w-2 h-2 rounded-full bg-neon-red"></div>
+          <div class="w-2 h-2 rounded-full bg-neon-yellow"></div>
+          <div class="w-2 h-2 rounded-full bg-[#28C840]"></div>
+          <span class="body-sm text-fg-muted/60 ml-2">{{terminal-title}}</span>
+        </div>
+        <div class="p-6 body-md leading-[2]">
+          {{{terminal-content}}}
+        </div>
+      </div>
+      <div>
+        <p class="heading-xs uppercase text-fg-muted tracking-[0.3em] mb-2 before:content-['//_'] before:text-fg-alt">{{label}}</p>
+        <h2 class="heading-lg text-brand mb-8" style="text-shadow: 0 0 10px rgba(255,107,0,0.3);">{{headline}}</h2>
+        <div class="body-md text-fg-muted leading-[1.8] space-y-6">
+          {{{description}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

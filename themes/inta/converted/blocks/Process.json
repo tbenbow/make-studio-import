@@ -1,0 +1,57 @@
+{
+  "description": "Process",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "The evaluation process"
+    },
+    {
+      "type": "text",
+      "name": "Subheadline",
+      "default": "Four structured meetings. No surprises."
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "default": [
+        {
+          "number": "1",
+          "title": "Intro & Presentation",
+          "description": "Vendors present their capabilities. We ensure the right questions get asked from day one."
+        },
+        {
+          "number": "2",
+          "title": "Technical Demo",
+          "description": "Hands-on demonstration of the solution against your specific requirements and use cases."
+        },
+        {
+          "number": "3",
+          "title": "Solution Design Review",
+          "description": "Map the solution to your environment, integrations, and workflows."
+        },
+        {
+          "number": "4",
+          "title": "Proposal & Selection",
+          "description": "Vendor proposals reviewed, compared, and scored. You pick with clarity and confidence."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Number"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

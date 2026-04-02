@@ -1,0 +1,52 @@
+{
+  "description": "Testimonials",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "cat reviews.log"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Verified Humans"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "author": "@dave_k",
+          "author-info": "// lakehouse owner, verified not a bot",
+          "quote": "I hired them because they said they were \"full-stack.\" Turns out they meant literally stacking boards. But honestly? Best deck I've ever had. The joists are immaculate."
+        },
+        {
+          "author": "@linda_builds",
+          "author-info": "// suburban renovator, brainerd mn",
+          "quote": "They kept calling my old deck \"legacy infrastructure\" and referred to the rotten boards as \"technical debt.\" Weird guys. But they built me an absolute unit of a deck in two weeks flat."
+        },
+        {
+          "author": "@garage_mike",
+          "author-info": "// backyard enthusiast, park rapids",
+          "quote": "Tom showed up on day one with a ThinkPad running Arch Linux and a Dewalt miter saw. I didn't know what to expect. What I got was the most precisely measured, beautifully finished deck in the neighborhood."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Author"
+          },
+          {
+            "type": "text",
+            "name": "Author Info"
+          },
+          {
+            "type": "textarea",
+            "name": "Quote"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<section class="py-16 lg:py-24 bg-base-muted">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-4xl lg:px-10 md:flex items-center gap-16">
+    <div class="flex-shrink-0 mb-8 md:mb-0">
+      {{#if photo}}
+        <img src="{{photo}}" alt="{{name}}" class="w-40 h-40 rounded-3xl object-cover">
+      {{else}}
+        <div class="w-40 h-40 bg-brand rounded-3xl flex items-center justify-center">
+          <span class="text-on-brand text-4xl font-bold">{{default initial "B"}}</span>
+        </div>
+      {{/if}}
+    </div>
+    <div>
+      {{#if eyebrow}}
+        <p class="body-sm font-medium text-brand mb-2">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg mb-4">{{name}}</h2>
+      <div class="body-lg text-fg-muted">{{{bio}}}</div>
+    </div>
+  </div>
+</section>

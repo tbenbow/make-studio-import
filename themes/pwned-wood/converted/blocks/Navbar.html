@@ -1,0 +1,17 @@
+<nav x-data="{ scrolled: false }" x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 60 }, { passive: true })" class="fixed top-0 left-0 right-0 z-50 px-4 lg:px-8 py-4 flex justify-between items-center bg-base/90 backdrop-blur-[10px] border-b border-fg-alt">
+  <div class="font-heading text-[0.9rem] font-black tracking-[0.15em] text-brand" style="text-shadow: 0 0 10px rgba(255,107,0,0.5);">
+    {{logo-text}}<span class="text-fg font-normal">{{logo-suffix}}</span>
+  </div>
+  <ul class="hidden md:flex gap-8 list-none">
+    {{#each links}}
+      <li>
+        <a href="{{link}}" class="no-underline text-fg-muted body-sm tracking-[0.1em] hover:text-fg hover:drop-shadow-[0_0_8px_rgba(0,255,65,0.5)] transition-all before:content-['>_'] before:opacity-40">
+          {{label}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+  <div class="body-sm text-fg-muted/50">
+    {{status-text}} <span class="text-fg animate-pulse">█</span>
+  </div>
+</nav>

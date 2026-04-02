@@ -1,0 +1,58 @@
+{
+  "description": "Logo left, links centered",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "PWNED"
+    },
+    {
+      "type": "text",
+      "name": "Logo Suffix",
+      "default": ".wood"
+    },
+    {
+      "type": "text",
+      "name": "Status Text",
+      "default": "SYS OK"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "origin",
+          "link": "#origin"
+        },
+        {
+          "label": "services",
+          "link": "#services"
+        },
+        {
+          "label": "builds",
+          "link": "#builds"
+        },
+        {
+          "label": "reviews",
+          "link": "#reviews"
+        },
+        {
+          "label": "contact",
+          "link": "#contact"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<section class="py-16 lg:py-24 bg-base relative z-10">
+  <div class="absolute top-0 left-0 right-0 h-1" style="background: repeating-linear-gradient(90deg, #FF2020 0px, #FF2020 10px, transparent 10px, transparent 20px);"></div>
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+      <div>
+        <p class="heading-xs uppercase text-fg-muted tracking-[0.3em] mb-2 before:content-['//_'] before:text-fg-alt">{{label}}</p>
+        <h2 class="heading-lg text-brand mb-8" style="text-shadow: 0 0 10px rgba(255,107,0,0.3);">{{headline}}</h2>
+        <p class="body-md text-fg-muted max-w-[440px] leading-[1.8] mb-8">{{description}}</p>
+        <div class="flex flex-col gap-3 body-md">
+          {{#each info}}
+            <div class="text-fg-muted">
+              <strong class="text-brand font-normal">{{label}}</strong> — {{value}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+      <form class="flex flex-col gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1">
+            <label class="body-sm text-fg-alt uppercase tracking-[0.15em] before:content-['#_']">name</label>
+            <input type="text" placeholder="hackerman69" class="bg-base-muted border border-border px-4 py-3 font-body body-md text-fg outline-none focus:border-fg focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all placeholder:text-fg-alt">
+          </div>
+          <div class="flex flex-col gap-1">
+            <label class="body-sm text-fg-alt uppercase tracking-[0.15em] before:content-['#_']">email</label>
+            <input type="email" placeholder="you@example.com" class="bg-base-muted border border-border px-4 py-3 font-body body-md text-fg outline-none focus:border-fg focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all placeholder:text-fg-alt">
+          </div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="body-sm text-fg-alt uppercase tracking-[0.15em] before:content-['#_']">service_type</label>
+          <select class="bg-base-muted border border-border px-4 py-3 font-body body-md text-fg outline-none focus:border-fg transition-all">
+            <option value="">SELECT TARGET...</option>
+            <option value="new">New Deck Build</option>
+            <option value="repair">Deck Resurrection</option>
+            <option value="pergola">Pergola Exploit</option>
+            <option value="railing">Railing Overflow</option>
+            <option value="stairs">Stair Injection</option>
+            <option value="lighting">Lighting Payload</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-1">
+          <label class="body-sm text-fg-alt uppercase tracking-[0.15em] before:content-['#_']">message_body</label>
+          <textarea placeholder="describe your backyard vulnerability..." class="bg-base-muted border border-border px-4 py-3 font-body body-md text-fg outline-none focus:border-fg focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all placeholder:text-fg-alt resize-y min-h-[100px]"></textarea>
+        </div>
+        {{> Button label=submit-text link="" style="primary"}}
+      </form>
+    </div>
+  </div>
+</section>

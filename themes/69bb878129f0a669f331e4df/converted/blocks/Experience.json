@@ -1,0 +1,30 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Video and cities grid",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "Experience Our Properties in Action" },
+    { "type": "wysiwyg", "name": "Description", "default": "<p>Explore our collection of videos showcasing our stunning properties, client testimonials, virtual tours, and expert advice.</p>" },
+    { "type": "image", "name": "Video Thumbnail", "default": "https://placehold.co/1008x672/e2e8f0/64748b?text=Video" },
+    { "type": "text", "name": "Offices Label", "default": "Offices" },
+    {
+      "type": "items",
+      "name": "Cities",
+      "default": [
+        { "id": "c1", "name": "New York" },
+        { "id": "c2", "name": "San Francisco" },
+        { "id": "c3", "name": "London" },
+        { "id": "c4", "name": "Los Angeles" },
+        { "id": "c5", "name": "Berlin" },
+        { "id": "c6", "name": "Paris" },
+        { "id": "c7", "name": "Tokyo" },
+        { "id": "c8", "name": "Sydney" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Immediate Needs Trusted Advisors"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "We manage the vendor process so your team doesn't have to"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Vendor-neutral technology advisory. Evaluation, selection, negotiation — handled by people who've been on both sides of the table.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Book a Consultation",
+          "link": "#contact",
+          "style": "primary"
+        },
+        {
+          "label": "Our Process",
+          "link": "#process",
+          "style": "outline"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Outline",
+                  "value": "outline"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "40+",
+          "label": "Vendors evaluated per quarter"
+        },
+        {
+          "value": "4",
+          "label": "Meeting structured process"
+        },
+        {
+          "value": "0",
+          "label": "Vendor commissions or fees"
+        },
+        {
+          "value": "20+",
+          "label": "Years of industry experience"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

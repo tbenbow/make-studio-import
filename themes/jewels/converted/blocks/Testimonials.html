@@ -1,0 +1,24 @@
+<section class="py-16 lg:py-32 bg-base">
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-24">
+    <div class="text-center mb-16 lg:mb-20">
+      <p class="heading-xs uppercase text-brand mb-4 flex items-center justify-center gap-4">
+        <span class="w-[30px] h-px bg-gold-light"></span>
+        {{label}}
+        <span class="w-[30px] h-px bg-gold-light"></span>
+      </p>
+      <h2 class="heading-lg text-fg">{{headline}}</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-[500px] lg:max-w-none mx-auto">
+      {{#each items}}
+        <div class="relative pt-10">
+          <div class="absolute top-0 left-0 w-10 h-px bg-gold-light"></div>
+          <span class="font-heading text-[4rem] leading-none text-gold-light/50 block mb-2">“</span>
+          <blockquote class="font-heading italic text-[1.1rem] leading-relaxed text-fg mb-6">
+            {{quote}}
+          </blockquote>
+          <p class="heading-xs uppercase text-fg-muted tracking-[0.15em]">{{author}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

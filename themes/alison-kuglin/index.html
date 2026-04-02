@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allison Kuglin — Handcrafted Jewelry from the North Woods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #F5F0E8;
+  --cream-light: #FAF8F3;
+  --brown: #6B4F3A;
+  --brown-dark: #3E2C1E;
+  --brown-light: #A8876A;
+  --moss: #6B7F5E;
+  --moss-light: #8FA seventeen;
+  --moss-muted: #9EAD8F;
+  --water-blue: #7CA5B8;
+  --water-light: #B8D4E3;
+  --water-pale: #D6E8F0;
+  --stone: #C4B8A8;
+  --stone-light: #DDD5CA;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  color: var(--brown-dark);
+  background: var(--cream);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+}
+
+/* ═══════════════ WATER CAUSTIC ANIMATION ═══════════════ */
+@keyframes caustic1 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
+  25% { transform: translate(30px, -20px) scale(1.1) rotate(5deg); opacity: 0.5; }
+  50% { transform: translate(-10px, 15px) scale(0.95) rotate(-3deg); opacity: 0.25; }
+  75% { transform: translate(20px, 10px) scale(1.05) rotate(2deg); opacity: 0.4; }
+}
+@keyframes caustic2 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.2; }
+  33% { transform: translate(-25px, 20px) scale(1.15) rotate(-4deg); opacity: 0.35; }
+  66% { transform: translate(15px, -10px) scale(0.9) rotate(6deg); opacity: 0.15; }
+}
+@keyframes caustic3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.15; }
+  50% { transform: translate(10px, -25px) rotate(8deg); opacity: 0.3; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes ripple-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes fade-up {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes water-flow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ═══════════════ NAVIGATION ═══════════════ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(245,240,232,0.95), rgba(245,240,232,0));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+nav .logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: var(--brown);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+nav a:hover { color: var(--water-blue); }
+
+/* ═══════════════ HERO ═══════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(170deg, var(--cream) 0%, var(--cream-light) 30%, var(--water-pale) 60%, var(--stone-light) 100%);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 30%, rgba(124,165,184,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 350px at 70% 60%, rgba(107,127,94,0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 40%, rgba(184,212,227,0.12) 0%, transparent 60%);
+  animation: caustic1 12s ease-in-out infinite;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background:
+    radial-gradient(ellipse 350px 250px at 60% 25%, rgba(124,165,184,0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 450px 300px at 30% 70%, rgba(158,173,143,0.08) 0%, transparent 60%);
+  animation: caustic2 15s ease-in-out infinite;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: ripple-in 1.5s ease-out;
+}
+.hero h1 {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--brown-dark);
+  margin-bottom: 1.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--brown);
+  display: block;
+  font-size: 0.55em;
+  letter-spacing: 0.05em;
+  margin-top: 0.3em;
+}
+.hero-tagline {
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+.hero-divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--water-blue), transparent);
+  margin: 0 auto 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: rgba(255,255,255,0.6);
+  animation: water-flow 3s linear infinite;
+}
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--moss);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Water ripple circles in hero */
+.water-circles {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.water-circles span {
+  position: absolute;
+  border: 1px solid rgba(124,165,184,0.15);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: caustic3 8s ease-in-out infinite;
+}
+.water-circles span:nth-child(1) { width: 100px; height: 100px; animation-delay: 0s; }
+.water-circles span:nth-child(2) { width: 200px; height: 200px; animation-delay: 1s; }
+.water-circles span:nth-child(3) { width: 320px; height: 320px; animation-delay: 2s; }
+.water-circles span:nth-child(4) { width: 460px; height: 460px; animation-delay: 3s; }
+
+/* ═══════════════ SECTIONS ═══════════════ */
+section {
+  padding: 7rem 2rem;
+  position: relative;
+}
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--water-blue);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--brown-dark);
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+/* ═══════════════ MATERIAL STORY ═══════════════ */
+.story {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.story::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--stone), transparent);
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.story-text p {
+  font-size: 1.05rem;
+  color: var(--brown);
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+.story-visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story-card {
+  position: absolute;
+  background: white;
+  padding: 2rem;
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(62,44,30,0.08);
+  transition: transform 0.6s ease;
+}
+.story-card:hover { transform: translateY(-5px); }
+.story-card:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 260px;
+  z-index: 2;
+}
+.story-card:nth-child(2) {
+  top: 80px;
+  right: 0;
+  width: 240px;
+  z-index: 3;
+}
+.story-card:nth-child(3) {
+  bottom: 0;
+  left: 40px;
+  width: 280px;
+  z-index: 1;
+}
+.story-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.story-card:nth-child(1) .story-card-icon { background: var(--water-pale); }
+.story-card:nth-child(2) .story-card-icon { background: rgba(107,127,94,0.15); }
+.story-card:nth-child(3) .story-card-icon { background: rgba(196,184,168,0.3); }
+.story-card h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--brown-dark);
+}
+.story-card p {
+  font-size: 0.85rem;
+  color: var(--brown-light);
+  line-height: 1.6;
+}
+
+/* ═══════════════ COLLECTION ═══════════════ */
+.collection {
+  background: var(--cream-light);
+  position: relative;
+}
+.collection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse 800px 600px at 80% 20%, rgba(124,165,184,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 400px at 10% 80%, rgba(107,127,94,0.04) 0%, transparent 60%);
+  animation: caustic2 20s ease-in-out infinite;
+}
+.collection .section-inner { position: relative; z-index: 1; }
+.collection-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.collection-header .section-title { margin-bottom: 1rem; }
+.collection-header p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--moss);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.product-card {
+  background: white;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(62,44,30,0.1);
+}
+.product-image {
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+.product-image-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+}
+.product-card:hover .product-image-inner { transform: scale(1.04); }
+
+/* Placeholder product visuals using gradients */
+.product-card:nth-child(1) .product-image-inner {
+  background: linear-gradient(135deg, var(--stone-light) 0%, var(--water-pale) 50%, var(--cream) 100%);
+}
+.product-card:nth-child(2) .product-image-inner {
+  background: linear-gradient(160deg, var(--cream) 0%, var(--moss-muted) 40%, var(--stone) 100%);
+}
+.product-card:nth-child(3) .product-image-inner {
+  background: linear-gradient(145deg, var(--water-pale) 0%, var(--stone-light) 50%, rgba(107,127,94,0.2) 100%);
+}
+.product-image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(62,44,30,0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+.product-card:nth-child(2) .product-image::after { animation-delay: -2s; }
+.product-card:nth-child(3) .product-image::after { animation-delay: -4s; }
+.product-info {
+  padding: 1.5rem 1.8rem 1.8rem;
+}
+.product-type {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--water-blue);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.product-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--brown-dark);
+  margin-bottom: 0.5rem;
+}
+.product-price {
+  font-size: 0.9rem;
+  color: var(--brown-light);
+}
+
+/* ═══════════════ COMMISSIONS ═══════════════ */
+.commissions {
+  background: var(--brown-dark);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.commissions::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse 500px 400px at 80% 30%, rgba(124,165,184,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 20% 70%, rgba(107,127,94,0.06) 0%, transparent 60%);
+  animation: caustic1 18s ease-in-out infinite;
+}
+.commissions .section-inner { position: relative; z-index: 1; }
+.commissions-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.commissions .section-label { color: var(--water-light); }
+.commissions .section-title { color: var(--cream); }
+.commissions-text p {
+  color: var(--stone-light);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  max-width: 460px;
+}
+.commissions-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.commissions-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: var(--stone-light);
+}
+.commissions-features li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--water-blue);
+  margin-top: 0.6rem;
+  flex-shrink: 0;
+}
+.commission-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.commission-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: rgba(124,165,184,0.3);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 50px;
+}
+.step-text h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+.step-text p {
+  font-size: 0.85rem;
+  color: var(--stone);
+  line-height: 1.5;
+}
+
+/* ═══════════════ TESTIMONIALS ═══════════════ */
+.testimonials {
+  background: linear-gradient(180deg, var(--cream-light), var(--cream));
+  position: relative;
+}
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.testimonial-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(62,44,30,0.04);
+  transition: transform 0.5s ease;
+}
+.testimonial-card:hover { transform: translateY(-4px); }
+.testimonial-card::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  color: var(--water-pale);
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  line-height: 1;
+}
+.testimonial-card blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--brown);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+.testimonial-author {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  font-weight: 500;
+}
+.testimonial-author span {
+  display: block;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: var(--stone);
+}
+
+/* ═══════════════ CONTACT ═══════════════ */
+.contact {
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(124,165,184,0.04), transparent);
+}
+.contact .section-inner {
+  position: relative;
+  z-index: 1;
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.contact-intro .section-title { margin-bottom: 1.5rem; }
+.contact-intro p {
+  font-size: 1.05rem;
+  color: var(--brown);
+  margin-bottom: 2rem;
+  max-width: 440px;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--brown-light);
+}
+.contact-details strong {
+  font-weight: 500;
+  color: var(--brown);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brown-light);
+  font-weight: 400;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: white;
+  border: 1px solid var(--stone-light);
+  padding: 0.9rem 1rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--brown-dark);
+  border-radius: 2px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--water-blue);
+  box-shadow: 0 0 0 3px rgba(124,165,184,0.1);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-submit {
+  background: var(--brown-dark);
+  color: var(--cream);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.3s, transform 0.2s;
+  align-self: flex-start;
+}
+.form-submit:hover {
+  background: var(--brown);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════ FOOTER ═══════════════ */
+footer {
+  background: var(--brown-dark);
+  color: var(--stone);
+  padding: 4rem 2rem 2rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(196,184,168,0.1);
+}
+.footer-brand .logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--cream);
+  display: block;
+  margin-bottom: 1rem;
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  max-width: 280px;
+  color: var(--stone);
+}
+.footer-col h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 1.2rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.6rem; }
+.footer-col a {
+  text-decoration: none;
+  color: var(--stone);
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--water-light); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  font-size: 0.75rem;
+  color: rgba(196,184,168,0.5);
+}
+
+/* ═══════════════ RESPONSIVE ═══════════════ */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  nav ul { display: none; }
+  .story-grid,
+  .commissions-layout,
+  .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .product-grid,
+  .testimonial-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  .story-visual { height: auto; position: static; display: flex; flex-direction: column; gap: 1.5rem; }
+  .story-card { position: static !important; width: 100% !important; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  section { padding: 4rem 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════ SCROLL ANIMATIONS ═══════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="logo">Allison Kuglin</div>
+  <ul>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#commissions">Custom</a></li>
+    <li><a href="#testimonials">Voices</a></li>
+    <li><a href="#contact">Connect</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tagline">Handcrafted in the North Woods</div>
+    <h1>Allison<br>Kuglin<em>Jewelry</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">Sustainable jewelry shaped from reclaimed metals and ethically sourced stones — every piece carries a story of renewal.</p>
+  </div>
+  <div class="water-circles">
+    <span></span><span></span><span></span><span></span>
+  </div>
+</section>
+
+<!-- Material Story -->
+<section class="story" id="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-text reveal">
+        <div class="section-label">The Material Story</div>
+        <h2 class="section-title">From Reclaimed<br>to Remarkable</h2>
+        <p>In a world of mass-produced jewelry, Allison transforms what others discard into something extraordinary. Recycled metals from her father's job site. Thrifted treasures given new purpose. Wire shaped by hand into wearable art.</p>
+        <p>Every material has a past — and in Allison's hands, a luminous future. Stones are sourced from a team of sisters in the mountains, and metals come from trusted US companies committed to sustainable practices.</p>
+      </div>
+      <div class="story-visual reveal">
+        <div class="story-card">
+          <div class="story-card-icon">&#9830;</div>
+          <h4>Recycled Metals</h4>
+          <p>Salvaged from construction sites and refined with care — each piece begins its second life in our workshop.</p>
+        </div>
+        <div class="story-card">
+          <div class="story-card-icon">&#9827;</div>
+          <h4>Mountain Stones</h4>
+          <p>Ethically sourced by a family of sisters who know every trail and stream where these gems are found.</p>
+        </div>
+        <div class="story-card">
+          <div class="story-card-icon">&#10047;</div>
+          <h4>Made by Hand</h4>
+          <p>Wire to jewelry, start to finish. No factory lines — just patient hands, simple tools, and deep intention.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seasonal Collection -->
+<section class="collection" id="collection">
+  <div class="section-inner">
+    <div class="collection-header reveal">
+      <div class="section-label">Spring 2026</div>
+      <h2 class="section-title">The River Stone Collection</h2>
+      <p>Inspired by the quiet shimmer of Hackensack's waterways — smooth forms, cool tones, and the gentle weight of stone in your palm.</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card reveal">
+        <div class="product-image"><div class="product-image-inner"></div></div>
+        <div class="product-info">
+          <div class="product-type">Ring</div>
+          <div class="product-name">Current Band</div>
+          <div class="product-price">$148</div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-image"><div class="product-image-inner"></div></div>
+        <div class="product-info">
+          <div class="product-type">Earrings</div>
+          <div class="product-name">Eddy Drops</div>
+          <div class="product-price">$124</div>
+        </div>
+      </div>
+      <div class="product-card reveal">
+        <div class="product-image"><div class="product-image-inner"></div></div>
+        <div class="product-info">
+          <div class="product-type">Necklace</div>
+          <div class="product-name">Tributary Pendant</div>
+          <div class="product-price">$186</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Commissions -->
+<section class="commissions" id="commissions">
+  <div class="section-inner">
+    <div class="commissions-layout">
+      <div class="commissions-text reveal">
+        <div class="section-label">Custom Pieces</div>
+        <h2 class="section-title">Made for You,<br>Shaped by Story</h2>
+        <p>Beyond our seasonal and signature collections, Allison accepts a limited number of custom commissions each month. Whether it's a reimagined heirloom or something entirely new, every custom piece begins with conversation.</p>
+        <ul class="commissions-features">
+          <li>Choose your metals — recycled silver, copper, or bronze</li>
+          <li>Select stones from our ethically sourced collection</li>
+          <li>Rings, earrings, necklaces, or something entirely your own</li>
+          <li>Typical turnaround of 4–6 weeks</li>
+        </ul>
+      </div>
+      <div class="commission-visual reveal">
+        <div class="commission-step">
+          <div class="step-num">01</div>
+          <div class="step-text">
+            <h4>Share Your Vision</h4>
+            <p>Tell Allison what you're dreaming of — a sketch, a feeling, a memory to carry with you.</p>
+          </div>
+        </div>
+        <div class="commission-step">
+          <div class="step-num">02</div>
+          <div class="step-text">
+            <h4>Design Together</h4>
+            <p>Allison sketches options and selects materials. You'll approve the direction before any metal is shaped.</p>
+          </div>
+        </div>
+        <div class="commission-step">
+          <div class="step-num">03</div>
+          <div class="step-text">
+            <h4>Handcraft & Ship</h4>
+            <p>Your piece is made entirely by hand in the Hackensack workshop, then carefully packaged and sent to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="testimonials-header reveal">
+      <div class="section-label">Kind Words</div>
+      <h2 class="section-title">Worn & Loved</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <blockquote>I've never had a piece of jewelry that feels so intentional. The weight, the texture, the way it catches the light — it's clearly made by someone who cares deeply about their craft.</blockquote>
+        <div class="testimonial-author">
+          Sarah M.
+          <span>Minneapolis, MN</span>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <blockquote>Allison made my wedding band from recycled copper and a stone I found on a trip with my grandmother. I cry every time I look at it. Truly one of a kind.</blockquote>
+        <div class="testimonial-author">
+          Rachel K.
+          <span>Duluth, MN</span>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <blockquote>I bought the autumn collection earrings last year and wear them almost daily. They're the only jewelry I get asked about constantly. People can feel the difference.</blockquote>
+        <div class="testimonial-author">
+          Jennifer L.
+          <span>Brainerd, MN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div class="contact-intro reveal">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's Create<br>Something Together</h2>
+        <p>Whether you're interested in a piece from the collection, a custom commission, or just want to say hello — I'd love to hear from you.</p>
+        <div class="contact-details">
+          <div><strong>Studio</strong> — Hackensack, Minnesota</div>
+          <div><strong>Email</strong> — allison@allisonkuglin.com</div>
+          <div><strong>Response time</strong> — Within 48 hours</div>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Thank you! Allison will be in touch soon.');">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm Interested In</label>
+          <select id="interest" name="interest">
+            <option value="">Select one...</option>
+            <option value="collection">Current Collection</option>
+            <option value="commission">Custom Commission</option>
+            <option value="newsletter">Newsletter Signup</option>
+            <option value="other">Just Saying Hello</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me what you're looking for..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">Allison Kuglin</span>
+        <p>Handcrafted sustainable jewelry from the North Woods of Minnesota. Every piece tells a story of renewal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#collection">Seasonal Collection</a></li>
+          <li><a href="#collection">Rings</a></li>
+          <li><a href="#collection">Earrings</a></li>
+          <li><a href="#collection">Necklaces</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#story">Materials</a></li>
+          <li><a href="#commissions">Custom Work</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Allison Kuglin Jewelry. Hackensack, MN.</span>
+      <span>Handmade with intention.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

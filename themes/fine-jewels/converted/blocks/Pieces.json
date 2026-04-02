@@ -1,0 +1,67 @@
+{
+  "description": "Pieces",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Selected works"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "Pieces that stay <em>with you</em>"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "name": "Riverbed Band",
+          "description": "Shaped like water smooths stone — gentle, uneven, yours alone.",
+          "image": "https://placehold.co/400x530/EDE6DC/D8CFC4?text=Ring"
+        },
+        {
+          "name": "First Light Drops",
+          "description": "A whisper of blue held in silver — for mornings that feel like possibility.",
+          "image": "https://placehold.co/400x530/EDE6DC/D8CFC4?text=Earrings"
+        },
+        {
+          "name": "Earthhold Cuff",
+          "description": "Heavy enough to ground you. Warm brass that deepens with every wear.",
+          "image": "https://placehold.co/400x530/EDE6DC/D8CFC4?text=Cuff"
+        },
+        {
+          "name": "Tether",
+          "description": "A single stone on a whisper-thin chain — barely there, always felt.",
+          "image": "https://placehold.co/400x530/EDE6DC/D8CFC4?text=Necklace"
+        },
+        {
+          "name": "Gathered Set",
+          "description": "Three rings, three metals, three moods. Stack them your way.",
+          "image": "https://placehold.co/400x530/EDE6DC/D8CFC4?text=Rings"
+        },
+        {
+          "name": "Meridian",
+          "description": "Bold geometry meets the softness of your neckline. A quiet statement.",
+          "image": "https://placehold.co/400x530/EDE6DC/D8CFC4?text=Earring"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Description"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    }
+  ]
+}

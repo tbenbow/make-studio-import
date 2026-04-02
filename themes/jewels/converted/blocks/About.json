@@ -1,0 +1,30 @@
+{
+  "description": "About",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "The maker"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "I believe jewelry should carry <em>weight</em> — not just in grams, but in meaning"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>I'm Lena, a self-taught metalsmith working from a small studio overlooking the Willamette. I started making jewelry after years as a ceramicist — drawn to the permanence of metal, the way it holds a shape forever once you give it one.</p><p>Every piece I make is formed by hand using traditional techniques: forging, soldering, stone-setting. No casting, no mass production. Just me, my tools, and the slow rhythm of making something meant to last.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Signature",
+      "default": "— Lena"
+    },
+    {
+      "type": "image",
+      "name": "Portrait",
+      "default": "https://placehold.co/380x500/EDE6DC/D8CFC4?text=Portrait"
+    }
+  ]
+}

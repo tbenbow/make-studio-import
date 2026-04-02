@@ -1,0 +1,42 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Brand Name", "default": "Allison Kuglin" },
+    { "type": "text", "name": "Brand Description", "default": "Handcrafted sustainable jewelry from the North Woods of Minnesota. Every piece tells a story of renewal." },
+    { "type": "text", "name": "Col 1 Title", "default": "Shop" },
+    {
+      "type": "items", "name": "Col 1 Links",
+      "config": { "fields": [{ "type": "text", "name": "Label" }, { "type": "text", "name": "Link" }] },
+      "default": [
+        { "label": "Seasonal Collection", "link": "#collection" },
+        { "label": "Rings", "link": "#collection" },
+        { "label": "Earrings", "link": "#collection" },
+        { "label": "Necklaces", "link": "#collection" }
+      ]
+    },
+    { "type": "text", "name": "Col 2 Title", "default": "About" },
+    {
+      "type": "items", "name": "Col 2 Links",
+      "config": { "fields": [{ "type": "text", "name": "Label" }, { "type": "text", "name": "Link" }] },
+      "default": [
+        { "label": "Our Story", "link": "#story" },
+        { "label": "Materials", "link": "#story" },
+        { "label": "Custom Work", "link": "#commissions" },
+        { "label": "Reviews", "link": "#testimonials" }
+      ]
+    },
+    { "type": "text", "name": "Col 3 Title", "default": "Connect" },
+    {
+      "type": "items", "name": "Col 3 Links",
+      "config": { "fields": [{ "type": "text", "name": "Label" }, { "type": "text", "name": "Link" }] },
+      "default": [
+        { "label": "Contact", "link": "#contact" },
+        { "label": "Instagram", "link": "#" },
+        { "label": "Newsletter", "link": "#" }
+      ]
+    },
+    { "type": "text", "name": "Copyright", "default": "© 2026 Allison Kuglin Jewelry. Hackensack, MN." },
+    { "type": "text", "name": "Tagline", "default": "Handmade with intention." }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Dark footer with links",
+  "fields": [
+    { "type": "text", "name": "Logo Text", "default": "HeavenHomes™" },
+    { "type": "text", "name": "Tagline", "default": "Building Dreams, One Home at a Time." },
+    { "type": "text", "name": "Contact Email", "default": "HEAVENHOMES@INFO.COM" },
+    { "type": "text", "name": "Address", "default": "123 Main Street, Hometown, USA" },
+    { "type": "text", "name": "Phone", "default": "(123) 456-7890" },
+    {
+      "type": "items",
+      "name": "Links Col 1",
+      "default": [
+        { "id": "lc1-1", "label": "Benefits", "url": "#" },
+        { "id": "lc1-2", "label": "Offices", "url": "#" },
+        { "id": "lc1-3", "label": "Services", "url": "#" },
+        { "id": "lc1-4", "label": "Testimonials", "url": "#" },
+        { "id": "lc1-5", "label": "Newsletter", "url": "#" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Url" }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Links Col 2",
+      "default": [
+        { "id": "lc2-1", "label": "Home", "url": "/" },
+        { "id": "lc2-2", "label": "About us", "url": "/about" },
+        { "id": "lc2-3", "label": "Listings", "url": "/listings" },
+        { "id": "lc2-4", "label": "Agents", "url": "/agents" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Url" }
+        ]
+      }
+    },
+    { "type": "wysiwyg", "name": "Fineprint", "default": "<p>© 2024 HeavenHomes. All rights reserved.</p>" }
+  ]
+}

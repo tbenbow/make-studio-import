@@ -1,0 +1,25 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Label", "default": "Get in Touch" },
+    { "type": "wysiwyg", "name": "Headline", "default": "Let's Create<br>Something Together" },
+    { "type": "text", "name": "Description", "default": "Whether you're interested in a piece from the collection, a custom commission, or just want to say hello — I'd love to hear from you." },
+    { "type": "text", "name": "Submit Text", "default": "Send Message" },
+    {
+      "type": "items",
+      "name": "Info",
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "text", "name": "Value" }
+        ]
+      },
+      "default": [
+        { "label": "Studio", "value": "Hackensack, Minnesota" },
+        { "label": "Email", "value": "allison@allisonkuglin.com" },
+        { "label": "Response time", "value": "Within 48 hours" }
+      ]
+    }
+  ]
+}

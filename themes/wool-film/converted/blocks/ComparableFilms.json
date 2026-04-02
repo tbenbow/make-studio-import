@@ -1,0 +1,52 @@
+{
+  "description": "ComparableFilms",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Comparable Films"
+    },
+    {
+      "type": "items",
+      "name": "Films",
+      "default": [
+        {
+          "title": "Lost Highway",
+          "image": "https://placehold.co/640x360/141414/ffffff?text=Lost+Highway",
+          "video": ""
+        },
+        {
+          "title": "American Psycho",
+          "image": "https://placehold.co/640x360/141414/ffffff?text=American+Psycho",
+          "video": ""
+        },
+        {
+          "title": "Mulholland Drive",
+          "image": "https://placehold.co/640x360/141414/ffffff?text=Mulholland+Drive",
+          "video": ""
+        },
+        {
+          "title": "Fight Club",
+          "image": "https://placehold.co/640x360/141414/ffffff?text=Fight+Club",
+          "video": ""
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Video"
+          }
+        ]
+      }
+    }
+  ]
+}

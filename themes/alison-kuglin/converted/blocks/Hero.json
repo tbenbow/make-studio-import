@@ -1,0 +1,9 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "fields": [
+    { "type": "text", "name": "Eyebrow", "default": "Handcrafted in the North Woods" },
+    { "type": "wysiwyg", "name": "Headline", "default": "Allison<br>Kuglin<em class=\"block text-[0.55em] tracking-[0.05em] text-fg-muted mt-1 italic\">Jewelry</em>" },
+    { "type": "text", "name": "Subtitle", "default": "Sustainable jewelry shaped from reclaimed metals and ethically sourced stones — every piece carries a story of renewal." }
+  ]
+}

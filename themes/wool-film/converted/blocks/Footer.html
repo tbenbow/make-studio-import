@@ -1,0 +1,12 @@
+<footer class="py-10 bg-base border-t border-border">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10 flex flex-col gap-6 text-center">
+    <div class="flex items-center justify-center gap-6">
+      {{#each social-links}}
+        <a href="{{url}}" rel="noopener" aria-label="{{name}}" class="text-fg-muted hover:text-brand transition">
+          {{icon icon size="20"}}
+        </a>
+      {{/each}}
+    </div>
+    <div class="body-sm text-fg-alt">{{{default fineprint "<p>&copy; 2025 Kirovi Productions. All rights reserved.</p>"}}}</div>
+  </div>
+</footer>

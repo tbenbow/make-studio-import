@@ -1,0 +1,23 @@
+<section class="py-20 lg:py-28 bg-panel relative overflow-hidden">
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-16">
+      <p class="heading-xs uppercase text-brand font-medium mb-4">{{label}}</p>
+      <h2 class="heading-lg text-fg mb-4">{{headline}}</h2>
+      <p class="body-lg text-moss max-w-[500px] mx-auto">{{subtitle}}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{#each items}}
+        <div class="bg-panel rounded-sm overflow-hidden cursor-pointer hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(62,44,30,0.1)] transition-all shadow-[0_10px_40px_rgba(62,44,30,0.04)]">
+          <div class="h-[340px] relative overflow-hidden">
+            <img src="{{image}}" alt="{{name}}" class="w-full h-full object-cover hover:scale-[1.04] transition-transform duration-700">
+          </div>
+          <div class="p-6 lg:p-7">
+            <p class="heading-xs uppercase text-brand font-medium mb-2">{{type}}</p>
+            <h3 class="heading-md text-fg mb-2">{{name}}</h3>
+            <p class="body-md text-fg-alt">{{price}}</p>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

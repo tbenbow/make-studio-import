@@ -1,0 +1,22 @@
+<section class="relative h-[600px] flex items-center overflow-hidden">
+  <img src="{{default background-image 'https://placehold.co/1440x600/1a1a2e/ffffff?text=Hero+Background'}}" alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative max-w-7xl mx-auto px-6 w-full">
+    <h1 class="heading-xl text-on-brand max-w-3xl">{{headline}}</h1>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <div class="max-w-7xl mx-auto px-6 pb-8">
+      <div class="bg-on-brand rounded-xl p-4 flex items-center gap-4 shadow-lg max-w-2xl">
+        <div class="flex-1 flex items-center gap-3">
+          {{icon "magnifying-glass" size="20"}}
+          <span class="body-md text-fg-muted">{{default search-placeholder 'Search for properties...'}}</span>
+        </div>
+        {{#if (length buttons)}}
+          {{#each buttons}}
+            {{> Button}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

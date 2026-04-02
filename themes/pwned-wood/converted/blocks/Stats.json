@@ -1,0 +1,39 @@
+{
+  "description": "Stats",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "value": "847",
+          "label": "Boards Laid"
+        },
+        {
+          "value": "23",
+          "label": "Decks Shipped"
+        },
+        {
+          "value": "0",
+          "label": "Merge Conflicts"
+        },
+        {
+          "value": "∞",
+          "label": "Splinters"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

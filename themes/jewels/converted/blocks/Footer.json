@@ -1,0 +1,122 @@
+{
+  "description": "Links and social icons",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Brand Name",
+      "default": "Lena Aurelia"
+    },
+    {
+      "type": "text",
+      "name": "Tagline",
+      "default": "Handcrafted jewelry, Portland OR"
+    },
+    {
+      "type": "text",
+      "name": "Column 1 Title",
+      "default": "Explore"
+    },
+    {
+      "type": "items",
+      "name": "Column 1 Links",
+      "default": [
+        {
+          "label": "Collection",
+          "link": "#pieces"
+        },
+        {
+          "label": "Process",
+          "link": "#process"
+        },
+        {
+          "label": "About",
+          "link": "#about"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Column 2 Title",
+      "default": "Connect"
+    },
+    {
+      "type": "items",
+      "name": "Column 2 Links",
+      "default": [
+        {
+          "label": "Email",
+          "link": "mailto:hello@lenaaurelia.com"
+        },
+        {
+          "label": "Newsletter",
+          "link": "#connect"
+        },
+        {
+          "label": "Custom orders",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Social",
+      "default": [
+        {
+          "label": "Instagram",
+          "link": "#",
+          "icon": "instagram-logo"
+        },
+        {
+          "label": "Pinterest",
+          "link": "#",
+          "icon": "pinterest-logo"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Copyright",
+      "default": "© 2026 Lena Aurelia. All pieces handmade in Portland, Oregon."
+    }
+  ]
+}

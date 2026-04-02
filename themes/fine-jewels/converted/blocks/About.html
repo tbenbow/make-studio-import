@@ -1,0 +1,28 @@
+<section class="bg-base">
+  <div class="flex items-center justify-center py-8">
+    <svg width="200" height="20" viewBox="0 0 200 20" class="text-border">
+      <line x1="0" y1="10" x2="80" y2="10" stroke="currentColor" stroke-width="0.5"></line>
+      <circle cx="100" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="0.5" class="text-gold-light"></circle>
+      <line x1="120" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width="0.5"></line>
+    </svg>
+  </div>
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-24 py-16 lg:py-32 grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[380px_1fr] gap-12 lg:gap-20 items-center">
+    <div class="max-w-[280px] md:max-w-none">
+      <div class="aspect-[3/4] bg-base-muted relative flex items-center justify-center">
+        <div class="absolute -top-3 -left-3 right-3 bottom-3 border border-gold-light/50"></div>
+        <img src="{{portrait}}" alt="{{label}}" class="w-full h-full object-cover relative z-10">
+      </div>
+    </div>
+    <div>
+      <p class="heading-xs uppercase text-brand mb-6 flex items-center gap-4">
+        <span class="w-[30px] h-px bg-gold-light"></span>
+        {{label}}
+      </p>
+      <h2 class="heading-lg text-fg mb-8">{{{headline}}}</h2>
+      <div class="text-fg-muted body-md max-w-[500px] space-y-5">
+        {{{description}}}
+      </div>
+      <p class="font-heading italic text-[1.5rem] text-brand mt-8 opacity-70">{{signature}}</p>
+    </div>
+  </div>
+</section>

@@ -17,11 +17,20 @@ themes/*/source/
 # Iteration artifacts (screenshots from visual iteration loop)
 themes/*/iterations/
 
+# Screenshots (reference captures, preview iterations — large binary files)
+themes/*/screenshots/
+
+# Experiment outputs
+output/
+
 # Sync state is local (tracks last sync timestamp per theme)
 themes/*/.sync-state.json
 
 # Workflow progress state (local/ephemeral)
 .state/
+
+# Batch conversion state (runtime artifacts)
+.batch-state/
 
 # One-off / throwaway scripts (underscore-prefixed or archived)
 scripts/_*.ts

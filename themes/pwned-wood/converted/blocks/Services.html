@@ -1,0 +1,18 @@
+<section class="py-16 lg:py-24 bg-base-muted relative overflow-hidden z-10">
+  <div class="absolute top-0 left-0 right-0 h-1" style="background: repeating-linear-gradient(90deg, #FFE500 0px, #FFE500 15px, #0A0A0A 15px, #0A0A0A 30px);"></div>
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8">
+    <p class="heading-xs uppercase text-fg-muted tracking-[0.3em] mb-2 before:content-['//_'] before:text-fg-alt">{{label}}</p>
+    <h2 class="heading-lg text-brand mb-8" style="text-shadow: 0 0 10px rgba(255,107,0,0.3);">{{headline}}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{#each items}}
+        <div class="bg-base border border-border p-8 lg:p-10 relative hover:border-brand hover:shadow-[0_0_30px_rgba(255,107,0,0.1)] transition-all" style="clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));">
+          <div class="absolute top-0 left-0 w-[3px] h-10 bg-brand"></div>
+          <span class="text-[2rem] block mb-6">{{icon}}</span>
+          <h3 class="heading-md text-brand mb-3">{{title}}</h3>
+          <p class="body-md text-fg-muted leading-[1.7]">{{description}}</p>
+          <span class="inline-block mt-4 px-2.5 py-1 body-sm border border-fg-alt text-fg-muted tracking-[0.1em]">{{tag}}</span>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

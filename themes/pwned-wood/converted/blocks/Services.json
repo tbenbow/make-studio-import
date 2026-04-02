@@ -1,0 +1,77 @@
+{
+  "description": "Services",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "service --list"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "What We Build"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "title": "Extreme Decks",
+          "description": "Full custom deck builds from the ground up. Pressure-treated, composite, or cedar. Engineered with the same precision we used to build APIs.",
+          "icon": "⚡",
+          "tag": "CORE::SERVICE"
+        },
+        {
+          "title": "Pergola Exploits",
+          "description": "Shade structures that hack the sun. Custom pergolas and covered deck additions. We found a vulnerability in your backyard's lack of shade.",
+          "icon": "🔥",
+          "tag": "SHADE::INJECT"
+        },
+        {
+          "title": "Railing Overflows",
+          "description": "Custom railings that won't buffer overflow. Cable, glass, wood, or metal — we build rails that are actually to code.",
+          "icon": "🪵",
+          "tag": "SAFETY::FIRST"
+        },
+        {
+          "title": "Deck Resurrections",
+          "description": "Your old deck is running legacy lumber. We'll refactor it from scratch or perform surgical repairs. We do not believe in rot debt.",
+          "icon": "💀",
+          "tag": "LEGACY::SUPPORT"
+        },
+        {
+          "title": "Stair Injections",
+          "description": "Stairs, landings, and multi-level transitions. We handle the elevation changes your yard is throwing at us. Edge cases handled.",
+          "icon": "🔩",
+          "tag": "ELEVATION::HACK"
+        },
+        {
+          "title": "Lighting Payloads",
+          "description": "Integrated deck lighting that deploys at sunset. Low-voltage LED systems wired cleaner than our old React components.",
+          "icon": "⛓️",
+          "tag": "DEPLOY::DUSK"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Tag"
+          }
+        ]
+      }
+    }
+  ]
+}

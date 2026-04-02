@@ -1,0 +1,44 @@
+{
+  "description": "Logo left, links centered",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "Lena Aurelia"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "About",
+          "link": "#about"
+        },
+        {
+          "label": "Pieces",
+          "link": "#pieces"
+        },
+        {
+          "label": "Process",
+          "link": "#process"
+        },
+        {
+          "label": "Connect",
+          "link": "#connect"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "description": "Services",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "What INTA does"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>We handle the full vendor lifecycle — from figuring out what to prioritize, to signing the contract.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "sort-ascending",
+          "headline": "Effort Prioritization",
+          "description": "<p>Proprietary scoring ranks your top projects by impact, cost, complexity, and urgency. A defensible, data-driven starting point.</p>"
+        },
+        {
+          "icon": "clipboard-text",
+          "headline": "Evaluation Management",
+          "description": "<p>End-to-end coordination of vendor presentations, demos, solution design, and proposals. Structured. Efficient. Thorough.</p>"
+        },
+        {
+          "icon": "currency-circle-dollar",
+          "headline": "Negotiation & Contracts",
+          "description": "<p>We advocate on your side through pricing negotiations and legal coordination. We know what fair looks like.</p>"
+        },
+        {
+          "icon": "monitor",
+          "headline": "Proof of Concept",
+          "description": "<p>Managed PoCs with clear evaluation criteria. Test in your real environment before committing.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Headline"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

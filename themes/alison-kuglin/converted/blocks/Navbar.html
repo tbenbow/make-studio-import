@@ -1,0 +1,14 @@
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-6 flex justify-between items-center backdrop-blur-[8px]" style="background: linear-gradient(to bottom, rgba(245,240,232,0.95), rgba(245,240,232,0));">
+  <div class="font-heading text-[1.1rem] font-medium tracking-[0.2em] uppercase text-fg-muted">
+    {{logo-text}}
+  </div>
+  <ul class="hidden md:flex gap-10 list-none">
+    {{#each links}}
+      <li>
+        <a href="{{link}}" class="no-underline text-fg-muted body-sm uppercase tracking-[0.15em] font-normal hover:text-brand transition-colors">
+          {{label}}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</nav>

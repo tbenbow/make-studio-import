@@ -1,0 +1,43 @@
+<section class="py-20 lg:py-28 bg-base relative overflow-hidden">
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div>
+        <p class="heading-xs uppercase text-brand font-medium mb-4">{{label}}</p>
+        <h2 class="heading-lg text-fg mb-6">{{{headline}}}</h2>
+        <p class="body-md text-fg-muted max-w-[440px] mb-8">{{description}}</p>
+        <div class="flex flex-col gap-3 body-md text-fg-alt">
+          {{#each info}}
+            <div><strong class="font-medium text-fg-muted">{{label}}</strong> — {{value}}</div>
+          {{/each}}
+        </div>
+      </div>
+      <form class="flex flex-col gap-5" onsubmit="event.preventDefault()">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="flex flex-col gap-1.5">
+            <label class="body-sm uppercase tracking-[0.15em] text-fg-alt">Name</label>
+            <input type="text" required class="bg-panel border border-base-muted px-4 py-3.5 font-body body-md text-fg rounded-sm outline-none focus:border-brand focus:shadow-[0_0_0_3px_rgba(124,165,184,0.1)] transition-all">
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="body-sm uppercase tracking-[0.15em] text-fg-alt">Email</label>
+            <input type="email" required class="bg-panel border border-base-muted px-4 py-3.5 font-body body-md text-fg rounded-sm outline-none focus:border-brand focus:shadow-[0_0_0_3px_rgba(124,165,184,0.1)] transition-all">
+          </div>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="body-sm uppercase tracking-[0.15em] text-fg-alt">I'm Interested In</label>
+          <select class="bg-panel border border-base-muted px-4 py-3.5 font-body body-md text-fg rounded-sm outline-none focus:border-brand transition-all">
+            <option value="">Select one...</option>
+            <option value="collection">Current Collection</option>
+            <option value="commission">Custom Commission</option>
+            <option value="newsletter">Newsletter Signup</option>
+            <option value="other">Just Saying Hello</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="body-sm uppercase tracking-[0.15em] text-fg-alt">Message</label>
+          <textarea placeholder="Tell me what you're looking for..." class="bg-panel border border-base-muted px-4 py-3.5 font-body body-md text-fg rounded-sm outline-none focus:border-brand focus:shadow-[0_0_0_3px_rgba(124,165,184,0.1)] transition-all resize-y min-h-[120px] placeholder:text-border"></textarea>
+        </div>
+        {{> Button label=submit-text link="" style="primary"}}
+      </form>
+    </div>
+  </div>
+</section>

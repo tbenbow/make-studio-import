@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PWNED WOOD — We Build Decks Now</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0A0A0A;
+  --terminal: #00FF41;
+  --terminal-dim: #00AA2A;
+  --terminal-dark: #003D12;
+  --neon-orange: #FF6B00;
+  --neon-yellow: #FFE500;
+  --neon-red: #FF2020;
+  --electric-blue: #00D4FF;
+  --wood-brown: #8B6914;
+  --wood-light: #C49A3C;
+  --wood-dark: #5C4400;
+  --sweat: #B8FF00;
+  --concrete: #1A1A1A;
+  --steel: #2A2A2A;
+  --gutter: #333;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--terminal);
+  background: var(--black);
+  overflow-x: hidden;
+  line-height: 1.6;
+  cursor: crosshair;
+}
+
+::selection {
+  background: var(--neon-orange);
+  color: var(--black);
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+}
+
+/* ═══════════════ SCANLINES ═══════════════ */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.15) 2px,
+    rgba(0,0,0,0.15) 4px
+  );
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* CRT flicker */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+body { animation: flicker 8s infinite; }
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -2px); }
+  80% { transform: translate(1px, 2px); }
+}
+
+@keyframes text-glitch {
+  0%, 100% { text-shadow: 2px 0 var(--neon-red), -2px 0 var(--electric-blue); }
+  25% { text-shadow: -2px 0 var(--neon-red), 2px 0 var(--electric-blue); }
+  50% { text-shadow: 2px 2px var(--neon-red), -2px -2px var(--electric-blue); }
+  75% { text-shadow: -2px 2px var(--neon-red), 2px -2px var(--electric-blue); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 10px var(--terminal), 0 0 20px var(--terminal), 0 0 40px var(--terminal); }
+  50% { text-shadow: 0 0 5px var(--terminal), 0 0 10px var(--terminal), 0 0 20px var(--terminal); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes extreme-slide {
+  from { transform: translateX(-100%) skewX(-5deg); opacity: 0; }
+  to { transform: translateX(0) skewX(0deg); opacity: 1; }
+}
+
+@keyframes matrix-fall {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes saw-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes energy-pulse {
+  0%, 100% { box-shadow: 0 0 5px var(--neon-orange), inset 0 0 5px var(--neon-orange); }
+  50% { box-shadow: 0 0 20px var(--neon-orange), 0 0 40px var(--neon-orange), inset 0 0 15px var(--neon-orange); }
+}
+
+/* ═══════════════ MATRIX RAIN ═══════════════ */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.07;
+}
+.matrix-col {
+  position: absolute;
+  top: -100%;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--terminal);
+  animation: matrix-fall linear infinite;
+  white-space: pre;
+}
+
+/* ═══════════════ NAV ═══════════════ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10,10,10,0.92);
+  border-bottom: 1px solid var(--terminal-dark);
+  backdrop-filter: blur(10px);
+}
+nav .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--neon-orange);
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 10px rgba(255,107,0,0.5);
+}
+nav .logo span {
+  color: var(--terminal);
+  font-weight: 400;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  text-decoration: none;
+  color: var(--terminal-dim);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+nav a:hover {
+  color: var(--terminal);
+  text-shadow: 0 0 8px var(--terminal);
+}
+nav a::before { content: '> '; opacity: 0.4; }
+.nav-status {
+  font-size: 0.6rem;
+  color: var(--terminal-dim);
+  opacity: 0.5;
+}
+.nav-status .blink {
+  animation: blink 1s step-end infinite;
+  color: var(--terminal);
+}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 6rem 3rem;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(255,107,0,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(0,255,65,0.04) 0%, transparent 50%),
+    var(--black);
+}
+
+/* Danger stripes */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--neon-orange) 0px,
+    var(--neon-orange) 20px,
+    var(--black) 20px,
+    var(--black) 40px
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-pre {
+  font-size: 0.7rem;
+  color: var(--terminal-dim);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+.hero-pre .path { color: var(--electric-blue); }
+.hero-pre .cmd { color: var(--terminal); }
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--neon-orange);
+  text-shadow:
+    0 0 20px rgba(255,107,0,0.4),
+    0 0 60px rgba(255,107,0,0.2),
+    3px 3px 0 var(--neon-red),
+    -1px -1px 0 var(--neon-yellow);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  animation: text-glitch 4s infinite;
+}
+.hero h1 .wood {
+  display: block;
+  color: var(--wood-light);
+  text-shadow:
+    0 0 20px rgba(196,154,60,0.3),
+    3px 3px 0 var(--wood-dark);
+}
+
+.hero-tagline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--sweat);
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 15px rgba(184,255,0,0.3);
+}
+
+.hero-desc {
+  font-size: 0.85rem;
+  color: var(--terminal-dim);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+.hero-desc .highlight { color: var(--neon-orange); }
+.hero-desc .strike { text-decoration: line-through; opacity: 0.4; }
+.hero-desc .comment { color: var(--terminal-dark); }
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn-extreme {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid var(--neon-orange);
+  color: var(--neon-orange);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
+.btn-extreme:hover {
+  background: var(--neon-orange);
+  color: var(--black);
+  box-shadow: 0 0 30px rgba(255,107,0,0.4);
+}
+.btn-hack {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border: 1px solid var(--terminal-dark);
+  color: var(--terminal);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-hack:hover {
+  border-color: var(--terminal);
+  box-shadow: 0 0 15px rgba(0,255,65,0.2);
+}
+.btn-hack::before { content: '$ '; opacity: 0.5; }
+
+/* ASCII saw blade */
+.hero-ascii {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  line-height: 1.2;
+  color: var(--terminal-dark);
+  white-space: pre;
+  opacity: 0.4;
+  animation: saw-spin 20s linear infinite;
+  z-index: 1;
+}
+
+/* ═══════════════ STATS BAR ═══════════════ */
+.stats-bar {
+  background: var(--concrete);
+  border-top: 1px solid var(--gutter);
+  border-bottom: 1px solid var(--gutter);
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.stats-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+.stat-item .stat-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--neon-orange);
+  text-shadow: 0 0 15px rgba(255,107,0,0.3);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-item .stat-label {
+  font-size: 0.65rem;
+  color: var(--terminal-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════ SECTIONS ═══════════════ */
+section {
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: var(--terminal-dim);
+  margin-bottom: 0.5rem;
+}
+.section-label::before { content: '// '; color: var(--terminal-dark); }
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--neon-orange);
+  text-shadow: 0 0 10px rgba(255,107,0,0.3);
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════ ORIGIN STORY ═══════════════ */
+.origin {
+  background: var(--black);
+  border-top: 1px solid var(--terminal-dark);
+}
+.origin-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.origin-terminal {
+  background: var(--concrete);
+  border: 1px solid var(--gutter);
+  overflow: hidden;
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--steel);
+  border-bottom: 1px solid var(--gutter);
+}
+.terminal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.terminal-dot.r { background: #FF5F57; }
+.terminal-dot.y { background: #FFBD2E; }
+.terminal-dot.g { background: #28C840; }
+.terminal-title {
+  font-size: 0.6rem;
+  color: var(--terminal-dim);
+  margin-left: 0.5rem;
+  opacity: 0.6;
+}
+.terminal-body {
+  padding: 1.5rem;
+  font-size: 0.78rem;
+  line-height: 2;
+}
+.terminal-body .prompt { color: var(--electric-blue); }
+.terminal-body .cmd { color: var(--terminal); }
+.terminal-body .output { color: var(--terminal-dim); opacity: 0.7; }
+.terminal-body .error { color: var(--neon-red); }
+.terminal-body .success { color: var(--sweat); }
+.terminal-body .comment { color: var(--terminal-dark); }
+.terminal-body .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: var(--terminal);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+.origin-text p {
+  font-size: 0.9rem;
+  color: var(--terminal-dim);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+.origin-text .highlight { color: var(--neon-orange); }
+.origin-text .green { color: var(--terminal); }
+
+/* ═══════════════ SERVICES ═══════════════ */
+.services {
+  background: var(--concrete);
+  position: relative;
+  overflow: hidden;
+}
+/* Diagonal warning stripe */
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--neon-yellow) 0px,
+    var(--neon-yellow) 15px,
+    var(--black) 15px,
+    var(--black) 30px
+  );
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--black);
+  border: 1px solid var(--gutter);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+.service-card:hover {
+  border-color: var(--neon-orange);
+  box-shadow: 0 0 30px rgba(255,107,0,0.1);
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 40px;
+  background: var(--neon-orange);
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.service-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--neon-orange);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.08em;
+}
+.service-card p {
+  font-size: 0.8rem;
+  color: var(--terminal-dim);
+  line-height: 1.7;
+}
+.service-tag {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.6rem;
+  border: 1px solid var(--terminal-dark);
+  color: var(--terminal-dim);
+  letter-spacing: 0.1em;
+}
+
+/* ═══════════════ BUILDS / PORTFOLIO ═══════════════ */
+.builds {
+  background: var(--black);
+}
+.builds-header {
+  margin-bottom: 3rem;
+}
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.build-card {
+  border: 1px solid var(--gutter);
+  overflow: hidden;
+  transition: border-color 0.4s;
+  position: relative;
+}
+.build-card:hover { border-color: var(--neon-orange); }
+.build-image {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+.build-image-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+}
+.build-card:hover .build-image-inner { transform: scale(1.05); }
+.build-card:nth-child(1) .build-image-inner {
+  background: linear-gradient(135deg, var(--wood-dark) 0%, var(--concrete) 50%, var(--wood-brown) 100%);
+}
+.build-card:nth-child(2) .build-image-inner {
+  background: linear-gradient(145deg, var(--concrete) 0%, var(--wood-brown) 40%, var(--steel) 100%);
+}
+.build-card:nth-child(3) .build-image-inner {
+  background: linear-gradient(160deg, var(--wood-brown) 0%, var(--black) 50%, var(--wood-dark) 100%);
+}
+.build-card:nth-child(4) .build-image-inner {
+  background: linear-gradient(125deg, var(--steel) 0%, var(--wood-dark) 50%, var(--concrete) 100%);
+}
+/* Grid overlay on build images */
+.build-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(90deg, rgba(0,255,65,0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(0,255,65,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+.build-info {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid var(--gutter);
+}
+.build-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: var(--neon-orange);
+  letter-spacing: 0.05em;
+}
+.build-meta {
+  font-size: 0.65rem;
+  color: var(--terminal-dark);
+}
+.build-spec {
+  font-size: 0.7rem;
+  color: var(--terminal-dim);
+  margin-top: 0.3rem;
+}
+.build-status {
+  font-size: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.build-status.shipped { color: var(--terminal); border-color: var(--terminal-dark); }
+.build-status.building { color: var(--neon-yellow); border-color: rgba(255,229,0,0.3); animation: energy-pulse 2s infinite; }
+
+/* ═══════════════ TESTIMONIALS ═══════════════ */
+.testimonials {
+  background: var(--concrete);
+  position: relative;
+}
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--terminal-dark), transparent);
+}
+.testimonials-header { margin-bottom: 3rem; }
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.testimonial-card {
+  background: var(--black);
+  border: 1px solid var(--gutter);
+  padding: 2rem;
+  position: relative;
+  transition: border-color 0.4s;
+}
+.testimonial-card:hover { border-color: var(--terminal-dark); }
+.testimonial-card::before {
+  content: '>';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: var(--terminal-dark);
+  opacity: 0.5;
+}
+.testimonial-card blockquote {
+  font-size: 0.82rem;
+  color: var(--terminal-dim);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  padding-top: 0.5rem;
+  font-style: normal;
+}
+.testimonial-card .author {
+  font-size: 0.65rem;
+  color: var(--neon-orange);
+  letter-spacing: 0.1em;
+}
+.testimonial-card .author span {
+  display: block;
+  color: var(--terminal-dark);
+  margin-top: 0.2rem;
+}
+
+/* ═══════════════ CONTACT ═══════════════ */
+.contact {
+  background: var(--black);
+  position: relative;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--neon-red) 0px,
+    var(--neon-red) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contact-intro p {
+  font-size: 0.9rem;
+  color: var(--terminal-dim);
+  margin-bottom: 2rem;
+  max-width: 440px;
+  line-height: 1.8;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+}
+.contact-info div {
+  color: var(--terminal-dim);
+}
+.contact-info strong {
+  color: var(--neon-orange);
+  font-weight: normal;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-group { display: flex; flex-direction: column; gap: 0.3rem; }
+.form-group label {
+  font-size: 0.6rem;
+  color: var(--terminal-dark);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.form-group label::before { content: '# '; }
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: var(--concrete);
+  border: 1px solid var(--gutter);
+  padding: 0.8rem 1rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--terminal);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--terminal);
+  box-shadow: 0 0 10px rgba(0,255,65,0.1);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--terminal-dark);
+}
+.form-group select option {
+  background: var(--concrete);
+  color: var(--terminal);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  background: transparent;
+  border: 2px solid var(--neon-orange);
+  color: var(--neon-orange);
+  padding: 1rem 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-start;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+.form-submit:hover {
+  background: var(--neon-orange);
+  color: var(--black);
+  box-shadow: 0 0 30px rgba(255,107,0,0.4);
+}
+
+/* ═══════════════ FOOTER ═══════════════ */
+footer {
+  background: var(--concrete);
+  border-top: 1px solid var(--gutter);
+  padding: 3rem 2rem 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gutter);
+}
+.footer-brand .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--neon-orange);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.footer-brand p {
+  font-size: 0.75rem;
+  color: var(--terminal-dark);
+  line-height: 1.7;
+  max-width: 280px;
+}
+.footer-col h4 {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terminal-dim);
+  margin-bottom: 1rem;
+}
+.footer-col h4::before { content: '$ '; color: var(--terminal-dark); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.5rem; }
+.footer-col a {
+  text-decoration: none;
+  color: var(--terminal-dark);
+  font-size: 0.8rem;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--terminal); }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  font-size: 0.65rem;
+  color: var(--terminal-dark);
+}
+.footer-bottom .ascii-saw {
+  font-size: 0.7rem;
+  color: var(--neon-orange);
+  opacity: 0.4;
+}
+
+/* ═══════════════ RESPONSIVE ═══════════════ */
+@media (max-width: 900px) {
+  nav { padding: 0.8rem 1.5rem; }
+  nav ul { display: none; }
+  .hero { padding: 6rem 1.5rem; }
+  .hero-ascii { display: none; }
+  .origin-grid,
+  .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .services-grid,
+  .testimonial-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+  .build-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  section { padding: 4rem 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════ SCROLL REVEAL ═══════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+</style>
+</head>
+<body>
+
+<!-- Matrix Rain Background -->
+<div class="matrix-rain" id="matrixRain"></div>
+
+<!-- Navigation -->
+<nav>
+  <div class="logo">PWNED<span>.wood</span></div>
+  <ul>
+    <li><a href="#origin">origin</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#builds">builds</a></li>
+    <li><a href="#reviews">reviews</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <div class="nav-status">SYS OK <span class="blink">█</span></div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-ascii">
+    ╭───╮
+   ╱ ◉ ◉ ╲
+  │ ┌───┐ │
+  │ │SAW│ │
+  │ └───┘ │
+   ╲     ╱
+    ╰───╯
+  </div>
+  <div class="hero-content">
+    <div class="hero-pre"><span class="path">~/career</span> <span class="cmd">$ sudo rm -rf ./software-engineering</span></div>
+    <h1>PWNED<span class="wood">WOOD</span></h1>
+    <div class="hero-tagline">We Build Decks Now. Deal With It.</div>
+    <p class="hero-desc">
+      We used to ship code. Now we ship <span class="highlight">pressure-treated lumber</span>.
+      <br><span class="comment">// AI took our jobs so we grabbed a circular saw</span>
+      <br><span class="strike">Full-stack developers</span> → <span class="highlight">Full-deck builders</span>
+      <br>Same obsessive attention to detail. Same 2AM finishes.
+      <br>Different stack. <span class="comment">// literally</span>
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-extreme">Get a Quote</a>
+      <a href="#builds" class="btn-hack">view --builds</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">847</div>
+      <div class="stat-label">Boards Laid</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">23</div>
+      <div class="stat-label">Decks Shipped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Merge Conflicts</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Splinters</div>
+    </div>
+  </div>
+</div>
+
+<!-- Origin Story -->
+<section class="origin" id="origin">
+  <div class="section-inner">
+    <div class="origin-grid">
+      <div class="origin-terminal reveal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-title">origin-story.sh — bash</span>
+        </div>
+        <div class="terminal-body">
+          <span class="prompt">tom@pwned</span> <span class="cmd">git log --oneline career</span><br>
+          <span class="output">a1b2c3d Shipped production apps for 15 years</span><br>
+          <span class="output">e4f5g6h Mastered every JS framework (twice)</span><br>
+          <span class="output">i7j8k9l Built distributed systems at scale</span><br>
+          <span class="output">m0n1o2p Debugged CSS for 6 hours (vertical centering)</span><br>
+          <span class="error">ERROR: AI has entered the chat</span><br>
+          <span class="error">WARNING: claude-code builds websites now</span><br>
+          <span class="comment"># career.exe has stopped responding</span><br><br>
+          <span class="prompt">tom@pwned</span> <span class="cmd">apt install circular-saw deck-screws</span><br>
+          <span class="success">✓ Tools installed. Ready to build.</span><br>
+          <span class="success">✓ No node_modules required.</span><br>
+          <span class="success">✓ Zero dependencies. Just wood.</span><br><br>
+          <span class="prompt">tom@pwned</span> <span class="cursor"></span>
+        </div>
+      </div>
+      <div class="origin-text reveal">
+        <div class="section-label">readme.md</div>
+        <h2 class="section-title">The Pivot</h2>
+        <p>Look, we saw the writing on the wall. Or more accurately, we saw <span class="highlight">AI writing the code on the wall</span>. Every developer's worst nightmare turned into our best career decision.</p>
+        <p>We traded <span class="green">git commits</span> for <span class="highlight">concrete footings</span>. Swapped our standing desks for sawhorses. Replaced code reviews with <span class="highlight">building inspections</span>.</p>
+        <p>Turns out, 15 years of obsessing over architecture, structural integrity, and clean execution translates pretty well when the architecture is <span class="highlight">actual architecture</span>.</p>
+        <p>The bugs are bigger now (literal beetles), but at least they don't ship to production at 3AM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-label">service --list</div>
+    <h2 class="section-title">What We Build</h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-icon">⚡</span>
+        <h3>Extreme Decks</h3>
+        <p>Full custom deck builds from the ground up. Pressure-treated, composite, or cedar. Engineered with the same precision we used to build APIs. Load-tested. Not load-balanced.</p>
+        <span class="service-tag">CORE::SERVICE</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🔥</span>
+        <h3>Pergola Exploits</h3>
+        <p>Shade structures that hack the sun. Custom pergolas and covered deck additions. We found a vulnerability in your backyard's lack of shade and we're exploiting it.</p>
+        <span class="service-tag">SHADE::INJECT</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🪵</span>
+        <h3>Railing Overflows</h3>
+        <p>Custom railings that won't buffer overflow. Cable, glass, wood, or metal — we build rails that are actually to code. Building code. Not source code. Well, both.</p>
+        <span class="service-tag">SAFETY::FIRST</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">💀</span>
+        <h3>Deck Resurrections</h3>
+        <p>Your old deck is running legacy software — I mean lumber. We'll refactor it from scratch or perform surgical repairs. We do not believe in tech debt. Or rot debt.</p>
+        <span class="service-tag">LEGACY::SUPPORT</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">🔩</span>
+        <h3>Stair Injections</h3>
+        <p>Stairs, landings, and multi-level transitions. We handle the elevation changes your yard is throwing at us. Consider them edge cases — and we handle every one.</p>
+        <span class="service-tag">ELEVATION::HACK</span>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon">⛓️</span>
+        <h3>Lighting Payloads</h3>
+        <p>Integrated deck lighting that deploys at sunset. Low-voltage LED systems wired cleaner than our old React components. Zero runtime errors after dark.</p>
+        <span class="service-tag">DEPLOY::DUSK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Builds / Portfolio -->
+<section class="builds" id="builds">
+  <div class="section-inner">
+    <div class="builds-header reveal">
+      <div class="section-label">ls -la ./portfolio</div>
+      <h2 class="section-title">Recent Deploys</h2>
+    </div>
+    <div class="build-grid">
+      <div class="build-card reveal">
+        <div class="build-image"><div class="build-image-inner"></div></div>
+        <div class="build-info">
+          <div>
+            <div class="build-name">The Anderson Compound</div>
+            <div class="build-spec">800 sqft composite · multi-level · cable rail</div>
+          </div>
+          <div class="build-status shipped">SHIPPED</div>
+        </div>
+      </div>
+      <div class="build-card reveal">
+        <div class="build-image"><div class="build-image-inner"></div></div>
+        <div class="build-info">
+          <div>
+            <div class="build-name">Lakeside Zero-Day</div>
+            <div class="build-spec">1200 sqft cedar · pergola · integrated lighting</div>
+          </div>
+          <div class="build-status shipped">SHIPPED</div>
+        </div>
+      </div>
+      <div class="build-card reveal">
+        <div class="build-image"><div class="build-image-inner"></div></div>
+        <div class="build-info">
+          <div>
+            <div class="build-name">The Thompson Rootkit</div>
+            <div class="build-spec">600 sqft pressure-treated · wraparound · stairs</div>
+          </div>
+          <div class="build-status shipped">SHIPPED</div>
+        </div>
+      </div>
+      <div class="build-card reveal">
+        <div class="build-image"><div class="build-image-inner"></div></div>
+        <div class="build-info">
+          <div>
+            <div class="build-name">Project Backdoor Patio</div>
+            <div class="build-spec">450 sqft composite · glass rail · hot tub pad</div>
+          </div>
+          <div class="build-status building">BUILDING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" id="reviews">
+  <div class="section-inner">
+    <div class="testimonials-header reveal">
+      <div class="section-label">cat reviews.log</div>
+      <h2 class="section-title">Verified Humans</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <blockquote>I hired them because they said they were "full-stack." Turns out they meant literally stacking boards. But honestly? Best deck I've ever had. The joists are immaculate. Like, weirdly immaculate.</blockquote>
+        <div class="author">
+          @dave_k
+          <span>// lakehouse owner, verified not a bot</span>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <blockquote>They kept calling my old deck "legacy infrastructure" and referred to the rotten boards as "technical debt." Weird guys. But they built me an absolute unit of a deck in two weeks flat.</blockquote>
+        <div class="author">
+          @linda_builds
+          <span>// suburban renovator, brainerd mn</span>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <blockquote>Tom showed up on day one with a ThinkPad running Arch Linux and a Dewalt miter saw. I didn't know what to expect. What I got was the most precisely measured, beautifully finished deck in the neighborhood.</blockquote>
+        <div class="author">
+          @garage_mike
+          <span>// backyard enthusiast, park rapids</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div class="contact-intro reveal">
+        <div class="section-label">ssh contact@pwned.wood</div>
+        <h2 class="section-title">Open a Ticket</h2>
+        <p>Ready to get pwned? (Your backyard, we mean.) Drop us a line and we'll scope the project. Free estimates. No sprint planning required.</p>
+        <div class="contact-info">
+          <div><strong>LOCATION</strong> — Hackensack, MN</div>
+          <div><strong>EMAIL</strong> — tom@pwned.wood</div>
+          <div><strong>UPTIME</strong> — Mon-Sat, 7AM-6PM</div>
+          <div><strong>RESPONSE</strong> — &lt; 24 hours (faster than our old CI/CD)</div>
+        </div>
+      </div>
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('.form-submit').textContent='PAYLOAD DELIVERED ✓'; this.querySelector('.form-submit').style.borderColor='var(--terminal)'; this.querySelector('.form-submit').style.color='var(--terminal)';">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" placeholder="hackerman69" required>
+          </div>
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">service_type</label>
+          <select id="service" name="service">
+            <option value="">SELECT TARGET...</option>
+            <option value="new">New Deck Build</option>
+            <option value="repair">Deck Resurrection</option>
+            <option value="pergola">Pergola Exploit</option>
+            <option value="railing">Railing Overflow</option>
+            <option value="stairs">Stair Injection</option>
+            <option value="lighting">Lighting Payload</option>
+            <option value="other">Something Else</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">message_body</label>
+          <textarea id="message" name="message" placeholder="describe your backyard vulnerability..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Deploy Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">PWNED.WOOD</span>
+        <p>Former software engineers. Current deck builders. We traded merge conflicts for miter cuts and we've never been happier. Serving the Hackensack, MN area.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Deck Builds</a></li>
+          <li><a href="#services">Pergolas</a></li>
+          <li><a href="#services">Railings</a></li>
+          <li><a href="#services">Repairs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="#origin">Our Story</a></li>
+          <li><a href="#builds">Portfolio</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Social</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">GitHub (archived)</a></li>
+          <li><a href="#">LinkedIn (outdated)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PWNED WOOD LLC. Hackensack, MN. All rights reserved. No warranty expressed or implied. YOLO.</span>
+      <span class="ascii-saw">⚙ ━━━━━━ ⚡</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Matrix rain
+const rain = document.getElementById('matrixRain');
+const chars = '01{}[]<>/\\|=+*&^%$#@!木材板釘鋸甲板DECKWOODSCREW2x4JOIST';
+const colCount = Math.floor(window.innerWidth / 20);
+
+for (let i = 0; i < colCount; i++) {
+  const col = document.createElement('div');
+  col.className = 'matrix-col';
+  col.style.left = (i * 20) + 'px';
+  col.style.animationDuration = (8 + Math.random() * 12) + 's';
+  col.style.animationDelay = (Math.random() * -20) + 's';
+
+  let text = '';
+  const len = 10 + Math.floor(Math.random() * 20);
+  for (let j = 0; j < len; j++) {
+    text += chars[Math.floor(Math.random() * chars.length)] + '\n';
+  }
+  col.textContent = text;
+  rain.appendChild(col);
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

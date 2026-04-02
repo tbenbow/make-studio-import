@@ -1,0 +1,12 @@
+<section class="relative flex min-h-screen items-center justify-center overflow-hidden bg-base">
+  {{#if background-image}}
+    <div class="absolute inset-0">
+      <img src="{{background-image}}" alt="" class="h-full w-full object-cover opacity-80">
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7));"></div>
+    </div>
+  {{/if}}
+  <div class="relative z-[1] mx-auto w-full max-w-7xl px-6 lg:px-10 py-32 flex flex-col items-center text-center gap-4">
+    <h1 class="text-fg font-bold tracking-tight" style="font-size: clamp(4rem, 12vw, 10rem); line-height: 1;">{{default title "WOOL"}}</h1>
+    <p class="body-lg text-fg-muted">{{default subtitle "A short film by Jamey Erickson"}}</p>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+{
+  "description": "Origin",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "readme.md"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "The Pivot"
+    },
+    {
+      "type": "text",
+      "name": "Terminal Title",
+      "default": "origin-story.sh — bash"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Terminal Content",
+      "default": "<span class=\"text-electric-blue\">tom@pwned</span> <span class=\"text-fg\">git log --oneline career</span><br><span class=\"text-fg-muted/70\">a1b2c3d Shipped production apps for 15 years</span><br><span class=\"text-fg-muted/70\">e4f5g6h Mastered every JS framework (twice)</span><br><span class=\"text-fg-muted/70\">i7j8k9l Built distributed systems at scale</span><br><span class=\"text-fg-muted/70\">m0n1o2p Debugged CSS for 6 hours (vertical centering)</span><br><span class=\"text-neon-red\">ERROR: AI has entered the chat</span><br><span class=\"text-neon-red\">WARNING: claude-code builds websites now</span><br><span class=\"text-fg-alt\"># career.exe has stopped responding</span><br><br><span class=\"text-electric-blue\">tom@pwned</span> <span class=\"text-fg\">apt install circular-saw deck-screws</span><br><span class=\"text-sweat\">✓ Tools installed. Ready to build.</span><br><span class=\"text-sweat\">✓ No node_modules required.</span><br><span class=\"text-sweat\">✓ Zero dependencies. Just wood.</span>"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Look, we saw the writing on the wall. Or more accurately, we saw <span class=\"text-brand\">AI writing the code on the wall</span>. Every developer's worst nightmare turned into our best career decision.</p><p>We traded <span class=\"text-fg\">git commits</span> for <span class=\"text-brand\">concrete footings</span>. Swapped our standing desks for sawhorses. Replaced code reviews with <span class=\"text-brand\">building inspections</span>.</p><p>Turns out, 15 years of obsessing over architecture, structural integrity, and clean execution translates pretty well when the architecture is <span class=\"text-brand\">actual architecture</span>.</p><p>The bugs are bigger now (literal beetles), but at least they don't ship to production at 3AM.</p>"
+    }
+  ]
+}

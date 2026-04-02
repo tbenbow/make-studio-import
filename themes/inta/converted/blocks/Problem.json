@@ -1,0 +1,15 @@
+{
+  "description": "Problem",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Quote",
+      "default": "<p>\"We had ten competing priorities, three vendor evaluations running at once, and our best engineers pulled into meetings all day. Something had to give.\"</p>"
+    },
+    {
+      "type": "text",
+      "name": "Attribution",
+      "default": "— Every mid-market CTO, eventually"
+    }
+  ]
+}

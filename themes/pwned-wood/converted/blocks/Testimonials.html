@@ -1,0 +1,23 @@
+<section class="py-16 lg:py-24 bg-base-muted relative z-10">
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-fg-alt to-transparent"></div>
+  <div class="mx-auto max-w-[1100px] px-6 lg:px-8">
+    <div class="mb-12">
+      <p class="heading-xs uppercase text-fg-muted tracking-[0.3em] mb-2 before:content-['//_'] before:text-fg-alt">{{label}}</p>
+      <h2 class="heading-lg text-brand" style="text-shadow: 0 0 10px rgba(255,107,0,0.3);">{{headline}}</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {{#each items}}
+        <div class="bg-base border border-border p-8 relative hover:border-fg-alt transition-colors">
+          <span class="absolute top-4 left-4 text-[1.5rem] text-fg-alt/50">&gt;</span>
+          <blockquote class="body-md text-fg-muted leading-[1.8] mb-5 pt-2">
+            {{quote}}
+          </blockquote>
+          <div class="body-sm text-brand tracking-[0.1em]">
+            {{author}}
+            <span class="block text-fg-alt mt-1">{{author-info}}</span>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

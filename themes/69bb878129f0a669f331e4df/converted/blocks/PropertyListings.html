@@ -1,0 +1,40 @@
+<section class="py-16 bg-base">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col gap-10">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+      <div class="flex flex-col gap-2">
+        <h2 class="heading-lg text-fg">{{headline}}</h2>
+        <p class="body-lg text-fg-muted max-w-xl">{{subheadline}}</p>
+      </div>
+      {{#if (length buttons)}}
+        <div class="flex gap-3">
+          {{#each buttons}}
+            {{> Button}}
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+    {{#if (length properties)}}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{#each properties}}
+          <div class="group flex flex-col rounded-2xl overflow-hidden border border-border">
+            <div class="relative h-72 overflow-hidden">
+              <img src="{{image}}" alt="{{name}}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute top-4 left-4 bg-base/90 backdrop-blur rounded-lg px-3 py-1">
+                <span class="body-sm font-semibold text-fg">{{price}}</span>
+              </div>
+            </div>
+            <div class="p-6 flex flex-col gap-3">
+              <h3 class="heading-sm text-fg">{{name}}</h3>
+              <p class="body-md text-fg-muted line-clamp-2">{{description}}</p>
+              <div class="flex items-center gap-4 pt-2 border-t border-border body-sm text-fg-muted">
+                <span>{{sqft}} sqft</span>
+                <span>{{beds}} beds</span>
+                <span>{{baths}} baths</span>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

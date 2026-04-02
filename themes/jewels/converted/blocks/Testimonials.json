@@ -1,0 +1,45 @@
+{
+  "description": "Testimonials",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Kind words"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "What people say"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "author": "Sarah M. — Portland",
+          "quote": "I've never had a piece of jewelry that felt so completely mine. The Riverbed Band looks like it grew on my finger — I haven't taken it off in three months."
+        },
+        {
+          "author": "Emi K. — San Francisco",
+          "quote": "Lena's work has a weight and warmth that you just can't find in a store. I bought the Tether necklace as a gift and ended up ordering one for myself the same week."
+        },
+        {
+          "author": "David R. — Seattle",
+          "quote": "The craftsmanship is extraordinary. You can feel the intention in every detail. This is jewelry made by someone who genuinely loves what they do."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Author"
+          },
+          {
+            "type": "textarea",
+            "name": "Quote"
+          }
+        ]
+      }
+    }
+  ]
+}

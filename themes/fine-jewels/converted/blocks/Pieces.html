@@ -1,0 +1,24 @@
+<section class="py-16 lg:py-24 bg-base">
+  <div class="mx-auto max-w-[1200px] px-6 lg:px-16">
+    <div class="text-center mb-16 lg:mb-20">
+      <p class="heading-xs uppercase text-brand mb-4 flex items-center justify-center gap-4">
+        <span class="w-[30px] h-px bg-gold-light"></span>
+        {{label}}
+        <span class="w-[30px] h-px bg-gold-light"></span>
+      </p>
+      <h2 class="heading-lg text-fg">{{{headline}}}</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {{#each items}}
+        <div class="cursor-pointer group {{#if (isEven @index)}}lg:mt-12{{/if}}">
+          <div class="aspect-[3/4] bg-base-muted mb-6 overflow-hidden relative flex items-center justify-center group-hover:-translate-y-1 transition-transform duration-600">
+            <div class="absolute inset-0 border border-gold-light/0 group-hover:border-gold-light/50 transition-all duration-400"></div>
+            <img src="{{image}}" alt="{{name}}" class="w-full h-full object-cover">
+          </div>
+          <h3 class="heading-sm text-fg mb-1">{{name}}</h3>
+          <p class="body-lg text-fg-muted">{{description}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

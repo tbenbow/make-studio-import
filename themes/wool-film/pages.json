@@ -1,0 +1,30 @@
+{
+  "layouts": [
+    {
+      "name": "Default Layout",
+      "headerBlocks": ["Navbar"],
+      "footerBlocks": ["Footer"],
+      "isDefault": true
+    }
+  ],
+  "pages": [
+    {
+      "name": "index",
+      "slug": "/",
+      "layout": "Default Layout",
+      "blocks": ["HeroFilm"]
+    },
+    {
+      "name": "crew",
+      "slug": "crew",
+      "layout": "Default Layout",
+      "blocks": ["CreatorBio", "CrewGrid", "ImageGallery"]
+    },
+    {
+      "name": "synopsis",
+      "slug": "synopsis",
+      "layout": "Default Layout",
+      "blocks": ["Synopsis", "ComparableFilms", "ImageGallery"]
+    }
+  ]
+}

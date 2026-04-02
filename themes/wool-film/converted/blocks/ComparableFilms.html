@@ -1,0 +1,22 @@
+<section class="py-16 lg:py-24 bg-base">
+  <div class="mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl lg:px-10">
+    <h2 class="heading-lg text-fg mb-12 uppercase tracking-wide">{{default heading "Comparable Films"}}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      {{#each films}}
+        <div class="flex flex-col gap-3">
+          <div class="aspect-video overflow-hidden relative group">
+            <img src="{{image}}" alt="{{title}}" class="h-full w-full object-cover">
+            {{#if video}}
+              <div class="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition">
+                <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center">
+                  {{icon "play-fill" size="32"}}
+                </div>
+              </div>
+            {{/if}}
+          </div>
+          <h3 class="heading-sm text-fg">{{title}}</h3>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

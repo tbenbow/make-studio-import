@@ -1,0 +1,267 @@
+{
+  "fonts": [
+    {
+      "family": "Orbitron",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Orbitron",
+      "weight": 700,
+      "style": "normal"
+    },
+    {
+      "family": "Orbitron",
+      "weight": 900,
+      "style": "normal"
+    },
+    {
+      "family": "Bebas Neue",
+      "weight": 400,
+      "style": "normal"
+    },
+    {
+      "family": "Share Tech Mono",
+      "weight": 400,
+      "style": "normal"
+    }
+  ],
+  "systemColors": {
+    "base": "#0A0A0A",
+    "base-muted": "#1A1A1A",
+    "base-alt": "#FDFBF8",
+    "panel": "#2A2A2A",
+    "fg": "#00FF41",
+    "fg-muted": "#00AA2A",
+    "fg-alt": "#003D12",
+    "brand": "#FF6B00",
+    "on-brand": "#0A0A0A",
+    "border": "#333333"
+  },
+  "customColors": [
+    {
+      "id": "neon-yellow",
+      "name": "neon-yellow",
+      "value": "#FFE500"
+    },
+    {
+      "id": "neon-red",
+      "name": "neon-red",
+      "value": "#FF2020"
+    },
+    {
+      "id": "electric-blue",
+      "name": "electric-blue",
+      "value": "#00D4FF"
+    },
+    {
+      "id": "wood-light",
+      "name": "wood-light",
+      "value": "#C49A3C"
+    },
+    {
+      "id": "wood-brown",
+      "name": "wood-brown",
+      "value": "#8B6914"
+    },
+    {
+      "id": "sweat",
+      "name": "sweat",
+      "value": "#B8FF00"
+    }
+  ],
+  "palette": {
+    "primary": {
+      "label": "neon",
+      "colors": [
+        "#FF9B4A",
+        "#FF6B00",
+        "#CC5500",
+        "#993F00",
+        "#662A00"
+      ]
+    },
+    "grays": {
+      "label": "dark",
+      "colors": [
+        "#333333",
+        "#2A2A2A",
+        "#1A1A1A",
+        "#0F0F0F",
+        "#0A0A0A"
+      ]
+    }
+  },
+  "headingTypography": {
+    "heading-xl": {
+      "fontFamily": "Orbitron",
+      "fontWeight": 900,
+      "fontSize": 72,
+      "lineHeight": 68,
+      "letterSpacing": 1,
+      "mobileFontSize": 44,
+      "mobileLineHeight": 42
+    },
+    "heading-lg": {
+      "fontFamily": "Orbitron",
+      "fontWeight": 900,
+      "fontSize": 44,
+      "lineHeight": 48,
+      "letterSpacing": 1,
+      "mobileFontSize": 28,
+      "mobileLineHeight": 32
+    },
+    "heading-md": {
+      "fontFamily": "Orbitron",
+      "fontWeight": 700,
+      "fontSize": 18,
+      "lineHeight": 24,
+      "letterSpacing": 1.5,
+      "mobileFontSize": 16,
+      "mobileLineHeight": 22
+    },
+    "heading-sm": {
+      "fontFamily": "Bebas Neue",
+      "fontWeight": 400,
+      "fontSize": 22,
+      "lineHeight": 26,
+      "letterSpacing": 1,
+      "mobileFontSize": 20,
+      "mobileLineHeight": 24
+    },
+    "heading-xs": {
+      "fontFamily": "Share Tech Mono",
+      "fontWeight": 400,
+      "fontSize": 11,
+      "lineHeight": 16,
+      "letterSpacing": 3,
+      "mobileFontSize": 10,
+      "mobileLineHeight": 14
+    }
+  },
+  "bodyTypography": {
+    "body-lg": {
+      "fontFamily": "Bebas Neue",
+      "fontWeight": 400,
+      "fontSize": 28,
+      "lineHeight": 34,
+      "letterSpacing": 1.5
+    },
+    "body-md": {
+      "fontFamily": "Share Tech Mono",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 24,
+      "letterSpacing": 0
+    },
+    "body-sm": {
+      "fontFamily": "Share Tech Mono",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeight": 18,
+      "letterSpacing": 1.5
+    }
+  },
+  "prose": {
+    "elements": {
+      "h1": {
+        "typographyClass": "heading-xl",
+        "marginBottom": 1.5
+      },
+      "h2": {
+        "typographyClass": "heading-lg",
+        "marginBottom": 1.25
+      },
+      "h3": {
+        "typographyClass": "heading-md",
+        "marginBottom": 1
+      },
+      "p": {
+        "typographyClass": "body-md",
+        "marginBottom": 1.25
+      },
+      "li": {
+        "typographyClass": "body-md"
+      }
+    },
+    "lists": {
+      "listStyleType": "disc",
+      "indent": 1.5,
+      "itemSpacing": 0.5
+    },
+    "links": {
+      "color": "brand",
+      "hoverColor": "fg",
+      "underline": "always"
+    }
+  },
+  "buttons": {
+    "global": {
+      "fontFamily": "Bebas Neue",
+      "fontWeight": 400,
+      "uppercase": true,
+      "sizes": {
+        "lg": {
+          "fontSize": 20,
+          "letterSpacing": 2.5,
+          "opticalYOffset": 0,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "paddingLeft": 40,
+          "paddingRight": 40,
+          "borderRadius": 0
+        },
+        "md": {
+          "fontSize": 16,
+          "letterSpacing": 2,
+          "opticalYOffset": 0,
+          "paddingTop": 14,
+          "paddingBottom": 14,
+          "paddingLeft": 30,
+          "paddingRight": 30,
+          "borderRadius": 0
+        },
+        "sm": {
+          "fontSize": 13,
+          "letterSpacing": 1.5,
+          "opticalYOffset": 0,
+          "paddingTop": 10,
+          "paddingBottom": 10,
+          "paddingLeft": 20,
+          "paddingRight": 20,
+          "borderRadius": 0
+        }
+      }
+    },
+    "variants": {
+      "primary": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 2,
+        "hoverPreset": "fill"
+      },
+      "secondary": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg",
+        "borderColor": "system:border",
+        "borderWidth": 1,
+        "hoverPreset": "lighten"
+      },
+      "outline": {
+        "backgroundColor": "transparent",
+        "textColor": "system:brand",
+        "borderColor": "system:brand",
+        "borderWidth": 1,
+        "hoverPreset": "fill"
+      },
+      "ghost": {
+        "backgroundColor": "transparent",
+        "textColor": "system:fg-muted",
+        "borderColor": "transparent",
+        "borderWidth": 0,
+        "hoverPreset": "lighten"
+      }
+    }
+  }
+}

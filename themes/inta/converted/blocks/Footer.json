@@ -1,0 +1,15 @@
+{
+  "description": "Footer",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2026 Immediate Needs Trusted Advisors. All rights reserved.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Email",
+      "default": "hello@inta.com"
+    }
+  ]
+}

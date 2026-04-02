@@ -1,0 +1,35 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Handcrafted in small batches"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "Worn <em>stories,</em><br>shaped by hand"
+    },
+    {
+      "type": "text",
+      "name": "Tagline",
+      "default": "Each piece begins as raw metal and a quiet thought — shaped, hammered, and finished at my bench in Portland."
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "View the collection"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#pieces"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/800x1000/EDE6DC/D8CFC4?text=Hero+Image"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<div class="bg-base-muted border-y border-border py-8 px-6 relative z-10">
+  <div class="mx-auto max-w-[1100px] grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    {{#each items}}
+      <div>
+        <div class="font-heading text-[2.5rem] font-black text-brand leading-none mb-1" style="text-shadow: 0 0 15px rgba(255,107,0,0.3);">
+          {{value}}
+        </div>
+        <div class="body-sm text-fg-muted uppercase tracking-[0.15em]">{{label}}</div>
+      </div>
+    {{/each}}
+  </div>
+</div>

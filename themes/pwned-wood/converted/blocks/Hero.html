@@ -1,0 +1,25 @@
+<section class="min-h-screen flex flex-col justify-center relative px-6 lg:px-12 py-24 overflow-hidden bg-base" style="background: radial-gradient(ellipse at 20% 50%, rgba(255,107,0,0.06) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(0,255,65,0.04) 0%, transparent 50%), #0A0A0A;">
+  <div class="absolute top-0 left-0 right-0 h-1.5" style="background: repeating-linear-gradient(90deg, #FF6B00 0px, #FF6B00 20px, #0A0A0A 20px, #0A0A0A 40px);"></div>
+  <div class="relative z-10 max-w-[900px]">
+    <p class="body-sm text-fg-muted/70 mb-4">
+      <span class="text-electric-blue">{{terminal-path}}</span> <span class="text-fg">{{terminal-cmd}}</span>
+    </p>
+    <h1 class="heading-xl text-brand mb-1" style="text-shadow: 0 0 20px rgba(255,107,0,0.4), 0 0 60px rgba(255,107,0,0.2);">
+      {{title-line-1}}
+    </h1>
+    <h1 class="heading-xl text-wood-light mb-4" style="text-shadow: 0 0 20px rgba(196,154,60,0.3);">
+      {{title-line-2}}
+    </h1>
+    <p class="body-lg text-sweat tracking-[0.08em] mb-8" style="text-shadow: 0 0 15px rgba(184,255,0,0.3);">
+      {{tagline}}
+    </p>
+    <div class="body-md text-fg-muted max-w-[600px] mb-10 leading-[1.8] space-y-1">
+      {{{description}}}
+    </div>
+    <div class="flex gap-4 flex-wrap">
+      {{#each buttons}}
+        {{> Button link=link label=label style=style}}
+      {{/each}}
+    </div>
+  </div>
+</section>

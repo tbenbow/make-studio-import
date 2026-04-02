@@ -1,0 +1,43 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Image category cards",
+  "fields": [
+    { "type": "text", "name": "Headline", "default": "Explore Our Categories" },
+    { "type": "text", "name": "Subheadline", "default": "Whether you're looking for a luxurious home, a cozy apartment, or a prime commercial space, we have something for everyone." },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        { "id": "cat-btn1", "label": "View All Categories", "link": "/categories", "style": "outline", "size": "md" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Label" },
+          { "type": "link", "name": "Link" },
+          { "type": "select", "name": "Style", "config": { "dataStoreId": "698be9a2db8e5c335edc75e1" } },
+          { "type": "select", "name": "Size", "config": { "dataStoreId": "698c898950a2e6bef85751ae" } }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Categories",
+      "default": [
+        { "id": "cat1", "name": "Houses", "image": "https://placehold.co/400x300/e2e8f0/64748b?text=Houses", "link": "/houses" },
+        { "id": "cat2", "name": "Townhouses", "image": "https://placehold.co/400x300/e2e8f0/64748b?text=Townhouses", "link": "/townhouses" },
+        { "id": "cat3", "name": "Condos", "image": "https://placehold.co/400x300/e2e8f0/64748b?text=Condos", "link": "/condos" },
+        { "id": "cat4", "name": "Villas", "image": "https://placehold.co/400x300/e2e8f0/64748b?text=Villas", "link": "/villas" },
+        { "id": "cat5", "name": "Commercial", "image": "https://placehold.co/400x300/e2e8f0/64748b?text=Commercial", "link": "/commercial" },
+        { "id": "cat6", "name": "Apartments", "image": "https://placehold.co/400x300/e2e8f0/64748b?text=Apartments", "link": "/apartments" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Name" },
+          { "type": "image", "name": "Image" },
+          { "type": "link", "name": "Link" }
+        ]
+      }
+    }
+  ]
+}

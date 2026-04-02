@@ -1,0 +1,70 @@
+{
+  "description": "Process",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "The making"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Headline",
+      "default": "From raw metal<br>to <em>finished form</em>"
+    },
+    {
+      "type": "text",
+      "name": "Description",
+      "default": "Every piece passes through my hands dozens of times. There are no shortcuts in handwork — just patience, heat, and intention."
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "default": [
+        {
+          "title": "Material",
+          "description": "It starts with ethically sourced metal — silver, gold, brass — chosen for the piece it will become.",
+          "numeral": "i",
+          "image": "https://placehold.co/400x400/EDE6DC/D8CFC4?text=Material"
+        },
+        {
+          "title": "Forming",
+          "description": "Heated, hammered, bent, and shaped. Each strike is a decision. The metal remembers every one.",
+          "numeral": "ii",
+          "image": "https://placehold.co/400x400/EDE6DC/D8CFC4?text=Forming"
+        },
+        {
+          "title": "Joining",
+          "description": "Soldering, riveting, weaving — the invisible work that makes a piece whole and wearable.",
+          "numeral": "iii",
+          "image": "https://placehold.co/400x400/EDE6DC/D8CFC4?text=Joining"
+        },
+        {
+          "title": "Finishing",
+          "description": "Filed, sanded, polished or patinated. The surface is where my hand meets your skin.",
+          "numeral": "iv",
+          "image": "https://placehold.co/400x400/EDE6DC/D8CFC4?text=Finishing"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Numeral"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    }
+  ]
+}

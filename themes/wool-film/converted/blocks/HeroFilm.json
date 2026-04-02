@@ -1,0 +1,20 @@
+{
+  "description": "HeroFilm",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Title",
+      "default": "WOOL"
+    },
+    {
+      "type": "text",
+      "name": "Subtitle",
+      "default": "A short film by Jamey Erickson"
+    },
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://placehold.co/1920x1080/0a0a0a/22d3ee?text=WOOL"
+    }
+  ]
+}
