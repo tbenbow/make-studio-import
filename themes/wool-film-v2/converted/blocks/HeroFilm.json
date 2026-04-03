@@ -1,0 +1,16 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Full-viewport film hero",
+  "fields": [
+    { "type": "image", "name": "Background Image", "default": "https://placehold.co/1920x1080/111/333?text=Hero" },
+    { "type": "text", "name": "Title", "default": "WOOL" },
+    { "type": "text", "name": "Subtitle", "default": "A short film by Jamey Erickson" },
+    { "type": "text", "name": "Crew Label", "default": "CREATOR & CREW" },
+    { "type": "text", "name": "Crew Link", "default": "/crew.html" },
+    { "type": "text", "name": "Synopsis Label", "default": "SYNOPSIS" },
+    { "type": "text", "name": "Synopsis Link", "default": "/synopsis.html" },
+    { "type": "text", "name": "Support Label", "default": "" },
+    { "type": "text", "name": "Support Link", "default": "#" }
+  ]
+}

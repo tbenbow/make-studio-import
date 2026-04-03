@@ -1,0 +1,84 @@
+{
+  "description": "CTA with image gallery",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Get Started Today"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Image 1",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "image",
+      "name": "Image 2",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "image",
+      "name": "Image 3",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "image",
+      "name": "Image 4",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

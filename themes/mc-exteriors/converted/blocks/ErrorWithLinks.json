@@ -1,0 +1,80 @@
+{
+  "description": "ErrorWithLinks",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Code",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Page not found"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "text",
+      "name": "Link Text",
+      "default": "Back to home"
+    },
+    {
+      "type": "text",
+      "name": "Link Url",
+      "default": "/"
+    },
+    {
+      "type": "items",
+      "name": "Pages",
+      "default": [
+        {
+          "icon": "book-open",
+          "title": "Documentation",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "url": "#"
+        },
+        {
+          "icon": "list-dashes",
+          "title": "API Reference",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "url": "#"
+        },
+        {
+          "icon": "bookmark-simple",
+          "title": "Guides",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "url": "#"
+        },
+        {
+          "icon": "rss",
+          "title": "Blog",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "url": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "description": "ProductListSimple",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Alpha",
+          "variant": "Black",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Beta",
+          "variant": "Aspen White",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Gamma",
+          "variant": "Charcoal",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Delta",
+          "variant": "Iso Dots",
+          "price": "$49",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

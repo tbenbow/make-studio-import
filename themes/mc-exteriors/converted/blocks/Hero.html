@@ -1,0 +1,35 @@
+<section class="bg-base-alt">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 py-20 sm:py-28">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="flex flex-col gap-6">
+        {{#if badge}}
+          <div class="inline-flex self-start items-center gap-2 bg-brand/10 border border-brand/20 text-brand body-sm font-medium rounded px-3 py-1.5">
+            {{icon "check-circle" size="16"}}
+            {{badge}}
+          </div>
+        {{/if}}
+        <h1 class="heading-xl text-on-brand text-pretty">{{headline}} <span class="text-brand">{{headline_accent}}</span></h1>
+        <div class="body-lg text-on-brand/60 max-w-xl">{{{subheadline}}}</div>
+        {{#if (length buttons)}}
+          <div class="flex flex-wrap items-center gap-4 mt-2">
+            {{#each buttons}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+      <div class="relative hidden lg:block">
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] border border-on-brand/10">
+          <img src="{{image}}" alt="{{headline}}" class="w-full h-full object-cover" />
+        </div>
+        {{#if stat_number}}
+          <div class="absolute -bottom-4 -left-4 bg-brand text-on-brand rounded-xl px-6 py-4 shadow-lg">
+            <p class="heading-md font-bold">{{stat_number}}</p>
+            <p class="body-sm text-on-brand/80">{{stat_label}}</p>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  <div class="h-1 bg-brand"></div>
+</section>

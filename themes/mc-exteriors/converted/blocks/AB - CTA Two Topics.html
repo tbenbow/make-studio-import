@@ -1,0 +1,25 @@
+<section class="bg-base py-6 lg:py-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+      <div class="lg:w-1/2">
+        {{#if statement}}
+          <div class="body-lg text-fg space-y-4 pr-28">
+            {{{statement}}}
+          </div>
+        {{/if}}
+      </div>
+      
+      {{#if (length topics)}}
+        <div class="lg:flex-1 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {{#each topics}}
+            <article class="flex flex-col gap-1">
+                <h3 class="heading-sm text-fg">{{title}}</h3>
+              <p class="body-md text-fg-muted">{{description}}</p>
+            </article>
+          {{/each}}
+        </div>
+      {{/if}}
+      
+    </div>
+  </div>
+</section>

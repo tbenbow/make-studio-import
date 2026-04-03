@@ -1,0 +1,57 @@
+{
+  "description": "HeaderCards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Page Title"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Background Image",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "items",
+      "name": "Cards",
+      "default": [
+        {
+          "icon": "phone",
+          "title": "Card 1",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "gear",
+          "title": "Card 2",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "newspaper",
+          "title": "Card 3",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "description": "Financing",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Financing"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Up to $55,000"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Don't let cost delay your restoration. Our financing partner Momnt offers instant decisions with a soft credit pull — your score won't be affected just to see your options.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Apply for Financing",
+          "link": "#contact",
+          "style": "primary"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "stat": "$55K",
+          "text": "Max Amount"
+        },
+        {
+          "stat": "Instant",
+          "text": "Decisions"
+        },
+        {
+          "stat": "Soft",
+          "text": "Credit Pull"
+        },
+        {
+          "stat": "$0",
+          "text": "Early Pay Fees"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Stat"
+          },
+          {
+            "type": "text",
+            "name": "Text"
+          }
+        ]
+      }
+    }
+  ]
+}

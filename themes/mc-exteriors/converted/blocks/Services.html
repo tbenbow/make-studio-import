@@ -1,0 +1,23 @@
+<section class="py-20 lg:py-24 bg-base-muted">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10 flex flex-col gap-10 sm:gap-16">
+    <div class="flex flex-col items-center gap-2 text-center">
+      {{#if eyebrow}}
+        <p class="body-sm font-semibold text-brand uppercase tracking-wider">{{eyebrow}}</p>
+      {{/if}}
+      <h2 class="heading-lg text-fg text-pretty">{{headline}}</h2>
+    </div>
+    {{#if (length services)}}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {{#each services}}
+          <div class="bg-panel rounded-xl p-8 text-center border border-border hover:border-brand/20 hover:shadow-md transition-all">
+            <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center mx-auto mb-5">
+              {{icon icon size="28" class="text-brand"}}
+            </div>
+            <h3 class="heading-sm text-fg mb-2">{{headline}}</h3>
+            <div class="body-sm text-fg-muted">{{{description}}}</div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

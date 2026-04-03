@@ -1,0 +1,55 @@
+{
+  "description": "Features with testimonial",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Features"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Screenshot",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "text",
+      "name": "Button Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Button Link",
+      "default": "#"
+    },
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "text",
+      "name": "Quote Author",
+      "default": "Jane Smith"
+    },
+    {
+      "type": "text",
+      "name": "Quote Role",
+      "default": "CEO, Acme Corp"
+    },
+    {
+      "type": "image",
+      "name": "Quote Avatar",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "description": "ReviewCards",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Reviews",
+      "default": [
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "author": "Jane Smith",
+          "title": "Great product",
+          "body": "Praesent commodo cursus magna vel scelerisque nisl consectetur. Nullam quis risus eget urna mollis ornare vel eu leo."
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "author": "John Davis",
+          "title": "Great product",
+          "body": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui pellentesque habitant morbi tristique."
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "author": "Sarah Chen",
+          "title": "Great product",
+          "body": "Donec sed odio dui pellentesque habitant morbi tristique. Maecenas sed diam eget risus varius blandit sit amet non magna."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "Author"
+          },
+          {
+            "type": "image",
+            "name": "Avatar"
+          }
+        ]
+      }
+    }
+  ]
+}

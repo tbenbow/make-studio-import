@@ -1,0 +1,45 @@
+{
+  "description": "Contact",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Contact"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Get Your Free Inspection"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Whether you've spotted storm damage or just want peace of mind, our 25-point inspection is free and comes with zero pressure.</p>"
+    },
+    {
+      "type": "text",
+      "name": "Address",
+      "default": "3529 88th Ave NE, Blaine, MN 55014"
+    },
+    {
+      "type": "text",
+      "name": "Phone",
+      "default": "(612) 618-8763"
+    },
+    {
+      "type": "text",
+      "name": "Hours",
+      "default": "Mon–Fri, 8am–5pm"
+    },
+    {
+      "type": "text",
+      "name": "Email",
+      "default": "info@mcexteriorsinc.com"
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Request Free Inspection"
+    }
+  ]
+}

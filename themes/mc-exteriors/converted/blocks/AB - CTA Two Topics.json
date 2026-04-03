@@ -1,0 +1,36 @@
+{
+  "description": "AB - CTA Two Topics",
+  "fields": [
+    {
+      "type": "wysiwyg",
+      "name": "Statement",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Topics",
+      "default": [
+        {
+          "title": "Topic 1",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "title": "Topic 2",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

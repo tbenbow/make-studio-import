@@ -1,0 +1,34 @@
+{
+  "description": "TestimonialCentered",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Logo"
+    },
+    {
+      "type": "select",
+      "name": "Show Stars",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "name": "Quote",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Avatar",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Jane Smith"
+    },
+    {
+      "type": "text",
+      "name": "Role",
+      "default": "CEO, Acme Corp"
+    }
+  ]
+}

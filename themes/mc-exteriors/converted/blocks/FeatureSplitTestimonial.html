@@ -1,0 +1,38 @@
+<section class="overflow-hidden bg-base py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
+      <div class="lg:pt-4 lg:pr-4">
+        <div class="lg:max-w-lg">
+          {{#if eyebrow}}
+            <h2 class="body-sm font-semibold text-brand">{{eyebrow}}</h2>
+          {{/if}}
+          <p class="mt-2 heading-lg text-fg">{{headline}}</p>
+          {{#if description}}
+            <p class="mt-6 body-md text-fg-alt">{{description}}</p>
+          {{/if}}
+          {{#if button-label}}
+            <div class="mt-8">
+              <a href="{{button-link}}" class="inline-flex rounded-md bg-brand px-3.5 py-2.5 body-sm font-semibold text-on-brand shadow-sm hover:bg-brand/90">{{button-label}}</a>
+            </div>
+          {{/if}}
+          {{#if quote}}
+            <figure class="mt-16 border-l border-border pl-8 text-fg-alt">
+              <blockquote class="body-md">
+                <p>"{{quote}}"</p>
+              </blockquote>
+              <figcaption class="mt-6 flex gap-x-4 body-sm">
+                {{#if quote-avatar}}
+                  <img src="{{quote-avatar}}" alt="" class="size-6 flex-none rounded-full">
+                {{/if}}
+                <div><span class="font-semibold text-fg">{{quote-author}}</span> – <span class="text-fg-muted">{{quote-role}}</span></div>
+              </figcaption>
+            </figure>
+          {{/if}}
+        </div>
+      </div>
+      {{#if screenshot}}
+        <img src="{{screenshot}}" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-fg/10 sm:w-[57rem] md:-ml-4 lg:ml-0">
+      {{/if}}
+    </div>
+  </div>
+</section>

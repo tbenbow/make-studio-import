@@ -5,7 +5,7 @@ The API client is in `src/api.ts`. All operations use bearer token authenticatio
 ## Environment
 
 ```
-MAKE_STUDIO_URL=https://api.makestudio.cc
+MAKE_STUDIO_URL=https://api.makestudio.io/
 MAKE_STUDIO_TOKEN=<per-site API token>
 MAKE_STUDIO_SITE=<site ID>
 ```

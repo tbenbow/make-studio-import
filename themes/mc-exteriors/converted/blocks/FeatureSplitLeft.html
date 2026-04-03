@@ -1,0 +1,37 @@
+<section class="overflow-hidden bg-base py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:ml-auto lg:pt-4 lg:pl-4">
+        <div class="lg:max-w-lg">
+          {{#if eyebrow}}
+            <h2 class="body-sm font-semibold text-brand">{{eyebrow}}</h2>
+          {{/if}}
+          <p class="mt-2 heading-lg text-fg">{{headline}}</p>
+          {{#if description}}
+            <p class="mt-6 body-md text-fg-alt">{{description}}</p>
+          {{/if}}
+          <dl class="mt-10 max-w-xl space-y-8 body-md text-fg-muted lg:max-w-none">
+            {{#each features}}
+              <div class="relative pl-9">
+                <dt class="inline font-semibold text-fg">
+                  {{#if icon}}
+                    <div class="absolute top-1 left-1 size-5 text-brand">
+                      {{icon icon size="20"}}
+                    </div>
+                  {{/if}}
+                  {{title}}.
+                </dt>
+                <dd class="inline">{{description}}</dd>
+              </div>
+            {{/each}}
+          </dl>
+        </div>
+      </div>
+      {{#if screenshot}}
+        <div class="flex items-start justify-end lg:order-first">
+          <img src="{{screenshot}}" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-fg/10 sm:w-[57rem]">
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

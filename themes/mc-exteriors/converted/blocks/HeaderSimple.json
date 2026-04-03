@@ -1,0 +1,36 @@
+{
+  "description": "HeaderSimple",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Page Title"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "select",
+      "name": "Alignment",
+      "default": "centered",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "centered",
+            "value": "Centered"
+          },
+          {
+            "key": "left",
+            "value": "Left"
+          }
+        ]
+      }
+    }
+  ]
+}

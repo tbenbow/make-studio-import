@@ -1,0 +1,69 @@
+{
+  "description": "TeamCardsTall",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our Team"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Our Team"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        {
+          "name": "Jane Smith",
+          "role": "CEO, Acme Corp",
+          "photo": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+        },
+        {}
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          },
+          {
+            "type": "image",
+            "name": "Photo",
+            "config": {
+              "maxWidth": 400,
+              "maxHeight": 533
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "name": "Columns",
+      "default": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
+      "config": {
+        "selectOptions": [
+          {
+            "key": "Three",
+            "value": "grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+          },
+          {
+            "key": "Four",
+            "value": "grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          }
+        ]
+      }
+    }
+  ]
+}

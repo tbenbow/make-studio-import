@@ -1,0 +1,35 @@
+{
+  "description": "StatsSimple",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "value": "10,000+",
+          "label": "Total users"
+        },
+        {
+          "value": "$1M+",
+          "label": "Revenue"
+        },
+        {
+          "value": "99.9%",
+          "label": "Uptime"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Value"
+          },
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    }
+  ]
+}

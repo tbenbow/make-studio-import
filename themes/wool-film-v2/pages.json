@@ -1,0 +1,27 @@
+{
+  "layouts": [
+    {
+      "name": "Default Layout",
+      "headerBlocks": [],
+      "footerBlocks": ["Footer"],
+      "isDefault": true
+    }
+  ],
+  "pages": [
+    {
+      "name": "index",
+      "layout": "Default Layout",
+      "blocks": ["HeroFilm", "Blurb", "ImageGallery"]
+    },
+    {
+      "name": "crew",
+      "layout": "Default Layout",
+      "blocks": ["CreatorBio", "CrewGrid", "ImageGallery"]
+    },
+    {
+      "name": "synopsis",
+      "layout": "Default Layout",
+      "blocks": ["Synopsis", "ComparableFilms", "ImageGallery"]
+    }
+  ]
+}

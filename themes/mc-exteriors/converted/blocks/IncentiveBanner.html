@@ -1,0 +1,16 @@
+<section class="bg-base py-12">
+  <div class="flex overflow-x-auto">
+    <div class="mx-auto flex space-x-12 px-4 py-3 whitespace-nowrap sm:px-6 lg:space-x-24 lg:px-8">
+      {{#each perks}}
+        <div class="flex items-center body-sm font-medium text-brand">
+          {{#if icon}}
+            <div class="mr-2 size-6 flex-none">
+              {{icon icon size="24"}}
+            </div>
+          {{/if}}
+          <p>{{title}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

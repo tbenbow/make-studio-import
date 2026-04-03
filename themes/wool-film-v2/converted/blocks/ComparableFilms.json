@@ -1,0 +1,24 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Comparable films grid",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "COMPARABLE FILMS" },
+    {
+      "type": "items",
+      "name": "Films",
+      "default": [
+        { "id": "1", "title": "Lost Highway", "thumbnail": "https://placehold.co/600x338/111/333?text=Lost+Highway" },
+        { "id": "2", "title": "American Psycho", "thumbnail": "https://placehold.co/600x338/111/333?text=American+Psycho" },
+        { "id": "3", "title": "Mulholland Drive", "thumbnail": "https://placehold.co/600x338/111/333?text=Mulholland+Drive" },
+        { "id": "4", "title": "Fight Club", "thumbnail": "https://placehold.co/600x338/111/333?text=Fight+Club" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "text", "name": "Title" },
+          { "type": "image", "name": "Thumbnail" }
+        ]
+      }
+    }
+  ]
+}

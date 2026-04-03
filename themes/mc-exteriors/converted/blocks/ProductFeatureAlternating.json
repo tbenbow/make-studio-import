@@ -1,0 +1,47 @@
+{
+  "description": "ProductFeatureAlternating",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Product Details"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+        },
+        {
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "image",
+            "name": "Image"
+          }
+        ]
+      }
+    }
+  ]
+}

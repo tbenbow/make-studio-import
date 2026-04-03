@@ -1,0 +1,20 @@
+{
+  "description": "Simple dark footer",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "MC"
+    },
+    {
+      "type": "text",
+      "name": "Logo Accent",
+      "default": "EXTERIORS"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Fineprint",
+      "default": "<p>&copy; 2025 Minnesota Custom Exteriors Inc · Licensed General Contractor · Blaine, MN</p>"
+    }
+  ]
+}

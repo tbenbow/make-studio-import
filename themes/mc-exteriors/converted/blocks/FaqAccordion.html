@@ -1,0 +1,29 @@
+<section class="bg-base">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="heading-lg text-fg">{{heading}}</h2>
+      <dl class="mt-16 divide-y divide-border">
+        {{#each faqs}}
+          <div x-data="{ open: false }" class="py-6 first:pt-0 last:pb-0">
+            <dt>
+              <button type="button" @click="open = !open" class="flex w-full items-start justify-between text-left text-fg">
+                <span class="body-md font-semibold">{{question}}</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <span x-show="!open" class="size-6 text-fg-muted">
+                    {{icon "plus" size="24"}}
+                  </span>
+                  <span x-show="open" x-cloak="" class="size-6 text-fg-muted">
+                    {{icon "minus" size="24"}}
+                  </span>
+                </span>
+              </button>
+            </dt>
+            <dd x-show="open" x-cloak="" class="mt-2 pr-12">
+              <p class="body-md text-fg-muted">{{answer}}</p>
+            </dd>
+          </div>
+        {{/each}}
+      </dl>
+    </div>
+  </div>
+</section>

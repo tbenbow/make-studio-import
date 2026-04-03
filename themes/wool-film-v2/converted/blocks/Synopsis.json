@@ -1,0 +1,12 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Synopsis text section",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "SYNOPSIS" },
+    { "type": "textarea", "name": "Paragraph 1", "default": "Pete Madison has never met a narrative he couldn't control. His career, his marriage, his reputation, all carefully curated, all built on his terms. But when his wife leaves him, Pete's carefully constructed world begins to crack." },
+    { "type": "textarea", "name": "Paragraph 2", "default": "Desperate to maintain the story he's built for himself, Pete attempts to rewrite his memory of the events, searching for a version where he's still in control. But the deeper he goes, the more the people in his memories refuse to play along, and the truth he's spent his life avoiding begins to close in." },
+    { "type": "text", "name": "Closing Bold", "default": "WOOL" },
+    { "type": "textarea", "name": "Closing Text", "default": "asks the question: what happens when a man who has always rewritten the story runs out of versions to tell?" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "description": "BannerTopLink",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Label",
+      "default": "Get Started"
+    },
+    {
+      "type": "text",
+      "name": "Message",
+      "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    },
+    {
+      "type": "text",
+      "name": "Url",
+      "default": "#"
+    }
+  ]
+}

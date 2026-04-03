@@ -1,0 +1,9 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Film description blurb",
+  "fields": [
+    { "type": "text", "name": "Title", "default": "WOOL" },
+    { "type": "textarea", "name": "Description", "default": "is a surreal, psychological thriller about a man who, faced with the consequences of his actions, attempts to rewrite and manipulate his memories to tell himself a better version of the story. But the deeper he goes, the more the truth fights back." }
+  ]
+}

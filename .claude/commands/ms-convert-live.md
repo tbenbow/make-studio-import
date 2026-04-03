@@ -48,7 +48,10 @@ Collect everything needed before building:
 
 3. **Font embed URL** — If the site uses custom fonts (Adobe Typekit, fonts.com, etc.), ask for the embed URL. Check the page source for `typekit.net`, `fonts.com`, or similar links.
 
-4. **Site setup** — Ensure a Make Studio site exists with correct credentials in `.env`. Validate API permissions early: test that you can create a block, update a page, and deploy a preview.
+4. **Site setup** — By default, create a new Make Studio site for the conversion. If the user has already provided site credentials in `.env`, use the existing site instead.
+   - **New site (default):** Run `npm run create-site -- --name="<site name>"`. This updates `.env` with the new site ID and token automatically.
+   - **Existing site:** Read `.env`, fetch the site name via `client.getSite()`, and confirm with the user: "I'm about to write to site **{name}** ({id}) on {url}. Is this correct?" Only proceed after explicit confirmation.
+   - In both cases, validate API permissions: test that you can create a block, update a page, and deploy a preview.
 
 Save all inputs to `themes/<name>/screenshots/` and `themes/<name>/source/`.
 
@@ -72,7 +75,7 @@ Build `theme.json` from Peek data + screenshots using Claude's vision capabiliti
 
 **Verify by describing what you see:** Before writing theme.json, list each element you can see in the screenshot and state which Peek style + which theme tier it maps to. This forces explicit mapping rather than vague assumptions.
 
-If custom fonts are needed, add the embed URL to the site's `customCode.head` via the API.
+If custom fonts are needed (Adobe Typekit, etc.), add `"source": "typekit"` and `"kitId": "<kit-id>"` to each font entry in theme.json. Do NOT use `customCode.head` — the renderer reads fonts from `theme.fonts[]`, not customCode.
 
 Sync the theme: `npm run sync -- --theme=<name> --apply --force`
 
@@ -97,40 +100,53 @@ If the automatic splitting missed sections or split incorrectly, use `--prefix` 
 
 ## Phase 4: Generate Blocks
 
-For each section screenshot, generate a block using the app's AI endpoint:
+**Generate blocks locally** — do NOT use the app's generate-template API endpoint. It adds default Tailwind patterns (rounded corners, wide gaps) that don't match the source.
 
-```bash
-npx tsx scripts/generate-block-from-image.ts \
-  --theme=<name> \
-  --image=themes/<name>/screenshots/sections/<file>.png \
-  --name=<BlockName> \
-  [--prompt="additional instructions"]
-```
+For each section screenshot:
 
-After generating, sync all blocks: `npm run sync -- --theme=<name> --apply`
+1. **Look at the screenshot** alongside the theme.json tokens.
+2. **Write the block HTML** using Handlebars + Tailwind + theme tokens (`heading-lg`, `body-md`, `text-fg`, `bg-base`, etc.). Match the screenshot exactly — no rounded corners, spacing, or styling that isn't visible.
+3. **Write the block JSON** with field definitions. Keep field names simple (single words when possible): `Heading`, `Photo`, `Name`, `Bio`. Use `items` for repeatable content, `wysiwyg` for rich text. Include `"makeStudioFields": true` and `"version": 1`.
+4. **Render locally** to verify:
+   ```bash
+   npx tsx src/render-block.ts --theme=<name> --block=<BlockName> --full-page
+   ```
+5. **Compare** the render against the source screenshot. Iterate until it matches.
 
-Render each block locally to verify: `npx tsx src/render-block.ts --theme=<name> --block=<BlockName> --full-page`
+Field naming rules:
+- Template variables use kebab-case slugs: `{{heading}}`, `{{background-image}}`
+- The server's `fieldToSlug()` converts "Background Image" → `background-image`
+- Items sub-field keys in defaults use lowercase: `{ "photo": "url", "name": "text" }`
+- Prefer single-word names to avoid slug confusion
+
+After all blocks are done, sync: `npm run sync -- --theme=<name> --apply --force`
 
 ---
 
 ## Phase 5: Extract Content + Images
 
-1. **Images** — Use Playwright to extract all image URLs from the source site. Upload to R2:
+1. **Images** — Use Playwright to extract all image URLs from the source site. Upload via API:
    ```typescript
    await client.uploadFilesFromUrls(siteId, images)
    ```
+   Images are converted to WebP and stored at `https://makestudio.site/{siteId}/{name}.webp`. If re-running and images already exist, use `client.listFiles(siteId)` to get existing URLs.
 
 2. **Text content** — Use Playwright or WebFetch to extract text per section. Map to block field names.
 
-3. **Prepare content JSON** — Create a content mapping per page:
+3. **Prepare content JSON** — Use **exact field names** (with spaces and casing) for top-level fields. Use **lowercase slug keys** for items sub-fields:
    ```json
    {
      "BlockName": {
-       "field-name": "value",
-       "items-field": [{ "sub-field": "value" }]
+       "Background Image": "https://...",
+       "Heading": "TITLE",
+       "Members": [
+         { "id": "1", "photo": "url", "name": "text" }
+       ]
      }
    }
    ```
+   
+   **Critical**: `setPageContent` resolves top-level keys by exact field name (case-insensitive but spaces matter). Items sub-field keys pass through verbatim and must match what templates reference (lowercase slugs).
 
 ---
 

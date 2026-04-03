@@ -143,27 +143,35 @@ function registerHelpers(hbs: typeof Handlebars): void {
 
 // ── Field Defaults ─────────────────────────────────────────────────────
 
+/** Slugify field name to match server compiler (TemplateAnalysisService.fieldToSlug) */
+function fieldToSlug(name: string): string {
+  if (!name) return ''
+  return name.replace(/_/g, ' ').toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim()
+}
+
 /** Extract default values from field definitions into a flat data object */
 function extractDefaults(fields: SourceField[]): Record<string, unknown> {
   const data: Record<string, unknown> = {}
   for (const field of fields) {
+    const key = fieldToSlug(field.name)
+    if (!key) continue
     if (field.default !== undefined) {
-      data[field.name] = field.default
+      data[key] = field.default
     } else if (field.type === 'items' && field.config?.fields) {
       // Items with no default → empty array (blocks should have defaults though)
-      data[field.name] = []
+      data[key] = []
     } else if (field.type === 'group' && field.config?.fields) {
-      data[field.name] = extractDefaults(field.config.fields)
+      data[key] = extractDefaults(field.config.fields)
     } else if (field.type === 'text') {
-      data[field.name] = field.name
+      data[key] = field.name
     } else if (field.type === 'textarea' || field.type === 'wysiwyg') {
-      data[field.name] = `Sample ${field.name}`
+      data[key] = `Sample ${field.name}`
     } else if (field.type === 'image') {
-      data[field.name] = `https://placehold.co/800x600/333/666?text=${encodeURIComponent(field.name)}`
+      data[key] = `https://placehold.co/800x600/333/666?text=${encodeURIComponent(field.name)}`
     } else if (field.type === 'toggle') {
-      data[field.name] = false
+      data[key] = false
     } else if (field.type === 'number') {
-      data[field.name] = 0
+      data[key] = 0
     }
   }
   return data
@@ -171,12 +179,47 @@ function extractDefaults(fields: SourceField[]): Record<string, unknown> {
 
 // ── HTML Wrapper ───────────────────────────────────────────────────────
 
-function wrapHTML(blockHTML: string, themeCSS: string): string {
+function generateFontLinks(theme: Record<string, unknown>): string {
+  const fonts = (theme.fonts || []) as Array<{ family: string; weight: number; style: string; source?: string; kitId?: string }>
+  const links: string[] = []
+
+  // Google Fonts
+  const googleFamilies = new Map<string, Set<number>>()
+  for (const f of fonts) {
+    if (!f.source || f.source === 'google') {
+      if (!googleFamilies.has(f.family)) googleFamilies.set(f.family, new Set())
+      googleFamilies.get(f.family)!.add(f.weight)
+    }
+  }
+  if (googleFamilies.size > 0) {
+    links.push('<link rel="preconnect" href="https://fonts.googleapis.com">')
+    links.push('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>')
+    for (const [family, weights] of googleFamilies) {
+      const weightsStr = Array.from(weights).sort().join(';')
+      links.push(`<link href="https://fonts.googleapis.com/css2?family=${family.replace(/\s+/g, '+')}:wght@${weightsStr}&display=swap" rel="stylesheet">`)
+    }
+  }
+
+  // Typekit
+  const kitIds = new Set<string>()
+  for (const f of fonts) {
+    if (f.source === 'typekit' && f.kitId) kitIds.add(f.kitId)
+  }
+  for (const kitId of kitIds) {
+    links.push(`<link rel="stylesheet" href="https://use.typekit.net/${kitId}.css">`)
+  }
+
+  return links.join('\n  ')
+}
+
+function wrapHTML(blockHTML: string, themeCSS: string, theme?: Record<string, unknown>): string {
+  const fontLinks = theme ? generateFontLinks(theme) : ''
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ${fontLinks}
   <style>${themeCSS}</style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -244,7 +287,7 @@ export async function renderBlock(options: RenderOptions): Promise<RenderResult>
   const blockHTML = compiled(mergedData)
 
   // 6. Wrap in full HTML document
-  const html = wrapHTML(blockHTML, themeCSS)
+  const html = wrapHTML(blockHTML, themeCSS, themeJson)
 
   // 7. Determine output directory
   const outputDir = options.outputDir || join(themePath, 'iterations', blockName)
@@ -314,7 +357,7 @@ export async function compileBlock(
   const defaults = extractDefaults(fields)
   const blockHTML = compiled({ ...defaults, ...dataOverrides })
 
-  return wrapHTML(blockHTML, themeCSS)
+  return wrapHTML(blockHTML, themeCSS, themeJson)
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────

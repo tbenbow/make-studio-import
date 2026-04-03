@@ -1,0 +1,20 @@
+<section class="relative min-h-screen bg-base text-fg overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="{{background-image}}" alt="" class="w-full h-full object-cover opacity-40" />
+  </div>
+  <nav class="relative max-w-7xl mx-auto px-6 pt-8 flex justify-end gap-8">
+    <a href="{{crew-link}}" class="heading-xs text-fg tracking-widest uppercase hover:text-brand">{{crew-label}}</a>
+    <a href="{{synopsis-link}}" class="heading-xs text-fg tracking-widest uppercase hover:text-brand">{{synopsis-label}}</a>
+  </nav>
+  <div class="relative flex flex-col justify-center items-center min-h-[calc(100vh-4rem)] text-center px-6">
+    <h1 class="heading-xl text-transparent bg-clip-text bg-gradient-to-b from-brand via-brand/70 to-brand/40">{{title}}</h1>
+    <p class="mt-4 body-sm text-fg-muted">{{subtitle}}</p>
+  </div>
+  {{#if support-label}}
+  <div class="absolute bottom-8 right-8">
+    <a href="{{support-link}}" class="btn-primary btn-sm inline-flex items-center gap-2">
+      {{support-label}}
+    </a>
+  </div>
+  {{/if}}
+</section>

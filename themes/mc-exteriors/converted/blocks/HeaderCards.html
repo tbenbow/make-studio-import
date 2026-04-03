@@ -1,0 +1,28 @@
+<section class="relative isolate overflow-hidden bg-base py-24 sm:py-32">
+  <img src="{{background-image}}" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="heading-xl text-fg">{{heading}}</h2>
+      {{#if description}}
+        <p class="mt-8 body-lg font-medium text-fg-muted">{{description}}</p>
+      {{/if}}
+    </div>
+    {{#if cards.length}}
+      <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+        {{#each cards}}
+          <div class="flex gap-x-4 rounded-xl bg-panel p-6 backdrop-blur-sm">
+            {{#if icon}}
+              <div class="h-7 w-5 flex-none text-brand">
+                {{icon icon size="20"}}
+              </div>
+            {{/if}}
+            <div class="body-md">
+              <h3 class="font-semibold text-fg">{{title}}</h3>
+              <p class="mt-2 text-fg-muted">{{description}}</p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

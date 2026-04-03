@@ -1,0 +1,58 @@
+{
+  "description": "ErrorSimple",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Code",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Page not found"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "text": "Get started",
+          "url": "#",
+          "style": "primary",
+          "size": "md"
+        },
+        {
+          "text": "Learn more",
+          "url": "#",
+          "style": "link",
+          "size": "md"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Text"
+          },
+          {
+            "type": "text",
+            "name": "Url"
+          },
+          {
+            "type": "text",
+            "name": "Style"
+          },
+          {
+            "type": "text",
+            "name": "Size"
+          }
+        ]
+      }
+    }
+  ]
+}

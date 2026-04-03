@@ -1,0 +1,42 @@
+{
+  "description": "IncentiveCentered",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "truck",
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "chat-circle-dots",
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "shopping-cart",
+          "title": "Feature Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

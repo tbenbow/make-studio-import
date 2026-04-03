@@ -1,0 +1,15 @@
+<section class="py-20 lg:py-28 bg-base text-fg">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="heading-lg uppercase mb-12">{{heading}}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12">
+      {{#each members}}
+      <article>
+        <img src="{{photo}}" alt="{{name}}" class="w-full aspect-square object-cover mb-4" />
+        <h3 class="heading-md uppercase text-fg mb-1">{{name}}</h3>
+        <p class="body-sm text-fg-muted italic mb-3">{{role}}</p>
+        <p class="body-sm text-fg-muted">{{bio}}</p>
+      </article>
+      {{/each}}
+    </div>
+  </div>
+</section>

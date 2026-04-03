@@ -1,0 +1,44 @@
+<section class="bg-base-alt py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="sm:flex sm:items-baseline sm:justify-between">
+      <h2 class="heading-sm text-fg">{{heading}}</h2>
+      {{#if link-text}}
+        <a href="{{link-url}}" class="hidden body-sm font-semibold text-brand hover:text-brand/80 sm:block">
+          {{link-text}}
+          <span aria-hidden="true"> →</span>
+        </a>
+      {{/if}}
+    </div>
+    <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
+      {{#each categories}}
+        <div class="group relative {{#if @first}}aspect-2/1 sm:row-span-2 sm:aspect-square{{else}}aspect-2/1 sm:aspect-auto{{/if}} overflow-hidden rounded-lg">
+          {{#if image}}
+            <img src="{{image}}" alt="{{name}}" class="absolute size-full object-cover group-hover:opacity-75">
+          {{/if}}
+          <div aria-hidden="true" class="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50"></div>
+          <div class="absolute inset-0 flex items-end p-6">
+            <div>
+              <h3 class="font-semibold text-white">
+                <a href="{{link}}">
+                  <span class="absolute inset-0"></span>
+                  {{name}}
+                </a>
+              </h3>
+              {{#if subtitle}}
+                <p aria-hidden="true" class="mt-1 body-sm text-white">{{subtitle}}</p>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    {{#if link-text}}
+      <div class="mt-6 sm:hidden">
+        <a href="{{link-url}}" class="block body-sm font-semibold text-brand hover:text-brand/80">
+          {{link-text}}
+          <span aria-hidden="true"> →</span>
+        </a>
+      </div>
+    {{/if}}
+  </div>
+</section>

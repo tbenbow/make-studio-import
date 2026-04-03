@@ -1,0 +1,24 @@
+<section class="bg-base py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="relative overflow-hidden bg-base-alt px-6 py-20 sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
+      {{#if background-image}}
+        <img src="{{background-image}}" alt="" class="absolute inset-0 size-full object-cover brightness-150 saturate-0">
+        <div class="absolute inset-0 bg-base/90 mix-blend-multiply"></div>
+      {{/if}}
+      <div class="relative mx-auto max-w-2xl lg:mx-0">
+        {{#if logo}}
+          <img src="{{logo}}" alt="" class="h-12 w-auto">
+        {{/if}}
+        <figure>
+          <blockquote class="mt-6 body-lg font-semibold text-fg sm:text-xl/8">
+            <p>"{{quote}}"</p>
+          </blockquote>
+          <figcaption class="mt-6 body-md text-fg-muted">
+            <div class="font-semibold">{{name}}</div>
+            <div class="mt-1">{{role}}</div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

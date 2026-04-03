@@ -1,0 +1,69 @@
+{
+  "description": "Dark navbar with phone",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Logo Text",
+      "default": "MC"
+    },
+    {
+      "type": "text",
+      "name": "Logo Accent",
+      "default": "EXTERIORS"
+    },
+    {
+      "type": "text",
+      "name": "Logo Link",
+      "default": "/"
+    },
+    {
+      "type": "text",
+      "name": "Phone",
+      "default": "(612) 618-8763"
+    },
+    {
+      "type": "text",
+      "name": "CTA Label",
+      "default": "Free Inspection"
+    },
+    {
+      "type": "text",
+      "name": "CTA Link",
+      "default": "#contact"
+    },
+    {
+      "type": "items",
+      "name": "Links",
+      "default": [
+        {
+          "label": "Services",
+          "url": "#services"
+        },
+        {
+          "label": "Process",
+          "url": "#process"
+        },
+        {
+          "label": "About",
+          "url": "#about"
+        },
+        {
+          "label": "Financing",
+          "url": "#financing"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "URL"
+          }
+        ]
+      }
+    }
+  ]
+}

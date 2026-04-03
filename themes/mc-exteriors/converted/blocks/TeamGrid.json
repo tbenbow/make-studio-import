@@ -1,0 +1,67 @@
+{
+  "description": "TeamGrid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Our Team"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Jane Smith",
+          "role": "CEO, Acme Corp"
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "John Davis",
+          "role": "Marketing Director, Globex Inc"
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Sarah Chen",
+          "role": "Product Manager, Initech"
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Michael Brown",
+          "role": "CTO, Umbrella Co"
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Emily Wilson",
+          "role": "Design Lead, Soylent Corp"
+        },
+        {
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "David Lee",
+          "role": "VP Engineering, Hooli"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          }
+        ]
+      }
+    }
+  ]
+}

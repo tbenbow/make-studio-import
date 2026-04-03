@@ -1,0 +1,28 @@
+<section class="relative isolate bg-base pt-24 pb-32 sm:pt-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      {{#if eyebrow}}
+        <h2 class="body-md font-semibold text-brand">{{eyebrow}}</h2>
+      {{/if}}
+      <p class="{{#if eyebrow}}mt-2 {{/if}}heading-lg text-balance text-fg">{{heading}}</p>
+    </div>
+    <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 body-sm text-fg sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-cols-4">
+      {{#each testimonials}}
+        <figure class="rounded-2xl bg-panel p-6 border border-border">
+          <blockquote class="text-fg">
+            <p>"{{quote}}"</p>
+          </blockquote>
+          <figcaption class="mt-6 flex items-center gap-x-4">
+            {{#if avatar}}
+              <img src="{{avatar}}" alt="{{name}}" class="size-10 rounded-full">
+            {{/if}}
+            <div>
+              <div class="font-semibold text-fg">{{name}}</div>
+              <div class="text-fg-muted">{{handle}}</div>
+            </div>
+          </figcaption>
+        </figure>
+      {{/each}}
+    </div>
+  </div>
+</section>

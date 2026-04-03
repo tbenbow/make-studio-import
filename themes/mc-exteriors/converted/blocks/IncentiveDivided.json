@@ -1,0 +1,42 @@
+{
+  "description": "IncentiveDivided",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "calendar",
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "arrows-clockwise",
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "truck",
+          "title": "Feature Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<section class="relative isolate overflow-hidden bg-base">
+  <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
+    <div class="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
+      {{#if badge}}
+        <div class="mt-24 sm:mt-32 lg:mt-16">
+          <span class="inline-flex items-center rounded-full bg-brand/10 px-3 py-1 body-sm font-semibold text-brand ring-1 ring-inset ring-brand/25">{{badge}}</span>
+        </div>
+      {{/if}}
+      <h1 class="mt-10 text-pretty heading-xl text-fg">{{headline}}</h1>
+      {{#if subheadline}}
+        <p class="mt-8 text-pretty body-lg text-fg-alt">{{subheadline}}</p>
+      {{/if}}
+      <div class="mt-10 flex items-center gap-4">
+        {{#each buttons}}
+          {{> Button}}
+        {{/each}}
+      </div>
+    </div>
+    {{#if screenshot}}
+      <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+        <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+          <img src="{{screenshot}}" alt="{{screenshot-alt}}" class="w-[76rem] rounded-md bg-fg/5 shadow-2xl ring-1 ring-fg/10">
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</section>

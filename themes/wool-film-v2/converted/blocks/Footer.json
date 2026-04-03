@@ -1,0 +1,10 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Minimal dark footer",
+  "fields": [
+    { "type": "text", "name": "Company", "default": "Kirovi Productions" },
+    { "type": "number", "name": "Year", "default": 2026 },
+    { "type": "textarea", "name": "Disclaimer", "default": "All images & videos are for style purposes only and are the copyright of the original creator(s)." }
+  ]
+}

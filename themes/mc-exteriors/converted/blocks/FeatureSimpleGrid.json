@@ -1,0 +1,57 @@
+{
+  "description": "Simple text feature grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Features"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "title": "Feature Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "title": "Feature Four",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "title": "Feature Five",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "title": "Feature Six",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

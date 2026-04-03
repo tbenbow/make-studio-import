@@ -1,0 +1,64 @@
+{
+  "description": "Centered CTA in card",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Get Started Today"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "secondary"
+        },
+        {
+          "label": "Learn more",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "secondary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

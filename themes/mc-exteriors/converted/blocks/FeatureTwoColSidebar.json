@@ -1,0 +1,52 @@
+{
+  "description": "Sidebar headline with features",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Features"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "trash",
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "pencil-simple",
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "chat-circle",
+          "title": "Feature Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "heart",
+          "title": "Feature Four",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

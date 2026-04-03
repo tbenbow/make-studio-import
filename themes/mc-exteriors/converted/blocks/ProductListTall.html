@@ -1,0 +1,23 @@
+<section class="bg-base py-16 sm:py-24">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    {{#if heading}}
+      <h2 class="sr-only">{{heading}}</h2>
+    {{/if}}
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+      {{#each products}}
+        <a href="{{link}}" class="group">
+          {{#if image}}
+            <img src="{{image}}" alt="{{name}}" class="aspect-square w-full overflow-hidden rounded-lg object-cover group-hover:opacity-75 sm:aspect-2/3">
+          {{/if}}
+          <div class="mt-4 flex items-center justify-between body-md font-medium text-fg">
+            <h3>{{name}}</h3>
+            <p>{{price}}</p>
+          </div>
+          {{#if variant}}
+            <p class="mt-1 body-sm text-fg-muted italic">{{variant}}</p>
+          {{/if}}
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</section>

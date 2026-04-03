@@ -1,0 +1,25 @@
+<section class="bg-base py-24 sm:py-32">
+  <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+    <div class="max-w-xl">
+      <h2 class="heading-sm text-pretty text-fg">{{heading}}</h2>
+      {{#if description}}
+        <p class="mt-6 body-lg text-fg-muted">{{description}}</p>
+      {{/if}}
+    </div>
+    <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+      {{#each members}}
+        <li>
+          <div class="flex items-center gap-x-6">
+            {{#if avatar}}
+              <img src="{{avatar}}" alt="{{name}}" class="size-16 rounded-full">
+            {{/if}}
+            <div>
+              <h3 class="body-md font-semibold tracking-tight text-fg">{{name}}</h3>
+              <p class="body-sm font-semibold text-brand">{{role}}</p>
+            </div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

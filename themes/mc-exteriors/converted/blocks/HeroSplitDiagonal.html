@@ -1,0 +1,36 @@
+<section class="bg-base">
+  <div class="relative">
+    <div class="mx-auto max-w-7xl">
+      <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-base lg:block">
+          <polygon points="0,0 90,0 50,100 0,100"></polygon>
+        </svg>
+        <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+          <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+            {{#if badge}}
+              <div class="hidden sm:mb-10 sm:flex">
+                <div class="relative rounded-full px-3 py-1 body-sm text-fg-alt ring-1 ring-fg/10 hover:ring-fg/20">
+                  {{badge}}
+                </div>
+              </div>
+            {{/if}}
+            <h1 class="text-pretty heading-xl text-fg">{{headline}}</h1>
+            {{#if subheadline}}
+              <p class="mt-8 text-pretty body-lg text-fg-alt">{{subheadline}}</p>
+            {{/if}}
+            <div class="mt-10 flex items-center gap-4">
+              {{#each buttons}}
+                {{> Button}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{#if image}}
+      <div class="bg-base-alt lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+        <img src="{{image}}" alt="" class="aspect-[3/2] object-cover lg:aspect-auto lg:size-full">
+      </div>
+    {{/if}}
+  </div>
+</section>

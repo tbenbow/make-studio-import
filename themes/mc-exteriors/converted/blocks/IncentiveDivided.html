@@ -1,0 +1,19 @@
+<section class="bg-base py-12">
+  <div class="mx-auto max-w-7xl divide-y divide-border lg:flex lg:justify-center lg:divide-x lg:divide-y-0 lg:py-8">
+    {{#each perks}}
+      <div class="py-8 lg:w-1/3 lg:flex-none lg:py-0">
+        <div class="mx-auto flex max-w-xs items-center px-4 lg:max-w-none lg:px-8">
+          {{#if icon}}
+            <div class="size-8 shrink-0 text-brand">
+              {{icon icon size="32"}}
+            </div>
+          {{/if}}
+          <div class="ml-4 flex flex-auto flex-col-reverse">
+            <h3 class="font-medium text-fg">{{title}}</h3>
+            <p class="body-sm text-fg-muted">{{description}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="py-16 lg:py-24 bg-base text-fg">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="heading-lg uppercase mb-10">{{heading}}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {{#each films}}
+      <div>
+        <div class="relative aspect-video bg-base-alt overflow-hidden">
+          <img src="{{thumbnail}}" alt="{{title}}" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-12 h-12 rounded-full border-2 border-fg/60 flex items-center justify-center">
+              <svg width="16" height="18" viewBox="0 0 16 18" fill="currentColor" class="text-fg/60 ml-1"><polygon points="0,0 16,9 0,18"/></svg>
+            </div>
+          </div>
+        </div>
+        <h3 class="heading-sm text-fg mt-3">{{title}}</h3>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

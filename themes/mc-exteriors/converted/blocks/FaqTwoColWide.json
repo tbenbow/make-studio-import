@@ -1,0 +1,52 @@
+{
+  "description": "FaqTwoColWide",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "items",
+      "name": "Faqs",
+      "default": [
+        {
+          "question": "Question number 1?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 2?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 3?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 4?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 5?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 6?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Question"
+          },
+          {
+            "type": "textarea",
+            "name": "Answer"
+          }
+        ]
+      }
+    }
+  ]
+}

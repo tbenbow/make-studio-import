@@ -1,0 +1,38 @@
+<section class="bg-base pt-6 pb-16 sm:pb-24">
+  <div class="mx-auto mt-8 max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+      <div class="lg:col-span-5 lg:col-start-8">
+        <div class="flex justify-between">
+          <h1 class="heading-xs text-fg">{{name}}</h1>
+          <p class="heading-xs text-fg">{{price}}</p>
+        </div>
+      </div>
+      <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+          {{#each images}}
+            <img src="{{src}}" alt="{{alt}}" class="rounded-lg {{#if @first}}lg:col-span-2 lg:row-span-2{{else}}hidden lg:block{{/if}}">
+          {{/each}}
+        </div>
+      </div>
+      <div class="mt-8 lg:col-span-5">
+        {{#if description}}
+          <div>
+            <h2 class="body-sm font-medium text-fg">Description</h2>
+            <div class="mt-4 body-sm text-fg-muted space-y-4">
+              <p>{{description}}</p>
+            </div>
+          </div>
+        {{/if}}
+        {{#if details}}
+          <div class="mt-8 border-t border-border pt-8">
+            <h2 class="body-sm font-medium text-fg">Details</h2>
+            <div class="mt-4 body-sm text-fg-muted">{{{details}}}</div>
+          </div>
+        {{/if}}
+        <div class="mt-10">
+          {{> Button}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

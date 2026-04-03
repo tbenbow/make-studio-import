@@ -1,0 +1,61 @@
+{
+  "description": "ReviewList",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "items",
+      "name": "Reviews",
+      "default": [
+        {
+          "rating": "5",
+          "title": "Great product",
+          "body": "Praesent commodo cursus magna vel scelerisque nisl consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.",
+          "author": "Jane Smith",
+          "date": "January 1, 2025"
+        },
+        {
+          "rating": "5",
+          "title": "Great product",
+          "body": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui pellentesque habitant morbi tristique.",
+          "author": "John Davis",
+          "date": "January 1, 2025"
+        },
+        {
+          "rating": "4",
+          "title": "Great product",
+          "body": "Donec sed odio dui pellentesque habitant morbi tristique. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+          "author": "Sarah Chen",
+          "date": "January 1, 2025"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Rating"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Body"
+          },
+          {
+            "type": "text",
+            "name": "Author"
+          },
+          {
+            "type": "text",
+            "name": "Date"
+          }
+        ]
+      }
+    }
+  ]
+}

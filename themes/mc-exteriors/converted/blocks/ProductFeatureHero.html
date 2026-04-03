@@ -1,0 +1,24 @@
+<section class="bg-base">
+  {{#if image}}
+    <div aria-hidden="true" class="relative">
+      <img src="{{image}}" alt="" class="h-96 w-full object-cover">
+      <div class="absolute inset-0 bg-linear-to-t from-base"></div>
+    </div>
+  {{/if}}
+  <div class="relative mx-auto {{#if image}}-mt-12{{/if}} max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
+      <h2 class="heading-lg text-fg">{{heading}}</h2>
+      {{#if description}}
+        <p class="mt-4 text-fg-muted">{{description}}</p>
+      {{/if}}
+    </div>
+    <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
+      {{#each specs}}
+        <div class="border-t border-border pt-4">
+          <dt class="body-md font-medium text-fg">{{label}}</dt>
+          <dd class="mt-2 body-sm text-fg-muted">{{value}}</dd>
+        </div>
+      {{/each}}
+    </dl>
+  </div>
+</section>

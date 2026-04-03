@@ -1,0 +1,49 @@
+{
+  "description": "TestimonialSplit",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        {
+          "logo": "",
+          "quote": "Praesent commodo cursus magna vel scelerisque nisl consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.",
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Jane Smith",
+          "role": "CEO, Acme Corp"
+        },
+        {
+          "logo": "",
+          "quote": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui pellentesque habitant morbi tristique.",
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "John Davis",
+          "role": "Marketing Director, Globex Inc"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Logo"
+          },
+          {
+            "type": "textarea",
+            "name": "Quote"
+          },
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Role"
+          }
+        ]
+      }
+    }
+  ]
+}

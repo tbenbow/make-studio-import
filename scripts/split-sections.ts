@@ -74,16 +74,13 @@ async function main() {
       const found = Array.from(document.querySelectorAll(sel))
       // Filter to only direct-ish children (not deeply nested sections)
       const topLevel = found.filter(el => {
-        const depth = (function countSectionAncestors(e: Element): number {
-          let count = 0
-          let parent = e.parentElement
-          while (parent) {
-            if (parent.tagName === 'SECTION') count++
-            parent = parent.parentElement
-          }
-          return count
-        })(el)
-        return depth <= 1
+        let count = 0
+        let parent = el.parentElement
+        while (parent) {
+          if (parent.tagName === 'SECTION') count++
+          parent = parent.parentElement
+        }
+        return count <= 1
       })
       if (topLevel.length >= 2) {
         elements = topLevel
@@ -174,32 +171,31 @@ async function main() {
   for (const section of sections) {
     if (section.height < 10) continue // skip invisible sections
 
-    // Hide everything except this section
-    await page.evaluate((idx) => {
-      const style = document.createElement('style')
-      style.id = 'split-section-style'
-      style.textContent = `
-        [data-split-id] { display: none !important; }
-        [data-split-id="${idx}"] { display: revert !important; }
-        /* Also hide common overlays */
-        [class*="cookie"], [class*="popup"], [class*="modal"], [class*="overlay"] { display: none !important; }
-      `
-      document.head.appendChild(style)
+    // Get the section's bounding rect (absolute position on page)
+    const rect = await page.evaluate((idx) => {
+      const el = document.querySelector(`[data-split-id="${idx}"]`)
+      if (!el) return null
+      const r = el.getBoundingClientRect()
+      return {
+        x: 0,
+        y: r.top + window.scrollY,
+        width: r.width,
+        height: r.height,
+      }
     }, section.index)
 
-    await page.waitForTimeout(200)
+    if (!rect || rect.height < 10) continue
 
     const label = section.id || `${section.index}`
     const filename = `${prefix}-${label.replace(/[^a-zA-Z0-9-]/g, '-')}.png`
     const filepath = join(outputDir, filename)
 
-    await page.screenshot({ path: filepath, fullPage: true })
-    console.log(`  ✓ ${filename} (${Math.round(section.height)}px)`)
-
-    // Remove the injected style
-    await page.evaluate(() => {
-      document.getElementById('split-section-style')?.remove()
+    await page.screenshot({
+      path: filepath,
+      fullPage: true,
+      clip: { x: 0, y: rect.y, width: viewport, height: rect.height },
     })
+    console.log(`  ✓ ${filename} (${Math.round(rect.height)}px)`)
   }
 
   // Output section manifest

@@ -1,0 +1,30 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Crew member grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "MEET THE CREW"
+    },
+    {
+      "type": "items",
+      "name": "Members",
+      "default": [
+        { "id": "1", "photo": "https://placehold.co/400x400/000/fff?text=Photo", "name": "Shane Nelson", "role": "Executive Producer", "bio": "Award-winning filmmaker and founder of Omni-Fusion.com." },
+        { "id": "2", "photo": "https://placehold.co/400x400/000/fff?text=Photo", "name": "John Samels (Paper Tiger)", "role": "Music / Score", "bio": "New York-based electronic composer and Doomtree collective founder." },
+        { "id": "3", "photo": "https://placehold.co/400x400/000/fff?text=Photo", "name": "Jim Morgan", "role": "Sound Engineer & Mixing", "bio": "Minneapolis-based sound professional and Conduit Sound founder." },
+        { "id": "4", "photo": "https://placehold.co/400x400/000/fff?text=Photo", "name": "Cynthia Bravo", "role": "Advisory Associate Producer", "bio": "Disney Manager of Supplier Diversity with 10+ years producing award-winning films." }
+      ],
+      "config": {
+        "fields": [
+          { "type": "image", "name": "Photo" },
+          { "type": "text", "name": "Name" },
+          { "type": "text", "name": "Role" },
+          { "type": "textarea", "name": "Bio" }
+        ]
+      }
+    }
+  ]
+}

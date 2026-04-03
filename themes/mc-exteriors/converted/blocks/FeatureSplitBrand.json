@@ -1,0 +1,62 @@
+{
+  "description": "FeatureSplitBrand",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Features"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Features"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Screenshot",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/photo-1519338381761-c7523edc1f46.webp"
+    },
+    {
+      "type": "items",
+      "name": "Features",
+      "default": [
+        {
+          "icon": "cloud-arrow-up",
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "lock-simple",
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "database",
+          "title": "Feature Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

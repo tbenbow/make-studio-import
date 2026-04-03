@@ -1,0 +1,29 @@
+{
+  "description": "ProductOverviewBanner",
+  "fields": [
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "text",
+      "name": "Button Text",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Button URL"
+    }
+  ]
+}

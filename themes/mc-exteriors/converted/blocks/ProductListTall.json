@@ -1,0 +1,82 @@
+{
+  "description": "ProductListTall",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Alpha",
+          "variant": "3 sizes available",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Beta",
+          "variant": "Walnut",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Gamma",
+          "variant": "Heather Gray",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Delta",
+          "variant": "3 refill packs",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Epsilon",
+          "variant": "Black and brass",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Zeta",
+          "variant": "Includes stand",
+          "price": "$49",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

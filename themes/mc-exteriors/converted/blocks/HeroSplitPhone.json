@@ -1,0 +1,84 @@
+{
+  "description": "Split hero with phone mockup",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Badge Label",
+      "default": "Announcement"
+    },
+    {
+      "type": "text",
+      "name": "Badge Link Text",
+      "default": "See open positions"
+    },
+    {
+      "type": "text",
+      "name": "Badge Link",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Welcome to Our Platform"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Phone Screenshot",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get started",
+          "link": "#",
+          "style": "primary"
+        },
+        {
+          "label": "Learn more",
+          "link": "#",
+          "style": "ghost"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "default": "primary",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

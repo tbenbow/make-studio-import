@@ -1,0 +1,39 @@
+{
+  "description": "Stats",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "stat": "25+",
+          "text": "Years Combined Experience"
+        },
+        {
+          "stat": "30+",
+          "text": "Team Members"
+        },
+        {
+          "stat": "A+",
+          "text": "BBB Rating"
+        },
+        {
+          "stat": "3",
+          "text": "Full-Time Roofing Crews"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Stat"
+          },
+          {
+            "type": "text",
+            "name": "Text"
+          }
+        ]
+      }
+    }
+  ]
+}

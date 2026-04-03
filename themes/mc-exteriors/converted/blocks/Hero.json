@@ -1,0 +1,88 @@
+{
+  "description": "Hero",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Badge",
+      "default": "A+ BBB Rated · Licensed Statewide"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Minnesota's Storm Damage"
+    },
+    {
+      "type": "text",
+      "name": "Headline Accent",
+      "default": "Experts"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Subheadline",
+      "default": "<p>From our 25-point inspection to the insurance claim to the finished roof — one team handles everything. Roofing, siding, windows, and more since 2015.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/600x450/2d2d2d/d42027?text=Storm+Damage+Experts"
+    },
+    {
+      "type": "text",
+      "name": "Stat Number",
+      "default": "25"
+    },
+    {
+      "type": "text",
+      "name": "Stat Label",
+      "default": "Point Inspection"
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "label": "Get a Free Inspection",
+          "link": "#contact",
+          "style": "primary"
+        },
+        {
+          "label": "(612) 618-8763",
+          "link": "tel:6126188763",
+          "style": "outline"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "select",
+            "name": "Style",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Outline",
+                  "value": "outline"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

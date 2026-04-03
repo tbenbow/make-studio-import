@@ -1,0 +1,32 @@
+<section class="py-20 lg:py-24 bg-base">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
+    <div class="bg-base-muted rounded-2xl p-10 sm:p-16 border border-border">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="flex flex-col gap-4">
+          {{#if eyebrow}}
+            <p class="body-sm font-semibold text-brand uppercase tracking-wider">{{eyebrow}}</p>
+          {{/if}}
+          <h2 class="heading-lg text-fg text-pretty">{{headline}}</h2>
+          <div class="body-lg text-fg-muted">{{{description}}}</div>
+          {{#if (length buttons)}}
+            <div class="flex flex-wrap items-center gap-4 mt-4">
+              {{#each buttons}}
+                {{> Button}}
+              {{/each}}
+            </div>
+          {{/if}}
+        </div>
+        {{#if (length features)}}
+          <div class="grid grid-cols-2 gap-4">
+            {{#each features}}
+              <div class="bg-panel rounded-xl p-6 border border-border text-center">
+                <p class="heading-sm text-fg">{{stat}}</p>
+                <p class="body-sm text-fg-muted mt-1">{{text}}</p>
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

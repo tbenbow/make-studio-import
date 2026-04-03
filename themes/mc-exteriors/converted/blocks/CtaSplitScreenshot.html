@@ -1,0 +1,22 @@
+<section class="bg-base">
+  <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+    <div class="relative isolate overflow-hidden bg-panel px-6 pt-16 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+      <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+        <h2 class="heading-lg text-fg text-balance">{{headline}}</h2>
+        {{#if subheadline}}
+          <p class="mt-6 body-md text-fg-muted text-pretty">{{subheadline}}</p>
+        {{/if}}
+        <div class="mt-10 flex items-center justify-center gap-4 lg:justify-start">
+          {{#each buttons}}
+            {{> Button}}
+          {{/each}}
+        </div>
+      </div>
+      {{#if screenshot}}
+        <div class="relative mt-16 h-80 lg:mt-8">
+          <img src="{{screenshot}}" alt="{{screenshot-alt}}" class="absolute top-0 left-0 w-228 max-w-none rounded-md bg-fg/5 ring-1 ring-fg/10">
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

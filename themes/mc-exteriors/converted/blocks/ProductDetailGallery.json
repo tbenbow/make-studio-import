@@ -1,0 +1,85 @@
+{
+  "description": "ProductDetailGallery",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Name",
+      "default": "Jane Smith"
+    },
+    {
+      "type": "text",
+      "name": "Price",
+      "default": "$49"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Details"
+    },
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product main view"
+        },
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product detail 1"
+        },
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product detail 2"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Src"
+          },
+          {
+            "type": "text",
+            "name": "Alt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Buttons",
+      "default": [
+        {
+          "text": "Get started",
+          "style": "primary",
+          "size": "lg"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Text"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          },
+          {
+            "type": "text",
+            "name": "Style"
+          },
+          {
+            "type": "text",
+            "name": "Size"
+          }
+        ]
+      }
+    }
+  ]
+}

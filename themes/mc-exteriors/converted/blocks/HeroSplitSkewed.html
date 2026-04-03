@@ -1,0 +1,24 @@
+<section class="bg-base">
+  <div class="relative isolate overflow-hidden bg-gradient-to-b from-brand/10 pt-14">
+    <div aria-hidden="true" class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-base-alt/30 shadow-xl shadow-brand/10 ring-1 ring-fg/5 sm:-mr-80 lg:-mr-96"></div>
+    <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+        <h1 class="max-w-2xl text-balance heading-xl text-fg lg:col-span-2 xl:col-auto">{{headline}}</h1>
+        <div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+          {{#if subheadline}}
+            <p class="text-pretty body-lg text-fg-alt">{{subheadline}}</p>
+          {{/if}}
+          <div class="mt-10 flex items-center gap-4">
+            {{#each buttons}}
+              {{> Button}}
+            {{/each}}
+          </div>
+        </div>
+        {{#if image}}
+          <img src="{{image}}" alt="" class="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover outline outline-1 -outline-offset-1 outline-fg/10 sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36">
+        {{/if}}
+      </div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-base sm:h-32"></div>
+  </div>
+</section>

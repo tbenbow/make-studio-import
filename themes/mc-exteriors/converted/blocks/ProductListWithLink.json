@@ -1,0 +1,77 @@
+{
+  "description": "ProductListWithLink",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "text",
+      "name": "Link Text",
+      "default": "Shop the collection"
+    },
+    {
+      "type": "text",
+      "name": "Link URL"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Alpha",
+          "variant": "Natural",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Beta",
+          "variant": "Black",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Gamma",
+          "variant": "Light Brown",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Delta",
+          "variant": "Walnut",
+          "price": "$49",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

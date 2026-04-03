@@ -1,0 +1,76 @@
+{
+  "description": "ProductListOverlay",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Alpha",
+          "variant": "White and black",
+          "price": "$49",
+          "button-text": "Add to bag",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Beta",
+          "variant": "White and blue",
+          "price": "$49",
+          "button-text": "Add to bag",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Gamma",
+          "variant": "Clay",
+          "price": "$49",
+          "button-text": "Add to bag",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Delta",
+          "variant": "Black and orange",
+          "price": "$49",
+          "button-text": "Add to bag",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Button Text"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

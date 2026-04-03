@@ -1,0 +1,25 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Film stills gallery",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        { "id": "1", "url": "https://placehold.co/480x360/111/333?text=Still+1", "alt": "Film still" },
+        { "id": "2", "url": "https://placehold.co/480x360/111/333?text=Still+2", "alt": "Film still" },
+        { "id": "3", "url": "https://placehold.co/480x360/111/333?text=Still+3", "alt": "Film still" },
+        { "id": "4", "url": "https://placehold.co/480x360/111/333?text=Still+4", "alt": "Film still" },
+        { "id": "5", "url": "https://placehold.co/480x360/111/333?text=Still+5", "alt": "Film still" },
+        { "id": "6", "url": "https://placehold.co/480x360/111/333?text=Still+6", "alt": "Film still" }
+      ],
+      "config": {
+        "fields": [
+          { "type": "image", "name": "URL" },
+          { "type": "text", "name": "Alt" }
+        ]
+      }
+    }
+  ]
+}

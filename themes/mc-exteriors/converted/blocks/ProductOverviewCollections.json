@@ -1,0 +1,54 @@
+{
+  "description": "ProductOverviewCollections",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Collections",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Collection One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Collection Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Collection Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

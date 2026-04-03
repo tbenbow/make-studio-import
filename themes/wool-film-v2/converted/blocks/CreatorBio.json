@@ -1,0 +1,12 @@
+{
+  "makeStudioFields": true,
+  "version": 1,
+  "description": "Creator bio section",
+  "fields": [
+    { "type": "text", "name": "Heading", "default": "MEET THE CREATOR" },
+    { "type": "image", "name": "Photo", "default": "https://placehold.co/500x600/111/333?text=Photo" },
+    { "type": "text", "name": "Name", "default": "Jamey Erickson" },
+    { "type": "text", "name": "Role", "default": "Creator, Writer & Director" },
+    { "type": "wysiwyg", "name": "Bio", "default": "<p>Jamey has 25 years in the creative industry creating and working on everything from documentary films, small commercial productions, immersive website experiences, marketing activations and event series.</p><p>Writing his first short film 'WOOL' is a lifelong, creative dream. He always dreamed of writing stories that you feel and that develop over time.</p><p>After writing scripts solely for himself over the past 5 years, he finally decided to make one of those scripts into something real.</p>" }
+  ]
+}

@@ -1,0 +1,22 @@
+<section class="relative isolate overflow-hidden bg-base py-24 sm:py-32">
+  <img src="{{background-image}}" alt="" class="absolute inset-0 -z-10 size-full object-cover">
+  <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+      {{#if eyebrow}}
+        <h2 class="body-md font-semibold text-brand">{{eyebrow}}</h2>
+      {{/if}}
+      <p class="{{#if eyebrow}}mt-2 {{/if}}heading-lg text-pretty text-fg">{{heading}}</p>
+      {{#if description}}
+        <p class="mt-6 body-lg text-fg-muted">{{description}}</p>
+      {{/if}}
+    </div>
+    <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-fg sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+      {{#each stats}}
+        <div class="flex flex-col gap-y-3 border-l border-border pl-6">
+          <dt class="body-sm">{{label}}</dt>
+          <dd class="order-first heading-md tracking-tight">{{value}}</dd>
+        </div>
+      {{/each}}
+    </dl>
+  </div>
+</section>

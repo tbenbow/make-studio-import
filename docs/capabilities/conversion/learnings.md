@@ -271,6 +271,42 @@ This is the repeatable pattern for any site conversion.
 
 ---
 
+## WOOL Film — Live Site Conversion (2026-04-02)
+
+**URL**: https://www.wool.film/
+**Framework**: Squarespace
+**Theme**: Dark cinematic (base=#000000, brand=#38bdf8, fg=#ffffff)
+**Fonts**: widescreen (Typekit, headings xl/sm/xs + body-lg), Manrope (headings lg/md), Poppins (body md/sm)
+**Approach**: Screenshot-based (`/ms-convert-live`) — 3 iterations to get right
+
+### Key Lessons
+
+#### Generate blocks locally with Claude, not via the API endpoint
+The app's `POST /blocks/generate-template` endpoint produces structurally correct blocks in ~7 seconds, but the output has consistent problems: it adds rounded corners (`rounded-md`) that aren't in the source, uses wider spacing than shown, and picks "safe" Tailwind defaults over what's actually in the screenshot. Writing blocks locally with Claude Code using the section screenshot + theme.json + checklist produces much more faithful results. The local render loop (`render-block.ts`) takes ~5 seconds per iteration with no deployment needed.
+
+#### `setPageContent` field name resolution uses exact field names, not slugs
+The API resolves field names case-insensitively but requires the **exact field name with spaces** — NOT kebab-case slugs. `'Photo URL'` works, `'photo-url'` does not. Single-word names like `'Name'` or `'Role'` work in both cases since the slug equals the lowercase name. For items sub-fields within arrays, use **lowercase slug keys** (`photo`, `name`, `role`) since those pass through to templates verbatim.
+
+#### Typekit fonts need `source` and `kitId` in theme.json fonts array
+The PageRenderer generates `<link rel="stylesheet" href="https://use.typekit.net/{kitId}.css">` by reading `theme.fonts[]` for entries with `source: 'typekit'`. Putting the Typekit link in `customCode.head` does NOT work because `customCode` and `theme` are separate fields — the renderer only reads from `theme.fonts[]`. Font entries must include: `{ "family": "widescreen", "weight": 100, "style": "normal", "source": "typekit", "kitId": "tni1riq" }`.
+
+#### Local renderer needs `fieldToSlug()` to match server compiler
+The server's `TemplateAnalysisService.fieldToSlug()` converts field names to kebab-case for Handlebars: `"Photo URL"` → `photo-url`. The local `render-block.ts` must do the same in `extractDefaults()` or templates render empty. The slug algorithm: `name.replace(/_/g, ' ').toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim()`.
+
+#### Local renderer needs font links (Google + Typekit) in HTML head
+The original `render-block.ts` had no font loading — all blocks rendered in system fonts. Added `generateFontLinks()` that reads `theme.fonts[]` and emits Google Fonts `<link>` tags and Typekit `<link>` tags. Without this, local renders don't match production and font-dependent layouts are wrong.
+
+#### API token auth bug: `accessCheckBlock` rejected tokens for update/delete
+The `accessCheckBlock` middleware in `server/routes/blocks.ts` checked `if (!userId)` before checking `req.apiToken`, rejecting all API token requests for PATCH/DELETE with "Authentication required". The fix: `if (!userId && !req.apiToken)`. The `assertSiteAccess` call downstream already handles API tokens correctly. Pages middleware didn't have this bug because it checks `req.apiToken` first.
+
+#### Keep field names simple to avoid slug mismatch pain
+Multi-word field names like "Bio Paragraph 1" create slug `bio-paragraph-1` which is hard to remember and easy to typo. Single-word names (`Heading`, `Photo`, `Name`, `Bio`) slug to their lowercase form and work in both `setPageContent` (exact name) and templates (slug). Use items fields instead of numbered fields (e.g., one `Bio` wysiwyg field instead of `Bio Paragraph 1/2/3`).
+
+#### The render → compare → iterate loop is the fastest path
+Writing a block, rendering locally in ~5s, comparing side-by-side with the source screenshot, and tweaking — this loop is 10x faster than deploying to preview each time. Reserve deployment for final verification after all blocks are done.
+
+---
+
 ## Concierge — Custom CSS Site (2026-03-10)
 
 **Source**: Single HTML file with embedded `<style>` (custom CSS variables, no framework)

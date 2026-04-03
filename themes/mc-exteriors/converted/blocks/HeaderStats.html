@@ -1,0 +1,30 @@
+<section class="relative isolate overflow-hidden bg-base py-24 sm:py-32">
+  <img src="{{background-image}}" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="heading-xl text-fg">{{heading}}</h2>
+      {{#if description}}
+        <p class="mt-8 body-lg font-medium text-pretty text-fg-muted">{{description}}</p>
+      {{/if}}
+    </div>
+    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+      {{#if links.length}}
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 body-md font-semibold text-fg sm:grid-cols-2 md:flex lg:gap-x-10">
+          {{#each links}}
+            <a href="{{url}}">{{label}} <span aria-hidden="true">→</span></a>
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if stats.length}}
+        <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+          {{#each stats}}
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="body-md text-fg-muted">{{label}}</dt>
+              <dd class="heading-lg tracking-tight text-fg">{{value}}</dd>
+            </div>
+          {{/each}}
+        </dl>
+      {{/if}}
+    </div>
+  </div>
+</section>

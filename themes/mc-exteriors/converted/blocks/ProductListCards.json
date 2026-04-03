@@ -1,0 +1,68 @@
+{
+  "description": "ProductListCards",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "items",
+      "name": "Products",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Alpha",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "variant": "8 colors",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Beta",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "variant": "Black",
+          "price": "$49",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Product Gamma",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+          "variant": "White",
+          "price": "$49",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Variant"
+          },
+          {
+            "type": "text",
+            "name": "Price"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

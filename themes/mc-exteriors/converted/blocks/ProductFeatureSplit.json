@@ -1,0 +1,91 @@
+{
+  "description": "ProductFeatureSplit",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Product Details"
+    },
+    {
+      "type": "textarea",
+      "name": "Description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "items",
+      "name": "Specs",
+      "default": [
+        {
+          "label": "Feature One",
+          "value": "Detail value"
+        },
+        {
+          "label": "Feature Two",
+          "value": "Detail value"
+        },
+        {
+          "label": "Feature Three",
+          "value": "Detail value"
+        },
+        {
+          "label": "Feature Four",
+          "value": "Detail value"
+        },
+        {
+          "label": "Feature Five",
+          "value": "Detail value"
+        },
+        {
+          "label": "Feature Six",
+          "value": "Detail value"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          },
+          {
+            "type": "textarea",
+            "name": "Value"
+          }
+        ]
+      }
+    },
+    {
+      "type": "items",
+      "name": "Images",
+      "default": [
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product detail 1"
+        },
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product detail 2"
+        },
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product detail 3"
+        },
+        {
+          "src": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "alt": "Product detail 4"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Src"
+          },
+          {
+            "type": "text",
+            "name": "Alt"
+          }
+        ]
+      }
+    }
+  ]
+}

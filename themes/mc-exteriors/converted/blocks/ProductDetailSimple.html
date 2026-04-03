@@ -1,0 +1,33 @@
+<section class="bg-base py-16 sm:py-24">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+      <div class="aspect-square overflow-hidden rounded-lg">
+        {{#if image}}
+          <img src="{{image}}" alt="{{name}}" class="size-full object-cover">
+        {{/if}}
+      </div>
+      <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+        <h1 class="heading-md text-fg">{{name}}</h1>
+        <div class="mt-3">
+          <p class="heading-md text-fg">{{price}}</p>
+        </div>
+        {{#if description}}
+          <div class="mt-6">
+            <div class="body-md text-fg-muted space-y-4">
+              <p>{{description}}</p>
+            </div>
+          </div>
+        {{/if}}
+        {{#if details}}
+          <div class="mt-6">
+            <h3 class="body-sm font-medium text-fg">Details</h3>
+            <div class="mt-4 body-sm text-fg-muted">{{{details}}}</div>
+          </div>
+        {{/if}}
+        <div class="mt-10">
+          {{> Button}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

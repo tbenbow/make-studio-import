@@ -1,0 +1,205 @@
+{
+  "description": "5-card bento grid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Overview"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Features"
+    },
+    {
+      "type": "group",
+      "name": "Card 1",
+      "default": {
+        "label": "Card Title",
+        "title": "Card Title",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "0b318bec-cd29-46f9-b864-864954fb431f",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "36386fbf-472f-4669-808a-19c7bd8dfe51",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "6b6b134c-4fa6-4177-a0f1-a048c7b81829",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "b40628ea-95fe-4593-8c72-150975e0d286",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 2",
+      "default": {
+        "label": "Card Title",
+        "title": "Card Title",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "a957acf0-ad7a-4407-bb01-5b0caf756f40",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "aea04531-9684-4d46-a5e6-f893e1ffa222",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "da441111-8e1c-43d7-8f49-743c979a1304",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "c072def7-82e6-4d8e-9b58-93b5ae79629a",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 3",
+      "default": {
+        "label": "Card Title",
+        "title": "Card Title",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "c3a5d2e1-b059-4f68-a457-c19a483f666b",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "6e727220-2148-42ee-a6bb-4f7fb833e346",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "f480f5f1-331c-46f2-8f3a-24dfc4c6de11",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "5b3da6cd-98be-4f18-8fee-3c085c60fa83",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 4",
+      "default": {
+        "label": "Card Title",
+        "title": "Card Title",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "2fcec7ad-3c97-47b4-b227-d8fab18d5d09",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "67f9d36b-1feb-435a-bea0-84a86e50ab63",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "f0af19a9-b24a-4428-90ed-f93bcc505ad7",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "21067881-5452-4e52-8c40-6019cc3b239e",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "group",
+      "name": "Card 5",
+      "default": {
+        "label": "Card Title",
+        "title": "Card Title",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+        "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+      },
+      "config": {
+        "fields": [
+          {
+            "id": "4e1168cd-7ab5-410c-9ee9-f07f4713423e",
+            "type": "text",
+            "name": "Label",
+            "value": ""
+          },
+          {
+            "id": "e7c7c2ad-da01-4210-a853-b54ee20cf902",
+            "type": "text",
+            "name": "Title",
+            "value": ""
+          },
+          {
+            "id": "5d9d9a4e-7ae2-4f9a-bedc-8537671c752a",
+            "type": "textarea",
+            "name": "Description",
+            "value": ""
+          },
+          {
+            "id": "cf3e1050-b1db-47fc-90cd-93980dfbac8c",
+            "type": "image",
+            "name": "Image",
+            "value": ""
+          }
+        ]
+      }
+    }
+  ]
+}

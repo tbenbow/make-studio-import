@@ -1,0 +1,47 @@
+{
+  "description": "IncentiveCard",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Why Choose Us"
+    },
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "package",
+          "title": "Feature One",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "shield-check",
+          "title": "Feature Two",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        },
+        {
+          "icon": "arrows-left-right",
+          "title": "Feature Three",
+          "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

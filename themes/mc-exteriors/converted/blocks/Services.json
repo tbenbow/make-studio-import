@@ -1,0 +1,57 @@
+{
+  "description": "Services",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "What We Do"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Exterior Restoration Services"
+    },
+    {
+      "type": "items",
+      "name": "Services",
+      "default": [
+        {
+          "icon": "house-line",
+          "headline": "Roofing",
+          "description": "<p>Complete roof replacement and repair by dedicated in-house crews.</p>"
+        },
+        {
+          "icon": "buildings",
+          "headline": "Siding",
+          "description": "<p>Hail damage repair and full replacement built for the next storm.</p>"
+        },
+        {
+          "icon": "browser",
+          "headline": "Windows",
+          "description": "<p>Energy-efficient replacements that cut bills and boost curb appeal.</p>"
+        },
+        {
+          "icon": "shield-check",
+          "headline": "Soft Metals",
+          "description": "<p>Gutters, flashing, and trim — the details that keep water out.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Headline"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}

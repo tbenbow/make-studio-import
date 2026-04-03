@@ -1,0 +1,24 @@
+<section class="relative isolate overflow-hidden bg-base">
+  <div class="px-6 py-24 sm:py-32 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="heading-lg text-fg text-balance">{{headline}}</h2>
+      {{#if subheadline}}
+        <p class="mx-auto mt-6 max-w-xl body-md text-fg-muted text-pretty">{{subheadline}}</p>
+      {{/if}}
+      <div class="mt-10 flex items-center justify-center gap-4">
+        {{#each buttons}}
+          {{> Button}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <svg viewBox="0 0 1024 1024" aria-hidden="true" class="absolute top-1/2 left-1/2 -z-10 size-256 -translate-x-1/2 mask-[radial-gradient(closest-side,white,transparent)]">
+    <circle r="512" cx="512" cy="512" fill="url(#cta-gradient)" fill-opacity="0.7"></circle>
+    <defs>
+      <radialGradient id="cta-gradient">
+        <stop stop-color="#7775D6"></stop>
+        <stop offset="1" stop-color="#E935C1"></stop>
+      </radialGradient>
+    </defs>
+  </svg>
+</section>

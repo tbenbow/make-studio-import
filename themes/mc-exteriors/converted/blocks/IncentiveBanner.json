@@ -1,0 +1,35 @@
+{
+  "description": "IncentiveBanner",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Perks",
+      "default": [
+        {
+          "icon": "truck",
+          "title": "Feature One"
+        },
+        {
+          "icon": "seal-check",
+          "title": "Feature Two"
+        },
+        {
+          "icon": "calendar",
+          "title": "Feature Three"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Icon"
+          },
+          {
+            "type": "text",
+            "name": "Title"
+          }
+        ]
+      }
+    }
+  ]
+}

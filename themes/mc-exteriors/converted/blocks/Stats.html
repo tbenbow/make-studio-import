@@ -1,0 +1,14 @@
+<section class="py-10 bg-base border-b border-border">
+  <div class="mx-auto w-full max-w-7xl px-6 lg:px-10">
+    {{#if (length stats)}}
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        {{#each stats}}
+          <div>
+            <p class="heading-md text-fg">{{stat}}</p>
+            <p class="body-sm text-fg-muted mt-1">{{text}}</p>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</section>

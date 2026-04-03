@@ -1,0 +1,65 @@
+{
+  "description": "TestimonialGrid",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Testimonials"
+    },
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Testimonials"
+    },
+    {
+      "type": "items",
+      "name": "Testimonials",
+      "default": [
+        {
+          "quote": "Praesent commodo cursus magna vel scelerisque nisl consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.",
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Jane Smith",
+          "handle": "@lesliealexander"
+        },
+        {
+          "quote": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui pellentesque habitant morbi tristique.",
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "John Davis",
+          "handle": "@lindsaywalton"
+        },
+        {
+          "quote": "Donec sed odio dui pellentesque habitant morbi tristique. Maecenas sed diam eget risus varius blandit sit amet non magna.",
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Sarah Chen",
+          "handle": "@tomcook"
+        },
+        {
+          "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.",
+          "avatar": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Michael Brown",
+          "handle": "@michaelfoster"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "textarea",
+            "name": "Quote"
+          },
+          {
+            "type": "image",
+            "name": "Avatar"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Handle"
+          }
+        ]
+      }
+    }
+  ]
+}

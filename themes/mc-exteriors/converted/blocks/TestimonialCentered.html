@@ -1,0 +1,33 @@
+<section class="relative isolate overflow-hidden bg-base px-6 py-24 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl lg:max-w-4xl">
+    {{#if logo}}
+      <img src="{{logo}}" alt="" class="mx-auto h-12">
+    {{/if}}
+    <figure class="mt-10">
+      {{#if show-stars}}
+        <div class="flex justify-center gap-x-1 text-brand">
+          {{icon "star-fill" size="20"}}
+          {{icon "star-fill" size="20"}}
+          {{icon "star-fill" size="20"}}
+          {{icon "star-fill" size="20"}}
+          {{icon "star-fill" size="20"}}
+        </div>
+      {{/if}}
+      <blockquote class="{{#if show-stars}}mt-10 {{/if}}text-center text-xl/8 font-semibold text-fg sm:text-2xl/9">
+        <p>"{{quote}}"</p>
+      </blockquote>
+      <figcaption class="mt-10">
+        {{#if avatar}}
+          <img src="{{avatar}}" alt="{{name}}" class="mx-auto size-10 rounded-full">
+        {{/if}}
+        <div class="mt-4 flex items-center justify-center space-x-3 body-md">
+          <div class="font-semibold text-fg">{{name}}</div>
+          <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-fg">
+            <circle r="1" cx="1" cy="1"></circle>
+          </svg>
+          <div class="text-fg-muted">{{role}}</div>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+{
+  "description": "FaqSidebar",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Support Text",
+      "default": "<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. <a href=\"#\">Contact support</a>.</p>"
+    },
+    {
+      "type": "items",
+      "name": "Faqs",
+      "default": [
+        {
+          "question": "Question number 1?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 2?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 3?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        },
+        {
+          "question": "Question number 4?",
+          "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Question"
+          },
+          {
+            "type": "textarea",
+            "name": "Answer"
+          }
+        ]
+      }
+    }
+  ]
+}

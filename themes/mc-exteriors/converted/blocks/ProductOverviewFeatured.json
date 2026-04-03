@@ -1,0 +1,63 @@
+{
+  "description": "ProductOverviewFeatured",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Heading",
+      "default": "Products"
+    },
+    {
+      "type": "text",
+      "name": "Link Text",
+      "default": "Browse all categories"
+    },
+    {
+      "type": "text",
+      "name": "Link URL"
+    },
+    {
+      "type": "items",
+      "name": "Categories",
+      "default": [
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Collection One",
+          "subtitle": "Shop now",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Collection Two",
+          "subtitle": "Shop now",
+          "link": "#"
+        },
+        {
+          "image": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png",
+          "name": "Collection Three",
+          "subtitle": "Shop now",
+          "link": "#"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "image",
+            "name": "Image"
+          },
+          {
+            "type": "text",
+            "name": "Name"
+          },
+          {
+            "type": "text",
+            "name": "Subtitle"
+          },
+          {
+            "type": "text",
+            "name": "Link"
+          }
+        ]
+      }
+    }
+  ]
+}

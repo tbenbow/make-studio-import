@@ -1,0 +1,66 @@
+{
+  "description": "CTA card with checklist",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Get Started Today"
+    },
+    {
+      "type": "textarea",
+      "name": "Subheadline",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://makestudio.site/69ae41bd212dd9e93c104e55/placeholder.png"
+    },
+    {
+      "type": "text",
+      "name": "Image Alt"
+    },
+    {
+      "type": "items",
+      "name": "Items",
+      "default": [
+        {
+          "label": "Item 1"
+        },
+        {
+          "label": "Item 2"
+        },
+        {
+          "label": "Item 3"
+        },
+        {
+          "label": "Item 4"
+        },
+        {
+          "label": "Item 5"
+        },
+        {
+          "label": "Item 6"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Label"
+          }
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "name": "Cta Label",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "name": "Cta Link",
+      "default": "#"
+    }
+  ]
+}

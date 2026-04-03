@@ -1,0 +1,154 @@
+{
+  "description": "Listen",
+  "fields": [
+    {
+      "type": "items",
+      "name": "Episodes",
+      "default": [
+        {
+          "title": "3: Episode Title",
+          "episode-link": "/5",
+          "date-time": "2022-02-24T00:00:00.000Z",
+          "date-label": "February 24, 2022",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+          "listen-label": "Listen",
+          "listen-link": "/5",
+          "listen-style": "ghost",
+          "listen-size": "sm",
+          "notes-label": "Show notes",
+          "notes-link": "/5",
+          "notes-aria-label": "Show notes for episode 5: Bill Lumbergh",
+          "episode_link": "#",
+          "date_time": ""
+        },
+        {
+          "title": "2: Episode Title",
+          "episode-link": "/4",
+          "date-time": "2022-02-17T00:00:00.000Z",
+          "date-label": "February 17, 2022",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+          "listen-label": "Listen",
+          "listen-link": "/4",
+          "listen-style": "ghost",
+          "listen-size": "sm",
+          "notes-label": "Show notes",
+          "notes-link": "/4",
+          "notes-aria-label": "Show notes for episode 4: Shooter McGavin"
+        },
+        {
+          "title": "1: Episode Title",
+          "episode-link": "/3",
+          "date-time": "2022-02-10T00:00:00.000Z",
+          "date-label": "February 10, 2022",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+          "listen-label": "Listen",
+          "listen-link": "/3",
+          "listen-style": "ghost",
+          "listen-size": "sm",
+          "notes-label": "Show notes",
+          "notes-link": "/3",
+          "notes-aria-label": "Show notes for episode 3: The Wet Bandits"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Title"
+          },
+          {
+            "type": "text",
+            "name": "ID"
+          },
+          {
+            "type": "text",
+            "name": "Episode Link"
+          },
+          {
+            "type": "text",
+            "name": "Date Time"
+          },
+          {
+            "type": "text",
+            "name": "Date Label"
+          },
+          {
+            "type": "textarea",
+            "name": "Description"
+          },
+          {
+            "type": "text",
+            "name": "Listen Label",
+            "default": "Listen"
+          },
+          {
+            "type": "text",
+            "name": "Listen Link",
+            "default": "#"
+          },
+          {
+            "type": "select",
+            "name": "Listen Style",
+            "default": "ghost",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Primary",
+                  "value": "primary"
+                },
+                {
+                  "key": "Secondary",
+                  "value": "secondary"
+                },
+                {
+                  "key": "Outline",
+                  "value": "outline"
+                },
+                {
+                  "key": "Ghost",
+                  "value": "ghost"
+                }
+              ]
+            }
+          },
+          {
+            "type": "select",
+            "name": "Listen Size",
+            "default": "sm",
+            "config": {
+              "selectOptions": [
+                {
+                  "key": "Large",
+                  "value": "lg"
+                },
+                {
+                  "key": "Medium",
+                  "value": "md"
+                },
+                {
+                  "key": "Small",
+                  "value": "sm"
+                }
+              ]
+            }
+          },
+          {
+            "type": "text",
+            "name": "Notes Label",
+            "default": "Show notes"
+          },
+          {
+            "type": "text",
+            "name": "Notes Link",
+            "default": "#"
+          },
+          {
+            "type": "text",
+            "name": "Notes Aria Label",
+            "default": "Show notes"
+          }
+        ]
+      }
+    }
+  ]
+}

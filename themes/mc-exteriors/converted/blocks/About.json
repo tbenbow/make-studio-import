@@ -1,0 +1,55 @@
+{
+  "description": "About",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Since 2015"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "Built by Roofers, Run by Roofers"
+    },
+    {
+      "type": "wysiwyg",
+      "name": "Description",
+      "default": "<p>Dan Verdeja and Moises Cabrera started MC Exteriors because too many contractors cut corners and too many homeowners got stuck navigating insurance alone. Dan brings the insurance expertise, Moises runs construction operations.</p><p>Today they lead a team of 30+ with three full-time roofing crews and eight account reps serving all of Minnesota.</p>"
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "default": "https://placehold.co/600x450/2d2d2d/d42027?text=Our+Team"
+    },
+    {
+      "type": "items",
+      "name": "Stats",
+      "default": [
+        {
+          "stat": "25+",
+          "text": "Years Exp."
+        },
+        {
+          "stat": "30+",
+          "text": "Employees"
+        },
+        {
+          "stat": "A+",
+          "text": "BBB Rating"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Stat"
+          },
+          {
+            "type": "text",
+            "name": "Text"
+          }
+        ]
+      }
+    }
+  ]
+}

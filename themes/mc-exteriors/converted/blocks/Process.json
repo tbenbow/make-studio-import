@@ -1,0 +1,52 @@
+{
+  "description": "Process",
+  "fields": [
+    {
+      "type": "text",
+      "name": "Eyebrow",
+      "default": "Our Process"
+    },
+    {
+      "type": "text",
+      "name": "Headline",
+      "default": "How It Works"
+    },
+    {
+      "type": "items",
+      "name": "Steps",
+      "default": [
+        {
+          "number": "01",
+          "headline": "Inspect",
+          "description": "<p>Our 25-point inspection covers roof, siding, windows, and soft metals. We use state-of-the-art hail maps to find damage invisible from the ground.</p>"
+        },
+        {
+          "number": "02",
+          "headline": "Navigate",
+          "description": "<p>If your damage qualifies, we handle the insurance claim from start to finish. You don't deal with adjusters or paperwork — that's our job.</p>"
+        },
+        {
+          "number": "03",
+          "headline": "Restore",
+          "description": "<p>Our in-house crews do the work with premium materials and professional craftsmanship. Full liability insurance on every project.</p>"
+        }
+      ],
+      "config": {
+        "fields": [
+          {
+            "type": "text",
+            "name": "Number"
+          },
+          {
+            "type": "text",
+            "name": "Headline"
+          },
+          {
+            "type": "wysiwyg",
+            "name": "Description"
+          }
+        ]
+      }
+    }
+  ]
+}
